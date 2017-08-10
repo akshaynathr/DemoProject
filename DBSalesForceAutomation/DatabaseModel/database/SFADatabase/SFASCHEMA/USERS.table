@@ -119,12 +119,12 @@
       <dataTypeUsage>
         <attributeValues>
           <entry>
-            <key>size</key>
-            <value class="java.lang.Long">10</value>
+            <key>precision</key>
+            <value class="java.lang.String">10</value>
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>VARCHAR2</typeName>
+          <typeName>NUMBER</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>false</notNull>
@@ -179,6 +179,32 @@
     </column>
   </columns>
   <constraints>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>USERS_FK1</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>SUPERVISOR_ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>USERS</name>
+            <schemaName>SFASCHEMA</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SFASCHEMA</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>USERS_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>USERS</name>
+          <schemaName>SFASCHEMA</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SFASCHEMA</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
     <constraint class="oracle.javatools.db.PKConstraint">
       <name>USERS_PK</name>
       <columnIDs>
@@ -205,32 +231,6 @@
         <type>INDEX</type>
       </indexID>
     </constraint>
-    <constraint class="oracle.javatools.db.UniqueConstraint">
-      <name>USERS_UK1</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>USERNAME</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>USERS</name>
-            <schemaName>SFASCHEMA</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SFASCHEMA</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <indexID class="oracle.javatools.db.NameBasedID">
-        <name>USERS_UK1</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>USERS</name>
-          <schemaName>SFASCHEMA</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SFASCHEMA</schemaName>
-        <type>INDEX</type>
-      </indexID>
-    </constraint>
   </constraints>
   <indexes>
     <index>
@@ -238,20 +238,6 @@
       <columnExpressions>
         <columnExpression>
           <expressionSource>USER_ID</expressionSource>
-          <orderType>ASC</orderType>
-        </columnExpression>
-      </columnExpressions>
-      <indexType>UNIQUE</indexType>
-      <schema>
-        <name>SFASCHEMA</name>
-      </schema>
-      <systemGenerated>true</systemGenerated>
-    </index>
-    <index>
-      <name>USERS_UK1</name>
-      <columnExpressions>
-        <columnExpression>
-          <expressionSource>USERNAME</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>

@@ -209,6 +209,32 @@
     </column>
   </columns>
   <constraints>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>CUSTOMERS_FK1</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>PRIMARY_CONTACT_ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>CUSTOMERS</name>
+            <schemaName>SFASCHEMA</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SFASCHEMA</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>CONTACTS_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>CONTACTS</name>
+          <schemaName>SFASCHEMA</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SFASCHEMA</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
     <constraint class="oracle.javatools.db.PKConstraint">
       <name>CUSTOMERS_PK</name>
       <columnIDs>
