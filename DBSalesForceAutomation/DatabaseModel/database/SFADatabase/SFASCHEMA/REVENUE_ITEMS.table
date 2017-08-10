@@ -38,7 +38,7 @@
         <attributeValues>
           <entry>
             <key>precision</key>
-            <value class="java.lang.String">10</value>
+            <value class="java.lang.String">20</value>
           </entry>
           <entry>
             <key>scale</key>
@@ -72,7 +72,7 @@
         <attributeValues>
           <entry>
             <key>precision</key>
-            <value class="java.lang.String">10</value>
+            <value class="java.lang.String">20</value>
           </entry>
           <entry>
             <key>scale</key>
@@ -91,11 +91,11 @@
         <attributeValues>
           <entry>
             <key>precision</key>
-            <value class="java.lang.String">1</value>
+            <value class="java.lang.String">3</value>
           </entry>
           <entry>
             <key>scale</key>
-            <value class="java.lang.Integer">50</value>
+            <value class="java.lang.Integer">2</value>
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
@@ -110,7 +110,7 @@
         <attributeValues>
           <entry>
             <key>precision</key>
-            <value class="java.lang.String">10</value>
+            <value class="java.lang.String">20</value>
           </entry>
           <entry>
             <key>scale</key>
@@ -129,7 +129,7 @@
         <attributeValues>
           <entry>
             <key>precision</key>
-            <value class="java.lang.String">10</value>
+            <value class="java.lang.String">20</value>
           </entry>
           <entry>
             <key>scale</key>
