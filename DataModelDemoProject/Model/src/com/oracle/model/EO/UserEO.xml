@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="UserEO"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="USERS"
+  AliasName="UserEO"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="UserId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="USER_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USERS"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="GlobalUsername"
+    Precision="20"
+    ColumnName="GLOBAL_USERNAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USERS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="FirstName"
+    Precision="50"
+    ColumnName="FIRST_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USERS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="MiddleName"
+    Precision="50"
+    ColumnName="MIDDLE_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USERS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LastName"
+    Precision="50"
+    ColumnName="LAST_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USERS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Password"
+    Precision="256"
+    ColumnName="PASSWORD"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USERS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="256"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="SupervisorId"
+    Precision="10"
+    Scale="0"
+    ColumnName="SUPERVISOR_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USERS"/>
+  <Attribute
+    Name="StartDate"
+    ColumnName="START_DATE"
+    SQLType="TIMESTAMP"
+    Type="java.sql.Timestamp"
+    ColumnType="TIMESTAMP"
+    TableName="USERS"/>
+  <Attribute
+    Name="EndDate"
+    ColumnName="END_DATE"
+    SQLType="TIMESTAMP"
+    Type="java.sql.Timestamp"
+    ColumnType="TIMESTAMP"
+    TableName="USERS"/>
+  <Attribute
+    Name="TeamId"
+    Precision="3"
+    Scale="0"
+    ColumnName="TEAM_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="USERS"/>
+  <Attribute
+    Name="CreatedBy"
+    Precision="50"
+    ColumnName="CREATED_BY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USERS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CreatedOn"
+    ColumnName="CREATED_ON"
+    SQLType="TIMESTAMP"
+    Type="java.sql.Timestamp"
+    ColumnType="TIMESTAMP"
+    TableName="USERS"/>
+  <Attribute
+    Name="LastUpdatedBy"
+    Precision="50"
+    ColumnName="LAST_UPDATED_BY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="USERS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LastUpdatedOn"
+    ColumnName="LAST_UPDATED_ON"
+    SQLType="TIMESTAMP"
+    Type="java.sql.Timestamp"
+    ColumnType="TIMESTAMP"
+    TableName="USERS"/>
+  <Attribute
+    Name="VersionNo"
+    Precision="10"
+    Scale="0"
+    ColumnName="VERSION_NO"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USERS"/>
+  <Attribute
+    Name="IsActive"
+    Precision="1"
+    ColumnName="IS_ACTIVE"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="USERS"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="User"
+    Association="com.oracle.model.EO.UsersFk1ASSOC"
+    AssociationEnd="com.oracle.model.EO.UsersFk1ASSOC.User"
+    AssociationOtherEnd="com.oracle.model.EO.UsersFk1ASSOC.SupervisorIdUser"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="SupervisorIdUser"
+    Association="com.oracle.model.EO.UsersFk1ASSOC"
+    AssociationEnd="com.oracle.model.EO.UsersFk1ASSOC.SupervisorIdUser"
+    AssociationOtherEnd="com.oracle.model.EO.UsersFk1ASSOC.User"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="UsersPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="USERS_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.oracle.model.EO.UserEO.UserId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="UsersFk1">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="USERS_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="USERS_FK1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.oracle.model.EO.UserEO.SupervisorId"/>
+    </AttrArray>
+  </Key>
+</Entity>
