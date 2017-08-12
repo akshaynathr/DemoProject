@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModuleAM"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="LookupsU1"
+    ViewObjectName="com.oracle.model.UVO.LookupsUVO"/>
+  <ViewUsage
+    Name="UsersU1"
+    ViewObjectName="com.oracle.model.UVO.UsersUVO"/>
+  <ViewUsage
+    Name="UsersR1"
+    ViewObjectName="com.oracle.model.RVO.UsersRVO"/>
+  <ViewUsage
+    Name="LookupsR1"
+    ViewObjectName="com.oracle.model.RVO.LookupsRVO"/>
+  <ViewUsage
+    Name="UsersU2"
+    ViewObjectName="com.oracle.model.UVO.UsersUVO"/>
+  <ViewUsage
+    Name="UsersR2"
+    ViewObjectName="com.oracle.model.RVO.UsersRVO"/>
+  <ViewLinkUsage
+    Name="UsersFk1VL1"
+    ViewLinkObjectName="com.oracle.model.UVO.UsersFk1VL"
+    SrcViewUsageName="com.oracle.model.AM.AppModuleAM.UsersU1"
+    DstViewUsageName="com.oracle.model.AM.AppModuleAM.UsersU2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="UsersFk1VL2"
+    ViewLinkObjectName="com.oracle.model.RVO.UsersFk1VL"
+    SrcViewUsageName="com.oracle.model.AM.AppModuleAM.UsersR1"
+    DstViewUsageName="com.oracle.model.AM.AppModuleAM.UsersR2"
+    Reversed="false"/>
+</AppModule>
