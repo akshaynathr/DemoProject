@@ -13,6 +13,64 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <Variable
+    Name="CurrentUserId"
+    Kind="viewcriteria"
+    Type="java.lang.Long"/>
+  <ViewAccessor
+    Name="UsersUVO1"
+    ViewObjectName="com.oracle.model.UVO.UsersUVO"
+    RowLevelBinds="true">
+    <ViewCriteriaUsage
+      Name="UsersUVOCriteria"
+      FullName="com.oracle.model.UVO.UsersUVO.UsersUVOCriteria"/>
+    <ParameterMap>
+      <PIMap Variable="CurrentUserId">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[UserId]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="AppModuleAM_UsersU1_1"
+    ViewObjectName="com.oracle.model.UVO.UsersUVO"
+    AMUsageName="AppModuleAM"
+    ViewInstanceName="UsersU1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="UsersUVO2"
+    ViewObjectName="com.oracle.model.UVO.UsersUVO"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModuleAM_UsersR1_1"
+    ViewObjectName="com.oracle.model.RVO.UsersRVO"
+    AMUsageName="AppModuleAM"
+    ViewInstanceName="UsersR1"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_SupervisorId"
+    ListVOName="UsersUVO1"
+    ComboRowCountHint="10"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="SupervisorId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="UserId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="FirstName"/>
+      <Item Value="LastName"/>
+      <Item Value="UserId"/>
+    </AttrArray>
+    <DisplayCriteria/>
+    <ViewCriteriaUsage
+      Name="UsersUVOCriteria"
+      FullName="com.oracle.model.UVO.UsersUVO.UsersUVOCriteria"/>
+  </ListBinding>
   <EntityUsage
     Name="UserEO"
     Entity="com.oracle.model.EO.UserEO"/>
@@ -60,7 +118,15 @@
     PrecisionRule="true"
     EntityAttrName="SupervisorId"
     EntityUsage="UserEO"
-    AliasName="SUPERVISOR_ID"/>
+    AliasName="SUPERVISOR_ID"
+    LOVName="LOV_SupervisorId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo_lov"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="StartDate"
     PrecisionRule="true"
@@ -115,6 +181,42 @@
     EntityAttrName="IsActive"
     EntityUsage="UserEO"
     AliasName="IS_ACTIVE"/>
+  <ViewCriteria
+    Name="UsersUVOCriteria"
+    ViewObjectName="com.oracle.model.UVO.UsersUVO"
+    Conjunction="AND">
+    <Properties Name="_Props">
+      <CustomProperties>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="UsersUVOCriteria_row_0"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="UserId"
+        ViewAttribute="UserId"
+        Operator="&lt;>"
+        Conjunction="AND"
+        Value=":CurrentUserId"
+        IsBindVarValue="true"
+        Required="Optional"/>
+    </ViewCriteriaRow>
+  </ViewCriteria>
   <ViewLinkAccessor
     Name="UsersU"
     ViewLink="com.oracle.model.UVO.UsersFk1VL"

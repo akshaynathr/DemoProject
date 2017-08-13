@@ -49,4 +49,9 @@
       <Attr Name="_VL" Value="true"/>
     </DesignTime>
   </Containee>
+  <AppModuleUsage
+    Name="AppModuleAM"
+    FullName="com.oracle.model.AM.AppModuleAM"
+    ConfigurationName="com.oracle.model.AM.AppModuleAMShared"
+    SharedScope="2"/>
 </JboProject>
