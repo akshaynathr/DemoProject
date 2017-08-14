@@ -11,4 +11,12 @@
     <validator-id>custom.DateValidator</validator-id>
     <validator-class>com.oracle.view.validator.DateValidator</validator-class>
   </validator>
+  <validator>
+    <validator-id>custom.NameValidator</validator-id>
+    <validator-class>com.oracle.view.validator.NameValidator</validator-class>
+  </validator>
+  <validator>
+    <validator-id>custom.StartDateValidator</validator-id>
+    <validator-class>com.oracle.view.validator.StartDateValidator</validator-class>
+  </validator>
 </faces-config>

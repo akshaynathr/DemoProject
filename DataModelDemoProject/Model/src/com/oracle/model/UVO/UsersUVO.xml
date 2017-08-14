@@ -12,7 +12,8 @@
   BindingStyle="OracleName"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <Variable
     Name="CurrentUserId"
     Kind="viewcriteria"
