@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="LookupEO"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="LOOKUPS"
+  AliasName="LookupEO"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="LookupId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="LOOKUP_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="LOOKUPS"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="LookupCategory"
+    Precision="50"
+    ColumnName="LOOKUP_CATEGORY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="LOOKUPS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="PossibleValue"
+    Precision="50"
+    ColumnName="POSSIBLE_VALUE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="LOOKUPS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Description"
+    Precision="1024"
+    ColumnName="DESCRIPTION"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="LOOKUPS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1024"/>
+    </DesignTime>
+  </Attribute>
+  <Key
+    Name="LookupsPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="LOOKUPS_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.oracle.model.EO.LookupEO.LookupId"/>
+    </AttrArray>
+  </Key>
+</Entity>

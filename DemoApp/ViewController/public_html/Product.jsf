@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="Product.jsf" id="d1" binding="#{backingBeanScope.backing_Product.d1}">
+        <af:messages id="m1" binding="#{backingBeanScope.backing_Product.m1}"/>
+        <af:form id="f1" binding="#{backingBeanScope.backing_Product.f1}">
+            <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.backing_Product.pfl1}">
+                <af:inputText value="#{bindings.ProductName.inputValue}" label="#{bindings.ProductName.hints.label}"
+                              required="#{bindings.ProductName.hints.mandatory}"
+                              columns="#{bindings.ProductName.hints.displayWidth}"
+                              maximumLength="#{bindings.ProductName.hints.precision}"
+                              shortDesc="#{bindings.ProductName.hints.tooltip}" id="it1"
+                              binding="#{backingBeanScope.backing_Product.it1}">
+                    <f:validator binding="#{bindings.ProductName.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.ProductDescription.inputValue}"
+                              label="#{bindings.ProductDescription.hints.label}"
+                              required="#{bindings.ProductDescription.hints.mandatory}"
+                              columns="#{bindings.ProductDescription.hints.displayWidth}"
+                              maximumLength="#{bindings.ProductDescription.hints.precision}"
+                              shortDesc="#{bindings.ProductDescription.hints.tooltip}" id="it2"
+                              binding="#{backingBeanScope.backing_Product.it2}">
+                    <f:validator binding="#{bindings.ProductDescription.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.CurrentPrice.inputValue}" label="#{bindings.CurrentPrice.hints.label}"
+                              required="#{bindings.CurrentPrice.hints.mandatory}"
+                              columns="#{bindings.CurrentPrice.hints.displayWidth}"
+                              maximumLength="#{bindings.CurrentPrice.hints.precision}"
+                              shortDesc="#{bindings.CurrentPrice.hints.tooltip}" id="it3"
+                              binding="#{backingBeanScope.backing_Product.it3}">
+                    <f:validator binding="#{bindings.CurrentPrice.validator}"/>
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.CurrentPrice.format}"/>
+                </af:inputText>
+                <af:selectOneChoice value="#{bindings.ProductCategory.inputValue}"
+                                    label="#{bindings.ProductCategory.label}"
+                                    required="#{bindings.ProductCategory.hints.mandatory}"
+                                    shortDesc="#{bindings.ProductCategory.hints.tooltip}" id="soc1"
+                                    binding="#{backingBeanScope.backing_Product.soc1}">
+                    <f:selectItems value="#{bindings.ProductCategory.items}" id="si1"
+                                   binding="#{backingBeanScope.backing_Product.si1}"/>
+                    <f:validator binding="#{bindings.ProductCategory.validator}"/>
+                </af:selectOneChoice>
+                <f:facet name="footer">
+                    <af:button text="Commit" id="b1" binding="#{backingBeanScope.backing_Product.b1}"
+                               actionListener="#{bindings.Commit.execute}"/>
+                </f:facet>
+            </af:panelFormLayout>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_Product-->
+</f:view>

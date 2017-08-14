@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModuleAM"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="LookupsU1"
+    ViewObjectName="com.oracle.model.UVO.LookupsUVO"/>
+  <ViewUsage
+    Name="ProductsU1"
+    ViewObjectName="com.oracle.model.UVO.ProductsUVO"/>
+  <ViewUsage
+    Name="ProductsR1"
+    ViewObjectName="com.oracle.model.RVO.ProductsRVO"/>
+  <ViewUsage
+    Name="LookupsR1"
+    ViewObjectName="com.oracle.model.RVO.LookupsRVO"/>
+  <ViewUsage
+    Name="ProductCategory1"
+    ViewObjectName="com.oracle.model.RVO.ProductCategoryVO"/>
+</AppModule>
