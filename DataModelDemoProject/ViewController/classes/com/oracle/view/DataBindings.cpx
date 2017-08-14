@@ -4,10 +4,22 @@
   <pageMap>
     <page path="/Users.jsf" usageId="com_oracle_view_UsersPageDef"/>
     <page path="/NewUser.jsf" usageId="com_oracle_view_NewUserPageDef"/>
+    <page path="/WEB-INF/TrainTaskFlow.xml#TrainTaskFlow@CreateInsert"
+          usageId="com_oracle_view_TrainTaskFlow_xmll_TrainTaskFlow_CreateInsertPageDef"/>
+    <page path="/Personal.jsf" usageId="com_oracle_view_PersonalPageDef"/>
+    <page path="/Corporate.jsf" usageId="com_oracle_view_CorporatePageDef"/>
+    <page path="/Summary.jsf" usageId="com_oracle_view_SummaryPageDef"/>
+    <page path="/ViewUser.jsf" usageId="com_oracle_view_ViewUserPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="com_oracle_view_UsersPageDef" path="com.oracle.view.pageDefs.UsersPageDef"/>
     <page id="com_oracle_view_NewUserPageDef" path="com.oracle.view.pageDefs.NewUserPageDef"/>
+    <page id="com_oracle_view_TrainTaskFlow_xmll_TrainTaskFlow_CreateInsertPageDef"
+          path="com.oracle.view.pageDefs.TrainTaskFlow_xmll_TrainTaskFlow_CreateInsertPageDef"/>
+    <page id="com_oracle_view_PersonalPageDef" path="com.oracle.view.pageDefs.PersonalPageDef"/>
+    <page id="com_oracle_view_CorporatePageDef" path="com.oracle.view.pageDefs.CorporatePageDef"/>
+    <page id="com_oracle_view_SummaryPageDef" path="com.oracle.view.pageDefs.SummaryPageDef"/>
+    <page id="com_oracle_view_ViewUserPageDef" path="com.oracle.view.pageDefs.ViewUserPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleAMDataControl" Package="com.oracle.model.AM"

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="CorporatePageDef"
+                Package="com.oracle.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="UsersU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="UsersU1Iterator"/>
+  </executables>
+  <bindings>
+    <listOfValues IterBinding="UsersU1Iterator" StaticList="false" Uses="LOV_SupervisorId" id="SupervisorId"/>
+    <attributeValues IterBinding="UsersU1Iterator" id="StartDate">
+      <AttrNames>
+        <Item Value="StartDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="UsersU1Iterator" id="EndDate">
+      <AttrNames>
+        <Item Value="EndDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="UsersU1Iterator" id="TeamId">
+      <AttrNames>
+        <Item Value="TeamId"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

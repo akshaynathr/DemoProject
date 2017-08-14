@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="ViewUser.jsf" id="d1">
+        <af:messages id="m1" binding="#{backingBeanScope.backing_ViewUser.m1}"/>
+        <af:form id="f1">
+            <af:panelBorderLayout id="pbl1" binding="#{backingBeanScope.backing_ViewUser.pbl1}">
+                <f:facet name="top">
+                    <af:button text="Create New User" id="b1" binding="#{backingBeanScope.backing_ViewUser.b1}"
+                               action="newUser"/>
+                </f:facet>
+                <f:facet name="bottom"/>
+                <f:facet name="start">
+                    <af:table value="#{bindings.UsersU1.collectionModel}" var="row" rows="#{bindings.UsersU1.rangeSize}"
+                              emptyText="#{bindings.UsersU1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                              rowBandingInterval="0" fetchSize="#{bindings.UsersU1.rangeSize}" id="t1"
+                              binding="#{backingBeanScope.backing_ViewUser.t1}">
+                        <af:column headerText="#{bindings.UsersU1.hints.UserId.label}" id="c1">
+                            <af:outputText value="#{row.UserId}" shortDesc="#{bindings.UsersU1.hints.UserId.tooltip}"
+                                           id="ot1">
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.UsersU1.hints.UserId.format}"/>
+                            </af:outputText>
+                        </af:column>
+                        <af:column headerText="#{bindings.UsersU1.hints.GlobalUsername.label}" id="c2">
+                            <af:outputText value="#{row.GlobalUsername}"
+                                           shortDesc="#{bindings.UsersU1.hints.GlobalUsername.tooltip}" id="ot2"/>
+                        </af:column>
+                        <af:column headerText="#{bindings.UsersU1.hints.FirstName.label}" id="c3">
+                            <af:outputText value="#{row.FirstName}"
+                                           shortDesc="#{bindings.UsersU1.hints.FirstName.tooltip}" id="ot3"/>
+                        </af:column>
+                        <af:column headerText="#{bindings.UsersU1.hints.MiddleName.label}" id="c4">
+                            <af:outputText value="#{row.MiddleName}"
+                                           shortDesc="#{bindings.UsersU1.hints.MiddleName.tooltip}" id="ot4"/>
+                        </af:column>
+                        <af:column headerText="#{bindings.UsersU1.hints.LastName.label}" id="c5">
+                            <af:outputText value="#{row.LastName}"
+                                           shortDesc="#{bindings.UsersU1.hints.LastName.tooltip}" id="ot5"/>
+                        </af:column>
+                        <af:column headerText="#{bindings.UsersU1.hints.Password.label}" id="c6">
+                            <af:outputText value="#{row.Password}"
+                                           shortDesc="#{bindings.UsersU1.hints.Password.tooltip}" id="ot6"/>
+                        </af:column>
+                        <af:column headerText="#{bindings.UsersU1.hints.SupervisorId.label}" id="c7">
+                            <af:outputText value="#{row.SupervisorId}"
+                                           shortDesc="#{bindings.UsersU1.hints.SupervisorId.tooltip}" id="ot7">
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.UsersU1.hints.SupervisorId.format}"/>
+                            </af:outputText>
+                        </af:column>
+                        <af:column headerText="#{bindings.UsersU1.hints.StartDate.label}" id="c8">
+                            <af:outputText value="#{row.StartDate}"
+                                           shortDesc="#{bindings.UsersU1.hints.StartDate.tooltip}" id="ot8">
+                                <af:convertDateTime pattern="#{bindings.UsersU1.hints.StartDate.format}"/>
+                            </af:outputText>
+                        </af:column>
+                        <af:column headerText="#{bindings.UsersU1.hints.EndDate.label}" id="c9">
+                            <af:outputText value="#{row.EndDate}" shortDesc="#{bindings.UsersU1.hints.EndDate.tooltip}"
+                                           id="ot9">
+                                <af:convertDateTime pattern="#{bindings.UsersU1.hints.EndDate.format}"/>
+                            </af:outputText>
+                        </af:column>
+                        <af:column headerText="#{bindings.UsersU1.hints.TeamId.label}" id="c10">
+                            <af:outputText value="#{row.TeamId}" shortDesc="#{bindings.UsersU1.hints.TeamId.tooltip}"
+                                           id="ot10">
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.UsersU1.hints.TeamId.format}"/>
+                            </af:outputText>
+                        </af:column>
+                        <af:column headerText="#{bindings.UsersU1.hints.CreatedBy.label}" id="c11">
+                            <af:outputText value="#{row.CreatedBy}"
+                                           shortDesc="#{bindings.UsersU1.hints.CreatedBy.tooltip}" id="ot11"/>
+                        </af:column>
+                        <af:column headerText="#{bindings.UsersU1.hints.CreatedOn.label}" id="c12">
+                            <af:outputText value="#{row.CreatedOn}"
+                                           shortDesc="#{bindings.UsersU1.hints.CreatedOn.tooltip}" id="ot12">
+                                <af:convertDateTime pattern="#{bindings.UsersU1.hints.CreatedOn.format}"/>
+                            </af:outputText>
+                        </af:column>
+                        <af:column headerText="#{bindings.UsersU1.hints.LastUpdatedBy.label}" id="c13">
+                            <af:outputText value="#{row.LastUpdatedBy}"
+                                           shortDesc="#{bindings.UsersU1.hints.LastUpdatedBy.tooltip}" id="ot13"/>
+                        </af:column>
+                        <af:column headerText="#{bindings.UsersU1.hints.LastUpdatedOn.label}" id="c14">
+                            <af:outputText value="#{row.LastUpdatedOn}"
+                                           shortDesc="#{bindings.UsersU1.hints.LastUpdatedOn.tooltip}" id="ot14">
+                                <af:convertDateTime pattern="#{bindings.UsersU1.hints.LastUpdatedOn.format}"/>
+                            </af:outputText>
+                        </af:column>
+                        <af:column headerText="#{bindings.UsersU1.hints.VersionNo.label}" id="c15">
+                            <af:outputText value="#{row.VersionNo}"
+                                           shortDesc="#{bindings.UsersU1.hints.VersionNo.tooltip}" id="ot15">
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.UsersU1.hints.VersionNo.format}"/>
+                            </af:outputText>
+                        </af:column>
+                        <af:column headerText="#{bindings.UsersU1.hints.IsActive.label}" id="c16">
+                            <af:outputText value="#{row.IsActive}"
+                                           shortDesc="#{bindings.UsersU1.hints.IsActive.tooltip}" id="ot16"/>
+                        </af:column>
+                    </af:table>
+                </f:facet>
+                <f:facet name="end"/>
+            </af:panelBorderLayout>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_ViewUser-->
+</f:view>

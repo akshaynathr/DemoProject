@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="UserTaskFlow">
+    <default-activity>ViewUser</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <managed-bean id="__3">
+      <managed-bean-name>backing_ViewUser</managed-bean-name>
+      <managed-bean-class>com.oracle.view.backing.ViewUser</managed-bean-class>
+      <managed-bean-scope>backingBean</managed-bean-scope>
+      <!--oracle-jdev-comment:managed-bean-jsp-link:1ViewUser.jsf-->
+    </managed-bean>
+    <view id="ViewUser">
+      <page>/ViewUser.jsf</page>
+    </view>
+    <task-flow-call id="TrainTaskFlow">
+      <task-flow-reference>
+        <document>/WEB-INF/TrainTaskFlow.xml</document>
+        <id>TrainTaskFlow</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <control-flow-rule id="__1">
+      <from-activity-id>ViewUser</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>newUser</from-outcome>
+        <to-activity-id>TrainTaskFlow</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+  </task-flow-definition>
+</adfc-config>

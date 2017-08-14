@@ -32,7 +32,7 @@ public class DateValidator implements Validator {
         
         if(startDate==null||(endDate.compareTo(startDate)<0)){
             throw new ValidatorException(new FacesMessage(FacesMessage.SEVERITY_ERROR, 
-                                                          "Start date cannot be greater than end date",null);
+                                                          "Start date cannot be greater than end date",null));
         }
     }
 }

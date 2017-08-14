@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">ViewUser</property>
+      <property
+         name="x">240.0</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>ViewUser&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">230.14355</property>
+      <property
+         name="page">/ViewUser.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <TaskFlowCall
+      id="TaskFlowCall3">
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>TrainTaskFlow&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">TrainTaskFlow</property>
+      <property
+         name="x">543.33984</property>
+      <property
+         name="y">266.1494</property>
+      <property
+         name="documentReference">/WEB-INF/TrainTaskFlow.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">TrainTaskFlow</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View2"
+      to="TaskFlowCall3">
+      <property
+         name="fromOutcome">newUser</property>
+      <property
+         name="sdm:polyPoints">R50,281.0,229.79297,502.33984,265.79883,L50</property>
+   </ControlFlowCase>
+</SDM>
