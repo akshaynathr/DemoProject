@@ -1,5 +1,9 @@
 package com.oracle.model.EO;
 
+import java.security.MessageDigest;
+
+import java.security.NoSuchAlgorithmException;
+
 import java.sql.Timestamp;
 
 import oracle.jbo.Key;
@@ -20,11 +24,33 @@ public class UserEOImpl extends EntityImpl {
     @Override
     protected void prepareForDML(int i, TransactionEvent transactionEvent) {
         // TODO Implement this method
-        SequenceImpl seq = new SequenceImpl("USERS_SEQ",getDBTransaction());
-        setUserId(seq.getSequenceNumber().longValue());
         
-        String s = getFirstName().substring(0,1).toUpperCase()+getLastName().toUpperCase()+'_'+seq.getSequenceNumber();
-        setGlobalUsername(s);
+        if (i == DML_INSERT){
+            SequenceImpl seq = new SequenceImpl("USERS_SEQ",getDBTransaction());
+            setUserId(seq.getSequenceNumber().longValue());
+            
+            try{
+                String s = getFirstName().substring(0,1).toUpperCase()+getLastName().toUpperCase()+'_'+seq.getSequenceNumber();
+                setGlobalUsername(s);
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+        }
+        
+        
+        //Hash the password
+        String plainPassword = getPassword();
+        String encryptedPassword = "";
+        MessageDigest messageDigest;
+        try {
+            messageDigest = MessageDigest.getInstance("MD5");
+            messageDigest.update(plainPassword.getBytes());
+            encryptedPassword = new String(messageDigest.digest());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        setPassword(encryptedPassword);
+        
         super.prepareForDML(i, transactionEvent);
     }
 

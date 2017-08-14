@@ -3,4 +3,12 @@
   <application>
     <default-render-kit-id>oracle.adf.rich</default-render-kit-id>
   </application>
+  <validator>
+    <validator-id>custom.PasswordValidator</validator-id>
+    <validator-class>com.oracle.view.validator.PasswordValidator</validator-class>
+  </validator>
+  <validator>
+    <validator-id>custom.DateValidator</validator-id>
+    <validator-class>com.oracle.view.validator.DateValidator</validator-class>
+  </validator>
 </faces-config>

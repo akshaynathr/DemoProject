@@ -10,7 +10,8 @@
   DBObjectName="USERS"
   AliasName="UserEO"
   BindingStyle="OracleName"
-  RowClass="com.oracle.model.EO.UserEOImpl">
+  RowClass="com.oracle.model.EO.UserEOImpl"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <DesignTime>
     <Attr Name="_codeGenFlag2" Value="Access"/>
     <Attr Name="_isCodegen" Value="true"/>
@@ -137,7 +138,9 @@
     SQLType="TIMESTAMP"
     Type="java.sql.Timestamp"
     ColumnType="TIMESTAMP"
-    TableName="USERS"/>
+    TableName="USERS"
+    IsUpdateable="while_insert"
+    HistoryColumn="DateHistory"/>
   <Attribute
     Name="LastUpdatedBy"
     Precision="50"
@@ -145,7 +148,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="USERS">
+    TableName="USERS"
+    HistoryColumn="UserHistory">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
@@ -156,7 +160,8 @@
     SQLType="TIMESTAMP"
     Type="java.sql.Timestamp"
     ColumnType="TIMESTAMP"
-    TableName="USERS"/>
+    TableName="USERS"
+    HistoryColumn="DateHistory"/>
   <Attribute
     Name="VersionNo"
     Precision="10"
@@ -165,7 +170,9 @@
     SQLType="NUMERIC"
     Type="java.lang.Long"
     ColumnType="NUMBER"
-    TableName="USERS"/>
+    TableName="USERS"
+    ChangeIndicator="true"
+    HistoryColumn="VersionHistory"/>
   <Attribute
     Name="IsActive"
     Precision="1"
@@ -215,4 +222,34 @@
       <Item Value="com.oracle.model.EO.UserEO.SupervisorId"/>
     </AttrArray>
   </Key>
+  <validation:LengthValidationBean
+    Name="FirstNameLengthValidator"
+    ResId="com.oracle.model.EO.UserEO_Rule_0"
+    OnAttribute="FirstName"
+    CompareType="GREATERTHAN"
+    DataType="CHARACTER"
+    CompareLength="0"
+    Inverse="false">
+    <validation:OnAttributes>
+      <validation:Item
+        Value="FirstName"/>
+    </validation:OnAttributes>
+  </validation:LengthValidationBean>
+  <validation:LengthValidationBean
+    Name="LastNameLengthValidator"
+    ResId="com.oracle.model.EO.UserEO_Rule_1"
+    OnAttribute="LastName"
+    CompareType="GREATERTHAN"
+    DataType="CHARACTER"
+    CompareLength="0"
+    Inverse="false">
+    <validation:OnAttributes>
+      <validation:Item
+        Value="LastName"/>
+    </validation:OnAttributes>
+  </validation:LengthValidationBean>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="com.oracle.model.ModelBundle"/>
+  </ResourceBundle>
 </Entity>

@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="Users.jsf" id="d1" binding="#{backingBeanScope.backing_Users.d1}">
+        <af:messages id="m1" binding="#{backingBeanScope.backing_Users.m1}"/>
+        <af:form id="f1" binding="#{backingBeanScope.backing_Users.f1}">
+            <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.backing_Users.pfl1}">
+                <af:inputText value="#{bindings.FirstName.inputValue}" label="#{bindings.FirstName.hints.label}"
+                              required="#{bindings.FirstName.hints.mandatory}"
+                              columns="#{bindings.FirstName.hints.displayWidth}"
+                              maximumLength="#{bindings.FirstName.hints.precision}"
+                              shortDesc="#{bindings.FirstName.hints.tooltip}" id="it1"
+                              binding="#{backingBeanScope.backing_Users.it1}">
+                    <f:validator binding="#{bindings.FirstName.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.MiddleName.inputValue}" label="#{bindings.MiddleName.hints.label}"
+                              required="#{bindings.MiddleName.hints.mandatory}"
+                              columns="#{bindings.MiddleName.hints.displayWidth}"
+                              maximumLength="#{bindings.MiddleName.hints.precision}"
+                              shortDesc="#{bindings.MiddleName.hints.tooltip}" id="it2"
+                              binding="#{backingBeanScope.backing_Users.it2}">
+                    <f:validator binding="#{bindings.MiddleName.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.LastName.inputValue}" label="#{bindings.LastName.hints.label}"
+                              required="#{bindings.LastName.hints.mandatory}"
+                              columns="#{bindings.LastName.hints.displayWidth}"
+                              maximumLength="#{bindings.LastName.hints.precision}"
+                              shortDesc="#{bindings.LastName.hints.tooltip}" id="it3"
+                              binding="#{backingBeanScope.backing_Users.it3}">
+                    <f:validator binding="#{bindings.LastName.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.Password.inputValue}" label="#{bindings.Password.hints.label}"
+                              required="#{bindings.Password.hints.mandatory}"
+                              columns="#{bindings.Password.hints.displayWidth}"
+                              maximumLength="#{bindings.Password.hints.precision}"
+                              shortDesc="#{bindings.Password.hints.tooltip}" id="it4"
+                              binding="#{backingBeanScope.backing_Users.it4}">
+                    <f:validator validatorId="custom.PasswordValidator"/>
+                </af:inputText>
+                <af:inputComboboxListOfValues id="supervisorIdId"
+                                              popupTitle="Search and Select: #{bindings.SupervisorId.hints.label}"
+                                              value="#{bindings.SupervisorId.inputValue}"
+                                              label="#{bindings.SupervisorId.hints.label}"
+                                              model="#{bindings.SupervisorId.listOfValuesModel}"
+                                              required="#{bindings.SupervisorId.hints.mandatory}"
+                                              columns="#{bindings.SupervisorId.hints.displayWidth}"
+                                              shortDesc="#{bindings.SupervisorId.hints.tooltip}"
+                                              binding="#{backingBeanScope.backing_Users.supervisorIdId}">
+                    <f:validator binding="#{bindings.SupervisorId.validator}"/>
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.SupervisorId.format}"/>
+                </af:inputComboboxListOfValues>
+                <af:inputDate value="#{bindings.StartDate.inputValue}" label="#{bindings.StartDate.hints.label}"
+                              required="#{bindings.StartDate.hints.mandatory}"
+                              columns="#{bindings.StartDate.hints.displayWidth}"
+                              shortDesc="#{bindings.StartDate.hints.tooltip}" id="id1"
+                              binding="#{backingBeanScope.backing_Users.id1}">
+                    <f:validator binding="#{bindings.StartDate.validator}"/>
+                    <af:convertDateTime pattern="#{bindings.StartDate.format}"/>
+                </af:inputDate>
+                <af:inputDate value="#{bindings.EndDate.inputValue}" label="#{bindings.EndDate.hints.label}"
+                              required="#{bindings.EndDate.hints.mandatory}"
+                              columns="#{bindings.EndDate.hints.displayWidth}"
+                              shortDesc="#{bindings.EndDate.hints.tooltip}" id="id2"
+                              binding="#{backingBeanScope.backing_Users.id2}">
+                    <f:validator binding="#{bindings.EndDate.validator}"/>
+                    <f:attribute name="StartDateComponentId" value="id1"/>
+                    <af:convertDateTime pattern="#{bindings.EndDate.format}"/>
+                    <f:validator validatorId="custom.DateValidator"/>
+                </af:inputDate>
+                <af:inputText value="#{bindings.TeamId.inputValue}" label="#{bindings.TeamId.hints.label}"
+                              required="#{bindings.TeamId.hints.mandatory}"
+                              columns="#{bindings.TeamId.hints.displayWidth}"
+                              maximumLength="#{bindings.TeamId.hints.precision}"
+                              shortDesc="#{bindings.TeamId.hints.tooltip}" id="it5"
+                              binding="#{backingBeanScope.backing_Users.it5}">
+                    <f:validator binding="#{bindings.TeamId.validator}"/>
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.TeamId.format}"/>
+                </af:inputText>
+                <f:facet name="footer">
+                    <af:button text="Commit" id="b1" binding="#{backingBeanScope.backing_Users.b1}"
+                               actionListener="#{bindings.Commit.execute}"/>
+                </f:facet>
+            </af:panelFormLayout>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_Users-->
+</f:view>
