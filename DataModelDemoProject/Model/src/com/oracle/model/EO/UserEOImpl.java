@@ -1,11 +1,16 @@
 package com.oracle.model.EO;
 
+import java.math.BigInteger;
+
 import java.security.MessageDigest;
 
 import java.security.NoSuchAlgorithmException;
 
+import java.security.SecureRandom;
+
 import java.sql.Timestamp;
 
+import oracle.jbo.AttributeList;
 import oracle.jbo.Key;
 import oracle.jbo.RowIterator;
 import oracle.jbo.domain.DBSequence;
@@ -26,11 +31,11 @@ public class UserEOImpl extends EntityImpl {
         // TODO Implement this method
         
         if (i == DML_INSERT){
-            SequenceImpl seq = new SequenceImpl("USERS_SEQ",getDBTransaction());
-            setUserId(seq.getSequenceNumber().longValue());
+//            SequenceImpl seq = new SequenceImpl("USERS_SEQ",getDBTransaction());
+//            setUserId(seq.getSequenceNumber().longValue());
             
             try{
-                String s = getFirstName().substring(0,1).toUpperCase()+getLastName().toUpperCase()+'_'+seq.getSequenceNumber();
+                String s = getFirstName().substring(0,1).toUpperCase()+getLastName().toUpperCase()+'_'+getUserId();
                 setGlobalUsername(s);
             }catch(Exception e){
                 e.printStackTrace();
@@ -39,19 +44,33 @@ public class UserEOImpl extends EntityImpl {
         
         
         //Hash the password
-        String plainPassword = getPassword();
-        String encryptedPassword = "";
-        MessageDigest messageDigest;
-        try {
-            messageDigest = MessageDigest.getInstance("MD5");
-            messageDigest.update(plainPassword.getBytes());
-            encryptedPassword = new String(messageDigest.digest());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        setPassword(encryptedPassword);
+//        String plainPassword = getPassword();
+//        String encryptedPassword = "";
+//        MessageDigest messageDigest;
+//        try {
+//            messageDigest = MessageDigest.getInstance("MD5");
+//            messageDigest.update(plainPassword.getBytes());
+//            encryptedPassword = new String(messageDigest.digest());
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        setPassword(encryptedPassword);
         
         super.prepareForDML(i, transactionEvent);
+    }
+
+    @Override
+    protected void create(AttributeList attributeList) {
+        // TODO Implement this method
+        
+        SequenceImpl seq = new SequenceImpl("USERS_SEQ",getDBTransaction());
+        setUserId(seq.getSequenceNumber().longValue());
+        
+        SecureRandom random = new SecureRandom();
+        String randomPassword = new BigInteger(130, random).toString(32);        
+        setPassword(randomPassword);
+        
+        super.create(attributeList);
     }
 
     /**

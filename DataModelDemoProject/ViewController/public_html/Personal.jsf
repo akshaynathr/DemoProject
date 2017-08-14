@@ -55,7 +55,6 @@
                                       shortDesc="#{bindings.Password.hints.tooltip}" id="it4"
                                       binding="#{backingBeanScope.backing_Personal.it4}">
                             <f:validator binding="#{bindings.Password.validator}"/>
-                            <f:validator validatorId="custom.PasswordValidator"/>
                         </af:inputText>
                     </af:panelFormLayout>
                 </f:facet>

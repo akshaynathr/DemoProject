@@ -51,7 +51,6 @@
   <ListBinding
     Name="LOV_SupervisorId"
     ListVOName="UsersUVO1"
-    ComboRowCountHint="10"
     NullValueFlag="none"
     MRUCount="0">
     <AttrArray Name="AttrNames">
@@ -62,9 +61,9 @@
       <Item Value="UserId"/>
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="UserId"/>
       <Item Value="FirstName"/>
       <Item Value="LastName"/>
-      <Item Value="UserId"/>
     </AttrArray>
     <DisplayCriteria/>
     <ViewCriteriaUsage
@@ -112,7 +111,8 @@
     PrecisionRule="true"
     EntityAttrName="Password"
     EntityUsage="UserEO"
-    AliasName="PASSWORD"/>
+    AliasName="PASSWORD"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="SupervisorId"
     PrecisionRule="true"
@@ -150,25 +150,29 @@
     PrecisionRule="true"
     EntityAttrName="CreatedBy"
     EntityUsage="UserEO"
-    AliasName="CREATED_BY"/>
+    AliasName="CREATED_BY"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="CreatedOn"
     PrecisionRule="true"
     EntityAttrName="CreatedOn"
     EntityUsage="UserEO"
-    AliasName="CREATED_ON"/>
+    AliasName="CREATED_ON"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="LastUpdatedBy"
     PrecisionRule="true"
     EntityAttrName="LastUpdatedBy"
     EntityUsage="UserEO"
-    AliasName="LAST_UPDATED_BY"/>
+    AliasName="LAST_UPDATED_BY"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="LastUpdatedOn"
     PrecisionRule="true"
     EntityAttrName="LastUpdatedOn"
     EntityUsage="UserEO"
-    AliasName="LAST_UPDATED_ON"/>
+    AliasName="LAST_UPDATED_ON"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="VersionNo"
     PrecisionRule="true"
