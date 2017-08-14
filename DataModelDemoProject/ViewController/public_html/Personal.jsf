@@ -30,6 +30,7 @@
                                       shortDesc="#{bindings.FirstName.hints.tooltip}" id="it1"
                                       binding="#{backingBeanScope.backing_Personal.it1}">
                             <f:validator binding="#{bindings.FirstName.validator}"/>
+                            <f:validator validatorId="custom.NameValidator"/>
                         </af:inputText>
                         <af:inputText value="#{bindings.MiddleName.inputValue}"
                                       label="#{bindings.MiddleName.hints.label}"
@@ -47,6 +48,7 @@
                                       shortDesc="#{bindings.LastName.hints.tooltip}" id="it3"
                                       binding="#{backingBeanScope.backing_Personal.it3}">
                             <f:validator binding="#{bindings.LastName.validator}"/>
+                            <f:validator validatorId="custom.NameValidator"/>
                         </af:inputText>
                         <af:inputText value="#{bindings.Password.inputValue}" label="#{bindings.Password.hints.label}"
                                       required="#{bindings.Password.hints.mandatory}"

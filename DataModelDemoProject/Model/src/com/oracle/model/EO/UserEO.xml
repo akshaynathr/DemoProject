@@ -222,34 +222,4 @@
       <Item Value="com.oracle.model.EO.UserEO.SupervisorId"/>
     </AttrArray>
   </Key>
-  <validation:LengthValidationBean
-    Name="FirstNameLengthValidator"
-    ResId="com.oracle.model.EO.UserEO_Rule_0"
-    OnAttribute="FirstName"
-    CompareType="GREATERTHAN"
-    DataType="CHARACTER"
-    CompareLength="0"
-    Inverse="false">
-    <validation:OnAttributes>
-      <validation:Item
-        Value="FirstName"/>
-    </validation:OnAttributes>
-  </validation:LengthValidationBean>
-  <validation:LengthValidationBean
-    Name="LastNameLengthValidator"
-    ResId="com.oracle.model.EO.UserEO_Rule_1"
-    OnAttribute="LastName"
-    CompareType="GREATERTHAN"
-    DataType="CHARACTER"
-    CompareLength="0"
-    Inverse="false">
-    <validation:OnAttributes>
-      <validation:Item
-        Value="LastName"/>
-    </validation:OnAttributes>
-  </validation:LengthValidationBean>
-  <ResourceBundle>
-    <PropertiesBundle
-      PropertiesFile="com.oracle.model.ModelBundle"/>
-  </ResourceBundle>
 </Entity>

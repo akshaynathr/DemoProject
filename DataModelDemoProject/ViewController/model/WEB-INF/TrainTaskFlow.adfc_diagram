@@ -92,7 +92,7 @@
       <property
          name="fromOutcome">newUser</property>
       <property
-         name="sdm:polyPoints">R50,233.01465,261.48828,328.0,240.94824,L50</property>
+         name="sdm:polyPoints">R50,233.01465,261.1377,328.0,240.94824,L50</property>
    </ControlFlowCase>
    <TaskFlowReturn
       id="TaskFlowReturn12">
