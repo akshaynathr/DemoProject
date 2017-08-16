@@ -4,9 +4,10 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="ProductsU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="ProductsU1Iterator"/>
+    <iterator Binds="ProductsU1" RangeSize="25" DataControl="AppModuleAMDataControl1" id="ProductsU1Iterator"/>
   </executables>
   <bindings>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleAMDataControl"/>
     <attributeValues IterBinding="ProductsU1Iterator" id="ProductName">
       <AttrNames>
         <Item Value="ProductName"/>
@@ -24,6 +25,7 @@
     </attributeValues>
     <list IterBinding="ProductsU1Iterator" StaticList="false" Uses="LOV_ProductCategoryId" id="ProductCategoryId"
           DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
-    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleAMDataControl"/>
+    <action IterBinding="ProductsU1Iterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action IterBinding="ProductsU1Iterator" id="Create" RequiresUpdateModel="true" Action="createRow"/>
   </bindings>
 </pageDefinition>

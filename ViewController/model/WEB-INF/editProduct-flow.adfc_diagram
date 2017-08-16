@@ -56,4 +56,13 @@
       <property
          name="sdm:polyPoints">T56,371.5,69.74121,490.0,-47.9541,L54</property>
    </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase7"
+      to="View2">
+      <property
+         name="fromOutcome">CreateInsert</property>
+      <property
+         name="sdm:polyPoints">T50,225.01465,192.09766,327.0,123.74121,L50</property>
+   </ControlFlowCase>
 </SDM>

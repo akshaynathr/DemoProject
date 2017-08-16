@@ -17,6 +17,10 @@
     <page path="/UserTrain/Summary.jsf" usageId="view_SummaryPageDef"/>
     <page path="/editUser.jsff" usageId="view_editUserPageDef"/>
     <page path="/createProduct.jsf" usageId="view_createProductPageDef"/>
+    <page path="/WEB-INF/editProduct-flow.xml#editProduct-flow@CreateInsert"
+          usageId="view_editProduct_flow_editProduct_flow_CreateInsertPageDef"/>
+    <page path="/WEB-INF/create_product.xml#create_product@CreateInsert"
+          usageId="view_create_product_create_product_CreateInsertPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_HomePageDef" path="view.pageDefs.HomePageDef"/>
@@ -29,9 +33,18 @@
           path="view.pageDefs.UserTrain_UserTrain_CreateInsert1PageDef"/>
     <page id="view_ProductEditPageDef" path="view.pageDefs.ProductEditPageDef"/>
     <page id="view_createProductPageDef" path="view.pageDefs.createProductPageDef"/>
+    <page id="view_editProduct_flow_editProduct_flow_CreateInsertPageDef"
+          path="view.pageDefs.editProduct_flow_editProduct_flow_CreateInsertPageDef"/>
+    <page id="view_create_product_create_product_CreateInsertPageDef"
+          path="view.pageDefs.create_product_create_product_CreateInsertPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleAMDataControl" Package="model.AM"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleAMLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="AppModuleAMDataControl1" Package="model.EO"
                      FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
                      SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
                      SupportsSortCollection="true" Configuration="AppModuleAMLocal" syncMode="Immediate"
