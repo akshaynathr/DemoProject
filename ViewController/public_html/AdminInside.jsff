@@ -24,7 +24,7 @@
                   emptyText="#{bindings.UsersU3.viewable ? 'No data to display.' : 'Access Denied.'}"
                   rowBandingInterval="0" selectedRowKeys="#{bindings.UsersU3.collectionModel.selectedRow}"
                   selectionListener="#{bindings.UsersU3.collectionModel.makeCurrent}" rowSelection="single"
-                  fetchSize="#{bindings.UsersU3.rangeSize}" partialTriggers="::qryId1" id="t1">
+                  fetchSize="#{bindings.UsersU3.rangeSize}" partialTriggers="::qryId1 ::b3" id="t1">
           <af:column headerText="#{bindings.UsersU3.hints.GlobalUsername.label}" id="c1">
             <af:link text="#{row.GlobalUsername}" id="l1" action="edit"/>
           </af:column>

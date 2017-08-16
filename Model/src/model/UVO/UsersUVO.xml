@@ -125,25 +125,29 @@
     PrecisionRule="true"
     EntityAttrName="CreatedBy"
     EntityUsage="UserEO"
-    AliasName="CREATED_BY"/>
+    AliasName="CREATED_BY"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="CreatedOn"
     PrecisionRule="true"
     EntityAttrName="CreatedOn"
     EntityUsage="UserEO"
-    AliasName="CREATED_ON"/>
+    AliasName="CREATED_ON"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="LastUpdatedBy"
     PrecisionRule="true"
     EntityAttrName="LastUpdatedBy"
     EntityUsage="UserEO"
-    AliasName="LAST_UPDATED_BY"/>
+    AliasName="LAST_UPDATED_BY"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="LastUpdatedOn"
     PrecisionRule="true"
     EntityAttrName="LastUpdatedOn"
     EntityUsage="UserEO"
-    AliasName="LAST_UPDATED_ON"/>
+    AliasName="LAST_UPDATED_ON"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="VersionNo"
     PrecisionRule="true"
@@ -156,6 +160,51 @@
     EntityAttrName="IsActive"
     EntityUsage="UserEO"
     AliasName="IS_ACTIVE"/>
+  <ViewCriteria
+    Name="ViewAllUsers"
+    ViewObjectName="model.UVO.UsersUVO"
+    Conjunction="AND"
+    Mode="3">
+    <Properties Name="_Props">
+      <CustomProperties>
+        <Property
+          Name="autoExecute"
+          Value="true"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="false"/>
+        <Property
+          Name="showInList"
+          Value="false"/>
+        <Property
+          Name="displayOperators"
+          Value="InBasicMode"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="UsersUVOCriteria_row_0"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="IsActive"
+        ViewAttribute="IsActive"
+        Operator="&lt;>"
+        Conjunction="AND"
+        Value="n"
+        UpperColumns="0"
+        Required="Optional">
+        <Properties>
+          <CustomProperties>
+            <Property
+              Name="renderedMode"
+              Value="Basic"/>
+          </CustomProperties>
+        </Properties>
+      </ViewCriteriaItem>
+    </ViewCriteriaRow>
+  </ViewCriteria>
   <ViewLinkAccessor
     Name="UsersU"
     ViewLink="model.UVO.UsersFk1VL"
