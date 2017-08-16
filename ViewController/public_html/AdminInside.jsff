@@ -103,7 +103,8 @@
                     <af:commandLink text="Advanced" rendered="false" id="cl2"/>
                   </f:facet>
                 </af:quickQuery>
-                <af:button text="Create Product" id="b2" useWindow="true" windowHeight="600" action="createProduct"/>
+                <af:button text="Create Product" id="b2" useWindow="true" windowHeight="500" action="createProduct"
+                           windowWidth="600"/>
               </af:panelGroupLayout>
               <af:spacer width="10" height="10" id="s1"/>
             </af:panelHeader>

@@ -43,7 +43,16 @@
     PrecisionRule="true"
     EntityAttrName="ProductId"
     EntityUsage="ProductEO"
-    AliasName="PRODUCT_ID"/>
+    AliasName="PRODUCT_ID">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="150"/>
+        <DISPLAYHEIGHT
+          Value="8"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ProductName"
     PrecisionRule="true"
