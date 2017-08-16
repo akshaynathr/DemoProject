@@ -12,8 +12,6 @@
     <f:facet name="appNav">
      <af:navigationPane hint="buttons" id="np1">
       <af:commandNavigationItem text="Dashboard" id="cni1"/>
-      <af:commandNavigationItem id="ni1" text="Users"/>
-      <af:commandNavigationItem text="Products" id="cni2"/>
      </af:navigationPane>
     </f:facet>
     <f:facet name="globalLinks">
@@ -32,7 +30,8 @@
     </f:facet>
     <f:facet name="footer"/>
     <f:facet name="center">
-     <af:region value="#{bindings.dynamicRegion1.regionModel}" id="r1"/>
+     <af:region value="#{bindings.dynamicRegion1.regionModel}" id="r1" partialTriggers="::np1:cni1"
+                uncommittedDataWarning="on"/>
     </f:facet>
    </af:pageTemplate>
   </af:form>
