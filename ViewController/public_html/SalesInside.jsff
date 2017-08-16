@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:activeOutputText value="Inside Sales " id="aot1"/>
+  <af:button text="goBack" id="b1" action="back" icon="#{resource['images:user.jpg']}"/>
+</ui:composition>

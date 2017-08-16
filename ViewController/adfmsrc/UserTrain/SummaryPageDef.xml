@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="SummaryPageDef"
+                Package="UserTrain">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="UsersU3" RangeSize="25" DataControl="AppModuleAMDataControl" id="UsersU3Iterator"/>
+    <iterator Binds="UsersRolesU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="UsersRolesU1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="UsersU3Iterator" id="FirstName">
+      <AttrNames>
+        <Item Value="FirstName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="UsersU3Iterator" id="MiddleName">
+      <AttrNames>
+        <Item Value="MiddleName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="UsersU3Iterator" id="LastName">
+      <AttrNames>
+        <Item Value="LastName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="UsersU3Iterator" id="Password">
+      <AttrNames>
+        <Item Value="Password"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="UsersU3Iterator" StaticList="false" Uses="LOV_SupervisorId" id="SupervisorId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="UsersU3Iterator" id="StartDate">
+      <AttrNames>
+        <Item Value="StartDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="UsersU3Iterator" id="EndDate">
+      <AttrNames>
+        <Item Value="EndDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="UsersU3Iterator" id="TeamId">
+      <AttrNames>
+        <Item Value="TeamId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="UsersRolesU1Iterator" id="RoleId">
+      <AttrNames>
+        <Item Value="RoleId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="UsersRolesU1Iterator" id="StartDate1">
+      <AttrNames>
+        <Item Value="StartDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="UsersRolesU1Iterator" id="EndDate1">
+      <AttrNames>
+        <Item Value="EndDate"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

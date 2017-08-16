@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document id="d1">
+        <af:form id="f1">
+            <af:messages id="m1"/>
+            <af:panelBorderLayout id="pbl1">
+                <f:facet name="top">
+                    <af:train value="#{controllerContext.currentViewPort.taskFlowContext.trainModel}" id="t1"/>
+                </f:facet>
+                <f:facet name="bottom">
+                    <af:trainButtonBar value="#{controllerContext.currentViewPort.taskFlowContext.trainModel}"
+                                       id="tbb1"/>
+                </f:facet>
+                <f:facet name="start">
+                    <af:panelFormLayout id="pfl1">
+                        <af:selectOneChoice value="#{bindings.SupervisorId.inputValue}"
+                                            label="#{bindings.SupervisorId.label}"
+                                            required="#{bindings.SupervisorId.hints.mandatory}"
+                                            shortDesc="#{bindings.SupervisorId.hints.tooltip}" id="soc1">
+                            <f:selectItems value="#{bindings.SupervisorId.items}" id="si1"/>
+                            <f:validator binding="#{bindings.SupervisorId.validator}"/>
+                        </af:selectOneChoice>
+                        <af:inputDate value="#{bindings.StartDate.inputValue}" label="#{bindings.StartDate.hints.label}"
+                                      required="#{bindings.StartDate.hints.mandatory}"
+                                      columns="#{bindings.StartDate.hints.displayWidth}"
+                                      shortDesc="#{bindings.StartDate.hints.tooltip}" id="id1">
+                            <f:validator binding="#{bindings.StartDate.validator}"/>
+                            <af:convertDateTime pattern="#{bindings.StartDate.format}"/>
+                            <f:validator validatorId="custom.StartDateValidator"/>
+                        </af:inputDate>
+                        <af:inputDate value="#{bindings.EndDate.inputValue}" label="#{bindings.EndDate.hints.label}"
+                                      required="#{bindings.EndDate.hints.mandatory}"
+                                      columns="#{bindings.EndDate.hints.displayWidth}"
+                                      shortDesc="#{bindings.EndDate.hints.tooltip}" id="id2">
+                            <f:validator binding="#{bindings.EndDate.validator}"/>
+                            <af:convertDateTime pattern="#{bindings.EndDate.format}"/>
+                            <f:validator validatorId="custom.LastDateValidator"/>
+                            <f:attribute name="StartDateComponentId" value="id1"/>
+                        </af:inputDate>
+                        <af:inputText value="#{bindings.TeamId.inputValue}" label="#{bindings.TeamId.hints.label}"
+                                      required="#{bindings.TeamId.hints.mandatory}"
+                                      columns="#{bindings.TeamId.hints.displayWidth}"
+                                      maximumLength="#{bindings.TeamId.hints.precision}"
+                                      shortDesc="#{bindings.TeamId.hints.tooltip}" id="it1">
+                            <f:validator binding="#{bindings.TeamId.validator}"/>
+                            <af:convertNumber groupingUsed="false" pattern="#{bindings.TeamId.format}"/>
+                        </af:inputText>
+                    </af:panelFormLayout>
+                    <af:panelFormLayout id="pfl2">
+                        <af:inputText value="#{bindings.RoleId.inputValue}" label="#{bindings.RoleId.hints.label}"
+                                      required="#{bindings.RoleId.hints.mandatory}"
+                                      columns="#{bindings.RoleId.hints.displayWidth}"
+                                      maximumLength="#{bindings.RoleId.hints.precision}"
+                                      shortDesc="#{bindings.RoleId.hints.tooltip}" id="it2">
+                            <f:validator binding="#{bindings.RoleId.validator}"/>
+                            <af:convertNumber groupingUsed="false" pattern="#{bindings.RoleId.format}"/>
+                        </af:inputText>
+                        <af:inputDate value="#{bindings.StartDate1.inputValue}"
+                                      label="#{bindings.StartDate1.hints.label}"
+                                      required="#{bindings.StartDate1.hints.mandatory}"
+                                      columns="#{bindings.StartDate1.hints.displayWidth}"
+                                      shortDesc="#{bindings.StartDate1.hints.tooltip}" id="id3">
+                            <f:validator binding="#{bindings.StartDate1.validator}"/>
+                            <af:convertDateTime pattern="#{bindings.StartDate1.format}"/>
+                        </af:inputDate>
+                        <af:inputDate value="#{bindings.EndDate1.inputValue}" label="#{bindings.EndDate1.hints.label}"
+                                      required="#{bindings.EndDate1.hints.mandatory}"
+                                      columns="#{bindings.EndDate1.hints.displayWidth}"
+                                      shortDesc="#{bindings.EndDate1.hints.tooltip}" id="id4">
+                            <af:convertDateTime pattern="#{bindings.EndDate1.format}"/>
+                        </af:inputDate>
+                    </af:panelFormLayout>
+                </f:facet>
+                <f:facet name="end"/>
+            </af:panelBorderLayout>
+        </af:form>
+    </af:document>
+</f:view>

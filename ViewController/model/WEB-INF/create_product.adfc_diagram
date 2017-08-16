@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">createProduct</property>
+      <property
+         name="pageFragment">false</property>
+      <property
+         name="x">509.0</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>createProduct&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">91.24707</property>
+      <property
+         name="page">/createProduct.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <TaskFlowReturn
+      id="TaskFlowReturn3">
+      <property
+         name="activityId">commit</property>
+      <property
+         name="x">640.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>commit&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  commit&lt;/p></property>
+      <property
+         name="y">155.5459</property>
+      <property
+         name="finish">true</property>
+      <property
+         name="exceptionHandler">false</property>
+   </TaskFlowReturn>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View2"
+      to="TaskFlowReturn3">
+      <property
+         name="fromOutcome">commit</property>
+      <property
+         name="sdm:polyPoints">R50,550.0,90.896484,599.0,155.19531,L50</property>
+   </ControlFlowCase>
+</SDM>

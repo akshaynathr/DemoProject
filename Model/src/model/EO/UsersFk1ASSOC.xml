@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="UsersFk1ASSOC"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="SupervisorIdUser"
+    Cardinality="1"
+    Source="true"
+    Owner="model.EO.UserEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="SupervisorIdUser"/>
+      <Attr Name="_foreignKey" Value="model.EO.UserEO.UsersPk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.UserEO.UserId"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="User"
+    Cardinality="-1"
+    Owner="model.EO.UserEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="User"/>
+      <Attr Name="_foreignKey" Value="model.EO.UserEO.UsersFk1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.UserEO.SupervisorId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

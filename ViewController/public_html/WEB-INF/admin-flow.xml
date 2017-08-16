@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="admin-flow">
+    <default-activity>admin_dashboard</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <security/>
+    <view id="admin_dashboard">
+      <page>/admin_dashboard.jsff</page>
+      <redirect/>
+    </view>
+    <view id="Team">
+      <page>/AdminInside.jsff</page>
+      <redirect/>
+    </view>
+    <task-flow-call id="UserTrain1">
+      <task-flow-reference>
+        <document>/WEB-INF/UserTrain.xml</document>
+        <id>UserTrain</id>
+      </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
+    </task-flow-call>
+    <task-flow-call id="EditUser-flow">
+      <task-flow-reference>
+        <document>/WEB-INF/EditUser-flow.xml</document>
+        <id>EditUser-flow</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="editProduct-flow">
+      <task-flow-reference>
+        <document>/WEB-INF/editProduct-flow.xml</document>
+        <id>editProduct-flow</id>
+      </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
+    </task-flow-call>
+    <task-flow-call id="create_product">
+      <task-flow-reference>
+        <document>/WEB-INF/create_product.xml</document>
+        <id>create_product</id>
+      </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
+    </task-flow-call>
+    <control-flow-rule id="__1">
+      <from-activity-id>admin_dashboard</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>team</from-outcome>
+        <to-activity-id>Team</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__3">
+      <from-activity-id>Team</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome>UserTrain1</from-outcome>
+        <to-activity-id>UserTrain1</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__7">
+        <from-outcome>edit</from-outcome>
+        <to-activity-id>EditUser-flow</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__9">
+        <from-outcome>editProduct</from-outcome>
+        <to-activity-id>editProduct-flow</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__11">
+        <from-outcome>createProduct</from-outcome>
+        <to-activity-id>create_product</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__5">
+      <from-activity-id>Team</from-activity-id>
+      <control-flow-case id="__6">
+        <from-outcome>UserTrain2</from-outcome>
+        <to-activity-id>UserTrain2</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__8">
+      <from-activity-id>EditUser-flow</from-activity-id>
+      <control-flow-case id="__10">
+        <from-outcome>commit</from-outcome>
+        <to-activity-id>Team</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__12">
+      <from-activity-id>create_product</from-activity-id>
+      <control-flow-case id="__13">
+        <from-outcome>commit</from-outcome>
+        <to-activity-id>Team</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.0.31" id="HomePageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <taskFlow id="testflow1" taskFlowId="/WEB-INF/salesmanager.xml#test-flow" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="testflow2" taskFlowId="/WEB-INF/salesmanager.xml#test-flow" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="testflow3" taskFlowId="/WEB-INF/salesmanager.xml#test-flow" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="dynamicRegion1" taskFlowId="${viewScope.salesmanagerBean.selectTaskFlow}" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding" Refresh="ifNeeded"/>
+  </executables>
+  <bindings/>
+</pageDefinition>

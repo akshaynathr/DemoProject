@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.0.31" id="DataBindings"
+             SeparateXMLFiles="false" Package="view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/Home.jsf" usageId="view_HomePageDef"/>
+    <page path="/AdminInside.jsff" usageId="view_AdminInsidePageDef"/>
+    <page path="/WEB-INF/UserTrain.xml#UserTrain@CreateInsert1"
+          usageId="view_UserTrain_UserTrain_CreateInsert1PageDef"/>
+    <page path="/ProductEdit.jsf" usageId="view_ProductEditPageDef"/>
+    <page path="/UserTrain/Corporate.jsf" usageId="view_CorporatePageDef"/>
+    <page path="/UserTrain/Personal.jsf" usageId="view_PersonalPageDef"/>
+    <page path="/UserTrain/Summary.jsf" usageId="view_SummaryPageDef"/>
+    <page path="/editUser.jsff" usageId="view_editUserPageDef"/>
+    <page path="/createProduct.jsf" usageId="view_createProductPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="view_HomePageDef" path="view.pageDefs.HomePageDef"/>
+    <page id="view_PersonalPageDef" path="UserTrain.PersonalPageDef"/>
+    <page id="view_CorporatePageDef" path="UserTrain.CorporatePageDef"/>
+    <page id="view_SummaryPageDef" path="UserTrain.SummaryPageDef"/>
+    <page id="view_AdminInsidePageDef" path="view.pageDefs.AdminInsidePageDef"/>
+    <page id="view_editUserPageDef" path="view.pageDefs.editUserPageDef"/>
+    <page id="view_UserTrain_UserTrain_CreateInsert1PageDef"
+          path="view.pageDefs.UserTrain_UserTrain_CreateInsert1PageDef"/>
+    <page id="view_ProductEditPageDef" path="view.pageDefs.ProductEditPageDef"/>
+    <page id="view_createProductPageDef" path="view.pageDefs.createProductPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="AppModuleAMDataControl" Package="model.AM"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleAMLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

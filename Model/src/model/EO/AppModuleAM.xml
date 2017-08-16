@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModuleAM"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="RolesU1"
+    ViewObjectName="model.UVO.RolesUVO"/>
+  <ViewUsage
+    Name="UsersRolesU1"
+    ViewObjectName="model.UVO.UsersRolesUVO"/>
+  <ViewUsage
+    Name="UsersRolesR1"
+    ViewObjectName="model.RVO.UsersRolesRVO"/>
+  <ViewUsage
+    Name="RolesR1"
+    ViewObjectName="model.RVO.RolesRVO"/>
+  <ViewUsage
+    Name="UsersRolesU2"
+    ViewObjectName="model.UVO.UsersRolesUVO"/>
+  <ViewUsage
+    Name="UsersRolesR2"
+    ViewObjectName="model.RVO.UsersRolesRVO"/>
+  <ViewUsage
+    Name="LookupsU1"
+    ViewObjectName="model.UVO.LookupsUVO"/>
+  <ViewUsage
+    Name="ProductsU1"
+    ViewObjectName="model.UVO.ProductsUVO"/>
+  <ViewUsage
+    Name="LookupsR1"
+    ViewObjectName="model.RVO.LookupsRVO"/>
+  <ViewUsage
+    Name="ProductsR1"
+    ViewObjectName="model.RVO.ProductsRVO"/>
+  <ViewLinkUsage
+    Name="UsersRolesFk2VL1"
+    ViewLinkObjectName="model.UVO.UsersRolesFk2VL"
+    SrcViewUsageName="model.EO.AppModuleAM.RolesU1"
+    DstViewUsageName="model.EO.AppModuleAM.UsersRolesU2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="UsersRolesFk2VL2"
+    ViewLinkObjectName="model.RVO.UsersRolesFk2VL"
+    SrcViewUsageName="model.EO.AppModuleAM.RolesR1"
+    DstViewUsageName="model.EO.AppModuleAM.UsersRolesR2"
+    Reversed="false"/>
+</AppModule>

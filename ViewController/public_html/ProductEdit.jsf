@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:document id="d1">
+    <af:messages id="m1"/>
+    <af:form id="f1">
+      <af:activeOutputText value="Edit Product" id="aot1" inlineStyle="font-size:large; font-weight:bolder;"/>
+      <af:panelFormLayout id="pfl1">
+        <af:inputText value="#{bindings.ProductName.inputValue}" label="#{bindings.ProductName.hints.label}"
+                      required="#{bindings.ProductName.hints.mandatory}"
+                      columns="#{bindings.ProductName.hints.displayWidth}"
+                      maximumLength="#{bindings.ProductName.hints.precision}"
+                      shortDesc="#{bindings.ProductName.hints.tooltip}" id="it1">
+          <f:validator binding="#{bindings.ProductName.validator}"/>
+        </af:inputText>
+        <af:inputText value="#{bindings.ProductDescription.inputValue}"
+                      label="#{bindings.ProductDescription.hints.label}"
+                      required="#{bindings.ProductDescription.hints.mandatory}"
+                      columns="#{bindings.ProductDescription.hints.displayWidth}"
+                      maximumLength="#{bindings.ProductDescription.hints.precision}"
+                      shortDesc="#{bindings.ProductDescription.hints.tooltip}" id="it2">
+          <f:validator binding="#{bindings.ProductDescription.validator}"/>
+        </af:inputText>
+        <af:inputText value="#{bindings.CurrentPrice.inputValue}" label="#{bindings.CurrentPrice.hints.label}"
+                      required="#{bindings.CurrentPrice.hints.mandatory}"
+                      columns="#{bindings.CurrentPrice.hints.displayWidth}"
+                      maximumLength="#{bindings.CurrentPrice.hints.precision}"
+                      shortDesc="#{bindings.CurrentPrice.hints.tooltip}" id="it3">
+          <f:validator binding="#{bindings.CurrentPrice.validator}"/>
+          <af:convertNumber groupingUsed="false" pattern="#{bindings.CurrentPrice.format}"/>
+        </af:inputText>
+        <af:selectOneChoice value="#{bindings.ProductCategoryId.inputValue}" label="#{bindings.ProductCategoryId.label}"
+                            required="#{bindings.ProductCategoryId.hints.mandatory}"
+                            shortDesc="#{bindings.ProductCategoryId.hints.tooltip}" id="soc1">
+          <f:selectItems value="#{bindings.ProductCategoryId.items}" id="si1"/>
+          <f:validator binding="#{bindings.ProductCategoryId.validator}"/>
+        </af:selectOneChoice>
+        <f:facet name="footer">
+          <af:button text="Save" id="b1" actionListener="#{bindings.Commit.execute}" action="commit"/>
+        </f:facet>
+      </af:panelFormLayout>
+    </af:form>
+  </af:document>
+</f:view>
