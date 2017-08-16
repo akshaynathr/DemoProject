@@ -17,6 +17,8 @@
             </f:facet>
           </af:quickQuery>
           <af:button text="CreateUser" id="b1" action="UserTrain1" useWindow="true" windowWidth="600"/>
+          <af:button text="Delete" disabled="#{!bindings.Delete.enabled}"
+                     id="b3" action="#{safeDeleteBean.commit_Delete}"/>
         </af:panelGroupLayout>
         <af:table value="#{bindings.UsersU3.collectionModel}" var="row" rows="#{bindings.UsersU3.rangeSize}"
                   emptyText="#{bindings.UsersU3.viewable ? 'No data to display.' : 'Access Denied.'}"

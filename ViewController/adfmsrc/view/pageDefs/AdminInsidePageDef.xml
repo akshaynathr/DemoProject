@@ -13,6 +13,7 @@
                   Binds="ProductsU1Iterator" id="ImplicitViewCriteriaQuery1"/>
     <iterator Binds="RolesU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="RolesU1Iterator"/>
     <iterator Binds="UsersRolesU4" RangeSize="25" DataControl="AppModuleAMDataControl" id="UsersRolesU4Iterator"/>
+    <iterator Binds="UsersU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="UsersU1Iterator"/>
   </executables>
   <bindings>
     <tree IterBinding="UsersU3Iterator" id="UsersU3">
@@ -82,5 +83,7 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <action id="Commit" DataControl="AppModuleAMDataControl" RequiresUpdateModel="true" Action="commitTransaction"/>
+    <action IterBinding="UsersU1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
   </bindings>
 </pageDefinition>

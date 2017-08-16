@@ -465,6 +465,22 @@ public class UserEOImpl extends EntityImpl {
         return new Key(new Object[] { userId });
     }
 
-
+    @Override
+    public void remove(){
+        setIsActive("n");
+        super.remove();
+        
+        }
+    
+    @Override
+    protected void doDML(int operation,TransactionEvent e) {
+        if(operation==DML_DELETE){
+            operation=DML_UPDATE;
+            
+            }
+        super.doDML(operation, e);
+        
+        }
+    
 }
 

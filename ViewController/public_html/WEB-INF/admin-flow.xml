@@ -6,6 +6,11 @@
       <shared/>
     </data-control-scope>
     <security/>
+    <managed-bean id="__14">
+      <managed-bean-name>safeDeleteBean</managed-bean-name>
+      <managed-bean-class>view.SafeDeleteBean</managed-bean-class>
+      <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
     <view id="admin_dashboard">
       <page>/admin_dashboard.jsff</page>
       <redirect/>
