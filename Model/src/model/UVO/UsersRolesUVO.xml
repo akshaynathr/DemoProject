@@ -13,6 +13,31 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="LookupsUVO1"
+    ViewObjectName="model.UVO.LookupsUVO"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="UsersUVO1"
+    ViewObjectName="model.UVO.UsersUVO"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_UserId"
+    ListVOName="UsersUVO1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="UserId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="UserId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="GlobalUsername"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="UserRoleEO"
     Entity="model.EO.UserRoleEO"/>
@@ -22,7 +47,15 @@
     PrecisionRule="true"
     EntityAttrName="UserId"
     EntityUsage="UserRoleEO"
-    AliasName="USER_ID"/>
+    AliasName="USER_ID"
+    LOVName="LOV_UserId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="RoleId"
     IsNotNull="true"

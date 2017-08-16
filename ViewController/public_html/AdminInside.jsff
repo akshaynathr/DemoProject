@@ -107,6 +107,9 @@
                 </af:quickQuery>
                 <af:button text="Create Product" id="b2" useWindow="true" windowHeight="500" action="createProduct"
                            windowWidth="600"/>
+                <af:button actionListener="#{bindings.Delete1.execute}" text="Delete"
+                           disabled="#{!bindings.Delete1.enabled}" id="b4"
+                           action="#{safeDeleteBean.commit_Delete_Product}"/>
               </af:panelGroupLayout>
               <af:spacer width="10" height="10" id="s1"/>
             </af:panelHeader>
@@ -117,7 +120,7 @@
                       fetchSize="#{bindings.ProductsU1.rangeSize}"
                       filterModel="#{bindings.ImplicitViewCriteriaQuery1.queryDescriptor}" filterVisible="true"
                       queryListener="#{bindings.ImplicitViewCriteriaQuery1.processQuery}" varStatus="vs"
-                      partialTriggers="::qryId2" id="t2" scrollPolicy="auto">
+                      partialTriggers="::qryId2 ::b4" id="t2" scrollPolicy="auto">
               <af:column sortProperty="#{bindings.ProductsU1.hints.ProductName.name}" filterable="true" sortable="true"
                          headerText="#{bindings.ProductsU1.hints.ProductName.label}" id="c10">
                 <af:link text="#{row.ProductName}" id="l2" action="editProduct" useWindow="true"
@@ -165,12 +168,6 @@
                     value="#{bindings.RolesU1.collectionModel}" rowBandingInterval="0"
                     selectedRowKeys="#{bindings.RolesU1.collectionModel.selectedRow}"
                     selectionListener="#{bindings.RolesU1.collectionModel.makeCurrent}" rowSelection="single">
-            <af:column headerText="#{bindings.RolesU1.hints.RoleId.label}"
-                       sortProperty="#{bindings.RolesU1.hints.RoleId.name}" sortable="false" id="c14">
-              <af:outputText value="#{row.RoleId}" shortDesc="#{bindings.RolesU1.hints.RoleId.tooltip}" id="ot1">
-                <af:convertNumber groupingUsed="false" pattern="#{bindings.RolesU1.hints.RoleId.format}"/>
-              </af:outputText>
-            </af:column>
             <af:column headerText="#{bindings.RolesU1.hints.RoleNameId.label}"
                        sortProperty="#{bindings.RolesU1.hints.RoleNameId.name}" sortable="false" id="c15">
               <af:selectOneChoice value="#{row.bindings.RoleNameId.inputValue}" label="#{row.bindings.RoleNameId.label}"
@@ -197,39 +194,6 @@
               <af:outputText value="#{row.Description}" shortDesc="#{bindings.RolesU1.hints.Description.tooltip}"
                              id="ot13"/>
             </af:column>
-            <af:column headerText="#{bindings.RolesU1.hints.CreatedBy.label}"
-                       sortProperty="#{bindings.RolesU1.hints.CreatedBy.name}" sortable="false" id="c19">
-              <af:outputText value="#{row.CreatedBy}" shortDesc="#{bindings.RolesU1.hints.CreatedBy.tooltip}"
-                             id="ot14"/>
-            </af:column>
-            <af:column headerText="#{bindings.RolesU1.hints.CreatedOn.label}"
-                       sortProperty="#{bindings.RolesU1.hints.CreatedOn.name}" sortable="false" id="c20">
-              <af:outputText value="#{row.CreatedOn}" shortDesc="#{bindings.RolesU1.hints.CreatedOn.tooltip}" id="ot15">
-                <af:convertDateTime pattern="#{bindings.RolesU1.hints.CreatedOn.format}"/>
-              </af:outputText>
-            </af:column>
-            <af:column headerText="#{bindings.RolesU1.hints.LastUpdatedBy.label}"
-                       sortProperty="#{bindings.RolesU1.hints.LastUpdatedBy.name}" sortable="false" id="c21">
-              <af:outputText value="#{row.LastUpdatedBy}" shortDesc="#{bindings.RolesU1.hints.LastUpdatedBy.tooltip}"
-                             id="ot16"/>
-            </af:column>
-            <af:column headerText="#{bindings.RolesU1.hints.LastUpdatedOn.label}"
-                       sortProperty="#{bindings.RolesU1.hints.LastUpdatedOn.name}" sortable="false" id="c22">
-              <af:outputText value="#{row.LastUpdatedOn}" shortDesc="#{bindings.RolesU1.hints.LastUpdatedOn.tooltip}"
-                             id="ot17">
-                <af:convertDateTime pattern="#{bindings.RolesU1.hints.LastUpdatedOn.format}"/>
-              </af:outputText>
-            </af:column>
-            <af:column headerText="#{bindings.RolesU1.hints.VersionNo.label}"
-                       sortProperty="#{bindings.RolesU1.hints.VersionNo.name}" sortable="false" id="c23">
-              <af:outputText value="#{row.VersionNo}" shortDesc="#{bindings.RolesU1.hints.VersionNo.tooltip}" id="ot18">
-                <af:convertNumber groupingUsed="false" pattern="#{bindings.RolesU1.hints.VersionNo.format}"/>
-              </af:outputText>
-            </af:column>
-            <af:column headerText="#{bindings.RolesU1.hints.IsActive.label}"
-                       sortProperty="#{bindings.RolesU1.hints.IsActive.name}" sortable="false" id="c24">
-              <af:outputText value="#{row.IsActive}" shortDesc="#{bindings.RolesU1.hints.IsActive.tooltip}" id="ot19"/>
-            </af:column>
           </af:table>
         </af:panelHeader>
         <af:panelHeader text="UsersRolesU4" id="ph3">
@@ -241,27 +205,24 @@
                     id="t3">
             <af:column headerText="#{bindings.UsersRolesU4.hints.UserId.label}"
                        sortProperty="#{bindings.UsersRolesU4.hints.UserId.name}" sortable="false" id="c25">
-              <af:outputText value="#{row.UserId}" shortDesc="#{bindings.UsersRolesU4.hints.UserId.tooltip}" id="ot20">
-                <af:convertNumber groupingUsed="false" pattern="#{bindings.UsersRolesU4.hints.UserId.format}"/>
-              </af:outputText>
-            </af:column>
-            <af:column headerText="#{bindings.UsersRolesU4.hints.RoleId.label}"
-                       sortProperty="#{bindings.UsersRolesU4.hints.RoleId.name}" sortable="false" id="c26">
-              <af:outputText value="#{row.RoleId}" shortDesc="#{bindings.UsersRolesU4.hints.RoleId.tooltip}" id="ot21">
-                <af:convertNumber groupingUsed="false" pattern="#{bindings.UsersRolesU4.hints.RoleId.format}"/>
-              </af:outputText>
+              <af:selectOneChoice value="#{row.bindings.UserId.inputValue}" label="#{row.bindings.UserId.label}"
+                                  required="#{bindings.UsersRolesU4.hints.UserId.mandatory}"
+                                  shortDesc="#{bindings.UsersRolesU4.hints.UserId.tooltip}" readOnly="true" id="soc4">
+                <f:selectItems value="#{row.bindings.UserId.items}" id="si4"/>
+                <f:validator binding="#{row.bindings.UserId.validator}"/>
+              </af:selectOneChoice>
             </af:column>
             <af:column headerText="#{bindings.UsersRolesU4.hints.StartDate.label}"
                        sortProperty="#{bindings.UsersRolesU4.hints.StartDate.name}" sortable="false" id="c27">
               <af:outputText value="#{row.StartDate}" shortDesc="#{bindings.UsersRolesU4.hints.StartDate.tooltip}"
-                             id="ot22">
+                             id="ot21">
                 <af:convertDateTime pattern="#{bindings.UsersRolesU4.hints.StartDate.format}"/>
               </af:outputText>
             </af:column>
             <af:column headerText="#{bindings.UsersRolesU4.hints.EndDate.label}"
                        sortProperty="#{bindings.UsersRolesU4.hints.EndDate.name}" sortable="false" id="c28">
               <af:outputText value="#{row.EndDate}" shortDesc="#{bindings.UsersRolesU4.hints.EndDate.tooltip}"
-                             id="ot23">
+                             id="ot22">
                 <af:convertDateTime pattern="#{bindings.UsersRolesU4.hints.EndDate.format}"/>
               </af:outputText>
             </af:column>

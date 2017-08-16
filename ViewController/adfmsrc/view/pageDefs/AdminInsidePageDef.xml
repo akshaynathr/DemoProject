@@ -55,6 +55,9 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <action id="Commit" DataControl="AppModuleAMDataControl" RequiresUpdateModel="true" Action="commitTransaction"/>
+    <action IterBinding="UsersU3Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action IterBinding="ProductsU1Iterator" id="Delete1" RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <tree IterBinding="RolesU1Iterator" id="RolesU1">
       <nodeDefinition DefName="model.UVO.RolesUVO" Name="RolesU10">
         <AttrNames>
@@ -82,7 +85,5 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <action id="Commit" DataControl="AppModuleAMDataControl" RequiresUpdateModel="true" Action="commitTransaction"/>
-    <action IterBinding="UsersU3Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
   </bindings>
 </pageDefinition>
