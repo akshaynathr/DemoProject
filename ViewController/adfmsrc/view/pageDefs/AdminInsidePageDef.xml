@@ -67,7 +67,7 @@
     <tree IterBinding="UserRolesMaster1Iterator" id="UserRolesMaster1">
       <nodeDefinition DefName="model.UVO.UserRolesMasterVO" Name="UserRolesMaster10">
         <AttrNames>
-          <Item Value="RoleNameId"/>
+          <Item Value="RoleId"/>
           <Item Value="AreAssociated"/>
         </AttrNames>
       </nodeDefinition>

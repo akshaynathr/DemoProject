@@ -52,7 +52,9 @@ public class UserRolesMasterVORowImpl extends ViewRowImpl {
         StartDate1,
         VersionNo1,
         AreAssociated,
-        UsersRolesUVO1;
+        UsersRolesUVO1,
+        RoleNameLookupVO1,
+        RoleNameLookup1;
         private static AttributesEnum[] vals = null;
         ;
         private static final int firstIndex = 0;
@@ -107,6 +109,8 @@ public class UserRolesMasterVORowImpl extends ViewRowImpl {
     public static final int VERSIONNO1 = AttributesEnum.VersionNo1.index();
     public static final int AREASSOCIATED = AttributesEnum.AreAssociated.index();
     public static final int USERSROLESUVO1 = AttributesEnum.UsersRolesUVO1.index();
+    public static final int ROLENAMELOOKUPVO1 = AttributesEnum.RoleNameLookupVO1.index();
+    public static final int ROLENAMELOOKUP1 = AttributesEnum.RoleNameLookup1.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -553,6 +557,20 @@ public class UserRolesMasterVORowImpl extends ViewRowImpl {
      */
     public RowSet getUsersRolesUVO1() {
         return (RowSet) getAttributeInternal(USERSROLESUVO1);
+    }
+
+    /**
+     * Gets the view accessor <code>RowSet</code> RoleNameLookupVO1.
+     */
+    public RowSet getRoleNameLookupVO1() {
+        return (RowSet) getAttributeInternal(ROLENAMELOOKUPVO1);
+    }
+
+    /**
+     * Gets the view accessor <code>RowSet</code> RoleNameLookup1.
+     */
+    public RowSet getRoleNameLookup1() {
+        return (RowSet) getAttributeInternal(ROLENAMELOOKUP1);
     }
 }
 

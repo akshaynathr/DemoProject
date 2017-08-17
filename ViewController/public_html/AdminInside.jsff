@@ -165,8 +165,7 @@
       </af:panelSplitter>
     </af:showDetailItem>
     <af:showDetailItem text="Roles" id="sdi2" disclosed="#{(pageFlowScope.tabVal ==3)?true:false}">
-      <af:panelBox text="PanelBox1" id="pb1">
-        <f:facet name="toolbar"/>
+      <af:panelGroupLayout id="pgl6" layout="vertical">
         <af:table value="#{bindings.UsersU4.collectionModel}" var="row" rows="#{bindings.UsersU4.rangeSize}"
                   emptyText="#{bindings.UsersU4.viewable ? 'No data to display.' : 'Access Denied.'}"
                   rowBandingInterval="0" selectedRowKeys="#{bindings.UsersU4.collectionModel.selectedRow}"
@@ -196,15 +195,13 @@
                   rows="#{bindings.UserRolesMaster1.rangeSize}"
                   emptyText="#{bindings.UserRolesMaster1.viewable ? 'No data to display.' : 'Access Denied.'}"
                   rowBandingInterval="0" fetchSize="#{bindings.UserRolesMaster1.rangeSize}" id="t5">
-          <af:column headerText="#{bindings.UserRolesMaster1.hints.RoleNameId.label}" id="c22">
-            <af:inputText value="#{row.bindings.RoleNameId.inputValue}"
-                          label="#{bindings.UserRolesMaster1.hints.RoleNameId.label}"
-                          required="#{bindings.UserRolesMaster1.hints.RoleNameId.mandatory}"
-                          columns="#{bindings.UserRolesMaster1.hints.RoleNameId.displayWidth}"
-                          maximumLength="#{bindings.UserRolesMaster1.hints.RoleNameId.precision}"
-                          shortDesc="#{bindings.UserRolesMaster1.hints.RoleNameId.tooltip}" id="it1">
-              <f:validator binding="#{row.bindings.RoleNameId.validator}"/>
-            </af:inputText>
+          <af:column headerText="#{bindings.UserRolesMaster1.hints.RoleId.label}" id="c22">
+            <af:selectOneChoice value="#{row.bindings.RoleId.inputValue}" label="#{row.bindings.RoleId.label}"
+                                required="#{bindings.UserRolesMaster1.hints.RoleId.mandatory}"
+                                shortDesc="#{bindings.UserRolesMaster1.hints.RoleId.tooltip}" readOnly="true" id="soc3">
+              <f:selectItems value="#{row.bindings.RoleId.items}" id="si3"/>
+              <f:validator binding="#{row.bindings.RoleId.validator}"/>
+            </af:selectOneChoice>
           </af:column>
           <af:column headerText="#{bindings.UserRolesMaster1.hints.AreAssociated.label}" id="c23">
             <af:selectBooleanCheckbox value="#{row.bindings.AreAssociated.inputValue}"
@@ -213,7 +210,7 @@
                                       autoSubmit="true"/>
           </af:column>
         </af:table>
-      </af:panelBox>
+      </af:panelGroupLayout>
     </af:showDetailItem>
   </af:panelTabbed>
 </ui:composition>

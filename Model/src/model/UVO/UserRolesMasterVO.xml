@@ -44,14 +44,55 @@
       </PIMap>
     </ParameterMap>
   </ViewAccessor>
+  <ViewAccessor
+    Name="RoleNameLookupVO1"
+    ViewObjectName="model.RVO.RoleNameLookupVO"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="RoleNameLookup1"
+    ViewObjectName="model.RVO.RoleNameLookup"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_RoleNameId"
+    ListVOName="RoleNameLookup1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="RoleNameId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="LookupId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="PossibleValue"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_RoleId"
+    ListVOName="RoleNameLookupVO1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="RoleId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="RoleId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="PossibleValue"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="UserEO"
     Entity="model.EO.UserEO"/>
   <EntityUsage
     Name="RoleEO"
     Entity="model.EO.RoleEO"
-    DeleteParticipant="false"
-    Reference="false">
+    DeleteParticipant="false">
     <DesignTime>
       <Attr Name="_customjoin" Value="true"/>
     </DesignTime>
@@ -209,13 +250,29 @@
     PrecisionRule="true"
     EntityAttrName="RoleId"
     EntityUsage="RoleEO"
-    AliasName="ROLE_ID"/>
+    AliasName="ROLE_ID"
+    LOVName="LOV_RoleId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="RoleNameId"
     PrecisionRule="true"
     EntityAttrName="RoleNameId"
     EntityUsage="RoleEO"
-    AliasName="ROLE_NAME_ID"/>
+    AliasName="ROLE_NAME_ID"
+    LOVName="LOV_RoleNameId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="StartDate1"
     PrecisionRule="true"
