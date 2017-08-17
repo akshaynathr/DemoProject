@@ -5,13 +5,6 @@
     <af:form id="f1">
       <af:outputText value="Create Product Category" id="ot1" inlineStyle="font-weight:bold; font-size:large;"/>
       <af:panelFormLayout id="pfl1">
-        <af:inputText value="#{bindings.category}" label="#{bindings.LookupCategory.hints.label}"
-                      required="#{bindings.LookupCategory.hints.mandatory}"
-                      columns="#{bindings.LookupCategory.hints.displayWidth}"
-                      maximumLength="#{bindings.LookupCategory.hints.precision}"
-                      shortDesc="#{bindings.LookupCategory.hints.tooltip}" id="it1" disabled="true">
-          <f:validator binding="#{bindings.LookupCategory.validator}"/>
-        </af:inputText>
         <af:inputText value="#{bindings.PossibleValue.inputValue}" label="#{bindings.PossibleValue.hints.label}"
                       required="#{bindings.PossibleValue.hints.mandatory}"
                       columns="#{bindings.PossibleValue.hints.displayWidth}"

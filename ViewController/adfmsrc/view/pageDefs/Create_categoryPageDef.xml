@@ -9,11 +9,6 @@
     <iterator Binds="LookupsU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="LookupsU1Iterator"/>
   </executables>
   <bindings>
-    <attributeValues IterBinding="LookupsU1Iterator" id="LookupCategory">
-      <AttrNames>
-        <Item Value="LookupCategory"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="LookupsU1Iterator" id="PossibleValue">
       <AttrNames>
         <Item Value="PossibleValue"/>

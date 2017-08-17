@@ -33,7 +33,8 @@
     PrecisionRule="true"
     EntityAttrName="LookupCategory"
     EntityUsage="LookupEO"
-    AliasName="LOOKUP_CATEGORY"/>
+    AliasName="LOOKUP_CATEGORY"
+    DefaultValue="PRODUCT_CATEGORY"/>
   <ViewAttribute
     Name="PossibleValue"
     PrecisionRule="true"
