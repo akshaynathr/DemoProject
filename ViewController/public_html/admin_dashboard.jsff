@@ -14,7 +14,12 @@
         </af:panelGroupLayout>
         <af:panelGroupLayout id="pgl5" layout="vertical">
           <af:outputText value="Total users" id="ot4"/>
-          <af:outputText value="400" id="ot5" inlineStyle="color:#00d6d6; font-size:x-large;"/>
+          <af:outputText value="#{bindings.Selectobjects0.inputValue}"
+                         shortDesc="#{bindings.Selectobjects0.hints.tooltip}" id="ot10"
+                         inlineStyle="color:#00d6d6; font-size:x-large;">
+            <af:convertNumber groupingUsed="false" pattern="#{bindings.Selectobjects0.format}"/>
+          </af:outputText>
+          <af:panelFormLayout id="pfl1"/>
         </af:panelGroupLayout>
       </af:panelGroupLayout>
       <af:setPropertyListener from="1" to="#{pageFlowScope.tabVal}" type="action"/>
@@ -32,7 +37,13 @@
       </af:panelGroupLayout>
       <af:panelGroupLayout id="pgl10" layout="vertical">
         <af:outputText value="Total products" id="ot6"/>
-        <af:outputText value="40" id="ot7" inlineStyle="color:#00d6d6; font-size:x-large;"/>
+          <af:panelFormLayout id="pfl2">
+            <af:outputText value="#{bindings.Selectobjects01.inputValue}"
+                           shortDesc="#{bindings.Selectobjects01.hints.tooltip}" id="ot5"
+                           inlineStyle="color:#00d6d6; font-size:x-large;">
+              <af:convertNumber groupingUsed="false" pattern="#{bindings.Selectobjects01.format}"/>
+            </af:outputText>
+          </af:panelFormLayout>
       </af:panelGroupLayout>
     </af:panelGroupLayout>
       <af:setPropertyListener from="2" to="#{pageFlowScope.tabVal}" type="action"/>
@@ -50,7 +61,12 @@
       </af:panelGroupLayout>
       <af:panelGroupLayout id="pgl8" layout="vertical">
         <af:outputText value="Total roles" id="ot8"/>
-        <af:outputText value="8" id="ot9" inlineStyle="color:#00d6d6; font-size:x-large;"/>
+          <af:outputText value="#{bindings.Selectobjects02.inputValue}"
+                         shortDesc="#{bindings.Selectobjects02.hints.tooltip}" id="ot11"
+                         inlineStyle="color:#00d6d6; font-size:x-large;">
+            <af:convertNumber groupingUsed="false" pattern="#{bindings.Selectobjects02.format}"/>
+          </af:outputText>
+          <af:panelFormLayout id="pfl3"/>
       </af:panelGroupLayout>
     </af:panelGroupLayout>
       <af:setPropertyListener from="3" to="#{pageFlowScope.tabVal}" type="action"/>

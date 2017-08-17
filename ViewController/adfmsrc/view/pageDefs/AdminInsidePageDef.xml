@@ -11,7 +11,7 @@
     <iterator Binds="ProductsU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="ProductsU1Iterator"/>
     <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
                   Binds="ProductsU1Iterator" id="ImplicitViewCriteriaQuery1"/>
-    <iterator Binds="RolesU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="RolesU1Iterator"/>
+    <iterator Binds="RolesU1" DataControl="AppModuleAMDataControl" id="RolesU1Iterator"/>
     <iterator Binds="UsersRolesU4" RangeSize="25" DataControl="AppModuleAMDataControl" id="UsersRolesU4Iterator"/>
   </executables>
   <bindings>

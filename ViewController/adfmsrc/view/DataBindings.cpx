@@ -21,6 +21,7 @@
           usageId="view_editProduct_flow_editProduct_flow_CreateInsertPageDef"/>
     <page path="/WEB-INF/create_product.xml#create_product@CreateInsert"
           usageId="view_create_product_create_product_CreateInsertPageDef"/>
+    <page path="/admin_dashboard.jsff" usageId="view_admin_dashboardPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_HomePageDef" path="view.pageDefs.HomePageDef"/>
@@ -37,6 +38,7 @@
           path="view.pageDefs.editProduct_flow_editProduct_flow_CreateInsertPageDef"/>
     <page id="view_create_product_create_product_CreateInsertPageDef"
           path="view.pageDefs.create_product_create_product_CreateInsertPageDef"/>
+    <page id="view_admin_dashboardPageDef" path="view.pageDefs.admin_dashboardPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleAMDataControl" Package="model.AM"
