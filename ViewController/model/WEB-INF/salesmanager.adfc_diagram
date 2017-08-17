@@ -15,7 +15,7 @@
       <property
          name="description">&lt;html>&lt;p>&lt;b>dashboard&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">132.14355</property>
+         name="y">131.79297</property>
       <property
          name="page">/dashboard.jsff</property>
       <property
@@ -44,9 +44,9 @@
       from="View2"
       to="View3">
       <property
-         name="fromOutcome">test</property>
+         name="fromOutcome">inside</property>
       <property
-         name="sdm:polyPoints">R46,387.0,128.29297,619.8964,121.396484,L46</property>
+         name="sdm:polyPoints">R46,387.0,127.94238,619.9017,121.396484,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -56,6 +56,6 @@
       <property
          name="fromOutcome">back</property>
       <property
-         name="sdm:polyPoints">L54,620.0,128.39648,387.10358,135.29297,R54</property>
+         name="sdm:polyPoints">L54,620.0,128.39648,387.0983,134.94238,R54</property>
    </ControlFlowCase>
 </SDM>

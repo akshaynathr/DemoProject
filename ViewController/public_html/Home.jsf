@@ -33,6 +33,7 @@
      <af:region value="#{bindings.dynamicRegion1.regionModel}" id="r1" partialTriggers="::np1:cni1"
                 uncommittedDataWarning="on"/>
     </f:facet>
+    <f:attribute name="startWidth" value="0"/>
    </af:pageTemplate>
   </af:form>
     </af:document>

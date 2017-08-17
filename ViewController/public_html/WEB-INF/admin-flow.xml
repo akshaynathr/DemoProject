@@ -11,6 +11,12 @@
       <managed-bean-class>view.SafeDeleteBean</managed-bean-class>
       <managed-bean-scope>request</managed-bean-scope>
     </managed-bean>
+    <managed-bean id="__17">
+      <managed-bean-name>backing_salesmanager_inside</managed-bean-name>
+      <managed-bean-class>view.backing.Salesmanager_inside</managed-bean-class>
+      <managed-bean-scope>backingBean</managed-bean-scope>
+      <!--oracle-jdev-comment:managed-bean-jsp-link:1salesmanager_inside.jsf-->
+    </managed-bean>
     <view id="admin_dashboard">
       <page>/admin_dashboard.jsff</page>
       <redirect/>

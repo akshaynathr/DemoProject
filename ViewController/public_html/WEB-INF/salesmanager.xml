@@ -14,7 +14,7 @@
     <control-flow-rule id="__1">
       <from-activity-id>dashboard</from-activity-id>
       <control-flow-case id="__2">
-        <from-outcome>test</from-outcome>
+        <from-outcome>inside</from-outcome>
         <to-activity-id>SalesInside</to-activity-id>
       </control-flow-case>
     </control-flow-rule>

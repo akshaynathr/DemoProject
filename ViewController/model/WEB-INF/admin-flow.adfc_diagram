@@ -221,17 +221,6 @@
       <property
          name="sdm:polyPoints">L42,467.0,83.94824,343.0244,-40.603516,R50</property>
    </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase25"
-      from="View3">
-      <property
-         name="tosrcid">__6</property>
-      <property
-         name="fromOutcome">UserTrain2</property>
-      <property
-         name="fromsrcid">__5</property>
-   </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall23">
       <property
@@ -260,5 +249,16 @@
          name="fromOutcome">delete_product_category</property>
       <property
          name="sdm:polyPoints">T50,508.0,36.948242,606.03516,-6.6035156,B50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase25"
+      from="View3">
+      <property
+         name="tosrcid">__6</property>
+      <property
+         name="fromOutcome">UserTrain2</property>
+      <property
+         name="fromsrcid">__5</property>
    </ControlFlowCase>
 </SDM>
