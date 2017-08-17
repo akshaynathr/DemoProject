@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:document id="d1">
+    <af:messages id="m1"/>
+    <af:form id="f1">
+      <af:outputText value="Create Product Category" id="ot1" inlineStyle="font-weight:bold; font-size:large;"/>
+      <af:panelFormLayout id="pfl1">
+        <af:inputText value="#{bindings.LookupCategory.inputValue}" label="#{bindings.LookupCategory.hints.label}"
+                      required="#{bindings.LookupCategory.hints.mandatory}"
+                      columns="#{bindings.LookupCategory.hints.displayWidth}"
+                      maximumLength="#{bindings.LookupCategory.hints.precision}"
+                      shortDesc="#{bindings.LookupCategory.hints.tooltip}" id="it1" disabled="true">
+          <f:validator binding="#{bindings.LookupCategory.validator}"/>
+        </af:inputText>
+        <af:inputText value="#{bindings.PossibleValue.inputValue}" label="#{bindings.PossibleValue.hints.label}"
+                      required="#{bindings.PossibleValue.hints.mandatory}"
+                      columns="#{bindings.PossibleValue.hints.displayWidth}"
+                      maximumLength="#{bindings.PossibleValue.hints.precision}"
+                      shortDesc="#{bindings.PossibleValue.hints.tooltip}" id="it2">
+          <f:validator binding="#{bindings.PossibleValue.validator}"/>
+        </af:inputText>
+        <af:inputText value="#{bindings.Description.inputValue}" label="#{bindings.Description.hints.label}"
+                      required="#{bindings.Description.hints.mandatory}"
+                      columns="#{bindings.Description.hints.displayWidth}"
+                      maximumLength="#{bindings.Description.hints.precision}"
+                      shortDesc="#{bindings.Description.hints.tooltip}" id="it3" rows="10" dimensionsFrom="content">
+          <f:validator binding="#{bindings.Description.validator}"/>
+        </af:inputText>
+      </af:panelFormLayout>
+      <af:button actionListener="#{bindings.Commit.execute}" text="Save " disabled="#{!bindings.Commit.enabled}"
+                 id="b1"/>
+    </af:form>
+  </af:document>
+</f:view>

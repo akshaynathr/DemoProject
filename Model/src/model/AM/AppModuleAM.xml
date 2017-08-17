@@ -61,6 +61,9 @@
   <ViewUsage
     Name="UsersRolesU4"
     ViewObjectName="model.UVO.UsersRolesUVO"/>
+  <ViewUsage
+    Name="LookupsU1"
+    ViewObjectName="model.UVO.LookupsUVO"/>
   <ViewLinkUsage
     Name="UsersFk1VL1"
     ViewLinkObjectName="model.UVO.UsersFk1VL"

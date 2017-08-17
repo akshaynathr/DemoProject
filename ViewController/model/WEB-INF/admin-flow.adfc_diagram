@@ -69,7 +69,7 @@
       <property
          name="fromsrcid">__3</property>
       <property
-         name="sdm:polyPoints">L54,467.0,94.44824,265.5,160.34473,R50</property>
+         name="sdm:polyPoints">L58,467.0,97.94824,265.5,160.34473,R50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall9">
@@ -137,17 +137,6 @@
       <property
          name="sdm:polyPoints">R42,549.0,83.94824,769.01953,73.79883,L50</property>
    </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase17"
-      from="View3">
-      <property
-         name="tosrcid">__6</property>
-      <property
-         name="fromOutcome">UserTrain2</property>
-      <property
-         name="fromsrcid">__5</property>
-   </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall14">
       <property
@@ -199,6 +188,46 @@
       <property
          name="fromsrcid">__1</property>
       <property
-         name="sdm:polyPoints">R50,144.0,95.79297,466.39703,87.44824,L46</property>
+         name="sdm:polyPoints">R50,144.0,95.79297,466.44424,90.94824,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase21"
+      from="View3">
+      <property
+         name="tosrcid">__6</property>
+      <property
+         name="fromOutcome">UserTrain2</property>
+      <property
+         name="fromsrcid">__5</property>
+   </ControlFlowCase>
+   <TaskFlowCall
+      id="TaskFlowCall22">
+      <property
+         name="runAsDialog">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Create Product Category&lt;/b>&lt;/p>&lt;p>Activity ID:  product-Category-flow&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">product-Category-flow</property>
+      <property
+         name="x">302.0244</property>
+      <property
+         name="y">-40.25293</property>
+      <property
+         name="documentReference">/WEB-INF/product-Category-flow.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">product-Category-flow</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase23"
+      from="View3"
+      to="TaskFlowCall22">
+      <property
+         name="fromOutcome">create_product_category</property>
+      <property
+         name="sdm:polyPoints">L42,467.0,83.94824,343.0244,-40.603516,R50</property>
    </ControlFlowCase>
 </SDM>

@@ -5,7 +5,6 @@
   <executables>
     <variableIterator id="variables"/>
     <iterator Binds="UsersU3" RangeSize="25" DataControl="AppModuleAMDataControl" id="UsersU3Iterator"/>
-    <iterator Binds="UsersRolesU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="UsersRolesU1Iterator"/>
   </executables>
   <bindings>
     <list IterBinding="UsersU3Iterator" StaticList="false" Uses="LOV_SupervisorId" id="SupervisorId"
@@ -23,21 +22,6 @@
     <attributeValues IterBinding="UsersU3Iterator" id="TeamId">
       <AttrNames>
         <Item Value="TeamId"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="UsersRolesU1Iterator" id="RoleId">
-      <AttrNames>
-        <Item Value="RoleId"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="UsersRolesU1Iterator" id="StartDate1">
-      <AttrNames>
-        <Item Value="StartDate"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="UsersRolesU1Iterator" id="EndDate1">
-      <AttrNames>
-        <Item Value="EndDate"/>
       </AttrNames>
     </attributeValues>
   </bindings>
