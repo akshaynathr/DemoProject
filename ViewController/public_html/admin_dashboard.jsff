@@ -67,10 +67,16 @@
         </af:panelGroupLayout>
         <af:setPropertyListener from="3" to="#{pageFlowScope.tabVal}" type="action"/>
       </af:commandLink>
-      <af:panelBox text="Quick actions" id="pb1" inlineStyle="border-style:none; border-color:White;margin:8px;"
-                   icon="#{resource['images:QUICK-icon-55344.png']}" type="flow" titleHalign="start"
-                   showDisclosure="true" disclosed="false">
-        <f:facet name="toolbar"/>
+      <af:panelBox text="Quick actions" id="pb1" inlineStyle="border-style:none; border-color:White;margin:8px;" type="flow" titleHalign="start"
+                   showDisclosure="false" disclosed="false">
+        <af:panelGroupLayout id="pgl11" layout="horizontal">
+          <af:panelGroupLayout id="pgl12" inlineStyle="width:40%;">
+            <af:image source="#{resource['images:addUser.jpg']}" id="i4" shortDesc="Create Users"/>
+          </af:panelGroupLayout>
+          <af:panelGroupLayout id="pgl13" inlineStyle="width:40%;">
+            <af:image source="#{resource['images:box.png']}" shortDesc="Create product" id="i5"/>
+          </af:panelGroupLayout>
+        </af:panelGroupLayout>
       </af:panelBox>
     </af:panelGroupLayout>
   </af:masonryLayout>
