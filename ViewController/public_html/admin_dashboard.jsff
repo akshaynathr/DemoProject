@@ -2,75 +2,76 @@
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces" xmlns:f="http://java.sun.com/jsf/core">
   <af:masonryLayout id="ml1">
-   <af:commandLink inlineStyle="display:block;" id="cl1" action="team">
-    <af:panelGroupLayout id="pgl1" styleClass="AFMasonryTileSize2x1" 
-                         inlineStyle="padding:1.0%; width:20%;background-color:White; border-width:2px; border-color:#f7f7f7;"
-                         layout="horizontal" landmark="navigation" partialTriggers="pgl1">
-                
-      <af:panelGroupLayout id="pgl4" layout="vertical">
-          <af:outputText value="Users" id="ot1" noWrap="false"
-                         inlineStyle="font-weight:bold; font-stretch:ultra-condensed; font-size-adjust:none; font-size:large;"/>
-          <af:image source="#{resource['images:user-color.png']}" id="i1"/>
-        </af:panelGroupLayout>
-        <af:panelGroupLayout id="pgl5" layout="vertical">
-          <af:outputText value="Total users" id="ot4"/>
-          <af:outputText value="#{bindings.Selectobjects0.inputValue}"
-                         shortDesc="#{bindings.Selectobjects0.hints.tooltip}" id="ot10"
-                         inlineStyle="color:#00d6d6; font-size:x-large;">
-            <af:convertNumber groupingUsed="false" pattern="#{bindings.Selectobjects0.format}"/>
-          </af:outputText>
-          <af:panelFormLayout id="pfl1"/>
-        </af:panelGroupLayout>
-      </af:panelGroupLayout>
-      <af:setPropertyListener from="1" to="#{pageFlowScope.tabVal}" type="action"/>
-    </af:commandLink>
-    
-       <af:commandLink inlineStyle="display:block;" id="cl2" action="team">
-   
-    <af:panelGroupLayout id="pgl6" styleClass="AFMasonryTileSize2x1"
-                         inlineStyle="padding:1.0%; width:20%;background-color:White; border-width:2px; border-color:#f7f7f7;"
-                         layout="horizontal" landmark="navigation" partialTriggers="pgl1">
-      <af:panelGroupLayout id="pgl7" layout="vertical">
-        <af:outputText value="Products" id="ot2" noWrap="false"
-                       inlineStyle="font-weight:bold; font-stretch:ultra-condensed; font-size-adjust:none; font-size:large;"/>
-        <af:image source="#{resource['images:paper-box-icon-4352.png']}" id="i2"/>
-      </af:panelGroupLayout>
-      <af:panelGroupLayout id="pgl10" layout="vertical">
-        <af:outputText value="Total products" id="ot6"/>
-          <af:panelFormLayout id="pfl2">
-            <af:outputText value="#{bindings.Selectobjects01.inputValue}"
-                           shortDesc="#{bindings.Selectobjects01.hints.tooltip}" id="ot5"
+    <af:panelGroupLayout id="pgl9" layout="vertical">
+      <af:commandLink inlineStyle="display:block;" id="cl1" action="team">
+        <af:panelGroupLayout id="pgl1" styleClass="AFMasonryTileSize2x1"
+                             inlineStyle="padding:1.0%; width:20%;background-color:White; border-width:2px; border-color:#f7f7f7;"
+                             layout="horizontal" landmark="navigation" partialTriggers="pgl1">
+          <af:panelGroupLayout id="pgl4" layout="vertical">
+            <af:outputText value="Users" id="ot1" noWrap="false"
+                           inlineStyle="font-weight:bold; font-stretch:ultra-condensed; font-size-adjust:none; font-size:large;"/>
+            <af:image source="#{resource['images:user-color.png']}" id="i1"/>
+          </af:panelGroupLayout>
+          <af:panelGroupLayout id="pgl5" layout="vertical">
+            <af:outputText value="Total users" id="ot4"/>
+            <af:outputText value="#{bindings.Selectobjects0.inputValue}"
+                           shortDesc="#{bindings.Selectobjects0.hints.tooltip}" id="ot10"
                            inlineStyle="color:#00d6d6; font-size:x-large;">
-              <af:convertNumber groupingUsed="false" pattern="#{bindings.Selectobjects01.format}"/>
+              <af:convertNumber groupingUsed="false" pattern="#{bindings.Selectobjects0.format}"/>
             </af:outputText>
-          </af:panelFormLayout>
-      </af:panelGroupLayout>
+            <af:panelFormLayout id="pfl1"/>
+          </af:panelGroupLayout>
+        </af:panelGroupLayout>
+        <af:setPropertyListener from="1" to="#{pageFlowScope.tabVal}" type="action"/>
+      </af:commandLink>
+      <af:commandLink inlineStyle="display:block;" id="cl2" action="team">
+        <af:panelGroupLayout id="pgl6" styleClass="AFMasonryTileSize2x1"
+                             inlineStyle="padding:1.0%; width:20%;background-color:White; border-width:2px; border-color:#f7f7f7;"
+                             layout="horizontal" landmark="navigation" partialTriggers="pgl1">
+          <af:panelGroupLayout id="pgl7" layout="vertical">
+            <af:outputText value="Products" id="ot2" noWrap="false"
+                           inlineStyle="font-weight:bold; font-stretch:ultra-condensed; font-size-adjust:none; font-size:large;"/>
+            <af:image source="#{resource['images:paper-box-icon-4352.png']}" id="i2"/>
+          </af:panelGroupLayout>
+          <af:panelGroupLayout id="pgl10" layout="vertical">
+            <af:outputText value="Total products" id="ot6"/>
+            <af:panelFormLayout id="pfl2">
+              <af:outputText value="#{bindings.Selectobjects01.inputValue}"
+                             shortDesc="#{bindings.Selectobjects01.hints.tooltip}" id="ot5"
+                             inlineStyle="color:#00d6d6; font-size:x-large;">
+                <af:convertNumber groupingUsed="false" pattern="#{bindings.Selectobjects01.format}"/>
+              </af:outputText>
+            </af:panelFormLayout>
+          </af:panelGroupLayout>
+        </af:panelGroupLayout>
+        <af:setPropertyListener from="2" to="#{pageFlowScope.tabVal}" type="action"/>
+      </af:commandLink>
+      <af:commandLink inlineStyle="display:block;" id="cl3" action="team">
+        <af:panelGroupLayout id="pgl3" styleClass="AFMasonryTileSize2x1"
+                             inlineStyle="padding:1.0%;width:20%;background-color:White; border-width:2px; border-color:#f7f7f7;"
+                             layout="horizontal">
+          <af:panelGroupLayout id="pgl2" layout="vertical">
+            <af:outputText value="Roles" id="ot3" noWrap="false"
+                           inlineStyle="font-weight:bold; font-stretch:ultra-condensed; font-size-adjust:none; font-size:large;"/>
+            <af:image source="#{resource['images:role.png']}" id="i3"/>
+          </af:panelGroupLayout>
+          <af:panelGroupLayout id="pgl8" layout="vertical">
+            <af:outputText value="Total roles" id="ot8"/>
+            <af:outputText value="#{bindings.Selectobjects02.inputValue}"
+                           shortDesc="#{bindings.Selectobjects02.hints.tooltip}" id="ot11"
+                           inlineStyle="color:#00d6d6; font-size:x-large;">
+              <af:convertNumber groupingUsed="false" pattern="#{bindings.Selectobjects02.format}"/>
+            </af:outputText>
+            <af:panelFormLayout id="pfl3"/>
+          </af:panelGroupLayout>
+        </af:panelGroupLayout>
+        <af:setPropertyListener from="3" to="#{pageFlowScope.tabVal}" type="action"/>
+      </af:commandLink>
+      <af:panelBox text="Quick actions" id="pb1" inlineStyle="border-style:none; border-color:White;margin:8px;"
+                   icon="#{resource['images:QUICK-icon-55344.png']}" type="flow" titleHalign="start"
+                   showDisclosure="true" disclosed="false">
+        <f:facet name="toolbar"/>
+      </af:panelBox>
     </af:panelGroupLayout>
-      <af:setPropertyListener from="2" to="#{pageFlowScope.tabVal}" type="action"/>
-    </af:commandLink>
-    
-           <af:commandLink inlineStyle="display:block;" id="cl3" action="team">
-
-    <af:panelGroupLayout id="pgl3" styleClass="AFMasonryTileSize2x1"
-                         inlineStyle="padding:1.0%;width:20%;background-color:White; border-width:2px; border-color:#f7f7f7;"
-                         layout="horizontal">
-      <af:panelGroupLayout id="pgl2" layout="vertical">
-        <af:outputText value="Roles" id="ot3" noWrap="false"
-                       inlineStyle="font-weight:bold; font-stretch:ultra-condensed; font-size-adjust:none; font-size:large;"/>
-        <af:image source="#{resource['images:role.png']}" id="i3"/>
-      </af:panelGroupLayout>
-      <af:panelGroupLayout id="pgl8" layout="vertical">
-        <af:outputText value="Total roles" id="ot8"/>
-          <af:outputText value="#{bindings.Selectobjects02.inputValue}"
-                         shortDesc="#{bindings.Selectobjects02.hints.tooltip}" id="ot11"
-                         inlineStyle="color:#00d6d6; font-size:x-large;">
-            <af:convertNumber groupingUsed="false" pattern="#{bindings.Selectobjects02.format}"/>
-          </af:outputText>
-          <af:panelFormLayout id="pfl3"/>
-      </af:panelGroupLayout>
-    </af:panelGroupLayout>
-      <af:setPropertyListener from="3" to="#{pageFlowScope.tabVal}" type="action"/>
-    </af:commandLink>
-    
   </af:masonryLayout>
 </ui:composition>
