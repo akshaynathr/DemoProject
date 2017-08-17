@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:document id="d1">
+    <af:messages id="m1"/>
+    <af:form id="f1">
+      <af:table value="#{bindings.LookupsU1.collectionModel}" var="row" rows="#{bindings.LookupsU1.rangeSize}"
+                emptyText="#{bindings.LookupsU1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                rowBandingInterval="0" selectedRowKeys="#{bindings.LookupsU1.collectionModel.selectedRow}"
+                selectionListener="#{bindings.LookupsU1.collectionModel.makeCurrent}" rowSelection="single"
+                fetchSize="#{bindings.LookupsU1.rangeSize}" filterModel="#{bindings.LookupsU1Query.queryDescriptor}"
+                filterVisible="true" queryListener="#{bindings.LookupsU1Query.processQuery}" varStatus="vs" id="t1"
+                partialTriggers="::b1">
+        <af:column sortProperty="#{bindings.LookupsU1.hints.PossibleValue.name}" filterable="true" sortable="true"
+                   headerText="Category" id="c1">
+          <af:inputText value="#{row.bindings.PossibleValue.inputValue}"
+                        label="#{bindings.LookupsU1.hints.PossibleValue.label}"
+                        required="#{bindings.LookupsU1.hints.PossibleValue.mandatory}"
+                        columns="#{bindings.LookupsU1.hints.PossibleValue.displayWidth}"
+                        maximumLength="#{bindings.LookupsU1.hints.PossibleValue.precision}"
+                        shortDesc="#{bindings.LookupsU1.hints.PossibleValue.tooltip}" id="it1">
+            <f:validator binding="#{row.bindings.PossibleValue.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.LookupsU1.hints.Description.name}" filterable="true" sortable="true"
+                   headerText="Description" id="c2">
+          <af:inputText value="#{row.bindings.Description.inputValue}"
+                        label="#{bindings.LookupsU1.hints.Description.label}"
+                        required="#{bindings.LookupsU1.hints.Description.mandatory}"
+                        columns="#{bindings.LookupsU1.hints.Description.displayWidth}"
+                        maximumLength="#{bindings.LookupsU1.hints.Description.precision}"
+                        shortDesc="#{bindings.LookupsU1.hints.Description.tooltip}" id="it2">
+            <f:validator binding="#{row.bindings.Description.validator}"/>
+          </af:inputText>
+        </af:column>
+      </af:table>
+      <af:button text="Delete Category" disabled="#{!bindings.Delete.enabled}" id="b1"
+                 actionListener="#{bindings.Delete.execute}"/>
+      <af:panelFormLayout id="pfl1">
+        <af:inputText value="#{bindings.PossibleValue.inputValue}" label="#{bindings.PossibleValue.hints.label}"
+                      required="#{bindings.PossibleValue.hints.mandatory}"
+                      columns="#{bindings.PossibleValue.hints.displayWidth}"
+                      maximumLength="#{bindings.PossibleValue.hints.precision}"
+                      shortDesc="#{bindings.PossibleValue.hints.tooltip}" id="it3">
+          <f:validator binding="#{bindings.PossibleValue.validator}"/>
+        </af:inputText>
+        <af:inputText value="#{bindings.Description.inputValue}" label="#{bindings.Description.hints.label}"
+                      required="#{bindings.Description.hints.mandatory}"
+                      columns="#{bindings.Description.hints.displayWidth}"
+                      maximumLength="#{bindings.Description.hints.precision}"
+                      shortDesc="#{bindings.Description.hints.tooltip}" id="it4">
+          <f:validator binding="#{bindings.Description.validator}"/>
+        </af:inputText>
+      </af:panelFormLayout>
+    </af:form>
+  </af:document>
+</f:view>

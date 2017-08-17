@@ -17,6 +17,14 @@
     Name="ProductCategoryDefaultVO1"
     ViewObjectName="model.RVO.ProductCategoryDefaultVO"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="LookupsUVO1"
+    ViewObjectName="model.UVO.LookupsUVO"
+    RowLevelBinds="true">
+    <ViewCriteriaUsage
+      Name="ProductCategoryDeleteUVOCriteria"
+      FullName="model.UVO.LookupsUVO.ProductCategoryDeleteUVOCriteria"/>
+  </ViewAccessor>
   <EntityUsage
     Name="LookupEO"
     Entity="model.EO.LookupEO"/>
@@ -47,4 +55,44 @@
     EntityAttrName="Description"
     EntityUsage="LookupEO"
     AliasName="DESCRIPTION"/>
+  <ViewCriteria
+    Name="ProductCategoryDeleteUVOCriteria"
+    ViewObjectName="model.UVO.LookupsUVO"
+    Conjunction="AND">
+    <Properties Name="_Props">
+      <CustomProperties>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="ProductCategoryDeleteUVOCriteria_row_0"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="LookupCategory"
+        ViewAttribute="LookupCategory"
+        Operator="="
+        Conjunction="AND"
+        Value="PRODUCT_CATEGORY"
+        UpperColumns="0"
+        Required="Optional"/>
+    </ViewCriteriaRow>
+  </ViewCriteria>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

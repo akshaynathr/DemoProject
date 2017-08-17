@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="DeleteProductCategoryPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="LookupsU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="LookupsU1Iterator"/>
+    <searchRegion Binds="LookupsU1Iterator" Criteria="ProductCategoryDeleteUVOCriteria"
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="LookupsU1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="LookupsU1Iterator" id="LookupsU1">
+      <nodeDefinition DefName="model.UVO.LookupsUVO" Name="LookupsU10">
+        <AttrNames>
+          <Item Value="PossibleValue"/>
+          <Item Value="Description"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="LookupsU1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleAMDataControl"/>
+    <attributeValues IterBinding="LookupsU1Iterator" id="PossibleValue">
+      <AttrNames>
+        <Item Value="PossibleValue"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="LookupsU1Iterator" id="Description">
+      <AttrNames>
+        <Item Value="Description"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

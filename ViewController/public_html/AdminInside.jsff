@@ -158,7 +158,6 @@
           <af:panelGroupLayout id="pgl5" layout="vertical">
             <af:link text="Create Product Category" id="l3" useWindow="true" windowHeight="500" windowWidth="600"
                      action="create_product_category"/>
-            <af:link text="Delete Product Category" id="l4"/>
           </af:panelGroupLayout>
         </f:facet>
       </af:panelSplitter>

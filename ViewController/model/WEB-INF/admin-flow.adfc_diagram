@@ -190,17 +190,6 @@
       <property
          name="sdm:polyPoints">R50,144.0,95.79297,466.44424,90.94824,L50</property>
    </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase21"
-      from="View3">
-      <property
-         name="tosrcid">__6</property>
-      <property
-         name="fromOutcome">UserTrain2</property>
-      <property
-         name="fromsrcid">__5</property>
-   </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall22">
       <property
@@ -229,5 +218,45 @@
          name="fromOutcome">create_product_category</property>
       <property
          name="sdm:polyPoints">L42,467.0,83.94824,343.0244,-40.603516,R50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase25"
+      from="View3">
+      <property
+         name="tosrcid">__6</property>
+      <property
+         name="fromOutcome">UserTrain2</property>
+      <property
+         name="fromsrcid">__5</property>
+   </ControlFlowCase>
+   <TaskFlowCall
+      id="TaskFlowCall23">
+      <property
+         name="runAsDialog">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>DeleteProductCategory-flow&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">DeleteProductCategory-flow</property>
+      <property
+         name="x">606.03516</property>
+      <property
+         name="y">-60.25293</property>
+      <property
+         name="documentReference">/WEB-INF/DeleteProductCategory-flow.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">DeleteProductCategory-flow</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase24"
+      from="View3"
+      to="TaskFlowCall23">
+      <property
+         name="fromOutcome">delete_product_category</property>
+      <property
+         name="sdm:polyPoints">T50,508.0,36.948242,606.03516,-6.6035156,B50</property>
    </ControlFlowCase>
 </SDM>

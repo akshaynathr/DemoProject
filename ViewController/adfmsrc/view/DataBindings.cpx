@@ -25,6 +25,9 @@
     <page path="/Create-category.jsf" usageId="view_Create_categoryPageDef"/>
     <page path="/WEB-INF/product-Category-flow.xml#product-Category-flow@CreateInsert"
           usageId="view_product_Category_flow_product_Category_flow_CreateInsertPageDef"/>
+    <page path="/DeleteProductCategory.jsf" usageId="view_DeleteProductCategoryPageDef"/>
+    <page path="/WEB-INF/DeleteProductCategory-flow.xml#DeleteProductCategory-flow@Delete"
+          usageId="view_DeleteProductCategory_flow_DeleteProductCategory_flow_DeletePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_HomePageDef" path="view.pageDefs.HomePageDef"/>
@@ -45,6 +48,9 @@
     <page id="view_Create_categoryPageDef" path="view.pageDefs.Create_categoryPageDef"/>
     <page id="view_product_Category_flow_product_Category_flow_CreateInsertPageDef"
           path="view.pageDefs.product_Category_flow_product_Category_flow_CreateInsertPageDef"/>
+    <page id="view_DeleteProductCategoryPageDef" path="view.pageDefs.DeleteProductCategoryPageDef"/>
+    <page id="view_DeleteProductCategory_flow_DeleteProductCategory_flow_DeletePageDef"
+          path="view.pageDefs.DeleteProductCategory_flow_DeleteProductCategory_flow_DeletePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleAMDataControl" Package="model.AM"

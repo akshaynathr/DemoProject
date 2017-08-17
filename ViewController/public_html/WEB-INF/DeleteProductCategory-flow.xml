@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="DeleteProductCategory-flow">
+    <default-activity>DeleteProductCategory</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="DeleteProductCategory">
+      <page>/DeleteProductCategory.jsf</page>
+    </view>
+    <method-call id="Delete">
+      <method>#{bindings.Delete.execute}</method>
+      <outcome>
+        <fixed-outcome>Delete</fixed-outcome>
+      </outcome>
+    </method-call>
+    <control-flow-rule id="__1">
+      <from-activity-id>Delete</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>Delete</from-outcome>
+        <to-activity-id>DeleteProductCategory</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+  </task-flow-definition>
+</adfc-config>

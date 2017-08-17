@@ -70,6 +70,17 @@
         </display-type>
       </run-as-dialog>
     </task-flow-call>
+    <task-flow-call id="DeleteProductCategory-flow">
+      <task-flow-reference>
+        <document>/WEB-INF/DeleteProductCategory-flow.xml</document>
+        <id>DeleteProductCategory-flow</id>
+      </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
+    </task-flow-call>
     <control-flow-rule id="__1">
       <from-activity-id>admin_dashboard</from-activity-id>
       <control-flow-case id="__2">
@@ -98,6 +109,10 @@
       <control-flow-case id="__15">
         <from-outcome>create_product_category</from-outcome>
         <to-activity-id>product-Category-flow</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__16">
+        <from-outcome>delete_product_category</from-outcome>
+        <to-activity-id>DeleteProductCategory-flow</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__5">
