@@ -47,9 +47,9 @@
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
-          Value="150"/>
+          Value="20"/>
         <DISPLAYHEIGHT
-          Value="8"/>
+          Value="150"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -64,7 +64,14 @@
     PrecisionRule="true"
     EntityAttrName="ProductDescription"
     EntityUsage="ProductEO"
-    AliasName="PRODUCT_DESCRIPTION"/>
+    AliasName="PRODUCT_DESCRIPTION">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="30"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="CurrentPrice"
     PrecisionRule="true"

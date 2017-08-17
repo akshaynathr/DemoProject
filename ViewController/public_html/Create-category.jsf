@@ -5,7 +5,7 @@
     <af:form id="f1">
       <af:outputText value="Create Product Category" id="ot1" inlineStyle="font-weight:bold; font-size:large;"/>
       <af:panelFormLayout id="pfl1">
-        <af:inputText value="#{bindings.LookupCategory.inputValue}" label="#{bindings.LookupCategory.hints.label}"
+        <af:inputText value="#{bindings.category}" label="#{bindings.LookupCategory.hints.label}"
                       required="#{bindings.LookupCategory.hints.mandatory}"
                       columns="#{bindings.LookupCategory.hints.displayWidth}"
                       maximumLength="#{bindings.LookupCategory.hints.precision}"

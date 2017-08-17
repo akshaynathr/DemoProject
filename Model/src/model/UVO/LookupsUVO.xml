@@ -13,6 +13,10 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="ProductCategoryDefaultVO1"
+    ViewObjectName="model.RVO.ProductCategoryDefaultVO"
+    RowLevelBinds="true"/>
   <EntityUsage
     Name="LookupEO"
     Entity="model.EO.LookupEO"/>
@@ -22,7 +26,8 @@
     PrecisionRule="true"
     EntityAttrName="LookupId"
     EntityUsage="LookupEO"
-    AliasName="LOOKUP_ID"/>
+    AliasName="LOOKUP_ID"
+    IsUpdateable="while_insert"/>
   <ViewAttribute
     Name="LookupCategory"
     PrecisionRule="true"

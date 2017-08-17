@@ -64,6 +64,9 @@
   <ViewUsage
     Name="LookupsU1"
     ViewObjectName="model.UVO.LookupsUVO"/>
+  <ViewUsage
+    Name="ProductCategoryDefault1"
+    ViewObjectName="model.RVO.ProductCategoryDefaultVO"/>
   <ViewLinkUsage
     Name="UsersFk1VL1"
     ViewLinkObjectName="model.UVO.UsersFk1VL"

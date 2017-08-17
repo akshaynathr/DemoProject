@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="Create_categoryPageDef"
                 Package="view.pageDefs">
-  <parameters/>
+  <parameters>
+    <parameter id="Category" value="PRODUCT_CATEGORY"/>
+  </parameters>
   <executables>
     <variableIterator id="variables"/>
     <iterator Binds="LookupsU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="LookupsU1Iterator"/>

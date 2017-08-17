@@ -121,14 +121,15 @@
                       filterModel="#{bindings.ImplicitViewCriteriaQuery1.queryDescriptor}" filterVisible="true"
                       queryListener="#{bindings.ImplicitViewCriteriaQuery1.processQuery}" varStatus="vs"
                       partialTriggers="::qryId2 ::b4" id="t2" scrollPolicy="auto" autoHeightRows="20"
-                      contentDelivery="immediate" styleClass="AFStretchWidth">
+                      contentDelivery="immediate" styleClass="AFStretchWidth" columnStretching="column:c11">
               <af:column sortProperty="#{bindings.ProductsU1.hints.ProductName.name}" filterable="true" sortable="true"
                          headerText="#{bindings.ProductsU1.hints.ProductName.label}" id="c10">
                 <af:link text="#{row.ProductName}" id="l2" action="editProduct" useWindow="true"
                          windowModalityType="applicationModal" windowWidth="600"/>
               </af:column>
               <af:column sortProperty="#{bindings.ProductsU1.hints.ProductDescription.name}" filterable="true"
-                         sortable="true" headerText="#{bindings.ProductsU1.hints.ProductDescription.label}" id="c11">
+                         sortable="true" headerText="#{bindings.ProductsU1.hints.ProductDescription.label}" id="c11"
+                         styleClass="AFStretchWidth">
                 <af:outputText value="#{row.ProductDescription}"
                                shortDesc="#{bindings.ProductsU1.hints.ProductDescription.tooltip}" id="ot9"/>
               </af:column>
@@ -170,7 +171,7 @@
                     value="#{bindings.RolesU1.collectionModel}" rowBandingInterval="0"
                     selectedRowKeys="#{bindings.RolesU1.collectionModel.selectedRow}"
                     selectionListener="#{bindings.RolesU1.collectionModel.makeCurrent}" rowSelection="single" contentDelivery="immediate" columnResizing="enabled"
-                    columnStretching="multiple">
+                    columnStretching="column:c18">
             <af:column headerText="#{bindings.RolesU1.hints.RoleNameId.label}"
                        sortProperty="#{bindings.RolesU1.hints.RoleNameId.name}" sortable="false" id="c15">
               <af:selectOneChoice value="#{row.bindings.RoleNameId.inputValue}" label="#{row.bindings.RoleNameId.label}"
