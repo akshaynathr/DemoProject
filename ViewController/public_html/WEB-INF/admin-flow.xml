@@ -35,6 +35,11 @@
         <document>/WEB-INF/EditUser-flow.xml</document>
         <id>EditUser-flow</id>
       </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
     </task-flow-call>
     <task-flow-call id="editProduct-flow">
       <task-flow-reference>

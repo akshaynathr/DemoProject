@@ -7,7 +7,7 @@
       <property
          name="activityId">editUser</property>
       <property
-         name="pageFragment">true</property>
+         name="pageFragment">false</property>
       <property
          name="x">241.0</property>
       <property
@@ -17,7 +17,7 @@
       <property
          name="y">77.49414</property>
       <property
-         name="page">/editUser.jsff</property>
+         name="page">/editUser.jsf</property>
       <property
          name="exceptionHandler">false</property>
    </View>

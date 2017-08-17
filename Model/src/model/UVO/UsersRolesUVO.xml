@@ -21,6 +21,18 @@
     Name="UsersUVO1"
     ViewObjectName="model.UVO.UsersUVO"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="RoleNameLookupVO1"
+    ViewObjectName="model.RVO.RoleNameLookupVO"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="RolesRVO1"
+    ViewObjectName="model.RVO.RolesRVO"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="RoleNameLookupVO2"
+    ViewObjectName="model.RVO.RoleNameLookupVO"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_UserId"
     ListVOName="UsersUVO1"
@@ -37,6 +49,23 @@
       <Item Value="FirstName"/>
       <Item Value="LastName"/>
       <Item Value="GlobalUsername"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_RoleId"
+    ListVOName="RoleNameLookupVO2"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="RoleId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="RoleId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="PossibleValue"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -64,7 +93,15 @@
     PrecisionRule="true"
     EntityAttrName="RoleId"
     EntityUsage="UserRoleEO"
-    AliasName="ROLE_ID"/>
+    AliasName="ROLE_ID"
+    LOVName="LOV_RoleId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="StartDate"
     PrecisionRule="true"

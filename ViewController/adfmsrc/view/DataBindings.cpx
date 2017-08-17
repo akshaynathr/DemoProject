@@ -15,7 +15,6 @@
     <page path="/UserTrain/Corporate.jsf" usageId="view_CorporatePageDef"/>
     <page path="/UserTrain/Personal.jsf" usageId="view_PersonalPageDef"/>
     <page path="/UserTrain/Summary.jsf" usageId="view_SummaryPageDef"/>
-    <page path="/editUser.jsff" usageId="view_editUserPageDef"/>
     <page path="/createProduct.jsf" usageId="view_createProductPageDef"/>
     <page path="/WEB-INF/editProduct-flow.xml#editProduct-flow@CreateInsert"
           usageId="view_editProduct_flow_editProduct_flow_CreateInsertPageDef"/>
@@ -28,6 +27,7 @@
     <page path="/DeleteProductCategory.jsf" usageId="view_DeleteProductCategoryPageDef"/>
     <page path="/WEB-INF/DeleteProductCategory-flow.xml#DeleteProductCategory-flow@Delete"
           usageId="view_DeleteProductCategory_flow_DeleteProductCategory_flow_DeletePageDef"/>
+    <page path="/editUser.jsf" usageId="view_editUserPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_HomePageDef" path="view.pageDefs.HomePageDef"/>

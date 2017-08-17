@@ -26,7 +26,8 @@
                   selectionListener="#{bindings.UsersU3.collectionModel.makeCurrent}" rowSelection="single"
                   fetchSize="#{bindings.UsersU3.rangeSize}" partialTriggers="::qryId1 ::b3" id="t1">
           <af:column headerText="#{bindings.UsersU3.hints.GlobalUsername.label}" id="c1">
-            <af:link text="#{row.GlobalUsername}" id="l1" action="edit"/>
+            <af:link text="#{row.GlobalUsername}" id="l1" action="edit" useWindow="true"
+                     windowEmbedStyle="inlineDocument" windowHeight="400" windowWidth="400"/>
           </af:column>
           <af:column headerText="#{bindings.UsersU3.hints.FirstName.label}" id="c2">
             <af:outputText value="#{row.FirstName}" shortDesc="#{bindings.UsersU3.hints.FirstName.tooltip}" id="ot2"/>
@@ -65,29 +66,30 @@
             </af:outputText>
           </af:column>
         </af:table>
+        <af:table value="#{bindings.UsersRolesU1.collectionModel}" var="row" rows="#{bindings.UsersRolesU1.rangeSize}"
+                  emptyText="#{bindings.UsersRolesU1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                  rowBandingInterval="0" fetchSize="#{bindings.UsersRolesU1.rangeSize}" id="t4" partialTriggers="::t1">
+          <af:column headerText="Role" id="c14">
+            <af:selectOneChoice value="#{row.bindings.RoleId.inputValue}" label="#{row.bindings.RoleId.label}"
+                                required="#{bindings.UsersRolesU1.hints.RoleId.mandatory}"
+                                shortDesc="#{bindings.UsersRolesU1.hints.RoleId.tooltip}" readOnly="true" id="soc5">
+              <f:selectItems value="#{row.bindings.RoleId.items}" id="si5"/>
+              <f:validator binding="#{row.bindings.RoleId.validator}"/>
+            </af:selectOneChoice>
+          </af:column>
+          <af:column headerText="Start Date" id="c19">
+            <af:outputText value="#{row.StartDate}" shortDesc="#{bindings.UsersRolesU1.hints.StartDate.tooltip}"
+                           id="ot1">
+              <af:convertDateTime pattern="#{bindings.UsersRolesU1.hints.StartDate.format}"/>
+            </af:outputText>
+          </af:column>
+          <af:column headerText="End Date" id="c20">
+            <af:outputText value="#{row.EndDate}" shortDesc="#{bindings.UsersRolesU1.hints.EndDate.tooltip}" id="ot14">
+              <af:convertDateTime pattern="#{bindings.UsersRolesU1.hints.EndDate.format}"/>
+            </af:outputText>
+          </af:column>
+        </af:table>
       </af:panelGroupLayout>
-      <af:panelFormLayout id="pfl1">
-        <af:inputText value="#{bindings.RoleId.inputValue}" label="#{bindings.RoleId.hints.label}"
-                      required="#{bindings.RoleId.hints.mandatory}" columns="#{bindings.RoleId.hints.displayWidth}"
-                      maximumLength="#{bindings.RoleId.hints.precision}" shortDesc="#{bindings.RoleId.hints.tooltip}"
-                      id="it1">
-          <f:validator binding="#{bindings.RoleId.validator}"/>
-          <af:convertNumber groupingUsed="false" pattern="#{bindings.RoleId.format}"/>
-        </af:inputText>
-        <af:inputDate value="#{bindings.StartDate.inputValue}" label="#{bindings.StartDate.hints.label}"
-                      required="#{bindings.StartDate.hints.mandatory}"
-                      columns="#{bindings.StartDate.hints.displayWidth}" shortDesc="#{bindings.StartDate.hints.tooltip}"
-                      id="id1">
-          <f:validator binding="#{bindings.StartDate.validator}"/>
-          <af:convertDateTime pattern="#{bindings.StartDate.format}"/>
-        </af:inputDate>
-        <af:inputDate value="#{bindings.EndDate.inputValue}" label="#{bindings.EndDate.hints.label}"
-                      required="#{bindings.EndDate.hints.mandatory}" columns="#{bindings.EndDate.hints.displayWidth}"
-                      shortDesc="#{bindings.EndDate.hints.tooltip}" id="id2">
-          <f:validator binding="#{bindings.EndDate.validator}"/>
-          <af:convertDateTime pattern="#{bindings.EndDate.format}"/>
-        </af:inputDate>
-      </af:panelFormLayout>
     </af:showDetailItem>
     <af:showDetailItem id="sdi1" icon="#{resource['images:product2.png']}" depressedIcon="#{resource['images:product2.png']}"
                        hoverIcon="#{resource['images:product2.png']}" text="Products"

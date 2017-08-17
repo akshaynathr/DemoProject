@@ -6,7 +6,7 @@
       <shared/>
     </data-control-scope>
     <view id="editUser">
-      <page>/editUser.jsff</page>
+      <page>/editUser.jsf</page>
     </view>
     <task-flow-return id="commit">
       <outcome>
@@ -24,6 +24,5 @@
         <to-activity-id>commit</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
-    <use-page-fragments/>
   </task-flow-definition>
 </adfc-config>
