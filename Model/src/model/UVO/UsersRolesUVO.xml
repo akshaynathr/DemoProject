@@ -13,6 +13,14 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <Variable
+    Name="Bind_UserId"
+    Kind="where"
+    Type="java.lang.Long"/>
+  <Variable
+    Name="Bind_RoleId"
+    Kind="where"
+    Type="java.lang.Long"/>
   <ViewAccessor
     Name="LookupsUVO1"
     ViewObjectName="model.UVO.LookupsUVO"
@@ -114,4 +122,50 @@
     EntityAttrName="EndDate"
     EntityUsage="UserRoleEO"
     AliasName="END_DATE"/>
+  <ViewCriteria
+    Name="UsersRolesUVOCriteria"
+    ViewObjectName="model.UVO.UsersRolesUVO"
+    Conjunction="AND">
+    <Properties Name="_Props">
+      <CustomProperties>
+        <Property
+          Name="autoExecute"
+          Value="true"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="UsersRolesUVOCriteria_row_0"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="UserId"
+        ViewAttribute="UserId"
+        Operator="="
+        Conjunction="AND"
+        Value=":Bind_UserId"
+        GenerateIsNullClauseForBindVars="false"
+        IsBindVarValue="true"
+        Required="Optional"/>
+      <ViewCriteriaItem
+        Name="RoleId"
+        ViewAttribute="RoleId"
+        Operator="="
+        Conjunction="AND"
+        Value=":Bind_RoleId"
+        GenerateIsNullClauseForBindVars="false"
+        IsBindVarValue="true"
+        Required="Optional"/>
+    </ViewCriteriaRow>
+  </ViewCriteria>
 </ViewObject>

@@ -10,9 +10,10 @@
     <iterator Binds="ProductsU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="ProductsU1Iterator"/>
     <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
                   Binds="ProductsU1Iterator" id="ImplicitViewCriteriaQuery1"/>
-    <iterator Binds="RolesU1" DataControl="AppModuleAMDataControl" id="RolesU1Iterator"/>
-    <iterator Binds="UsersRolesU4" RangeSize="25" DataControl="AppModuleAMDataControl" id="UsersRolesU4Iterator"/>
     <iterator Binds="UsersRolesU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="UsersRolesU1Iterator"/>
+    <iterator Binds="UsersU4" RangeSize="25" DataControl="AppModuleAMDataControl" id="UsersU4Iterator"/>
+    <iterator Binds="UserRolesMaster1" RangeSize="25" DataControl="AppModuleAMDataControl"
+              id="UserRolesMaster1Iterator"/>
   </executables>
   <bindings>
     <tree IterBinding="UsersU3Iterator" id="UsersU3">
@@ -43,33 +44,6 @@
     <action id="Commit" DataControl="AppModuleAMDataControl" RequiresUpdateModel="true" Action="commitTransaction"/>
     <action IterBinding="UsersU3Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <action IterBinding="ProductsU1Iterator" id="Delete1" RequiresUpdateModel="false" Action="removeCurrentRow"/>
-    <tree IterBinding="RolesU1Iterator" id="RolesU1">
-      <nodeDefinition DefName="model.UVO.RolesUVO" Name="RolesU10">
-        <AttrNames>
-          <Item Value="RoleId"/>
-          <Item Value="RoleNameId"/>
-          <Item Value="StartDate"/>
-          <Item Value="EndDate"/>
-          <Item Value="Description"/>
-          <Item Value="CreatedBy"/>
-          <Item Value="CreatedOn"/>
-          <Item Value="LastUpdatedBy"/>
-          <Item Value="LastUpdatedOn"/>
-          <Item Value="VersionNo"/>
-          <Item Value="IsActive"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
-    <tree IterBinding="UsersRolesU4Iterator" id="UsersRolesU4">
-      <nodeDefinition DefName="model.UVO.UsersRolesUVO" Name="UsersRolesU40">
-        <AttrNames>
-          <Item Value="UserId"/>
-          <Item Value="RoleId"/>
-          <Item Value="StartDate"/>
-          <Item Value="EndDate"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
     <tree IterBinding="UsersRolesU1Iterator" id="UsersRolesU1">
       <nodeDefinition DefName="model.UVO.UsersRolesUVO" Name="UsersRolesU10">
         <AttrNames>
@@ -79,5 +53,33 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <tree IterBinding="UsersU4Iterator" id="UsersU4">
+      <nodeDefinition DefName="model.UVO.UsersUVO" Name="UsersU40">
+        <AttrNames>
+          <Item Value="GlobalUsername"/>
+          <Item Value="FirstName"/>
+          <Item Value="MiddleName"/>
+          <Item Value="LastName"/>
+          <Item Value="TeamId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="UserRolesMaster1Iterator" id="UserRolesMaster1">
+      <nodeDefinition DefName="model.UVO.UserRolesMasterVO" Name="UserRolesMaster10">
+        <AttrNames>
+          <Item Value="RoleNameId"/>
+          <Item Value="AreAssociated"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <button IterBinding="UserRolesMaster1Iterator" id="AreAssociated" DTSupportsMRU="false">
+      <AttrNames>
+        <Item Value="AreAssociated"/>
+      </AttrNames>
+      <ValueList>
+        <Item Value="true"/>
+        <Item Value="false"/>
+      </ValueList>
+    </button>
   </bindings>
 </pageDefinition>
