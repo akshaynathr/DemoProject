@@ -15,11 +15,11 @@
   PageIterMode="Full">
   <Variable
     Name="Bind_UserId"
-    Kind="where"
+    Kind="viewcriteria"
     Type="java.lang.Long"/>
   <Variable
     Name="Bind_RoleId"
-    Kind="where"
+    Kind="viewcriteria"
     Type="java.lang.Long"/>
   <ViewAccessor
     Name="LookupsUVO1"
@@ -154,7 +154,6 @@
         Operator="="
         Conjunction="AND"
         Value=":Bind_UserId"
-        GenerateIsNullClauseForBindVars="false"
         IsBindVarValue="true"
         Required="Optional"/>
       <ViewCriteriaItem
@@ -163,7 +162,6 @@
         Operator="="
         Conjunction="AND"
         Value=":Bind_RoleId"
-        GenerateIsNullClauseForBindVars="false"
         IsBindVarValue="true"
         Required="Optional"/>
     </ViewCriteriaRow>
