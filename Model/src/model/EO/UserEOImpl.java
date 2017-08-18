@@ -41,12 +41,11 @@ public class UserEOImpl extends EntityImpl {
         LastUpdatedOn,
         VersionNo,
         IsActive,
-        RoleName,
         User,
         SupervisorIdUser,
-        UserRole,
-        UsersRVO1;
+        UserRole;
         private static AttributesEnum[] vals = null;
+        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -86,11 +85,9 @@ public class UserEOImpl extends EntityImpl {
     public static final int LASTUPDATEDON = AttributesEnum.LastUpdatedOn.index();
     public static final int VERSIONNO = AttributesEnum.VersionNo.index();
     public static final int ISACTIVE = AttributesEnum.IsActive.index();
-    public static final int ROLENAME = AttributesEnum.RoleName.index();
     public static final int USER = AttributesEnum.User.index();
     public static final int SUPERVISORIDUSER = AttributesEnum.SupervisorIdUser.index();
     public static final int USERROLE = AttributesEnum.UserRole.index();
-    public static final int USERSRVO1 = AttributesEnum.UsersRVO1.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -317,13 +314,6 @@ public class UserEOImpl extends EntityImpl {
         return (String) getAttributeInternal(CREATEDBY);
     }
 
-    /**
-     * Sets <code>value</code> as the attribute value for CreatedBy.
-     * @param value value to set the CreatedBy
-     */
-    public void setCreatedBy(String value) {
-        setAttributeInternal(CREATEDBY, value);
-    }
 
     /**
      * Gets the attribute value for CreatedOn, using the alias name CreatedOn.
@@ -333,13 +323,6 @@ public class UserEOImpl extends EntityImpl {
         return (Timestamp) getAttributeInternal(CREATEDON);
     }
 
-    /**
-     * Sets <code>value</code> as the attribute value for CreatedOn.
-     * @param value value to set the CreatedOn
-     */
-    public void setCreatedOn(Timestamp value) {
-        setAttributeInternal(CREATEDON, value);
-    }
 
     /**
      * Gets the attribute value for LastUpdatedBy, using the alias name LastUpdatedBy.
@@ -349,13 +332,6 @@ public class UserEOImpl extends EntityImpl {
         return (String) getAttributeInternal(LASTUPDATEDBY);
     }
 
-    /**
-     * Sets <code>value</code> as the attribute value for LastUpdatedBy.
-     * @param value value to set the LastUpdatedBy
-     */
-    public void setLastUpdatedBy(String value) {
-        setAttributeInternal(LASTUPDATEDBY, value);
-    }
 
     /**
      * Gets the attribute value for LastUpdatedOn, using the alias name LastUpdatedOn.
@@ -365,13 +341,6 @@ public class UserEOImpl extends EntityImpl {
         return (Timestamp) getAttributeInternal(LASTUPDATEDON);
     }
 
-    /**
-     * Sets <code>value</code> as the attribute value for LastUpdatedOn.
-     * @param value value to set the LastUpdatedOn
-     */
-    public void setLastUpdatedOn(Timestamp value) {
-        setAttributeInternal(LASTUPDATEDON, value);
-    }
 
     /**
      * Gets the attribute value for VersionNo, using the alias name VersionNo.
@@ -381,13 +350,6 @@ public class UserEOImpl extends EntityImpl {
         return (Long) getAttributeInternal(VERSIONNO);
     }
 
-    /**
-     * Sets <code>value</code> as the attribute value for VersionNo.
-     * @param value value to set the VersionNo
-     */
-    public void setVersionNo(Long value) {
-        setAttributeInternal(VERSIONNO, value);
-    }
 
     /**
      * Gets the attribute value for IsActive, using the alias name IsActive.
@@ -405,21 +367,6 @@ public class UserEOImpl extends EntityImpl {
         setAttributeInternal(ISACTIVE, value);
     }
 
-    /**
-     * Gets the attribute value for RoleName, using the alias name RoleName.
-     * @return the value of RoleName
-     */
-    public String getRoleName() {
-        return (String) getAttributeInternal(ROLENAME);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for RoleName.
-     * @param value value to set the RoleName
-     */
-    public void setRoleName(String value) {
-        setAttributeInternal(ROLENAME, value);
-    }
 
     /**
      * @return the associated entity oracle.jbo.RowIterator.
@@ -449,12 +396,6 @@ public class UserEOImpl extends EntityImpl {
         return (RowIterator) getAttributeInternal(USERROLE);
     }
 
-    /**
-     * Gets the view accessor <code>RowSet</code> UsersRVO1.
-     */
-    public RowSet getUsersRVO1() {
-        return (RowSet) getAttributeInternal(USERSRVO1);
-    }
 
     /**
      * @param userId key constituent

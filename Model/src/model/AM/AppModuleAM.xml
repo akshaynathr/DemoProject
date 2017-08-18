@@ -70,6 +70,12 @@
   <ViewUsage
     Name="RoleNameLookup2"
     ViewObjectName="model.RVO.RoleNameLookupVO"/>
+  <ViewUsage
+    Name="UsersU4"
+    ViewObjectName="model.UVO.UsersUVO"/>
+  <ViewUsage
+    Name="UserRolesMaster1"
+    ViewObjectName="model.UVO.UserRolesMasterVO"/>
   <ViewLinkUsage
     Name="UsersFk1VL1"
     ViewLinkObjectName="model.UVO.UsersFk1VL"
@@ -99,5 +105,11 @@
     ViewLinkObjectName="model.VL.RoleFKUserRoleVL"
     SrcViewUsageName="model.AM.AppModuleAM.RolesU1"
     DstViewUsageName="model.AM.AppModuleAM.UsersRolesU4"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="UsersRolesMasterVL1"
+    ViewLinkObjectName="model.VL.UsersRolesMasterVL"
+    SrcViewUsageName="model.AM.AppModuleAM.UsersU4"
+    DstViewUsageName="model.AM.AppModuleAM.UserRolesMaster1"
     Reversed="false"/>
 </AppModule>

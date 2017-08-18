@@ -215,4 +215,9 @@
     ViewLink="model.VL.UserRolesVL"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="UserRolesMaster"
+    ViewLink="model.VL.UsersRolesMasterVL"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
 </ViewObject>
