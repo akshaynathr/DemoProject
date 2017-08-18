@@ -68,7 +68,7 @@
         <af:setPropertyListener from="3" to="#{pageFlowScope.tabVal}" type="action"/>
       </af:commandLink>
       <af:panelBox text="Quick actions" id="pb1" inlineStyle="border-style:none; border-color:White;margin:8px;" type="flow" titleHalign="start"
-                   showDisclosure="false" disclosed="false">
+                   showDisclosure="false" disclosed="false" rendered="false">
         <af:panelGroupLayout id="pgl11" layout="horizontal">
           <af:panelGroupLayout id="pgl12" inlineStyle="width:40%;">
             <af:image source="#{resource['images:addUser.jpg']}" id="i4" shortDesc="Create Users"/>

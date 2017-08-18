@@ -190,7 +190,7 @@
       <property
          name="fromsrcid">__1</property>
       <property
-         name="sdm:polyPoints">R50,144.0,95.79297,466.44424,90.94824,L50</property>
+         name="sdm:polyPoints">R46,144.0,92.29297,466.42023,87.44824,L46</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall22">
@@ -219,7 +219,7 @@
       <property
          name="fromOutcome">create_product_category</property>
       <property
-         name="sdm:polyPoints">L42,467.0,83.94824,343.0244,-40.603516,R50</property>
+         name="sdm:polyPoints">L38,467.0,80.44824,343.0244,-40.603516,R50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall23">
@@ -252,7 +252,7 @@
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase25"
+      id="ControlFlowCase26"
       from="View3">
       <property
          name="tosrcid">__6</property>
@@ -260,5 +260,15 @@
          name="fromOutcome">UserTrain2</property>
       <property
          name="fromsrcid">__5</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase25"
+      from="View3"
+      to="View2">
+      <property
+         name="fromOutcome">back_admin_dashboard</property>
+      <property
+         name="sdm:polyPoints">L54,466.47272,94.44824,144.05249,99.29297,R54</property>
    </ControlFlowCase>
 </SDM>

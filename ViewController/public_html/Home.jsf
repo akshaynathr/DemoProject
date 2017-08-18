@@ -10,9 +10,7 @@
     </f:facet>
     <f:facet name="status"/>
     <f:facet name="appNav">
-     <af:navigationPane hint="buttons" id="np1">
-      <af:commandNavigationItem text="Dashboard" id="cni1"/>
-     </af:navigationPane>
+     <af:navigationPane hint="buttons" id="np1"/>
     </f:facet>
     <f:facet name="globalLinks">
      <af:panelGroupLayout id="ptpgl3">
@@ -30,7 +28,7 @@
     </f:facet>
     <f:facet name="footer"/>
     <f:facet name="center">
-     <af:region value="#{bindings.dynamicRegion1.regionModel}" id="r1" partialTriggers="::np1:cni1"
+     <af:region value="#{bindings.dynamicRegion1.regionModel}" id="r1"
                 uncommittedDataWarning="on"/>
     </f:facet>
     <f:attribute name="startWidth" value="0"/>

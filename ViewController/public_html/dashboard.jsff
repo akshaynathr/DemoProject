@@ -149,20 +149,14 @@
                          inlineStyle="border-color:#e7e7e7;width: 25.0%;  padding:1.0% ;border-bottom-left-radius:1px 1px; border-bottom-right-radius:10px 1px; background-color:White; border-left-color:#e7e7e7; border-collapse:separate; border-style:solid;"
                          styleClass="AFMasonryTileSize1x1">
       <af:panelGroupLayout id="pgl22" layout="vertical">
-        <af:outputText value="MyTeam" id="ot20" inlineStyle="font-size: 130%; font-weight:bold;"/>
-        <af:spacer width="10" height="10" id="s2"/>
+        <af:outputText value="Contacts" id="ot20" inlineStyle="font-size: 130%; font-weight:bold;"/>
         <af:panelGroupLayout id="pgl23" layout="horizontal">
-          <af:image source="#{resource['images:Team.png']}" id="i9"/>
+          <af:image source="/icons/contacts-icon.png" id="i9"/>
           <af:spacer width="10" height="10" id="s4"/>
           <af:panelGroupLayout id="pgl24" layout="vertical">
             <af:panelGroupLayout id="pgl25" layout="vertical">
-              <af:outputText value="Directs" id="ot21"/>
+              <af:outputText value="Total" id="ot21"/>
               <af:outputText value="35" id="ot22" inlineStyle="font-weight:bolder; font-size:xx-large; color:#4a85c5;"/>
-            </af:panelGroupLayout>
-            <af:panelGroupLayout id="pgl26" layout="vertical">
-              <af:outputText value="Team" id="ot23"/>
-              <af:outputText value="130" id="ot24"
-                             inlineStyle="font-weight:bolder; font-size:xx-large; color:#ABEBD9;"/>
             </af:panelGroupLayout>
           </af:panelGroupLayout>
         </af:panelGroupLayout>

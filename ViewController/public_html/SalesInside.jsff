@@ -226,5 +226,8 @@
                            disclosed="#{(pageFlowScope.sales_manager_tabVal==6)?true:false}"/>
       </af:panelSpringboard>
     </f:facet>
+    <f:facet name="top">
+      <af:button text="Dashboard" id="b1" iconPosition="top" action="back"/>
+    </f:facet>
   </af:panelStretchLayout>
 </ui:composition>

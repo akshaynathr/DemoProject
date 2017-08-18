@@ -125,6 +125,10 @@
         <from-outcome>delete_product_category</from-outcome>
         <to-activity-id>DeleteProductCategory-flow</to-activity-id>
       </control-flow-case>
+      <control-flow-case id="__18">
+        <from-outcome>back_admin_dashboard</from-outcome>
+        <to-activity-id>admin_dashboard</to-activity-id>
+      </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__5">
       <from-activity-id>Team</from-activity-id>
