@@ -7,6 +7,9 @@
     <iterator Binds="UsersU3" RangeSize="25" DataControl="AppModuleAMDataControl" id="UsersU3Iterator"/>
     <searchRegion Binds="UsersU3Iterator" Criteria="" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
                   id="UsersU3Query"/>
+    <iterator Binds="CustomersU5" RangeSize="25" DataControl="AppModuleAMDataControl" id="CustomersU5Iterator"/>
+    <searchRegion Binds="CustomersU5Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="CustomersU5Query"/>
   </executables>
   <bindings>
     <tree IterBinding="UsersU3Iterator" id="UsersU3">
@@ -28,6 +31,19 @@
           <Item Value="LastUpdatedOn"/>
           <Item Value="VersionNo"/>
           <Item Value="IsActive"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="CustomersU5Iterator" id="CustomersU5">
+      <nodeDefinition DefName="model.UVO.CustomersUVO" Name="CustomersU50">
+        <AttrNames>
+          <Item Value="CustomerName"/>
+          <Item Value="PrimaryContactId"/>
+          <Item Value="ParentCompany"/>
+          <Item Value="Ceo"/>
+          <Item Value="PrimaryAddressId"/>
+          <Item Value="ShippingAddressId"/>
+          <Item Value="CustomerId"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

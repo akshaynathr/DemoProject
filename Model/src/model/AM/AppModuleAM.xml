@@ -76,6 +76,60 @@
   <ViewUsage
     Name="UserRolesMaster1"
     ViewObjectName="model.UVO.UserRolesMasterVO"/>
+  <ViewUsage
+    Name="CustomerTypeLookup1"
+    ViewObjectName="model.RVO.CustomerTypeLookupVO"/>
+  <ViewUsage
+    Name="AddressU1"
+    ViewObjectName="model.UVO.AddressUVO"/>
+  <ViewUsage
+    Name="AddressU2"
+    ViewObjectName="model.UVO.AddressUVO"/>
+  <ViewUsage
+    Name="ContactsU1"
+    ViewObjectName="model.UVO.ContactsUVO"/>
+  <ViewUsage
+    Name="ContactsU2"
+    ViewObjectName="model.UVO.ContactsUVO"/>
+  <ViewUsage
+    Name="CustomersU1"
+    ViewObjectName="model.UVO.CustomersUVO"/>
+  <ViewUsage
+    Name="CustomersContactsU1"
+    ViewObjectName="model.UVO.CustomersContactsUVO"/>
+  <ViewUsage
+    Name="ContactsU3"
+    ViewObjectName="model.UVO.ContactsUVO"/>
+  <ViewUsage
+    Name="CustomersContactsU2"
+    ViewObjectName="model.UVO.CustomersContactsUVO"/>
+  <ViewUsage
+    Name="CustomersContactsU3"
+    ViewObjectName="model.UVO.CustomersContactsUVO"/>
+  <ViewUsage
+    Name="ContactsU4"
+    ViewObjectName="model.UVO.ContactsUVO"/>
+  <ViewUsage
+    Name="CustomersU2"
+    ViewObjectName="model.UVO.CustomersUVO"/>
+  <ViewUsage
+    Name="AddressU3"
+    ViewObjectName="model.UVO.AddressUVO"/>
+  <ViewUsage
+    Name="CustomersU3"
+    ViewObjectName="model.UVO.CustomersUVO"/>
+  <ViewUsage
+    Name="AddressU4"
+    ViewObjectName="model.UVO.AddressUVO"/>
+  <ViewUsage
+    Name="CustomersU4"
+    ViewObjectName="model.UVO.CustomersUVO"/>
+  <ViewUsage
+    Name="CustomersU5"
+    ViewObjectName="model.UVO.CustomersUVO"/>
+  <ViewUsage
+    Name="ViewObj1"
+    ViewObjectName="model.UVO.ViewObjVO"/>
   <ViewLinkUsage
     Name="UsersFk1VL1"
     ViewLinkObjectName="model.UVO.UsersFk1VL"
@@ -111,5 +165,41 @@
     ViewLinkObjectName="model.VL.UsersRolesMasterVL"
     SrcViewUsageName="model.AM.AppModuleAM.UsersU4"
     DstViewUsageName="model.AM.AppModuleAM.UserRolesMaster1"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="ContactsAddressVL1"
+    ViewLinkObjectName="model.UVO.ContactsAddressVL"
+    SrcViewUsageName="model.AM.AppModuleAM.AddressU2"
+    DstViewUsageName="model.AM.AppModuleAM.ContactsU1"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="CustomersContactsFk1VL1"
+    ViewLinkObjectName="model.UVO.CustomersContactsFk1VL"
+    SrcViewUsageName="model.AM.AppModuleAM.CustomersU1"
+    DstViewUsageName="model.AM.AppModuleAM.CustomersContactsU1"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="CustomersContactsFk2VL1"
+    ViewLinkObjectName="model.UVO.CustomersContactsFk2VL"
+    SrcViewUsageName="model.AM.AppModuleAM.ContactsU3"
+    DstViewUsageName="model.AM.AppModuleAM.CustomersContactsU2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="CustomersFk1VL1"
+    ViewLinkObjectName="model.UVO.CustomersFk1VL"
+    SrcViewUsageName="model.AM.AppModuleAM.ContactsU4"
+    DstViewUsageName="model.AM.AppModuleAM.CustomersU2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="CustomersFk2VL1"
+    ViewLinkObjectName="model.UVO.CustomersFk2VL"
+    SrcViewUsageName="model.AM.AppModuleAM.AddressU3"
+    DstViewUsageName="model.AM.AppModuleAM.CustomersU3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="CustomersFk3VL1"
+    ViewLinkObjectName="model.UVO.CustomersFk3VL"
+    SrcViewUsageName="model.AM.AppModuleAM.AddressU4"
+    DstViewUsageName="model.AM.AppModuleAM.CustomersU4"
     Reversed="false"/>
 </AppModule>
