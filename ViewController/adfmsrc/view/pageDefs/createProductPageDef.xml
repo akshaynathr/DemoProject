@@ -5,27 +5,30 @@
   <executables>
     <variableIterator id="variables"/>
     <iterator Binds="ProductsU1" RangeSize="25" DataControl="AppModuleAMDataControl1" id="ProductsU1Iterator"/>
+    <iterator Binds="ProductsU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="ProductsU1Iterator1"/>
   </executables>
   <bindings>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleAMDataControl"/>
-    <attributeValues IterBinding="ProductsU1Iterator" id="ProductName">
+    <action IterBinding="ProductsU1Iterator1" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"
+            InstanceName="AppModuleAMDataControl.ProductsU1" DataControl="AppModuleAMDataControl"/>
+    <action IterBinding="ProductsU1Iterator1" id="Create" RequiresUpdateModel="true" Action="createRow"
+            InstanceName="AppModuleAMDataControl.ProductsU1" DataControl="AppModuleAMDataControl"/>
+    <attributeValues IterBinding="ProductsU1Iterator1" id="ProductName">
       <AttrNames>
         <Item Value="ProductName"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="ProductsU1Iterator" id="ProductDescription">
+    <attributeValues IterBinding="ProductsU1Iterator1" id="ProductDescription">
       <AttrNames>
         <Item Value="ProductDescription"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="ProductsU1Iterator" id="CurrentPrice">
+    <attributeValues IterBinding="ProductsU1Iterator1" id="CurrentPrice">
       <AttrNames>
         <Item Value="CurrentPrice"/>
       </AttrNames>
     </attributeValues>
-    <list IterBinding="ProductsU1Iterator" StaticList="false" Uses="LOV_ProductCategoryId" id="ProductCategoryId"
+    <list IterBinding="ProductsU1Iterator1" StaticList="false" Uses="LOV_ProductCategoryId" id="ProductCategoryId"
           DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
-    <action IterBinding="ProductsU1Iterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
-    <action IterBinding="ProductsU1Iterator" id="Create" RequiresUpdateModel="true" Action="createRow"/>
   </bindings>
 </pageDefinition>

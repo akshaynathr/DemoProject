@@ -17,7 +17,7 @@
                       required="#{bindings.ProductDescription.hints.mandatory}"
                       columns="#{bindings.ProductDescription.hints.displayWidth}"
                       maximumLength="#{bindings.ProductDescription.hints.precision}"
-                      shortDesc="#{bindings.ProductDescription.hints.tooltip}" id="it2" rows="10" wrap="soft">
+                      shortDesc="#{bindings.ProductDescription.hints.tooltip}" id="it2">
           <f:validator binding="#{bindings.ProductDescription.validator}"/>
         </af:inputText>
         <af:inputText value="#{bindings.CurrentPrice.inputValue}" label="#{bindings.CurrentPrice.hints.label}"
@@ -35,7 +35,7 @@
           <f:validator binding="#{bindings.ProductCategoryId.validator}"/>
         </af:selectOneChoice>
         <f:facet name="footer">
-          <af:button text="Submit" id="b1" action="commit"/>
+          <af:button text="Submit" id="b1" actionListener="#{bindings.Commit.execute}" action="commit"/>
         </f:facet>
       </af:panelFormLayout>
     </af:form>

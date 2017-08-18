@@ -3,7 +3,7 @@
                 id="create_product_create_product_CreateInsertPageDef" Package="view.pageDefs" SkipValidation="true">
   <parameters/>
   <executables>
-    <iterator Binds="ProductsU1" RangeSize="25" DataControl="AppModuleAMDataControl1" id="ProductsU1Iterator"/>
+    <iterator Binds="ProductsU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="ProductsU1Iterator"/>
   </executables>
   <bindings>
     <action IterBinding="ProductsU1Iterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
