@@ -9,7 +9,7 @@
                     <af:train value="#{controllerContext.currentViewPort.taskFlowContext.trainModel}" id="t1"/>
                 </f:facet>
                 <f:facet name="bottom">
-                    <af:button text="Submit" id="b1" action="submit"/>
+                    <af:button text="Submit" id="b1" actionListener="#{bindings.Commit.execute}" action="submit"/>
                     <af:button text="Cancel" id="b2" action="cancel"/>
                 </f:facet>
                 <f:facet name="start">
@@ -75,32 +75,6 @@
                             <f:validator binding="#{bindings.TeamId.validator}"/>
                             <af:convertNumber groupingUsed="false" pattern="#{bindings.TeamId.format}"/>
                         </af:inputText>
-                    </af:panelFormLayout>
-                    <af:panelFormLayout id="pfl2">
-                        <af:inputText value="#{bindings.RoleId.inputValue}" label="#{bindings.RoleId.hints.label}"
-                                      required="#{bindings.RoleId.hints.mandatory}" readOnly="true"
-                                      columns="#{bindings.RoleId.hints.displayWidth}"
-                                      maximumLength="#{bindings.RoleId.hints.precision}"
-                                      shortDesc="#{bindings.RoleId.hints.tooltip}" id="it6">
-                            <f:validator binding="#{bindings.RoleId.validator}"/>
-                            <af:convertNumber groupingUsed="false" pattern="#{bindings.RoleId.format}"/>
-                        </af:inputText>
-                        <af:inputDate value="#{bindings.StartDate1.inputValue}" readOnly="true"
-                                      label="#{bindings.StartDate1.hints.label}"
-                                      required="#{bindings.StartDate1.hints.mandatory}"
-                                      columns="#{bindings.StartDate1.hints.displayWidth}"
-                                      shortDesc="#{bindings.StartDate1.hints.tooltip}" id="id3">
-                            <f:validator binding="#{bindings.StartDate1.validator}"/>
-                            <af:convertDateTime pattern="#{bindings.StartDate1.format}"/>
-                        </af:inputDate>
-                        <af:inputDate value="#{bindings.EndDate1.inputValue}" readOnly="true"
-                                      label="#{bindings.EndDate1.hints.label}"
-                                      required="#{bindings.EndDate1.hints.mandatory}"
-                                      columns="#{bindings.EndDate1.hints.displayWidth}"
-                                      shortDesc="#{bindings.EndDate1.hints.tooltip}" id="id4">
-                            <f:validator binding="#{bindings.EndDate1.validator}"/>
-                            <af:convertDateTime pattern="#{bindings.EndDate1.format}"/>
-                        </af:inputDate>
                     </af:panelFormLayout>
                 </f:facet>
                 <f:facet name="end"/>
