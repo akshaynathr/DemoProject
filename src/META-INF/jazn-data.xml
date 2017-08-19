@@ -185,6 +185,23 @@
                             </permission>
                         </permissions>
                     </grant>
+                    <grant>
+                        <grantee>
+                            <principals>
+                                <principal>
+                                    <class>oracle.security.jps.service.policystore.ApplicationRole</class>
+                                    <name>manager</name>
+                                </principal>
+                            </principals>
+                        </grantee>
+                        <permissions>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/customer-flow.xml#customer-flow</name>
+                                <actions>customize,view</actions>
+                            </permission>
+                        </permissions>
+                    </grant>
                 </jazn-policy>
             </application>
         </applications>

@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:document id="d1">
+    <af:form id="f1">
+      <af:panelStretchLayout id="psl1">
+        <f:facet name="center">
+          <af:panelGroupLayout id="pgl1" layout="vertical" inlineStyle="padding:2%;">
+            <af:link text="back" id="l1"/>
+            <af:panelTabbed position="start" id="pt1">
+              <af:showDetailItem id="tab1" text="Details" icon="/icons/OPPURTUNITY(1).png">
+                <af:panelFormLayout id="pfl1">
+                  <af:toolbar id="t1">
+                    <af:outputText value="Customer Details" id="ot1"
+                                   inlineStyle="font-weight:bold; color:Black; font-size:large;"/>
+                    <af:button text="Edit" id="b1"/>
+                    <af:button text="Save " id="b2"/>
+                    <af:button text="Save and Close" id="b3" action="return"/>
+                    <af:button text="Close" id="b4"/>
+                  </af:toolbar>
+                  <af:inputText value="#{bindings.CustomerName.inputValue}" label="#{bindings.CustomerName.hints.label}"
+                                required="#{bindings.CustomerName.hints.mandatory}" readOnly="true"
+                                columns="#{bindings.CustomerName.hints.displayWidth}"
+                                maximumLength="#{bindings.CustomerName.hints.precision}"
+                                shortDesc="#{bindings.CustomerName.hints.tooltip}" id="it1">
+                    <f:validator binding="#{bindings.CustomerName.validator}"/>
+                  </af:inputText>
+                  <af:inputText value="#{bindings.CustomerTypeId.inputValue}"
+                                label="#{bindings.CustomerTypeId.hints.label}"
+                                required="#{bindings.CustomerTypeId.hints.mandatory}" readOnly="true"
+                                columns="#{bindings.CustomerTypeId.hints.displayWidth}"
+                                maximumLength="#{bindings.CustomerTypeId.hints.precision}"
+                                shortDesc="#{bindings.CustomerTypeId.hints.tooltip}" id="it2">
+                    <f:validator binding="#{bindings.CustomerTypeId.validator}"/>
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.CustomerTypeId.format}"/>
+                  </af:inputText>
+                  <af:inputText value="#{bindings.PrimaryContactId.inputValue}"
+                                label="#{bindings.PrimaryContactId.hints.label}"
+                                required="#{bindings.PrimaryContactId.hints.mandatory}" readOnly="true"
+                                columns="#{bindings.PrimaryContactId.hints.displayWidth}"
+                                maximumLength="#{bindings.PrimaryContactId.hints.precision}"
+                                shortDesc="#{bindings.PrimaryContactId.hints.tooltip}" id="it3">
+                    <f:validator binding="#{bindings.PrimaryContactId.validator}"/>
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.PrimaryContactId.format}"/>
+                  </af:inputText>
+                  <af:inputText value="#{bindings.Url.inputValue}" label="#{bindings.Url.hints.label}"
+                                required="#{bindings.Url.hints.mandatory}" readOnly="true"
+                                columns="#{bindings.Url.hints.displayWidth}"
+                                maximumLength="#{bindings.Url.hints.precision}"
+                                shortDesc="#{bindings.Url.hints.tooltip}" id="it4">
+                    <f:validator binding="#{bindings.Url.validator}"/>
+                  </af:inputText>
+                  <af:inputText value="#{bindings.ParentCompany.inputValue}"
+                                label="#{bindings.ParentCompany.hints.label}"
+                                required="#{bindings.ParentCompany.hints.mandatory}" readOnly="true"
+                                columns="#{bindings.ParentCompany.hints.displayWidth}"
+                                maximumLength="#{bindings.ParentCompany.hints.precision}"
+                                shortDesc="#{bindings.ParentCompany.hints.tooltip}" id="it5">
+                    <f:validator binding="#{bindings.ParentCompany.validator}"/>
+                  </af:inputText>
+                  <af:inputText value="#{bindings.Ceo.inputValue}" label="#{bindings.Ceo.hints.label}"
+                                required="#{bindings.Ceo.hints.mandatory}" readOnly="true"
+                                columns="#{bindings.Ceo.hints.displayWidth}"
+                                maximumLength="#{bindings.Ceo.hints.precision}"
+                                shortDesc="#{bindings.Ceo.hints.tooltip}" id="it6">
+                    <f:validator binding="#{bindings.Ceo.validator}"/>
+                  </af:inputText>
+                  <af:inputText value="#{bindings.NoOfEmployees.inputValue}"
+                                label="#{bindings.NoOfEmployees.hints.label}"
+                                required="#{bindings.NoOfEmployees.hints.mandatory}" readOnly="true"
+                                columns="#{bindings.NoOfEmployees.hints.displayWidth}"
+                                maximumLength="#{bindings.NoOfEmployees.hints.precision}"
+                                shortDesc="#{bindings.NoOfEmployees.hints.tooltip}" id="it7">
+                    <f:validator binding="#{bindings.NoOfEmployees.validator}"/>
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.NoOfEmployees.format}"/>
+                  </af:inputText>
+                  <af:inputText value="#{bindings.Fax.inputValue}" label="#{bindings.Fax.hints.label}"
+                                required="#{bindings.Fax.hints.mandatory}" readOnly="true"
+                                columns="#{bindings.Fax.hints.displayWidth}"
+                                maximumLength="#{bindings.Fax.hints.precision}"
+                                shortDesc="#{bindings.Fax.hints.tooltip}" id="it8">
+                    <f:validator binding="#{bindings.Fax.validator}"/>
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.Fax.format}"/>
+                  </af:inputText>
+                  <af:inputText value="#{bindings.Email.inputValue}" label="#{bindings.Email.hints.label}"
+                                required="#{bindings.Email.hints.mandatory}" readOnly="true"
+                                columns="#{bindings.Email.hints.displayWidth}"
+                                maximumLength="#{bindings.Email.hints.precision}"
+                                shortDesc="#{bindings.Email.hints.tooltip}" id="it9">
+                    <f:validator binding="#{bindings.Email.validator}"/>
+                  </af:inputText>
+                  <af:inputText value="#{bindings.PrimaryAddressId.inputValue}"
+                                label="#{bindings.PrimaryAddressId.hints.label}"
+                                required="#{bindings.PrimaryAddressId.hints.mandatory}" readOnly="true"
+                                columns="#{bindings.PrimaryAddressId.hints.displayWidth}"
+                                maximumLength="#{bindings.PrimaryAddressId.hints.precision}"
+                                shortDesc="#{bindings.PrimaryAddressId.hints.tooltip}" id="it10">
+                    <f:validator binding="#{bindings.PrimaryAddressId.validator}"/>
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.PrimaryAddressId.format}"/>
+                  </af:inputText>
+                  <af:inputText value="#{bindings.ShippingAddressId.inputValue}"
+                                label="#{bindings.ShippingAddressId.hints.label}"
+                                required="#{bindings.ShippingAddressId.hints.mandatory}" readOnly="true"
+                                columns="#{bindings.ShippingAddressId.hints.displayWidth}"
+                                maximumLength="#{bindings.ShippingAddressId.hints.precision}"
+                                shortDesc="#{bindings.ShippingAddressId.hints.tooltip}" id="it11">
+                    <f:validator binding="#{bindings.ShippingAddressId.validator}"/>
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.ShippingAddressId.format}"/>
+                  </af:inputText>
+                </af:panelFormLayout>
+              </af:showDetailItem>
+              <af:showDetailItem id="tab2" text="Oppurtunities" icon="/icons/OPPURTUNITY.png">
+                <af:outputText value="Customer Oppurtunities" id="ot2"
+                               inlineStyle="font-weight:bold; color:Black; font-size:large;"/>
+              </af:showDetailItem>
+              <af:showDetailItem id="tab3" text="Contacts" icon="/icons/contacts-icon.png">
+                <af:outputText value="Customer Contacts" id="ot3"
+                               inlineStyle="font-weight:bold; color:Black; font-size:large;"/>
+              </af:showDetailItem>
+              <af:showDetailItem id="tab4" text="Appointments" icon="/icons/appointments.png">
+                <af:outputText value="Customer Appointments" id="ot4"
+                               inlineStyle="font-weight:bold; color:Black; font-size:large;"/>
+              </af:showDetailItem>
+              <af:showDetailItem id="sdi1" text="Tasks" icon="/icons/business_business-opportunities-128.png">
+                <af:outputText value="Tasks" id="ot5"
+                               inlineStyle="font-weight:bold; color:Black; font-size:large;"/>
+              </af:showDetailItem>
+            </af:panelTabbed>
+          </af:panelGroupLayout>
+        </f:facet>
+      </af:panelStretchLayout>
+    </af:form>
+  </af:document>
+</f:view>

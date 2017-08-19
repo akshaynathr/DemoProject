@@ -58,4 +58,43 @@
       <property
          name="sdm:polyPoints">L54,620.0,128.39648,387.0983,134.94238,R54</property>
    </ControlFlowCase>
+   <TaskFlowCall
+      id="TaskFlowCall6">
+      <property
+         name="runAsDialog">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>customer-flow&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">customer-flow</property>
+      <property
+         name="x">630.3418</property>
+      <property
+         name="y">256.1494</property>
+      <property
+         name="documentReference">/WEB-INF/customer-flow.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">customer-flow</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase7"
+      from="View3"
+      to="TaskFlowCall6">
+      <property
+         name="fromOutcome">customer</property>
+      <property
+         name="sdm:polyPoints">B50,661.0,178.89648,630.3418,201.79883,T50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase8"
+      from="TaskFlowCall6"
+      to="View3">
+      <property
+         name="fromOutcome">return_customer</property>
+      <property
+         name="sdm:polyPoints">T56,633.8418,201.79883,664.5,182.40485,B56</property>
+   </ControlFlowCase>
 </SDM>

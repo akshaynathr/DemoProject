@@ -29,6 +29,7 @@
           usageId="view_DeleteProductCategory_flow_DeleteProductCategory_flow_DeletePageDef"/>
     <page path="/editUser.jsf" usageId="view_editUserPageDef"/>
     <page path="/SalesInside.jsff" usageId="view_SalesInsidePageDef"/>
+    <page path="/Customers_tab.jsf" usageId="view_Customers_tabPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_HomePageDef" path="view.pageDefs.HomePageDef"/>
@@ -53,6 +54,7 @@
     <page id="view_DeleteProductCategory_flow_DeleteProductCategory_flow_DeletePageDef"
           path="view.pageDefs.DeleteProductCategory_flow_DeleteProductCategory_flow_DeletePageDef"/>
     <page id="view_SalesInsidePageDef" path="view.pageDefs.SalesInsidePageDef"/>
+    <page id="view_Customers_tabPageDef" path="view.pageDefs.Customers_tabPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleAMDataControl" Package="model.AM"
