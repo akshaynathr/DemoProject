@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ContactOpportunityEO"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="CONTACTS_OPPORTUNITIES"
+  AliasName="ContactOpportunityEO"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="ContactId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="CONTACT_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="CONTACTS_OPPORTUNITIES"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="OpportunityId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="OPPORTUNITY_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="CONTACTS_OPPORTUNITIES"
+    PrimaryKey="true"/>
+  <AccessorAttribute
+    Name="Opportunity"
+    Association="model.customer.EO.ContactsOpportunitiesFk2ASSOC"
+    AssociationEnd="model.customer.EO.ContactsOpportunitiesFk2ASSOC.Opportunity"
+    AssociationOtherEnd="model.customer.EO.ContactsOpportunitiesFk2ASSOC.ContactOpportunity"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="ContactsOpportunitiesPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="CONTACTS_OPPORTUNITIES_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.customer.EO.ContactOpportunityEO.ContactId"/>
+      <Item Value="model.customer.EO.ContactOpportunityEO.OpportunityId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="ContactsOpportunitiesFk1">
+    <DesignTime>
+      <Attr Name="_isCascadeDelete" Value="true"/>
+      <Attr Name="_referencedKey" Value="CONTACTS_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="CONTACTS_OPPORTUNITIES_FK1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.customer.EO.ContactOpportunityEO.ContactId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="ContactsOpportunitiesFk2">
+    <DesignTime>
+      <Attr Name="_isCascadeDelete" Value="true"/>
+      <Attr Name="_referencedKey" Value="OPPORTUNITIES_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="CONTACTS_OPPORTUNITIES_FK2"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.customer.EO.ContactOpportunityEO.OpportunityId"/>
+    </AttrArray>
+  </Key>
+</Entity>

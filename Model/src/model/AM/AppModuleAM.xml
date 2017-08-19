@@ -142,6 +142,42 @@
   <ViewUsage
     Name="BuyingroleLookup1"
     ViewObjectName="model.RVO.BuyingroleLookupVO"/>
+  <ViewUsage
+    Name="SalesStageLookup1"
+    ViewObjectName="model.customer.RVO.SalesStageLookupVO"/>
+  <ViewUsage
+    Name="SalesMethodLookup1"
+    ViewObjectName="model.customer.RVO.SalesMethodLookupVO"/>
+  <ViewUsage
+    Name="SalesChannelLookup1"
+    ViewObjectName="model.customer.RVO.SalesChannelLookupVO"/>
+  <ViewUsage
+    Name="OpportunitiesU1"
+    ViewObjectName="model.customer.UVO.OpportunitiesUVO"/>
+  <ViewUsage
+    Name="ContactsOpportunitiesU1"
+    ViewObjectName="model.customer.UVO.ContactsOpportunitiesUVO"/>
+  <ViewUsage
+    Name="ContactsOpportunitiesU2"
+    ViewObjectName="model.customer.UVO.ContactsOpportunitiesUVO"/>
+  <ViewUsage
+    Name="OpportunitiesU2"
+    ViewObjectName="model.customer.UVO.OpportunitiesUVO"/>
+  <ViewUsage
+    Name="OpportunityDocsU1"
+    ViewObjectName="model.customer.UVO.OpportunityDocsUVO"/>
+  <ViewUsage
+    Name="OpportunityDocsU2"
+    ViewObjectName="model.customer.UVO.OpportunityDocsUVO"/>
+  <ViewUsage
+    Name="OpportunitiesU3"
+    ViewObjectName="model.customer.UVO.OpportunitiesUVO"/>
+  <ViewUsage
+    Name="TasksU1"
+    ViewObjectName="model.customer.UVO.TasksUVO"/>
+  <ViewUsage
+    Name="TasksU2"
+    ViewObjectName="model.customer.UVO.TasksUVO"/>
   <ViewLinkUsage
     Name="UsersFk1VL1"
     ViewLinkObjectName="model.UVO.UsersFk1VL"
@@ -213,5 +249,23 @@
     ViewLinkObjectName="model.VL.RolesLookupVL"
     SrcViewUsageName="model.AM.AppModuleAM.RolesU3"
     DstViewUsageName="model.AM.AppModuleAM.LookupsU2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="ContactsOpportunitiesFk2VL1"
+    ViewLinkObjectName="model.customer.UVO.ContactsOpportunitiesFk2VL"
+    SrcViewUsageName="model.AM.AppModuleAM.OpportunitiesU1"
+    DstViewUsageName="model.AM.AppModuleAM.ContactsOpportunitiesU1"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="OpportunityDocsLinkVL1"
+    ViewLinkObjectName="model.customer.UVO.OpportunityDocsLinkVL"
+    SrcViewUsageName="model.AM.AppModuleAM.OpportunitiesU2"
+    DstViewUsageName="model.AM.AppModuleAM.OpportunityDocsU1"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="TasksOppurtunityVL1"
+    ViewLinkObjectName="model.customer.UVO.TasksOppurtunityVL"
+    SrcViewUsageName="model.AM.AppModuleAM.OpportunitiesU3"
+    DstViewUsageName="model.AM.AppModuleAM.TasksU1"
     Reversed="false"/>
 </AppModule>

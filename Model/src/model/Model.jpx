@@ -14,6 +14,7 @@
     <Attr Name="_NamedConnection" Value="temp"/>
     <Attr Name="_appModuleNames0" Value="model.AM.AppModuleAM"/>
     <Attr Name="_appModuleNames1" Value="model.EO.AppModuleAM"/>
+    <Attr Name="_appModuleNames2" Value="model.customer.EO.AppModuleAM"/>
   </DesignTime>
   <Containee
     Name="AM"
@@ -29,6 +30,34 @@
     ObjectType="JboPackage">
     <DesignTime>
       <Attr Name="_AS" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="EO"
+    PackageName="model.customer.EO"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_EO" Value="true"/>
+      <Attr Name="_AS" Value="true"/>
+      <Attr Name="_AM" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="RVO"
+    PackageName="model.customer.RVO"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_VO" Value="true"/>
+      <Attr Name="_VL" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="UVO"
+    PackageName="model.customer.UVO"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_VO" Value="true"/>
+      <Attr Name="_VL" Value="true"/>
     </DesignTime>
   </Containee>
   <Containee
