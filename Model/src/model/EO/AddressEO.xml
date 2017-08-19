@@ -137,11 +137,29 @@
     AssociationOtherEnd="model.EO.CustomersFk2ASSOC.Address1"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Customer2"
+    Association="model.ASSOC.CustomerAddressPrimaryASSOC"
+    AssociationEnd="model.ASSOC.CustomerAddressPrimaryASSOC.Customer2"
+    AssociationOtherEnd="model.ASSOC.CustomerAddressPrimaryASSOC.Address2"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
   <Key
     Name="AddressPk"
     PrimaryKey="true">
     <DesignTime>
       <Attr Name="_DBObjectName" Value="ADDRESS_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.AddressEO.AddressId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="fk_AddressEO">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="UK_CUSTOMER_EO"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_ADDRESS_EO"/>
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.EO.AddressEO.AddressId"/>

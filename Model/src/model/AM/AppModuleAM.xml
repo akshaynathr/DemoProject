@@ -59,9 +59,6 @@
     Name="RoleCount1"
     ViewObjectName="model.RVO.RoleCountVO"/>
   <ViewUsage
-    Name="UsersRolesU4"
-    ViewObjectName="model.UVO.UsersRolesUVO"/>
-  <ViewUsage
     Name="LookupsU1"
     ViewObjectName="model.UVO.LookupsUVO"/>
   <ViewUsage
@@ -130,6 +127,21 @@
   <ViewUsage
     Name="ViewObj1"
     ViewObjectName="model.UVO.ViewObjVO"/>
+  <ViewUsage
+    Name="CustomerContactAddressMaster1"
+    ViewObjectName="model.UVO.master.CustomerContactAddressMasterVO"/>
+  <ViewUsage
+    Name="RolesLookupMaster1"
+    ViewObjectName="model.UVO.master.RolesLookupMasterVO"/>
+  <ViewUsage
+    Name="RolesU3"
+    ViewObjectName="model.UVO.RolesUVO"/>
+  <ViewUsage
+    Name="LookupsU2"
+    ViewObjectName="model.UVO.LookupsUVO"/>
+  <ViewUsage
+    Name="BuyingroleLookup1"
+    ViewObjectName="model.RVO.BuyingroleLookupVO"/>
   <ViewLinkUsage
     Name="UsersFk1VL1"
     ViewLinkObjectName="model.UVO.UsersFk1VL"
@@ -153,12 +165,6 @@
     ViewLinkObjectName="model.VL.UserRolesVL"
     SrcViewUsageName="model.AM.AppModuleAM.UsersU2"
     DstViewUsageName="model.AM.AppModuleAM.UsersRolesU2"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="RoleFKUserRoleVL2"
-    ViewLinkObjectName="model.VL.RoleFKUserRoleVL"
-    SrcViewUsageName="model.AM.AppModuleAM.RolesU1"
-    DstViewUsageName="model.AM.AppModuleAM.UsersRolesU4"
     Reversed="false"/>
   <ViewLinkUsage
     Name="UsersRolesMasterVL1"
@@ -201,5 +207,11 @@
     ViewLinkObjectName="model.UVO.CustomersFk3VL"
     SrcViewUsageName="model.AM.AppModuleAM.AddressU4"
     DstViewUsageName="model.AM.AppModuleAM.CustomersU4"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="RolesLookupVL1"
+    ViewLinkObjectName="model.VL.RolesLookupVL"
+    SrcViewUsageName="model.AM.AppModuleAM.RolesU3"
+    DstViewUsageName="model.AM.AppModuleAM.LookupsU2"
     Reversed="false"/>
 </AppModule>

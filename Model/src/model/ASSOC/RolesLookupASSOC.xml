@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="RolesLookupASSOC"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="Role"
+    Cardinality="1"
+    Source="true"
+    Owner="model.EO.RoleEO"
+    LockLevel="NONE">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="Role"/>
+      <Attr Name="_foreignKey" Value="model.EO.RoleEO.uk_RoleEO"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.RoleEO.RoleNameId"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="Lookup"
+    Cardinality="-1"
+    Owner="model.EO.LookupEO"
+    HasOwner="true">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="Lookup"/>
+      <Attr Name="_foreignKey" Value="model.EO.LookupEO.fk_LookupEO"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.LookupEO.LookupId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

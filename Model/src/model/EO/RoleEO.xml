@@ -152,6 +152,13 @@
     AssociationOtherEnd="model.ASSOC.RoleFKUserRoleAssoc.Role2"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Lookup"
+    Association="model.ASSOC.RolesLookupASSOC"
+    AssociationEnd="model.ASSOC.RolesLookupASSOC.Lookup"
+    AssociationOtherEnd="model.ASSOC.RolesLookupASSOC.Role"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="RolesPk"
     PrimaryKey="true">
@@ -160,6 +167,17 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.EO.RoleEO.RoleId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="uk_RoleEO">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="UK_ROLE_EO"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.RoleEO.RoleNameId"/>
     </AttrArray>
   </Key>
 </Entity>

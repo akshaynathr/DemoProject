@@ -13,15 +13,18 @@
   xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <Attribute
     Name="CustomerId"
-    IsNotNull="true"
     Precision="10"
     Scale="0"
     ColumnName="CUSTOMER_ID"
     SQLType="NUMERIC"
-    Type="java.lang.Long"
+    Type="oracle.jbo.domain.DBSequence"
     ColumnType="NUMBER"
     TableName="CUSTOMERS"
-    PrimaryKey="true"/>
+    PrimaryKey="true"
+    IsUpdateable="false"
+    DefaultValue="@0"
+    Domain="oracle.jbo.domain.DBSequence"
+    RetrievedOnInsert="true"/>
   <Attribute
     Name="CustomerName"
     Precision="50"
@@ -232,6 +235,20 @@
     AssociationOtherEnd="model.EO.CustomersFk2ASSOC.Customer1"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Address2"
+    Association="model.ASSOC.CustomerAddressPrimaryASSOC"
+    AssociationEnd="model.ASSOC.CustomerAddressPrimaryASSOC.Address2"
+    AssociationOtherEnd="model.ASSOC.CustomerAddressPrimaryASSOC.Customer2"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Contact1"
+    Association="model.ASSOC.CustomerContactPrimaryASSOC"
+    AssociationEnd="model.ASSOC.CustomerContactPrimaryASSOC.Contact1"
+    AssociationOtherEnd="model.ASSOC.CustomerContactPrimaryASSOC.Customer1"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
   <Key
     Name="CustomersPk"
     PrimaryKey="true">
@@ -240,6 +257,28 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.EO.CustomerEO.CustomerId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="uk_CustomerEO">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="UK_CUSTOMER_EO"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.CustomerEO.PrimaryAddressId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="uk_CustomerEO1">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="UK_CUSTOMER_EO1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.CustomerEO.PrimaryContactId"/>
     </AttrArray>
   </Key>
   <Key

@@ -236,6 +236,13 @@
     AssociationOtherEnd="model.EO.ContactsAddressASSOC.Contact"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Customer1"
+    Association="model.ASSOC.CustomerContactPrimaryASSOC"
+    AssociationEnd="model.ASSOC.CustomerContactPrimaryASSOC.Customer1"
+    AssociationOtherEnd="model.ASSOC.CustomerContactPrimaryASSOC.Contact1"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
   <Key
     Name="ContactsPk"
     PrimaryKey="true">
@@ -255,6 +262,17 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.EO.ContactEO.AddressId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="fk_ContactEO">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="UK_CUSTOMER_EO1"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_CONTACT_EO"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.ContactEO.ContactId"/>
     </AttrArray>
   </Key>
   <ResourceBundle>

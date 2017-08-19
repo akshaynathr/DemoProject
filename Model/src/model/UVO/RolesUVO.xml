@@ -127,4 +127,9 @@
     ViewLink="model.VL.RoleFKUserRoleVL"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="LookupsU"
+    ViewLink="model.VL.RolesLookupVL"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
 </ViewObject>

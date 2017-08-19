@@ -51,6 +51,14 @@
     </DesignTime>
   </Containee>
   <Containee
+    Name="master"
+    PackageName="model.UVO.master"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_VO" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
     Name="UVO"
     PackageName="model.UVO"
     ObjectType="JboPackage">

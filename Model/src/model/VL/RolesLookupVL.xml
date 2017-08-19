@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="RolesLookupVL"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge">
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="RolesLookupVL_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewLinkDefEnd
+    Name="RolesU"
+    Cardinality="1"
+    Source="true"
+    Owner="model.UVO.RolesUVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="RolesU"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.UVO.RolesUVO.RoleNameId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="LookupsU"
+    Cardinality="1"
+    Owner="model.UVO.LookupsUVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="LookupsU"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.UVO.LookupsUVO.LookupId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.VL.common.RolesLookupVLMsgBundle"/>
+  </ResourceBundle>
+</ViewLink>

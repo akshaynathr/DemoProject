@@ -60,11 +60,29 @@
       <Attr Name="_DisplaySize" Value="1024"/>
     </DesignTime>
   </Attribute>
+  <AccessorAttribute
+    Name="Role"
+    Association="model.ASSOC.RolesLookupASSOC"
+    AssociationEnd="model.ASSOC.RolesLookupASSOC.Role"
+    AssociationOtherEnd="model.ASSOC.RolesLookupASSOC.Lookup"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
   <Key
     Name="LookupsPk"
     PrimaryKey="true">
     <DesignTime>
       <Attr Name="_DBObjectName" Value="LOOKUPS_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.LookupEO.LookupId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="fk_LookupEO">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="UK_ROLE_EO"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_LOOKUP_EO"/>
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.EO.LookupEO.LookupId"/>
