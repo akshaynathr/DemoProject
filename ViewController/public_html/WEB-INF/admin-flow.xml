@@ -92,6 +92,17 @@
         </display-type>
       </run-as-dialog>
     </task-flow-call>
+    <task-flow-call id="createRole-flow">
+      <task-flow-reference>
+        <document>/WEB-INF/createRole-flow.xml</document>
+        <id>createRole-flow</id>
+      </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
+    </task-flow-call>
     <control-flow-rule id="__1">
       <from-activity-id>admin_dashboard</from-activity-id>
       <control-flow-case id="__2">
@@ -128,6 +139,10 @@
       <control-flow-case id="__18">
         <from-outcome>back_admin_dashboard</from-outcome>
         <to-activity-id>admin_dashboard</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__19">
+        <from-outcome>createRoll</from-outcome>
+        <to-activity-id>createRole-flow</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__5">

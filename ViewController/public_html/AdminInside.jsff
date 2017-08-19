@@ -185,53 +185,62 @@
         <af:showDetailItem text="Roles" id="sdi2" disclosed="#{(pageFlowScope.tabVal ==3)?true:false}"
                            icon="icons/role.png">
           <af:panelGroupLayout id="pgl6" layout="vertical">
-            <af:table value="#{bindings.UsersU4.collectionModel}" var="row" rows="#{bindings.UsersU4.rangeSize}"
-                      emptyText="#{bindings.UsersU4.viewable ? 'No data to display.' : 'Access Denied.'}"
-                      rowBandingInterval="0" selectedRowKeys="#{bindings.UsersU4.collectionModel.selectedRow}"
-                      selectionListener="#{bindings.UsersU4.collectionModel.makeCurrent}" rowSelection="single"
-                      fetchSize="#{bindings.UsersU4.rangeSize}" id="t3">
-              <af:column headerText="#{bindings.UsersU4.hints.GlobalUsername.label}" id="c15">
-                <af:outputText value="#{row.GlobalUsername}"
-                               shortDesc="#{bindings.UsersU4.hints.GlobalUsername.tooltip}" id="ot11"/>
-              </af:column>
-              <af:column headerText="#{bindings.UsersU4.hints.FirstName.label}" id="c16">
-                <af:outputText value="#{row.FirstName}" shortDesc="#{bindings.UsersU4.hints.FirstName.tooltip}"
-                               id="ot12"/>
-              </af:column>
-              <af:column headerText="#{bindings.UsersU4.hints.MiddleName.label}" id="c17">
-                <af:outputText value="#{row.MiddleName}" shortDesc="#{bindings.UsersU4.hints.MiddleName.tooltip}"
-                               id="ot13"/>
-              </af:column>
-              <af:column headerText="#{bindings.UsersU4.hints.LastName.label}" id="c18">
-                <af:outputText value="#{row.LastName}" shortDesc="#{bindings.UsersU4.hints.LastName.tooltip}"
-                               id="ot15"/>
-              </af:column>
-              <af:column headerText="#{bindings.UsersU4.hints.TeamId.label}" id="c21">
-                <af:outputText value="#{row.TeamId}" shortDesc="#{bindings.UsersU4.hints.TeamId.tooltip}" id="ot16">
-                  <af:convertNumber groupingUsed="false" pattern="#{bindings.UsersU4.hints.TeamId.format}"/>
-                </af:outputText>
-              </af:column>
-            </af:table>
-            <af:table value="#{bindings.UserRolesMaster1.collectionModel}" var="row"
-                      rows="#{bindings.UserRolesMaster1.rangeSize}"
-                      emptyText="#{bindings.UserRolesMaster1.viewable ? 'No data to display.' : 'Access Denied.'}"
-                      rowBandingInterval="0" fetchSize="#{bindings.UserRolesMaster1.rangeSize}" id="t5">
-              <af:column headerText="#{bindings.UserRolesMaster1.hints.RoleId.label}" id="c22">
-                <af:selectOneChoice value="#{row.bindings.RoleId.inputValue}" label="#{row.bindings.RoleId.label}"
-                                    required="#{bindings.UserRolesMaster1.hints.RoleId.mandatory}"
-                                    shortDesc="#{bindings.UserRolesMaster1.hints.RoleId.tooltip}" readOnly="true"
-                                    id="soc3">
-                  <f:selectItems value="#{row.bindings.RoleId.items}" id="si3"/>
-                  <f:validator binding="#{row.bindings.RoleId.validator}"/>
-                </af:selectOneChoice>
-              </af:column>
-              <af:column headerText="#{bindings.UserRolesMaster1.hints.AreAssociated.label}" id="c23">
-                <af:selectBooleanCheckbox value="#{row.bindings.AreAssociated.inputValue}"
-                                          label="#{row.bindings.AreAssociated.label}"
-                                          shortDesc="#{bindings.UserRolesMaster1.hints.AreAssociated.tooltip}" id="sbc1"
-                                          autoSubmit="true"/>
-              </af:column>
-            </af:table>
+            <af:panelBorderLayout id="pbl1">
+              <f:facet name="top">
+                <af:button text="Create Role" id="b7" action="createRoll" useWindow="true"
+                           windowEmbedStyle="window"/>
+              </f:facet>
+              <f:facet name="bottom"/>
+              <f:facet name="start"/>
+              <f:facet name="end"/>
+              <af:table value="#{bindings.UsersU4.collectionModel}" var="row" rows="#{bindings.UsersU4.rangeSize}"
+                        emptyText="#{bindings.UsersU4.viewable ? 'No data to display.' : 'Access Denied.'}"
+                        rowBandingInterval="0" selectedRowKeys="#{bindings.UsersU4.collectionModel.selectedRow}"
+                        selectionListener="#{bindings.UsersU4.collectionModel.makeCurrent}" rowSelection="single"
+                        fetchSize="#{bindings.UsersU4.rangeSize}" id="t3">
+                <af:column headerText="#{bindings.UsersU4.hints.GlobalUsername.label}" id="c15">
+                  <af:outputText value="#{row.GlobalUsername}"
+                                 shortDesc="#{bindings.UsersU4.hints.GlobalUsername.tooltip}" id="ot11"/>
+                </af:column>
+                <af:column headerText="#{bindings.UsersU4.hints.FirstName.label}" id="c16">
+                  <af:outputText value="#{row.FirstName}" shortDesc="#{bindings.UsersU4.hints.FirstName.tooltip}"
+                                 id="ot12"/>
+                </af:column>
+                <af:column headerText="#{bindings.UsersU4.hints.MiddleName.label}" id="c17">
+                  <af:outputText value="#{row.MiddleName}" shortDesc="#{bindings.UsersU4.hints.MiddleName.tooltip}"
+                                 id="ot13"/>
+                </af:column>
+                <af:column headerText="#{bindings.UsersU4.hints.LastName.label}" id="c18">
+                  <af:outputText value="#{row.LastName}" shortDesc="#{bindings.UsersU4.hints.LastName.tooltip}"
+                                 id="ot15"/>
+                </af:column>
+                <af:column headerText="#{bindings.UsersU4.hints.TeamId.label}" id="c21">
+                  <af:outputText value="#{row.TeamId}" shortDesc="#{bindings.UsersU4.hints.TeamId.tooltip}" id="ot16">
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.UsersU4.hints.TeamId.format}"/>
+                  </af:outputText>
+                </af:column>
+              </af:table>
+              <af:table value="#{bindings.UserRolesMaster1.collectionModel}" var="row"
+                        rows="#{bindings.UserRolesMaster1.rangeSize}"
+                        emptyText="#{bindings.UserRolesMaster1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                        rowBandingInterval="0" fetchSize="#{bindings.UserRolesMaster1.rangeSize}" id="t5">
+                <af:column headerText="#{bindings.UserRolesMaster1.hints.RoleId.label}" id="c22">
+                  <af:selectOneChoice value="#{row.bindings.RoleId.inputValue}" label="#{row.bindings.RoleId.label}"
+                                      required="#{bindings.UserRolesMaster1.hints.RoleId.mandatory}"
+                                      shortDesc="#{bindings.UserRolesMaster1.hints.RoleId.tooltip}" readOnly="true"
+                                      id="soc3">
+                    <f:selectItems value="#{row.bindings.RoleId.items}" id="si3"/>
+                    <f:validator binding="#{row.bindings.RoleId.validator}"/>
+                  </af:selectOneChoice>
+                </af:column>
+                <af:column headerText="#{bindings.UserRolesMaster1.hints.AreAssociated.label}" id="c23">
+                  <af:selectBooleanCheckbox value="#{row.bindings.AreAssociated.inputValue}"
+                                            label="#{row.bindings.AreAssociated.label}"
+                                            shortDesc="#{bindings.UserRolesMaster1.hints.AreAssociated.tooltip}"
+                                            id="sbc1" autoSubmit="true"/>
+                </af:column>
+              </af:table>
+            </af:panelBorderLayout>
           </af:panelGroupLayout>
         </af:showDetailItem>
       </af:panelTabbed>

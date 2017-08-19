@@ -19,6 +19,28 @@
         ResId="RolesLookupMasterVO_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
+  <ViewAccessor
+    Name="RoleNameLookupVO1"
+    ViewObjectName="model.RVO.RoleNameLookupVO"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_RoleNameId"
+    ListVOName="RoleNameLookupVO1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="RoleNameId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="RoleId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="PossibleValue"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="RoleEO"
     Entity="model.EO.RoleEO"/>
@@ -64,7 +86,14 @@
     PrecisionRule="true"
     EntityAttrName="EndDate"
     EntityUsage="RoleEO"
-    AliasName="END_DATE"/>
+    AliasName="END_DATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="EndDate_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="IsActive"
     PrecisionRule="true"
@@ -97,13 +126,30 @@
     PrecisionRule="true"
     EntityAttrName="RoleNameId"
     EntityUsage="RoleEO"
-    AliasName="ROLE_NAME_ID"/>
+    AliasName="ROLE_NAME_ID"
+    LOVName="LOV_RoleNameId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+        <LABEL
+          ResId="RoleNameId_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="StartDate"
     PrecisionRule="true"
     EntityAttrName="StartDate"
     EntityUsage="RoleEO"
-    AliasName="START_DATE"/>
+    AliasName="START_DATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="StartDate_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="VersionNo"
     PrecisionRule="true"
@@ -115,13 +161,21 @@
     PrecisionRule="true"
     EntityAttrName="Description"
     EntityUsage="LookupEO"
-    AliasName="DESCRIPTION1"/>
+    AliasName="DESCRIPTION1">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="Description1_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="LookupCategory"
     PrecisionRule="true"
     EntityAttrName="LookupCategory"
     EntityUsage="LookupEO"
-    AliasName="LOOKUP_CATEGORY"/>
+    AliasName="LOOKUP_CATEGORY"
+    DefaultValue="ROLE_NAME"/>
   <ViewAttribute
     Name="LookupId"
     IsUpdateable="while_insert"
@@ -134,7 +188,14 @@
     PrecisionRule="true"
     EntityAttrName="PossibleValue"
     EntityUsage="LookupEO"
-    AliasName="POSSIBLE_VALUE"/>
+    AliasName="POSSIBLE_VALUE">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="PossibleValue_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.UVO.master.common.RolesLookupMasterVOMsgBundle"/>

@@ -29,6 +29,9 @@
           usageId="view_DeleteProductCategory_flow_DeleteProductCategory_flow_DeletePageDef"/>
     <page path="/editUser.jsf" usageId="view_editUserPageDef"/>
     <page path="/SalesInside.jsff" usageId="view_SalesInsidePageDef"/>
+    <page path="/WEB-INF/createRole-flow.xml#createRole-flow@CreateInsert"
+          usageId="view_createRole_flow_createRole_flow_CreateInsertPageDef"/>
+    <page path="/createRole.jsf" usageId="view_createRolePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_HomePageDef" path="view.pageDefs.HomePageDef"/>
@@ -53,6 +56,9 @@
     <page id="view_DeleteProductCategory_flow_DeleteProductCategory_flow_DeletePageDef"
           path="view.pageDefs.DeleteProductCategory_flow_DeleteProductCategory_flow_DeletePageDef"/>
     <page id="view_SalesInsidePageDef" path="view.pageDefs.SalesInsidePageDef"/>
+    <page id="view_createRole_flow_createRole_flow_CreateInsertPageDef"
+          path="view.pageDefs.createRole_flow_createRole_flow_CreateInsertPageDef"/>
+    <page id="view_createRolePageDef" path="view.pageDefs.createRolePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleAMDataControl" Package="model.AM"

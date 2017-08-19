@@ -148,9 +148,9 @@
       <property
          name="activityId">create_product</property>
       <property
-         name="x">486.0254</property>
+         name="x">645.0254</property>
       <property
-         name="y">272.1494</property>
+         name="y">319.44824</property>
       <property
          name="documentReference">/WEB-INF/create_product.xml</property>
       <property
@@ -166,7 +166,7 @@
       <property
          name="fromOutcome">createProduct</property>
       <property
-         name="sdm:polyPoints">B44,504.5,144.94824,482.5254,216.75897,T44</property>
+         name="sdm:polyPoints">B50,508.0,148.0662,641.5254,265.09766,T44</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -176,7 +176,7 @@
       <property
          name="fromOutcome">commit</property>
       <property
-         name="sdm:polyPoints">T56,489.5254,217.79883,511.5,145.981,B56</property>
+         name="sdm:polyPoints">T56,648.5254,262.66583,515.0,144.94824,B61</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -262,7 +262,7 @@
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase27"
+      id="ControlFlowCase29"
       from="View3">
       <property
          name="tosrcid">__6</property>
@@ -270,5 +270,34 @@
          name="fromOutcome">UserTrain2</property>
       <property
          name="fromsrcid">__5</property>
+   </ControlFlowCase>
+   <TaskFlowCall
+      id="TaskFlowCall27">
+      <property
+         name="runAsDialog">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>createRole-flow&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">createRole-flow</property>
+      <property
+         name="x">349.6836</property>
+      <property
+         name="y">313.1494</property>
+      <property
+         name="documentReference">/WEB-INF/createRole-flow.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">createRole-flow</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase28"
+      from="View3"
+      to="TaskFlowCall27">
+      <property
+         name="fromOutcome">createRoll</property>
+      <property
+         name="sdm:polyPoints">B39,501.0,144.94824,349.6836,258.79883,T50</property>
    </ControlFlowCase>
 </SDM>
