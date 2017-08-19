@@ -37,6 +37,8 @@ public class ProductCountVORowImpl extends ViewRowImpl {
             return vals;
         }
     }
+
+
     public static final int SELECTOBJECTS0 = AttributesEnum.Selectobjects0.index();
 
     /**

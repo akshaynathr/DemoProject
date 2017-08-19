@@ -62,25 +62,53 @@
     PrecisionRule="true"
     EntityAttrName="GlobalUsername"
     EntityUsage="UserEO"
-    AliasName="GLOBAL_USERNAME"/>
+    AliasName="GLOBAL_USERNAME">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="GlobalUsername_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="FirstName"
     PrecisionRule="true"
     EntityAttrName="FirstName"
     EntityUsage="UserEO"
-    AliasName="FIRST_NAME"/>
+    AliasName="FIRST_NAME">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="FirstName_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="MiddleName"
     PrecisionRule="true"
     EntityAttrName="MiddleName"
     EntityUsage="UserEO"
-    AliasName="MIDDLE_NAME"/>
+    AliasName="MIDDLE_NAME">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="MiddleName_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="LastName"
     PrecisionRule="true"
     EntityAttrName="LastName"
     EntityUsage="UserEO"
-    AliasName="LAST_NAME"/>
+    AliasName="LAST_NAME">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="LastName_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Password"
     PrecisionRule="true"
@@ -107,13 +135,27 @@
     PrecisionRule="true"
     EntityAttrName="StartDate"
     EntityUsage="UserEO"
-    AliasName="START_DATE"/>
+    AliasName="START_DATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="StartDate_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="EndDate"
     PrecisionRule="true"
     EntityAttrName="EndDate"
     EntityUsage="UserEO"
-    AliasName="END_DATE"/>
+    AliasName="END_DATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="EndDate_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="TeamId"
     PrecisionRule="true"
@@ -220,4 +262,8 @@
     ViewLink="model.VL.UsersRolesMasterVL"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.UVO.common.UsersUVOMsgBundle"/>
+  </ResourceBundle>
 </ViewObject>

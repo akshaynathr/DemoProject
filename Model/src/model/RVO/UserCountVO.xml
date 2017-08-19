@@ -22,10 +22,11 @@
         ResId="model.RVO.UserCountVO_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
-  <SQLQuery><![CDATA[SELECT  
-    COUNT(*)  
-FROM  
-    USERS]]></SQLQuery>
+  <SQLQuery><![CDATA[SELECT   
+    COUNT(*)   
+FROM   
+    USERS 
+    where IS_ACTIVE<>'n']]></SQLQuery>
   <ViewAttribute
     Name="Selectobjects0"
     IsUpdateable="false"
