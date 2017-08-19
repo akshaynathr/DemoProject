@@ -4,7 +4,7 @@
     <af:messages id="m1"/>
     <af:form id="f1">
       <af:activeOutputText value="Create Product" id="aot1" inlineStyle="font-size:large; font-weight:bolder;"/>
-      <af:panelFormLayout id="pfl1">
+      <af:panelFormLayout id="pfl1" rendered="false">
         <af:inputText value="#{bindings.ProductName.inputValue}" label="#{bindings.ProductName.hints.label}"
                       required="#{bindings.ProductName.hints.mandatory}"
                       columns="#{bindings.ProductName.hints.displayWidth}"

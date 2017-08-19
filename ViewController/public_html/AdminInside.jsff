@@ -113,6 +113,20 @@
               <af:panelGroupLayout layout="vertical" id="pgl2">
                 <af:panelHeader text="Product" id="ph2">
                   <af:panelGroupLayout id="pgl4" layout="horizontal">
+                    <af:button text="Create Product" id="b2" useWindow="true" windowHeight="500" action="createProduct"
+                               windowWidth="600"/>
+                    <af:button text="Create Category" id="b6" action="create_product_category"
+                               windowModalityType="applicationModal" windowEmbedStyle="inlineDocument"
+                               useWindow="true"/>
+                    <af:button text="Delete Product"
+                               disabled="#{!bindings.Delete1.enabled}" id="b4"
+                               action="#{safeDeleteBean.commit_Delete_Product}"/>
+                  </af:panelGroupLayout>
+                  <af:spacer width="10" height="10" id="s1"/>
+                </af:panelHeader>
+                <af:panelGroupLayout layout="vertical" id="pgl5"/>
+                <af:panelGroupLayout layout="vertical" id="pgl7">
+                  <af:panelHeader text="ProductEO" id="ph1">
                     <af:quickQuery label="Search" searchDesc="Search" id="qryId2"
                                    value="#{bindings.ImplicitViewCriteriaQuery1.quickQueryDescriptor}"
                                    model="#{bindings.ImplicitViewCriteriaQuery1.queryModel}"
@@ -121,61 +135,49 @@
                         <af:commandLink text="Advanced" rendered="false" id="cl2"/>
                       </f:facet>
                     </af:quickQuery>
-                    <af:button text="Create Product" id="b2" useWindow="true" windowHeight="500" action="createProduct"
-                               windowWidth="600"/>
-                    <af:button actionListener="#{bindings.Delete1.execute}" text="Delete"
-                               disabled="#{!bindings.Delete1.enabled}" id="b4"
-                               action="#{safeDeleteBean.commit_Delete_Product}"/>
-                  </af:panelGroupLayout>
-                  <af:spacer width="10" height="10" id="s1"/>
-                </af:panelHeader>
-                <af:table value="#{bindings.ProductsU1.collectionModel}" var="row"
-                          rows="#{bindings.ProductsU1.rangeSize}"
-                          emptyText="#{bindings.ProductsU1.viewable ? 'No data to display.' : 'Access Denied.'}"
-                          rowBandingInterval="0" selectedRowKeys="#{bindings.ProductsU1.collectionModel.selectedRow}"
-                          selectionListener="#{bindings.ProductsU1.collectionModel.makeCurrent}" rowSelection="single"
-                          fetchSize="#{bindings.ProductsU1.rangeSize}"
-                          filterModel="#{bindings.ImplicitViewCriteriaQuery1.queryDescriptor}" filterVisible="true"
-                          queryListener="#{bindings.ImplicitViewCriteriaQuery1.processQuery}" varStatus="vs"
-                          partialTriggers="::qryId2 ::b4" id="t2" scrollPolicy="auto" autoHeightRows="20"
-                          contentDelivery="immediate" styleClass="AFStretchWidth" columnStretching="column:c11">
-                  <af:column sortProperty="#{bindings.ProductsU1.hints.ProductName.name}" filterable="true"
-                             sortable="true" headerText="#{bindings.ProductsU1.hints.ProductName.label}" id="c10">
-                    <af:link text="#{row.ProductName}" id="l2" action="editProduct" useWindow="true"
-                             windowModalityType="applicationModal" windowWidth="600"/>
-                  </af:column>
-                  <af:column sortProperty="#{bindings.ProductsU1.hints.ProductDescription.name}" filterable="true"
-                             sortable="true" headerText="#{bindings.ProductsU1.hints.ProductDescription.label}" id="c11"
-                             styleClass="AFStretchWidth">
-                    <af:outputText value="#{row.ProductDescription}"
-                                   shortDesc="#{bindings.ProductsU1.hints.ProductDescription.tooltip}" id="ot9"/>
-                  </af:column>
-                  <af:column sortProperty="#{bindings.ProductsU1.hints.CurrentPrice.name}" filterable="true"
-                             sortable="true" headerText="#{bindings.ProductsU1.hints.CurrentPrice.label}" id="c12">
-                    <af:outputText value="#{row.CurrentPrice}"
-                                   shortDesc="#{bindings.ProductsU1.hints.CurrentPrice.tooltip}" id="ot10">
-                      <af:convertNumber groupingUsed="false"
-                                        pattern="#{bindings.ProductsU1.hints.CurrentPrice.format}"/>
-                    </af:outputText>
-                  </af:column>
-                  <af:column sortProperty="#{bindings.ProductsU1.hints.ProductCategoryId.name}" filterable="true"
-                             sortable="true" headerText="#{bindings.ProductsU1.hints.ProductCategoryId.label}" id="c13">
-                    <af:selectOneChoice value="#{row.bindings.ProductCategoryId.inputValue}"
-                                        label="#{row.bindings.ProductCategoryId.label}"
-                                        required="#{bindings.ProductsU1.hints.ProductCategoryId.mandatory}"
-                                        shortDesc="#{bindings.ProductsU1.hints.ProductCategoryId.tooltip}"
-                                        readOnly="true" id="soc2">
-                      <f:selectItems value="#{row.bindings.ProductCategoryId.items}" id="si2"/>
-                      <f:validator binding="#{row.bindings.ProductCategoryId.validator}"/>
-                    </af:selectOneChoice>
-                  </af:column>
-                </af:table>
-              </af:panelGroupLayout>
-            </f:facet>
-            <f:facet name="second">
-              <af:panelGroupLayout id="pgl5" layout="vertical">
-                <af:link text="Create Product Category" id="l3" useWindow="true" windowHeight="500" windowWidth="600"
-                         action="create_product_category"/>
+                  </af:panelHeader>
+                  <af:table value="#{bindings.ProductsU1.collectionModel}" var="row"
+                            rows="#{bindings.ProductsU1.rangeSize}"
+                            emptyText="#{bindings.ProductsU1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                            rowBandingInterval="0" selectedRowKeys="#{bindings.ProductsU1.collectionModel.selectedRow}"
+                            selectionListener="#{bindings.ProductsU1.collectionModel.makeCurrent}" rowSelection="single"
+                            fetchSize="#{bindings.ProductsU1.rangeSize}"
+                            filterModel="#{bindings.ImplicitViewCriteriaQuery1.quickQueryDescriptor}"
+                            filterVisible="true" queryListener="#{bindings.ImplicitViewCriteriaQuery1.processQuery}"
+                            varStatus="vs" partialTriggers="::qryId2 ::b4" id="t2">
+                    <af:column sortProperty="#{bindings.ProductsU1.hints.ProductName.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.ProductsU1.hints.ProductName.label}" id="c10">
+                      <af:outputText value="#{row.ProductName}"
+                                     shortDesc="#{bindings.ProductsU1.hints.ProductName.tooltip}" id="ot9"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.ProductsU1.hints.ProductDescription.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.ProductsU1.hints.ProductDescription.label}"
+                               id="c11">
+                      <af:outputText value="#{row.ProductDescription}"
+                                     shortDesc="#{bindings.ProductsU1.hints.ProductDescription.tooltip}" id="ot10"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.ProductsU1.hints.CurrentPrice.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.ProductsU1.hints.CurrentPrice.label}" id="c12">
+                      <af:outputText value="#{row.CurrentPrice}"
+                                     shortDesc="#{bindings.ProductsU1.hints.CurrentPrice.tooltip}" id="ot17">
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.ProductsU1.hints.CurrentPrice.format}"/>
+                      </af:outputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.ProductsU1.hints.ProductCategoryId.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.ProductsU1.hints.ProductCategoryId.label}"
+                               id="c13">
+                      <af:selectOneChoice value="#{row.bindings.ProductCategoryId.inputValue}"
+                                          label="#{row.bindings.ProductCategoryId.label}"
+                                          required="#{bindings.ProductsU1.hints.ProductCategoryId.mandatory}"
+                                          shortDesc="#{bindings.ProductsU1.hints.ProductCategoryId.tooltip}"
+                                          readOnly="true" id="soc2">
+                        <f:selectItems value="#{row.bindings.ProductCategoryId.items}" id="si2"/>
+                        <f:validator binding="#{row.bindings.ProductCategoryId.validator}"/>
+                      </af:selectOneChoice>
+                    </af:column>
+                  </af:table>
+                </af:panelGroupLayout>
               </af:panelGroupLayout>
             </f:facet>
           </af:panelSplitter>

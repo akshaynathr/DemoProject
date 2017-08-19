@@ -48,8 +48,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="PRODUCTS"
-    HistoryColumn="UserHistory">
+    TableName="PRODUCTS">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="512"/>
     </DesignTime>
@@ -143,7 +142,8 @@
     ColumnType="CHAR"
     TableName="PRODUCTS"
     RetrievedOnUpdate="true"
-    RetrievedOnInsert="true">
+    RetrievedOnInsert="true"
+    DefaultValue="y">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>

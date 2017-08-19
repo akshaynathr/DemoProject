@@ -43,7 +43,9 @@
     PrecisionRule="true"
     EntityAttrName="ProductId"
     EntityUsage="ProductEO"
-    AliasName="PRODUCT_ID">
+    AliasName="PRODUCT_ID"
+    IsUpdateable="while_insert"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
@@ -58,7 +60,14 @@
     PrecisionRule="true"
     EntityAttrName="ProductName"
     EntityUsage="ProductEO"
-    AliasName="PRODUCT_NAME"/>
+    AliasName="PRODUCT_NAME">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="ProductName_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ProductDescription"
     PrecisionRule="true"
@@ -69,6 +78,8 @@
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="30"/>
+        <LABEL
+          ResId="ProductDescription_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -77,7 +88,14 @@
     PrecisionRule="true"
     EntityAttrName="CurrentPrice"
     EntityUsage="ProductEO"
-    AliasName="CURRENT_PRICE"/>
+    AliasName="CURRENT_PRICE">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="CurrentPrice_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ProductCategoryId"
     PrecisionRule="true"
@@ -89,6 +107,8 @@
       <SchemaBasedProperties>
         <CONTROLTYPE
           Value="choice"/>
+        <LABEL
+          ResId="ProductCategoryId_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -97,35 +117,69 @@
     PrecisionRule="true"
     EntityAttrName="CreatedBy"
     EntityUsage="ProductEO"
-    AliasName="CREATED_BY"/>
+    AliasName="CREATED_BY"
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="CreatedOn"
     PrecisionRule="true"
     EntityAttrName="CreatedOn"
     EntityUsage="ProductEO"
-    AliasName="CREATED_ON"/>
+    AliasName="CREATED_ON"
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="LastUpdatedBy"
     PrecisionRule="true"
     EntityAttrName="LastUpdatedBy"
     EntityUsage="ProductEO"
-    AliasName="LAST_UPDATED_BY"/>
+    AliasName="LAST_UPDATED_BY"
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="LastUpdatedOn"
     PrecisionRule="true"
     EntityAttrName="LastUpdatedOn"
     EntityUsage="ProductEO"
-    AliasName="LAST_UPDATED_ON"/>
+    AliasName="LAST_UPDATED_ON"
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="VersionNo"
     PrecisionRule="true"
     EntityAttrName="VersionNo"
     EntityUsage="ProductEO"
-    AliasName="VERSION_NO"/>
+    AliasName="VERSION_NO"
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="IsActive"
     PrecisionRule="true"
     EntityAttrName="IsActive"
     EntityUsage="ProductEO"
     AliasName="IS_ACTIVE"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.UVO.common.ProductsUVOMsgBundle"/>
+  </ResourceBundle>
+  <DeclarativeWhereClause
+    Name="DeclarativeWhereClause">
+    <ViewCriteria
+      Name="ProductsUVOWhereCriteria"
+      ViewObjectName="model.UVO.ProductsUVO"
+      Conjunction="AND"
+      Mode="3">
+      <ViewCriteriaRow
+        Name="ProductsUVOWhereCriteria_row_0"
+        UpperColumns="1">
+        <ViewCriteriaItem
+          Name="IsActive"
+          ViewAttribute="IsActive"
+          Operator="&lt;>"
+          Conjunction="AND"
+          Value="n"
+          Required="Optional"/>
+      </ViewCriteriaRow>
+    </ViewCriteria>
+  </DeclarativeWhereClause>
 </ViewObject>
