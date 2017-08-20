@@ -5,6 +5,12 @@
   <executables>
     <variableIterator id="variables"/>
     <iterator Binds="CustomersU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="CustomersU1Iterator"/>
+    <iterator Binds="OpportunitiesU1" RangeSize="25" DataControl="AppModuleAMDataControl2"
+              id="OpportunitiesU1Iterator"/>
+    <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="OpportunitiesU1Iterator" id="ImplicitViewCriteriaQuery"/>
+    <iterator Binds="OpportunitiesU1" RangeSize="25" DataControl="AppModuleAMDataControl3"
+              id="OpportunitiesU1Iterator1"/>
   </executables>
   <bindings>
     <attributeValues IterBinding="CustomersU1Iterator" id="CustomerName">
@@ -62,5 +68,13 @@
         <Item Value="ShippingAddressId"/>
       </AttrNames>
     </attributeValues>
+    <tree IterBinding="OpportunitiesU1Iterator1" id="OpportunitiesU1">
+      <nodeDefinition DefName="model.customer.UVO.OpportunitiesUVO" Name="OpportunitiesU10">
+        <AttrNames>
+          <Item Value="PrimaryContact"/>
+          <Item Value="OppurtunityName"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
   </bindings>
 </pageDefinition>

@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
   <af:document id="d1">
+    <af:messages id="m1"/>
     <af:form id="f1">
       <af:panelStretchLayout id="psl1">
         <f:facet name="center">
@@ -109,8 +110,44 @@
                 </af:panelFormLayout>
               </af:showDetailItem>
               <af:showDetailItem id="tab2" text="Oppurtunities" icon="/icons/OPPURTUNITY.png">
-                <af:outputText value="Customer Oppurtunities" id="ot2"
-                               inlineStyle="font-weight:bold; color:Black; font-size:large;"/>
+                <af:panelGroupLayout layout="vertical" id="pgl2">
+                  <af:panelHeader text="Customer Oppurtunities" id="ph1">
+                    <af:quickQuery label="Search" searchDesc="Search" id="qryId1"
+                                   value="#{bindings.ImplicitViewCriteriaQuery.quickQueryDescriptor}"
+                                   model="#{bindings.ImplicitViewCriteriaQuery.queryModel}"
+                                   queryListener="#{bindings.ImplicitViewCriteriaQuery.processQuery}">
+                      <f:facet name="end">
+                        <af:commandLink text="Advanced" rendered="false" id="cl1"/>
+                      </f:facet>
+                    </af:quickQuery>
+                  </af:panelHeader>
+                  <af:table value="#{bindings.OpportunitiesU1.collectionModel}" var="row"
+                            rows="#{bindings.OpportunitiesU1.rangeSize}"
+                            emptyText="#{bindings.OpportunitiesU1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                            rowBandingInterval="0"
+                            selectedRowKeys="#{bindings.OpportunitiesU1.collectionModel.selectedRow}"
+                            selectionListener="#{bindings.OpportunitiesU1.collectionModel.makeCurrent}"
+                            rowSelection="single" fetchSize="#{bindings.OpportunitiesU1.rangeSize}"
+                            filterModel="#{bindings.ImplicitViewCriteriaQuery.quickQueryDescriptor}"
+                            filterVisible="true" queryListener="#{bindings.ImplicitViewCriteriaQuery.processQuery}"
+                            varStatus="vs" partialTriggers="::qryId1" id="t2">
+                    <af:column sortProperty="#{bindings.OpportunitiesU1.hints.PrimaryContact.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.OpportunitiesU1.hints.PrimaryContact.label}"
+                               id="c1">
+                      <af:outputText value="#{row.PrimaryContact}"
+                                     shortDesc="#{bindings.OpportunitiesU1.hints.PrimaryContact.tooltip}" id="ot6">
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.OpportunitiesU1.hints.PrimaryContact.format}"/>
+                      </af:outputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.OpportunitiesU1.hints.OppurtunityName.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.OpportunitiesU1.hints.OppurtunityName.label}"
+                               id="c2">
+                      <af:outputText value="#{row.OppurtunityName}"
+                                     shortDesc="#{bindings.OpportunitiesU1.hints.OppurtunityName.tooltip}" id="ot7"/>
+                    </af:column>
+                  </af:table>
+                </af:panelGroupLayout>
               </af:showDetailItem>
               <af:showDetailItem id="tab3" text="Contacts" icon="/icons/contacts-icon.png">
                 <af:outputText value="Customer Contacts" id="ot3"
