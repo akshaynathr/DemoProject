@@ -77,15 +77,6 @@
     Name="CustomerTypeLookup1"
     ViewObjectName="model.RVO.CustomerTypeLookupVO"/>
   <ViewUsage
-    Name="AddressU1"
-    ViewObjectName="model.UVO.AddressUVO"/>
-  <ViewUsage
-    Name="AddressU2"
-    ViewObjectName="model.UVO.AddressUVO"/>
-  <ViewUsage
-    Name="ContactsU1"
-    ViewObjectName="model.UVO.ContactsUVO"/>
-  <ViewUsage
     Name="ContactsU2"
     ViewObjectName="model.UVO.ContactsUVO"/>
   <ViewUsage
@@ -110,17 +101,8 @@
     Name="CustomersU2"
     ViewObjectName="model.UVO.CustomersUVO"/>
   <ViewUsage
-    Name="AddressU3"
-    ViewObjectName="model.UVO.AddressUVO"/>
-  <ViewUsage
-    Name="CustomersU3"
-    ViewObjectName="model.UVO.CustomersUVO"/>
-  <ViewUsage
     Name="AddressU4"
     ViewObjectName="model.UVO.AddressUVO"/>
-  <ViewUsage
-    Name="CustomersU4"
-    ViewObjectName="model.UVO.CustomersUVO"/>
   <ViewUsage
     Name="CustomerContactAddressMaster1"
     ViewObjectName="model.UVO.master.CustomerContactAddressMasterVO"/>
@@ -173,8 +155,41 @@
     Name="TasksU2"
     ViewObjectName="model.customer.UVO.TasksUVO"/>
   <ViewUsage
+    Name="CustomersU6"
+    ViewObjectName="model.UVO.CustomersUVO"/>
+  <ViewUsage
+    Name="PrimaryContactLookup1"
+    ViewObjectName="model.customer.RVO.PrimaryContactLookupVO"/>
+  <ViewUsage
+    Name="AddressU5"
+    ViewObjectName="model.UVO.AddressUVO"/>
+  <ViewUsage
+    Name="AddressU2"
+    ViewObjectName="model.UVO.AddressUVO"/>
+  <ViewUsage
+    Name="CustomersU3"
+    ViewObjectName="model.UVO.CustomersUVO"/>
+  <ViewUsage
+    Name="AddressU1"
+    ViewObjectName="model.UVO.AddressUVO"/>
+  <ViewUsage
+    Name="AddressU3"
+    ViewObjectName="model.UVO.AddressUVO"/>
+  <ViewUsage
+    Name="CustomersU4"
+    ViewObjectName="model.UVO.CustomersUVO"/>
+  <ViewUsage
+    Name="AddressU2"
+    ViewObjectName="model.UVO.AddressUVO"/>
+  <ViewUsage
     Name="CustomersU5"
     ViewObjectName="model.UVO.CustomersUVO"/>
+  <ViewUsage
+    Name="AddressU6"
+    ViewObjectName="model.UVO.AddressUVO"/>
+  <ViewUsage
+    Name="CustomerId_Address_ViewObj1"
+    ViewObjectName="model.customer.UVO.CustomerId_Address_ViewObjVO"/>
   <ViewUsage
     Name="UsersRolesU3"
     ViewObjectName="model.UVO.UsersRolesUVO"/>
@@ -209,12 +224,6 @@
     DstViewUsageName="model.AM.AppModuleAM.UserRolesMaster1"
     Reversed="false"/>
   <ViewLinkUsage
-    Name="ContactsAddressVL1"
-    ViewLinkObjectName="model.UVO.ContactsAddressVL"
-    SrcViewUsageName="model.AM.AppModuleAM.AddressU2"
-    DstViewUsageName="model.AM.AppModuleAM.ContactsU1"
-    Reversed="false"/>
-  <ViewLinkUsage
     Name="CustomersContactsFk1VL1"
     ViewLinkObjectName="model.UVO.CustomersContactsFk1VL"
     SrcViewUsageName="model.AM.AppModuleAM.CustomersU1"
@@ -231,18 +240,6 @@
     ViewLinkObjectName="model.UVO.CustomersFk1VL"
     SrcViewUsageName="model.AM.AppModuleAM.ContactsU4"
     DstViewUsageName="model.AM.AppModuleAM.CustomersU2"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="CustomersFk2VL1"
-    ViewLinkObjectName="model.UVO.CustomersFk2VL"
-    SrcViewUsageName="model.AM.AppModuleAM.AddressU3"
-    DstViewUsageName="model.AM.AppModuleAM.CustomersU3"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="CustomersFk3VL1"
-    ViewLinkObjectName="model.UVO.CustomersFk3VL"
-    SrcViewUsageName="model.AM.AppModuleAM.AddressU4"
-    DstViewUsageName="model.AM.AppModuleAM.CustomersU4"
     Reversed="false"/>
   <ViewLinkUsage
     Name="RolesLookupVL1"
@@ -273,5 +270,17 @@
     ViewLinkObjectName="model.VL.RoleFKUserRoleVL"
     SrcViewUsageName="model.AM.AppModuleAM.RolesU1"
     DstViewUsageName="model.AM.AppModuleAM.UsersRolesU3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="CustomerPrimaryAddressVL1"
+    ViewLinkObjectName="model.VL.CustomerPrimaryAddressVL"
+    SrcViewUsageName="model.AM.AppModuleAM.CustomersU6"
+    DstViewUsageName="model.AM.AppModuleAM.AddressU5"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="CustomerPrimaryAddressVL5"
+    ViewLinkObjectName="model.VL.CustomerPrimaryAddressVL"
+    SrcViewUsageName="model.AM.AppModuleAM.CustomersU5"
+    DstViewUsageName="model.AM.AppModuleAM.AddressU6"
     Reversed="false"/>
 </AppModule>

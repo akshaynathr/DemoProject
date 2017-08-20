@@ -6,7 +6,7 @@
       <shared/>
     </data-control-scope>
     <view id="create_customer">
-      <page>/create_customer.jsff</page>
+      <page>/create_customer.jsf</page>
     </view>
     <task-flow-return id="return_customer_create">
       <outcome>
@@ -20,6 +20,5 @@
         <to-activity-id>return_customer_create</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
-    <use-page-fragments/>
   </task-flow-definition>
 </adfc-config>

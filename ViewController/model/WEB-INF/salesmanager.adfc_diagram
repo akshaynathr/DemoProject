@@ -85,7 +85,7 @@
       <property
          name="fromOutcome">customer</property>
       <property
-         name="sdm:polyPoints">B33,695.5,116.896484,426.8418,339.11768,T44</property>
+         name="sdm:polyPoints">B33,695.5,116.19531,426.8418,339.12427,T44</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -95,7 +95,7 @@
       <property
          name="fromOutcome">return_customer</property>
       <property
-         name="sdm:polyPoints">T56,433.8418,342.39648,702.5,120.159996,B44</property>
+         name="sdm:polyPoints">T56,433.8418,342.39648,702.5,119.45231,B44</property>
    </ControlFlowCase>
    <View
       id="View9">
@@ -161,7 +161,7 @@
       <property
          name="fromOutcome">oppurtunity_flow</property>
       <property
-         name="sdm:polyPoints">B56,709.5,120.405426,949.8545,296.39648,T44</property>
+         name="sdm:polyPoints">B56,709.5,119.69607,949.8545,296.39648,T44</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -172,5 +172,44 @@
          name="fromOutcome">return_oppurtunity_flow</property>
       <property
          name="sdm:polyPoints">T56,956.8545,292.87515,716.5,116.19531,B67</property>
+   </ControlFlowCase>
+   <TaskFlowCall
+      id="TaskFlowCall15">
+      <property
+         name="runAsDialog">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>create_customer_flow&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">create_customer_flow</property>
+      <property
+         name="x">927.69336</property>
+      <property
+         name="y">-43.850586</property>
+      <property
+         name="documentReference">/WEB-INF/create_customer_flow.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">create_customer_flow</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase16"
+      from="View3"
+      to="TaskFlowCall15">
+      <property
+         name="fromOutcome">create_customer</property>
+      <property
+         name="sdm:polyPoints">R46,747.0,58.695312,884.31506,-47.70117,L46</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase17"
+      from="TaskFlowCall15"
+      to="View3">
+      <property
+         name="fromOutcome">return_customer_create</property>
+      <property
+         name="sdm:polyPoints">L54,886.69336,-40.70117,749.3622,65.69531,R54</property>
    </ControlFlowCase>
 </SDM>

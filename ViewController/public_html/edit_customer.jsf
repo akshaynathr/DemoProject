@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="edit_customer.jsf" id="d1">
+        <af:messages id="m1" binding="#{backingBeanScope.backing_edit_customer.m1}"/>
+        <af:form id="f1">
+            <af:panelGroupLayout id="pgl1" binding="#{backingBeanScope.backing_edit_customer.pgl1}"
+                                 inlineStyle="padding:2%; background-color:#fff;">
+                <af:outputText value="Edit Details" id="ot1" binding="#{backingBeanScope.backing_edit_customer.ot1}"/>
+                <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.backing_edit_customer.pfl1}">
+                    <af:inputText value="#{bindings.Ceo.inputValue}" label="CEO"
+                                  required="#{bindings.Ceo.hints.mandatory}"
+                                  columns="#{bindings.Ceo.hints.displayWidth}"
+                                  maximumLength="#{bindings.Ceo.hints.precision}"
+                                  shortDesc="#{bindings.Ceo.hints.tooltip}" id="it1"
+                                  binding="#{backingBeanScope.backing_edit_customer.it1}">
+                        <f:validator binding="#{bindings.Ceo.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.CustomerName.inputValue}" label="Name"
+                                  required="#{bindings.CustomerName.hints.mandatory}"
+                                  columns="#{bindings.CustomerName.hints.displayWidth}"
+                                  maximumLength="#{bindings.CustomerName.hints.precision}"
+                                  shortDesc="#{bindings.CustomerName.hints.tooltip}" id="it2"
+                                  binding="#{backingBeanScope.backing_edit_customer.it2}">
+                        <f:validator binding="#{bindings.CustomerName.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.Email.inputValue}" label="#{bindings.Email.hints.label}"
+                                  required="#{bindings.Email.hints.mandatory}"
+                                  columns="#{bindings.Email.hints.displayWidth}"
+                                  maximumLength="#{bindings.Email.hints.precision}"
+                                  shortDesc="#{bindings.Email.hints.tooltip}" id="it3"
+                                  binding="#{backingBeanScope.backing_edit_customer.it3}">
+                        <f:validator binding="#{bindings.Email.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.Fax.inputValue}" label="#{bindings.Fax.hints.label}"
+                                  required="#{bindings.Fax.hints.mandatory}"
+                                  columns="#{bindings.Fax.hints.displayWidth}"
+                                  maximumLength="#{bindings.Fax.hints.precision}"
+                                  shortDesc="#{bindings.Fax.hints.tooltip}" id="it4"
+                                  binding="#{backingBeanScope.backing_edit_customer.it4}">
+                        <f:validator binding="#{bindings.Fax.validator}"/>
+                        <af:convertNumber groupingUsed="false" pattern="#{bindings.Fax.format}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.NoOfEmployees.inputValue}" label="Workforce"
+                                  required="#{bindings.NoOfEmployees.hints.mandatory}"
+                                  columns="#{bindings.NoOfEmployees.hints.displayWidth}"
+                                  maximumLength="#{bindings.NoOfEmployees.hints.precision}"
+                                  shortDesc="#{bindings.NoOfEmployees.hints.tooltip}" id="it5"
+                                  binding="#{backingBeanScope.backing_edit_customer.it5}">
+                        <f:validator binding="#{bindings.NoOfEmployees.validator}"/>
+                        <af:convertNumber groupingUsed="false" pattern="#{bindings.NoOfEmployees.format}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.ParentCompany.inputValue}" label="Parent Company"
+                                  required="#{bindings.ParentCompany.hints.mandatory}"
+                                  columns="#{bindings.ParentCompany.hints.displayWidth}"
+                                  maximumLength="#{bindings.ParentCompany.hints.precision}"
+                                  shortDesc="#{bindings.ParentCompany.hints.tooltip}" id="it6"
+                                  binding="#{backingBeanScope.backing_edit_customer.it6}">
+                        <f:validator binding="#{bindings.ParentCompany.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.Url.inputValue}" label="#{bindings.Url.hints.label}"
+                                  required="#{bindings.Url.hints.mandatory}"
+                                  columns="#{bindings.Url.hints.displayWidth}"
+                                  maximumLength="#{bindings.Url.hints.precision}"
+                                  shortDesc="#{bindings.Url.hints.tooltip}" id="it7"
+                                  binding="#{backingBeanScope.backing_edit_customer.it7}">
+                        <f:validator binding="#{bindings.Url.validator}"/>
+                    </af:inputText>
+                    <af:group id="Primaryaddress">
+                        <af:inputText value="#{bindings.City.inputValue}" label="#{bindings.City.hints.label}"
+                                      required="#{bindings.City.hints.mandatory}"
+                                      columns="#{bindings.City.hints.displayWidth}"
+                                      maximumLength="#{bindings.City.hints.precision}"
+                                      shortDesc="#{bindings.City.hints.tooltip}" id="it8"
+                                      binding="#{backingBeanScope.backing_edit_customer.it8}">
+                            <f:validator binding="#{bindings.City.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Country.inputValue}" label="#{bindings.Country.hints.label}"
+                                      required="#{bindings.Country.hints.mandatory}"
+                                      columns="#{bindings.Country.hints.displayWidth}"
+                                      maximumLength="#{bindings.Country.hints.precision}"
+                                      shortDesc="#{bindings.Country.hints.tooltip}" id="it9"
+                                      binding="#{backingBeanScope.backing_edit_customer.it9}">
+                            <f:validator binding="#{bindings.Country.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.House.inputValue}" label="#{bindings.House.hints.label}"
+                                      required="#{bindings.House.hints.mandatory}"
+                                      columns="#{bindings.House.hints.displayWidth}"
+                                      maximumLength="#{bindings.House.hints.precision}"
+                                      shortDesc="#{bindings.House.hints.tooltip}" id="it10"
+                                      binding="#{backingBeanScope.backing_edit_customer.it10}">
+                            <f:validator binding="#{bindings.House.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Locality.inputValue}" label="#{bindings.Locality.hints.label}"
+                                      required="#{bindings.Locality.hints.mandatory}"
+                                      columns="#{bindings.Locality.hints.displayWidth}"
+                                      maximumLength="#{bindings.Locality.hints.precision}"
+                                      shortDesc="#{bindings.Locality.hints.tooltip}" id="it11"
+                                      binding="#{backingBeanScope.backing_edit_customer.it11}">
+                            <f:validator binding="#{bindings.Locality.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Pincode.inputValue}" label="#{bindings.Pincode.hints.label}"
+                                      required="#{bindings.Pincode.hints.mandatory}"
+                                      columns="#{bindings.Pincode.hints.displayWidth}"
+                                      maximumLength="#{bindings.Pincode.hints.precision}"
+                                      shortDesc="#{bindings.Pincode.hints.tooltip}" id="it12"
+                                      binding="#{backingBeanScope.backing_edit_customer.it12}">
+                            <f:validator binding="#{bindings.Pincode.validator}"/>
+                            <af:convertNumber groupingUsed="false" pattern="#{bindings.Pincode.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.State.inputValue}" label="#{bindings.State.hints.label}"
+                                      required="#{bindings.State.hints.mandatory}"
+                                      columns="#{bindings.State.hints.displayWidth}"
+                                      maximumLength="#{bindings.State.hints.precision}"
+                                      shortDesc="#{bindings.State.hints.tooltip}" id="it13"
+                                      binding="#{backingBeanScope.backing_edit_customer.it13}">
+                            <f:validator binding="#{bindings.State.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Street.inputValue}" label="#{bindings.Street.hints.label}"
+                                      required="#{bindings.Street.hints.mandatory}"
+                                      columns="#{bindings.Street.hints.displayWidth}"
+                                      maximumLength="#{bindings.Street.hints.precision}"
+                                      shortDesc="#{bindings.Street.hints.tooltip}" id="it14"
+                                      binding="#{backingBeanScope.backing_edit_customer.it14}">
+                            <f:validator binding="#{bindings.Street.validator}"/>
+                        </af:inputText>
+                    </af:group>
+                    <f:facet name="footer">
+                        <af:button text="Submit" id="b1" binding="#{backingBeanScope.backing_edit_customer.b1}"/>
+                    </f:facet>
+                </af:panelFormLayout>
+            </af:panelGroupLayout>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_edit_customer-->
+</f:view>

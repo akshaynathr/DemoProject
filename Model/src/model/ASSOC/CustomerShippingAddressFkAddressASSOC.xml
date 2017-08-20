@@ -3,14 +3,14 @@
 <!---->
 <Association
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="CustomerAddressPrimaryASSOC"
+  Name="CustomerShippingAddressFkAddressASSOC"
   Version="12.2.1.12.24"
   InheritPersonalization="merge">
   <DesignTime>
     <Attr Name="_isCodegen" Value="true"/>
   </DesignTime>
   <AssociationEnd
-    Name="Customer2"
+    Name="Customer3Accessor"
     Cardinality="1"
     Source="true"
     Owner="model.EO.CustomerEO"
@@ -18,23 +18,20 @@
     <DesignTime>
       <Attr Name="_isUpdateable" Value="true"/>
       <Attr Name="_aggregation" Value="0"/>
-      <Attr Name="_finderName" Value="Customer2"/>
-      <Attr Name="_foreignKey" Value="model.EO.CustomerEO.uk_CustomerEO"/>
+      <Attr Name="_finderName" Value="Customer3Accessor"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="model.EO.CustomerEO.PrimaryAddressId"/>
+      <Item Value="model.EO.CustomerEO.ShippingAddressId"/>
     </AttrArray>
   </AssociationEnd>
   <AssociationEnd
-    Name="Address2"
+    Name="Address3Accessor"
     Cardinality="1"
-    Owner="model.EO.AddressEO"
-    HasOwner="true">
+    Owner="model.EO.AddressEO">
     <DesignTime>
       <Attr Name="_isUpdateable" Value="true"/>
       <Attr Name="_aggregation" Value="0"/>
-      <Attr Name="_finderName" Value="Address2"/>
-      <Attr Name="_foreignKey" Value="model.EO.AddressEO.fk_AddressEO"/>
+      <Attr Name="_finderName" Value="Address3Accessor"/>
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.EO.AddressEO.AddressId"/>
