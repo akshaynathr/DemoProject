@@ -5,32 +5,32 @@
    <View
       id="View2">
       <property
-         name="activityId">Customers_tab</property>
+         name="activityId">oppurtunity_tab</property>
       <property
          name="pageFragment">false</property>
       <property
-         name="x">331.0</property>
+         name="x">256.0</property>
       <property
          name="start">true</property>
       <property
-         name="description">&lt;html>&lt;p>&lt;b>Customers_tab&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+         name="description">&lt;html>&lt;p>&lt;b>oppurtunity_tab&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">171.5459</property>
+         name="y">77.5459</property>
       <property
-         name="page">/Customers_tab.jsf</property>
+         name="page">/oppurtunity_tab.jsf</property>
       <property
          name="exceptionHandler">false</property>
    </View>
    <TaskFlowReturn
       id="TaskFlowReturn3">
       <property
-         name="activityId">return_customer</property>
+         name="activityId">return_oppurtunity_flow</property>
       <property
-         name="x">626.0</property>
+         name="x">601.0</property>
       <property
-         name="description">&lt;html>&lt;p>&lt;b>return_customer&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  return_customer&lt;/p></property>
+         name="description">&lt;html>&lt;p>&lt;b>return_oppurtunity_flow&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  return_oppurtunity_flow&lt;/p></property>
       <property
-         name="y">162.89648</property>
+         name="y">90.896484</property>
       <property
          name="finish">true</property>
       <property
@@ -44,6 +44,6 @@
       <property
          name="fromOutcome">return</property>
       <property
-         name="sdm:polyPoints">R50,372.0,171.19531,585.0,162.5459,L50</property>
+         name="sdm:polyPoints">R50,297.0,77.19531,560.0,90.5459,L50</property>
    </ControlFlowCase>
 </SDM>

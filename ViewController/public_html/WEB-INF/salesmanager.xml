@@ -11,11 +11,40 @@
     <view id="SalesInside">
       <page>/SalesInside.jsff</page>
     </view>
+    <task-flow-call id="customer-flow">
+      <task-flow-reference>
+        <document>/WEB-INF/customer-flow.xml</document>
+        <id>customer-flow</id>
+      </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
+    </task-flow-call>
+    <view id="report_sales_manager">
+      <page>/report_sales_manager.jsff</page>
+    </view>
+    <task-flow-call id="oppurtunity-flow">
+      <task-flow-reference>
+        <document>/WEB-INF/oppurtunity-flow.xml</document>
+        <id>oppurtunity-flow</id>
+      </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
+    </task-flow-call>
     <control-flow-rule id="__1">
       <from-activity-id>dashboard</from-activity-id>
       <control-flow-case id="__2">
         <from-outcome>inside</from-outcome>
         <to-activity-id>SalesInside</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__8">
+        <from-outcome>report_sales_manager</from-outcome>
+        <to-activity-id>report_sales_manager</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__3">
@@ -23,6 +52,35 @@
       <control-flow-case id="__4">
         <from-outcome>back</from-outcome>
         <to-activity-id>dashboard</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__5">
+        <from-outcome>customer</from-outcome>
+        <to-activity-id>customer-flow</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__11">
+        <from-outcome>oppurtunity_flow</from-outcome>
+        <to-activity-id>oppurtunity-flow</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__6">
+      <from-activity-id>customer-flow</from-activity-id>
+      <control-flow-case id="__7">
+        <from-outcome>return_customer</from-outcome>
+        <to-activity-id>SalesInside</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__9">
+      <from-activity-id>report_sales_manager</from-activity-id>
+      <control-flow-case id="__10">
+        <from-outcome>back</from-outcome>
+        <to-activity-id>dashboard</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__12">
+      <from-activity-id>oppurtunity-flow</from-activity-id>
+      <control-flow-case id="__13">
+        <from-outcome>return_oppurtunity_flow</from-outcome>
+        <to-activity-id>SalesInside</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>

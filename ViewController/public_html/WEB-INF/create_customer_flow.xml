@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="windows-1252" ?>
 <adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
-  <task-flow-definition id="customer-flow">
-    <default-activity>Customers_tab</default-activity>
+  <task-flow-definition id="create_customer_flow">
+    <default-activity>create_customer</default-activity>
     <data-control-scope>
       <shared/>
     </data-control-scope>
-    <view id="Customers_tab">
-      <page>/Customers_tab.jsf</page>
+    <view id="create_customer">
+      <page>/create_customer.jsff</page>
     </view>
-    <task-flow-return id="return_customer">
+    <task-flow-return id="return_customer_create">
       <outcome>
-        <name>return_customer</name>
+        <name>return_customer_create</name>
       </outcome>
     </task-flow-return>
     <control-flow-rule id="__1">
-      <from-activity-id>Customers_tab</from-activity-id>
+      <from-activity-id>create_customer</from-activity-id>
       <control-flow-case id="__2">
         <from-outcome>return</from-outcome>
-        <to-activity-id>return_customer</to-activity-id>
+        <to-activity-id>return_customer_create</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
+    <use-page-fragments/>
   </task-flow-definition>
 </adfc-config>

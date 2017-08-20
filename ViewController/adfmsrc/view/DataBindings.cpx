@@ -32,6 +32,7 @@
     <page path="/WEB-INF/createRole-flow.xml#createRole-flow@CreateInsert"
           usageId="view_createRole_flow_createRole_flow_CreateInsertPageDef"/>
     <page path="/createRole.jsf" usageId="view_createRolePageDef"/>
+    <page path="/Customers_tab.jsf" usageId="view_Customers_tabPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_HomePageDef" path="view.pageDefs.HomePageDef"/>
@@ -59,6 +60,7 @@
     <page id="view_createRole_flow_createRole_flow_CreateInsertPageDef"
           path="view.pageDefs.createRole_flow_createRole_flow_CreateInsertPageDef"/>
     <page id="view_createRolePageDef" path="view.pageDefs.createRolePageDef"/>
+    <page id="view_Customers_tabPageDef" path="view.pageDefs.Customers_tabPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleAMDataControl" Package="model.AM"
@@ -67,6 +69,16 @@
                      SupportsSortCollection="true" Configuration="AppModuleAMLocal" syncMode="Immediate"
                      xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
     <BC4JDataControl id="AppModuleAMDataControl1" Package="model.EO"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleAMLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="AppModuleAMDataControl2" Package="model.AM"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleAMLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="AppModuleAMDataControl3" Package="model.AM"
                      FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
                      SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
                      SupportsSortCollection="true" Configuration="AppModuleAMLocal" syncMode="Immediate"

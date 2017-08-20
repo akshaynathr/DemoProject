@@ -66,7 +66,7 @@
     </af:panelGroupLayout>
     </af:commandLink>
     
-      <af:commandLink inlineStyle="display:block;" id="cl3" action="inside">
+      <af:commandLink inlineStyle="display:block;" id="cl3" action="report_sales_manager">
       <af:setPropertyListener from="3" to="#{pageFlowScope.sales_manager_tabVal}" type="action"/>
       
     <af:panelGroupLayout id="pb3"

@@ -59,4 +59,10 @@
     <managed-bean-scope>backingBean</managed-bean-scope>
     <!--oracle-jdev-comment:managed-bean-jsp-link:1TaskFlowTest.jsf-->
   </managed-bean>
+  <managed-bean id="__3">
+    <managed-bean-name>backing_Customers_tab</managed-bean-name>
+    <managed-bean-class>view.backing.Customers_tab</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1Customers_tab.jsf-->
+  </managed-bean>
 </adfc-config>

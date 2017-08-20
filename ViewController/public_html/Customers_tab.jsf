@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="Customers_tab.jsf" id="d1" binding="#{backingBeanScope.backing_Customers_tab.d1}">
+    <af:messages id="m1" binding="#{backingBeanScope.backing_Customers_tab.m1}"/>
+    <af:form id="f1" binding="#{backingBeanScope.backing_Customers_tab.f1}">
+              <af:panelStretchLayout id="psl1">
+        <f:facet name="center">
+          <af:panelGroupLayout id="pgl1" layout="vertical" inlineStyle="padding:2%;">
+            <af:link text="back" id="l1"/>
+            <af:panelTabbed position="start" id="pt1">
+              <af:showDetailItem id="tab1" text="Details" icon="/icons/OPPURTUNITY(1).png"/>
+              <af:showDetailItem id="tab2" text="Oppurtunities" icon="/icons/OPPURTUNITY.png">
+                <af:table value="#{bindings.CustomersU5.collectionModel}" var="row"
+                          rows="#{bindings.CustomersU5.rangeSize}"
+                          emptyText="#{bindings.CustomersU5.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          rowBandingInterval="0" fetchSize="#{bindings.CustomersU5.rangeSize}" id="t1"
+                          binding="#{backingBeanScope.backing_Customers_tab.t1}">
+                  <af:column headerText="#{bindings.CustomersU5.hints.CustomerId.label}" id="c1">
+                    <af:selectOneChoice value="#{row.bindings.CustomerId.inputValue}"
+                                        label="#{row.bindings.CustomerId.label}"
+                                        required="#{bindings.CustomersU5.hints.CustomerId.mandatory}"
+                                        shortDesc="#{bindings.CustomersU5.hints.CustomerId.tooltip}" id="soc1">
+                      <f:selectItems value="#{row.bindings.CustomerId.items}" id="si1"/>
+                      <f:validator binding="#{row.bindings.CustomerId.validator}"/>
+                    </af:selectOneChoice>
+                  </af:column>
+                  <af:column headerText="#{bindings.CustomersU5.hints.CustomerName.label}" id="c2">
+                    <af:inputText value="#{row.bindings.CustomerName.inputValue}"
+                                  label="#{bindings.CustomersU5.hints.CustomerName.label}"
+                                  required="#{bindings.CustomersU5.hints.CustomerName.mandatory}"
+                                  columns="#{bindings.CustomersU5.hints.CustomerName.displayWidth}"
+                                  maximumLength="#{bindings.CustomersU5.hints.CustomerName.precision}"
+                                  shortDesc="#{bindings.CustomersU5.hints.CustomerName.tooltip}" id="it1">
+                      <f:validator binding="#{row.bindings.CustomerName.validator}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column headerText="#{bindings.CustomersU5.hints.CustomerTypeId.label}" id="c3">
+                    <af:inputText value="#{row.bindings.CustomerTypeId.inputValue}"
+                                  label="#{bindings.CustomersU5.hints.CustomerTypeId.label}"
+                                  required="#{bindings.CustomersU5.hints.CustomerTypeId.mandatory}"
+                                  columns="#{bindings.CustomersU5.hints.CustomerTypeId.displayWidth}"
+                                  maximumLength="#{bindings.CustomersU5.hints.CustomerTypeId.precision}"
+                                  shortDesc="#{bindings.CustomersU5.hints.CustomerTypeId.tooltip}" id="it2">
+                      <f:validator binding="#{row.bindings.CustomerTypeId.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.CustomersU5.hints.CustomerTypeId.format}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column headerText="#{bindings.CustomersU5.hints.PrimaryContactId.label}" id="c4">
+                    <af:inputText value="#{row.bindings.PrimaryContactId.inputValue}"
+                                  label="#{bindings.CustomersU5.hints.PrimaryContactId.label}"
+                                  required="#{bindings.CustomersU5.hints.PrimaryContactId.mandatory}"
+                                  columns="#{bindings.CustomersU5.hints.PrimaryContactId.displayWidth}"
+                                  maximumLength="#{bindings.CustomersU5.hints.PrimaryContactId.precision}"
+                                  shortDesc="#{bindings.CustomersU5.hints.PrimaryContactId.tooltip}" id="it3">
+                      <f:validator binding="#{row.bindings.PrimaryContactId.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.CustomersU5.hints.PrimaryContactId.format}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column headerText="#{bindings.CustomersU5.hints.Url.label}" id="c5">
+                    <af:inputText value="#{row.bindings.Url.inputValue}" label="#{bindings.CustomersU5.hints.Url.label}"
+                                  required="#{bindings.CustomersU5.hints.Url.mandatory}"
+                                  columns="#{bindings.CustomersU5.hints.Url.displayWidth}"
+                                  maximumLength="#{bindings.CustomersU5.hints.Url.precision}"
+                                  shortDesc="#{bindings.CustomersU5.hints.Url.tooltip}" id="it4">
+                      <f:validator binding="#{row.bindings.Url.validator}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column headerText="#{bindings.CustomersU5.hints.ParentCompany.label}" id="c6">
+                    <af:inputText value="#{row.bindings.ParentCompany.inputValue}"
+                                  label="#{bindings.CustomersU5.hints.ParentCompany.label}"
+                                  required="#{bindings.CustomersU5.hints.ParentCompany.mandatory}"
+                                  columns="#{bindings.CustomersU5.hints.ParentCompany.displayWidth}"
+                                  maximumLength="#{bindings.CustomersU5.hints.ParentCompany.precision}"
+                                  shortDesc="#{bindings.CustomersU5.hints.ParentCompany.tooltip}" id="it5">
+                      <f:validator binding="#{row.bindings.ParentCompany.validator}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column headerText="#{bindings.CustomersU5.hints.Ceo.label}" id="c7">
+                    <af:inputText value="#{row.bindings.Ceo.inputValue}" label="#{bindings.CustomersU5.hints.Ceo.label}"
+                                  required="#{bindings.CustomersU5.hints.Ceo.mandatory}"
+                                  columns="#{bindings.CustomersU5.hints.Ceo.displayWidth}"
+                                  maximumLength="#{bindings.CustomersU5.hints.Ceo.precision}"
+                                  shortDesc="#{bindings.CustomersU5.hints.Ceo.tooltip}" id="it6">
+                      <f:validator binding="#{row.bindings.Ceo.validator}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column headerText="#{bindings.CustomersU5.hints.NoOfEmployees.label}" id="c8">
+                    <af:inputText value="#{row.bindings.NoOfEmployees.inputValue}"
+                                  label="#{bindings.CustomersU5.hints.NoOfEmployees.label}"
+                                  required="#{bindings.CustomersU5.hints.NoOfEmployees.mandatory}"
+                                  columns="#{bindings.CustomersU5.hints.NoOfEmployees.displayWidth}"
+                                  maximumLength="#{bindings.CustomersU5.hints.NoOfEmployees.precision}"
+                                  shortDesc="#{bindings.CustomersU5.hints.NoOfEmployees.tooltip}" id="it7">
+                      <f:validator binding="#{row.bindings.NoOfEmployees.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.CustomersU5.hints.NoOfEmployees.format}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column headerText="#{bindings.CustomersU5.hints.Fax.label}" id="c9">
+                    <af:inputText value="#{row.bindings.Fax.inputValue}" label="#{bindings.CustomersU5.hints.Fax.label}"
+                                  required="#{bindings.CustomersU5.hints.Fax.mandatory}"
+                                  columns="#{bindings.CustomersU5.hints.Fax.displayWidth}"
+                                  maximumLength="#{bindings.CustomersU5.hints.Fax.precision}"
+                                  shortDesc="#{bindings.CustomersU5.hints.Fax.tooltip}" id="it8">
+                      <f:validator binding="#{row.bindings.Fax.validator}"/>
+                      <af:convertNumber groupingUsed="false" pattern="#{bindings.CustomersU5.hints.Fax.format}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column headerText="#{bindings.CustomersU5.hints.Email.label}" id="c10">
+                    <af:inputText value="#{row.bindings.Email.inputValue}"
+                                  label="#{bindings.CustomersU5.hints.Email.label}"
+                                  required="#{bindings.CustomersU5.hints.Email.mandatory}"
+                                  columns="#{bindings.CustomersU5.hints.Email.displayWidth}"
+                                  maximumLength="#{bindings.CustomersU5.hints.Email.precision}"
+                                  shortDesc="#{bindings.CustomersU5.hints.Email.tooltip}" id="it9">
+                      <f:validator binding="#{row.bindings.Email.validator}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column headerText="#{bindings.CustomersU5.hints.PrimaryAddressId.label}" id="c11">
+                    <af:inputText value="#{row.bindings.PrimaryAddressId.inputValue}"
+                                  label="#{bindings.CustomersU5.hints.PrimaryAddressId.label}"
+                                  required="#{bindings.CustomersU5.hints.PrimaryAddressId.mandatory}"
+                                  columns="#{bindings.CustomersU5.hints.PrimaryAddressId.displayWidth}"
+                                  maximumLength="#{bindings.CustomersU5.hints.PrimaryAddressId.precision}"
+                                  shortDesc="#{bindings.CustomersU5.hints.PrimaryAddressId.tooltip}" id="it10">
+                      <f:validator binding="#{row.bindings.PrimaryAddressId.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.CustomersU5.hints.PrimaryAddressId.format}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column headerText="#{bindings.CustomersU5.hints.ShippingAddressId.label}" id="c12">
+                    <af:inputText value="#{row.bindings.ShippingAddressId.inputValue}"
+                                  label="#{bindings.CustomersU5.hints.ShippingAddressId.label}"
+                                  required="#{bindings.CustomersU5.hints.ShippingAddressId.mandatory}"
+                                  columns="#{bindings.CustomersU5.hints.ShippingAddressId.displayWidth}"
+                                  maximumLength="#{bindings.CustomersU5.hints.ShippingAddressId.precision}"
+                                  shortDesc="#{bindings.CustomersU5.hints.ShippingAddressId.tooltip}" id="it11">
+                      <f:validator binding="#{row.bindings.ShippingAddressId.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.CustomersU5.hints.ShippingAddressId.format}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column headerText="#{bindings.CustomersU5.hints.CreatedBy.label}" id="c13">
+                    <af:inputText value="#{row.bindings.CreatedBy.inputValue}"
+                                  label="#{bindings.CustomersU5.hints.CreatedBy.label}"
+                                  required="#{bindings.CustomersU5.hints.CreatedBy.mandatory}"
+                                  columns="#{bindings.CustomersU5.hints.CreatedBy.displayWidth}"
+                                  maximumLength="#{bindings.CustomersU5.hints.CreatedBy.precision}"
+                                  shortDesc="#{bindings.CustomersU5.hints.CreatedBy.tooltip}" id="it12">
+                      <f:validator binding="#{row.bindings.CreatedBy.validator}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column headerText="#{bindings.CustomersU5.hints.CreatedOn.label}" id="c14">
+                    <af:inputDate value="#{row.bindings.CreatedOn.inputValue}"
+                                  label="#{bindings.CustomersU5.hints.CreatedOn.label}"
+                                  required="#{bindings.CustomersU5.hints.CreatedOn.mandatory}"
+                                  columns="#{bindings.CustomersU5.hints.CreatedOn.displayWidth}"
+                                  shortDesc="#{bindings.CustomersU5.hints.CreatedOn.tooltip}" id="id1">
+                      <f:validator binding="#{row.bindings.CreatedOn.validator}"/>
+                      <af:convertDateTime pattern="#{bindings.CustomersU5.hints.CreatedOn.format}"/>
+                    </af:inputDate>
+                  </af:column>
+                  <af:column headerText="#{bindings.CustomersU5.hints.LastUpdatedBy.label}" id="c15">
+                    <af:inputText value="#{row.bindings.LastUpdatedBy.inputValue}"
+                                  label="#{bindings.CustomersU5.hints.LastUpdatedBy.label}"
+                                  required="#{bindings.CustomersU5.hints.LastUpdatedBy.mandatory}"
+                                  columns="#{bindings.CustomersU5.hints.LastUpdatedBy.displayWidth}"
+                                  maximumLength="#{bindings.CustomersU5.hints.LastUpdatedBy.precision}"
+                                  shortDesc="#{bindings.CustomersU5.hints.LastUpdatedBy.tooltip}" id="it13">
+                      <f:validator binding="#{row.bindings.LastUpdatedBy.validator}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column headerText="#{bindings.CustomersU5.hints.LastUpdatedOn.label}" id="c16">
+                    <af:inputDate value="#{row.bindings.LastUpdatedOn.inputValue}"
+                                  label="#{bindings.CustomersU5.hints.LastUpdatedOn.label}"
+                                  required="#{bindings.CustomersU5.hints.LastUpdatedOn.mandatory}"
+                                  columns="#{bindings.CustomersU5.hints.LastUpdatedOn.displayWidth}"
+                                  shortDesc="#{bindings.CustomersU5.hints.LastUpdatedOn.tooltip}" id="id2">
+                      <f:validator binding="#{row.bindings.LastUpdatedOn.validator}"/>
+                      <af:convertDateTime pattern="#{bindings.CustomersU5.hints.LastUpdatedOn.format}"/>
+                    </af:inputDate>
+                  </af:column>
+                  <af:column headerText="#{bindings.CustomersU5.hints.VersionNo.label}" id="c17">
+                    <af:inputText value="#{row.bindings.VersionNo.inputValue}"
+                                  label="#{bindings.CustomersU5.hints.VersionNo.label}"
+                                  required="#{bindings.CustomersU5.hints.VersionNo.mandatory}"
+                                  columns="#{bindings.CustomersU5.hints.VersionNo.displayWidth}"
+                                  maximumLength="#{bindings.CustomersU5.hints.VersionNo.precision}"
+                                  shortDesc="#{bindings.CustomersU5.hints.VersionNo.tooltip}" id="it14">
+                      <f:validator binding="#{row.bindings.VersionNo.validator}"/>
+                      <af:convertNumber groupingUsed="false" pattern="#{bindings.CustomersU5.hints.VersionNo.format}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column headerText="#{bindings.CustomersU5.hints.IsActive.label}" id="c18">
+                    <af:inputText value="#{row.bindings.IsActive.inputValue}"
+                                  label="#{bindings.CustomersU5.hints.IsActive.label}"
+                                  required="#{bindings.CustomersU5.hints.IsActive.mandatory}"
+                                  columns="#{bindings.CustomersU5.hints.IsActive.displayWidth}"
+                                  maximumLength="#{bindings.CustomersU5.hints.IsActive.precision}"
+                                  shortDesc="#{bindings.CustomersU5.hints.IsActive.tooltip}" id="it15">
+                      <f:validator binding="#{row.bindings.IsActive.validator}"/>
+                    </af:inputText>
+                  </af:column>
+                </af:table>
+              </af:showDetailItem>
+              <af:showDetailItem id="tab3" text="Contacts" icon="/icons/contacts-icon.png">
+                <af:outputText value="Customer Contacts" id="ot3"
+                               inlineStyle="font-weight:bold; color:Black; font-size:large;"/>
+              </af:showDetailItem>
+              <af:showDetailItem id="tab4" text="Appointments" icon="/icons/appointments.png">
+                <af:outputText value="Customer Appointments" id="ot4"
+                               inlineStyle="font-weight:bold; color:Black; font-size:large;"/>
+              </af:showDetailItem>
+              <af:showDetailItem id="sdi1" text="Tasks" icon="/icons/business_business-opportunities-128.png">
+                <af:outputText value="Tasks" id="ot5"
+                               inlineStyle="font-weight:bold; color:Black; font-size:large;"/>
+              </af:showDetailItem>
+            </af:panelTabbed>
+          </af:panelGroupLayout>
+        </f:facet>
+      </af:panelStretchLayout>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_Customers_tab-->
+</f:view>

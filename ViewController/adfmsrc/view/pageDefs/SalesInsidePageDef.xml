@@ -7,9 +7,12 @@
     <iterator Binds="UsersU3" RangeSize="25" DataControl="AppModuleAMDataControl" id="UsersU3Iterator"/>
     <searchRegion Binds="UsersU3Iterator" Criteria="" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
                   id="UsersU3Query"/>
-    <iterator Binds="CustomersU1" RangeSize="25" DataControl="AppModuleAMDataControl1" id="CustomersU1Iterator"/>
-    <searchRegion Binds="CustomersU1Iterator" Criteria=""
-                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="CustomersU1Query"/>
+    <iterator Binds="CustomersU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="CustomersU1Iterator"/>
+    <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="CustomersU1Iterator" id="ImplicitViewCriteriaQuery"/>
+    <iterator Binds="ContactsU2" RangeSize="25" DataControl="AppModuleAMDataControl" id="ContactsU2Iterator"/>
+    <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="ContactsU2Iterator" id="ImplicitViewCriteriaQuery1"/>
   </executables>
   <bindings>
     <tree IterBinding="UsersU3Iterator" id="UsersU3">
@@ -39,64 +42,26 @@
         <AttrNames>
           <Item Value="CustomerName"/>
           <Item Value="ParentCompany"/>
-          <Item Value="PrimaryAddressId"/>
+          <Item Value="Ceo"/>
+          <Item Value="Email"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <attributeValues IterBinding="CustomersU1Iterator" id="CustomerName">
-      <AttrNames>
-        <Item Value="CustomerName"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="CustomersU1Iterator" id="CustomerTypeId">
-      <AttrNames>
-        <Item Value="CustomerTypeId"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="CustomersU1Iterator" id="PrimaryContactId">
-      <AttrNames>
-        <Item Value="PrimaryContactId"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="CustomersU1Iterator" id="Url">
-      <AttrNames>
-        <Item Value="Url"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="CustomersU1Iterator" id="ParentCompany">
-      <AttrNames>
-        <Item Value="ParentCompany"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="CustomersU1Iterator" id="Ceo">
-      <AttrNames>
-        <Item Value="Ceo"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="CustomersU1Iterator" id="NoOfEmployees">
-      <AttrNames>
-        <Item Value="NoOfEmployees"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="CustomersU1Iterator" id="Fax">
-      <AttrNames>
-        <Item Value="Fax"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="CustomersU1Iterator" id="Email">
-      <AttrNames>
-        <Item Value="Email"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="CustomersU1Iterator" id="PrimaryAddressId">
-      <AttrNames>
-        <Item Value="PrimaryAddressId"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="CustomersU1Iterator" id="ShippingAddressId">
-      <AttrNames>
-        <Item Value="ShippingAddressId"/>
-      </AttrNames>
-    </attributeValues>
+    <tree IterBinding="ContactsU2Iterator" id="ContactsU2">
+      <nodeDefinition DefName="model.UVO.ContactsUVO" Name="ContactsU20">
+        <AttrNames>
+          <Item Value="FirstName"/>
+          <Item Value="LastName"/>
+          <Item Value="IsPrimary"/>
+          <Item Value="Email"/>
+          <Item Value="WorkPhone"/>
+          <Item Value="MobilePhone"/>
+          <Item Value="AddressId"/>
+          <Item Value="BuyingRoleId"/>
+          <Item Value="DepartmentNameId"/>
+          <Item Value="InfluenceLevelId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
   </bindings>
 </pageDefinition>
