@@ -16,6 +16,11 @@
         <document>/WEB-INF/customer-flow.xml</document>
         <id>customer-flow</id>
       </task-flow-reference>
+      <input-parameter id="__14">
+        <name>inputParameter1</name>
+        <value>#{pageFlowScope.fromVal}</value>
+        <pass-by-value/>
+      </input-parameter>
       <run-as-dialog>
         <display-type>
           <inline-popup/>

@@ -144,6 +144,13 @@
     AssociationOtherEnd="model.ASSOC.CustomerAddressPrimaryASSOC.Address2"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Customer3Accessor"
+    Association="model.ASSOC.CustomerShippingAddressFkAddressASSOC"
+    AssociationEnd="model.ASSOC.CustomerShippingAddressFkAddressASSOC.Customer3Accessor"
+    AssociationOtherEnd="model.ASSOC.CustomerShippingAddressFkAddressASSOC.Address3Accessor"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
   <Key
     Name="AddressPk"
     PrimaryKey="true">

@@ -153,7 +153,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="CUSTOMERS">
+    TableName="CUSTOMERS"
+    IsUpdateable="while_insert">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
@@ -164,7 +165,8 @@
     SQLType="TIMESTAMP"
     Type="java.sql.Timestamp"
     ColumnType="TIMESTAMP"
-    TableName="CUSTOMERS"/>
+    TableName="CUSTOMERS"
+    IsUpdateable="while_insert"/>
   <Attribute
     Name="LastUpdatedBy"
     Precision="50"
@@ -202,7 +204,8 @@
     ColumnType="CHAR"
     TableName="CUSTOMERS"
     RetrievedOnUpdate="true"
-    RetrievedOnInsert="true">
+    RetrievedOnInsert="true"
+    DefaultValue="y">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -236,17 +239,24 @@
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
   <AccessorAttribute
-    Name="Address2"
-    Association="model.ASSOC.CustomerAddressPrimaryASSOC"
-    AssociationEnd="model.ASSOC.CustomerAddressPrimaryASSOC.Address2"
-    AssociationOtherEnd="model.ASSOC.CustomerAddressPrimaryASSOC.Customer2"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
     Name="Contact1"
     Association="model.ASSOC.CustomerContactPrimaryASSOC"
     AssociationEnd="model.ASSOC.CustomerContactPrimaryASSOC.Contact1"
     AssociationOtherEnd="model.ASSOC.CustomerContactPrimaryASSOC.Customer1"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Address2"
+    Association="model.ASSOC.CustomerAddressPrimaryASSOC"
+    AssociationEnd="model.ASSOC.CustomerAddressPrimaryASSOC.Address2"
+    AssociationOtherEnd="model.ASSOC.CustomerAddressPrimaryASSOC.Customer2"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Address3Accessor"
+    Association="model.ASSOC.CustomerShippingAddressFkAddressASSOC"
+    AssociationEnd="model.ASSOC.CustomerShippingAddressFkAddressASSOC.Address3Accessor"
+    AssociationOtherEnd="model.ASSOC.CustomerShippingAddressFkAddressASSOC.Customer3Accessor"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
   <Key

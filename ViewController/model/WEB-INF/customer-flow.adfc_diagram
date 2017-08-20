@@ -9,13 +9,13 @@
       <property
          name="pageFragment">false</property>
       <property
-         name="x">331.0</property>
+         name="x">383.0</property>
       <property
          name="start">true</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>Customers_tab&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">171.5459</property>
+         name="y">84.418945</property>
       <property
          name="page">/Customers_tab.jsf</property>
       <property
@@ -44,6 +44,41 @@
       <property
          name="fromOutcome">return</property>
       <property
-         name="sdm:polyPoints">R50,372.0,171.19531,585.0,162.5459,L50</property>
+         name="sdm:polyPoints">R50,424.0,84.06836,585.0,162.5459,L50</property>
+   </ControlFlowCase>
+   <View
+      id="View5">
+      <property
+         name="activityId">edit_customer</property>
+      <property
+         name="x">377.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Edit Customer&lt;/b>&lt;/p>&lt;p>Activity ID:  edit_customer&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">-70.103516</property>
+      <property
+         name="page">/edit_customer.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase6"
+      from="View2"
+      to="View5">
+      <property
+         name="fromOutcome">edit_customer</property>
+      <property
+         name="sdm:polyPoints">T44,379.5,30.06836,373.5,-16.002394,B44</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase7"
+      from="View5"
+      to="View2">
+      <property
+         name="fromOutcome">return_edit_customer</property>
+      <property
+         name="sdm:polyPoints">B56,380.5,-16.454102,386.5,29.618826,T56</property>
    </ControlFlowCase>
 </SDM>

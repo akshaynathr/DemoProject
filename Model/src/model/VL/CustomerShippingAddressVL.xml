@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="CustomerShippingAddressVL"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge">
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="CustomerShippingAddressVL_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewLinkDefEnd
+    Name="CustomersU2"
+    Cardinality="1"
+    Source="true"
+    Owner="model.UVO.CustomersUVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="CustomersU2"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.UVO.CustomersUVO.ShippingAddressId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="AddressU1"
+    Cardinality="1"
+    Owner="model.UVO.AddressUVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="AddressU1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.UVO.AddressUVO.AddressId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.VL.common.CustomerShippingAddressVLMsgBundle"/>
+  </ResourceBundle>
+</ViewLink>

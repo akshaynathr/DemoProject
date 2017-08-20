@@ -22,7 +22,8 @@
     PrecisionRule="true"
     EntityAttrName="AddressId"
     EntityUsage="AddressEO"
-    AliasName="ADDRESS_ID"/>
+    AliasName="ADDRESS_ID"
+    IsUpdateable="while_insert"/>
   <ViewAttribute
     Name="House"
     PrecisionRule="true"

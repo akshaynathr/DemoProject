@@ -4,70 +4,17 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="CustomersU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="CustomersU1Iterator"/>
     <iterator Binds="OpportunitiesU1" RangeSize="25" DataControl="AppModuleAMDataControl2"
               id="OpportunitiesU1Iterator"/>
     <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
                   Binds="OpportunitiesU1Iterator" id="ImplicitViewCriteriaQuery"/>
     <iterator Binds="OpportunitiesU1" RangeSize="25" DataControl="AppModuleAMDataControl3"
               id="OpportunitiesU1Iterator1"/>
+    <iterator Binds="CustomersU6" RangeSize="25" DataControl="AppModuleAMDataControl" id="CustomersU6Iterator"/>
+    <iterator Binds="AddressU5" RangeSize="25" DataControl="AppModuleAMDataControl" id="AddressU5Iterator"/>
+    <iterator Binds="AddressU2" RangeSize="25" DataControl="AppModuleAMDataControl" id="AddressU2Iterator"/>
   </executables>
   <bindings>
-    <attributeValues IterBinding="CustomersU1Iterator" id="CustomerName">
-      <AttrNames>
-        <Item Value="CustomerName"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="CustomersU1Iterator" id="CustomerTypeId">
-      <AttrNames>
-        <Item Value="CustomerTypeId"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="CustomersU1Iterator" id="PrimaryContactId">
-      <AttrNames>
-        <Item Value="PrimaryContactId"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="CustomersU1Iterator" id="Url">
-      <AttrNames>
-        <Item Value="Url"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="CustomersU1Iterator" id="ParentCompany">
-      <AttrNames>
-        <Item Value="ParentCompany"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="CustomersU1Iterator" id="Ceo">
-      <AttrNames>
-        <Item Value="Ceo"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="CustomersU1Iterator" id="NoOfEmployees">
-      <AttrNames>
-        <Item Value="NoOfEmployees"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="CustomersU1Iterator" id="Fax">
-      <AttrNames>
-        <Item Value="Fax"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="CustomersU1Iterator" id="Email">
-      <AttrNames>
-        <Item Value="Email"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="CustomersU1Iterator" id="PrimaryAddressId">
-      <AttrNames>
-        <Item Value="PrimaryAddressId"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="CustomersU1Iterator" id="ShippingAddressId">
-      <AttrNames>
-        <Item Value="ShippingAddressId"/>
-      </AttrNames>
-    </attributeValues>
     <tree IterBinding="OpportunitiesU1Iterator1" id="OpportunitiesU1">
       <nodeDefinition DefName="model.customer.UVO.OpportunitiesUVO" Name="OpportunitiesU10">
         <AttrNames>
@@ -76,5 +23,114 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <attributeValues IterBinding="CustomersU6Iterator" id="CustomerName">
+      <AttrNames>
+        <Item Value="CustomerName"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="CustomersU6Iterator" StaticList="false" Uses="LOV_CustomerTypeId" id="CustomerTypeId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <list IterBinding="CustomersU6Iterator" StaticList="false" Uses="LOV_PrimaryContactId" id="PrimaryContactId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="CustomersU6Iterator" id="Url">
+      <AttrNames>
+        <Item Value="Url"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomersU6Iterator" id="ParentCompany">
+      <AttrNames>
+        <Item Value="ParentCompany"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomersU6Iterator" id="Ceo">
+      <AttrNames>
+        <Item Value="Ceo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomersU6Iterator" id="NoOfEmployees">
+      <AttrNames>
+        <Item Value="NoOfEmployees"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomersU6Iterator" id="Fax">
+      <AttrNames>
+        <Item Value="Fax"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomersU6Iterator" id="Email">
+      <AttrNames>
+        <Item Value="Email"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU5Iterator" id="House">
+      <AttrNames>
+        <Item Value="House"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU5Iterator" id="Street">
+      <AttrNames>
+        <Item Value="Street"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU5Iterator" id="Locality">
+      <AttrNames>
+        <Item Value="Locality"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU5Iterator" id="City">
+      <AttrNames>
+        <Item Value="City"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU5Iterator" id="Pincode">
+      <AttrNames>
+        <Item Value="Pincode"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU5Iterator" id="State">
+      <AttrNames>
+        <Item Value="State"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU5Iterator" id="Country">
+      <AttrNames>
+        <Item Value="Country"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU2Iterator" id="House1">
+      <AttrNames>
+        <Item Value="House"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU2Iterator" id="Street1">
+      <AttrNames>
+        <Item Value="Street"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU2Iterator" id="Locality1">
+      <AttrNames>
+        <Item Value="Locality"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU2Iterator" id="City1">
+      <AttrNames>
+        <Item Value="City"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU2Iterator" id="Pincode1">
+      <AttrNames>
+        <Item Value="Pincode"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU2Iterator" id="State1">
+      <AttrNames>
+        <Item Value="State"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU2Iterator" id="Country1">
+      <AttrNames>
+        <Item Value="Country"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>

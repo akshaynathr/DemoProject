@@ -17,6 +17,18 @@
     Name="CustomerTypeLookupVO1"
     ViewObjectName="model.RVO.CustomerTypeLookupVO"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="CustomerTypeLookupVO2"
+    ViewObjectName="model.RVO.CustomerTypeLookupVO"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="CustomerTypeLookupVO3"
+    ViewObjectName="model.RVO.CustomerTypeLookupVO"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="PrimaryContactLookupVO1"
+    ViewObjectName="model.customer.RVO.PrimaryContactLookupVO"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_CustomerId"
     ListVOName="CustomerTypeLookupVO1"
@@ -34,6 +46,42 @@
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
+  <ListBinding
+    Name="LOV_CustomerTypeId"
+    ListVOName="CustomerTypeLookupVO3"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="CustomerTypeId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="LookupId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="PossibleValue"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_PrimaryContactId"
+    ListVOName="PrimaryContactLookupVO1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="PrimaryContactId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="ContactId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="FirstName"/>
+      <Item Value="LastName"/>
+      <Item Value="Email"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="CustomerEO"
     Entity="model.EO.CustomerEO"/>
@@ -44,7 +92,9 @@
     EntityAttrName="CustomerId"
     EntityUsage="CustomerEO"
     AliasName="CUSTOMER_ID"
-    LOVName="LOV_CustomerId">
+    LOVName="LOV_CustomerId"
+    IsUpdateable="false"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE
@@ -63,43 +113,81 @@
     PrecisionRule="true"
     EntityAttrName="CustomerTypeId"
     EntityUsage="CustomerEO"
-    AliasName="CUSTOMER_TYPE_ID"/>
+    AliasName="CUSTOMER_TYPE_ID"
+    LOVName="LOV_CustomerTypeId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+        <LABEL
+          ResId="CustomerTypeId_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="PrimaryContactId"
     PrecisionRule="true"
     EntityAttrName="PrimaryContactId"
     EntityUsage="CustomerEO"
-    AliasName="PRIMARY_CONTACT_ID"/>
+    AliasName="PRIMARY_CONTACT_ID"
+    LOVName="LOV_PrimaryContactId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+        <LABEL
+          ResId="PrimaryContactId_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Url"
     PrecisionRule="true"
     EntityAttrName="Url"
     EntityUsage="CustomerEO"
-    AliasName="URL"/>
+    AliasName="URL"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="ParentCompany"
     PrecisionRule="true"
     EntityAttrName="ParentCompany"
     EntityUsage="CustomerEO"
-    AliasName="PARENT_COMPANY"/>
+    AliasName="PARENT_COMPANY"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Ceo"
     PrecisionRule="true"
     EntityAttrName="Ceo"
     EntityUsage="CustomerEO"
-    AliasName="CEO"/>
+    AliasName="CEO">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="Ceo_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="NoOfEmployees"
     PrecisionRule="true"
     EntityAttrName="NoOfEmployees"
     EntityUsage="CustomerEO"
-    AliasName="NO_OF_EMPLOYEES"/>
+    AliasName="NO_OF_EMPLOYEES"
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="NoOfEmployees_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Fax"
     PrecisionRule="true"
     EntityAttrName="Fax"
     EntityUsage="CustomerEO"
-    AliasName="FAX"/>
+    AliasName="FAX"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Email"
     PrecisionRule="true"
@@ -111,53 +199,120 @@
     PrecisionRule="true"
     EntityAttrName="PrimaryAddressId"
     EntityUsage="CustomerEO"
-    AliasName="PRIMARY_ADDRESS_ID"/>
+    AliasName="PRIMARY_ADDRESS_ID"
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="PrimaryAddressId_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ShippingAddressId"
     PrecisionRule="true"
     EntityAttrName="ShippingAddressId"
     EntityUsage="CustomerEO"
-    AliasName="SHIPPING_ADDRESS_ID"/>
+    AliasName="SHIPPING_ADDRESS_ID"
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="ShippingAddressId_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="CreatedBy"
     PrecisionRule="true"
     EntityAttrName="CreatedBy"
     EntityUsage="CustomerEO"
-    AliasName="CREATED_BY"/>
+    AliasName="CREATED_BY"
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="CreatedOn"
     PrecisionRule="true"
     EntityAttrName="CreatedOn"
     EntityUsage="CustomerEO"
-    AliasName="CREATED_ON"/>
+    AliasName="CREATED_ON"
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="LastUpdatedBy"
     PrecisionRule="true"
     EntityAttrName="LastUpdatedBy"
     EntityUsage="CustomerEO"
-    AliasName="LAST_UPDATED_BY"/>
+    AliasName="LAST_UPDATED_BY"
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="LastUpdatedOn"
     PrecisionRule="true"
     EntityAttrName="LastUpdatedOn"
     EntityUsage="CustomerEO"
-    AliasName="LAST_UPDATED_ON"/>
+    AliasName="LAST_UPDATED_ON"
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="VersionNo"
     PrecisionRule="true"
     EntityAttrName="VersionNo"
     EntityUsage="CustomerEO"
-    AliasName="VERSION_NO"/>
+    AliasName="VERSION_NO"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="IsActive"
     PrecisionRule="true"
     EntityAttrName="IsActive"
     EntityUsage="CustomerEO"
     AliasName="IS_ACTIVE"
-    DefaultValue="y"/>
+    DefaultValue="y">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="IsActive_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="CustomersContactsU"
     ViewLink="model.UVO.CustomersContactsFk1VL"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="AddressU"
+    ViewLink="model.VL.CustomerPrimaryAddressVL"
+    Type="oracle.jbo.server.ViewRowImpl"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="AddressU1"
+    ViewLink="model.VL.CustomerShippingAddressVL"
+    Type="oracle.jbo.server.ViewRowImpl"
+    IsUpdateable="false"/>
+  <DeclarativeWhereClause
+    Name="DeclarativeWhereClause">
+    <ViewCriteria
+      Name="CustomersUVOWhereCriteria"
+      ViewObjectName="model.UVO.CustomersUVO"
+      Conjunction="AND"
+      Mode="3">
+      <ViewCriteriaRow
+        Name="CustomersUVOWhereCriteria_row_0"
+        UpperColumns="1">
+        <ViewCriteriaItem
+          Name="IsActive"
+          ViewAttribute="IsActive"
+          Operator="&lt;>"
+          Conjunction="AND"
+          Value="n"
+          UpperColumns="0"
+          Required="Optional"/>
+      </ViewCriteriaRow>
+    </ViewCriteria>
+  </DeclarativeWhereClause>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.UVO.common.CustomersUVOMsgBundle"/>
+  </ResourceBundle>
 </ViewObject>

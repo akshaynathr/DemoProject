@@ -4,64 +4,26 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="UsersU3" RangeSize="25" DataControl="AppModuleAMDataControl" id="UsersU3Iterator"/>
-    <searchRegion Binds="UsersU3Iterator" Criteria="" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
-                  id="UsersU3Query"/>
-    <iterator Binds="CustomersU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="CustomersU1Iterator"/>
+    <iterator Binds="CustomersU6" RangeSize="25" DataControl="AppModuleAMDataControl" id="CustomersU6Iterator"/>
     <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
-                  Binds="CustomersU1Iterator" id="ImplicitViewCriteriaQuery"/>
-    <iterator Binds="ContactsU2" RangeSize="25" DataControl="AppModuleAMDataControl" id="ContactsU2Iterator"/>
-    <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
-                  Binds="ContactsU2Iterator" id="ImplicitViewCriteriaQuery1"/>
+                  Binds="CustomersU6Iterator" id="ImplicitViewCriteriaQuery"/>
   </executables>
   <bindings>
-    <tree IterBinding="UsersU3Iterator" id="UsersU3">
-      <nodeDefinition DefName="model.UVO.UsersUVO" Name="UsersU30">
-        <AttrNames>
-          <Item Value="UserId"/>
-          <Item Value="GlobalUsername"/>
-          <Item Value="FirstName"/>
-          <Item Value="MiddleName"/>
-          <Item Value="LastName"/>
-          <Item Value="Password"/>
-          <Item Value="SupervisorId"/>
-          <Item Value="StartDate"/>
-          <Item Value="EndDate"/>
-          <Item Value="TeamId"/>
-          <Item Value="CreatedBy"/>
-          <Item Value="CreatedOn"/>
-          <Item Value="LastUpdatedBy"/>
-          <Item Value="LastUpdatedOn"/>
-          <Item Value="VersionNo"/>
-          <Item Value="IsActive"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
-    <tree IterBinding="CustomersU1Iterator" id="CustomersU1">
-      <nodeDefinition DefName="model.UVO.CustomersUVO" Name="CustomersU10">
+    <tree IterBinding="CustomersU6Iterator" id="CustomersU6">
+      <nodeDefinition DefName="model.UVO.CustomersUVO" Name="CustomersU60">
         <AttrNames>
           <Item Value="CustomerName"/>
-          <Item Value="ParentCompany"/>
+          <Item Value="CustomerTypeId"/>
           <Item Value="Ceo"/>
           <Item Value="Email"/>
+          <Item Value="CustomerId"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <tree IterBinding="ContactsU2Iterator" id="ContactsU2">
-      <nodeDefinition DefName="model.UVO.ContactsUVO" Name="ContactsU20">
-        <AttrNames>
-          <Item Value="FirstName"/>
-          <Item Value="LastName"/>
-          <Item Value="IsPrimary"/>
-          <Item Value="Email"/>
-          <Item Value="WorkPhone"/>
-          <Item Value="MobilePhone"/>
-          <Item Value="AddressId"/>
-          <Item Value="BuyingRoleId"/>
-          <Item Value="DepartmentNameId"/>
-          <Item Value="InfluenceLevelId"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
+    <attributeValues IterBinding="CustomersU6Iterator" id="CustomerId">
+      <AttrNames>
+        <Item Value="CustomerId"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>

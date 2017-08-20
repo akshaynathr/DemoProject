@@ -85,7 +85,7 @@
       <property
          name="fromOutcome">customer</property>
       <property
-         name="sdm:polyPoints">B33,695.5,116.896484,426.8418,339.11768,T44</property>
+         name="sdm:polyPoints">B33,695.5,116.19531,426.8418,339.12427,T44</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -95,7 +95,7 @@
       <property
          name="fromOutcome">return_customer</property>
       <property
-         name="sdm:polyPoints">T56,433.8418,342.39648,702.5,120.159996,B44</property>
+         name="sdm:polyPoints">T56,433.8418,342.39648,702.5,119.45231,B44</property>
    </ControlFlowCase>
    <View
       id="View9">
