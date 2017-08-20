@@ -12,7 +12,7 @@
                 <f:facet name="center">
                     <af:panelGroupLayout id="pgl2" layout="horizontal">
                         <af:panelGroupLayout id="pgl1" layout="horizontal">
-                            <af:panelBox text="Login Information" id="pb1" inlineStyle="width:666px; height:200px;"
+                            <af:panelBox text="Sign In" id="pb1" inlineStyle="width:666px; height:200px;"
                                          titleHalign="center" showDisclosure="false">
                                 <f:facet name="toolbar"/>
                                 <af:panelFormLayout id="pfl1">
@@ -25,7 +25,7 @@
                                             <f:facet name="start">
                                                 <!--<af:button text="Login" id="b1"  actionListener="#{loginBean.doLogin}" action="#{loginBean.getSecureNavigationAction}"
                                         selected="true"/>-->
-                                                <af:button text="Login" id="b1" actionListener="#{loginBean.doLogin}"
+                                                <af:button text="Sign In" id="b1" actionListener="#{loginBean.doLogin}"
                                                            selected="true"/>
                                             </f:facet>
                                         </af:panelBorderLayout>

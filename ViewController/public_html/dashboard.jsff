@@ -38,7 +38,7 @@
                          inlineStyle="border-color:#e7e7e7; padding:1.0% ; width: 25.0%;border-bottom-left-radius:1px 1px; border-bottom-right-radius:1px 1px; background-color:White; border-left-color:#e7e7e7; border-collapse:separate; border-style:solid;"
                          styleClass="AFMasonryTileSize1x1" halign="center">
       <af:panelGroupLayout id="pgl2" layout="vertical">
-        <af:outputText value="Oppurtunities" id="ot2" inlineStyle="font-size:130%; font-weight:bold;"/>
+        <af:outputText value="Opportunities" id="ot2" inlineStyle="font-size:130%; font-weight:bold;"/>
         <af:spacer width="10" height="10" id="s5"/>
         <af:panelGroupLayout id="pgl6" layout="horizontal">
           <af:spacer width="10" height="10" id="s12"/>
@@ -66,14 +66,15 @@
     </af:panelGroupLayout>
     </af:commandLink>
     
-      <af:commandLink inlineStyle="display:block;" id="cl3" action="report_sales_manager">
+      <af:commandLink inlineStyle="display:block;" id="cl3" action="report_sales_manager"
+                      rendered='#{securityContext.userInRole["manager"]}'>
       <af:setPropertyListener from="3" to="#{pageFlowScope.sales_manager_tabVal}" type="action"/>
       
     <af:panelGroupLayout id="pb3"
                          inlineStyle="border-color:#e7e7e7;padding:1.0% ;width: 25.0%; border-bottom-left-radius:1px 1px; border-bottom-right-radius:1px 1px; background-color:White; border-left-color:#e7e7e7; border-collapse:separate; border-style:solid;"
                          styleClass="AFMasonryTileSize1x1" halign="center">
       <af:panelGroupLayout id="pgl9" layout="vertical">
-        <af:outputText value="Report" id="ot10" inlineStyle="font-size:130%; font-weight:bold;"/>
+        <af:outputText value=" Report" id="ot10" inlineStyle="font-size:130%; font-weight:bold;"/>
         <af:panelGroupLayout id="pgl10">
           <af:spacer width="10" height="10" id="s16"/>
           <af:spacer width="10" height="10" id="s17"/>
@@ -162,6 +163,23 @@
         </af:panelGroupLayout>
       </af:panelGroupLayout>
     </af:panelGroupLayout>
+    </af:commandLink>
+    <af:commandLink inlineStyle="display:block;" id="cl5" action="report_sales_manager"
+                    rendered='#{securityContext.userInRole["sales-rep"]}'>
+      <af:setPropertyListener from="3" to="#{pageFlowScope.sales_manager_tabVal}" type="action"/>
+      <af:panelGroupLayout id="pgl26"
+                           inlineStyle="border-color:#e7e7e7;padding:1.0% ;width: 25.0%; border-bottom-left-radius:1px 1px; border-bottom-right-radius:1px 1px; background-color:White; border-left-color:#e7e7e7; border-collapse:separate; border-style:solid;"
+                           styleClass="AFMasonryTileSize1x1" halign="center">
+        <af:panelGroupLayout id="pgl27" layout="vertical">
+          <af:outputText value="My Report" id="ot23" inlineStyle="font-size:130%; font-weight:bold;"/>
+          <af:panelGroupLayout id="pgl28">
+            <af:spacer width="10" height="10" id="s2"/>
+            <af:spacer width="10" height="10" id="s20"/>
+            <af:image source="/icons/report.png" id="i10"/>
+          </af:panelGroupLayout>
+          <af:spacer width="10" height="10" id="s21"/>
+        </af:panelGroupLayout>
+      </af:panelGroupLayout>
     </af:commandLink>
   </af:masonryLayout>
 </ui:composition>

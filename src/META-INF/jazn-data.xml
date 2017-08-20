@@ -14,6 +14,19 @@
                     <credentials>{903}rrmXa2QnqzVmlH1ZnZg91ONY+6l6kZR0ze+frhFoSag=</credentials>
                     <display-name>Akshaynath R</display-name>
                 </user>
+                <user>
+                    <name>arjun</name>
+                    <credentials>{903}n6z+h7O5iAss0L4P9NWNeHysCrhlrPiK</credentials>
+                </user>
+                <user>
+                    <name>deepthi</name>
+                    <display-name>Deepthi MR</display-name>
+                    <credentials>{903}AMZUUrV4sXSUyHJxKJnl7lBwua+vwXMQMCPRoJ09IdQ=</credentials>
+                </user>
+                <user>
+                    <name>doyle</name>
+                    <credentials>{903}oR4lwNX28SSlt053ks86t+TY1JDUsDaD</credentials>
+                </user>
             </users>
         </realm>
     </jazn-realm>
@@ -47,6 +60,25 @@
                             <member>
                                 <class>oracle.security.jps.internal.core.principals.JpsXmlUserImpl</class>
                                 <name>AR_4</name>
+                            </member>
+                            <member>
+                                <class>oracle.security.jps.internal.core.principals.JpsXmlUserImpl</class>
+                                <name>deepthi</name>
+                            </member>
+                        </members>
+                    </app-role>
+                    <app-role>
+                        <name>sales-rep</name>
+                        <class>oracle.security.jps.service.policystore.ApplicationRole</class>
+                        <display-name>Sales representative</display-name>
+                        <members>
+                            <member>
+                                <class>oracle.security.jps.internal.core.principals.JpsXmlUserImpl</class>
+                                <name>arjun</name>
+                            </member>
+                            <member>
+                                <class>oracle.security.jps.internal.core.principals.JpsXmlUserImpl</class>
+                                <name>doyle</name>
                             </member>
                         </members>
                     </app-role>
@@ -141,11 +173,6 @@
                         </grantee>
                         <permissions>
                             <permission>
-                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
-                                <name>view.pageDefs.HomePageDef</name>
-                                <actions>customize,grant,personalize,view</actions>
-                            </permission>
-                            <permission>
                                 <class>oracle.adf.controller.security.TaskFlowPermission</class>
                                 <name>/WEB-INF/salesmanager.xml#test-flow</name>
                                 <actions>view</actions>
@@ -222,6 +249,43 @@
                             <permission>
                                 <class>oracle.adf.controller.security.TaskFlowPermission</class>
                                 <name>/WEB-INF/create_customer_flow.xml#create_customer_flow</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/salesmanager.xml#test-flow</name>
+                                <actions>view</actions>
+                            </permission>
+                        </permissions>
+                    </grant>
+                    <grant>
+                        <grantee>
+                            <principals>
+                                <principal>
+                                    <class>oracle.security.jps.service.policystore.ApplicationRole</class>
+                                    <name>sales-rep</name>
+                                </principal>
+                            </principals>
+                        </grantee>
+                        <permissions>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>view.pageDefs.HomePageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/salesmanager.xml#test-flow</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/customer-flow.xml#customer-flow</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/oppurtunity-flow.xml#oppurtunity-flow</name>
                                 <actions>view</actions>
                             </permission>
                         </permissions>
