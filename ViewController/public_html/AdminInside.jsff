@@ -12,97 +12,100 @@
                            depressedIcon="#{resource['images:user.jpg']}"
                            disclosed="#{(pageFlowScope.tabVal==1)?true:false}">
           <f:facet name="toolbar"/>
-          <af:panelGroupLayout layout="vertical" id="pgl1">
-            <af:panelGroupLayout id="pgl3" layout="horizontal">
-              <af:quickQuery label="Search" searchDesc="Search" id="qryId1"
-                             value="#{bindings.ImplicitViewCriteriaQuery.quickQueryDescriptor}"
-                             model="#{bindings.ImplicitViewCriteriaQuery.queryModel}"
-                             queryListener="#{bindings.ImplicitViewCriteriaQuery.processQuery}">
-                <f:facet name="end">
-                  <af:commandLink text="Advanced" rendered="false" id="cl1"/>
-                </f:facet>
-              </af:quickQuery>
-              <af:button text="CreateUser" id="b1" action="UserTrain1" useWindow="true" windowWidth="600"/>
-              <af:button text="Delete" disabled="#{!bindings.Delete.enabled}" id="b3"
-                         action="#{safeDeleteBean.commit_Delete}"/>
-            </af:panelGroupLayout>
-            <af:table value="#{bindings.UsersU3.collectionModel}" var="row" rows="#{bindings.UsersU3.rangeSize}"
-                      emptyText="#{bindings.UsersU3.viewable ? 'No data to display.' : 'Access Denied.'}"
-                      rowBandingInterval="0" selectedRowKeys="#{bindings.UsersU3.collectionModel.selectedRow}"
-                      selectionListener="#{bindings.UsersU3.collectionModel.makeCurrent}" rowSelection="single"
-                      fetchSize="#{bindings.UsersU3.rangeSize}" partialTriggers="::qryId1 ::b3" id="t1">
-              <af:column headerText="#{bindings.UsersU3.hints.GlobalUsername.label}" id="c1">
-                <af:link text="#{row.GlobalUsername}" id="l1" action="edit" useWindow="true"
-                         windowEmbedStyle="inlineDocument" windowHeight="400" windowWidth="400"/>
-              </af:column>
-              <af:column headerText="#{bindings.UsersU3.hints.FirstName.label}" id="c2">
-                <af:outputText value="#{row.FirstName}" shortDesc="#{bindings.UsersU3.hints.FirstName.tooltip}"
-                               id="ot2"/>
-              </af:column>
-              <af:column headerText="#{bindings.UsersU3.hints.MiddleName.label}" id="c3">
-                <af:outputText value="#{row.MiddleName}" shortDesc="#{bindings.UsersU3.hints.MiddleName.tooltip}"
-                               id="ot3"/>
-              </af:column>
-              <af:column headerText="#{bindings.UsersU3.hints.LastName.label}" id="c4">
-                <af:outputText value="#{row.LastName}" shortDesc="#{bindings.UsersU3.hints.LastName.tooltip}" id="ot4"/>
-              </af:column>
-              <af:column headerText="#{bindings.UsersU3.hints.Password.label}" id="c5">
-                <af:outputText value="#{row.Password}" shortDesc="#{bindings.UsersU3.hints.Password.tooltip}" id="ot5"/>
-              </af:column>
-              <af:column headerText="#{bindings.UsersU3.hints.SupervisorId.label}" id="c6">
-                <af:selectOneChoice value="#{row.bindings.SupervisorId.inputValue}"
-                                    label="#{row.bindings.SupervisorId.label}"
-                                    required="#{bindings.UsersU3.hints.SupervisorId.mandatory}"
-                                    shortDesc="#{bindings.UsersU3.hints.SupervisorId.tooltip}" readOnly="true"
-                                    id="soc1">
-                  <f:selectItems value="#{row.bindings.SupervisorId.items}" id="si1"/>
-                  <f:validator binding="#{row.bindings.SupervisorId.validator}"/>
-                </af:selectOneChoice>
-              </af:column>
-              <af:column headerText="#{bindings.UsersU3.hints.StartDate.label}" id="c7">
-                <af:outputText value="#{row.StartDate}" shortDesc="#{bindings.UsersU3.hints.StartDate.tooltip}"
-                               id="ot6">
-                  <af:convertDateTime pattern="#{bindings.UsersU3.hints.StartDate.format}"/>
-                </af:outputText>
-              </af:column>
-              <af:column headerText="#{bindings.UsersU3.hints.EndDate.label}" id="c8">
-                <af:outputText value="#{row.EndDate}" shortDesc="#{bindings.UsersU3.hints.EndDate.tooltip}" id="ot7">
-                  <af:convertDateTime pattern="#{bindings.UsersU3.hints.EndDate.format}"/>
-                </af:outputText>
-              </af:column>
-              <af:column headerText="#{bindings.UsersU3.hints.TeamId.label}" id="c9">
-                <af:outputText value="#{row.TeamId}" shortDesc="#{bindings.UsersU3.hints.TeamId.tooltip}" id="ot8">
-                  <af:convertNumber groupingUsed="false" pattern="#{bindings.UsersU3.hints.TeamId.format}"/>
-                </af:outputText>
-              </af:column>
-            </af:table>
-            <af:table value="#{bindings.UsersRolesU1.collectionModel}" var="row"
-                      rows="#{bindings.UsersRolesU1.rangeSize}"
-                      emptyText="#{bindings.UsersRolesU1.viewable ? 'No data to display.' : 'Access Denied.'}"
-                      rowBandingInterval="0" fetchSize="#{bindings.UsersRolesU1.rangeSize}" id="t4"
-                      partialTriggers="::t1">
-              <af:column headerText="Role" id="c14">
-                <af:selectOneChoice value="#{row.bindings.RoleId.inputValue}" label="#{row.bindings.RoleId.label}"
-                                    required="#{bindings.UsersRolesU1.hints.RoleId.mandatory}"
-                                    shortDesc="#{bindings.UsersRolesU1.hints.RoleId.tooltip}" readOnly="true" id="soc5">
-                  <f:selectItems value="#{row.bindings.RoleId.items}" id="si5"/>
-                  <f:validator binding="#{row.bindings.RoleId.validator}"/>
-                </af:selectOneChoice>
-              </af:column>
-              <af:column headerText="Start Date" id="c19">
-                <af:outputText value="#{row.StartDate}" shortDesc="#{bindings.UsersRolesU1.hints.StartDate.tooltip}"
-                               id="ot1">
-                  <af:convertDateTime pattern="#{bindings.UsersRolesU1.hints.StartDate.format}"/>
-                </af:outputText>
-              </af:column>
-              <af:column headerText="End Date" id="c20">
-                <af:outputText value="#{row.EndDate}" shortDesc="#{bindings.UsersRolesU1.hints.EndDate.tooltip}"
-                               id="ot14">
-                  <af:convertDateTime pattern="#{bindings.UsersRolesU1.hints.EndDate.format}"/>
-                </af:outputText>
-              </af:column>
-            </af:table>
-          </af:panelGroupLayout>
+          <af:panelBorderLayout id="pbl2">
+            <f:facet name="top">
+              <af:activeOutputText value="Manage Users" id="aot1" inlineStyle="font-size:x-large; color:Navy;"/>
+              <af:panelGroupLayout id="pgl3" halign="center" valign="middle" layout="horizontal">
+                <af:quickQuery label="Search" searchDesc="Search" id="qryId3"
+                               value="#{bindings.ImplicitViewCriteriaQuery2.quickQueryDescriptor}"
+                               model="#{bindings.ImplicitViewCriteriaQuery2.queryModel}"
+                               queryListener="#{bindings.ImplicitViewCriteriaQuery2.processQuery}">
+                  <f:facet name="end">
+                    <af:commandLink text="Advanced" rendered="false" id="cl3"/>
+                  </f:facet>
+                </af:quickQuery>
+                <af:button text="CreateUser" id="b1" action="UserTrain1" useWindow="true" windowWidth="600"/>
+                <af:button text="Delete" disabled="#{!bindings.Delete.enabled}" id="b3"
+                           action="#{safeDeleteBean.commit_Delete}"/>
+              </af:panelGroupLayout>
+            </f:facet>
+            <f:facet name="bottom"/>
+            <f:facet name="start"/>
+            <af:panelGridLayout id="pgl5">
+              <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
+                <af:gridCell marginStart="5px" width="75%" id="gc1" halign="stretch">
+                  <af:table value="#{bindings.UsersU41.collectionModel}" var="row" rows="#{bindings.UsersU41.rangeSize}"
+                            emptyText="#{bindings.UsersU41.viewable ? 'No data to display.' : 'Access Denied.'}"
+                            rowBandingInterval="0" selectedRowKeys="#{bindings.UsersU41.collectionModel.selectedRow}"
+                            selectionListener="#{bindings.UsersU41.collectionModel.makeCurrent}" rowSelection="single"
+                            fetchSize="#{bindings.UsersU41.rangeSize}" partialTriggers="::qryId3" id="t1">
+                    <af:column headerText="Global name" id="c1">
+                      <af:link text="#{row.GlobalUsername}" id="l1" action="edit" useWindow="true" windowHeight="500"
+                               windowWidth="600"/>
+                    </af:column>
+                    <af:column headerText="First Name" id="c2">
+                      <af:outputText value="#{row.FirstName}" shortDesc="#{bindings.UsersU41.hints.FirstName.tooltip}"
+                                     id="ot2"/>
+                    </af:column>
+                    <af:column headerText="Middle Name" id="c3">
+                      <af:outputText value="#{row.MiddleName}" shortDesc="#{bindings.UsersU41.hints.MiddleName.tooltip}"
+                                     id="ot3"/>
+                    </af:column>
+                    <af:column headerText="Last Name" id="c4">
+                      <af:outputText value="#{row.LastName}" shortDesc="#{bindings.UsersU41.hints.LastName.tooltip}"
+                                     id="ot4"/>
+                    </af:column>
+                    <af:column headerText="Manager" id="c5">
+                      <af:selectOneChoice value="#{row.bindings.SupervisorId.inputValue}"
+                                          label="#{row.bindings.SupervisorId.label}"
+                                          required="#{bindings.UsersU41.hints.SupervisorId.mandatory}"
+                                          shortDesc="#{bindings.UsersU41.hints.SupervisorId.tooltip}" readOnly="true"
+                                          id="soc1">
+                        <f:selectItems value="#{row.bindings.SupervisorId.items}" id="si1"/>
+                        <f:validator binding="#{row.bindings.SupervisorId.validator}"/>
+                      </af:selectOneChoice>
+                    </af:column>
+                    <af:column headerText="Start Date" id="c6">
+                      <af:outputText value="#{row.StartDate}" shortDesc="#{bindings.UsersU41.hints.StartDate.tooltip}"
+                                     id="ot5">
+                        <af:convertDateTime pattern="#{bindings.UsersU41.hints.StartDate.format}"/>
+                      </af:outputText>
+                    </af:column>
+                    <af:column headerText="Team No" id="c8" width="60">
+                      <af:outputText value="#{row.TeamId}" shortDesc="#{bindings.UsersU41.hints.TeamId.tooltip}"
+                                     id="ot7">
+                        <af:convertNumber groupingUsed="false" pattern="#{bindings.UsersU41.hints.TeamId.format}"/>
+                      </af:outputText>
+                    </af:column>
+                  </af:table>
+                </af:gridCell>
+                <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc2" halign="stretch">
+                  <af:table value="#{bindings.UserRolesMaster11.collectionModel}" var="row"
+                            rows="#{bindings.UserRolesMaster11.rangeSize}"
+                            emptyText="#{bindings.UserRolesMaster11.viewable ? 'No data to display.' : 'Access Denied.'}"
+                            rowBandingInterval="0" fetchSize="#{bindings.UserRolesMaster11.rangeSize}" id="t4">
+                    <af:column headerText="Role" id="c26">
+                      <af:selectOneChoice value="#{row.bindings.RoleNameId.inputValue}"
+                                          label="#{row.bindings.RoleNameId.label}"
+                                          required="#{bindings.UserRolesMaster11.hints.RoleNameId.mandatory}"
+                                          shortDesc="#{bindings.UserRolesMaster11.hints.RoleNameId.tooltip}"
+                                          readOnly="true" id="soc4">
+                        <f:selectItems value="#{row.bindings.RoleNameId.items}" id="si4"/>
+                        <f:validator binding="#{row.bindings.RoleNameId.validator}"/>
+                      </af:selectOneChoice>
+                    </af:column>
+                    <af:column headerText="Assigned" id="c27">
+                      <af:selectBooleanCheckbox value="#{row.bindings.AreAssociated.inputValue}"
+                                                label="#{row.bindings.AreAssociated.label}"
+                                                shortDesc="#{bindings.UserRolesMaster11.hints.AreAssociated.tooltip}"
+                                                id="sbc2" autoSubmit="true"/>
+                    </af:column>
+                  </af:table>
+                </af:gridCell>
+              </af:gridRow>
+            </af:panelGridLayout>
+            <f:facet name="end"/>
+          </af:panelBorderLayout>
         </af:showDetailItem>
         <af:showDetailItem id="sdi1" icon="#{resource['images:paper-box-icon-4352.png']}"
                            depressedIcon="#{resource['images:paper-box-icon-4352.png']}"
@@ -111,30 +114,25 @@
           <af:panelSplitter id="ps1" positionedFromEnd="true">
             <f:facet name="first">
               <af:panelGroupLayout layout="vertical" id="pgl2">
-                <af:panelHeader text="Product" id="ph2">
-                  <af:panelGroupLayout id="pgl4" layout="horizontal">
-                    <af:button text="Create Product" id="b2" useWindow="true" windowHeight="500" action="createProduct"
-                               windowWidth="600"/>
-                    <af:button text="Create Category" id="b6" action="create_product_category"
-                               windowModalityType="applicationModal" windowEmbedStyle="inlineDocument"
-                               useWindow="true"/>
-                    <af:button text="Delete Product"
-                               disabled="#{!bindings.Delete1.enabled}" id="b4"
-                               action="#{safeDeleteBean.commit_Delete_Product}"/>
-                  </af:panelGroupLayout>
-                  <af:spacer width="10" height="10" id="s1"/>
-                </af:panelHeader>
-                <af:panelGroupLayout layout="vertical" id="pgl5"/>
                 <af:panelGroupLayout layout="vertical" id="pgl7">
-                  <af:panelHeader text="ProductEO" id="ph1">
-                    <af:quickQuery label="Search" searchDesc="Search" id="qryId2"
-                                   value="#{bindings.ImplicitViewCriteriaQuery1.quickQueryDescriptor}"
-                                   model="#{bindings.ImplicitViewCriteriaQuery1.queryModel}"
-                                   queryListener="#{bindings.ImplicitViewCriteriaQuery1.processQuery}">
-                      <f:facet name="end">
-                        <af:commandLink text="Advanced" rendered="false" id="cl2"/>
-                      </f:facet>
-                    </af:quickQuery>
+                  <af:panelHeader text="Manage Products" id="ph1">
+                    <af:panelGroupLayout id="pgl4">
+                      <af:quickQuery label="Search" searchDesc="Search" id="qryId2"
+                                     value="#{bindings.ImplicitViewCriteriaQuery1.quickQueryDescriptor}"
+                                     model="#{bindings.ImplicitViewCriteriaQuery1.queryModel}"
+                                     queryListener="#{bindings.ImplicitViewCriteriaQuery1.processQuery}">
+                        <f:facet name="end">
+                          <af:commandLink text="Advanced" rendered="false" id="cl2"/>
+                        </f:facet>
+                      </af:quickQuery>
+                      <af:button text="Create Product" id="b2" useWindow="true" windowHeight="500"
+                                 action="createProduct" windowWidth="600"/>
+                      <af:button text="Create Category" id="b6" action="create_product_category"
+                                 windowModalityType="applicationModal" windowEmbedStyle="inlineDocument"
+                                 useWindow="true"/>
+                      <af:button text="Delete Product" disabled="#{!bindings.Delete1.enabled}" id="b4"
+                                 action="#{safeDeleteBean.commit_Delete_Product}"/>
+                    </af:panelGroupLayout>
                   </af:panelHeader>
                   <af:table value="#{bindings.ProductsU1.collectionModel}" var="row"
                             rows="#{bindings.ProductsU1.rangeSize}"
@@ -147,8 +145,8 @@
                             varStatus="vs" partialTriggers="::qryId2 ::b4" id="t2">
                     <af:column sortProperty="#{bindings.ProductsU1.hints.ProductName.name}" filterable="true"
                                sortable="true" headerText="#{bindings.ProductsU1.hints.ProductName.label}" id="c10">
-                      <af:outputText value="#{row.ProductName}"
-                                     shortDesc="#{bindings.ProductsU1.hints.ProductName.tooltip}" id="ot9"/>
+                      <af:link text="#{row.ProductName}" id="l2" action="editProduct" useWindow="true"
+                               windowEmbedStyle="inlineDocument" windowHeight="500" windowWidth="600"/>
                     </af:column>
                     <af:column sortProperty="#{bindings.ProductsU1.hints.ProductDescription.name}" filterable="true"
                                sortable="true" headerText="#{bindings.ProductsU1.hints.ProductDescription.label}"
@@ -214,7 +212,7 @@
                   <af:outputText value="#{row.LastName}" shortDesc="#{bindings.UsersU4.hints.LastName.tooltip}"
                                  id="ot15"/>
                 </af:column>
-                <af:column headerText="#{bindings.UsersU4.hints.TeamId.label}" id="c21">
+                <af:column headerText="Team Number" id="c21">
                   <af:outputText value="#{row.TeamId}" shortDesc="#{bindings.UsersU4.hints.TeamId.tooltip}" id="ot16">
                     <af:convertNumber groupingUsed="false" pattern="#{bindings.UsersU4.hints.TeamId.format}"/>
                   </af:outputText>
@@ -224,7 +222,7 @@
                         rows="#{bindings.UserRolesMaster1.rangeSize}"
                         emptyText="#{bindings.UserRolesMaster1.viewable ? 'No data to display.' : 'Access Denied.'}"
                         rowBandingInterval="0" fetchSize="#{bindings.UserRolesMaster1.rangeSize}" id="t5">
-                <af:column headerText="#{bindings.UserRolesMaster1.hints.RoleId.label}" id="c22">
+                <af:column headerText="Role" id="c22">
                   <af:selectOneChoice value="#{row.bindings.RoleId.inputValue}" label="#{row.bindings.RoleId.label}"
                                       required="#{bindings.UserRolesMaster1.hints.RoleId.mandatory}"
                                       shortDesc="#{bindings.UserRolesMaster1.hints.RoleId.tooltip}" readOnly="true"
@@ -233,7 +231,7 @@
                     <f:validator binding="#{row.bindings.RoleId.validator}"/>
                   </af:selectOneChoice>
                 </af:column>
-                <af:column headerText="#{bindings.UserRolesMaster1.hints.AreAssociated.label}" id="c23">
+                <af:column headerText="Assigned" id="c23">
                   <af:selectBooleanCheckbox value="#{row.bindings.AreAssociated.inputValue}"
                                             label="#{row.bindings.AreAssociated.label}"
                                             shortDesc="#{bindings.UserRolesMaster1.hints.AreAssociated.tooltip}"
@@ -242,6 +240,7 @@
               </af:table>
             </af:panelBorderLayout>
           </af:panelGroupLayout>
+          <af:panelGroupLayout id="pgl8"/>
         </af:showDetailItem>
       </af:panelTabbed>
     </f:facet>

@@ -25,7 +25,8 @@
     Type="java.lang.Long"
     ColumnType="NUMBER"
     TableName="USERS"
-    PrimaryKey="true"/>
+    PrimaryKey="true"
+    IsQueriable="false"/>
   <Attribute
     Name="GlobalUsername"
     Precision="20"

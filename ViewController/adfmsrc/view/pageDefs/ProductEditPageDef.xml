@@ -24,6 +24,5 @@
     </attributeValues>
     <list IterBinding="ProductsU1Iterator" StaticList="false" Uses="LOV_ProductCategoryId" id="ProductCategoryId"
           DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
-    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleAMDataControl"/>
   </bindings>
 </pageDefinition>

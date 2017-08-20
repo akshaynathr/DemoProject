@@ -191,7 +191,8 @@
     PrecisionRule="true"
     EntityAttrName="UserId"
     EntityUsage="UserEO"
-    AliasName="USER_ID"/>
+    AliasName="USER_ID"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="VersionNo"
     PrecisionRule="true"

@@ -61,8 +61,10 @@
       id="ControlFlowCase7"
       to="View2">
       <property
+         name="tosrcid">__5</property>
+      <property
          name="fromOutcome">CreateInsert</property>
       <property
-         name="sdm:polyPoints">T50,225.01465,192.09766,327.0,123.74121,L50</property>
+         name="fromsrcid">__4</property>
    </ControlFlowCase>
 </SDM>

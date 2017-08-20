@@ -56,7 +56,8 @@
     EntityAttrName="UserId"
     EntityUsage="UserEO"
     AliasName="USER_ID"
-    IsUpdateable="false"/>
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="GlobalUsername"
     PrecisionRule="true"
@@ -201,7 +202,8 @@
     PrecisionRule="true"
     EntityAttrName="IsActive"
     EntityUsage="UserEO"
-    AliasName="IS_ACTIVE"/>
+    AliasName="IS_ACTIVE"
+    DefaultValue="y"/>
   <ViewCriteria
     Name="ViewAllUsers"
     ViewObjectName="model.UVO.UsersUVO"
@@ -266,4 +268,24 @@
     <PropertiesBundle
       PropertiesFile="model.UVO.common.UsersUVOMsgBundle"/>
   </ResourceBundle>
+  <DeclarativeWhereClause
+    Name="DeclarativeWhereClause">
+    <ViewCriteria
+      Name="UsersUVOWhereCriteria"
+      ViewObjectName="model.UVO.UsersUVO"
+      Conjunction="AND"
+      Mode="3">
+      <ViewCriteriaRow
+        Name="UsersUVOWhereCriteria_row_0"
+        UpperColumns="1">
+        <ViewCriteriaItem
+          Name="IsActive"
+          ViewAttribute="IsActive"
+          Operator="&lt;>"
+          Conjunction="AND"
+          Value="n"
+          Required="Optional"/>
+      </ViewCriteriaRow>
+    </ViewCriteria>
+  </DeclarativeWhereClause>
 </ViewObject>
