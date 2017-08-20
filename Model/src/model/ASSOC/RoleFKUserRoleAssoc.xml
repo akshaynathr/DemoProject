@@ -14,7 +14,8 @@
     Cardinality="1"
     Source="true"
     Owner="model.EO.RoleEO"
-    LockLevel="NONE">
+    LockLevel="NONE"
+    DeleteContainee="true">
     <DesignTime>
       <Attr Name="_isUpdateable" Value="true"/>
       <Attr Name="_minCardinality" Value="1"/>

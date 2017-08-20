@@ -260,17 +260,6 @@
       <property
          name="sdm:polyPoints">L54,466.47272,94.44824,144.05249,99.29297,R54</property>
    </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase29"
-      from="View3">
-      <property
-         name="tosrcid">__6</property>
-      <property
-         name="fromOutcome">UserTrain2</property>
-      <property
-         name="fromsrcid">__5</property>
-   </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall27">
       <property
@@ -299,5 +288,16 @@
          name="fromOutcome">createRoll</property>
       <property
          name="sdm:polyPoints">B39,501.0,144.94824,349.6836,258.79883,T50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase29"
+      from="View3">
+      <property
+         name="tosrcid">__6</property>
+      <property
+         name="fromOutcome">UserTrain2</property>
+      <property
+         name="fromsrcid">__5</property>
    </ControlFlowCase>
 </SDM>

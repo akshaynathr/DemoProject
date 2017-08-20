@@ -30,7 +30,7 @@
       <property
          name="description">&lt;html>&lt;p>&lt;b>commit&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  commit&lt;/p></property>
       <property
-         name="y">155.5459</property>
+         name="y">154.84473</property>
       <property
          name="finish">true</property>
       <property
@@ -44,7 +44,7 @@
       <property
          name="fromOutcome">commit</property>
       <property
-         name="sdm:polyPoints">R50,550.0,90.896484,599.0,155.19531,L50</property>
+         name="sdm:polyPoints">R50,550.0,90.896484,599.0,154.49414,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"

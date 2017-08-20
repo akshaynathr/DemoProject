@@ -4,9 +4,9 @@
                 SkipValidation="true">
   <parameters/>
   <executables>
-    <iterator Binds="ProductsU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="ProductsU1Iterator"/>
+    <iterator Binds="LookupsU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="LookupsU1Iterator"/>
   </executables>
   <bindings>
-    <action IterBinding="ProductsU1Iterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action IterBinding="LookupsU1Iterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
   </bindings>
 </pageDefinition>

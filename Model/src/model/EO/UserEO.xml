@@ -10,7 +10,8 @@
   DBObjectName="USERS"
   AliasName="UserEO"
   BindingStyle="OracleName"
-  RowClass="model.EO.UserEOImpl">
+  RowClass="model.EO.UserEOImpl"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <DesignTime>
     <Attr Name="_codeGenFlag2" Value="Access"/>
     <Attr Name="_isCodegen" Value="true"/>

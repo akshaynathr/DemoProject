@@ -188,7 +188,8 @@
               <f:facet name="top">
                 <af:button text="Create Role" id="b7" action="createRoll" useWindow="true"
                            windowEmbedStyle="window"/>
-                <af:button text="Delete Role" id="b8"/>
+                <af:button text="Delete2"
+                           disabled="#{!bindings.Delete2.enabled}" id="b8" action="#{safeDeleteBean.deleteRole}"/>
               </f:facet>
               <f:facet name="bottom"/>
               <f:facet name="start"/>
@@ -207,7 +208,7 @@
                           emptyText="#{bindings.RolesU1.viewable ? 'No data to display.' : 'Access Denied.'}"
                           rowBandingInterval="0" selectedRowKeys="#{bindings.RolesU1.collectionModel.selectedRow}"
                           selectionListener="#{bindings.RolesU1.collectionModel.makeCurrent}" rowSelection="single"
-                          fetchSize="#{bindings.RolesU1.rangeSize}" partialTriggers="::qryId1" id="t3">
+                          fetchSize="#{bindings.RolesU1.rangeSize}" partialTriggers="::qryId1 ::b8" id="t3">
                   <af:column headerText="#{bindings.RolesU1.hints.RoleNameId.label}" id="c7">
                     <af:selectOneChoice value="#{row.bindings.RoleNameId.inputValue}"
                                         label="#{row.bindings.RoleNameId.label}"
@@ -258,4 +259,5 @@
       </af:panelTabbed>
     </f:facet>
   </af:panelStretchLayout>
+  <!--oracle-jdev-comment:preferred-managed-bean-name:safeDeleteBean-->
 </ui:composition>

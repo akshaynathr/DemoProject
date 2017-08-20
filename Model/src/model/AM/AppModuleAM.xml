@@ -175,6 +175,9 @@
   <ViewUsage
     Name="CustomersU5"
     ViewObjectName="model.UVO.CustomersUVO"/>
+  <ViewUsage
+    Name="UsersRolesU3"
+    ViewObjectName="model.UVO.UsersRolesUVO"/>
   <ViewLinkUsage
     Name="UsersFk1VL1"
     ViewLinkObjectName="model.UVO.UsersFk1VL"
@@ -264,5 +267,11 @@
     ViewLinkObjectName="model.customer.UVO.TasksOppurtunityVL"
     SrcViewUsageName="model.AM.AppModuleAM.OpportunitiesU3"
     DstViewUsageName="model.AM.AppModuleAM.TasksU1"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="RoleFKUserRoleVL1"
+    ViewLinkObjectName="model.VL.RoleFKUserRoleVL"
+    SrcViewUsageName="model.AM.AppModuleAM.RolesU1"
+    DstViewUsageName="model.AM.AppModuleAM.UsersRolesU3"
     Reversed="false"/>
 </AppModule>

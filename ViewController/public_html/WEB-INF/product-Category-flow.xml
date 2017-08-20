@@ -13,17 +13,29 @@
     <view id="Create-category">
       <page>/Create-category.jsf</page>
     </view>
+    <task-flow-return id="commit">
+      <outcome>
+        <name>commit</name>
+      </outcome>
+    </task-flow-return>
     <method-call id="CreateInsert">
       <method>#{bindings.CreateInsert.execute}</method>
       <outcome>
         <fixed-outcome>CreateInsert</fixed-outcome>
       </outcome>
     </method-call>
-    <control-flow-rule id="__2">
+    <control-flow-rule id="__5">
       <from-activity-id>CreateInsert</from-activity-id>
-      <control-flow-case id="__3">
+      <control-flow-case id="__6">
         <from-outcome>CreateInsert</from-outcome>
         <to-activity-id>Create-category</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__7">
+      <from-activity-id>Create-category</from-activity-id>
+      <control-flow-case id="__8">
+        <from-outcome>commit</from-outcome>
+        <to-activity-id>commit</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
   </task-flow-definition>

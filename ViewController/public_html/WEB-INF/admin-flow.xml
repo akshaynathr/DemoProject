@@ -17,6 +17,16 @@
       <managed-bean-scope>backingBean</managed-bean-scope>
       <!--oracle-jdev-comment:managed-bean-jsp-link:1salesmanager_inside.jsf-->
     </managed-bean>
+    <managed-bean id="__20">
+      <managed-bean-name>DeleteRoleBean</managed-bean-name>
+      <managed-bean-class>view.DeleteRoleBean</managed-bean-class>
+      <managed-bean-scope>backingBean</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__21">
+      <managed-bean-name>DeleteRoleBean</managed-bean-name>
+      <managed-bean-class>view.DeleteRole</managed-bean-class>
+      <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
     <view id="admin_dashboard">
       <page>/admin_dashboard.jsff</page>
       <redirect/>

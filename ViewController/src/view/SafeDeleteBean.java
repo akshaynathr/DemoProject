@@ -44,4 +44,20 @@ public class SafeDeleteBean {
         System.out.println("Runnin delete");
         return null;
     }
+
+    public String deleteRole() {
+        BindingContainer bindings = getBindings();
+        OperationBinding operationBinding = bindings.getOperationBinding("Delete2");
+        Object result = operationBinding.execute();
+        if (!operationBinding.getErrors().isEmpty()) {
+            return null;
+        }
+        OperationBinding operationBinding2 = bindings.getOperationBinding("Commit");
+        Object result2 = operationBinding2.execute();
+        if (!operationBinding2.getErrors().isEmpty()) {
+            return null;
+        }
+        
+        return null;
+    }
 }

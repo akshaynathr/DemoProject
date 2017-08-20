@@ -132,4 +132,24 @@
     ViewLink="model.VL.RolesLookupVL"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <DeclarativeWhereClause
+    Name="DeclarativeWhereClause">
+    <ViewCriteria
+      Name="RolesUVOWhereCriteria"
+      ViewObjectName="model.UVO.RolesUVO"
+      Conjunction="AND"
+      Mode="3">
+      <ViewCriteriaRow
+        Name="RolesUVOWhereCriteria_row_0"
+        UpperColumns="1">
+        <ViewCriteriaItem
+          Name="IsActive"
+          ViewAttribute="IsActive"
+          Operator="="
+          Conjunction="AND"
+          Value="y"
+          Required="Optional"/>
+      </ViewCriteriaRow>
+    </ViewCriteria>
+  </DeclarativeWhereClause>
 </ViewObject>

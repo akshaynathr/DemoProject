@@ -5,23 +5,29 @@
     <af:form id="f1">
       <af:outputText value="Create Product Category" id="ot1" inlineStyle="font-weight:bold; font-size:large;"/>
       <af:panelFormLayout id="pfl1">
-        <af:inputText value="#{bindings.PossibleValue.inputValue}" label="#{bindings.PossibleValue.hints.label}"
+        <af:inputText value="PRODUCT_CATEGORY" label="#{bindings.LookupCategory.hints.label}"
+                      required="#{bindings.LookupCategory.hints.mandatory}"
+                      columns="#{bindings.LookupCategory.hints.displayWidth}"
+                      maximumLength="#{bindings.LookupCategory.hints.precision}"
+                      shortDesc="#{bindings.LookupCategory.hints.tooltip}" id="it1">
+          <f:validator binding="#{bindings.LookupCategory.validator}"/>
+        </af:inputText>
+        <af:inputText value="#{bindings.PossibleValue.inputValue}" label="Name"
                       required="#{bindings.PossibleValue.hints.mandatory}"
                       columns="#{bindings.PossibleValue.hints.displayWidth}"
                       maximumLength="#{bindings.PossibleValue.hints.precision}"
                       shortDesc="#{bindings.PossibleValue.hints.tooltip}" id="it2">
           <f:validator binding="#{bindings.PossibleValue.validator}"/>
         </af:inputText>
-        <af:inputText value="#{bindings.Description.inputValue}" label="#{bindings.Description.hints.label}"
+        <af:inputText value="#{bindings.Description.inputValue}" label="Description"
                       required="#{bindings.Description.hints.mandatory}"
                       columns="#{bindings.Description.hints.displayWidth}"
                       maximumLength="#{bindings.Description.hints.precision}"
-                      shortDesc="#{bindings.Description.hints.tooltip}" id="it3" rows="10" dimensionsFrom="content">
+                      shortDesc="#{bindings.Description.hints.tooltip}" id="it3" rows="10">
           <f:validator binding="#{bindings.Description.validator}"/>
         </af:inputText>
       </af:panelFormLayout>
-      <af:button actionListener="#{bindings.Commit.execute}" text="Save " disabled="#{!bindings.Commit.enabled}"
-                 id="b1"/>
+      <af:button text="Save" id="b1" action="commit"/>
     </af:form>
   </af:document>
 </f:view>
