@@ -20,7 +20,7 @@
                            inlineStyle="padding:20px;">
           <af:panelGroupLayout layout="vertical" id="pgl1">
             <af:panelGroupLayout layout="vertical" id="pgl2">
-              <af:panelHeader text="CustomerEO" id="ph2">
+              <af:panelHeader text="Customers" id="ph2">
                 <af:quickQuery label="Search" searchDesc="Search" id="qryId2"
                                value="#{bindings.ImplicitViewCriteriaQuery1.quickQueryDescriptor}"
                                model="#{bindings.ImplicitViewCriteriaQuery1.queryModel}"
@@ -29,6 +29,9 @@
                     <af:commandLink text="Advanced" rendered="false" id="cl2"/>
                   </f:facet>
                 </af:quickQuery>
+                <af:button text="Create Customer" id="b2" action="create_customer" windowHeight="550"
+                           windowWidth="1200" useWindow="true" windowEmbedStyle="inlineDocument"
+                           windowModalityType="applicationModal"/>
               </af:panelHeader>
               <af:table value="#{bindings.CustomerId_Address_ViewObj1.collectionModel}" var="row"
                         rows="#{bindings.CustomerId_Address_ViewObj1.rangeSize}"
@@ -43,7 +46,7 @@
                                  shortDesc="#{bindings.CustomerId_Address_ViewObj1.hints.CustomerName.tooltip}"
                                  id="ot1"/>
                   <af:link text="#{row.CustomerName}" id="l1" action="customer" useWindow="true"
-                           windowEmbedStyle="inlineDocument" windowModalityType="applicationModal" windowHeight="500"
+                           windowEmbedStyle="inlineDocument" windowModalityType="applicationModal" windowHeight="600"
                            windowWidth="1200"/>
                 </af:column>
                 <af:column headerText="CEO" id="c2">

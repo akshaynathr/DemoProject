@@ -10,6 +10,7 @@
           <af:showDetailItem id="tab3" text="Tasks" icon="/icons/business_business-opportunities-128.png"/>
           <af:showDetailItem id="tab4" text="Notes" icon="icons/notes.png"/>
           <af:showDetailItem text="Appointments" id="sdi1" icon="/icons/appointments.png"/>
+          <af:showDetailItem text="showDetailItem 1" id="sdi2"/>
         </af:panelTabbed>
       </af:panelGroupLayout>
     </af:form>

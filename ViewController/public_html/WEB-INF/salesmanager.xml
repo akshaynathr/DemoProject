@@ -16,10 +16,6 @@
         <document>/WEB-INF/customer-flow.xml</document>
         <id>customer-flow</id>
       </task-flow-reference>
-      <input-parameter id="__15">
-        <name>customerSelected</name>
-        <value></value>
-      </input-parameter>
       <run-as-dialog>
         <display-type>
           <inline-popup/>
@@ -33,6 +29,17 @@
       <task-flow-reference>
         <document>/WEB-INF/oppurtunity-flow.xml</document>
         <id>oppurtunity-flow</id>
+      </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
+    </task-flow-call>
+    <task-flow-call id="create_customer_flow">
+      <task-flow-reference>
+        <document>/WEB-INF/create_customer_flow.xml</document>
+        <id>create_customer_flow</id>
       </task-flow-reference>
       <run-as-dialog>
         <display-type>
@@ -65,6 +72,10 @@
         <from-outcome>oppurtunity_flow</from-outcome>
         <to-activity-id>oppurtunity-flow</to-activity-id>
       </control-flow-case>
+      <control-flow-case id="__16">
+        <from-outcome>create_customer</from-outcome>
+        <to-activity-id>create_customer_flow</to-activity-id>
+      </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__6">
       <from-activity-id>customer-flow</from-activity-id>
@@ -84,6 +95,13 @@
       <from-activity-id>oppurtunity-flow</from-activity-id>
       <control-flow-case id="__13">
         <from-outcome>return_oppurtunity_flow</from-outcome>
+        <to-activity-id>SalesInside</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__17">
+      <from-activity-id>create_customer_flow</from-activity-id>
+      <control-flow-case id="__18">
+        <from-outcome>return_customer_create</from-outcome>
         <to-activity-id>SalesInside</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
