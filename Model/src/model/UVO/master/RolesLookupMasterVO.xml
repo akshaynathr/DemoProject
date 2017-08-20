@@ -99,7 +99,8 @@
     PrecisionRule="true"
     EntityAttrName="IsActive"
     EntityUsage="RoleEO"
-    AliasName="IS_ACTIVE"/>
+    AliasName="IS_ACTIVE"
+    DefaultValue="y"/>
   <ViewAttribute
     Name="LastUpdatedBy"
     IsUpdateable="false"
