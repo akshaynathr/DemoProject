@@ -309,4 +309,24 @@
     <PropertiesBundle
       PropertiesFile="model.ModelBundle"/>
   </ResourceBundle>
+  <DeclarativeWhereClause
+    Name="DeclarativeWhereClause">
+    <ViewCriteria
+      Name="UserRolesMasterVOWhereCriteria"
+      ViewObjectName="model.UVO.UserRolesMasterVO"
+      Conjunction="AND"
+      Mode="3">
+      <ViewCriteriaRow
+        Name="UserRolesMasterVOWhereCriteria_row_0"
+        UpperColumns="1">
+        <ViewCriteriaItem
+          Name="IsActive1"
+          ViewAttribute="IsActive1"
+          Operator="&lt;>"
+          Conjunction="AND"
+          Value="n"
+          Required="Optional"/>
+      </ViewCriteriaRow>
+    </ViewCriteria>
+  </DeclarativeWhereClause>
 </ViewObject>

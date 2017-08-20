@@ -179,9 +179,6 @@
     Name="CustomersU4"
     ViewObjectName="model.UVO.CustomersUVO"/>
   <ViewUsage
-    Name="AddressU2"
-    ViewObjectName="model.UVO.AddressUVO"/>
-  <ViewUsage
     Name="CustomersU5"
     ViewObjectName="model.UVO.CustomersUVO"/>
   <ViewUsage
@@ -283,4 +280,7 @@
     SrcViewUsageName="model.AM.AppModuleAM.CustomersU5"
     DstViewUsageName="model.AM.AppModuleAM.AddressU6"
     Reversed="false"/>
+  <ViewUsage
+    Name="AddressU2"
+    ViewObjectName="model.UVO.AddressUVO"/>
 </AppModule>

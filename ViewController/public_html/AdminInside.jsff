@@ -112,29 +112,32 @@
                            depressedIcon="#{resource['images:paper-box-icon-4352.png']}"
                            hoverIcon="#{resource['images:paper-box-icon-4352.png']}" text="Products"
                            disclosed="#{(pageFlowScope.tabVal ==2)?true:false}">
-          <af:panelSplitter id="ps1" positionedFromEnd="true">
-            <f:facet name="first">
-              <af:panelGroupLayout layout="vertical" id="pgl2">
-                <af:panelGroupLayout layout="vertical" id="pgl7">
-                  <af:panelHeader text="Manage Products" id="ph1">
-                    <af:panelGroupLayout id="pgl4">
-                      <af:quickQuery label="Search" searchDesc="Search" id="qryId2"
-                                     value="#{bindings.ImplicitViewCriteriaQuery1.quickQueryDescriptor}"
-                                     model="#{bindings.ImplicitViewCriteriaQuery1.queryModel}"
-                                     queryListener="#{bindings.ImplicitViewCriteriaQuery1.processQuery}">
-                        <f:facet name="end">
-                          <af:commandLink text="Advanced" rendered="false" id="cl2"/>
-                        </f:facet>
-                      </af:quickQuery>
-                      <af:button text="Create Product" id="b2" useWindow="true" windowHeight="500"
-                                 action="createProduct" windowWidth="600"/>
-                      <af:button text="Create Category" id="b6"
-                                 windowModalityType="applicationModal" windowEmbedStyle="inlineDocument"
-                                 useWindow="true" windowHeight="500" windowWidth="600" action="create_product_category"/>
-                      <af:button text="Delete Product" disabled="#{!bindings.Delete1.enabled}" id="b4"
-                                 action="#{safeDeleteBean.commit_Delete_Product}"/>
-                    </af:panelGroupLayout>
-                  </af:panelHeader>
+          <af:panelBorderLayout id="pbl3">
+            <f:facet name="top">
+              <af:panelGroupLayout id="pgl4" halign="center">
+                <af:quickQuery label="Search" searchDesc="Search" id="qryId2"
+                               value="#{bindings.ImplicitViewCriteriaQuery1.quickQueryDescriptor}"
+                               model="#{bindings.ImplicitViewCriteriaQuery1.queryModel}"
+                               queryListener="#{bindings.ImplicitViewCriteriaQuery1.processQuery}">
+                  <f:facet name="end">
+                    <af:commandLink text="Advanced" rendered="false" id="cl2"/>
+                  </f:facet>
+                </af:quickQuery>
+                <af:button text="Create Product" id="b2" useWindow="true" windowHeight="500" action="createProduct"
+                           windowWidth="600"/>
+                <af:button text="Create Category" id="b6" windowModalityType="applicationModal"
+                           windowEmbedStyle="inlineDocument" useWindow="true" windowHeight="500" windowWidth="600"
+                           action="create_product_category"/>
+                <af:button text="Delete Product" disabled="#{!bindings.Delete1.enabled}" id="b4"
+                           action="#{safeDeleteBean.commit_Delete_Product}"/>
+              </af:panelGroupLayout>
+            </f:facet>
+            <f:facet name="bottom"/>
+            <f:facet name="start"/>
+            <f:facet name="end"/>
+            <af:panelGridLayout id="pgl2">
+              <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr2">
+                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc3" halign="stretch">
                   <af:table value="#{bindings.ProductsU1.collectionModel}" var="row"
                             rows="#{bindings.ProductsU1.rangeSize}"
                             emptyText="#{bindings.ProductsU1.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -176,10 +179,10 @@
                       </af:selectOneChoice>
                     </af:column>
                   </af:table>
-                </af:panelGroupLayout>
-              </af:panelGroupLayout>
-            </f:facet>
-          </af:panelSplitter>
+                </af:gridCell>
+              </af:gridRow>
+            </af:panelGridLayout>
+          </af:panelBorderLayout>
         </af:showDetailItem>
         <af:showDetailItem text="Roles" id="sdi2" disclosed="#{(pageFlowScope.tabVal ==3)?true:false}"
                            icon="icons/role.png">
@@ -187,8 +190,8 @@
             <af:panelBorderLayout id="pbl1">
               <f:facet name="top">
                 <af:button text="Create Role" id="b7" action="createRoll" useWindow="true"
-                           windowEmbedStyle="window"/>
-                <af:button text="Delete2"
+                           windowEmbedStyle="window" windowHeight="500" windowWidth="600"/>
+                <af:button text="Delete"
                            disabled="#{!bindings.Delete2.enabled}" id="b8" action="#{safeDeleteBean.deleteRole}"/>
               </f:facet>
               <f:facet name="bottom"/>
