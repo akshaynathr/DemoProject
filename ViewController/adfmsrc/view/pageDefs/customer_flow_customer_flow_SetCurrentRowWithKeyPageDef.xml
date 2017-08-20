@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24"
+                id="customer_flow_customer_flow_SetCurrentRowWithKeyPageDef" Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <iterator Binds="CustomerId_Address_ViewObj1" RangeSize="25" DataControl="AppModuleAMDataControl"
+              id="CustomerId_Address_ViewObj1Iterator"/>
+  </executables>
+  <bindings>
+    <action IterBinding="CustomerId_Address_ViewObj1Iterator" id="setCurrentRowWithKey" RequiresUpdateModel="false"
+            Action="setCurrentRowWithKey">
+      <NamedData NDName="rowKey" NDValue="#{pageFlowScope.employeeSelected}" NDType="java.lang.String"/>
+    </action>
+  </bindings>
+</pageDefinition>

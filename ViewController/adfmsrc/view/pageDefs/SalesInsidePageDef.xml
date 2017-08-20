@@ -4,26 +4,21 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="CustomersU6" RangeSize="25" DataControl="AppModuleAMDataControl" id="CustomersU6Iterator"/>
+    <iterator Binds="CustomerId_Address_ViewObj1" RangeSize="25" DataControl="AppModuleAMDataControl"
+              id="CustomerId_Address_ViewObj1Iterator"/>
     <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
-                  Binds="CustomersU6Iterator" id="ImplicitViewCriteriaQuery"/>
+                  Binds="CustomerId_Address_ViewObj1Iterator" id="ImplicitViewCriteriaQuery1"/>
   </executables>
   <bindings>
-    <tree IterBinding="CustomersU6Iterator" id="CustomersU6">
-      <nodeDefinition DefName="model.UVO.CustomersUVO" Name="CustomersU60">
+    <tree IterBinding="CustomerId_Address_ViewObj1Iterator" id="CustomerId_Address_ViewObj1">
+      <nodeDefinition DefName="model.customer.UVO.CustomerId_Address_ViewObjVO" Name="CustomerId_Address_ViewObj10">
         <AttrNames>
           <Item Value="CustomerName"/>
-          <Item Value="CustomerTypeId"/>
           <Item Value="Ceo"/>
           <Item Value="Email"/>
           <Item Value="CustomerId"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <attributeValues IterBinding="CustomersU6Iterator" id="CustomerId">
-      <AttrNames>
-        <Item Value="CustomerId"/>
-      </AttrNames>
-    </attributeValues>
   </bindings>
 </pageDefinition>

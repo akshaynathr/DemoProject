@@ -19,65 +19,51 @@
                            disclosed="#{(pageFlowScope.sales_manager_tabVal==4)?true:false}"
                            inlineStyle="padding:20px;">
           <af:panelGroupLayout layout="vertical" id="pgl1">
-            <af:panelHeader text="CustomerEO" id="ph1">
-              <af:quickQuery label="Search" searchDesc="Search" id="qryId1"
-                             value="#{bindings.ImplicitViewCriteriaQuery.quickQueryDescriptor}"
-                             model="#{bindings.ImplicitViewCriteriaQuery.queryModel}"
-                             queryListener="#{bindings.ImplicitViewCriteriaQuery.processQuery}">
-                <f:facet name="end">
-                  <af:commandLink text="Advanced" rendered="false" id="cl1"/>
-                </f:facet>
-              </af:quickQuery>
-            </af:panelHeader>
-            <af:table value="#{bindings.CustomersU6.collectionModel}" var="row" rows="#{bindings.CustomersU6.rangeSize}"
-                      emptyText="#{bindings.CustomersU6.viewable ? 'No data to display.' : 'Access Denied.'}"
-                      rowBandingInterval="0" selectedRowKeys="#{bindings.CustomersU6.collectionModel.selectedRow}"
-                      selectionListener="#{bindings.CustomersU6.collectionModel.makeCurrent}" rowSelection="single"
-                      fetchSize="#{bindings.CustomersU6.rangeSize}"
-                      filterModel="#{bindings.ImplicitViewCriteriaQuery.queryDescriptor}" filterVisible="true"
-                      queryListener="#{bindings.ImplicitViewCriteriaQuery.processQuery}" varStatus="vs"
-                      partialTriggers="::qryId1" id="t1">
-              <af:column sortProperty="#{bindings.CustomersU6.hints.CustomerName.name}" filterable="true"
-                         sortable="true" headerText="#{bindings.CustomersU6.hints.CustomerName.label}" id="c1">
-                <af:outputText value="#{row.CustomerName}"
-                               shortDesc="#{bindings.CustomersU6.hints.CustomerName.tooltip}" id="ot1"/>
-                <af:link text="#{row.CustomerName}" id="l1" action="customer" useWindow="true"
-                         windowEmbedStyle="inlineDocument" windowModalityType="applicationModal" windowHeight="500"
-                         windowWidth="1200">
-                  <af:setPropertyListener from="#{row.CustomerId}" to="#{pageFlowScope.fromVal}" type="action"/>
-                </af:link>
-              </af:column>
-              <af:column sortProperty="#{bindings.CustomersU6.hints.CustomerTypeId.name}" filterable="true"
-                         sortable="true" headerText="#{bindings.CustomersU6.hints.CustomerTypeId.label}" id="c2">
-                <af:selectOneChoice value="#{row.bindings.CustomerTypeId.inputValue}"
-                                    label="#{row.bindings.CustomerTypeId.label}"
-                                    required="#{bindings.CustomersU6.hints.CustomerTypeId.mandatory}"
-                                    shortDesc="#{bindings.CustomersU6.hints.CustomerTypeId.tooltip}" readOnly="true"
-                                    id="soc1">
-                  <f:selectItems value="#{row.bindings.CustomerTypeId.items}" id="si1"/>
-                  <f:validator binding="#{row.bindings.CustomerTypeId.validator}"/>
-                </af:selectOneChoice>
-              </af:column>
-              <af:column sortProperty="#{bindings.CustomersU6.hints.Ceo.name}" filterable="true" sortable="true"
-                         headerText="#{bindings.CustomersU6.hints.Ceo.label}" id="c3">
-                <af:outputText value="#{row.Ceo}" shortDesc="#{bindings.CustomersU6.hints.Ceo.tooltip}" id="ot2"/>
-              </af:column>
-              <af:column sortProperty="#{bindings.CustomersU6.hints.Email.name}" filterable="true" sortable="true"
-                         headerText="#{bindings.CustomersU6.hints.Email.label}" id="c4">
-                <af:outputText value="#{row.Email}" shortDesc="#{bindings.CustomersU6.hints.Email.tooltip}" id="ot3"/>
-              </af:column>
-              <af:column sortProperty="#{bindings.CustomersU6.hints.CustomerId.name}" sortable="true"
-                         headerText="#{bindings.CustomersU6.hints.CustomerId.label}" filterable="true" id="c5"
-                         rendered="false">
-                <af:selectOneChoice value="#{row.bindings.CustomerId.inputValue}"
-                                    label="#{row.bindings.CustomerId.label}"
-                                    required="#{bindings.CustomersU6.hints.CustomerId.mandatory}"
-                                    shortDesc="#{bindings.CustomersU6.hints.CustomerId.tooltip}" id="soc2">
-                  <f:selectItems value="#{row.bindings.CustomerId.items}" id="si2"/>
-                  <f:validator binding="#{row.bindings.CustomerId.validator}"/>
-                </af:selectOneChoice>
-              </af:column>
-            </af:table>
+            <af:panelGroupLayout layout="vertical" id="pgl2">
+              <af:panelHeader text="CustomerEO" id="ph2">
+                <af:quickQuery label="Search" searchDesc="Search" id="qryId2"
+                               value="#{bindings.ImplicitViewCriteriaQuery1.quickQueryDescriptor}"
+                               model="#{bindings.ImplicitViewCriteriaQuery1.queryModel}"
+                               queryListener="#{bindings.ImplicitViewCriteriaQuery1.processQuery}">
+                  <f:facet name="end">
+                    <af:commandLink text="Advanced" rendered="false" id="cl2"/>
+                  </f:facet>
+                </af:quickQuery>
+              </af:panelHeader>
+              <af:table value="#{bindings.CustomerId_Address_ViewObj1.collectionModel}" var="row"
+                        rows="#{bindings.CustomerId_Address_ViewObj1.rangeSize}"
+                        emptyText="#{bindings.CustomerId_Address_ViewObj1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                        rowBandingInterval="0"
+                        selectedRowKeys="#{bindings.CustomerId_Address_ViewObj1.collectionModel.selectedRow}"
+                        selectionListener="#{bindings.CustomerId_Address_ViewObj1.collectionModel.makeCurrent}"
+                        rowSelection="single" fetchSize="#{bindings.CustomerId_Address_ViewObj1.rangeSize}"
+                        partialTriggers="::qryId2" id="t1">
+                <af:column headerText="Name" id="c1">
+                  <af:outputText value="#{row.CustomerName}"
+                                 shortDesc="#{bindings.CustomerId_Address_ViewObj1.hints.CustomerName.tooltip}"
+                                 id="ot1"/>
+                  <af:link text="#{row.CustomerName}" id="l1" action="customer" useWindow="true"
+                           windowEmbedStyle="inlineDocument" windowModalityType="applicationModal" windowHeight="500"
+                           windowWidth="1200"/>
+                </af:column>
+                <af:column headerText="CEO" id="c2">
+                  <af:outputText value="#{row.Ceo}"
+                                 shortDesc="#{bindings.CustomerId_Address_ViewObj1.hints.Ceo.tooltip}" id="ot2"/>
+                </af:column>
+                <af:column headerText="#{bindings.CustomerId_Address_ViewObj1.hints.Email.label}" id="c3">
+                  <af:outputText value="#{row.Email}"
+                                 shortDesc="#{bindings.CustomerId_Address_ViewObj1.hints.Email.tooltip}" id="ot3"/>
+                </af:column>
+                <af:column headerText="#{bindings.CustomerId_Address_ViewObj1.hints.CustomerId.label}" id="c4"
+                           rendered="false">
+                  <af:outputText value="#{row.CustomerId}"
+                                 shortDesc="#{bindings.CustomerId_Address_ViewObj1.hints.CustomerId.tooltip}" id="ot4">
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.CustomerId_Address_ViewObj1.hints.CustomerId.format}"/>
+                  </af:outputText>
+                </af:column>
+              </af:table>
+            </af:panelGroupLayout>
           </af:panelGroupLayout>
         </af:showDetailItem>
         <af:showDetailItem text="Tasks" id="sdi4" icon="/icons/tasks.png"

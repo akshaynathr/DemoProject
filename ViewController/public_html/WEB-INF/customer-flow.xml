@@ -5,12 +5,6 @@
     <data-control-scope>
       <shared/>
     </data-control-scope>
-    <input-parameter-definition id="__8">
-      <name>inputParameter1</name>
-      <value>#{pageFlowScope.toVal}</value>
-      <class>java.lang.String</class>
-      <required/>
-    </input-parameter-definition>
     <managed-bean id="__3">
       <managed-bean-name>backing_edit_customer</managed-bean-name>
       <managed-bean-class>view.backing.Edit_customer</managed-bean-class>
@@ -44,6 +38,13 @@
       <from-activity-id>edit_customer</from-activity-id>
       <control-flow-case id="__6">
         <from-outcome>return_edit_customer</from-outcome>
+        <to-activity-id>Customers_tab</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__10">
+      <from-activity-id>SetCurrentRowWithKey</from-activity-id>
+      <control-flow-case id="__11">
+        <from-outcome>setCurrentRowWithKey</from-outcome>
         <to-activity-id>Customers_tab</to-activity-id>
       </control-flow-case>
     </control-flow-rule>

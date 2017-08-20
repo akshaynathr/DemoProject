@@ -7,7 +7,7 @@
         <f:facet name="center">
           <af:panelGroupLayout id="pgl1" layout="vertical" inlineStyle="padding:2%;">
             <af:link text="back" id="l1"/>
-            <af:outputText value="#{pageFlowScope.toVal}" id="ot2"/>
+            <af:outputText value="#{pageFlowScope.customerSelected}" id="ot2"/>
             <af:panelTabbed position="start" id="pt1">
               <af:showDetailItem id="tab1" text="Details" icon="/icons/OPPURTUNITY(1).png">
                 <af:panelFormLayout id="pfl1">

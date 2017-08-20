@@ -31,6 +31,8 @@
     <page path="/SalesInside.jsff" usageId="view_SalesInsidePageDef"/>
     <page path="/Customers_tab.jsf" usageId="view_Customers_tabPageDef"/>
     <page path="/edit_customer.jsf" usageId="view_edit_customerPageDef"/>
+    <page path="/WEB-INF/customer-flow.xml#customer-flow@SetCurrentRowWithKey"
+          usageId="view_customer_flow_customer_flow_SetCurrentRowWithKeyPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_HomePageDef" path="view.pageDefs.HomePageDef"/>
@@ -57,6 +59,8 @@
     <page id="view_SalesInsidePageDef" path="view.pageDefs.SalesInsidePageDef"/>
     <page id="view_Customers_tabPageDef" path="view.pageDefs.Customers_tabPageDef"/>
     <page id="view_edit_customerPageDef" path="view.pageDefs.edit_customerPageDef"/>
+    <page id="view_customer_flow_customer_flow_SetCurrentRowWithKeyPageDef"
+          path="view.pageDefs.customer_flow_customer_flow_SetCurrentRowWithKeyPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleAMDataControl" Package="model.AM"
