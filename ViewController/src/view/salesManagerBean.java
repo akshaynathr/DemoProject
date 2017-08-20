@@ -47,7 +47,7 @@ public class salesManagerBean {
     }
     
     public String getSelectTaskFlow(){ 
-        if(isUserInRole("manager")){return taskFlowId4;}
+        if(isUserInRole("manager") || isUserInRole("sales-rep")){return taskFlowId4;}
         else
         return taskFlowId4_admin;
         }

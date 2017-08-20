@@ -47,6 +47,9 @@
         </display-type>
       </run-as-dialog>
     </task-flow-call>
+    <view id="report_sales_rep">
+      <page>/report_sales_rep.jsff</page>
+    </view>
     <control-flow-rule id="__1">
       <from-activity-id>dashboard</from-activity-id>
       <control-flow-case id="__2">
@@ -56,6 +59,10 @@
       <control-flow-case id="__8">
         <from-outcome>report_sales_manager</from-outcome>
         <to-activity-id>report_sales_manager</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__19">
+        <from-outcome>report_sales_rep</from-outcome>
+        <to-activity-id>report_sales_rep</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__3">
@@ -103,6 +110,13 @@
       <control-flow-case id="__18">
         <from-outcome>return_customer_create</from-outcome>
         <to-activity-id>SalesInside</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__14">
+      <from-activity-id>report_sales_rep</from-activity-id>
+      <control-flow-case id="__15">
+        <from-outcome>back</from-outcome>
+        <to-activity-id>dashboard</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>

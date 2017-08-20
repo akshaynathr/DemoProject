@@ -42,12 +42,9 @@
                         rowSelection="single" fetchSize="#{bindings.CustomerId_Address_ViewObj1.rangeSize}"
                         partialTriggers="::qryId2" id="t1">
                 <af:column headerText="Name" id="c1">
-                  <af:outputText value="#{row.CustomerName}"
-                                 shortDesc="#{bindings.CustomerId_Address_ViewObj1.hints.CustomerName.tooltip}"
-                                 id="ot1"/>
                   <af:link text="#{row.CustomerName}" id="l1" action="customer" useWindow="true"
                            windowEmbedStyle="inlineDocument" windowModalityType="applicationModal" windowHeight="600"
-                           windowWidth="1200"/>
+                           windowWidth="1200" inlineStyle="font-weight:bold; color:#0094e7;"/>
                 </af:column>
                 <af:column headerText="CEO" id="c2">
                   <af:outputText value="#{row.Ceo}"

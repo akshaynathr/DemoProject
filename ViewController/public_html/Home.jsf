@@ -21,7 +21,7 @@
       </af:goLink>
       <f:facet name="separator">
       
-       <af:outputText value="Welcome #{securityContext.userName}!" inlineStyle="font-weight:bold; width:100px"
+       <af:outputText value="Welcome #{securityContext.userName}! " inlineStyle="font-weight:bold; width:100px"
                       id="ptot2" rendered="#{securityContext.authenticated}"/>
       </f:facet>
      </af:panelGroupLayout>
