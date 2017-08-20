@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TasksOppurtunityVL"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge">
+  <ViewLinkDefEnd
+    Name="OpportunitiesRVO"
+    Cardinality="1"
+    Source="true"
+    Owner="model.customer.RVO.OpportunitiesRVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="OpportunitiesRVO"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.customer.RVO.OpportunitiesRVO.OpportunityId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="TasksRVO"
+    Cardinality="-1"
+    Owner="model.customer.RVO.TasksRVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="TasksRVO"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.customer.RVO.TasksRVO.OpportunityId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

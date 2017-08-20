@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="admin-flow">
+    <default-activity>admin_dashboard</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <security/>
+    <managed-bean id="__14">
+      <managed-bean-name>safeDeleteBean</managed-bean-name>
+      <managed-bean-class>view.SafeDeleteBean</managed-bean-class>
+      <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__17">
+      <managed-bean-name>backing_salesmanager_inside</managed-bean-name>
+      <managed-bean-class>view.backing.Salesmanager_inside</managed-bean-class>
+      <managed-bean-scope>backingBean</managed-bean-scope>
+      <!--oracle-jdev-comment:managed-bean-jsp-link:1salesmanager_inside.jsf-->
+    </managed-bean>
+    <managed-bean id="__20">
+      <managed-bean-name>DeleteRoleBean</managed-bean-name>
+      <managed-bean-class>view.DeleteRoleBean</managed-bean-class>
+      <managed-bean-scope>backingBean</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__21">
+      <managed-bean-name>DeleteRoleBean</managed-bean-name>
+      <managed-bean-class>view.DeleteRole</managed-bean-class>
+      <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <view id="admin_dashboard">
+      <page>/admin_dashboard.jsff</page>
+      <redirect/>
+    </view>
+    <view id="Team">
+      <page>/AdminInside.jsff</page>
+      <redirect/>
+    </view>
+    <task-flow-call id="UserTrain1">
+      <task-flow-reference>
+        <document>/WEB-INF/UserTrain.xml</document>
+        <id>UserTrain</id>
+      </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
+    </task-flow-call>
+    <task-flow-call id="EditUser-flow">
+      <task-flow-reference>
+        <document>/WEB-INF/EditUser-flow.xml</document>
+        <id>EditUser-flow</id>
+      </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
+    </task-flow-call>
+    <task-flow-call id="editProduct-flow">
+      <task-flow-reference>
+        <document>/WEB-INF/editProduct-flow.xml</document>
+        <id>editProduct-flow</id>
+      </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
+    </task-flow-call>
+    <task-flow-call id="create_product">
+      <task-flow-reference>
+        <document>/WEB-INF/create_product.xml</document>
+        <id>create_product</id>
+      </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
+    </task-flow-call>
+    <task-flow-call id="product-Category-flow">
+      <display-name>Create Product Category</display-name>
+      <task-flow-reference>
+        <document>/WEB-INF/product-Category-flow.xml</document>
+        <id>product-Category-flow</id>
+      </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
+    </task-flow-call>
+    <task-flow-call id="DeleteProductCategory-flow">
+      <task-flow-reference>
+        <document>/WEB-INF/DeleteProductCategory-flow.xml</document>
+        <id>DeleteProductCategory-flow</id>
+      </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
+    </task-flow-call>
+    <task-flow-call id="createRole-flow">
+      <task-flow-reference>
+        <document>/WEB-INF/createRole-flow.xml</document>
+        <id>createRole-flow</id>
+      </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
+    </task-flow-call>
+    <control-flow-rule id="__1">
+      <from-activity-id>admin_dashboard</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>team</from-outcome>
+        <to-activity-id>Team</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__3">
+      <from-activity-id>Team</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome>UserTrain1</from-outcome>
+        <to-activity-id>UserTrain1</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__7">
+        <from-outcome>edit</from-outcome>
+        <to-activity-id>EditUser-flow</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__9">
+        <from-outcome>editProduct</from-outcome>
+        <to-activity-id>editProduct-flow</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__11">
+        <from-outcome>createProduct</from-outcome>
+        <to-activity-id>create_product</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__15">
+        <from-outcome>create_product_category</from-outcome>
+        <to-activity-id>product-Category-flow</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__16">
+        <from-outcome>delete_product_category</from-outcome>
+        <to-activity-id>DeleteProductCategory-flow</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__18">
+        <from-outcome>back_admin_dashboard</from-outcome>
+        <to-activity-id>admin_dashboard</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__19">
+        <from-outcome>createRoll</from-outcome>
+        <to-activity-id>createRole-flow</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__5">
+      <from-activity-id>Team</from-activity-id>
+      <control-flow-case id="__6">
+        <from-outcome>UserTrain2</from-outcome>
+        <to-activity-id>UserTrain2</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__8">
+      <from-activity-id>EditUser-flow</from-activity-id>
+      <control-flow-case id="__10">
+        <from-outcome>commit</from-outcome>
+        <to-activity-id>Team</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__12">
+      <from-activity-id>create_product</from-activity-id>
+      <control-flow-case id="__13">
+        <from-outcome>commit</from-outcome>
+        <to-activity-id>Team</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <view id="Login">
+    <page>/Login.jsf</page>
+  </view>
+  <view id="Admin">
+    <page>/Admin_dasboard.jsf</page>
+  </view>
+  <view id="Manager">
+    <page>/Manager_dashboard.jsf</page>
+  </view>
+  <control-flow-rule id="__5">
+    <from-activity-id>Login</from-activity-id>
+    <control-flow-case id="__6">
+      <from-outcome>admin</from-outcome>
+      <to-activity-id>Admin</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__7">
+      <from-outcome>manager</from-outcome>
+      <to-activity-id>Manager</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <managed-bean id="__1">
+    <managed-bean-name>loginBean</managed-bean-name>
+    <managed-bean-class>view.LoginHandler</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__2">
+    <managed-bean-name>backing_admin</managed-bean-name>
+    <managed-bean-class>view.backing.Admin</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1admin.jsf-->
+  </managed-bean>
+  <managed-bean id="__8">
+    <managed-bean-name>backing_Admin_dasboard</managed-bean-name>
+    <managed-bean-class>view.backing.Admin_dasboard</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1Admin_dasboard.jsf-->
+  </managed-bean>
+  <managed-bean id="__9">
+    <managed-bean-name>backing_Manager_dashboard</managed-bean-name>
+    <managed-bean-class>view.backing.Manager_dashboard</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1Manager_dashboard.jsf-->
+  </managed-bean>
+  <managed-bean id="__10">
+    <managed-bean-name>admin_dashboard_bean</managed-bean-name>
+    <managed-bean-class>view.adminDashboardBean</managed-bean-class>
+    <managed-bean-scope>view</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__11">
+    <managed-bean-name>salesmanagerBean</managed-bean-name>
+    <managed-bean-class>view.salesManagerBean</managed-bean-class>
+    <managed-bean-scope>view</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__12">
+    <managed-bean-name>backing_TaskFlowTest</managed-bean-name>
+    <managed-bean-class>view.backing.TaskFlowTest</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1TaskFlowTest.jsf-->
+  </managed-bean>
+  <managed-bean id="__3">
+    <managed-bean-name>backing_Customers_tab</managed-bean-name>
+    <managed-bean-class>view.backing.Customers_tab</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1Customers_tab.jsf-->
+  </managed-bean>
+</adfc-config>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.0.31" id="DataBindings"
+             SeparateXMLFiles="false" Package="view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/Home.jsf" usageId="view_HomePageDef"/>
+    <page path="/AdminInside.jsff" usageId="view_AdminInsidePageDef"/>
+    <page path="/WEB-INF/UserTrain.xml#UserTrain@CreateInsert1"
+          usageId="view_UserTrain_UserTrain_CreateInsert1PageDef"/>
+    <page path="/ProductEdit.jsf" usageId="view_ProductEditPageDef"/>
+    <page path="/UserTrain/Corporate.jsf" usageId="view_CorporatePageDef"/>
+    <page path="/UserTrain/Personal.jsf" usageId="view_PersonalPageDef"/>
+    <page path="/UserTrain/Summary.jsf" usageId="view_SummaryPageDef"/>
+    <page path="/createProduct.jsf" usageId="view_createProductPageDef"/>
+    <page path="/WEB-INF/editProduct-flow.xml#editProduct-flow@CreateInsert"
+          usageId="view_editProduct_flow_editProduct_flow_CreateInsertPageDef"/>
+    <page path="/WEB-INF/create_product.xml#create_product@CreateInsert"
+          usageId="view_create_product_create_product_CreateInsertPageDef"/>
+    <page path="/admin_dashboard.jsff" usageId="view_admin_dashboardPageDef"/>
+    <page path="/Create-category.jsf" usageId="view_Create_categoryPageDef"/>
+    <page path="/WEB-INF/product-Category-flow.xml#product-Category-flow@CreateInsert"
+          usageId="view_product_Category_flow_product_Category_flow_CreateInsertPageDef"/>
+    <page path="/DeleteProductCategory.jsf" usageId="view_DeleteProductCategoryPageDef"/>
+    <page path="/WEB-INF/DeleteProductCategory-flow.xml#DeleteProductCategory-flow@Delete"
+          usageId="view_DeleteProductCategory_flow_DeleteProductCategory_flow_DeletePageDef"/>
+    <page path="/editUser.jsf" usageId="view_editUserPageDef"/>
+    <page path="/SalesInside.jsff" usageId="view_SalesInsidePageDef"/>
+    <page path="/WEB-INF/createRole-flow.xml#createRole-flow@CreateInsert"
+          usageId="view_createRole_flow_createRole_flow_CreateInsertPageDef"/>
+    <page path="/createRole.jsf" usageId="view_createRolePageDef"/>
+    <page path="/Customers_tab.jsf" usageId="view_Customers_tabPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="view_HomePageDef" path="view.pageDefs.HomePageDef"/>
+    <page id="view_PersonalPageDef" path="UserTrain.PersonalPageDef"/>
+    <page id="view_CorporatePageDef" path="UserTrain.CorporatePageDef"/>
+    <page id="view_SummaryPageDef" path="UserTrain.SummaryPageDef"/>
+    <page id="view_AdminInsidePageDef" path="view.pageDefs.AdminInsidePageDef"/>
+    <page id="view_editUserPageDef" path="view.pageDefs.editUserPageDef"/>
+    <page id="view_UserTrain_UserTrain_CreateInsert1PageDef"
+          path="view.pageDefs.UserTrain_UserTrain_CreateInsert1PageDef"/>
+    <page id="view_ProductEditPageDef" path="view.pageDefs.ProductEditPageDef"/>
+    <page id="view_createProductPageDef" path="view.pageDefs.createProductPageDef"/>
+    <page id="view_editProduct_flow_editProduct_flow_CreateInsertPageDef"
+          path="view.pageDefs.editProduct_flow_editProduct_flow_CreateInsertPageDef"/>
+    <page id="view_create_product_create_product_CreateInsertPageDef"
+          path="view.pageDefs.create_product_create_product_CreateInsertPageDef"/>
+    <page id="view_admin_dashboardPageDef" path="view.pageDefs.admin_dashboardPageDef"/>
+    <page id="view_Create_categoryPageDef" path="view.pageDefs.Create_categoryPageDef"/>
+    <page id="view_product_Category_flow_product_Category_flow_CreateInsertPageDef"
+          path="view.pageDefs.product_Category_flow_product_Category_flow_CreateInsertPageDef"/>
+    <page id="view_DeleteProductCategoryPageDef" path="view.pageDefs.DeleteProductCategoryPageDef"/>
+    <page id="view_DeleteProductCategory_flow_DeleteProductCategory_flow_DeletePageDef"
+          path="view.pageDefs.DeleteProductCategory_flow_DeleteProductCategory_flow_DeletePageDef"/>
+    <page id="view_SalesInsidePageDef" path="view.pageDefs.SalesInsidePageDef"/>
+    <page id="view_createRole_flow_createRole_flow_CreateInsertPageDef"
+          path="view.pageDefs.createRole_flow_createRole_flow_CreateInsertPageDef"/>
+    <page id="view_createRolePageDef" path="view.pageDefs.createRolePageDef"/>
+    <page id="view_Customers_tabPageDef" path="view.pageDefs.Customers_tabPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="AppModuleAMDataControl" Package="model.AM"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleAMLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="AppModuleAMDataControl1" Package="model.EO"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleAMLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="AppModuleAMDataControl2" Package="model.AM"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleAMLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="AppModuleAMDataControl3" Package="model.AM"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleAMLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

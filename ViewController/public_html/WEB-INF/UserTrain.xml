@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="UserTrain">
+    <default-activity>CreateInsert1</default-activity>
+    <transaction>
+      <new-transaction/>
+    </transaction>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="Personal">
+      <page>/UserTrain/Personal.jsf</page>
+      <train-stop>
+        <display-name>Personal Details</display-name>
+      </train-stop>
+    </view>
+    <view id="Corporate">
+      <page>/UserTrain/Corporate.jsf</page>
+      <train-stop>
+        <display-name>Corporate Details</display-name>
+      </train-stop>
+    </view>
+    <view id="Summary">
+      <page>/UserTrain/Summary.jsf</page>
+      <train-stop>
+        <display-name>Summary</display-name>
+      </train-stop>
+    </view>
+    <task-flow-return id="Submit">
+      <outcome>
+        <name>Submit</name>
+        <commit/>
+      </outcome>
+    </task-flow-return>
+    <task-flow-return id="Cancel">
+      <outcome>
+        <name>Cancel</name>
+        <rollback/>
+      </outcome>
+    </task-flow-return>
+    <method-call id="CreateInsert1">
+      <method>#{bindings.CreateInsert.execute}</method>
+      <outcome>
+        <fixed-outcome>newUser</fixed-outcome>
+      </outcome>
+    </method-call>
+    <train/>
+    <control-flow-rule id="__3">
+      <from-activity-id>Summary</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome>submit</from-outcome>
+        <to-activity-id>Submit</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__5">
+        <from-outcome>cancel</from-outcome>
+        <to-activity-id>Cancel</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__6">
+      <from-activity-id>CreateInsert1</from-activity-id>
+      <control-flow-case id="__7">
+        <from-outcome>newUser</from-outcome>
+        <to-activity-id>Personal</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+  </task-flow-definition>
+</adfc-config>

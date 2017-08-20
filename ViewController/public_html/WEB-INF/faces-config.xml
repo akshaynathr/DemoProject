@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<faces-config version="2.1" xmlns="http://java.sun.com/xml/ns/javaee">
+  <application>
+    <default-render-kit-id>oracle.adf.rich</default-render-kit-id>
+  </application>
+  <validator>
+    <validator-id>custom.PasswordValidator</validator-id>
+    <validator-class>view.validator.PasswordValidator</validator-class>
+  </validator>
+  <validator>
+    <validator-id>custom.LastDateValidator</validator-id>
+    <validator-class>view.validator.LastDateValidator</validator-class>
+  </validator>
+  <validator>
+    <validator-id>custom.NameValidator</validator-id>
+    <validator-class>view.validator.NameValidator</validator-class>
+  </validator>
+  <validator>
+    <validator-id>custom.StartDateValidator</validator-id>
+    <validator-class>view.validator.StartDateValidator</validator-class>
+  </validator>
+</faces-config>

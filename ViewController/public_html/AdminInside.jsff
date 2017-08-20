@@ -1,0 +1,263 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelStretchLayout id="psl1">
+    <f:facet name="top">
+      <af:button text="Dashboard" id="b5" action="back_admin_dashboard"/>
+    </f:facet>
+    <f:facet name="bottom"/>
+    <f:facet name="center">
+      <af:panelTabbed position="above" id="pt1" minTabSize="300px" truncationStyle="ellipsis">
+        <af:showDetailItem id="tab1" text="Users" icon="#{resource['images:user-color.png']}"
+                           depressedIcon="#{resource['images:user.jpg']}"
+                           disclosed="#{(pageFlowScope.tabVal==1)?true:false}">
+          <f:facet name="toolbar"/>
+          <af:panelBorderLayout id="pbl2">
+            <f:facet name="top">
+              <af:activeOutputText value="Manage Users" id="aot1" inlineStyle="font-size:x-large; color:Navy;"/>
+              <af:panelGroupLayout id="pgl3" halign="center" valign="middle" layout="horizontal">
+                <af:quickQuery label="Search" searchDesc="Search" id="qryId3"
+                               value="#{bindings.ImplicitViewCriteriaQuery2.quickQueryDescriptor}"
+                               model="#{bindings.ImplicitViewCriteriaQuery2.queryModel}"
+                               queryListener="#{bindings.ImplicitViewCriteriaQuery2.processQuery}">
+                  <f:facet name="end">
+                    <af:commandLink text="Advanced" rendered="false" id="cl3"/>
+                  </f:facet>
+                </af:quickQuery>
+                <af:button text="CreateUser" id="b1" action="UserTrain1" useWindow="true" windowWidth="600"
+                           windowHeight="500"/>
+                <af:button text="Delete" disabled="#{!bindings.Delete.enabled}" id="b3"
+                           action="#{safeDeleteBean.commit_Delete}"/>
+              </af:panelGroupLayout>
+            </f:facet>
+            <f:facet name="bottom"/>
+            <f:facet name="start"/>
+            <af:panelGridLayout id="pgl5">
+              <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
+                <af:gridCell marginStart="5px" width="75%" id="gc1" halign="stretch">
+                  <af:table value="#{bindings.UsersU41.collectionModel}" var="row" rows="#{bindings.UsersU41.rangeSize}"
+                            emptyText="#{bindings.UsersU41.viewable ? 'No data to display.' : 'Access Denied.'}"
+                            rowBandingInterval="0" selectedRowKeys="#{bindings.UsersU41.collectionModel.selectedRow}"
+                            selectionListener="#{bindings.UsersU41.collectionModel.makeCurrent}" rowSelection="single"
+                            fetchSize="#{bindings.UsersU41.rangeSize}" partialTriggers="::qryId3" id="t1">
+                    <af:column headerText="Global name" id="c1">
+                      <af:link text="#{row.GlobalUsername}" id="l1" action="edit" useWindow="true" windowHeight="500"
+                               windowWidth="600"/>
+                    </af:column>
+                    <af:column headerText="First Name" id="c2">
+                      <af:outputText value="#{row.FirstName}" shortDesc="#{bindings.UsersU41.hints.FirstName.tooltip}"
+                                     id="ot2"/>
+                    </af:column>
+                    <af:column headerText="Middle Name" id="c3">
+                      <af:outputText value="#{row.MiddleName}" shortDesc="#{bindings.UsersU41.hints.MiddleName.tooltip}"
+                                     id="ot3"/>
+                    </af:column>
+                    <af:column headerText="Last Name" id="c4">
+                      <af:outputText value="#{row.LastName}" shortDesc="#{bindings.UsersU41.hints.LastName.tooltip}"
+                                     id="ot4"/>
+                    </af:column>
+                    <af:column headerText="Manager" id="c5">
+                      <af:selectOneChoice value="#{row.bindings.SupervisorId.inputValue}"
+                                          label="#{row.bindings.SupervisorId.label}"
+                                          required="#{bindings.UsersU41.hints.SupervisorId.mandatory}"
+                                          shortDesc="#{bindings.UsersU41.hints.SupervisorId.tooltip}" readOnly="true"
+                                          id="soc1">
+                        <f:selectItems value="#{row.bindings.SupervisorId.items}" id="si1"/>
+                        <f:validator binding="#{row.bindings.SupervisorId.validator}"/>
+                      </af:selectOneChoice>
+                    </af:column>
+                    <af:column headerText="Start Date" id="c6">
+                      <af:outputText value="#{row.StartDate}" shortDesc="#{bindings.UsersU41.hints.StartDate.tooltip}"
+                                     id="ot5">
+                        <af:convertDateTime pattern="#{bindings.UsersU41.hints.StartDate.format}"/>
+                      </af:outputText>
+                    </af:column>
+                    <af:column headerText="Team No" id="c8" width="60">
+                      <af:outputText value="#{row.TeamId}" shortDesc="#{bindings.UsersU41.hints.TeamId.tooltip}"
+                                     id="ot7">
+                        <af:convertNumber groupingUsed="false" pattern="#{bindings.UsersU41.hints.TeamId.format}"/>
+                      </af:outputText>
+                    </af:column>
+                  </af:table>
+                </af:gridCell>
+                <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc2" halign="stretch">
+                  <af:table value="#{bindings.UserRolesMaster11.collectionModel}" var="row"
+                            rows="#{bindings.UserRolesMaster11.rangeSize}"
+                            emptyText="#{bindings.UserRolesMaster11.viewable ? 'No data to display.' : 'Access Denied.'}"
+                            rowBandingInterval="0" fetchSize="#{bindings.UserRolesMaster11.rangeSize}" id="t4">
+                    <af:column headerText="Role" id="c26">
+                      <af:selectOneChoice value="#{row.bindings.RoleNameId.inputValue}"
+                                          label="#{row.bindings.RoleNameId.label}"
+                                          required="#{bindings.UserRolesMaster11.hints.RoleNameId.mandatory}"
+                                          shortDesc="#{bindings.UserRolesMaster11.hints.RoleNameId.tooltip}"
+                                          readOnly="true" id="soc4">
+                        <f:selectItems value="#{row.bindings.RoleNameId.items}" id="si4"/>
+                        <f:validator binding="#{row.bindings.RoleNameId.validator}"/>
+                      </af:selectOneChoice>
+                    </af:column>
+                    <af:column headerText="Assigned" id="c27">
+                      <af:selectBooleanCheckbox value="#{row.bindings.AreAssociated.inputValue}"
+                                                label="#{row.bindings.AreAssociated.label}"
+                                                shortDesc="#{bindings.UserRolesMaster11.hints.AreAssociated.tooltip}"
+                                                id="sbc2" autoSubmit="true"/>
+                    </af:column>
+                  </af:table>
+                </af:gridCell>
+              </af:gridRow>
+            </af:panelGridLayout>
+            <f:facet name="end"/>
+          </af:panelBorderLayout>
+        </af:showDetailItem>
+        <af:showDetailItem id="sdi1" icon="#{resource['images:paper-box-icon-4352.png']}"
+                           depressedIcon="#{resource['images:paper-box-icon-4352.png']}"
+                           hoverIcon="#{resource['images:paper-box-icon-4352.png']}" text="Products"
+                           disclosed="#{(pageFlowScope.tabVal ==2)?true:false}">
+          <af:panelSplitter id="ps1" positionedFromEnd="true">
+            <f:facet name="first">
+              <af:panelGroupLayout layout="vertical" id="pgl2">
+                <af:panelGroupLayout layout="vertical" id="pgl7">
+                  <af:panelHeader text="Manage Products" id="ph1">
+                    <af:panelGroupLayout id="pgl4">
+                      <af:quickQuery label="Search" searchDesc="Search" id="qryId2"
+                                     value="#{bindings.ImplicitViewCriteriaQuery1.quickQueryDescriptor}"
+                                     model="#{bindings.ImplicitViewCriteriaQuery1.queryModel}"
+                                     queryListener="#{bindings.ImplicitViewCriteriaQuery1.processQuery}">
+                        <f:facet name="end">
+                          <af:commandLink text="Advanced" rendered="false" id="cl2"/>
+                        </f:facet>
+                      </af:quickQuery>
+                      <af:button text="Create Product" id="b2" useWindow="true" windowHeight="500"
+                                 action="createProduct" windowWidth="600"/>
+                      <af:button text="Create Category" id="b6"
+                                 windowModalityType="applicationModal" windowEmbedStyle="inlineDocument"
+                                 useWindow="true" windowHeight="500" windowWidth="600" action="create_product_category"/>
+                      <af:button text="Delete Product" disabled="#{!bindings.Delete1.enabled}" id="b4"
+                                 action="#{safeDeleteBean.commit_Delete_Product}"/>
+                    </af:panelGroupLayout>
+                  </af:panelHeader>
+                  <af:table value="#{bindings.ProductsU1.collectionModel}" var="row"
+                            rows="#{bindings.ProductsU1.rangeSize}"
+                            emptyText="#{bindings.ProductsU1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                            rowBandingInterval="0" selectedRowKeys="#{bindings.ProductsU1.collectionModel.selectedRow}"
+                            selectionListener="#{bindings.ProductsU1.collectionModel.makeCurrent}" rowSelection="single"
+                            fetchSize="#{bindings.ProductsU1.rangeSize}"
+                            filterModel="#{bindings.ImplicitViewCriteriaQuery1.quickQueryDescriptor}"
+                            filterVisible="true" queryListener="#{bindings.ImplicitViewCriteriaQuery1.processQuery}"
+                            varStatus="vs" partialTriggers="::qryId2 ::b4 ::b6" id="t2">
+                    <af:column sortProperty="#{bindings.ProductsU1.hints.ProductName.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.ProductsU1.hints.ProductName.label}" id="c10">
+                      <af:link text="#{row.ProductName}" id="l2" action="editProduct" useWindow="true"
+                               windowEmbedStyle="inlineDocument" windowHeight="500" windowWidth="600"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.ProductsU1.hints.ProductDescription.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.ProductsU1.hints.ProductDescription.label}"
+                               id="c11">
+                      <af:outputText value="#{row.ProductDescription}"
+                                     shortDesc="#{bindings.ProductsU1.hints.ProductDescription.tooltip}" id="ot10"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.ProductsU1.hints.CurrentPrice.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.ProductsU1.hints.CurrentPrice.label}" id="c12">
+                      <af:outputText value="#{row.CurrentPrice}"
+                                     shortDesc="#{bindings.ProductsU1.hints.CurrentPrice.tooltip}" id="ot17">
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.ProductsU1.hints.CurrentPrice.format}"/>
+                      </af:outputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.ProductsU1.hints.ProductCategoryId.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.ProductsU1.hints.ProductCategoryId.label}"
+                               id="c13">
+                      <af:selectOneChoice value="#{row.bindings.ProductCategoryId.inputValue}"
+                                          label="#{row.bindings.ProductCategoryId.label}"
+                                          required="#{bindings.ProductsU1.hints.ProductCategoryId.mandatory}"
+                                          shortDesc="#{bindings.ProductsU1.hints.ProductCategoryId.tooltip}"
+                                          readOnly="true" id="soc2">
+                        <f:selectItems value="#{row.bindings.ProductCategoryId.items}" id="si2"/>
+                        <f:validator binding="#{row.bindings.ProductCategoryId.validator}"/>
+                      </af:selectOneChoice>
+                    </af:column>
+                  </af:table>
+                </af:panelGroupLayout>
+              </af:panelGroupLayout>
+            </f:facet>
+          </af:panelSplitter>
+        </af:showDetailItem>
+        <af:showDetailItem text="Roles" id="sdi2" disclosed="#{(pageFlowScope.tabVal ==3)?true:false}"
+                           icon="icons/role.png">
+          <af:panelGroupLayout id="pgl6" layout="vertical">
+            <af:panelBorderLayout id="pbl1">
+              <f:facet name="top">
+                <af:button text="Create Role" id="b7" action="createRoll" useWindow="true"
+                           windowEmbedStyle="window"/>
+                <af:button text="Delete2"
+                           disabled="#{!bindings.Delete2.enabled}" id="b8" action="#{safeDeleteBean.deleteRole}"/>
+              </f:facet>
+              <f:facet name="bottom"/>
+              <f:facet name="start"/>
+              <af:panelGroupLayout layout="vertical" id="pgl1">
+                <af:panelHeader text="RoleEO" id="ph2">
+                  <af:quickQuery label="Search" searchDesc="Search" id="qryId1"
+                                 value="#{bindings.ImplicitViewCriteriaQuery.quickQueryDescriptor}"
+                                 model="#{bindings.ImplicitViewCriteriaQuery.queryModel}"
+                                 queryListener="#{bindings.ImplicitViewCriteriaQuery.processQuery}">
+                    <f:facet name="end">
+                      <af:commandLink text="Advanced" rendered="false" id="cl1"/>
+                    </f:facet>
+                  </af:quickQuery>
+                </af:panelHeader>
+                <af:table value="#{bindings.RolesU1.collectionModel}" var="row" rows="#{bindings.RolesU1.rangeSize}"
+                          emptyText="#{bindings.RolesU1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          rowBandingInterval="0" selectedRowKeys="#{bindings.RolesU1.collectionModel.selectedRow}"
+                          selectionListener="#{bindings.RolesU1.collectionModel.makeCurrent}" rowSelection="single"
+                          fetchSize="#{bindings.RolesU1.rangeSize}" partialTriggers="::qryId1 ::b8" id="t3">
+                  <af:column headerText="#{bindings.RolesU1.hints.RoleNameId.label}" id="c7">
+                    <af:selectOneChoice value="#{row.bindings.RoleNameId.inputValue}"
+                                        label="#{row.bindings.RoleNameId.label}"
+                                        required="#{bindings.RolesU1.hints.RoleNameId.mandatory}"
+                                        shortDesc="#{bindings.RolesU1.hints.RoleNameId.tooltip}" readOnly="true"
+                                        id="soc3">
+                      <f:selectItems value="#{row.bindings.RoleNameId.items}" id="si3"/>
+                      <f:validator binding="#{row.bindings.RoleNameId.validator}"/>
+                    </af:selectOneChoice>
+                  </af:column>
+                  <af:column headerText="#{bindings.RolesU1.hints.StartDate.label}" id="c9">
+                    <af:outputText value="#{row.StartDate}" shortDesc="#{bindings.RolesU1.hints.StartDate.tooltip}"
+                                   id="ot1">
+                      <af:convertDateTime pattern="#{bindings.RolesU1.hints.StartDate.format}"/>
+                    </af:outputText>
+                  </af:column>
+                  <af:column headerText="#{bindings.RolesU1.hints.EndDate.label}" id="c14">
+                    <af:outputText value="#{row.EndDate}" shortDesc="#{bindings.RolesU1.hints.EndDate.tooltip}"
+                                   id="ot6">
+                      <af:convertDateTime pattern="#{bindings.RolesU1.hints.EndDate.format}"/>
+                    </af:outputText>
+                  </af:column>
+                  <af:column headerText="#{bindings.RolesU1.hints.Description.label}" id="c15">
+                    <af:outputText value="#{row.Description}" shortDesc="#{bindings.RolesU1.hints.Description.tooltip}"
+                                   id="ot8"/>
+                  </af:column>
+                </af:table>
+              </af:panelGroupLayout>
+              <af:table value="#{bindings.UsersRolesU3.collectionModel}" var="row"
+                        rows="#{bindings.UsersRolesU3.rangeSize}"
+                        emptyText="#{bindings.UsersRolesU3.viewable ? 'No data to display.' : 'Access Denied.'}"
+                        rowBandingInterval="0" fetchSize="#{bindings.UsersRolesU3.rangeSize}" id="t5">
+                <af:column headerText="User" id="c16" width="300">
+                  <af:selectOneChoice value="#{row.bindings.UserId.inputValue}" label="#{row.bindings.UserId.label}"
+                                      required="#{bindings.UsersRolesU3.hints.UserId.mandatory}"
+                                      shortDesc="#{bindings.UsersRolesU3.hints.UserId.tooltip}" readOnly="true"
+                                      id="soc5">
+                    <f:selectItems value="#{row.bindings.UserId.items}" id="si5"/>
+                    <f:validator binding="#{row.bindings.UserId.validator}"/>
+                  </af:selectOneChoice>
+                </af:column>
+              </af:table>
+              <f:facet name="end"/>
+            </af:panelBorderLayout>
+          </af:panelGroupLayout>
+          <af:panelGroupLayout id="pgl8"/>
+        </af:showDetailItem>
+      </af:panelTabbed>
+    </f:facet>
+  </af:panelStretchLayout>
+  <!--oracle-jdev-comment:preferred-managed-bean-name:safeDeleteBean-->
+</ui:composition>

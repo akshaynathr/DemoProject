@@ -1,0 +1,92 @@
+@charset "UTF-8";
+/**ADFFaces_Skin_File / DO NOT REMOVE**/
+@namespace af "http://xmlns.oracle.com/adf/faces/rich";
+@namespace dvt "http://xmlns.oracle.com/dss/adf/faces";
+
+/*/*//*/*//*To Change text style of Tab*/
+/*it will be applied on header of tab*/
+af|panelTabbed::header
+{
+  background-color:  transparent;
+  border: none;
+   
+}
+ 
+/*it will be applied on selected header of tab*/
+af|panelTabbed::header:selected
+{
+  background-color:#233977 ;
+  color: White;
+   border: none ;
+   border-color:transparent ;
+   height:100px;
+   
+}
+ 
+af|panelTabbed::tab-start, af|panelTabbed::tab-end,  af|panelTabbed::tab:hover af|panelTabbed::tab-start, af|panelTabbed::tab:hover af|panelTabbed::tab-end  {
+    background-image:none !important;
+   background-color:#233977  !important;
+   color:#233977  !important;
+   border: none ;
+   border-color:transparent;
+}
+ 
+ 
+af|panelTabbed::tab:selected af|panelTabbed::tab-content, af|panelTabbed::tab:selected:hover af|panelTabbed::tab-content {
+  background-color:#233977 ;
+  color:#233977;
+  background: none;
+   border: none ;
+   border-color:transparent;
+ 
+}
+af|panelTabbed::tab:hover af|panelTabbed::tab-content {
+     background-color: #C3E0F2; ;
+     background: none ;
+ 
+}
+ 
+/*it will be applied on text in tab of panelTabbed */
+af|panelTabbed::tab af|panelTabbed::tab-text-link {
+    font-size:14px;
+    font-weight:bold;
+    color:#233977 ;
+    line-height:16px;
+}
+ 
+/*it will be applied on text in selected tab of panelTabbed */
+af|panelTabbed::tab:selected af|panelTabbed::tab-text-link {
+    color:#233977;
+    border: none;
+    font-size:14px;
+    font-weight:bold;
+    line-height:16px;
+}
+ 
+ 
+af|panelTabbed::tab.p_AFSelected af|panelTabbed::tab-content, af|panelTabbed::tab.p_AFSelected:hover af|panelTabbed::tab-content
+{
+background-color: #fff ; background-image:none;
+color: #233977;
+border: none;
+}
+ 
+ 
+af|panelTabbed::tab.p_AFSelected af|panelTabbed::tab-end, af|panelTabbed::tab.p_AFSelected:hover af|panelTabbed::tab-end
+{
+background-color: transparent;
+ background-image:none;
+}
+ 
+ 
+ 
+af|panelTabbed::tab:selected af|panelTabbed::tab-content{
+  border: none;
+}
+af|panelTabbed::body {
+    background-color: #fff ;
+    color: White;
+    border: thick ;
+}
+ 
+ 

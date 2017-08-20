@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="createRolePageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="RolesLookupMaster1" RangeSize="25" DataControl="AppModuleAMDataControl"
+              id="RolesLookupMaster1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="RolesLookupMaster1Iterator" id="PossibleValue">
+      <AttrNames>
+        <Item Value="PossibleValue"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RolesLookupMaster1Iterator" id="Description">
+      <AttrNames>
+        <Item Value="Description"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RolesLookupMaster1Iterator" id="StartDate">
+      <AttrNames>
+        <Item Value="StartDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RolesLookupMaster1Iterator" id="EndDate">
+      <AttrNames>
+        <Item Value="EndDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RolesLookupMaster1Iterator" id="Description1">
+      <AttrNames>
+        <Item Value="Description1"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="Commit" DataControl="AppModuleAMDataControl" RequiresUpdateModel="true" Action="commitTransaction"/>
+  </bindings>
+</pageDefinition>

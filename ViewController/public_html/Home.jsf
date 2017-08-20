@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:h="http://java.sun.com/jsf/html">
+    <af:document title="Home.jsf" id="d1">
+        <af:form id="f1">
+   <af:pageTemplate viewId="/oracle/templates/responsiveTemplate.jspx" id="pt1">
+    <f:facet name="header">
+     <af:outputText value="SalesForce Automation" id="ot1"/>
+    </f:facet>
+    <f:facet name="status"/>
+    <f:facet name="appNav">
+     <af:navigationPane hint="buttons" id="np1"/>
+    </f:facet>
+    <f:facet name="globalLinks">
+     <af:panelGroupLayout id="ptpgl3">
+      <af:spacer width="7" height="10" id="pts2"/>
+      <af:goLink text="Logout" destination="adfAuthentication?logout=true&amp;end_url=/faces/Login.jsf"
+                 inlineStyle="color:Red; font-size:14px; font-weight:bold;" id="gl1">
+       <af:spacer width="5" height="10" id="pts1"/>
+      </af:goLink>
+      <f:facet name="separator">
+      
+       <af:outputText value="Welcome #{securityContext.userName}!" inlineStyle="font-weight:bold; width:100px"
+                      id="ptot2" rendered="#{securityContext.authenticated}"/>
+      </f:facet>
+     </af:panelGroupLayout>
+    </f:facet>
+    <f:facet name="footer"/>
+    <f:facet name="center">
+     <af:region value="#{bindings.dynamicRegion1.regionModel}" id="r1"
+                uncommittedDataWarning="on"/>
+    </f:facet>
+    <f:attribute name="startWidth" value="0"/>
+   </af:pageTemplate>
+  </af:form>
+    </af:document>
+</f:view>
