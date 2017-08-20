@@ -15,14 +15,6 @@
               id="CustomerId_Address_ViewObj1Iterator"/>
   </executables>
   <bindings>
-    <tree IterBinding="OpportunitiesU1Iterator1" id="OpportunitiesU1">
-      <nodeDefinition DefName="model.customer.UVO.OpportunitiesUVO" Name="OpportunitiesU10">
-        <AttrNames>
-          <Item Value="PrimaryContact"/>
-          <Item Value="OppurtunityName"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
     <attributeValues IterBinding="CustomerId_Address_ViewObj1Iterator" id="CustomerName">
       <AttrNames>
         <Item Value="CustomerName"/>
@@ -113,14 +105,6 @@
         <Item Value="Street"/>
       </AttrNames>
     </attributeValues>
-    <tree IterBinding="OpportunitiesU1Iterator1" id="OpportunitiesU1">
-      <nodeDefinition DefName="model.customer.UVO.OpportunitiesUVO" Name="OpportunitiesU10">
-        <AttrNames>
-          <Item Value="PrimaryContact"/>
-          <Item Value="OppurtunityName"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
     <tree IterBinding="CustomersU5Iterator" id="CustomersU5">
       <nodeDefinition DefName="model.UVO.CustomersUVO" Name="CustomersU50">
         <AttrNames>

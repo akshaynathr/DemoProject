@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
-                xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+                xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
   <af:panelStretchLayout id="psl1"
                          inlineStyle="outline-color:transparent; outline-style:hidden; border-image-width:0ch;">
     <f:facet name="center">
@@ -75,7 +76,9 @@
       </af:panelSpringboard>
     </f:facet>
     <f:facet name="top">
-      <af:button text="Dashboard" id="b1" iconPosition="top" action="back"/>
+      <af:panelGroupLayout id="pgl3" inlineStyle="background-color:#fff;" layout="horizontal">
+        <af:button text="Dashboard" id="b1" icon="/icons/QUICK-icon-55344.png" action="back"/>
+      </af:panelGroupLayout>
     </f:facet>
   </af:panelStretchLayout>
 </ui:composition>
