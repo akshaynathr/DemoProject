@@ -15,7 +15,7 @@
       <property
          name="description">&lt;html>&lt;p>&lt;b>Customers_tab&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">84.418945</property>
+         name="y">83.71777</property>
       <property
          name="page">/Customers_tab.jsf</property>
       <property
@@ -44,7 +44,7 @@
       <property
          name="fromOutcome">return</property>
       <property
-         name="sdm:polyPoints">R50,424.0,84.06836,585.0,162.5459,L50</property>
+         name="sdm:polyPoints">R50,424.0,83.36719,585.0,162.5459,L50</property>
    </ControlFlowCase>
    <View
       id="View5">
@@ -69,7 +69,7 @@
       <property
          name="fromOutcome">edit_customer</property>
       <property
-         name="sdm:polyPoints">T44,379.5,30.06836,373.5,-16.002394,B44</property>
+         name="sdm:polyPoints">T44,379.5,29.367188,373.5,-15.995472,B44</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -79,6 +79,6 @@
       <property
          name="fromOutcome">return_edit_customer</property>
       <property
-         name="sdm:polyPoints">B56,380.5,-16.454102,386.5,29.618826,T56</property>
+         name="sdm:polyPoints">B56,380.5,-16.454102,386.5,28.910833,T56</property>
    </ControlFlowCase>
 </SDM>

@@ -10,6 +10,142 @@
             <af:outputText value="#{pageFlowScope.toVal}" id="ot2"/>
             <af:panelTabbed position="start" id="pt1">
               <af:showDetailItem id="tab1" text="Details" icon="/icons/OPPURTUNITY(1).png">
+                <af:panelFormLayout id="pfl1">
+                  <af:inputText value="#{bindings.CustomerName.inputValue}" label="Name"
+                                required="#{bindings.CustomerName.hints.mandatory}" readOnly="true"
+                                columns="#{bindings.CustomerName.hints.displayWidth}"
+                                maximumLength="#{bindings.CustomerName.hints.precision}"
+                                shortDesc="#{bindings.CustomerName.hints.tooltip}" id="it1">
+                    <f:validator binding="#{bindings.CustomerName.validator}"/>
+                  </af:inputText>
+                  <af:inputText value="#{bindings.Ceo.inputValue}" label="CEO"
+                                required="#{bindings.Ceo.hints.mandatory}" readOnly="true"
+                                columns="#{bindings.Ceo.hints.displayWidth}"
+                                maximumLength="#{bindings.Ceo.hints.precision}"
+                                shortDesc="#{bindings.Ceo.hints.tooltip}" id="it2">
+                    <f:validator binding="#{bindings.Ceo.validator}"/>
+                  </af:inputText>
+                  <af:inputText value="#{bindings.CreatedBy.inputValue}" label="Created By"
+                                required="#{bindings.CreatedBy.hints.mandatory}" readOnly="true"
+                                columns="#{bindings.CreatedBy.hints.displayWidth}"
+                                maximumLength="#{bindings.CreatedBy.hints.precision}"
+                                shortDesc="#{bindings.CreatedBy.hints.tooltip}" id="it3">
+                    <f:validator binding="#{bindings.CreatedBy.validator}"/>
+                  </af:inputText>
+                  <af:inputDate value="#{bindings.CreatedOn.inputValue}" readOnly="true" label="Created date"
+                                required="#{bindings.CreatedOn.hints.mandatory}"
+                                columns="#{bindings.CreatedOn.hints.displayWidth}"
+                                shortDesc="#{bindings.CreatedOn.hints.tooltip}" id="id1">
+                    <f:validator binding="#{bindings.CreatedOn.validator}"/>
+                    <af:convertDateTime pattern="#{bindings.CreatedOn.format}"/>
+                  </af:inputDate>
+                  <af:inputText value="#{bindings.CustomerTypeId.inputValue}" label="Type"
+                                required="#{bindings.CustomerTypeId.hints.mandatory}" readOnly="true"
+                                columns="#{bindings.CustomerTypeId.hints.displayWidth}"
+                                maximumLength="#{bindings.CustomerTypeId.hints.precision}"
+                                shortDesc="#{bindings.CustomerTypeId.hints.tooltip}" id="it4">
+                    <f:validator binding="#{bindings.CustomerTypeId.validator}"/>
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.CustomerTypeId.format}"/>
+                  </af:inputText>
+                  <af:inputText value="#{bindings.Email.inputValue}" label="#{bindings.Email.hints.label}"
+                                required="#{bindings.Email.hints.mandatory}" readOnly="true"
+                                columns="#{bindings.Email.hints.displayWidth}"
+                                maximumLength="#{bindings.Email.hints.precision}"
+                                shortDesc="#{bindings.Email.hints.tooltip}" id="it5">
+                    <f:validator binding="#{bindings.Email.validator}"/>
+                  </af:inputText>
+                  <af:inputText value="#{bindings.Fax.inputValue}" label="#{bindings.Fax.hints.label}"
+                                required="#{bindings.Fax.hints.mandatory}" readOnly="true"
+                                columns="#{bindings.Fax.hints.displayWidth}"
+                                maximumLength="#{bindings.Fax.hints.precision}"
+                                shortDesc="#{bindings.Fax.hints.tooltip}" id="it6">
+                    <f:validator binding="#{bindings.Fax.validator}"/>
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.Fax.format}"/>
+                  </af:inputText>
+                  <af:inputText value="#{bindings.NoOfEmployees.inputValue}" label="WorkForce"
+                                required="#{bindings.NoOfEmployees.hints.mandatory}" readOnly="true"
+                                columns="#{bindings.NoOfEmployees.hints.displayWidth}"
+                                maximumLength="#{bindings.NoOfEmployees.hints.precision}"
+                                shortDesc="#{bindings.NoOfEmployees.hints.tooltip}" id="it7">
+                    <f:validator binding="#{bindings.NoOfEmployees.validator}"/>
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.NoOfEmployees.format}"/>
+                  </af:inputText>
+                  <af:inputText value="#{bindings.ParentCompany.inputValue}" label="Parent Company"
+                                required="#{bindings.ParentCompany.hints.mandatory}" readOnly="true"
+                                columns="#{bindings.ParentCompany.hints.displayWidth}"
+                                maximumLength="#{bindings.ParentCompany.hints.precision}"
+                                shortDesc="#{bindings.ParentCompany.hints.tooltip}" id="it8">
+                    <f:validator binding="#{bindings.ParentCompany.validator}"/>
+                  </af:inputText>
+                  <af:inputText value="#{bindings.PrimaryContactId.inputValue}" label="Primary Contact"
+                                required="#{bindings.PrimaryContactId.hints.mandatory}" readOnly="true"
+                                columns="#{bindings.PrimaryContactId.hints.displayWidth}"
+                                maximumLength="#{bindings.PrimaryContactId.hints.precision}"
+                                shortDesc="#{bindings.PrimaryContactId.hints.tooltip}" id="it9">
+                    <f:validator binding="#{bindings.PrimaryContactId.validator}"/>
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.PrimaryContactId.format}"/>
+                  </af:inputText>
+                  <af:inputText value="#{bindings.Url.inputValue}" label="#{bindings.Url.hints.label}"
+                                required="#{bindings.Url.hints.mandatory}" readOnly="true"
+                                columns="#{bindings.Url.hints.displayWidth}"
+                                maximumLength="#{bindings.Url.hints.precision}"
+                                shortDesc="#{bindings.Url.hints.tooltip}" id="it10">
+                    <f:validator binding="#{bindings.Url.validator}"/>
+                  </af:inputText>
+                  <af:group id="PrimaryAddress" title="Primary Address"
+                  >
+                    <af:inputText value="#{bindings.City.inputValue}" label="#{bindings.City.hints.label}"
+                                  required="#{bindings.City.hints.mandatory}" readOnly="true"
+                                  columns="#{bindings.City.hints.displayWidth}"
+                                  maximumLength="#{bindings.City.hints.precision}"
+                                  shortDesc="#{bindings.City.hints.tooltip}" id="it11">
+                      <f:validator binding="#{bindings.City.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.Country.inputValue}" label="#{bindings.Country.hints.label}"
+                                  required="#{bindings.Country.hints.mandatory}" readOnly="true"
+                                  columns="#{bindings.Country.hints.displayWidth}"
+                                  maximumLength="#{bindings.Country.hints.precision}"
+                                  shortDesc="#{bindings.Country.hints.tooltip}" id="it12">
+                      <f:validator binding="#{bindings.Country.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.House.inputValue}" label="#{bindings.House.hints.label}"
+                                  required="#{bindings.House.hints.mandatory}" readOnly="true"
+                                  columns="#{bindings.House.hints.displayWidth}"
+                                  maximumLength="#{bindings.House.hints.precision}"
+                                  shortDesc="#{bindings.House.hints.tooltip}" id="it13">
+                      <f:validator binding="#{bindings.House.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.Locality.inputValue}" label="#{bindings.Locality.hints.label}"
+                                  required="#{bindings.Locality.hints.mandatory}" readOnly="true"
+                                  columns="#{bindings.Locality.hints.displayWidth}"
+                                  maximumLength="#{bindings.Locality.hints.precision}"
+                                  shortDesc="#{bindings.Locality.hints.tooltip}" id="it14">
+                      <f:validator binding="#{bindings.Locality.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.Pincode.inputValue}" label="#{bindings.Pincode.hints.label}"
+                                  required="#{bindings.Pincode.hints.mandatory}" readOnly="true"
+                                  columns="#{bindings.Pincode.hints.displayWidth}"
+                                  maximumLength="#{bindings.Pincode.hints.precision}"
+                                  shortDesc="#{bindings.Pincode.hints.tooltip}" id="it15">
+                      <f:validator binding="#{bindings.Pincode.validator}"/>
+                      <af:convertNumber groupingUsed="false" pattern="#{bindings.Pincode.format}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.State.inputValue}" label="#{bindings.State.hints.label}"
+                                  required="#{bindings.State.hints.mandatory}" readOnly="true"
+                                  columns="#{bindings.State.hints.displayWidth}"
+                                  maximumLength="#{bindings.State.hints.precision}"
+                                  shortDesc="#{bindings.State.hints.tooltip}" id="it16">
+                      <f:validator binding="#{bindings.State.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.Street.inputValue}" label="#{bindings.Street.hints.label}"
+                                  required="#{bindings.Street.hints.mandatory}" readOnly="true"
+                                  columns="#{bindings.Street.hints.displayWidth}"
+                                  maximumLength="#{bindings.Street.hints.precision}"
+                                  shortDesc="#{bindings.Street.hints.tooltip}" id="it17">
+                      <f:validator binding="#{bindings.Street.validator}"/>
+                    </af:inputText>
+                  </af:group>
+                </af:panelFormLayout>
                 <af:panelGroupLayout layout="vertical" id="pgl3">
                   <af:toolbar id="t1">
                     <af:outputText value="Customer Details" id="ot1"
@@ -19,181 +155,6 @@
                     <af:button text="Save and Close" id="b3" action="return"/>
                     <af:button text="Close" id="b4"/>
                   </af:toolbar>
-                  <af:panelFormLayout id="pfl1">
-                    <af:inputText value="#{bindings.CustomerName.inputValue}"
-                                  label="#{bindings.CustomerName.hints.label}"
-                                  required="#{bindings.CustomerName.hints.mandatory}" readOnly="true"
-                                  columns="#{bindings.CustomerName.hints.displayWidth}"
-                                  maximumLength="#{bindings.CustomerName.hints.precision}"
-                                  shortDesc="#{bindings.CustomerName.hints.tooltip}" id="it1">
-                      <f:validator binding="#{bindings.CustomerName.validator}"/>
-                    </af:inputText>
-                    <af:selectOneChoice value="#{bindings.CustomerTypeId.inputValue}"
-                                        label="#{bindings.CustomerTypeId.label}"
-                                        required="#{bindings.CustomerTypeId.hints.mandatory}"
-                                        shortDesc="#{bindings.CustomerTypeId.hints.tooltip}" readOnly="true" id="soc1">
-                      <f:selectItems value="#{bindings.CustomerTypeId.items}" id="si1"/>
-                      <f:validator binding="#{bindings.CustomerTypeId.validator}"/>
-                    </af:selectOneChoice>
-                    <af:selectOneChoice value="#{bindings.PrimaryContactId.inputValue}"
-                                        label="#{bindings.PrimaryContactId.label}"
-                                        required="#{bindings.PrimaryContactId.hints.mandatory}"
-                                        shortDesc="#{bindings.PrimaryContactId.hints.tooltip}" readOnly="true"
-                                        id="soc2">
-                      <f:selectItems value="#{bindings.PrimaryContactId.items}" id="si2"/>
-                      <f:validator binding="#{bindings.PrimaryContactId.validator}"/>
-                    </af:selectOneChoice>
-                    <af:inputText value="#{bindings.Url.inputValue}" label="#{bindings.Url.hints.label}"
-                                  required="#{bindings.Url.hints.mandatory}" readOnly="true"
-                                  columns="#{bindings.Url.hints.displayWidth}"
-                                  maximumLength="#{bindings.Url.hints.precision}"
-                                  shortDesc="#{bindings.Url.hints.tooltip}" id="it2">
-                      <f:validator binding="#{bindings.Url.validator}"/>
-                    </af:inputText>
-                    <af:inputText value="#{bindings.ParentCompany.inputValue}"
-                                  label="#{bindings.ParentCompany.hints.label}"
-                                  required="#{bindings.ParentCompany.hints.mandatory}" readOnly="true"
-                                  columns="#{bindings.ParentCompany.hints.displayWidth}"
-                                  maximumLength="#{bindings.ParentCompany.hints.precision}"
-                                  shortDesc="#{bindings.ParentCompany.hints.tooltip}" id="it3">
-                      <f:validator binding="#{bindings.ParentCompany.validator}"/>
-                    </af:inputText>
-                    <af:inputText value="#{bindings.Ceo.inputValue}" label="#{bindings.Ceo.hints.label}"
-                                  required="#{bindings.Ceo.hints.mandatory}" readOnly="true"
-                                  columns="#{bindings.Ceo.hints.displayWidth}"
-                                  maximumLength="#{bindings.Ceo.hints.precision}"
-                                  shortDesc="#{bindings.Ceo.hints.tooltip}" id="it4">
-                      <f:validator binding="#{bindings.Ceo.validator}"/>
-                    </af:inputText>
-                    <af:inputText value="#{bindings.NoOfEmployees.inputValue}"
-                                  label="#{bindings.NoOfEmployees.hints.label}"
-                                  required="#{bindings.NoOfEmployees.hints.mandatory}" readOnly="true"
-                                  columns="#{bindings.NoOfEmployees.hints.displayWidth}"
-                                  maximumLength="#{bindings.NoOfEmployees.hints.precision}"
-                                  shortDesc="#{bindings.NoOfEmployees.hints.tooltip}" id="it5">
-                      <f:validator binding="#{bindings.NoOfEmployees.validator}"/>
-                      <af:convertNumber groupingUsed="false" pattern="#{bindings.NoOfEmployees.format}"/>
-                    </af:inputText>
-                    <af:inputText value="#{bindings.Fax.inputValue}" label="#{bindings.Fax.hints.label}"
-                                  required="#{bindings.Fax.hints.mandatory}" readOnly="true"
-                                  columns="#{bindings.Fax.hints.displayWidth}"
-                                  maximumLength="#{bindings.Fax.hints.precision}"
-                                  shortDesc="#{bindings.Fax.hints.tooltip}" id="it6">
-                      <f:validator binding="#{bindings.Fax.validator}"/>
-                      <af:convertNumber groupingUsed="false" pattern="#{bindings.Fax.format}"/>
-                    </af:inputText>
-                    <af:inputText value="#{bindings.Email.inputValue}" label="#{bindings.Email.hints.label}"
-                                  required="#{bindings.Email.hints.mandatory}" readOnly="true"
-                                  columns="#{bindings.Email.hints.displayWidth}"
-                                  maximumLength="#{bindings.Email.hints.precision}"
-                                  shortDesc="#{bindings.Email.hints.tooltip}" id="it7">
-                      <f:validator binding="#{bindings.Email.validator}"/>
-                    </af:inputText>
-                    <af:group id="Group" title="Primary Address">
-                      <af:inputText value="#{bindings.House.inputValue}" label="#{bindings.House.hints.label}"
-                                    required="#{bindings.House.hints.mandatory}" readOnly="true"
-                                    columns="#{bindings.House.hints.displayWidth}"
-                                    maximumLength="#{bindings.House.hints.precision}"
-                                    shortDesc="#{bindings.House.hints.tooltip}" id="it9">
-                        <f:validator binding="#{bindings.House.validator}"/>
-                      </af:inputText>
-                      <af:inputText value="#{bindings.Street.inputValue}" label="#{bindings.Street.hints.label}"
-                                    required="#{bindings.Street.hints.mandatory}" readOnly="true"
-                                    columns="#{bindings.Street.hints.displayWidth}"
-                                    maximumLength="#{bindings.Street.hints.precision}"
-                                    shortDesc="#{bindings.Street.hints.tooltip}" id="it10">
-                        <f:validator binding="#{bindings.Street.validator}"/>
-                      </af:inputText>
-                      <af:inputText value="#{bindings.Locality.inputValue}" label="#{bindings.Locality.hints.label}"
-                                    required="#{bindings.Locality.hints.mandatory}" readOnly="true"
-                                    columns="#{bindings.Locality.hints.displayWidth}"
-                                    maximumLength="#{bindings.Locality.hints.precision}"
-                                    shortDesc="#{bindings.Locality.hints.tooltip}" id="it11">
-                        <f:validator binding="#{bindings.Locality.validator}"/>
-                      </af:inputText>
-                      <af:inputText value="#{bindings.City.inputValue}" label="#{bindings.City.hints.label}"
-                                    required="#{bindings.City.hints.mandatory}" readOnly="true"
-                                    columns="#{bindings.City.hints.displayWidth}"
-                                    maximumLength="#{bindings.City.hints.precision}"
-                                    shortDesc="#{bindings.City.hints.tooltip}" id="it12">
-                        <f:validator binding="#{bindings.City.validator}"/>
-                      </af:inputText>
-                      <af:inputText value="#{bindings.Pincode.inputValue}" label="#{bindings.Pincode.hints.label}"
-                                    required="#{bindings.Pincode.hints.mandatory}" readOnly="true"
-                                    columns="#{bindings.Pincode.hints.displayWidth}"
-                                    maximumLength="#{bindings.Pincode.hints.precision}"
-                                    shortDesc="#{bindings.Pincode.hints.tooltip}" id="it13">
-                        <f:validator binding="#{bindings.Pincode.validator}"/>
-                        <af:convertNumber groupingUsed="false" pattern="#{bindings.Pincode.format}"/>
-                      </af:inputText>
-                      <af:inputText value="#{bindings.State.inputValue}" label="#{bindings.State.hints.label}"
-                                    required="#{bindings.State.hints.mandatory}" readOnly="true"
-                                    columns="#{bindings.State.hints.displayWidth}"
-                                    maximumLength="#{bindings.State.hints.precision}"
-                                    shortDesc="#{bindings.State.hints.tooltip}" id="it14">
-                        <f:validator binding="#{bindings.State.validator}"/>
-                      </af:inputText>
-                      <af:inputText value="#{bindings.Country.inputValue}" label="#{bindings.Country.hints.label}"
-                                    required="#{bindings.Country.hints.mandatory}" readOnly="true"
-                                    columns="#{bindings.Country.hints.displayWidth}"
-                                    maximumLength="#{bindings.Country.hints.precision}"
-                                    shortDesc="#{bindings.Country.hints.tooltip}" id="it15">
-                        <f:validator binding="#{bindings.Country.validator}"/>
-                      </af:inputText>
-                    </af:group>
-                    <af:group id="Group2" title="Shipping Address">
-                      <af:inputText value="#{bindings.House1.inputValue}" label="#{bindings.House1.hints.label}"
-                                    required="#{bindings.House1.hints.mandatory}" readOnly="true"
-                                    columns="#{bindings.House1.hints.displayWidth}"
-                                    maximumLength="#{bindings.House1.hints.precision}"
-                                    shortDesc="#{bindings.House1.hints.tooltip}" id="it17">
-                        <f:validator binding="#{bindings.House1.validator}"/>
-                      </af:inputText>
-                      <af:inputText value="#{bindings.Street1.inputValue}" label="#{bindings.Street1.hints.label}"
-                                    required="#{bindings.Street1.hints.mandatory}" readOnly="true"
-                                    columns="#{bindings.Street1.hints.displayWidth}"
-                                    maximumLength="#{bindings.Street1.hints.precision}"
-                                    shortDesc="#{bindings.Street1.hints.tooltip}" id="it18">
-                        <f:validator binding="#{bindings.Street1.validator}"/>
-                      </af:inputText>
-                      <af:inputText value="#{bindings.Locality1.inputValue}" label="#{bindings.Locality1.hints.label}"
-                                    required="#{bindings.Locality1.hints.mandatory}" readOnly="true"
-                                    columns="#{bindings.Locality1.hints.displayWidth}"
-                                    maximumLength="#{bindings.Locality1.hints.precision}"
-                                    shortDesc="#{bindings.Locality1.hints.tooltip}" id="it19">
-                        <f:validator binding="#{bindings.Locality1.validator}"/>
-                      </af:inputText>
-                      <af:inputText value="#{bindings.City1.inputValue}" label="#{bindings.City1.hints.label}"
-                                    required="#{bindings.City1.hints.mandatory}" readOnly="true"
-                                    columns="#{bindings.City1.hints.displayWidth}"
-                                    maximumLength="#{bindings.City1.hints.precision}"
-                                    shortDesc="#{bindings.City1.hints.tooltip}" id="it20">
-                        <f:validator binding="#{bindings.City1.validator}"/>
-                      </af:inputText>
-                      <af:inputText value="#{bindings.Pincode1.inputValue}" label="#{bindings.Pincode1.hints.label}"
-                                    required="#{bindings.Pincode1.hints.mandatory}" readOnly="true"
-                                    columns="#{bindings.Pincode1.hints.displayWidth}"
-                                    maximumLength="#{bindings.Pincode1.hints.precision}"
-                                    shortDesc="#{bindings.Pincode1.hints.tooltip}" id="it21">
-                        <f:validator binding="#{bindings.Pincode1.validator}"/>
-                        <af:convertNumber groupingUsed="false" pattern="#{bindings.Pincode1.format}"/>
-                      </af:inputText>
-                      <af:inputText value="#{bindings.State1.inputValue}" label="#{bindings.State1.hints.label}"
-                                    required="#{bindings.State1.hints.mandatory}" readOnly="true"
-                                    columns="#{bindings.State1.hints.displayWidth}"
-                                    maximumLength="#{bindings.State1.hints.precision}"
-                                    shortDesc="#{bindings.State1.hints.tooltip}" id="it22">
-                        <f:validator binding="#{bindings.State1.validator}"/>
-                      </af:inputText>
-                      <af:inputText value="#{bindings.Country1.inputValue}" label="#{bindings.Country1.hints.label}"
-                                    required="#{bindings.Country1.hints.mandatory}" readOnly="true"
-                                    columns="#{bindings.Country1.hints.displayWidth}"
-                                    maximumLength="#{bindings.Country1.hints.precision}"
-                                    shortDesc="#{bindings.Country1.hints.tooltip}" id="it23">
-                        <f:validator binding="#{bindings.Country1.validator}"/>
-                      </af:inputText>
-                    </af:group>
-                  </af:panelFormLayout>
                 </af:panelGroupLayout>
               </af:showDetailItem>
               <af:showDetailItem id="tab2" text="Oppurtunities" icon="/icons/OPPURTUNITY.png">

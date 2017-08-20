@@ -169,6 +169,21 @@
   <ViewUsage
     Name="AddressU3"
     ViewObjectName="model.UVO.AddressUVO"/>
+  <ViewUsage
+    Name="CustomersU4"
+    ViewObjectName="model.UVO.CustomersUVO"/>
+  <ViewUsage
+    Name="AddressU4"
+    ViewObjectName="model.UVO.AddressUVO"/>
+  <ViewUsage
+    Name="CustomersU5"
+    ViewObjectName="model.UVO.CustomersUVO"/>
+  <ViewUsage
+    Name="AddressU6"
+    ViewObjectName="model.UVO.AddressUVO"/>
+  <ViewUsage
+    Name="CustomerId_Address_ViewObj1"
+    ViewObjectName="model.customer.UVO.CustomerId_Address_ViewObjVO"/>
   <ViewLinkUsage
     Name="UsersFk1VL1"
     ViewLinkObjectName="model.UVO.UsersFk1VL"
@@ -258,5 +273,17 @@
     ViewLinkObjectName="model.VL.CustomerShippingAddressVL"
     SrcViewUsageName="model.AM.AppModuleAM.CustomersU1"
     DstViewUsageName="model.AM.AppModuleAM.AddressU3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="CustomerShippingAddressVL3"
+    ViewLinkObjectName="model.VL.CustomerShippingAddressVL"
+    SrcViewUsageName="model.AM.AppModuleAM.CustomersU4"
+    DstViewUsageName="model.AM.AppModuleAM.AddressU4"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="CustomerPrimaryAddressVL5"
+    ViewLinkObjectName="model.VL.CustomerPrimaryAddressVL"
+    SrcViewUsageName="model.AM.AppModuleAM.CustomersU5"
+    DstViewUsageName="model.AM.AppModuleAM.AddressU6"
     Reversed="false"/>
 </AppModule>

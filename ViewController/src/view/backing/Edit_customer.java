@@ -1,11 +1,7 @@
 package view.backing;
 
 
-import javax.faces.component.UISelectItems;
-
-import oracle.adf.view.rich.component.rich.input.RichInputDate;
 import oracle.adf.view.rich.component.rich.input.RichInputText;
-import oracle.adf.view.rich.component.rich.input.RichSelectOneChoice;
 import oracle.adf.view.rich.component.rich.layout.RichPanelFormLayout;
 import oracle.adf.view.rich.component.rich.layout.RichPanelGroupLayout;
 import oracle.adf.view.rich.component.rich.nav.RichButton;
@@ -20,10 +16,6 @@ public class Edit_customer {
     private RichOutputText ot1;
     private RichPanelFormLayout pfl1;
     private RichInputText it1;
-    private RichSelectOneChoice soc1;
-    private UISelectItems si1;
-    private RichSelectOneChoice soc2;
-    private UISelectItems si2;
     private RichInputText it2;
     private RichInputText it3;
     private RichInputText it4;
@@ -33,40 +25,10 @@ public class Edit_customer {
     private RichInputText it8;
     private RichInputText it9;
     private RichInputText it10;
-    private RichInputDate id1;
     private RichInputText it11;
-    private RichInputDate id2;
     private RichInputText it12;
     private RichInputText it13;
     private RichInputText it14;
-    private RichInputText it15;
-    private RichInputText it16;
-    private RichInputText it17;
-    private RichInputText it18;
-    private RichInputText it19;
-    private RichInputText it20;
-    private RichInputText it21;
-    private RichInputText it22;
-    private RichInputText it23;
-    private RichInputText it24;
-    private RichInputText it25;
-    private RichInputText it26;
-    private RichInputText it27;
-    private RichInputText it28;
-    private RichInputText it29;
-    private RichInputText it30;
-    private RichInputText it31;
-    private RichInputText it32;
-    private RichInputText it33;
-    private RichInputText it34;
-    private RichInputText it35;
-    private RichInputText it36;
-    private RichInputText it37;
-    private RichInputText it38;
-    private RichInputText it39;
-    private RichInputText it40;
-    private RichInputText it41;
-    private RichInputText it42;
     private RichButton b1;
 
 
@@ -111,38 +73,6 @@ public class Edit_customer {
 
     public RichInputText getIt1() {
         return it1;
-    }
-
-    public void setSoc1(RichSelectOneChoice soc1) {
-        this.soc1 = soc1;
-    }
-
-    public RichSelectOneChoice getSoc1() {
-        return soc1;
-    }
-
-    public void setSi1(UISelectItems si1) {
-        this.si1 = si1;
-    }
-
-    public UISelectItems getSi1() {
-        return si1;
-    }
-
-    public void setSoc2(RichSelectOneChoice soc2) {
-        this.soc2 = soc2;
-    }
-
-    public RichSelectOneChoice getSoc2() {
-        return soc2;
-    }
-
-    public void setSi2(UISelectItems si2) {
-        this.si2 = si2;
-    }
-
-    public UISelectItems getSi2() {
-        return si2;
     }
 
     public void setIt2(RichInputText it2) {
@@ -217,28 +147,12 @@ public class Edit_customer {
         return it10;
     }
 
-    public void setId1(RichInputDate id1) {
-        this.id1 = id1;
-    }
-
-    public RichInputDate getId1() {
-        return id1;
-    }
-
     public void setIt11(RichInputText it11) {
         this.it11 = it11;
     }
 
     public RichInputText getIt11() {
         return it11;
-    }
-
-    public void setId2(RichInputDate id2) {
-        this.id2 = id2;
-    }
-
-    public RichInputDate getId2() {
-        return id2;
     }
 
     public void setIt12(RichInputText it12) {
@@ -263,230 +177,6 @@ public class Edit_customer {
 
     public RichInputText getIt14() {
         return it14;
-    }
-
-    public void setIt15(RichInputText it15) {
-        this.it15 = it15;
-    }
-
-    public RichInputText getIt15() {
-        return it15;
-    }
-
-    public void setIt16(RichInputText it16) {
-        this.it16 = it16;
-    }
-
-    public RichInputText getIt16() {
-        return it16;
-    }
-
-    public void setIt17(RichInputText it17) {
-        this.it17 = it17;
-    }
-
-    public RichInputText getIt17() {
-        return it17;
-    }
-
-    public void setIt18(RichInputText it18) {
-        this.it18 = it18;
-    }
-
-    public RichInputText getIt18() {
-        return it18;
-    }
-
-    public void setIt19(RichInputText it19) {
-        this.it19 = it19;
-    }
-
-    public RichInputText getIt19() {
-        return it19;
-    }
-
-    public void setIt20(RichInputText it20) {
-        this.it20 = it20;
-    }
-
-    public RichInputText getIt20() {
-        return it20;
-    }
-
-    public void setIt21(RichInputText it21) {
-        this.it21 = it21;
-    }
-
-    public RichInputText getIt21() {
-        return it21;
-    }
-
-    public void setIt22(RichInputText it22) {
-        this.it22 = it22;
-    }
-
-    public RichInputText getIt22() {
-        return it22;
-    }
-
-    public void setIt23(RichInputText it23) {
-        this.it23 = it23;
-    }
-
-    public RichInputText getIt23() {
-        return it23;
-    }
-
-    public void setIt24(RichInputText it24) {
-        this.it24 = it24;
-    }
-
-    public RichInputText getIt24() {
-        return it24;
-    }
-
-    public void setIt25(RichInputText it25) {
-        this.it25 = it25;
-    }
-
-    public RichInputText getIt25() {
-        return it25;
-    }
-
-    public void setIt26(RichInputText it26) {
-        this.it26 = it26;
-    }
-
-    public RichInputText getIt26() {
-        return it26;
-    }
-
-    public void setIt27(RichInputText it27) {
-        this.it27 = it27;
-    }
-
-    public RichInputText getIt27() {
-        return it27;
-    }
-
-    public void setIt28(RichInputText it28) {
-        this.it28 = it28;
-    }
-
-    public RichInputText getIt28() {
-        return it28;
-    }
-
-    public void setIt29(RichInputText it29) {
-        this.it29 = it29;
-    }
-
-    public RichInputText getIt29() {
-        return it29;
-    }
-
-    public void setIt30(RichInputText it30) {
-        this.it30 = it30;
-    }
-
-    public RichInputText getIt30() {
-        return it30;
-    }
-
-    public void setIt31(RichInputText it31) {
-        this.it31 = it31;
-    }
-
-    public RichInputText getIt31() {
-        return it31;
-    }
-
-    public void setIt32(RichInputText it32) {
-        this.it32 = it32;
-    }
-
-    public RichInputText getIt32() {
-        return it32;
-    }
-
-    public void setIt33(RichInputText it33) {
-        this.it33 = it33;
-    }
-
-    public RichInputText getIt33() {
-        return it33;
-    }
-
-    public void setIt34(RichInputText it34) {
-        this.it34 = it34;
-    }
-
-    public RichInputText getIt34() {
-        return it34;
-    }
-
-    public void setIt35(RichInputText it35) {
-        this.it35 = it35;
-    }
-
-    public RichInputText getIt35() {
-        return it35;
-    }
-
-    public void setIt36(RichInputText it36) {
-        this.it36 = it36;
-    }
-
-    public RichInputText getIt36() {
-        return it36;
-    }
-
-    public void setIt37(RichInputText it37) {
-        this.it37 = it37;
-    }
-
-    public RichInputText getIt37() {
-        return it37;
-    }
-
-    public void setIt38(RichInputText it38) {
-        this.it38 = it38;
-    }
-
-    public RichInputText getIt38() {
-        return it38;
-    }
-
-    public void setIt39(RichInputText it39) {
-        this.it39 = it39;
-    }
-
-    public RichInputText getIt39() {
-        return it39;
-    }
-
-    public void setIt40(RichInputText it40) {
-        this.it40 = it40;
-    }
-
-    public RichInputText getIt40() {
-        return it40;
-    }
-
-    public void setIt41(RichInputText it41) {
-        this.it41 = it41;
-    }
-
-    public RichInputText getIt41() {
-        return it41;
-    }
-
-    public void setIt42(RichInputText it42) {
-        this.it42 = it42;
-    }
-
-    public RichInputText getIt42() {
-        return it42;
     }
 
     public void setB1(RichButton b1) {
