@@ -9,21 +9,21 @@
                       required="#{bindings.ProductName.hints.mandatory}"
                       columns="#{bindings.ProductName.hints.displayWidth}"
                       maximumLength="#{bindings.ProductName.hints.precision}"
-                      shortDesc="#{bindings.ProductName.hints.tooltip}" id="it4">
+                      shortDesc="#{bindings.ProductName.hints.tooltip}" id="it5">
           <f:validator binding="#{bindings.ProductName.validator}"/>
         </af:inputText>
         <af:inputText value="#{bindings.ProductDescription.inputValue}" label="Description"
                       required="#{bindings.ProductDescription.hints.mandatory}"
                       columns="#{bindings.ProductDescription.hints.displayWidth}"
                       maximumLength="#{bindings.ProductDescription.hints.precision}"
-                      shortDesc="#{bindings.ProductDescription.hints.tooltip}" id="it5">
+                      shortDesc="#{bindings.ProductDescription.hints.tooltip}" id="it6">
           <f:validator binding="#{bindings.ProductDescription.validator}"/>
         </af:inputText>
         <af:inputText value="#{bindings.CurrentPrice.inputValue}" label="Price"
                       required="#{bindings.CurrentPrice.hints.mandatory}"
                       columns="#{bindings.CurrentPrice.hints.displayWidth}"
                       maximumLength="#{bindings.CurrentPrice.hints.precision}"
-                      shortDesc="#{bindings.CurrentPrice.hints.tooltip}" id="it6">
+                      shortDesc="#{bindings.CurrentPrice.hints.tooltip}" id="it7">
           <f:validator binding="#{bindings.CurrentPrice.validator}"/>
           <af:convertNumber groupingUsed="false" pattern="#{bindings.CurrentPrice.format}"/>
         </af:inputText>
@@ -34,7 +34,9 @@
           <f:validator binding="#{bindings.ProductCategoryId.validator}"/>
         </af:selectOneChoice>
       </af:panelFormLayout>
-      <af:button text="Save" id="b2" action="commit"/>
+      <af:button text="Save" id="b2" actionListener="#{bindings.Commit.execute}" disabled="#{!bindings.Commit.enabled}"
+                 action="commit"/>
+          
       <af:panelFormLayout id="pfl1" rendered="false">
         <af:inputText value="#{bindings.ProductName.inputValue}" label="#{bindings.ProductName.hints.label}"
                       required="#{bindings.ProductName.hints.mandatory}"

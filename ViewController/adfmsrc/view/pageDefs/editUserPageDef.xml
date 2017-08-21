@@ -27,11 +27,6 @@
         <Item Value="LastName"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="UsersU4Iterator" id="Password">
-      <AttrNames>
-        <Item Value="Password"/>
-      </AttrNames>
-    </attributeValues>
     <list IterBinding="UsersU4Iterator" StaticList="false" Uses="LOV_SupervisorId" id="SupervisorId"
           DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
     <attributeValues IterBinding="UsersU4Iterator" id="StartDate">

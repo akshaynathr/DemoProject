@@ -10,6 +10,7 @@ import oracle.jbo.AttributeList;
 import oracle.jbo.Key;
 import oracle.jbo.RowIterator;
 import oracle.jbo.RowSet;
+import oracle.jbo.domain.DBSequence;
 import oracle.jbo.server.EntityDefImpl;
 import oracle.jbo.server.EntityImpl;
 import oracle.jbo.server.SequenceImpl;
@@ -45,7 +46,6 @@ public class UserEOImpl extends EntityImpl {
         SupervisorIdUser,
         UserRole;
         private static AttributesEnum[] vals = null;
-        ;
         private static final int firstIndex = 0;
 
         protected int index() {

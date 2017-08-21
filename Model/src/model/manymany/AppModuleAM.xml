@@ -8,6 +8,6 @@
   InheritPersonalization="merge"
   ClearCacheOnRollback="true">
   <ViewUsage
-    Name="MasterCustomerTable1"
-    ViewObjectName="model.manymany.MasterCustomerTableVO"/>
+    Name="ProductsU1"
+    ViewObjectName="model.UVO.ProductsUVO"/>
 </AppModule>

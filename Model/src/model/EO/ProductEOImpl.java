@@ -54,6 +54,8 @@ public class ProductEOImpl extends EntityImpl {
             return vals;
         }
     }
+
+
     public static final int PRODUCTID = AttributesEnum.ProductId.index();
     public static final int PRODUCTNAME = AttributesEnum.ProductName.index();
     public static final int PRODUCTDESCRIPTION = AttributesEnum.ProductDescription.index();
@@ -71,6 +73,14 @@ public class ProductEOImpl extends EntityImpl {
      */
     public ProductEOImpl() {
     }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("model.EO.ProductEO");
+    }
+
 
     /**
      * Gets the attribute value for ProductId, using the alias name ProductId.
@@ -110,6 +120,14 @@ public class ProductEOImpl extends EntityImpl {
      */
     public String getProductDescription() {
         return (String) getAttributeInternal(PRODUCTDESCRIPTION);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for ProductDescription.
+     * @param value value to set the ProductDescription
+     */
+    public void setProductDescription(String value) {
+        setAttributeInternal(PRODUCTDESCRIPTION, value);
     }
 
     /**
@@ -200,6 +218,7 @@ public class ProductEOImpl extends EntityImpl {
         setAttributeInternal(ISACTIVE, value);
     }
 
+
     /**
      * @param productId key constituent
 
@@ -207,13 +226,6 @@ public class ProductEOImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(DBSequence productId) {
         return new Key(new Object[] { productId });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("model.EO.ProductEO");
     }
 
     /**
