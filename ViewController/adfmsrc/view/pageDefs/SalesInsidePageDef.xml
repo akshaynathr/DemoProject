@@ -12,6 +12,9 @@
               id="OppurtunityDashboardUser2Iterator"/>
     <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
                   Binds="OppurtunityDashboardUser2Iterator" id="ImplicitViewCriteriaQuery"/>
+    <iterator Binds="MyTeamR1" RangeSize="25" DataControl="AppModuleAMDataControl" id="MyTeamR1Iterator"/>
+    <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="MyTeamR1Iterator" id="ImplicitViewCriteriaQuery2"/>
   </executables>
   <bindings>
     <tree IterBinding="CustomerId_Address_ViewObj1Iterator" id="CustomerId_Address_ViewObj1">
@@ -31,6 +34,19 @@
           <Item Value="CustomerName"/>
           <Item Value="CustomerId"/>
           <Item Value="OpportunityId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="MyTeamR1Iterator" id="MyTeamR1">
+      <nodeDefinition DefName="model.RVO.MyTeamRVO" Name="MyTeamR10">
+        <AttrNames>
+          <Item Value="GlobalUsername"/>
+          <Item Value="FirstName"/>
+          <Item Value="MiddleName"/>
+          <Item Value="LastName"/>
+          <Item Value="StartDate"/>
+          <Item Value="EndDate"/>
+          <Item Value="TeamId"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

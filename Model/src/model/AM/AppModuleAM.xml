@@ -197,14 +197,17 @@
     Name="OppurtunityDashboardUser1"
     ViewObjectName="model.customer.RVO.OppurtunityDashboardUserVO"/>
   <ViewUsage
-    Name="AddressU2"
-    ViewObjectName="model.UVO.AddressUVO"/>
-  <ViewUsage
     Name="OppurtunityDashboardUser2"
     ViewObjectName="model.customer.RVO.OppurtunityDashboardUserVO"/>
   <ViewUsage
     Name="OpportunitiesU5"
     ViewObjectName="model.customer.UVO.OpportunitiesUVO"/>
+  <ViewUsage
+    Name="AddressU2"
+    ViewObjectName="model.UVO.AddressUVO"/>
+  <ViewUsage
+    Name="MyTeamR1"
+    ViewObjectName="model.RVO.MyTeamRVO"/>
   <ViewLinkUsage
     Name="UsersFk1VL1"
     ViewLinkObjectName="model.UVO.UsersFk1VL"

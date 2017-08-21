@@ -12,23 +12,27 @@
   <DesignTime>
     <Attr Name="_isExpertMode" Value="true"/>
   </DesignTime>
-  <SQLQuery><![CDATA[SELECT Users.USER_ID,
-       Users.GLOBAL_USERNAME,
-       Users.FIRST_NAME,
-       Users.MIDDLE_NAME,
-       Users.LAST_NAME,
-       Users.PASSWORD,
-       Users.SUPERVISOR_ID,
-       Users.START_DATE,
-       Users.END_DATE,
-       Users.TEAM_ID,
-       Users.CREATED_BY,
-       Users.CREATED_ON,
-       Users.LAST_UPDATED_BY,
-       Users.LAST_UPDATED_ON,
-       Users.VERSION_NO,
-       Users.IS_ACTIVE
-FROM USERS Users]]></SQLQuery>
+  <SQLQuery><![CDATA[SELECT         
+    Users.USER_ID,         
+    Users.GLOBAL_USERNAME,         
+    Users.FIRST_NAME,         
+    Users.MIDDLE_NAME,         
+    Users.LAST_NAME,         
+    Users.PASSWORD,         
+    Users.SUPERVISOR_ID,         
+    Users.START_DATE,         
+    Users.END_DATE,         
+    Users.TEAM_ID,         
+    Users.CREATED_BY,         
+    Users.CREATED_ON,         
+    Users.LAST_UPDATED_BY,         
+    Users.LAST_UPDATED_ON,         
+    Users.VERSION_NO,         
+    Users.IS_ACTIVE         
+FROM         
+    USERS Users         
+WHERE         
+    Users.IS_ACTIVE != 'n']]></SQLQuery>
   <ViewAttribute
     Name="UserId"
     IsUpdateable="false"

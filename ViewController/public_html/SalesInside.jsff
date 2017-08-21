@@ -9,7 +9,68 @@
                            inlineStyle="background-color:#fff; color:White; border-color:inherit;">
         <af:showDetailItem text="My Team" id="sdi1"
                            inlineStyle="background-color:White; border-image-width:0; outline-color:ButtonText; outline-style:none; border-left-color:ThreeDShadow; border-right-color:ThreeDShadow;"
-                           icon="/icons/Team.png" disclosed="#{(pageFlowScope.sales_manager_tabVal==1)?true:false}"/>
+                           icon="/icons/Team.png" disclosed="#{(pageFlowScope.sales_manager_tabVal==1)?true:false}">
+          <af:panelGroupLayout layout="vertical" id="pgl5">
+            <af:panelHeader text="MyTeam" id="ph3">
+              <af:quickQuery label="Search" searchDesc="Search" id="qryId3"
+                             value="#{bindings.ImplicitViewCriteriaQuery2.quickQueryDescriptor}"
+                             model="#{bindings.ImplicitViewCriteriaQuery2.queryModel}"
+                             queryListener="#{bindings.ImplicitViewCriteriaQuery2.processQuery}">
+                <f:facet name="end">
+                  <af:commandLink text="Advanced" rendered="false" id="cl3"/>
+                </f:facet>
+              </af:quickQuery>
+            </af:panelHeader>
+            <af:table value="#{bindings.MyTeamR1.collectionModel}" var="row" rows="#{bindings.MyTeamR1.rangeSize}"
+                      emptyText="#{bindings.MyTeamR1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                      rowBandingInterval="0" selectedRowKeys="#{bindings.MyTeamR1.collectionModel.selectedRow}"
+                      selectionListener="#{bindings.MyTeamR1.collectionModel.makeCurrent}" rowSelection="single"
+                      fetchSize="#{bindings.MyTeamR1.rangeSize}"
+                      filterModel="#{bindings.ImplicitViewCriteriaQuery2.queryDescriptor}" filterVisible="true"
+                      queryListener="#{bindings.ImplicitViewCriteriaQuery2.processQuery}" varStatus="vs"
+                      partialTriggers="::qryId3" id="t3">
+              <af:column sortProperty="#{bindings.MyTeamR1.hints.GlobalUsername.name}" filterable="true" sortable="true"
+                         headerText="Global Username" id="c10">
+                <af:outputText value="#{row.GlobalUsername}"
+                               shortDesc="#{bindings.MyTeamR1.hints.GlobalUsername.tooltip}" id="ot8"/>
+              </af:column>
+              <af:column sortProperty="#{bindings.MyTeamR1.hints.FirstName.name}" filterable="true" sortable="true"
+                         headerText="First Name" id="c11">
+                <af:outputText value="#{row.FirstName}" shortDesc="#{bindings.MyTeamR1.hints.FirstName.tooltip}"
+                               id="ot9"/>
+              </af:column>
+              <af:column sortProperty="#{bindings.MyTeamR1.hints.MiddleName.name}" sortable="true"
+                         headerText="Middle Name" filterable="true" id="c12">
+                <af:outputText value="#{row.MiddleName}" shortDesc="#{bindings.MyTeamR1.hints.MiddleName.tooltip}"
+                               id="ot10"/>
+              </af:column>
+              <af:column sortProperty="#{bindings.MyTeamR1.hints.LastName.name}" filterable="true" sortable="true"
+                         headerText="Last Name" id="c13">
+                <af:outputText value="#{row.LastName}" shortDesc="#{bindings.MyTeamR1.hints.LastName.tooltip}"
+                               id="ot11"/>
+              </af:column>
+              <af:column sortProperty="#{bindings.MyTeamR1.hints.StartDate.name}" sortable="true"
+                         headerText="Start Date" filterable="true" id="c16">
+                <af:outputText value="#{row.StartDate}" shortDesc="#{bindings.MyTeamR1.hints.StartDate.tooltip}"
+                               id="ot14">
+                  <af:convertDateTime pattern="#{bindings.MyTeamR1.hints.StartDate.format}"/>
+                </af:outputText>
+              </af:column>
+              <af:column sortProperty="#{bindings.MyTeamR1.hints.EndDate.name}" sortable="true" headerText="End Date"
+                         filterable="true" id="c17">
+                <af:outputText value="#{row.EndDate}" shortDesc="#{bindings.MyTeamR1.hints.EndDate.tooltip}" id="ot15">
+                  <af:convertDateTime pattern="#{bindings.MyTeamR1.hints.EndDate.format}"/>
+                </af:outputText>
+              </af:column>
+              <af:column sortProperty="#{bindings.MyTeamR1.hints.TeamId.name}" filterable="true" sortable="true"
+                         headerText="Team" id="c18">
+                <af:outputText value="#{row.TeamId}" shortDesc="#{bindings.MyTeamR1.hints.TeamId.tooltip}" id="ot16">
+                  <af:convertNumber groupingUsed="false" pattern="#{bindings.MyTeamR1.hints.TeamId.format}"/>
+                </af:outputText>
+              </af:column>
+            </af:table>
+          </af:panelGroupLayout>
+        </af:showDetailItem>
         <af:showDetailItem text="Opportunities" id="sdi2"
                            inlineStyle="column-rule-color:transparent;" icon="/icons/images.png"
                            disclosed="#{(pageFlowScope.sales_manager_tabVal==2)?true:false}">
