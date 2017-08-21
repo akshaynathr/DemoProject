@@ -79,18 +79,6 @@
         </display-type>
       </run-as-dialog>
     </task-flow-call>
-    <task-flow-call id="product-Category-flow">
-      <display-name>Create Product Category</display-name>
-      <task-flow-reference>
-        <document>/WEB-INF/product-Category-flow.xml</document>
-        <id>product-Category-flow</id>
-      </task-flow-reference>
-      <run-as-dialog>
-        <display-type>
-          <inline-popup/>
-        </display-type>
-      </run-as-dialog>
-    </task-flow-call>
     <task-flow-call id="DeleteProductCategory-flow">
       <task-flow-reference>
         <document>/WEB-INF/DeleteProductCategory-flow.xml</document>
@@ -106,6 +94,17 @@
       <task-flow-reference>
         <document>/WEB-INF/createRole-flow.xml</document>
         <id>createRole-flow</id>
+      </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
+    </task-flow-call>
+    <task-flow-call id="product-Category-flow">
+      <task-flow-reference>
+        <document>/WEB-INF/product-Category-flow.xml</document>
+        <id>product-Category-flow</id>
       </task-flow-reference>
       <run-as-dialog>
         <display-type>

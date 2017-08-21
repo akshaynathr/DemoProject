@@ -116,7 +116,8 @@
     EntityAttrName="Password"
     EntityUsage="UserEO"
     AliasName="PASSWORD"
-    IsUpdateable="false"/>
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="SupervisorId"
     PrecisionRule="true"
@@ -136,7 +137,8 @@
     PrecisionRule="true"
     EntityAttrName="StartDate"
     EntityUsage="UserEO"
-    AliasName="START_DATE">
+    AliasName="START_DATE"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
@@ -169,41 +171,47 @@
     EntityAttrName="CreatedBy"
     EntityUsage="UserEO"
     AliasName="CREATED_BY"
-    IsUpdateable="false"/>
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="CreatedOn"
     PrecisionRule="true"
     EntityAttrName="CreatedOn"
     EntityUsage="UserEO"
     AliasName="CREATED_ON"
-    IsUpdateable="false"/>
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="LastUpdatedBy"
     PrecisionRule="true"
     EntityAttrName="LastUpdatedBy"
     EntityUsage="UserEO"
     AliasName="LAST_UPDATED_BY"
-    IsUpdateable="false"/>
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="LastUpdatedOn"
     PrecisionRule="true"
     EntityAttrName="LastUpdatedOn"
     EntityUsage="UserEO"
     AliasName="LAST_UPDATED_ON"
-    IsUpdateable="false"/>
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="VersionNo"
     PrecisionRule="true"
     EntityAttrName="VersionNo"
     EntityUsage="UserEO"
-    AliasName="VERSION_NO"/>
+    AliasName="VERSION_NO"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="IsActive"
     PrecisionRule="true"
     EntityAttrName="IsActive"
     EntityUsage="UserEO"
     AliasName="IS_ACTIVE"
-    DefaultValue="y"/>
+    DefaultValue="y"
+    IsQueriable="false"/>
   <ViewCriteria
     Name="ViewAllUsers"
     ViewObjectName="model.UVO.UsersUVO"

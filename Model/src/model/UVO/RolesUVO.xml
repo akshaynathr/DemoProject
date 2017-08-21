@@ -12,7 +12,8 @@
   BindingStyle="OracleName"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  AutoRefresh="true">
   <ViewAccessor
     Name="RoleNameLookup1"
     ViewObjectName="model.RVO.RoleNameLookup"
@@ -44,7 +45,8 @@
     EntityAttrName="RoleId"
     EntityUsage="RoleEO"
     AliasName="ROLE_ID"
-    IsUpdateable="while_insert"/>
+    IsUpdateable="while_insert"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="RoleNameId"
     PrecisionRule="true"
@@ -83,40 +85,46 @@
     EntityAttrName="CreatedBy"
     EntityUsage="RoleEO"
     AliasName="CREATED_BY"
-    IsUpdateable="false"/>
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="CreatedOn"
     PrecisionRule="true"
     EntityAttrName="CreatedOn"
     EntityUsage="RoleEO"
     AliasName="CREATED_ON"
-    IsUpdateable="false"/>
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="LastUpdatedBy"
     PrecisionRule="true"
     EntityAttrName="LastUpdatedBy"
     EntityUsage="RoleEO"
     AliasName="LAST_UPDATED_BY"
-    IsUpdateable="false"/>
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="LastUpdatedOn"
     PrecisionRule="true"
     EntityAttrName="LastUpdatedOn"
     EntityUsage="RoleEO"
     AliasName="LAST_UPDATED_ON"
-    IsUpdateable="false"/>
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="VersionNo"
     PrecisionRule="true"
     EntityAttrName="VersionNo"
     EntityUsage="RoleEO"
-    AliasName="VERSION_NO"/>
+    AliasName="VERSION_NO"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="IsActive"
     PrecisionRule="true"
     EntityAttrName="IsActive"
     EntityUsage="RoleEO"
-    AliasName="IS_ACTIVE"/>
+    AliasName="IS_ACTIVE"
+    IsQueriable="false"/>
   <ViewLinkAccessor
     Name="UsersRolesU"
     ViewLink="model.UVO.UsersRolesFk2VL"

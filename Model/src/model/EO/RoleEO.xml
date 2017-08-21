@@ -40,6 +40,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="RoleNameId_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="StartDate"
@@ -47,14 +53,28 @@
     SQLType="TIMESTAMP"
     Type="java.sql.Timestamp"
     ColumnType="TIMESTAMP"
-    TableName="ROLES"/>
+    TableName="ROLES">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="StartDate_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="EndDate"
     ColumnName="END_DATE"
     SQLType="TIMESTAMP"
     Type="java.sql.Timestamp"
     ColumnType="TIMESTAMP"
-    TableName="ROLES"/>
+    TableName="ROLES">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="EndDate_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Description"
     Precision="1024"
@@ -185,4 +205,8 @@
       <Item Value="model.EO.RoleEO.RoleNameId"/>
     </AttrArray>
   </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.EO.common.RoleEOMsgBundle"/>
+  </ResourceBundle>
 </Entity>

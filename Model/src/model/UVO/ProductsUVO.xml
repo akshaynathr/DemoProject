@@ -157,7 +157,8 @@
     PrecisionRule="true"
     EntityAttrName="IsActive"
     EntityUsage="ProductEO"
-    AliasName="IS_ACTIVE"/>
+    AliasName="IS_ACTIVE"
+    IsQueriable="false"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.UVO.common.ProductsUVOMsgBundle"/>

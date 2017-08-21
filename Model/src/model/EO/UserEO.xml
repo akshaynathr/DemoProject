@@ -83,7 +83,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="USERS">
+    TableName="USERS"
+    IsQueriable="false">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="256"/>
     </DesignTime>
@@ -128,7 +129,14 @@
     SQLType="NUMERIC"
     Type="java.lang.Integer"
     ColumnType="NUMBER"
-    TableName="USERS"/>
+    TableName="USERS">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="model.EO.UserEO.TeamId_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="CreatedBy"
     Precision="50"

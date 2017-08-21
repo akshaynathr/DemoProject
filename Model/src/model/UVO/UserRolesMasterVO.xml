@@ -103,14 +103,16 @@
     PrecisionRule="true"
     EntityAttrName="CreatedBy"
     EntityUsage="UserEO"
-    AliasName="CREATED_BY"/>
+    AliasName="CREATED_BY"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="CreatedOn"
     IsUpdateable="false"
     PrecisionRule="true"
     EntityAttrName="CreatedOn"
     EntityUsage="UserEO"
-    AliasName="CREATED_ON"/>
+    AliasName="CREATED_ON"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="EndDate"
     PrecisionRule="true"
@@ -134,7 +136,8 @@
     PrecisionRule="true"
     EntityAttrName="IsActive"
     EntityUsage="UserEO"
-    AliasName="IS_ACTIVE"/>
+    AliasName="IS_ACTIVE"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="LastName"
     PrecisionRule="true"
@@ -147,14 +150,16 @@
     PrecisionRule="true"
     EntityAttrName="LastUpdatedBy"
     EntityUsage="UserEO"
-    AliasName="LAST_UPDATED_BY"/>
+    AliasName="LAST_UPDATED_BY"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="LastUpdatedOn"
     IsUpdateable="false"
     PrecisionRule="true"
     EntityAttrName="LastUpdatedOn"
     EntityUsage="UserEO"
-    AliasName="LAST_UPDATED_ON"/>
+    AliasName="LAST_UPDATED_ON"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="MiddleName"
     PrecisionRule="true"
@@ -166,13 +171,15 @@
     PrecisionRule="true"
     EntityAttrName="Password"
     EntityUsage="UserEO"
-    AliasName="PASSWORD"/>
+    AliasName="PASSWORD"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="StartDate"
     PrecisionRule="true"
     EntityAttrName="StartDate"
     EntityUsage="UserEO"
-    AliasName="START_DATE"/>
+    AliasName="START_DATE"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="SupervisorId"
     PrecisionRule="true"
@@ -198,21 +205,24 @@
     PrecisionRule="true"
     EntityAttrName="VersionNo"
     EntityUsage="UserEO"
-    AliasName="VERSION_NO"/>
+    AliasName="VERSION_NO"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="CreatedBy1"
     IsUpdateable="false"
     PrecisionRule="true"
     EntityAttrName="CreatedBy"
     EntityUsage="RoleEO"
-    AliasName="CREATED_BY1"/>
+    AliasName="CREATED_BY1"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="CreatedOn1"
     IsUpdateable="false"
     PrecisionRule="true"
     EntityAttrName="CreatedOn"
     EntityUsage="RoleEO"
-    AliasName="CREATED_ON1"/>
+    AliasName="CREATED_ON1"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Description"
     PrecisionRule="true"
@@ -230,21 +240,24 @@
     PrecisionRule="true"
     EntityAttrName="IsActive"
     EntityUsage="RoleEO"
-    AliasName="IS_ACTIVE1"/>
+    AliasName="IS_ACTIVE1"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="LastUpdatedBy1"
     IsUpdateable="false"
     PrecisionRule="true"
     EntityAttrName="LastUpdatedBy"
     EntityUsage="RoleEO"
-    AliasName="LAST_UPDATED_BY1"/>
+    AliasName="LAST_UPDATED_BY1"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="LastUpdatedOn1"
     IsUpdateable="false"
     PrecisionRule="true"
     EntityAttrName="LastUpdatedOn"
     EntityUsage="RoleEO"
-    AliasName="LAST_UPDATED_ON1"/>
+    AliasName="LAST_UPDATED_ON1"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="RoleId"
     IsUpdateable="while_insert"
@@ -252,7 +265,8 @@
     EntityAttrName="RoleId"
     EntityUsage="RoleEO"
     AliasName="ROLE_ID"
-    LOVName="LOV_RoleId">
+    LOVName="LOV_RoleId"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE
@@ -285,7 +299,8 @@
     PrecisionRule="true"
     EntityAttrName="VersionNo"
     EntityUsage="RoleEO"
-    AliasName="VERSION_NO1"/>
+    AliasName="VERSION_NO1"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="AreAssociated"
     IsSelected="false"
