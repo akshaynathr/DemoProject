@@ -70,6 +70,18 @@
   <ViewUsage
     Name="CustomersContactsR3"
     ViewObjectName="model.RVO.CustomersContactsRVO"/>
+  <ViewUsage
+    Name="UsersOpportunities1"
+    ViewObjectName="model.EO.UsersOpportunitiesVO"/>
+  <ViewUsage
+    Name="UsersOpportunitiesU1"
+    ViewObjectName="model.UVO.UsersOpportunitiesUVO"/>
+  <ViewUsage
+    Name="UsersOpportunitiesR1"
+    ViewObjectName="model.RVO.UsersOpportunitiesRVO"/>
+  <ViewUsage
+    Name="Oppurtunity_dashboard_UserU1"
+    ViewObjectName="model.customer.UVO.Oppurtunity_dashboard_UserUVO"/>
   <ViewLinkUsage
     Name="CustomersFk1VL1"
     ViewLinkObjectName="model.UVO.CustomersFk1VL"

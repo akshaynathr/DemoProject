@@ -164,14 +164,8 @@
     Name="AddressU5"
     ViewObjectName="model.UVO.AddressUVO"/>
   <ViewUsage
-    Name="AddressU2"
-    ViewObjectName="model.UVO.AddressUVO"/>
-  <ViewUsage
     Name="CustomersU3"
     ViewObjectName="model.UVO.CustomersUVO"/>
-  <ViewUsage
-    Name="AddressU1"
-    ViewObjectName="model.UVO.AddressUVO"/>
   <ViewUsage
     Name="AddressU3"
     ViewObjectName="model.UVO.AddressUVO"/>
@@ -190,6 +184,27 @@
   <ViewUsage
     Name="UsersRolesU3"
     ViewObjectName="model.UVO.UsersRolesUVO"/>
+  <ViewUsage
+    Name="OpportunitiesU4"
+    ViewObjectName="model.customer.UVO.OpportunitiesUVO"/>
+  <ViewUsage
+    Name="UsersOpportunitiesU1"
+    ViewObjectName="model.UVO.UsersOpportunitiesUVO"/>
+  <ViewUsage
+    Name="Oppurtunity_dashboard_UserU1"
+    ViewObjectName="model.customer.UVO.Oppurtunity_dashboard_UserUVO"/>
+  <ViewUsage
+    Name="OppurtunityDashboardUser1"
+    ViewObjectName="model.customer.RVO.OppurtunityDashboardUserVO"/>
+  <ViewUsage
+    Name="AddressU2"
+    ViewObjectName="model.UVO.AddressUVO"/>
+  <ViewUsage
+    Name="OppurtunityDashboardUser2"
+    ViewObjectName="model.customer.RVO.OppurtunityDashboardUserVO"/>
+  <ViewUsage
+    Name="OpportunitiesU5"
+    ViewObjectName="model.customer.UVO.OpportunitiesUVO"/>
   <ViewLinkUsage
     Name="UsersFk1VL1"
     ViewLinkObjectName="model.UVO.UsersFk1VL"
@@ -283,4 +298,10 @@
   <ViewUsage
     Name="AddressU2"
     ViewObjectName="model.UVO.AddressUVO"/>
+  <ViewLinkUsage
+    Name="OpportunityDashBoardUserVL"
+    ViewLinkObjectName="model.VL.OpportunityDashBoardUserVL"
+    SrcViewUsageName="model.AM.AppModuleAM.OppurtunityDashboardUser2"
+    DstViewUsageName="model.AM.AppModuleAM.OpportunitiesU5"
+    Reversed="false"/>
 </AppModule>

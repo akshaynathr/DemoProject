@@ -260,7 +260,8 @@
     PrecisionRule="true"
     EntityAttrName="DecisionLevelId"
     EntityUsage="OpportunityEO"
-    AliasName="DECISION_LEVEL_ID"/>
+    AliasName="DECISION_LEVEL_ID"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="OppurtunityName"
     PrecisionRule="true"

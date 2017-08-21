@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="oppurtunity_tabPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="OpportunitiesU5" RangeSize="25" DataControl="AppModuleAMDataControl" id="OpportunitiesU5Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="OpportunitiesU5Iterator" id="OppurtunityName">
+      <AttrNames>
+        <Item Value="OppurtunityName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU5Iterator" id="OpportunityId">
+      <AttrNames>
+        <Item Value="OpportunityId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU5Iterator" id="CustomerId">
+      <AttrNames>
+        <Item Value="CustomerId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU5Iterator" id="WinProbablity">
+      <AttrNames>
+        <Item Value="WinProbablity"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU5Iterator" id="StartDate">
+      <AttrNames>
+        <Item Value="StartDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU5Iterator" id="EndDate">
+      <AttrNames>
+        <Item Value="EndDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU5Iterator" id="SalesStageId">
+      <AttrNames>
+        <Item Value="SalesStageId"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="OpportunitiesU5Iterator" StaticList="false" Uses="LOV_SalesMethodId" id="SalesMethodId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <list IterBinding="OpportunitiesU5Iterator" StaticList="false" Uses="LOV_SalesChannelId" id="SalesChannelId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="OpportunitiesU5Iterator" id="Revenue">
+      <AttrNames>
+        <Item Value="Revenue"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU5Iterator" id="BestCaseRevenue">
+      <AttrNames>
+        <Item Value="BestCaseRevenue"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU5Iterator" id="WorstCaseRevenue">
+      <AttrNames>
+        <Item Value="WorstCaseRevenue"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU5Iterator" id="IsBudgeted">
+      <AttrNames>
+        <Item Value="IsBudgeted"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU5Iterator" id="BudgetAmount">
+      <AttrNames>
+        <Item Value="BudgetAmount"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU5Iterator" id="EstimatedDurationInDays">
+      <AttrNames>
+        <Item Value="EstimatedDurationInDays"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU5Iterator" id="RiskLevel">
+      <AttrNames>
+        <Item Value="RiskLevel"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU5Iterator" id="IsIncluded">
+      <AttrNames>
+        <Item Value="IsIncluded"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU5Iterator" id="CreatedById">
+      <AttrNames>
+        <Item Value="CreatedById"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU5Iterator" id="IsSuccess">
+      <AttrNames>
+        <Item Value="IsSuccess"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU5Iterator" id="PrimaryContact">
+      <AttrNames>
+        <Item Value="PrimaryContact"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU5Iterator" id="CreatedBy">
+      <AttrNames>
+        <Item Value="CreatedBy"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU5Iterator" id="CreatedOn">
+      <AttrNames>
+        <Item Value="CreatedOn"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU5Iterator" id="LastUpdatedBy">
+      <AttrNames>
+        <Item Value="LastUpdatedBy"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU5Iterator" id="LastUpdatedOn">
+      <AttrNames>
+        <Item Value="LastUpdatedOn"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU5Iterator" id="VersionNo">
+      <AttrNames>
+        <Item Value="VersionNo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU5Iterator" id="IsActive">
+      <AttrNames>
+        <Item Value="IsActive"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU5Iterator" id="DecisionLevelId">
+      <AttrNames>
+        <Item Value="DecisionLevelId"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

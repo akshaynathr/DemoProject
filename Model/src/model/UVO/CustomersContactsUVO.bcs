@@ -1,0 +1,11 @@
+//Groovy Scripts for model.UVO.CustomersContactsUVO
+
+package model.UVO
+
+import oracle.jbo.script.annotation.VariableExpression;
+
+@VariableExpression(path="custId")
+def custId_VariableScript_Variable()
+{ 
+}
+
