@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="Customers_tabPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="OpportunitiesU1" RangeSize="25" DataControl="AppModuleAMDataControl2"
+              id="OpportunitiesU1Iterator"/>
+    <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="OpportunitiesU1Iterator" id="ImplicitViewCriteriaQuery"/>
+    <iterator Binds="OpportunitiesU1" RangeSize="25" DataControl="AppModuleAMDataControl3"
+              id="OpportunitiesU1Iterator1"/>
+    <iterator Binds="CustomerId_Address_ViewObj1" RangeSize="25" DataControl="AppModuleAMDataControl"
+              id="CustomerId_Address_ViewObj1Iterator"/>
+    <iterator Binds="OpportunitiesU1" RangeSize="25" DataControl="AppModuleAMDataControl"
+              id="OpportunitiesU1Iterator2"/>
+    <searchRegion Criteria="OpportunitiesUVOCriteria" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="OpportunitiesU1Iterator2" id="OpportunitiesUVOCriteriaQuery"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="CustomerId_Address_ViewObj1Iterator" id="CustomerName">
+      <AttrNames>
+        <Item Value="CustomerName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomerId_Address_ViewObj1Iterator" id="Ceo">
+      <AttrNames>
+        <Item Value="Ceo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomerId_Address_ViewObj1Iterator" id="CreatedBy">
+      <AttrNames>
+        <Item Value="CreatedBy"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomerId_Address_ViewObj1Iterator" id="CreatedOn">
+      <AttrNames>
+        <Item Value="CreatedOn"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomerId_Address_ViewObj1Iterator" id="CustomerTypeId">
+      <AttrNames>
+        <Item Value="CustomerTypeId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomerId_Address_ViewObj1Iterator" id="Email">
+      <AttrNames>
+        <Item Value="Email"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomerId_Address_ViewObj1Iterator" id="Fax">
+      <AttrNames>
+        <Item Value="Fax"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomerId_Address_ViewObj1Iterator" id="NoOfEmployees">
+      <AttrNames>
+        <Item Value="NoOfEmployees"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomerId_Address_ViewObj1Iterator" id="ParentCompany">
+      <AttrNames>
+        <Item Value="ParentCompany"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomerId_Address_ViewObj1Iterator" id="PrimaryContactId">
+      <AttrNames>
+        <Item Value="PrimaryContactId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomerId_Address_ViewObj1Iterator" id="Url">
+      <AttrNames>
+        <Item Value="Url"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomerId_Address_ViewObj1Iterator" id="City">
+      <AttrNames>
+        <Item Value="City"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomerId_Address_ViewObj1Iterator" id="Country">
+      <AttrNames>
+        <Item Value="Country"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomerId_Address_ViewObj1Iterator" id="House">
+      <AttrNames>
+        <Item Value="House"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomerId_Address_ViewObj1Iterator" id="Locality">
+      <AttrNames>
+        <Item Value="Locality"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomerId_Address_ViewObj1Iterator" id="Pincode">
+      <AttrNames>
+        <Item Value="Pincode"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomerId_Address_ViewObj1Iterator" id="State">
+      <AttrNames>
+        <Item Value="State"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomerId_Address_ViewObj1Iterator" id="Street">
+      <AttrNames>
+        <Item Value="Street"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="OpportunitiesU1Iterator2" id="OpportunitiesU1">
+      <nodeDefinition DefName="model.customer.UVO.OpportunitiesUVO" Name="OpportunitiesU10">
+        <AttrNames>
+          <Item Value="OpportunityId"/>
+          <Item Value="OppurtunityName"/>
+          <Item Value="CustomerId"/>
+          <Item Value="WinProbablity"/>
+          <Item Value="StartDate"/>
+          <Item Value="EndDate"/>
+          <Item Value="SalesStageId"/>
+          <Item Value="SalesMethodId"/>
+          <Item Value="SalesChannelId"/>
+          <Item Value="Revenue"/>
+          <Item Value="BestCaseRevenue"/>
+          <Item Value="WorstCaseRevenue"/>
+          <Item Value="IsBudgeted"/>
+          <Item Value="BudgetAmount"/>
+          <Item Value="EstimatedDurationInDays"/>
+          <Item Value="RiskLevel"/>
+          <Item Value="IsIncluded"/>
+          <Item Value="CreatedById"/>
+          <Item Value="PrimaryContact"/>
+          <Item Value="DecisionLevelId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

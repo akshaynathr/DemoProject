@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">Login</property>
+      <property
+         name="x">402.5</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Login&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">174.79883</property>
+      <property
+         name="page">/Login.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="thumbnailExpanded">false</property>
+   </View>
+   <View
+      id="View5">
+      <property
+         name="activityId">Admin</property>
+      <property
+         name="x">629.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Admin&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">95.29883</property>
+      <property
+         name="page">/Admin_dasboard.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <View
+      id="View6">
+      <property
+         name="activityId">Manager</property>
+      <property
+         name="x">631.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Manager&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">231.29883</property>
+      <property
+         name="page">/Manager_dashboard.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase7"
+      from="View2"
+      to="View5">
+      <property
+         name="fromOutcome">admin</property>
+      <property
+         name="sdm:polyPoints">R46,443.5,170.94824,588.0,94.94824,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase8"
+      from="View2"
+      to="View6">
+      <property
+         name="fromOutcome">manager</property>
+      <property
+         name="sdm:polyPoints">R54,443.5,177.94824,590.0,230.94824,L50</property>
+   </ControlFlowCase>
+</SDM>

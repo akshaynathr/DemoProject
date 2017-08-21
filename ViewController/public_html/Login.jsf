@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="Login.jsf" id="d1">
+        <af:form id="f1">
+            <af:pageTemplate viewId="/oracle/templates/responsiveTemplate.jspx" id="pt1">
+                <f:facet name="header"/>
+                <f:facet name="status"/>
+                <f:facet name="appNav"/>
+                <f:facet name="globalLinks"/>
+                <f:facet name="footer"/>
+                <f:facet name="center">
+                    <af:panelGroupLayout id="pgl2" layout="horizontal">
+                        <af:panelGroupLayout id="pgl1" layout="horizontal">
+                            <af:panelBox text="Sign In" id="pb1" inlineStyle="width:666px; height:200px;"
+                                         titleHalign="center" showDisclosure="false">
+                                <f:facet name="toolbar"/>
+                                <af:panelFormLayout id="pfl1">
+                                    <af:inputText label="Username" id="it1" required="true"
+                                                  value="#{loginBean.username}"/>
+                                    <af:inputText label="Password" id="it2" required="true" secret="true"
+                                                  value="#{loginBean.password}"/>
+                                    <f:facet name="footer">
+                                        <af:panelBorderLayout id="pbl1">
+                                            <f:facet name="start">
+                                                <!--<af:button text="Login" id="b1"  actionListener="#{loginBean.doLogin}" action="#{loginBean.getSecureNavigationAction}"
+                                        selected="true"/>-->
+                                                <af:button text="Sign In" id="b1" actionListener="#{loginBean.doLogin}"
+                                                           selected="true"/>
+                                            </f:facet>
+                                        </af:panelBorderLayout>
+                                    </f:facet>
+                                </af:panelFormLayout>
+                            </af:panelBox>
+                        </af:panelGroupLayout>
+                    </af:panelGroupLayout>
+                </f:facet>
+                <f:facet name="start"/>
+                <f:facet name="end"/>
+            </af:pageTemplate>
+        </af:form>
+    </af:document>
+</f:view>

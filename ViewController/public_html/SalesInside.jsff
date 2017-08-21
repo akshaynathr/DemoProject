@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
+  <af:panelStretchLayout id="psl1"
+                         inlineStyle="outline-color:transparent; outline-style:hidden; border-image-width:0ch;">
+    <f:facet name="center">
+      <af:panelSpringboard id="ps1" displayMode="strip"
+                           inlineStyle="background-color:#fff; color:White; border-color:inherit;">
+        <af:showDetailItem text="My Team" id="sdi1"
+                           inlineStyle="background-color:White; border-image-width:0; outline-color:ButtonText; outline-style:none; border-left-color:ThreeDShadow; border-right-color:ThreeDShadow;"
+                           icon="/icons/Team.png" disclosed="#{(pageFlowScope.sales_manager_tabVal==1)?true:false}"/>
+        <af:showDetailItem text="Oppurtunities" id="sdi2"
+                           inlineStyle="column-rule-color:transparent;" icon="/icons/images.png"
+                           disclosed="#{(pageFlowScope.sales_manager_tabVal==2)?true:false}">
+          <af:link text="test_flow" id="l2" action="oppurtunity_flow" windowEmbedStyle="inlineDocument"
+                   windowModalityType="applicationModal" useWindow="true" windowHeight="500" windowWidth="600"/>
+        </af:showDetailItem>
+        <af:showDetailItem text="Customers" id="sdi3" icon="/customers.png"
+                           disclosed="#{(pageFlowScope.sales_manager_tabVal==4)?true:false}"
+                           inlineStyle="padding:20px;">
+          <af:panelGroupLayout layout="vertical" id="pgl1">
+            <af:panelGroupLayout layout="vertical" id="pgl2">
+              <af:panelHeader text="Customers" id="ph2">
+                <af:quickQuery label="Search" searchDesc="Search" id="qryId2"
+                               value="#{bindings.ImplicitViewCriteriaQuery1.quickQueryDescriptor}"
+                               model="#{bindings.ImplicitViewCriteriaQuery1.queryModel}"
+                               queryListener="#{bindings.ImplicitViewCriteriaQuery1.processQuery}">
+                  <f:facet name="end">
+                    <af:commandLink text="Advanced" rendered="false" id="cl2"/>
+                  </f:facet>
+                </af:quickQuery>
+                <af:button text="Create Customer" id="b2" action="create_customer" windowHeight="550"
+                           windowWidth="1200" useWindow="true" windowEmbedStyle="inlineDocument"
+                           windowModalityType="applicationModal"/>
+              </af:panelHeader>
+              <af:table value="#{bindings.CustomerId_Address_ViewObj1.collectionModel}" var="row"
+                        rows="#{bindings.CustomerId_Address_ViewObj1.rangeSize}"
+                        emptyText="#{bindings.CustomerId_Address_ViewObj1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                        rowBandingInterval="0"
+                        selectedRowKeys="#{bindings.CustomerId_Address_ViewObj1.collectionModel.selectedRow}"
+                        selectionListener="#{bindings.CustomerId_Address_ViewObj1.collectionModel.makeCurrent}"
+                        rowSelection="single" fetchSize="#{bindings.CustomerId_Address_ViewObj1.rangeSize}"
+                        partialTriggers="::qryId2" id="t1">
+                <af:column headerText="Name" id="c1">
+                  <af:link text="#{row.CustomerName}" id="l1" action="customer" useWindow="true"
+                           windowEmbedStyle="inlineDocument" windowModalityType="applicationModal" windowHeight="600"
+                           windowWidth="1200" inlineStyle="font-weight:bold; color:#0094e7;">
+                    <af:setPropertyListener from="#{row.CustomerId}" to="#{pageFlowScope.fromcustId}" type="action"/>
+                  </af:link>
+                </af:column>
+                <af:column headerText="CEO" id="c2">
+                  <af:outputText value="#{row.Ceo}"
+                                 shortDesc="#{bindings.CustomerId_Address_ViewObj1.hints.Ceo.tooltip}" id="ot2"/>
+                </af:column>
+                <af:column headerText="#{bindings.CustomerId_Address_ViewObj1.hints.Email.label}" id="c3">
+                  <af:outputText value="#{row.Email}"
+                                 shortDesc="#{bindings.CustomerId_Address_ViewObj1.hints.Email.tooltip}" id="ot3"/>
+                </af:column>
+                <af:column headerText="#{bindings.CustomerId_Address_ViewObj1.hints.CustomerId.label}" id="c4"
+                           rendered="false">
+                  <af:outputText value="#{row.CustomerId}"
+                                 shortDesc="#{bindings.CustomerId_Address_ViewObj1.hints.CustomerId.tooltip}" id="ot4">
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.CustomerId_Address_ViewObj1.hints.CustomerId.format}"/>
+                  </af:outputText>
+                </af:column>
+              </af:table>
+            </af:panelGroupLayout>
+          </af:panelGroupLayout>
+        </af:showDetailItem>
+        <af:showDetailItem text="Tasks" id="sdi4" icon="/icons/tasks.png"
+                           disclosed="#{(pageFlowScope.sales_manager_tabVal==4)?true:false}"/>
+        <af:showDetailItem text="Appointments" id="sdi5" icon="/icons/appointments.png"
+                           disclosed="#{(pageFlowScope.sales_manager_tabVal==5)?true:false}"/>
+        <af:showDetailItem text="Contacts" id="sdi6" icon="/icons/addUser.jpg"
+                           disclosed="#{(pageFlowScope.sales_manager_tabVal==7)?true:false}"/>
+      </af:panelSpringboard>
+    </f:facet>
+    <f:facet name="top">
+      <af:panelGroupLayout id="pgl3" inlineStyle="background-color:#fff;" layout="horizontal">
+        <af:button text="Dashboard" id="b1" icon="/icons/QUICK-icon-55344.png" action="back"/>
+      </af:panelGroupLayout>
+    </f:facet>
+  </af:panelStretchLayout>
+</ui:composition>

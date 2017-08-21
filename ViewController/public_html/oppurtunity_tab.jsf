@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:document id="d1">
+    <af:form id="f1">
+      <af:panelGroupLayout id="pgl1" layout="vertical">
+        <af:link text="back" id="l1" action="return"/>
+        <af:panelTabbed position="start" id="pt1">
+          <af:showDetailItem id="tab1" text="Opportunity Details" icon="/icons/OPPURTUNITY.png"/>
+          <af:showDetailItem id="tab2" text="Customers" icon="/icons/OPPURTUNITY(1).png"/>
+          <af:showDetailItem id="tab3" text="Tasks" icon="/icons/business_business-opportunities-128.png"/>
+          <af:showDetailItem id="tab4" text="Notes" icon="icons/notes.png"/>
+          <af:showDetailItem text="Appointments" id="sdi1" icon="/icons/appointments.png"/>
+          <af:showDetailItem text="showDetailItem 1" id="sdi2"/>
+        </af:panelTabbed>
+      </af:panelGroupLayout>
+    </af:form>
+  </af:document>
+</f:view>

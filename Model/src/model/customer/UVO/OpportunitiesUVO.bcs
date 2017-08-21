@@ -1,0 +1,12 @@
+//Groovy Scripts for model.customer.UVO.OpportunitiesUVO
+
+package model.customer.UVO
+
+import oracle.jbo.script.annotation.VariableExpression;
+
+@VariableExpression(path="custId")
+def custId_VariableScript_Variable()
+{
+adf.context.expressionEvaluator.evaluate('#{pageFlowScope.custId}')
+}
+

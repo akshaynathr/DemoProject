@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="editUserPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="UsersU4" RangeSize="25" DataControl="AppModuleAMDataControl" id="UsersU4Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="UsersU4Iterator" id="GlobalUsername">
+      <AttrNames>
+        <Item Value="GlobalUsername"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="UsersU4Iterator" id="FirstName">
+      <AttrNames>
+        <Item Value="FirstName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="UsersU4Iterator" id="MiddleName">
+      <AttrNames>
+        <Item Value="MiddleName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="UsersU4Iterator" id="LastName">
+      <AttrNames>
+        <Item Value="LastName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="UsersU4Iterator" id="Password">
+      <AttrNames>
+        <Item Value="Password"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="UsersU4Iterator" StaticList="false" Uses="LOV_SupervisorId" id="SupervisorId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="UsersU4Iterator" id="StartDate">
+      <AttrNames>
+        <Item Value="StartDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="UsersU4Iterator" id="EndDate">
+      <AttrNames>
+        <Item Value="EndDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="UsersU4Iterator" id="TeamId">
+      <AttrNames>
+        <Item Value="TeamId"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

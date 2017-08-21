@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="CustomersFk2VL"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge">
+  <ViewLinkDefEnd
+    Name="AddressRVO"
+    Cardinality="1"
+    Source="true"
+    Owner="model.RVO.AddressRVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="AddressRVO"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.RVO.AddressRVO.AddressId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="CustomersRVO"
+    Cardinality="-1"
+    Owner="model.RVO.CustomersRVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="CustomersRVO"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.RVO.CustomersRVO.ShippingAddressId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

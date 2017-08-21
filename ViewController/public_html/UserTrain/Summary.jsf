@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document id="d1">
+        <af:form id="f1">
+            <af:messages id="m1"/>
+            <af:panelBorderLayout id="pbl1">
+                <f:facet name="top">
+                    <af:train value="#{controllerContext.currentViewPort.taskFlowContext.trainModel}" id="t1"/>
+                </f:facet>
+                <f:facet name="bottom">
+                    <af:button text="Submit" id="b1" actionListener="#{bindings.Commit.execute}" action="submit"/>
+                    <af:button text="Cancel" id="b2" action="cancel"/>
+                </f:facet>
+                <f:facet name="start">
+                    <af:panelFormLayout id="pfl1">
+                        <af:inputText value="#{bindings.FirstName.inputValue}" label="#{bindings.FirstName.hints.label}"
+                                      required="#{bindings.FirstName.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.FirstName.hints.displayWidth}"
+                                      maximumLength="#{bindings.FirstName.hints.precision}"
+                                      shortDesc="#{bindings.FirstName.hints.tooltip}" id="it1">
+                            <f:validator binding="#{bindings.FirstName.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.MiddleName.inputValue}"
+                                      label="#{bindings.MiddleName.hints.label}"
+                                      required="#{bindings.MiddleName.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.MiddleName.hints.displayWidth}"
+                                      maximumLength="#{bindings.MiddleName.hints.precision}"
+                                      shortDesc="#{bindings.MiddleName.hints.tooltip}" id="it2">
+                            <f:validator binding="#{bindings.MiddleName.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.LastName.inputValue}" label="#{bindings.LastName.hints.label}"
+                                      required="#{bindings.LastName.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.LastName.hints.displayWidth}"
+                                      maximumLength="#{bindings.LastName.hints.precision}"
+                                      shortDesc="#{bindings.LastName.hints.tooltip}" id="it3">
+                            <f:validator binding="#{bindings.LastName.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Password.inputValue}" label="#{bindings.Password.hints.label}"
+                                      required="#{bindings.Password.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.Password.hints.displayWidth}"
+                                      maximumLength="#{bindings.Password.hints.precision}"
+                                      shortDesc="#{bindings.Password.hints.tooltip}" id="it4">
+                            <f:validator binding="#{bindings.Password.validator}"/>
+                        </af:inputText>
+                        <af:selectOneChoice value="#{bindings.SupervisorId.inputValue}"
+                                            label="#{bindings.SupervisorId.label}"
+                                            required="#{bindings.SupervisorId.hints.mandatory}"
+                                            shortDesc="#{bindings.SupervisorId.hints.tooltip}" readOnly="true"
+                                            id="soc1">
+                            <f:selectItems value="#{bindings.SupervisorId.items}" id="si1"/>
+                            <f:validator binding="#{bindings.SupervisorId.validator}"/>
+                        </af:selectOneChoice>
+                        <af:inputDate value="#{bindings.StartDate.inputValue}" readOnly="true"
+                                      label="#{bindings.StartDate.hints.label}"
+                                      required="#{bindings.StartDate.hints.mandatory}"
+                                      columns="#{bindings.StartDate.hints.displayWidth}"
+                                      shortDesc="#{bindings.StartDate.hints.tooltip}" id="id1">
+                            <f:validator binding="#{bindings.StartDate.validator}"/>
+                            <af:convertDateTime pattern="#{bindings.StartDate.format}"/>
+                        </af:inputDate>
+                        <af:inputDate value="#{bindings.EndDate.inputValue}" readOnly="true"
+                                      label="#{bindings.EndDate.hints.label}"
+                                      required="#{bindings.EndDate.hints.mandatory}"
+                                      columns="#{bindings.EndDate.hints.displayWidth}"
+                                      shortDesc="#{bindings.EndDate.hints.tooltip}" id="id2">
+                            <f:validator binding="#{bindings.EndDate.validator}"/>
+                            <af:convertDateTime pattern="#{bindings.EndDate.format}"/>
+                        </af:inputDate>
+                        <af:inputText value="#{bindings.TeamId.inputValue}" label="#{bindings.TeamId.hints.label}"
+                                      required="#{bindings.TeamId.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.TeamId.hints.displayWidth}"
+                                      maximumLength="#{bindings.TeamId.hints.precision}"
+                                      shortDesc="#{bindings.TeamId.hints.tooltip}" id="it5">
+                            <f:validator binding="#{bindings.TeamId.validator}"/>
+                            <af:convertNumber groupingUsed="false" pattern="#{bindings.TeamId.format}"/>
+                        </af:inputText>
+                    </af:panelFormLayout>
+                </f:facet>
+                <f:facet name="end"/>
+            </af:panelBorderLayout>
+        </af:form>
+    </af:document>
+</f:view>

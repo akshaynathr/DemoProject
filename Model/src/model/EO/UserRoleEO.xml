@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="UserRoleEO"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="USERS_ROLES"
+  AliasName="UserRoleEO"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="UserId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="USER_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USERS_ROLES"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="RoleId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="ROLE_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USERS_ROLES"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="StartDate"
+    ColumnName="START_DATE"
+    SQLType="TIMESTAMP"
+    Type="java.sql.Timestamp"
+    ColumnType="TIMESTAMP"
+    TableName="USERS_ROLES"/>
+  <Attribute
+    Name="EndDate"
+    ColumnName="END_DATE"
+    SQLType="TIMESTAMP"
+    Type="java.sql.Timestamp"
+    ColumnType="TIMESTAMP"
+    TableName="USERS_ROLES"/>
+  <AccessorAttribute
+    Name="Role"
+    Association="model.EO.UsersRolesFk2ASSOC"
+    AssociationEnd="model.EO.UsersRolesFk2ASSOC.Role"
+    AssociationOtherEnd="model.EO.UsersRolesFk2ASSOC.UserRole"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="User"
+    Association="model.ASSOC.UsersFkUserRolesASSOC"
+    AssociationEnd="model.ASSOC.UsersFkUserRolesASSOC.User"
+    AssociationOtherEnd="model.ASSOC.UsersFkUserRolesASSOC.UserRole"
+    Type="model.EO.UserEOImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Role1"
+    Association="model.ASSOC.UserRolesFkRolesASSOC"
+    AssociationEnd="model.ASSOC.UserRolesFkRolesASSOC.Role1"
+    AssociationOtherEnd="model.ASSOC.UserRolesFkRolesASSOC.UserRole1"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Role2"
+    Association="model.ASSOC.RoleFKUserRoleAssoc"
+    AssociationEnd="model.ASSOC.RoleFKUserRoleAssoc.Role2"
+    AssociationOtherEnd="model.ASSOC.RoleFKUserRoleAssoc.UserRole2"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="UsersRolesPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="USERS_ROLES_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.UserRoleEO.UserId"/>
+      <Item Value="model.EO.UserRoleEO.RoleId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="UsersRolesFk1">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="USERS_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="USERS_ROLES_FK1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.UserRoleEO.UserId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="UsersRolesFk2">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="ROLES_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="USERS_ROLES_FK2"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.UserRoleEO.RoleId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="fk_UserRoleEO">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="USERS_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_USER_ROLE_EO"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.UserRoleEO.UserId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="fk_UserRoleEO1">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="ROLES_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_USER_ROLE_EO1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.UserRoleEO.RoleId"/>
+    </AttrArray>
+  </Key>
+</Entity>

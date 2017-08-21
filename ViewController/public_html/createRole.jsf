@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="createRole.jsf" id="d1">
+        <af:messages id="m1" binding="#{backingBeanScope.backing_createRole.m1}"/>
+        <af:form id="f1">
+            <af:panelBorderLayout id="pbl1" binding="#{backingBeanScope.backing_createRole.pbl1}">
+                <f:facet name="top">
+                    <af:activeOutputText value="Create a new role" id="aot1"
+                                         binding="#{backingBeanScope.backing_createRole.aot1}"
+                                         inlineStyle="font-size:xx-large;"/>
+                </f:facet>
+                <f:facet name="bottom">
+                    <af:button text="Save" id="b1" binding="#{backingBeanScope.backing_createRole.b1}"
+                               action="#{backingBeanScope.backing_createRole.commit_now}"/>
+                </f:facet>
+                <f:facet name="start"/>
+                <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.backing_createRole.pfl1}">
+                    <af:inputText value="#{bindings.PossibleValue.inputValue}"
+                                  label="#{bindings.PossibleValue.hints.label}"
+                                  required="#{bindings.PossibleValue.hints.mandatory}"
+                                  columns="#{bindings.PossibleValue.hints.displayWidth}"
+                                  maximumLength="#{bindings.PossibleValue.hints.precision}"
+                                  shortDesc="#{bindings.PossibleValue.hints.tooltip}" id="it1"
+                                  binding="#{backingBeanScope.backing_createRole.it1}">
+                        <f:validator binding="#{bindings.PossibleValue.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.Description.inputValue}" label="#{bindings.Description.hints.label}"
+                                  required="#{bindings.Description.hints.mandatory}"
+                                  columns="#{bindings.Description.hints.displayWidth}"
+                                  maximumLength="#{bindings.Description.hints.precision}"
+                                  shortDesc="#{bindings.Description.hints.tooltip}" id="it2"
+                                  binding="#{backingBeanScope.backing_createRole.it2}" rows="5">
+                        <f:validator binding="#{bindings.Description.validator}"/>
+                    </af:inputText>
+                    <af:inputDate value="#{bindings.StartDate.inputValue}" label="#{bindings.StartDate.hints.label}"
+                                  required="#{bindings.StartDate.hints.mandatory}"
+                                  columns="#{bindings.StartDate.hints.displayWidth}"
+                                  shortDesc="#{bindings.StartDate.hints.tooltip}" id="id1"
+                                  binding="#{backingBeanScope.backing_createRole.id1}">
+                        <f:validator binding="#{bindings.StartDate.validator}"/>
+                        <af:convertDateTime pattern="#{bindings.StartDate.format}"/>
+                    </af:inputDate>
+                    <af:inputDate value="#{bindings.EndDate.inputValue}" label="#{bindings.EndDate.hints.label}"
+                                  required="#{bindings.EndDate.hints.mandatory}"
+                                  columns="#{bindings.EndDate.hints.displayWidth}"
+                                  shortDesc="#{bindings.EndDate.hints.tooltip}" id="id2"
+                                  binding="#{backingBeanScope.backing_createRole.id2}">
+                        <f:validator binding="#{bindings.EndDate.validator}"/>
+                        <af:convertDateTime pattern="#{bindings.EndDate.format}"/>
+                    </af:inputDate>
+                    <af:inputText value="#{bindings.Description1.inputValue}"
+                                  label="#{bindings.Description1.hints.label}"
+                                  required="#{bindings.Description1.hints.mandatory}"
+                                  columns="#{bindings.Description1.hints.displayWidth}"
+                                  maximumLength="#{bindings.Description1.hints.precision}"
+                                  shortDesc="#{bindings.Description1.hints.tooltip}" id="it3"
+                                  binding="#{backingBeanScope.backing_createRole.it3}" rows="5">
+                        <f:validator binding="#{bindings.Description1.validator}"/>
+                    </af:inputText>
+                </af:panelFormLayout>
+                <f:facet name="end"/>
+            </af:panelBorderLayout>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_createRole-->
+</f:view>

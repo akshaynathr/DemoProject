@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="SalesInsidePageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="CustomerId_Address_ViewObj1" RangeSize="25" DataControl="AppModuleAMDataControl"
+              id="CustomerId_Address_ViewObj1Iterator"/>
+    <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="CustomerId_Address_ViewObj1Iterator" id="ImplicitViewCriteriaQuery1"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="CustomerId_Address_ViewObj1Iterator" id="CustomerId_Address_ViewObj1">
+      <nodeDefinition DefName="model.customer.UVO.CustomerId_Address_ViewObjVO" Name="CustomerId_Address_ViewObj10">
+        <AttrNames>
+          <Item Value="CustomerName"/>
+          <Item Value="Ceo"/>
+          <Item Value="Email"/>
+          <Item Value="CustomerId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

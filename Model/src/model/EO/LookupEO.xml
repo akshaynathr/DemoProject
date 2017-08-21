@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="LookupEO"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="LOOKUPS"
+  AliasName="LookupEO"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="LookupId"
+    Precision="10"
+    Scale="0"
+    ColumnName="LOOKUP_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.DBSequence"
+    ColumnType="NUMBER"
+    TableName="LOOKUPS"
+    PrimaryKey="true"
+    IsUpdateable="while_insert"
+    DefaultValue="@0"
+    Domain="oracle.jbo.domain.DBSequence"
+    RetrievedOnInsert="true"/>
+  <Attribute
+    Name="LookupCategory"
+    Precision="50"
+    ColumnName="LOOKUP_CATEGORY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="LOOKUPS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="PossibleValue"
+    Precision="50"
+    ColumnName="POSSIBLE_VALUE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="LOOKUPS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Description"
+    Precision="1024"
+    ColumnName="DESCRIPTION"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="LOOKUPS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1024"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="Role"
+    Association="model.ASSOC.RolesLookupASSOC"
+    AssociationEnd="model.ASSOC.RolesLookupASSOC.Role"
+    AssociationOtherEnd="model.ASSOC.RolesLookupASSOC.Lookup"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="LookupsPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="LOOKUPS_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.LookupEO.LookupId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="fk_LookupEO">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="UK_ROLE_EO"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_LOOKUP_EO"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.LookupEO.LookupId"/>
+    </AttrArray>
+  </Key>
+</Entity>
