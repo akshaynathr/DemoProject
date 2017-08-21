@@ -40,7 +40,7 @@
                           required="#{bindings.Password.hints.mandatory}"
                           columns="#{bindings.Password.hints.displayWidth}"
                           maximumLength="#{bindings.Password.hints.precision}"
-                          shortDesc="#{bindings.Password.hints.tooltip}" id="it4">
+                          shortDesc="#{bindings.Password.hints.tooltip}" id="it4" rendered="false">
               <f:validator binding="#{bindings.Password.validator}"/>
             </af:inputText>
           </af:panelFormLayout>

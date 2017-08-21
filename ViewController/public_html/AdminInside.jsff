@@ -130,11 +130,13 @@
                 </af:quickQuery>
                 <af:button text="Create Product" id="b2" useWindow="true" windowHeight="500" action="createProduct"
                            windowWidth="600"/>
+                <af:button text="Delete Product" disabled="#{!bindings.Delete1.enabled}" id="b4"
+                           action="#{safeDeleteBean.commit_Delete_Product}"/>
                 <af:button text="Create Category" id="b6" windowModalityType="applicationModal"
                            windowEmbedStyle="inlineDocument" useWindow="true" windowHeight="500" windowWidth="600"
                            action="create_product_category"/>
-                <af:button text="Delete Product" disabled="#{!bindings.Delete1.enabled}" id="b4"
-                           action="#{safeDeleteBean.commit_Delete_Product}"/>
+                <af:button text="Delete Category" id="b9" action="delete_product_category"
+                           windowEmbedStyle="inlineDocument" useWindow="true" windowHeight="500" windowWidth="600"/>
               </af:panelGroupLayout>
             </f:facet>
             <f:facet name="bottom"/>

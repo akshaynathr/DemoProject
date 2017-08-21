@@ -9,25 +9,17 @@
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="LookupsU1Query"/>
   </executables>
   <bindings>
+    <action IterBinding="LookupsU1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleAMDataControl"/>
     <tree IterBinding="LookupsU1Iterator" id="LookupsU1">
       <nodeDefinition DefName="model.UVO.LookupsUVO" Name="LookupsU10">
         <AttrNames>
+          <Item Value="LookupId"/>
+          <Item Value="LookupCategory"/>
           <Item Value="PossibleValue"/>
           <Item Value="Description"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <action IterBinding="LookupsU1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
-    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleAMDataControl"/>
-    <attributeValues IterBinding="LookupsU1Iterator" id="PossibleValue">
-      <AttrNames>
-        <Item Value="PossibleValue"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="LookupsU1Iterator" id="Description">
-      <AttrNames>
-        <Item Value="Description"/>
-      </AttrNames>
-    </attributeValues>
   </bindings>
 </pageDefinition>
