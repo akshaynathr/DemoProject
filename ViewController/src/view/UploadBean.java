@@ -33,6 +33,8 @@ import java.nio.file.Path;
 
 import java.nio.file.Paths;
 
+import oracle.jbo.client.remote.SequenceImpl;
+
 public class UploadBean {
     
 
@@ -42,7 +44,7 @@ public class UploadBean {
     private RichInputText docId;
     private RichInputText oppId;
     private RichInputText it;
-
+    private long docuId;
 
     public static void setFilePath(String filePath) {
         UploadBean.filePath = filePath;
@@ -75,6 +77,50 @@ public class UploadBean {
     public RichInputText getIt() {
         return it;
     }
+    
+    private String uploadFile(UploadedFile file) {
+
+        UploadedFile myfile = file;
+        String path = null;
+        if (myfile == null) {
+
+        } else {
+            // All uploaded files will be stored in below path
+            path = "D://FileStore//" + myfile.getFilename();
+            InputStream inputStream = null;
+            try {
+                FileOutputStream out = new FileOutputStream(path);
+                inputStream = myfile.getInputStream();
+                byte[] buffer = new byte[8192];
+                int bytesRead = 0;
+                while ((bytesRead = inputStream.read(buffer, 0, 8192)) != -1) {
+                    out.write(buffer, 0, bytesRead);
+                }
+                out.flush();
+                out.close();
+            } catch (Exception ex) {
+                // handle exception
+                ex.printStackTrace();
+            } finally {
+                try {
+                    inputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        }
+        //Returns the path where file is stored
+        return path;
+    }
+
+    public void setDocuId(long docuId) {
+        this.docuId = docuId;
+    }
+
+    public long getDocuId() {
+        return docuId;
+    }
 
     public void uploadFileVCE(ValueChangeEvent vce) {
                 if (vce.getNewValue() != null) {
@@ -88,7 +134,12 @@ public class UploadBean {
             OperationBinding ob = bindings.getOperationBinding("setFileData"); 
                     
                 //    OperationBinding ob = executeOperation("setFileData");
-                                    ob.getParamsMap().put("docId", docId.getValue().toString());
+                System.out.println(path);
+                System.out.println(getIt().getValue());
+                    System.out.println(getDocId());
+            //   System.out.println("Docid"+getDocId().getValue().toString());
+                //    System.out.println("oPpid"+oppId.getValue().toString());
+                                    ob.getParamsMap().put("docId", "7");
                                     ob.getParamsMap().put("opptId",  "2");
                     ob.getParamsMap().put("name", fileVal.getFilename());
                     ob.getParamsMap().put("path", path);
@@ -104,43 +155,17 @@ public class UploadBean {
     
     
     
+    
+    
+//      SequenceImpl seq = new SequenceImpl("NOTES_SEQ", getDBTransaction());
+//      Number seqNextval = seq.getSequenceNumber();
+     
+    
+    
+    
     /*Method to upload file to actual path on Server*/
            
-           private String uploadFile(UploadedFile file) {
-
-               UploadedFile myfile = file;
-               String path = null;
-               if (myfile == null) {
-
-               } else {
-                   // All uploaded files will be stored in below path
-                   path = "D://FileStore//" + myfile.getFilename();
-                   InputStream inputStream = null;
-                   try {
-                       FileOutputStream out = new FileOutputStream(path);
-                       inputStream = myfile.getInputStream();
-                       byte[] buffer = new byte[8192];
-                       int bytesRead = 0;
-                       while ((bytesRead = inputStream.read(buffer, 0, 8192)) != -1) {
-                           out.write(buffer, 0, bytesRead);
-                       }
-                       out.flush();
-                       out.close();
-                   } catch (Exception ex) {
-                       // handle exception
-                       ex.printStackTrace();
-                   } finally {
-                       try {
-                           inputStream.close();
-                       } catch (IOException e) {
-                           e.printStackTrace();
-                       }
-                   }
-
-               }
-               //Returns the path where file is stored
-               return path;
-           }
+           
            
            
            

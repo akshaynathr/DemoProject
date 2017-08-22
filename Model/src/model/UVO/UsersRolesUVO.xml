@@ -87,7 +87,8 @@
     EntityAttrName="UserId"
     EntityUsage="UserRoleEO"
     AliasName="USER_ID"
-    LOVName="LOV_UserId">
+    LOVName="LOV_UserId"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE

@@ -224,7 +224,7 @@
             <f:facet name="end"/>
             <af:panelGridLayout id="pgl7">
               <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr3">
-                <af:gridCell marginStart="5px" width="75%" id="gc4" halign="stretch">
+                <af:gridCell marginStart="5px" width="75%" id="gc4" halign="stretch" rowSpan="1">
                   <af:table value="#{bindings.RolesU1.collectionModel}" var="row" rows="#{bindings.RolesU1.rangeSize}"
                             emptyText="#{bindings.RolesU1.viewable ? 'No data to display.' : 'Access Denied.'}"
                             rowBandingInterval="0" selectedRowKeys="#{bindings.RolesU1.collectionModel.selectedRow}"
@@ -258,43 +258,25 @@
                                      shortDesc="#{bindings.RolesU1.hints.Description.tooltip}" id="ot8"/>
                     </af:column>
                   </af:table>
-                  <af:panelGroupLayout layout="vertical" id="pgl9">
-                    <af:panelHeader text="Users" id="ph1">
-                      <af:quickQuery label="Search" searchDesc="Search" id="qryId2"
-                                     value="#{bindings.ImplicitViewCriteriaQuery1.quickQueryDescriptor}"
-                                     model="#{bindings.ImplicitViewCriteriaQuery1.queryModel}"
-                                     queryListener="#{bindings.ImplicitViewCriteriaQuery1.processQuery}">
-                        <f:facet name="end">
-                          <af:commandLink text="Advanced" rendered="false" id="cl2"/>
-                        </f:facet>
-                      </af:quickQuery>
-                    </af:panelHeader>
-                    <af:table value="#{bindings.UsersRolesU31.collectionModel}" var="row"
-                              rows="#{bindings.UsersRolesU31.rangeSize}"
-                              emptyText="#{bindings.UsersRolesU31.viewable ? 'No data to display.' : 'Access Denied.'}"
-                              rowBandingInterval="0"
-                              selectedRowKeys="#{bindings.UsersRolesU31.collectionModel.selectedRow}"
-                              selectionListener="#{bindings.UsersRolesU31.collectionModel.makeCurrent}"
-                              rowSelection="single" fetchSize="#{bindings.UsersRolesU31.rangeSize}"
-                              filterModel="#{bindings.ImplicitViewCriteriaQuery1.quickQueryDescriptor}"
-                              filterVisible="true" queryListener="#{bindings.ImplicitViewCriteriaQuery1.processQuery}"
-                              varStatus="vs" partialTriggers="::qryId2" id="t6">
-                      <af:column sortProperty="#{bindings.UsersRolesU31.hints.UserId.name}" filterable="true"
-                                 sortable="true" headerText="Username" id="c17">
-                        <af:selectOneChoice value="#{row.bindings.UserId.inputValue}"
-                                            label="#{row.bindings.UserId.label}"
-                                            required="#{bindings.UsersRolesU31.hints.UserId.mandatory}"
-                                            shortDesc="#{bindings.UsersRolesU31.hints.UserId.tooltip}" readOnly="true"
-                                            id="soc6">
-                          <f:selectItems value="#{row.bindings.UserId.items}" id="si6"/>
-                          <f:validator binding="#{row.bindings.UserId.validator}"/>
-                        </af:selectOneChoice>
-                      </af:column>
-                    </af:table>
-                  </af:panelGroupLayout>
+                  <af:table value="#{bindings.UsersRolesU3.collectionModel}" var="row"
+                            rows="#{bindings.UsersRolesU3.rangeSize}"
+                            emptyText="#{bindings.UsersRolesU3.viewable ? 'No data to display.' : 'Access Denied.'}"
+                            rowBandingInterval="0" fetchSize="#{bindings.UsersRolesU3.rangeSize}" partialTriggers="::t3"
+                            id="t5" columnStretching="last">
+                    <af:column headerText="Username" id="c16" align="center" minimumWidth="100">
+                      <af:selectOneChoice value="#{row.bindings.UserId.inputValue}" label="#{row.bindings.UserId.label}"
+                                          required="#{bindings.UsersRolesU3.hints.UserId.mandatory}"
+                                          shortDesc="#{bindings.UsersRolesU3.hints.UserId.tooltip}" readOnly="true"
+                                          id="soc5">
+                        <f:selectItems value="#{row.bindings.UserId.items}" id="si5"/>
+                        <f:validator binding="#{row.bindings.UserId.validator}"/>
+                      </af:selectOneChoice>
+                    </af:column>
+                  </af:table>
                 </af:gridCell>
               </af:gridRow>
             </af:panelGridLayout>
+            <f:facet name="start"/>
           </af:panelBorderLayout>
           <af:popup childCreation="deferred" autoCancel="disabled" id="p3">
             <af:dialog id="d3" dialogListener="#{safeDeleteBean.dialogDeleteListenerRole}">

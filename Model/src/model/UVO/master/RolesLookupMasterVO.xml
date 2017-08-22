@@ -176,14 +176,16 @@
     EntityAttrName="LookupCategory"
     EntityUsage="LookupEO"
     AliasName="LOOKUP_CATEGORY"
-    DefaultValue="ROLE_NAME"/>
+    DefaultValue="ROLE_NAME"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="LookupId"
     IsUpdateable="while_insert"
     PrecisionRule="true"
     EntityAttrName="LookupId"
     EntityUsage="LookupEO"
-    AliasName="LOOKUP_ID"/>
+    AliasName="LOOKUP_ID"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="PossibleValue"
     PrecisionRule="true"

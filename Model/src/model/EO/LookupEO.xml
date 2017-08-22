@@ -23,7 +23,8 @@
     IsUpdateable="while_insert"
     DefaultValue="@0"
     Domain="oracle.jbo.domain.DBSequence"
-    RetrievedOnInsert="true"/>
+    RetrievedOnInsert="true"
+    IsQueriable="false"/>
   <Attribute
     Name="LookupCategory"
     Precision="50"
@@ -39,6 +40,8 @@
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="50"/>
+        <LABEL
+          ResId="LookupCategory_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -57,6 +60,8 @@
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="50"/>
+        <LABEL
+          ResId="PossibleValue_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -106,4 +111,8 @@
       <Item Value="model.EO.LookupEO.LookupId"/>
     </AttrArray>
   </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.EO.common.LookupEOMsgBundle"/>
+  </ResourceBundle>
 </Entity>

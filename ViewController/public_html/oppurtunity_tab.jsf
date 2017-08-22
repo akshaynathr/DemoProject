@@ -246,7 +246,8 @@
                               required="#{bindings.OpportunityDocs1.hints.OpportunityId.mandatory}"
                               columns="#{bindings.OpportunityDocs1.hints.OpportunityId.displayWidth}"
                               maximumLength="#{bindings.OpportunityDocs1.hints.OpportunityId.precision}"
-                              shortDesc="#{bindings.OpportunityDocs1.hints.OpportunityId.tooltip}" id="it23">
+                              shortDesc="#{bindings.OpportunityDocs1.hints.OpportunityId.tooltip}" id="it23"
+                              binding="#{pageFlowScope.uploadBean.oppId}">
                   <f:validator binding="#{row.bindings.OpportunityId.validator}"/>
                   <af:convertNumber groupingUsed="false"
                                     pattern="#{bindings.OpportunityDocs1.hints.OpportunityId.format}"/>

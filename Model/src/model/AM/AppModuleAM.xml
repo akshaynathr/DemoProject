@@ -171,9 +171,6 @@
     Name="CustomersU3"
     ViewObjectName="model.UVO.CustomersUVO"/>
   <ViewUsage
-    Name="AddressU3"
-    ViewObjectName="model.UVO.AddressUVO"/>
-  <ViewUsage
     Name="CustomersU4"
     ViewObjectName="model.UVO.CustomersUVO"/>
   <ViewUsage
@@ -210,8 +207,14 @@
     Name="UsersRolesU4"
     ViewObjectName="model.UVO.UsersRolesUVO"/>
   <ViewUsage
+    Name="ProdLookupR1"
+    ViewObjectName="model.customer.RVO.ProdLookupRVO"/>
+  <ViewUsage
     Name="AddressU2"
     ViewObjectName="model.UVO.AddressUVO"/>
+  <ViewUsage
+    Name="LookupProdCatDel1"
+    ViewObjectName="model.UVO.LookupProdCatDelVO"/>
   <ViewLinkUsage
     Name="UsersFk1VL1"
     ViewLinkObjectName="model.UVO.UsersFk1VL"

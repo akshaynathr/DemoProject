@@ -448,13 +448,6 @@ public class AppModuleAMImpl extends ApplicationModuleImpl {
         return (ViewObjectImpl) findViewObject("CustomersU3");
     }
 
-    /**
-     * Container's getter for AddressU3.
-     * @return AddressU3
-     */
-    public ViewObjectImpl getAddressU3() {
-        return (ViewObjectImpl) findViewObject("AddressU3");
-    }
 
     /**
      * Container's getter for CustomersU4.
@@ -688,7 +681,21 @@ public class AppModuleAMImpl extends ApplicationModuleImpl {
         return (ViewLinkImpl) findViewLink("OpportunityDashBoardUserVL");
     }
 
-   
-    
+
+    /**
+     * Container's getter for ProdLookupR1.
+     * @return ProdLookupR1
+     */
+    public ViewObjectImpl getProdLookupR1() {
+        return (ViewObjectImpl) findViewObject("ProdLookupR1");
+    }
+
+    /**
+     * Container's getter for LookupProdCatDel1.
+     * @return LookupProdCatDel1
+     */
+    public ViewObjectImpl getLookupProdCatDel1() {
+        return (ViewObjectImpl) findViewObject("LookupProdCatDel1");
+    }
 }
 

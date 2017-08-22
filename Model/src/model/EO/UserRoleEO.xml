@@ -20,7 +20,8 @@
     Type="java.lang.Long"
     ColumnType="NUMBER"
     TableName="USERS_ROLES"
-    PrimaryKey="true"/>
+    PrimaryKey="true"
+    IsQueriable="false"/>
   <Attribute
     Name="RoleId"
     IsNotNull="true"

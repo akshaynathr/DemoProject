@@ -28,6 +28,8 @@ public class AppModuleAMImpl extends ApplicationModuleImpl implements AppModuleA
         return (ViewObjectImpl) findViewObject("OpportunityDocs1");
     }
     
+    
+    
     public void setFileData(Long docId, Long opptId, String name, String path) {
         System.out.println("in AM name: " + name + " path: " + path);
         ViewObject fileVo = this.getOpportunityDocs1();    //OpportunityDocs

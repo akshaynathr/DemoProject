@@ -8,17 +8,23 @@
     <view id="DeleteProductCategory">
       <page>/DeleteProductCategory.jsf</page>
     </view>
-    <method-call id="Delete">
-      <method>#{bindings.Delete.execute}</method>
+    <task-flow-return id="return">
       <outcome>
-        <fixed-outcome>Delete</fixed-outcome>
+        <name>return</name>
       </outcome>
-    </method-call>
+    </task-flow-return>
     <control-flow-rule id="__1">
       <from-activity-id>Delete</from-activity-id>
       <control-flow-case id="__2">
         <from-outcome>Delete</from-outcome>
         <to-activity-id>DeleteProductCategory</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__3">
+      <from-activity-id>DeleteProductCategory</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome>commit</from-outcome>
+        <to-activity-id>return</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
   </task-flow-definition>

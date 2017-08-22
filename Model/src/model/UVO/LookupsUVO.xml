@@ -35,13 +35,15 @@
     EntityAttrName="LookupId"
     EntityUsage="LookupEO"
     AliasName="LOOKUP_ID"
-    IsUpdateable="while_insert"/>
+    IsUpdateable="while_insert"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="LookupCategory"
     PrecisionRule="true"
     EntityAttrName="LookupCategory"
     EntityUsage="LookupEO"
-    AliasName="LOOKUP_CATEGORY"/>
+    AliasName="LOOKUP_CATEGORY"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="PossibleValue"
     PrecisionRule="true"
@@ -79,7 +81,8 @@
     </Properties>
     <ViewCriteriaRow
       Name="ProductCategoryDeleteUVOCriteria_row_0"
-      UpperColumns="1">
+      UpperColumns="1"
+      Conjunction="AND">
       <ViewCriteriaItem
         Name="LookupCategory"
         ViewAttribute="LookupCategory"

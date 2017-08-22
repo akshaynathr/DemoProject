@@ -5,21 +5,20 @@
   <executables>
     <variableIterator id="variables"/>
     <iterator Binds="LookupsU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="LookupsU1Iterator"/>
-    <searchRegion Binds="LookupsU1Iterator" Criteria="ProductCategoryDeleteUVOCriteria"
-                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="LookupsU1Query"/>
+    <iterator Binds="LookupProdCatDel1" RangeSize="25" DataControl="AppModuleAMDataControl"
+              id="LookupProdCatDel1Iterator"/>
+    <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="LookupProdCatDel1Iterator" id="ImplicitViewCriteriaQuery"/>
   </executables>
   <bindings>
-    <action IterBinding="LookupsU1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
-    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleAMDataControl"/>
-    <tree IterBinding="LookupsU1Iterator" id="LookupsU1">
-      <nodeDefinition DefName="model.UVO.LookupsUVO" Name="LookupsU10">
+    <tree IterBinding="LookupProdCatDel1Iterator" id="LookupProdCatDel1">
+      <nodeDefinition DefName="model.UVO.LookupProdCatDelVO" Name="LookupProdCatDel10">
         <AttrNames>
-          <Item Value="LookupId"/>
-          <Item Value="LookupCategory"/>
           <Item Value="PossibleValue"/>
           <Item Value="Description"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <action IterBinding="LookupProdCatDel1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
   </bindings>
 </pageDefinition>

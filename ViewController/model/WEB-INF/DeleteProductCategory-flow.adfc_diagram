@@ -9,39 +9,50 @@
       <property
          name="pageFragment">false</property>
       <property
-         name="x">471.0</property>
+         name="x">254.0</property>
       <property
          name="start">true</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>DeleteProductCategory&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">176.04004</property>
+         name="y">176.48242</property>
       <property
          name="page">/DeleteProductCategory.jsf</property>
       <property
          name="exceptionHandler">false</property>
    </View>
-   <MethodCall
-      id="MethodCall3">
-      <property
-         name="activityId">Delete</property>
-      <property
-         name="x">279.5</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>Delete&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
-      <property
-         name="y">223.14941</property>
-      <property
-         name="exceptionHandler">false</property>
-   </MethodCall>
    <ControlFlowCase
       islink="true"
       id="ControlFlowCase4"
-      from="MethodCall3"
       to="View2">
       <property
          name="fromOutcome">Delete</property>
       <property
-         name="sdm:polyPoints">R50,320.5,222.79883,430.0,175.68945,L50</property>
+         name="sdm:polyPoints">R50,249.5,134.99414,430.0,172.88477,L50</property>
+   </ControlFlowCase>
+   <TaskFlowReturn
+      id="TaskFlowReturn5">
+      <property
+         name="activityId">return</property>
+      <property
+         name="x">668.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>return&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  return&lt;/p></property>
+      <property
+         name="y">170.19531</property>
+      <property
+         name="finish">true</property>
+      <property
+         name="exceptionHandler">false</property>
+   </TaskFlowReturn>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase6"
+      from="View2"
+      to="TaskFlowReturn5">
+      <property
+         name="fromOutcome">commit</property>
+      <property
+         name="sdm:polyPoints">R50,296.26706,176.13184,625.7329,169.84473,L50</property>
    </ControlFlowCase>
 </SDM>
