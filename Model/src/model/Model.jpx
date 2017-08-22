@@ -76,9 +76,9 @@
     PackageName="model.manymany"
     ObjectType="JboPackage">
     <DesignTime>
+      <Attr Name="_AM" Value="true"/>
       <Attr Name="_AS" Value="true"/>
       <Attr Name="_VO" Value="true"/>
-      <Attr Name="_AM" Value="true"/>
     </DesignTime>
   </Containee>
   <Containee

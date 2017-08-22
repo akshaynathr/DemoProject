@@ -12,13 +12,6 @@
                       shortDesc="#{bindings.ProductName.hints.tooltip}" id="it1">
           <f:validator binding="#{bindings.ProductName.validator}"/>
         </af:inputText>
-        <af:inputText value="#{bindings.ProductDescription.inputValue}" label="Description"
-                      required="#{bindings.ProductDescription.hints.mandatory}"
-                      columns="#{bindings.ProductDescription.hints.displayWidth}"
-                      maximumLength="#{bindings.ProductDescription.hints.precision}"
-                      shortDesc="#{bindings.ProductDescription.hints.tooltip}" id="it2">
-          <f:validator binding="#{bindings.ProductDescription.validator}"/>
-        </af:inputText>
         <af:inputText value="#{bindings.CurrentPrice.inputValue}" label="Price"
                       required="#{bindings.CurrentPrice.hints.mandatory}"
                       columns="#{bindings.CurrentPrice.hints.displayWidth}"
@@ -33,6 +26,13 @@
           <f:selectItems value="#{bindings.ProductCategoryId.items}" id="si1"/>
           <f:validator binding="#{bindings.ProductCategoryId.validator}"/>
         </af:selectOneChoice>
+        <af:inputText value="#{bindings.ProductDescription.inputValue}" label="Description"
+                      required="#{bindings.ProductDescription.hints.mandatory}"
+                      columns="#{bindings.ProductDescription.hints.displayWidth}"
+                      maximumLength="#{bindings.ProductDescription.hints.precision}"
+                      shortDesc="#{bindings.ProductDescription.hints.tooltip}" id="it2" rows="5">
+          <f:validator binding="#{bindings.ProductDescription.validator}"/>
+        </af:inputText>
       </af:panelFormLayout>
       <af:button text="Save" id="b1" action="commit"/>
       <af:button text="Back" id="b2" action="back"/>

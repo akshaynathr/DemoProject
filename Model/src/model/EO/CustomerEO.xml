@@ -259,6 +259,34 @@
     AssociationOtherEnd="model.ASSOC.CustomerShippingAddressFkAddressASSOC.Customer3Accessor"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="CustomerContact1"
+    Association="model.manymany.CustomerCustContNewASSOC"
+    AssociationEnd="model.manymany.CustomerCustContNewASSOC.CustomerContact1"
+    AssociationOtherEnd="model.manymany.CustomerCustContNewASSOC.Customer1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Address4"
+    Association="model.manymany.CustomerAddressShippingNewASSOC"
+    AssociationEnd="model.manymany.CustomerAddressShippingNewASSOC.Address4"
+    AssociationOtherEnd="model.manymany.CustomerAddressShippingNewASSOC.Customer4"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Address3"
+    Association="model.manymany.CustomerAddressPrimaryNewASSOC"
+    AssociationEnd="model.manymany.CustomerAddressPrimaryNewASSOC.Address3"
+    AssociationOtherEnd="model.manymany.CustomerAddressPrimaryNewASSOC.Customer3"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Contact2"
+    Association="model.manymany.CustomerContactNewASSOC"
+    AssociationEnd="model.manymany.CustomerContactNewASSOC.Contact2"
+    AssociationOtherEnd="model.manymany.CustomerContactNewASSOC.Customer2"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="CustomersPk"
     PrimaryKey="true">

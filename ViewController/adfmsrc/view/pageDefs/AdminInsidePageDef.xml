@@ -10,13 +10,13 @@
     <iterator Binds="UserRolesMaster1" RangeSize="25" DataControl="AppModuleAMDataControl"
               id="UserRolesMaster1Iterator"/>
     <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
-                  Binds="ProductsU1Iterator" id="ImplicitViewCriteriaQuery1"/>
-    <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
                   Binds="UsersU4Iterator" id="ImplicitViewCriteriaQuery2"/>
     <iterator Binds="RolesU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="RolesU1Iterator"/>
     <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
                   Binds="RolesU1Iterator" id="ImplicitViewCriteriaQuery"/>
     <iterator Binds="UsersRolesU3" RangeSize="25" DataControl="AppModuleAMDataControl" id="UsersRolesU3Iterator"/>
+    <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="ProductsU1Iterator" id="ImplicitViewCriteriaQuery3"/>
   </executables>
   <bindings>
     <action id="Commit" DataControl="AppModuleAMDataControl" RequiresUpdateModel="true" Action="commitTransaction"/>
@@ -31,16 +31,6 @@
         <Item Value="false"/>
       </ValueList>
     </button>
-    <tree IterBinding="ProductsU1Iterator" id="ProductsU1">
-      <nodeDefinition DefName="model.UVO.ProductsUVO" Name="ProductsU10">
-        <AttrNames>
-          <Item Value="ProductName"/>
-          <Item Value="ProductDescription"/>
-          <Item Value="CurrentPrice"/>
-          <Item Value="ProductCategoryId"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
     <tree IterBinding="UsersU4Iterator" id="UsersU41">
       <nodeDefinition DefName="model.UVO.UsersUVO" Name="UsersU410">
         <AttrNames>
@@ -87,5 +77,15 @@
       </nodeDefinition>
     </tree>
     <action IterBinding="RolesU1Iterator" id="Delete2" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <tree IterBinding="ProductsU1Iterator" id="ProductsU1">
+      <nodeDefinition DefName="model.UVO.ProductsUVO" Name="ProductsU10">
+        <AttrNames>
+          <Item Value="ProductName"/>
+          <Item Value="ProductDescription"/>
+          <Item Value="CurrentPrice"/>
+          <Item Value="ProductCategoryId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
   </bindings>
 </pageDefinition>
