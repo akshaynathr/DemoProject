@@ -210,9 +210,6 @@
     Name="UsersRolesU4"
     ViewObjectName="model.UVO.UsersRolesUVO"/>
   <ViewUsage
-    Name="AddressU2"
-    ViewObjectName="model.UVO.AddressUVO"/>
-  <ViewUsage
     Name="RevenueItem1"
     ViewObjectName="model.RVO.RevenueItemVO"/>
   <ViewUsage
@@ -221,6 +218,18 @@
   <ViewUsage
     Name="CustomerCountR1"
     ViewObjectName="model.customer.RVO.CustomerCountRVO"/>
+  <ViewUsage
+    Name="OpportunityCustomerDisplayR1"
+    ViewObjectName="model.customer.RVO.OpportunityCustomerDisplayRVO"/>
+  <ViewUsage
+    Name="AddressU2"
+    ViewObjectName="model.UVO.AddressUVO"/>
+  <ViewUsage
+    Name="OpportunitiesU6"
+    ViewObjectName="model.customer.UVO.OpportunitiesUVO"/>
+  <ViewUsage
+    Name="CustomersU7"
+    ViewObjectName="model.UVO.CustomersUVO"/>
   <ViewLinkUsage
     Name="UsersFk1VL1"
     ViewLinkObjectName="model.UVO.UsersFk1VL"
@@ -320,4 +329,10 @@
   <ViewUsage
     Name="AddressU2"
     ViewObjectName="model.UVO.AddressUVO"/>
+  <ViewLinkUsage
+    Name="OpportunityCustomerDisplayVL1"
+    ViewLinkObjectName="model.VL.OpportunityCustomerDisplayVL"
+    SrcViewUsageName="model.AM.AppModuleAM.OpportunitiesU6"
+    DstViewUsageName="model.AM.AppModuleAM.CustomersU7"
+    Reversed="false"/>
 </AppModule>

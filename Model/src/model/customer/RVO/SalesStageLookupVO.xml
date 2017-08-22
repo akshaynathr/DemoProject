@@ -25,6 +25,36 @@ FROM
     LOOKUPS  
 WHERE  
     LOOKUPS.LOOKUP_CATEGORY = 'SALES_STAGE']]></SQLQuery>
+  <ViewAttribute
+    Name="LookupId"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="10"
+    Scale="0"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    AliasName="LOOKUP_ID"
+    Expression="LOOKUP_ID"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="PossibleValue"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="50"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="POSSIBLE_VALUE"
+    Expression="POSSIBLE_VALUE"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </ViewAttribute>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="LookupId"/>
+  </AttrArray>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.customer.RVO.common.SalesStageLookupVOMsgBundle"/>

@@ -20,6 +20,7 @@
                   <af:commandLink text="Advanced" rendered="false" id="cl3"/>
                 </f:facet>
               </af:quickQuery>
+              <af:button text="Create Opportunity" id="b3"/>
             </af:panelHeader>
             <af:table value="#{bindings.MyTeamR1.collectionModel}" var="row" rows="#{bindings.MyTeamR1.rangeSize}"
                       emptyText="#{bindings.MyTeamR1.viewable ? 'No data to display.' : 'Access Denied.'}"

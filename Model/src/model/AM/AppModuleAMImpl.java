@@ -4,6 +4,7 @@ import model.RVO.ProductCountVOImpl;
 import model.RVO.RoleNameLookupImpl;
 import model.RVO.UserCountVOImpl;
 
+
 import model.customer.UVO.OpportunitiesUVOImpl;
 
 import oracle.jbo.Row;
@@ -536,13 +537,6 @@ public class AppModuleAMImpl extends ApplicationModuleImpl {
         return (OpportunitiesUVOImpl) findViewObject("OpportunitiesU5");
     }
 
-    /**
-     * Container's getter for AddressU2.
-     * @return AddressU2
-     */
-    public ViewObjectImpl getAddressU2() {
-        return (ViewObjectImpl) findViewObject("AddressU2");
-    }
 
     /**
      * Container's getter for MyTeamR1.
@@ -711,6 +705,48 @@ public class AppModuleAMImpl extends ApplicationModuleImpl {
      */
     public ViewObjectImpl getCustomerCountR1() {
         return (ViewObjectImpl) findViewObject("CustomerCountR1");
+    }
+
+    /**
+     * Container's getter for OpportunityCustomerDisplayR1.
+     * @return OpportunityCustomerDisplayR1
+     */
+    public ViewObjectImpl getOpportunityCustomerDisplayR1() {
+        return (ViewObjectImpl) findViewObject("OpportunityCustomerDisplayR1");
+    }
+
+
+    /**
+     * Container's getter for AddressU2.
+     * @return AddressU2
+     */
+    public ViewObjectImpl getAddressU2() {
+        return (ViewObjectImpl) findViewObject("AddressU2");
+    }
+
+
+    /**
+     * Container's getter for OpportunitiesU6.
+     * @return OpportunitiesU6
+     */
+    public OpportunitiesUVOImpl getOpportunitiesU6() {
+        return (OpportunitiesUVOImpl) findViewObject("OpportunitiesU6");
+    }
+
+    /**
+     * Container's getter for CustomersU7.
+     * @return CustomersU7
+     */
+    public ViewObjectImpl getCustomersU7() {
+        return (ViewObjectImpl) findViewObject("CustomersU7");
+    }
+
+    /**
+     * Container's getter for OpportunityCustomerDisplayVL1.
+     * @return OpportunityCustomerDisplayVL1
+     */
+    public ViewLinkImpl getOpportunityCustomerDisplayVL1() {
+        return (ViewLinkImpl) findViewLink("OpportunityCustomerDisplayVL1");
     }
 }
 
