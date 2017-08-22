@@ -221,9 +221,70 @@
           <af:showDetailItem id="tab4" text="Notes" icon="icons/notes.png"/>
           <af:showDetailItem text="Appointments" id="sdi1" icon="/icons/appointments.png"/>
           <af:showDetailItem text="Docs" id="sdi2">
+            <af:table value="#{bindings.OpportunityDocs1.collectionModel}" var="row"
+                      rows="#{bindings.OpportunityDocs1.rangeSize}"
+                      emptyText="#{bindings.OpportunityDocs1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                      rowBandingInterval="0" selectedRowKeys="#{bindings.OpportunityDocs1.collectionModel.selectedRow}"
+                      selectionListener="#{bindings.OpportunityDocs1.collectionModel.makeCurrent}" rowSelection="single"
+                      fetchSize="#{bindings.OpportunityDocs1.rangeSize}" id="t1" partialTriggers="b2">
+              <af:column headerText="#{bindings.OpportunityDocs1.hints.DocId.label}" id="c1">
+                <af:inputText value="#{row.bindings.DocId.inputValue}"
+                              label="#{bindings.OpportunityDocs1.hints.DocId.label}"
+                              required="#{bindings.OpportunityDocs1.hints.DocId.mandatory}"
+                              columns="#{bindings.OpportunityDocs1.hints.DocId.displayWidth}"
+                              maximumLength="#{bindings.OpportunityDocs1.hints.DocId.precision}"
+                              shortDesc="#{bindings.OpportunityDocs1.hints.DocId.tooltip}" id="it22">
+                  <f:validator binding="#{row.bindings.DocId.validator}"/>
+                  <af:convertNumber groupingUsed="false" pattern="#{bindings.OpportunityDocs1.hints.DocId.format}"/>
+                </af:inputText>
+              </af:column>
+              <af:column headerText="#{bindings.OpportunityDocs1.hints.OpportunityId.label}" id="c2">
+                <af:inputText value="#{row.bindings.OpportunityId.inputValue}"
+                              label="#{bindings.OpportunityDocs1.hints.OpportunityId.label}"
+                              required="#{bindings.OpportunityDocs1.hints.OpportunityId.mandatory}"
+                              columns="#{bindings.OpportunityDocs1.hints.OpportunityId.displayWidth}"
+                              maximumLength="#{bindings.OpportunityDocs1.hints.OpportunityId.precision}"
+                              shortDesc="#{bindings.OpportunityDocs1.hints.OpportunityId.tooltip}" id="it23">
+                  <f:validator binding="#{row.bindings.OpportunityId.validator}"/>
+                  <af:convertNumber groupingUsed="false"
+                                    pattern="#{bindings.OpportunityDocs1.hints.OpportunityId.format}"/>
+                </af:inputText>
+              </af:column>
+              <af:column headerText="#{bindings.OpportunityDocs1.hints.Path.label}" id="c3">
+                <af:inputText value="#{row.bindings.Path.inputValue}"
+                              label="#{bindings.OpportunityDocs1.hints.Path.label}"
+                              required="#{bindings.OpportunityDocs1.hints.Path.mandatory}"
+                              columns="#{bindings.OpportunityDocs1.hints.Path.displayWidth}"
+                              maximumLength="#{bindings.OpportunityDocs1.hints.Path.precision}"
+                              shortDesc="#{bindings.OpportunityDocs1.hints.Path.tooltip}" id="it24"
+                              binding="#{pageFlowScope.uploadBean.it}">
+                              <f:validator binding="#{row.bindings.Path.validator}"/>
+                </af:inputText>
+              </af:column>
+              <af:column headerText="#{bindings.OpportunityDocs1.hints.DocName.label}" id="c4">
+                <af:inputText value="#{row.bindings.DocName.inputValue}"
+                              label="#{bindings.OpportunityDocs1.hints.DocName.label}"
+                              required="#{bindings.OpportunityDocs1.hints.DocName.mandatory}"
+                              columns="#{bindings.OpportunityDocs1.hints.DocName.displayWidth}"
+                              maximumLength="#{bindings.OpportunityDocs1.hints.DocName.precision}"
+                              shortDesc="#{bindings.OpportunityDocs1.hints.DocName.tooltip}" id="it25">
+                  <f:validator binding="#{row.bindings.DocName.validator}"/>
+                </af:inputText>
+              </af:column>
+              <af:column id="c5">
+                <af:link text="Download" id="l2">
+                  <af:fileDownloadActionListener method="#{pageFlowScope.uploadBean.downloadFileListener}"/>
+                </af:link>
+              </af:column>
+              <af:column id="c6">
+                <af:button text="x"
+                           disabled="#{!bindings.Delete.enabled}" id="b2"
+                           action="#{pageFlowScope.upload_bean.deleteFile}"/>
+              </af:column>
+            </af:table>
             <af:outputText value="Documents" id="ot3" inlineStyle="color:Black; font-size:x-large;"/>
             <af:toolbar id="t2">
-              <af:inputFile label="Add File" id="if1"/>
+              <af:inputFile label="Add File" id="if1" valueChangeListener="#{pageFlowScope.uploadBean.uploadFileVCE}"/>
               <af:button text="Upload" id="b1"/>
             </af:toolbar>
           </af:showDetailItem>

@@ -88,8 +88,8 @@ public class UploadBean {
             OperationBinding ob = bindings.getOperationBinding("setFileData"); 
                     
                 //    OperationBinding ob = executeOperation("setFileData");
-                                    ob.getParamsMap().put("docId", docId);
-                                    ob.getParamsMap().put("opptId",  OppId);
+                                    ob.getParamsMap().put("docId", "5");
+                                    ob.getParamsMap().put("opptId",  "2");
                     ob.getParamsMap().put("name", fileVal.getFilename());
                     ob.getParamsMap().put("path", path);
                     
@@ -133,6 +133,7 @@ public class UploadBean {
                        try {
                            inputStream.close();
                        } catch (IOException e) {
+                           e.printStackTrace();
                        }
                    }
 
@@ -184,7 +185,7 @@ public class UploadBean {
         
             
              public String deleteFile(){
-                     System.out.println("path: "+it.getValue().toString());
+                    
             filePath = it.getValue().toString();
             System.out.println(filePath);
             BindingContainer bindings = getBindings();
@@ -193,6 +194,20 @@ public class UploadBean {
             if (!operationBinding.getErrors().isEmpty()) {
                 return null;
             }
+            
+            OperationBinding operationBinding2 = bindings.getOperationBinding("Commit");
+                   Object result2 = operationBinding2.execute();
+                   if (!operationBinding2.getErrors().isEmpty()) {
+                       return null;
+                   }
+                   //    path = (String)ADFUtils.getBoundAttributeValue("path1");
+                   //    Path delPath = Paths.get(this.it.getValue().toString());
+                       Path delPath = Paths.get(filePath);
+                       try {
+                           Files.delete(delPath);
+                       } catch (IOException e) {
+                       }
+            
                             return null;
         }
             

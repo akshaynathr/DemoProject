@@ -5,6 +5,8 @@
   <executables>
     <variableIterator id="variables"/>
     <iterator Binds="OpportunitiesU5" RangeSize="25" DataControl="AppModuleAMDataControl" id="OpportunitiesU5Iterator"/>
+    <iterator Binds="OpportunityDocs1" RangeSize="25" DataControl="AppModuleAMDataControl410"
+              id="OpportunityDocs1Iterator"/>
   </executables>
   <bindings>
     <attributeValues IterBinding="OpportunitiesU5Iterator" id="OppurtunityName">
@@ -136,5 +138,25 @@
         <Item Value="DecisionLevelId"/>
       </AttrNames>
     </attributeValues>
+    <tree IterBinding="OpportunityDocs1Iterator" id="OpportunityDocs1">
+      <nodeDefinition DefName="model.docs.OpportunityDocsVO" Name="OpportunityDocs10">
+        <AttrNames>
+          <Item Value="DocId"/>
+          <Item Value="OpportunityId"/>
+          <Item Value="Path"/>
+          <Item Value="DocName"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="OpportunityDocs1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action id="Commit" DataControl="AppModuleAMDataControl4" RequiresUpdateModel="true" Action="commitTransaction"/>
+    <methodAction id="setFileData" RequiresUpdateModel="true" Action="invokeMethod" MethodName="setFileData"
+                  IsViewObjectMethod="false" DataControl="AppModuleAMDataControl410"
+                  InstanceName="bindings.setFileData.dataControl.dataProvider">
+      <NamedData NDName="docId" NDType="java.lang.Long"/>
+      <NamedData NDName="opptId" NDType="java.lang.Long"/>
+      <NamedData NDName="name" NDType="java.lang.String"/>
+      <NamedData NDName="path" NDType="java.lang.String"/>
+    </methodAction>
   </bindings>
 </pageDefinition>
