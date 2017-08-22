@@ -6,7 +6,11 @@
   Name="AppModuleAM"
   Version="12.2.1.12.24"
   InheritPersonalization="merge"
-  ClearCacheOnRollback="true">
+  ClearCacheOnRollback="true"
+  ComponentClass="model.AM.AppModuleAMImpl">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
   <ViewUsage
     Name="UsersU1"
     ViewObjectName="model.UVO.UsersUVO"/>
@@ -200,14 +204,14 @@
     Name="OpportunitiesU5"
     ViewObjectName="model.customer.UVO.OpportunitiesUVO"/>
   <ViewUsage
-    Name="AddressU2"
-    ViewObjectName="model.UVO.AddressUVO"/>
-  <ViewUsage
     Name="MyTeamR1"
     ViewObjectName="model.RVO.MyTeamRVO"/>
   <ViewUsage
     Name="UsersRolesU4"
     ViewObjectName="model.UVO.UsersRolesUVO"/>
+  <ViewUsage
+    Name="AddressU2"
+    ViewObjectName="model.UVO.AddressUVO"/>
   <ViewLinkUsage
     Name="UsersFk1VL1"
     ViewLinkObjectName="model.UVO.UsersFk1VL"

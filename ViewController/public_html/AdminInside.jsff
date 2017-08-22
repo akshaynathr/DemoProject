@@ -14,6 +14,12 @@
                            depressedIcon="#{resource['images:user.jpg']}"
                            disclosed="#{(pageFlowScope.tabVal==1)?true:false}">
           <f:facet name="toolbar"/>
+          <af:popup childCreation="deferred" autoCancel="disabled" id="p1">
+            <af:dialog id="d1" dialogListener="#{safeDeleteBean.dialogDeleteListenerUser}">
+              <f:facet name="buttonBar"/>
+              <af:outputText value="Are you sure you want to delete this user?" id="ot9"/>
+            </af:dialog>
+          </af:popup>
           <af:panelBorderLayout id="pbl2">
             <f:facet name="top">
               <af:activeOutputText value="Manage Users" id="aot1" inlineStyle="font-size:x-large; color:Navy;"/>
@@ -28,8 +34,9 @@
                 </af:quickQuery>
                 <af:button text="Create User" id="b1" action="UserTrain1" useWindow="true" windowWidth="600"
                            windowHeight="500"/>
-                <af:button text="Delete" disabled="#{!bindings.Delete.enabled}" id="b3"
-                           action="#{safeDeleteBean.commit_Delete}"/>
+                <af:button text="Delete" disabled="#{!bindings.Delete.enabled}" id="b3">
+                  <af:showPopupBehavior popupId="p1"/>
+                </af:button>
               </af:panelGroupLayout>
             </f:facet>
             <f:facet name="bottom"/>
@@ -130,8 +137,9 @@
                 </af:quickQuery>
                 <af:button text="Create Product" id="b2" useWindow="true" windowHeight="400" action="createProduct"
                            windowWidth="500"/>
-                <af:button text="Delete Product" disabled="#{!bindings.Delete1.enabled}" id="b4"
-                           action="#{safeDeleteBean.commit_Delete_Product}"/>
+                <af:button text="Delete Product" disabled="#{!bindings.Delete1.enabled}" id="b4">
+                  <af:showPopupBehavior popupId="p2"/>
+                </af:button>
                 <af:button text="Create Category" id="b6" windowModalityType="applicationModal"
                            windowEmbedStyle="inlineDocument" useWindow="true" windowHeight="500" windowWidth="600" action="create_product_category"/>
                 <af:button text="Delete Category" id="b9" action="delete_product_category"
@@ -184,6 +192,12 @@
               </af:gridRow>
             </af:panelGridLayout>
           </af:panelBorderLayout>
+          <af:popup childCreation="deferred" autoCancel="disabled" id="p2">
+            <af:dialog id="d2" dialogListener="#{safeDeleteBean.dialogDeleteListenerProduct}">
+              <f:facet name="buttonBar"/>
+              <af:outputText value="Are you sure you want to delete this product?" id="ot12"/>
+            </af:dialog>
+          </af:popup>
         </af:showDetailItem>
         <af:showDetailItem text="Roles" id="sdi2" disclosed="#{(pageFlowScope.tabVal ==3)?true:false}"
                            icon="icons/role.png">
@@ -201,8 +215,9 @@
                 </af:quickQuery>
                 <af:button text="Create Role" id="b7" action="createRoll" useWindow="true" windowEmbedStyle="window"
                            windowHeight="400" windowWidth="500"/>
-                <af:button text="Delete" disabled="#{!bindings.Delete2.enabled}" id="b8"
-                           action="#{safeDeleteBean.deleteRole}"/>
+                <af:button text="Delete" disabled="#{!bindings.Delete2.enabled}" id="b8">
+                  <af:showPopupBehavior popupId="p3"/>
+                </af:button>
               </af:panelGroupLayout>
             </f:facet>
             <f:facet name="bottom"/>
@@ -281,6 +296,12 @@
               </af:gridRow>
             </af:panelGridLayout>
           </af:panelBorderLayout>
+          <af:popup childCreation="deferred" autoCancel="disabled" id="p3">
+            <af:dialog id="d3" dialogListener="#{safeDeleteBean.dialogDeleteListenerRole}">
+              <f:facet name="buttonBar"/>
+              <af:outputText value="Are you sure you want to delete this role?" id="ot13"/>
+            </af:dialog>
+          </af:popup>
         </af:showDetailItem>
       </af:panelTabbed>
     </f:facet>
