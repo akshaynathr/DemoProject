@@ -207,7 +207,6 @@
               </af:panelGroupLayout>
             </f:facet>
             <f:facet name="bottom"/>
-            <f:facet name="start"/>
             <f:facet name="end"/>
             <af:panelGridLayout id="pgl7">
               <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr3">

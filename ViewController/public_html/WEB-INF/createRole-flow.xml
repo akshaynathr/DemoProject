@@ -18,6 +18,7 @@
       </outcome>
     </method-call>
     <view id="createRole">
+      <display-name>Create Role</display-name>
       <page>/createRole.jsf</page>
     </view>
     <task-flow-return id="commit">
