@@ -23,7 +23,7 @@
     PrimaryKey="true">
     <TransientExpression
       Name="ExpressionScript"
-      trustMode="untrusted"
+      trustMode="trusted"
       CodeSourceName="CustomersEORow"/>
   </Attribute>
   <Attribute

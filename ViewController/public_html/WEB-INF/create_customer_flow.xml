@@ -5,6 +5,11 @@
     <data-control-scope>
       <shared/>
     </data-control-scope>
+    <managed-bean id="__3">
+      <managed-bean-name>NewCustBean</managed-bean-name>
+      <managed-bean-class>view.NewCustBeanClass</managed-bean-class>
+      <managed-bean-scope>backingBean</managed-bean-scope>
+    </managed-bean>
     <view id="create_customer">
       <page>/create_customer.jsf</page>
     </view>

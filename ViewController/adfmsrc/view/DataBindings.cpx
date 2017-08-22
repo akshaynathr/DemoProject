@@ -39,6 +39,9 @@
     <page path="/WEB-INF/customer-flow.xml#customer-flow@SetCurrentRowWithKey"
           usageId="view_customer_flow_customer_flow_SetCurrentRowWithKeyPageDef"/>
 	<page path="/oppurtunity_tab.jsf" usageId="view_oppurtunity_tabPageDef"/>
+    <page path="/create_customer.jsf" usageId="view_create_customerPageDef"/>
+    <page path="/WEB-INF/create_customer_flow.xml#create_customer_flow@Commit"
+          usageId="view_create_customer_flow_create_customer_flow_CommitPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_HomePageDef" path="view.pageDefs.HomePageDef"/>
@@ -71,6 +74,9 @@
     <page id="view_customer_flow_customer_flow_SetCurrentRowWithKeyPageDef"
           path="view.pageDefs.customer_flow_customer_flow_SetCurrentRowWithKeyPageDef"/>
 	<page id="view_oppurtunity_tabPageDef" path="view.pageDefs.oppurtunity_tabPageDef"/>
+    <page id="view_create_customerPageDef" path="view.pageDefs.create_customerPageDef"/>
+    <page id="view_create_customer_flow_create_customer_flow_CommitPageDef"
+          path="view.pageDefs.create_customer_flow_create_customer_flow_CommitPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleAMDataControl" Package="model.AM"
@@ -342,6 +348,11 @@
                      FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
                      SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
                      SupportsSortCollection="true" Configuration="AppModuleAMLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="AMDataControl" Package="model.master"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AMLocal" syncMode="Immediate"
                      xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
   </dataControlUsages>
 </Application>
