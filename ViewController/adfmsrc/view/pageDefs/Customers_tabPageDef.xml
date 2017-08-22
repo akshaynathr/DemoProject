@@ -10,9 +10,12 @@
                   Binds="OpportunitiesU1Iterator" id="ImplicitViewCriteriaQuery"/>
     <iterator Binds="OpportunitiesU1" RangeSize="25" DataControl="AppModuleAMDataControl3"
               id="OpportunitiesU1Iterator1"/>
-    <iterator Binds="CustomersU5" RangeSize="25" DataControl="AppModuleAMDataControl" id="CustomersU5Iterator"/>
     <iterator Binds="CustomerId_Address_ViewObj1" RangeSize="25" DataControl="AppModuleAMDataControl"
               id="CustomerId_Address_ViewObj1Iterator"/>
+    <iterator Binds="OpportunitiesU1" RangeSize="25" DataControl="AppModuleAMDataControl"
+              id="OpportunitiesU1Iterator2"/>
+    <searchRegion Criteria="OpportunitiesUVOCriteria" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="OpportunitiesU1Iterator2" id="OpportunitiesUVOCriteriaQuery"/>
   </executables>
   <bindings>
     <attributeValues IterBinding="CustomerId_Address_ViewObj1Iterator" id="CustomerName">
@@ -105,27 +108,29 @@
         <Item Value="Street"/>
       </AttrNames>
     </attributeValues>
-    <tree IterBinding="CustomersU5Iterator" id="CustomersU5">
-      <nodeDefinition DefName="model.UVO.CustomersUVO" Name="CustomersU50">
+    <tree IterBinding="OpportunitiesU1Iterator2" id="OpportunitiesU1">
+      <nodeDefinition DefName="model.customer.UVO.OpportunitiesUVO" Name="OpportunitiesU10">
         <AttrNames>
+          <Item Value="OpportunityId"/>
+          <Item Value="OppurtunityName"/>
           <Item Value="CustomerId"/>
-          <Item Value="CustomerName"/>
-          <Item Value="CustomerTypeId"/>
-          <Item Value="PrimaryContactId"/>
-          <Item Value="Url"/>
-          <Item Value="ParentCompany"/>
-          <Item Value="Ceo"/>
-          <Item Value="NoOfEmployees"/>
-          <Item Value="Fax"/>
-          <Item Value="Email"/>
-          <Item Value="PrimaryAddressId"/>
-          <Item Value="ShippingAddressId"/>
-          <Item Value="CreatedBy"/>
-          <Item Value="CreatedOn"/>
-          <Item Value="LastUpdatedBy"/>
-          <Item Value="LastUpdatedOn"/>
-          <Item Value="VersionNo"/>
-          <Item Value="IsActive"/>
+          <Item Value="WinProbablity"/>
+          <Item Value="StartDate"/>
+          <Item Value="EndDate"/>
+          <Item Value="SalesStageId"/>
+          <Item Value="SalesMethodId"/>
+          <Item Value="SalesChannelId"/>
+          <Item Value="Revenue"/>
+          <Item Value="BestCaseRevenue"/>
+          <Item Value="WorstCaseRevenue"/>
+          <Item Value="IsBudgeted"/>
+          <Item Value="BudgetAmount"/>
+          <Item Value="EstimatedDurationInDays"/>
+          <Item Value="RiskLevel"/>
+          <Item Value="IsIncluded"/>
+          <Item Value="CreatedById"/>
+          <Item Value="PrimaryContact"/>
+          <Item Value="DecisionLevelId"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

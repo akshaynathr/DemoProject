@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="UsersOpportunityEO"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="USERS_OPPORTUNITIES"
+  AliasName="UsersOpportunityEO"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="UserId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="USER_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USERS_OPPORTUNITIES"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="OpportunityId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="OPPORTUNITY_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="USERS_OPPORTUNITIES"
+    PrimaryKey="true"/>
+  <Key
+    Name="UsersOpportunitiesPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="USERS_OPPORTUNITIES_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.UsersOpportunityEO.UserId"/>
+      <Item Value="model.EO.UsersOpportunityEO.OpportunityId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="UsersOpportunitiesFk1">
+    <DesignTime>
+      <Attr Name="_isCascadeDelete" Value="true"/>
+      <Attr Name="_referencedKey" Value="OPPORTUNITIES_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="USERS_OPPORTUNITIES_FK1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.UsersOpportunityEO.OpportunityId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="UsersOpportunitiesUsersFk1">
+    <DesignTime>
+      <Attr Name="_isCascadeDelete" Value="true"/>
+      <Attr Name="_referencedKey" Value="USERS_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="USERS_OPPORTUNITIES_USERS_FK1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.UsersOpportunityEO.UserId"/>
+    </AttrArray>
+  </Key>
+</Entity>

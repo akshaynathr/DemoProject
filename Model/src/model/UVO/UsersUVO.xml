@@ -23,7 +23,7 @@
     <ParameterMap>
       <PIMap Variable="UserIdVar">
         <TransientExpression
-          trustMode="untrusted"
+          trustMode="trusted"
           Name="ExpressionScript"><![CDATA[UserId]]></TransientExpression>
       </PIMap>
     </ParameterMap>

@@ -5,6 +5,8 @@
     <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
              className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
     <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+	<factory nameSpace="http://xmlns.oracle.com/adfm/dvt"
+             className="oracle.adfinternal.view.faces.dvt.model.binding.FacesBindingFactory"/>
   </definitionFactories>
   <pageMap>
     <page path="/Home.jsf" usageId="view_HomePageDef"/>
@@ -36,6 +38,7 @@
 	<page path="/edit_customer.jsf" usageId="view_edit_customerPageDef"/>
     <page path="/WEB-INF/customer-flow.xml#customer-flow@SetCurrentRowWithKey"
           usageId="view_customer_flow_customer_flow_SetCurrentRowWithKeyPageDef"/>
+	<page path="/oppurtunity_tab.jsf" usageId="view_oppurtunity_tabPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_HomePageDef" path="view.pageDefs.HomePageDef"/>
@@ -67,6 +70,7 @@
 	<page id="view_edit_customerPageDef" path="view.pageDefs.edit_customerPageDef"/>
     <page id="view_customer_flow_customer_flow_SetCurrentRowWithKeyPageDef"
           path="view.pageDefs.customer_flow_customer_flow_SetCurrentRowWithKeyPageDef"/>
+	<page id="view_oppurtunity_tabPageDef" path="view.pageDefs.oppurtunity_tabPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleAMDataControl" Package="model.AM"

@@ -12,7 +12,30 @@
   BindingStyle="OracleName"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  ComponentClass="model.customer.UVO.OpportunitiesUVOImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
+  </DesignTime>
+  <Variable
+    Name="custId"
+    Kind="viewcriteria"
+    Type="java.lang.Long">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMATTER
+          ResId="custId_FMT_FORMATTER"/>
+        <FMT_FORMAT
+          ResId="custId_FMT_FORMAT"/>
+        <DISPLAYHINT
+          Value="Hide"/>
+      </SchemaBasedProperties>
+    </Properties>
+    <TransientExpression
+      Name="VariableScript"
+      trustMode="trusted"
+      CodeSourceName="OpportunitiesUVO"/>
+  </Variable>
   <ViewAccessor
     Name="SalesMethodLookupVO1"
     ViewObjectName="model.customer.RVO.SalesMethodLookupVO"
@@ -238,13 +261,52 @@
     PrecisionRule="true"
     EntityAttrName="DecisionLevelId"
     EntityUsage="OpportunityEO"
-    AliasName="DECISION_LEVEL_ID"/>
+    AliasName="DECISION_LEVEL_ID"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="OppurtunityName"
     PrecisionRule="true"
     EntityAttrName="OppurtunityName"
     EntityUsage="OpportunityEO"
     AliasName="OPPURTUNITY_NAME"/>
+  <ViewCriteria
+    Name="OpportunitiesUVOCriteria"
+    ViewObjectName="model.customer.UVO.OpportunitiesUVO"
+    Conjunction="AND"
+    Mode="3">
+    <Properties Name="_Props">
+      <CustomProperties>
+        <Property
+          Name="autoExecute"
+          Value="true"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="false"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="displayOperators"
+          Value="Never"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="OpportunitiesUVOCriteria_row_0"
+      UpperColumns="1"
+      Conjunction="AND">
+      <ViewCriteriaItem
+        Name="CustomerId"
+        ViewAttribute="CustomerId"
+        Operator="="
+        Conjunction="AND"
+        Value=":custId"
+        IsBindVarValue="true"
+        Required="Optional"/>
+    </ViewCriteriaRow>
+  </ViewCriteria>
   <ViewLinkAccessor
     Name="OpportunityDocsU"
     ViewLink="model.customer.UVO.OpportunityDocsLinkVL"
@@ -260,4 +322,29 @@
     ViewLink="model.customer.UVO.ContactsOpportunitiesFk2VL"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <DeclarativeWhereClause
+    Name="DeclarativeWhereClause">
+    <ViewCriteria
+      Name="OpportunitiesUVOWhereCriteria"
+      ViewObjectName="model.customer.UVO.OpportunitiesUVO"
+      Conjunction="AND"
+      Mode="3">
+      <ViewCriteriaRow
+        Name="OpportunitiesUVOWhereCriteria_row_0"
+        UpperColumns="1">
+        <ViewCriteriaItem
+          Name="IsActive"
+          ViewAttribute="IsActive"
+          Operator="&lt;>"
+          Conjunction="AND"
+          Value="n"
+          UpperColumns="0"
+          Required="Optional"/>
+      </ViewCriteriaRow>
+    </ViewCriteria>
+  </DeclarativeWhereClause>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.customer.UVO.common.OpportunitiesUVOMsgBundle"/>
+  </ResourceBundle>
 </ViewObject>

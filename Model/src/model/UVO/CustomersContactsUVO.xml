@@ -13,6 +13,21 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <Variable
+    Name="custId"
+    Kind="viewcriteria"
+    Type="java.lang.Long">
+    <TransientExpression
+      Name="VariableScript"
+      trustMode="untrusted"
+      CodeSourceName="CustomersContactsUVO"/>
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYHINT
+          Value="Hide"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Variable>
   <EntityUsage
     Name="CustomerContactEO"
     Entity="model.EO.CustomerContactEO"/>
@@ -30,4 +45,41 @@
     EntityAttrName="ContactId"
     EntityUsage="CustomerContactEO"
     AliasName="CONTACT_ID"/>
+  <ViewCriteria
+    Name="CustomersContactsUVOCriteria"
+    ViewObjectName="model.UVO.CustomersContactsUVO"
+    Conjunction="AND"
+    Mode="3">
+    <Properties Name="_Props">
+      <CustomProperties>
+        <Property
+          Name="autoExecute"
+          Value="true"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="displayOperators"
+          Value="Never"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="CustomersContactsUVOCriteria_row_0"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="CustomerId"
+        ViewAttribute="CustomerId"
+        Operator="="
+        Conjunction="AND"
+        Value=":custId"
+        IsBindVarValue="true"
+        Required="Optional"/>
+    </ViewCriteriaRow>
+  </ViewCriteria>
 </ViewObject>

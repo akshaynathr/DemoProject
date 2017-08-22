@@ -46,20 +46,6 @@
     AssociationOtherEnd="model.EO.CustomersContactsFk2ASSOC.CustomerContact"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
-  <AccessorAttribute
-    Name="Customer1"
-    Association="model.manymany.CustomerCustContNewASSOC"
-    AssociationEnd="model.manymany.CustomerCustContNewASSOC.Customer1"
-    AssociationOtherEnd="model.manymany.CustomerCustContNewASSOC.CustomerContact1"
-    Type="oracle.jbo.server.EntityImpl"
-    IsUpdateable="true"/>
-  <AccessorAttribute
-    Name="Contact1"
-    Association="model.manymany.CustContCustomerNewASSOC"
-    AssociationEnd="model.manymany.CustContCustomerNewASSOC.Contact1"
-    AssociationOtherEnd="model.manymany.CustContCustomerNewASSOC.CustomerContact1"
-    Type="oracle.jbo.server.EntityImpl"
-    IsUpdateable="true"/>
   <Key
     Name="CustomersContactsPk"
     PrimaryKey="true">
@@ -93,17 +79,6 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.EO.CustomerContactEO.ContactId"/>
-    </AttrArray>
-  </Key>
-  <Key
-    Name="fk_CustomerContactEO">
-    <DesignTime>
-      <Attr Name="_referencedKey" Value="CUSTOMERS_PK"/>
-      <Attr Name="_isForeign" Value="true"/>
-      <Attr Name="_DBObjectName" Value="FK_CUSTOMER_CONTACT_EO"/>
-    </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="model.EO.CustomerContactEO.CustomerId"/>
     </AttrArray>
   </Key>
 </Entity>

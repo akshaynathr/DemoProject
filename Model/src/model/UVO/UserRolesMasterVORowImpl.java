@@ -573,4 +573,3 @@ public class UserRolesMasterVORowImpl extends ViewRowImpl {
         return (RowSet) getAttributeInternal(ROLENAMELOOKUP1);
     }
 }
-

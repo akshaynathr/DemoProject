@@ -12,6 +12,7 @@
                 </f:facet>
                 <f:facet name="bottom">
                     <af:button text="Save" id="b1" binding="#{backingBeanScope.backing_createRole.b1}"
+                               actionListener="#{bindings.Commit.execute}" disabled="#{!bindings.Commit.enabled}"
                                action="#{backingBeanScope.backing_createRole.commit_now}"/>
                 </f:facet>
                 <f:facet name="start"/>

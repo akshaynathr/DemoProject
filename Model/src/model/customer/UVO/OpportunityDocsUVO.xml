@@ -13,6 +13,10 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <Variable
+    Name="opptyId"
+    Kind="viewcriteria"
+    Type="java.lang.Long"/>
   <EntityUsage
     Name="OpportunityDocEO"
     Entity="model.customer.EO.OpportunityDocEO"/>
@@ -22,64 +26,110 @@
     PrecisionRule="true"
     EntityAttrName="DocId"
     EntityUsage="OpportunityDocEO"
-    AliasName="DOC_ID"/>
+    AliasName="DOC_ID"
+    IsUpdateable="while_insert"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="OpportunityId"
     PrecisionRule="true"
     EntityAttrName="OpportunityId"
     EntityUsage="OpportunityDocEO"
-    AliasName="OPPORTUNITY_ID"/>
+    AliasName="OPPORTUNITY_ID"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Path"
     PrecisionRule="true"
     EntityAttrName="Path"
     EntityUsage="OpportunityDocEO"
-    AliasName="PATH"/>
+    AliasName="PATH"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="CreatedBy"
     PrecisionRule="true"
     EntityAttrName="CreatedBy"
     EntityUsage="OpportunityDocEO"
     AliasName="CREATED_BY"
-    IsUpdateable="false"/>
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="CreatedOn"
     PrecisionRule="true"
     EntityAttrName="CreatedOn"
     EntityUsage="OpportunityDocEO"
     AliasName="CREATED_ON"
-    IsUpdateable="false"/>
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="LastUpdatedBy"
     PrecisionRule="true"
     EntityAttrName="LastUpdatedBy"
     EntityUsage="OpportunityDocEO"
     AliasName="LAST_UPDATED_BY"
-    IsUpdateable="false"/>
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="LastUpdatedOn"
     PrecisionRule="true"
     EntityAttrName="LastUpdatedOn"
     EntityUsage="OpportunityDocEO"
     AliasName="LAST_UPDATED_ON"
-    IsUpdateable="false"/>
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="VersionNo"
     PrecisionRule="true"
     EntityAttrName="VersionNo"
     EntityUsage="OpportunityDocEO"
     AliasName="VERSION_NO"
-    IsUpdateable="false"/>
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="IsActive"
     PrecisionRule="true"
     EntityAttrName="IsActive"
     EntityUsage="OpportunityDocEO"
-    AliasName="IS_ACTIVE"/>
+    AliasName="IS_ACTIVE"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="DocName"
     PrecisionRule="true"
     EntityAttrName="DocName"
     EntityUsage="OpportunityDocEO"
     AliasName="DOC_NAME"/>
+  <ViewCriteria
+    Name="OpportunityDocsUVOCriteria"
+    ViewObjectName="model.customer.UVO.OpportunityDocsUVO"
+    Conjunction="AND">
+    <Properties Name="_Props">
+      <CustomProperties>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="OpportunityDocsUVOCriteria_row_0"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="OpportunityId"
+        ViewAttribute="OpportunityId"
+        Operator="="
+        Conjunction="AND"
+        Value=":opptyId"
+        IsBindVarValue="true"
+        Required="Optional"/>
+    </ViewCriteriaRow>
+  </ViewCriteria>
 </ViewObject>

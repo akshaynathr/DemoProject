@@ -86,8 +86,10 @@
       id="ControlFlowCase9"
       to="View2">
       <property
+         name="tosrcid">__11</property>
+      <property
          name="fromOutcome">setCurrentRowWithKey</property>
       <property
-         name="sdm:polyPoints">R50,250.35449,185.74707,342.0,80.913086,L50</property>
+         name="fromsrcid">__10</property>
    </ControlFlowCase>
 </SDM>
