@@ -28,7 +28,16 @@
     IsUpdateable="while_insert"
     DefaultValue="@0"
     Domain="oracle.jbo.domain.DBSequence"
-    RetrievedOnInsert="true"/>
+    RetrievedOnInsert="true">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYHEIGHT
+          Value="5"/>
+        <DISPLAYWIDTH
+          Value="100"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="RoleNameId"
     Precision="20"
@@ -44,6 +53,8 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="RoleNameId_LABEL"/>
+        <DISPLAYWIDTH
+          Value="50"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -58,6 +69,8 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="StartDate_LABEL"/>
+        <DISPLAYWIDTH
+          Value="47"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -72,6 +85,8 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="EndDate_LABEL"/>
+        <DISPLAYWIDTH
+          Value="47"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -86,6 +101,14 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1024"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="50"/>
+        <DISPLAYHEIGHT
+          Value="5"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="CreatedBy"

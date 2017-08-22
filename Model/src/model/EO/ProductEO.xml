@@ -41,6 +41,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="50"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="ProductDescription"
@@ -56,9 +62,7 @@
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
-          Value="100"/>
-        <DISPLAYHEIGHT
-          Value="5"/>
+          Value="50"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -79,6 +83,12 @@
       Inverse="false"
       CompareType="GREATERTHANEQUALTO"
       CompareValue="0"/>
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="50"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="ProductCategoryId"
@@ -88,7 +98,14 @@
     SQLType="NUMERIC"
     Type="java.lang.Long"
     ColumnType="NUMBER"
-    TableName="PRODUCTS"/>
+    TableName="PRODUCTS">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="50"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="CreatedBy"
     Precision="50"

@@ -1,22 +1,28 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
-    <af:document title="createRole.jsf" id="d1">
+    <af:document title="Create Role" id="d1" uncommittedDataWarning="on">
         <af:messages id="m1" binding="#{backingBeanScope.backing_createRole.m1}"/>
         <af:form id="f1">
             <af:panelBorderLayout id="pbl1" binding="#{backingBeanScope.backing_createRole.pbl1}">
-                <f:facet name="top">
-                    <af:activeOutputText value="Create a new role" id="aot1"
-                                         binding="#{backingBeanScope.backing_createRole.aot1}"
-                                         inlineStyle="font-size:xx-large;"/>
-                </f:facet>
-                <f:facet name="bottom">
-                    <af:button text="Save" id="b1" binding="#{backingBeanScope.backing_createRole.b1}"
-                               actionListener="#{bindings.Commit.execute}" disabled="#{!bindings.Commit.enabled}"
-                               action="#{backingBeanScope.backing_createRole.commit_now}"/>
-                </f:facet>
+                <f:facet name="top"/>
+                <f:facet name="bottom"/>
                 <f:facet name="start"/>
                 <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.backing_createRole.pfl1}">
+                    <af:panelGridLayout id="pgl1" binding="#{backingBeanScope.backing_createRole.pgl1}">
+                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1"
+                                    binding="#{backingBeanScope.backing_createRole.gr1}">
+                            <af:gridCell marginStart="5px" width="50%" id="gc1"
+                                         binding="#{backingBeanScope.backing_createRole.gc1}"/>
+                            <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc2"
+                                         binding="#{backingBeanScope.backing_createRole.gc2}" halign="end">
+                                <af:button text="Save" id="b1" binding="#{backingBeanScope.backing_createRole.b1}"
+                                           actionListener="#{bindings.Commit.execute}"
+                                           disabled="#{!bindings.Commit.enabled}"
+                                           action="#{backingBeanScope.backing_createRole.commit_now}"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                    </af:panelGridLayout>
                     <af:inputText value="#{bindings.PossibleValue.inputValue}"
                                   label="#{bindings.PossibleValue.hints.label}"
                                   required="#{bindings.PossibleValue.hints.mandatory}"
@@ -25,14 +31,6 @@
                                   shortDesc="#{bindings.PossibleValue.hints.tooltip}" id="it1"
                                   binding="#{backingBeanScope.backing_createRole.it1}">
                         <f:validator binding="#{bindings.PossibleValue.validator}"/>
-                    </af:inputText>
-                    <af:inputText value="#{bindings.Description.inputValue}" label="#{bindings.Description.hints.label}"
-                                  required="#{bindings.Description.hints.mandatory}"
-                                  columns="#{bindings.Description.hints.displayWidth}"
-                                  maximumLength="#{bindings.Description.hints.precision}"
-                                  shortDesc="#{bindings.Description.hints.tooltip}" id="it2"
-                                  binding="#{backingBeanScope.backing_createRole.it2}" rows="5">
-                        <f:validator binding="#{bindings.Description.validator}"/>
                     </af:inputText>
                     <af:inputDate value="#{bindings.StartDate.inputValue}" label="#{bindings.StartDate.hints.label}"
                                   required="#{bindings.StartDate.hints.mandatory}"
@@ -56,8 +54,16 @@
                                   columns="#{bindings.Description1.hints.displayWidth}"
                                   maximumLength="#{bindings.Description1.hints.precision}"
                                   shortDesc="#{bindings.Description1.hints.tooltip}" id="it3"
-                                  binding="#{backingBeanScope.backing_createRole.it3}" rows="5">
+                                  binding="#{backingBeanScope.backing_createRole.it3}" rows="5" rendered="false">
                         <f:validator binding="#{bindings.Description1.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.Description.inputValue}" label="#{bindings.Description.hints.label}"
+                                  required="#{bindings.Description.hints.mandatory}"
+                                  columns="#{bindings.Description.hints.displayWidth}"
+                                  maximumLength="#{bindings.Description.hints.precision}"
+                                  shortDesc="#{bindings.Description.hints.tooltip}" id="it2"
+                                  binding="#{backingBeanScope.backing_createRole.it2}" rows="5">
+                        <f:validator binding="#{bindings.Description.validator}"/>
                     </af:inputText>
                 </af:panelFormLayout>
                 <f:facet name="end"/>

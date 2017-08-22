@@ -1,10 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
-  <af:document id="d1">
+  <af:document id="d1" title="Create Product">
     <af:messages id="m1"/>
     <af:form id="f1">
-      <af:activeOutputText value="Create Product" id="aot1" inlineStyle="font-size:large; font-weight:bolder;"/>
+      <af:activeOutputText value="" id="aot1" inlineStyle="font-size:large; font-weight:bolder;"/>
       <af:panelFormLayout id="pfl2">
+        <af:panelGridLayout id="pgl1">
+          <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
+            <af:gridCell marginStart="5px" width="50%" id="gc1"/>
+            <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc2" halign="end">
+              <af:button text="Save" id="b2" actionListener="#{bindings.Commit.execute}"
+                         disabled="#{!bindings.Commit.enabled}" action="commit"/>
+            </af:gridCell>
+          </af:gridRow>
+        </af:panelGridLayout>
         <af:inputText value="#{bindings.ProductName.inputValue}" label="Name"
                       required="#{bindings.ProductName.hints.mandatory}"
                       columns="#{bindings.ProductName.hints.displayWidth}"
@@ -34,8 +43,6 @@
           <f:validator binding="#{bindings.ProductDescription.validator}"/>
         </af:inputText>
       </af:panelFormLayout>
-      <af:button text="Save" id="b2" actionListener="#{bindings.Commit.execute}" disabled="#{!bindings.Commit.enabled}"
-                 action="commit"/>
           
       <af:panelFormLayout id="pfl1" rendered="false">
         <af:inputText value="#{bindings.ProductName.inputValue}" label="#{bindings.ProductName.hints.label}"
