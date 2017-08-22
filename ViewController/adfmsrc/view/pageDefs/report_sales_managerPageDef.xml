@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="report_sales_managerPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="RevenuePageU1" RangeSize="-1" DataControl="AppModuleAMDataControl" id="RevenuePageU1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="RevenuePageU1Iterator" id="RevenuePageU1" ChangeEventPolicy="ppr">
+      <nodeDefinition DefName="model.customer.UVO.RevenuePageUVO" Name="RevenuePageU1">
+        <AttrNames>
+          <Item Value="QuarterNumber"/>
+          <Item Value="Revenue"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

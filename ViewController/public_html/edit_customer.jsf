@@ -7,6 +7,8 @@
             <af:panelGroupLayout id="pgl1" binding="#{backingBeanScope.backing_edit_customer.pgl1}"
                                  inlineStyle="padding:2%; background-color:#fff;">
                 <af:outputText value="Edit Details" id="ot1" binding="#{backingBeanScope.backing_edit_customer.ot1}"/>
+                <af:link text="back" id="l1" binding="#{backingBeanScope.backing_edit_customer.l1}"
+                         action="return_edit_customer"/>
                 <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.backing_edit_customer.pfl1}">
                     <af:inputText value="#{bindings.Ceo.inputValue}" label="CEO"
                                   required="#{bindings.Ceo.hints.mandatory}"

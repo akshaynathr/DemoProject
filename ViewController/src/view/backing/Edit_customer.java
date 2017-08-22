@@ -5,6 +5,7 @@ import oracle.adf.view.rich.component.rich.input.RichInputText;
 import oracle.adf.view.rich.component.rich.layout.RichPanelFormLayout;
 import oracle.adf.view.rich.component.rich.layout.RichPanelGroupLayout;
 import oracle.adf.view.rich.component.rich.nav.RichButton;
+import oracle.adf.view.rich.component.rich.nav.RichLink;
 import oracle.adf.view.rich.component.rich.output.RichMessages;
 
 import oracle.adf.view.rich.component.rich.output.RichOutputText;
@@ -30,6 +31,7 @@ public class Edit_customer {
     private RichInputText it13;
     private RichInputText it14;
     private RichButton b1;
+    private RichLink l1;
 
 
     public void setM1(RichMessages m1) {
@@ -185,5 +187,13 @@ public class Edit_customer {
 
     public RichButton getB1() {
         return b1;
+    }
+
+    public void setL1(RichLink l1) {
+        this.l1 = l1;
+    }
+
+    public RichLink getL1() {
+        return l1;
     }
 }

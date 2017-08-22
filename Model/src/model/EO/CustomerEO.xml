@@ -24,7 +24,8 @@
     IsUpdateable="false"
     DefaultValue="@0"
     Domain="oracle.jbo.domain.DBSequence"
-    RetrievedOnInsert="true"/>
+    RetrievedOnInsert="true"
+    IsQueriable="false"/>
   <Attribute
     Name="CustomerName"
     Precision="50"
@@ -62,7 +63,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="CUSTOMERS">
+    TableName="CUSTOMERS"
+    IsQueriable="false">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="200"/>
     </DesignTime>
@@ -86,7 +88,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="CUSTOMERS">
+    TableName="CUSTOMERS"
+    IsQueriable="false">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
@@ -99,7 +102,8 @@
     SQLType="NUMERIC"
     Type="java.lang.Long"
     ColumnType="NUMBER"
-    TableName="CUSTOMERS"/>
+    TableName="CUSTOMERS"
+    IsQueriable="false"/>
   <Attribute
     Name="Fax"
     Precision="10"
@@ -108,7 +112,8 @@
     SQLType="NUMERIC"
     Type="java.lang.Long"
     ColumnType="NUMBER"
-    TableName="CUSTOMERS"/>
+    TableName="CUSTOMERS"
+    IsQueriable="false"/>
   <Attribute
     Name="Email"
     Precision="50"
@@ -116,7 +121,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="CUSTOMERS">
+    TableName="CUSTOMERS"
+    IsQueriable="false">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
@@ -136,7 +142,8 @@
     SQLType="NUMERIC"
     Type="java.lang.Long"
     ColumnType="NUMBER"
-    TableName="CUSTOMERS"/>
+    TableName="CUSTOMERS"
+    IsQueriable="false"/>
   <Attribute
     Name="ShippingAddressId"
     Precision="10"
@@ -154,7 +161,8 @@
     Type="java.lang.String"
     ColumnType="VARCHAR2"
     TableName="CUSTOMERS"
-    IsUpdateable="while_insert">
+    IsUpdateable="while_insert"
+    IsQueriable="false">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
@@ -166,7 +174,8 @@
     Type="java.sql.Timestamp"
     ColumnType="TIMESTAMP"
     TableName="CUSTOMERS"
-    IsUpdateable="while_insert"/>
+    IsUpdateable="while_insert"
+    IsQueriable="false"/>
   <Attribute
     Name="LastUpdatedBy"
     Precision="50"
@@ -174,7 +183,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="CUSTOMERS">
+    TableName="CUSTOMERS"
+    IsQueriable="false">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
@@ -185,7 +195,8 @@
     SQLType="TIMESTAMP"
     Type="java.sql.Timestamp"
     ColumnType="TIMESTAMP"
-    TableName="CUSTOMERS"/>
+    TableName="CUSTOMERS"
+    IsQueriable="false"/>
   <Attribute
     Name="VersionNo"
     Precision="10"
@@ -194,7 +205,8 @@
     SQLType="NUMERIC"
     Type="java.lang.Long"
     ColumnType="NUMBER"
-    TableName="CUSTOMERS"/>
+    TableName="CUSTOMERS"
+    IsQueriable="false"/>
   <Attribute
     Name="IsActive"
     Precision="1"
@@ -205,7 +217,8 @@
     TableName="CUSTOMERS"
     RetrievedOnUpdate="true"
     RetrievedOnInsert="true"
-    DefaultValue="y">
+    DefaultValue="y"
+    IsQueriable="false">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>

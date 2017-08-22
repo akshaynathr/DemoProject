@@ -44,28 +44,32 @@
     PrecisionRule="true"
     EntityAttrName="Ceo"
     EntityUsage="CustomerEO"
-    AliasName="CEO"/>
+    AliasName="CEO"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="CustomerId"
     IsUpdateable="false"
     PrecisionRule="true"
     EntityAttrName="CustomerId"
     EntityUsage="CustomerEO"
-    AliasName="CUSTOMER_ID"/>
+    AliasName="CUSTOMER_ID"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="CreatedBy"
     IsUpdateable="while_insert"
     PrecisionRule="true"
     EntityAttrName="CreatedBy"
     EntityUsage="CustomerEO"
-    AliasName="CREATED_BY"/>
+    AliasName="CREATED_BY"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="CreatedOn"
     IsUpdateable="while_insert"
     PrecisionRule="true"
     EntityAttrName="CreatedOn"
     EntityUsage="CustomerEO"
-    AliasName="CREATED_ON"/>
+    AliasName="CREATED_ON"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="CustomerName"
     PrecisionRule="true"
@@ -83,37 +87,43 @@
     PrecisionRule="true"
     EntityAttrName="Email"
     EntityUsage="CustomerEO"
-    AliasName="EMAIL"/>
+    AliasName="EMAIL"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Fax"
     PrecisionRule="true"
     EntityAttrName="Fax"
     EntityUsage="CustomerEO"
-    AliasName="FAX"/>
+    AliasName="FAX"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="IsActive"
     PrecisionRule="true"
     EntityAttrName="IsActive"
     EntityUsage="CustomerEO"
-    AliasName="IS_ACTIVE"/>
+    AliasName="IS_ACTIVE"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="LastUpdatedBy"
     PrecisionRule="true"
     EntityAttrName="LastUpdatedBy"
     EntityUsage="CustomerEO"
-    AliasName="LAST_UPDATED_BY"/>
+    AliasName="LAST_UPDATED_BY"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="LastUpdatedOn"
     PrecisionRule="true"
     EntityAttrName="LastUpdatedOn"
     EntityUsage="CustomerEO"
-    AliasName="LAST_UPDATED_ON"/>
+    AliasName="LAST_UPDATED_ON"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="NoOfEmployees"
     PrecisionRule="true"
     EntityAttrName="NoOfEmployees"
     EntityUsage="CustomerEO"
-    AliasName="NO_OF_EMPLOYEES"/>
+    AliasName="NO_OF_EMPLOYEES"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="ParentCompany"
     PrecisionRule="true"
@@ -125,13 +135,15 @@
     PrecisionRule="true"
     EntityAttrName="PrimaryAddressId"
     EntityUsage="CustomerEO"
-    AliasName="PRIMARY_ADDRESS_ID"/>
+    AliasName="PRIMARY_ADDRESS_ID"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="PrimaryContactId"
     PrecisionRule="true"
     EntityAttrName="PrimaryContactId"
     EntityUsage="CustomerEO"
-    AliasName="PRIMARY_CONTACT_ID"/>
+    AliasName="PRIMARY_CONTACT_ID"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="ShippingAddressId"
     PrecisionRule="true"
@@ -143,13 +155,15 @@
     PrecisionRule="true"
     EntityAttrName="Url"
     EntityUsage="CustomerEO"
-    AliasName="URL"/>
+    AliasName="URL"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="VersionNo"
     PrecisionRule="true"
     EntityAttrName="VersionNo"
     EntityUsage="CustomerEO"
-    AliasName="VERSION_NO"/>
+    AliasName="VERSION_NO"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="AddressId"
     IsUpdateable="while_insert"

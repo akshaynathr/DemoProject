@@ -7,8 +7,7 @@
               <af:panelStretchLayout id="psl1">
         <f:facet name="center">
           <af:panelGroupLayout id="pgl1" layout="vertical" inlineStyle="padding:2%;">
-            <af:link text="back" id="l1"/>
-            <af:outputText value="#{pageFlowScope.custId}" id="ot2"/>
+            <af:outputText value="#{pageFlowScope.custId}" id="ot2" rendered="false"/>
             <af:panelTabbed position="start" id="pt1">
               <af:showDetailItem id="tab1" text="Details" icon="/icons/OPPURTUNITY(1).png">
                 <af:panelGroupLayout layout="vertical" id="pgl3">
@@ -16,9 +15,8 @@
                     <af:outputText value="Customer Details" id="ot1"
                                    inlineStyle="font-weight:bold; color:Black; font-size:large;"/>
                     <af:button text="Edit" id="b1" action="edit_customer"/>
-                    <af:button text="Save " id="b2"/>
-                    <af:button text="Save and Close" id="b3" action="return"/>
-                    <af:button text="Close" id="b4"/>
+                    <af:button text="Save " id="b2" rendered="false"/>
+                    <af:button text="Close" id="b4" action="return"/>
                   </af:toolbar>
                   <af:panelFormLayout id="pfl1">
                     <af:panelGroupLayout id="pgl4" layout="horizontal">

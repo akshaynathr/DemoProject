@@ -130,7 +130,8 @@
     EntityAttrName="PrimaryContactId"
     EntityUsage="CustomerEO"
     AliasName="PRIMARY_CONTACT_ID"
-    LOVName="LOV_PrimaryContactId">
+    LOVName="LOV_PrimaryContactId"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE
@@ -159,7 +160,8 @@
     PrecisionRule="true"
     EntityAttrName="Ceo"
     EntityUsage="CustomerEO"
-    AliasName="CEO">
+    AliasName="CEO"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
@@ -193,7 +195,8 @@
     PrecisionRule="true"
     EntityAttrName="Email"
     EntityUsage="CustomerEO"
-    AliasName="EMAIL"/>
+    AliasName="EMAIL"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="PrimaryAddressId"
     PrecisionRule="true"
@@ -267,7 +270,8 @@
     EntityAttrName="IsActive"
     EntityUsage="CustomerEO"
     AliasName="IS_ACTIVE"
-    DefaultValue="y">
+    DefaultValue="y"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <LABEL

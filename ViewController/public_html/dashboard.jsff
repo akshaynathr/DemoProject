@@ -16,10 +16,7 @@
           <af:image source="#{resource['images:Team.png']}" id="i1"/>
           <af:spacer width="10" height="10" id="s3"/>
           <af:panelGroupLayout id="pgl20" layout="vertical">
-            <af:panelGroupLayout id="pgl4" layout="vertical">
-              <af:outputText value="Directs" id="ot4"/>
-              <af:outputText value="35" id="ot3" inlineStyle="font-weight:bolder; font-size:xx-large; color:#4a85c5;"/>
-            </af:panelGroupLayout>
+            <af:panelGroupLayout id="pgl4" layout="vertical"/>
             <af:panelGroupLayout id="pgl5" layout="vertical">
               <af:outputText value="Team" id="ot5"/>
               <af:outputText value="130" id="ot6" inlineStyle="font-weight:bolder; font-size:xx-large; color:#ABEBD9;"/>
