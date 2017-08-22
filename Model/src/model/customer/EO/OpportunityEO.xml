@@ -391,6 +391,15 @@
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
   </Attribute>
+  <Attribute
+    Name="QuarterNo"
+    Precision="1"
+    Scale="0"
+    ColumnName="QUARTER_NO"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="OPPORTUNITIES"/>
   <AccessorAttribute
     Name="OpportunityDoc"
     Association="model.customer.EO.OpportunityDocsLinkASSOC"

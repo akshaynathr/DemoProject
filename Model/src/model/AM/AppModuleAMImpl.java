@@ -688,7 +688,13 @@ public class AppModuleAMImpl extends ApplicationModuleImpl {
         return (ViewLinkImpl) findViewLink("OpportunityDashBoardUserVL");
     }
 
-   
-    
+
+    /**
+     * Container's getter for RevenueItem1.
+     * @return RevenueItem1
+     */
+    public ViewObjectImpl getRevenueItem1() {
+        return (ViewObjectImpl) findViewObject("RevenueItem1");
+    }
 }
 

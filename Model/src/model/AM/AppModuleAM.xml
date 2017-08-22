@@ -212,6 +212,9 @@
   <ViewUsage
     Name="AddressU2"
     ViewObjectName="model.UVO.AddressUVO"/>
+  <ViewUsage
+    Name="RevenueItem1"
+    ViewObjectName="model.RVO.RevenueItemVO"/>
   <ViewLinkUsage
     Name="UsersFk1VL1"
     ViewLinkObjectName="model.UVO.UsersFk1VL"
