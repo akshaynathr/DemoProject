@@ -15,7 +15,7 @@
       <property
          name="description">&lt;html>&lt;p>&lt;b>oppurtunity_tab&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">77.5459</property>
+         name="y">71.58594</property>
       <property
          name="page">/oppurtunity_tab.jsf</property>
       <property
@@ -44,6 +44,6 @@
       <property
          name="fromOutcome">return</property>
       <property
-         name="sdm:polyPoints">R50,297.0,77.19531,560.0,90.5459,L50</property>
+         name="sdm:polyPoints">R50,297.0,71.23535,560.0,90.5459,L50</property>
    </ControlFlowCase>
 </SDM>
