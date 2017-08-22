@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AddressEO"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="ADDRESS"
+  AliasName="AddressEO"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="AddressId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="ADDRESS_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="ADDRESS"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="House"
+    Precision="50"
+    ColumnName="HOUSE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ADDRESS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Street"
+    Precision="50"
+    ColumnName="STREET"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ADDRESS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Locality"
+    Precision="50"
+    ColumnName="LOCALITY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ADDRESS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="City"
+    Precision="50"
+    ColumnName="CITY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ADDRESS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Pincode"
+    Precision="10"
+    Scale="0"
+    ColumnName="PINCODE"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="ADDRESS"/>
+  <Attribute
+    Name="State"
+    Precision="50"
+    ColumnName="STATE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ADDRESS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Country"
+    Precision="50"
+    ColumnName="COUNTRY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ADDRESS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="Contacts"
+    Association="model.master.ContactsAddressASSOC"
+    AssociationEnd="model.master.ContactsAddressASSOC.Contacts"
+    AssociationOtherEnd="model.master.ContactsAddressASSOC.Address"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Customers"
+    Association="model.master.CustomersFk2ASSOC"
+    AssociationEnd="model.master.CustomersFk2ASSOC.Customers"
+    AssociationOtherEnd="model.master.CustomersFk2ASSOC.Address"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Customers1"
+    Association="model.master.CustomersFk3ASSOC"
+    AssociationEnd="model.master.CustomersFk3ASSOC.Customers1"
+    AssociationOtherEnd="model.master.CustomersFk3ASSOC.Address1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="AddressPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="ADDRESS_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.master.AddressEO.AddressId"/>
+    </AttrArray>
+  </Key>
+</Entity>

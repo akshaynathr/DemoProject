@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="CustomersEO"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="CUSTOMERS"
+  AliasName="CustomersEO"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="CustomerId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="CUSTOMER_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="CUSTOMERS"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="CustomerName"
+    Precision="50"
+    ColumnName="CUSTOMER_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="CUSTOMERS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CustomerTypeId"
+    Precision="10"
+    Scale="0"
+    ColumnName="CUSTOMER_TYPE_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="CUSTOMERS"/>
+  <Attribute
+    Name="PrimaryContactId"
+    Precision="10"
+    Scale="0"
+    ColumnName="PRIMARY_CONTACT_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="CUSTOMERS"/>
+  <Attribute
+    Name="Url"
+    Precision="200"
+    ColumnName="URL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="CUSTOMERS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ParentCompany"
+    Precision="50"
+    ColumnName="PARENT_COMPANY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="CUSTOMERS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Ceo"
+    Precision="50"
+    ColumnName="CEO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="CUSTOMERS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="NoOfEmployees"
+    Precision="10"
+    Scale="0"
+    ColumnName="NO_OF_EMPLOYEES"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="CUSTOMERS"/>
+  <Attribute
+    Name="Fax"
+    Precision="10"
+    Scale="0"
+    ColumnName="FAX"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="CUSTOMERS"/>
+  <Attribute
+    Name="Email"
+    Precision="50"
+    ColumnName="EMAIL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="CUSTOMERS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="PrimaryAddressId"
+    Precision="10"
+    Scale="0"
+    ColumnName="PRIMARY_ADDRESS_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="CUSTOMERS"/>
+  <Attribute
+    Name="ShippingAddressId"
+    Precision="10"
+    Scale="0"
+    ColumnName="SHIPPING_ADDRESS_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="CUSTOMERS"/>
+  <Attribute
+    Name="CreatedBy"
+    Precision="50"
+    ColumnName="CREATED_BY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="CUSTOMERS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CreatedOn"
+    ColumnName="CREATED_ON"
+    SQLType="TIMESTAMP"
+    Type="java.sql.Timestamp"
+    ColumnType="TIMESTAMP"
+    TableName="CUSTOMERS"/>
+  <Attribute
+    Name="LastUpdatedBy"
+    Precision="50"
+    ColumnName="LAST_UPDATED_BY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="CUSTOMERS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LastUpdatedOn"
+    ColumnName="LAST_UPDATED_ON"
+    SQLType="TIMESTAMP"
+    Type="java.sql.Timestamp"
+    ColumnType="TIMESTAMP"
+    TableName="CUSTOMERS"/>
+  <Attribute
+    Name="VersionNo"
+    Precision="10"
+    Scale="0"
+    ColumnName="VERSION_NO"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="CUSTOMERS"/>
+  <Attribute
+    Name="IsActive"
+    Precision="1"
+    ColumnName="IS_ACTIVE"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="CUSTOMERS"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="Contacts"
+    Association="model.master.CustomersFk1ASSOC"
+    AssociationEnd="model.master.CustomersFk1ASSOC.Contacts"
+    AssociationOtherEnd="model.master.CustomersFk1ASSOC.Customers"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Address"
+    Association="model.master.CustomersFk2ASSOC"
+    AssociationEnd="model.master.CustomersFk2ASSOC.Address"
+    AssociationOtherEnd="model.master.CustomersFk2ASSOC.Customers"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Address1"
+    Association="model.master.CustomersFk3ASSOC"
+    AssociationEnd="model.master.CustomersFk3ASSOC.Address1"
+    AssociationOtherEnd="model.master.CustomersFk3ASSOC.Customers1"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="CustomersContacts"
+    Association="model.master.CustomersContactsFk1ASSOC"
+    AssociationEnd="model.master.CustomersContactsFk1ASSOC.CustomersContacts"
+    AssociationOtherEnd="model.master.CustomersContactsFk1ASSOC.Customers"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="CustomersPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="CUSTOMERS_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.master.CustomersEO.CustomerId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="CustomersFk1">
+    <DesignTime>
+      <Attr Name="_isDisabledConstraint" Value="true"/>
+      <Attr Name="_referencedKey" Value="CONTACTS_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="CUSTOMERS_FK1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.master.CustomersEO.PrimaryContactId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="CustomersFk2">
+    <DesignTime>
+      <Attr Name="_isDisabledConstraint" Value="true"/>
+      <Attr Name="_referencedKey" Value="ADDRESS_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="CUSTOMERS_FK2"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.master.CustomersEO.ShippingAddressId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="CustomersFk3">
+    <DesignTime>
+      <Attr Name="_isDisabledConstraint" Value="true"/>
+      <Attr Name="_referencedKey" Value="ADDRESS_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="CUSTOMERS_FK3"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.master.CustomersEO.PrimaryAddressId"/>
+    </AttrArray>
+  </Key>
+</Entity>
