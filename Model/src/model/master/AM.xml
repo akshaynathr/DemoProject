@@ -37,6 +37,9 @@
   <ViewUsage
     Name="CustomersContacts3"
     ViewObjectName="model.master.CustomersContactsVO"/>
+  <ViewUsage
+    Name="MasterTable1"
+    ViewObjectName="model.master.MasterTableVO"/>
   <ViewLinkUsage
     Name="ContactsAddressVL1"
     ViewLinkObjectName="model.master.ContactsAddressVL"

@@ -20,7 +20,8 @@
     Type="java.lang.Long"
     ColumnType="NUMBER"
     TableName="CUSTOMERS_CONTACTS"
-    PrimaryKey="true"/>
+    PrimaryKey="true"
+    DefaultValue="0"/>
   <Attribute
     Name="ContactId"
     IsNotNull="true"
@@ -31,7 +32,8 @@
     Type="java.lang.Long"
     ColumnType="NUMBER"
     TableName="CUSTOMERS_CONTACTS"
-    PrimaryKey="true"/>
+    PrimaryKey="true"
+    DefaultValue="0"/>
   <AccessorAttribute
     Name="Customers"
     Association="model.master.CustomersContactsFk1ASSOC"

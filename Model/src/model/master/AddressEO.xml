@@ -20,7 +20,12 @@
     Type="java.lang.Long"
     ColumnType="NUMBER"
     TableName="ADDRESS"
-    PrimaryKey="true"/>
+    PrimaryKey="true">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="untrusted"
+      CodeSourceName="AddressEORow"/>
+  </Attribute>
   <Attribute
     Name="House"
     Precision="50"

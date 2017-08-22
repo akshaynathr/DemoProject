@@ -1,0 +1,12 @@
+//Groovy Scripts for model.master.CustomersEO
+
+package model.master
+
+import oracle.jbo.script.annotation.TransientValueExpression;
+
+@TransientValueExpression(attributeName="CustomerId")
+def CustomerId_ExpressionScript_Expression()
+{
+(new oracle.jbo.server.SequenceImpl("CUSTOMERS_SEQ", adf.object.getDBTransaction())).getSequenceNumber()
+}
+

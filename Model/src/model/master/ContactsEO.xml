@@ -20,7 +20,12 @@
     Type="java.lang.Long"
     ColumnType="NUMBER"
     TableName="CONTACTS"
-    PrimaryKey="true"/>
+    PrimaryKey="true">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="untrusted"
+      CodeSourceName="ContactsEORow"/>
+  </Attribute>
   <Attribute
     Name="FirstName"
     Precision="50"
