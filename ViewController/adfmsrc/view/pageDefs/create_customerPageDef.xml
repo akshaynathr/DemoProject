@@ -7,11 +7,6 @@
     <iterator Binds="MasterTable1" RangeSize="25" DataControl="AMDataControl" id="MasterTable1Iterator"/>
   </executables>
   <bindings>
-    <attributeValues IterBinding="MasterTable1Iterator" id="CustomerId">
-      <AttrNames>
-        <Item Value="CustomerId"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="MasterTable1Iterator" id="CustomerName">
       <AttrNames>
         <Item Value="CustomerName"/>
@@ -20,11 +15,6 @@
     <attributeValues IterBinding="MasterTable1Iterator" id="CustomerTypeId">
       <AttrNames>
         <Item Value="CustomerTypeId"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="MasterTable1Iterator" id="PrimaryContactId">
-      <AttrNames>
-        <Item Value="PrimaryContactId"/>
       </AttrNames>
     </attributeValues>
     <attributeValues IterBinding="MasterTable1Iterator" id="Url">
@@ -57,51 +47,6 @@
         <Item Value="Email"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="MasterTable1Iterator" id="PrimaryAddressId">
-      <AttrNames>
-        <Item Value="PrimaryAddressId"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="MasterTable1Iterator" id="ShippingAddressId">
-      <AttrNames>
-        <Item Value="ShippingAddressId"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="MasterTable1Iterator" id="CreatedBy">
-      <AttrNames>
-        <Item Value="CreatedBy"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="MasterTable1Iterator" id="CreatedOn">
-      <AttrNames>
-        <Item Value="CreatedOn"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="MasterTable1Iterator" id="LastUpdatedBy">
-      <AttrNames>
-        <Item Value="LastUpdatedBy"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="MasterTable1Iterator" id="LastUpdatedOn">
-      <AttrNames>
-        <Item Value="LastUpdatedOn"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="MasterTable1Iterator" id="VersionNo">
-      <AttrNames>
-        <Item Value="VersionNo"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="MasterTable1Iterator" id="IsActive">
-      <AttrNames>
-        <Item Value="IsActive"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="MasterTable1Iterator" id="ContactId">
-      <AttrNames>
-        <Item Value="ContactId"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="MasterTable1Iterator" id="FirstName">
       <AttrNames>
         <Item Value="FirstName"/>
@@ -132,11 +77,6 @@
         <Item Value="MobilePhone"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="MasterTable1Iterator" id="AddressId">
-      <AttrNames>
-        <Item Value="AddressId"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="MasterTable1Iterator" id="BuyingRoleId">
       <AttrNames>
         <Item Value="BuyingRoleId"/>
@@ -150,41 +90,6 @@
     <attributeValues IterBinding="MasterTable1Iterator" id="InfluenceLevelId">
       <AttrNames>
         <Item Value="InfluenceLevelId"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="MasterTable1Iterator" id="CreatedBy1">
-      <AttrNames>
-        <Item Value="CreatedBy1"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="MasterTable1Iterator" id="CreatedOn1">
-      <AttrNames>
-        <Item Value="CreatedOn1"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="MasterTable1Iterator" id="LastUpdatedBy1">
-      <AttrNames>
-        <Item Value="LastUpdatedBy1"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="MasterTable1Iterator" id="LastUpdatedOn1">
-      <AttrNames>
-        <Item Value="LastUpdatedOn1"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="MasterTable1Iterator" id="VersionNo1">
-      <AttrNames>
-        <Item Value="VersionNo1"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="MasterTable1Iterator" id="IsActive1">
-      <AttrNames>
-        <Item Value="IsActive1"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="MasterTable1Iterator" id="AddressId1">
-      <AttrNames>
-        <Item Value="AddressId1"/>
       </AttrNames>
     </attributeValues>
     <attributeValues IterBinding="MasterTable1Iterator" id="House">
@@ -220,16 +125,6 @@
     <attributeValues IterBinding="MasterTable1Iterator" id="Country">
       <AttrNames>
         <Item Value="Country"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="MasterTable1Iterator" id="CustomerId1">
-      <AttrNames>
-        <Item Value="CustomerId1"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="MasterTable1Iterator" id="ContactId1">
-      <AttrNames>
-        <Item Value="ContactId1"/>
       </AttrNames>
     </attributeValues>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AMDataControl"/>

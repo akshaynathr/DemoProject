@@ -11,15 +11,6 @@
         <f:facet name="bottom"/>
         <f:facet name="center">
           <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.NewCustBean.pfl1}">
-            <af:inputText value="#{bindings.CustomerId.inputValue}" label="#{bindings.CustomerId.hints.label}"
-                          required="#{bindings.CustomerId.hints.mandatory}"
-                          columns="#{bindings.CustomerId.hints.displayWidth}"
-                          maximumLength="#{bindings.CustomerId.hints.precision}"
-                          shortDesc="#{bindings.CustomerId.hints.tooltip}" id="it1"
-                          binding="#{backingBeanScope.NewCustBean.it1}">
-              <f:validator binding="#{bindings.CustomerId.validator}"/>
-              <af:convertNumber groupingUsed="false" pattern="#{bindings.CustomerId.format}"/>
-            </af:inputText>
             <af:inputText value="#{bindings.CustomerName.inputValue}" label="#{bindings.CustomerName.hints.label}"
                           required="#{bindings.CustomerName.hints.mandatory}"
                           columns="#{bindings.CustomerName.hints.displayWidth}"
@@ -36,16 +27,6 @@
                           binding="#{backingBeanScope.NewCustBean.it3}">
               <f:validator binding="#{bindings.CustomerTypeId.validator}"/>
               <af:convertNumber groupingUsed="false" pattern="#{bindings.CustomerTypeId.format}"/>
-            </af:inputText>
-            <af:inputText value="#{bindings.PrimaryContactId.inputValue}"
-                          label="#{bindings.PrimaryContactId.hints.label}"
-                          required="#{bindings.PrimaryContactId.hints.mandatory}"
-                          columns="#{bindings.PrimaryContactId.hints.displayWidth}"
-                          maximumLength="#{bindings.PrimaryContactId.hints.precision}"
-                          shortDesc="#{bindings.PrimaryContactId.hints.tooltip}" id="it4"
-                          binding="#{backingBeanScope.NewCustBean.it4}">
-              <f:validator binding="#{bindings.PrimaryContactId.validator}"/>
-              <af:convertNumber groupingUsed="false" pattern="#{bindings.PrimaryContactId.format}"/>
             </af:inputText>
             <af:inputText value="#{bindings.Url.inputValue}" label="#{bindings.Url.hints.label}"
                           required="#{bindings.Url.hints.mandatory}" columns="#{bindings.Url.hints.displayWidth}"
@@ -88,84 +69,6 @@
                           maximumLength="#{bindings.Email.hints.precision}" shortDesc="#{bindings.Email.hints.tooltip}"
                           id="it10" binding="#{backingBeanScope.NewCustBean.it10}">
               <f:validator binding="#{bindings.Email.validator}"/>
-            </af:inputText>
-            <af:inputText value="#{bindings.PrimaryAddressId.inputValue}"
-                          label="#{bindings.PrimaryAddressId.hints.label}"
-                          required="#{bindings.PrimaryAddressId.hints.mandatory}"
-                          columns="#{bindings.PrimaryAddressId.hints.displayWidth}"
-                          maximumLength="#{bindings.PrimaryAddressId.hints.precision}"
-                          shortDesc="#{bindings.PrimaryAddressId.hints.tooltip}" id="it11"
-                          binding="#{backingBeanScope.NewCustBean.it11}">
-              <f:validator binding="#{bindings.PrimaryAddressId.validator}"/>
-              <af:convertNumber groupingUsed="false" pattern="#{bindings.PrimaryAddressId.format}"/>
-            </af:inputText>
-            <af:inputText value="#{bindings.ShippingAddressId.inputValue}"
-                          label="#{bindings.ShippingAddressId.hints.label}"
-                          required="#{bindings.ShippingAddressId.hints.mandatory}"
-                          columns="#{bindings.ShippingAddressId.hints.displayWidth}"
-                          maximumLength="#{bindings.ShippingAddressId.hints.precision}"
-                          shortDesc="#{bindings.ShippingAddressId.hints.tooltip}" id="it12"
-                          binding="#{backingBeanScope.NewCustBean.it12}">
-              <f:validator binding="#{bindings.ShippingAddressId.validator}"/>
-              <af:convertNumber groupingUsed="false" pattern="#{bindings.ShippingAddressId.format}"/>
-            </af:inputText>
-            <af:inputText value="#{bindings.CreatedBy.inputValue}" label="#{bindings.CreatedBy.hints.label}"
-                          required="#{bindings.CreatedBy.hints.mandatory}"
-                          columns="#{bindings.CreatedBy.hints.displayWidth}"
-                          maximumLength="#{bindings.CreatedBy.hints.precision}"
-                          shortDesc="#{bindings.CreatedBy.hints.tooltip}" id="it13"
-                          binding="#{backingBeanScope.NewCustBean.it13}">
-              <f:validator binding="#{bindings.CreatedBy.validator}"/>
-            </af:inputText>
-            <af:inputDate value="#{bindings.CreatedOn.inputValue}" label="#{bindings.CreatedOn.hints.label}"
-                          required="#{bindings.CreatedOn.hints.mandatory}"
-                          columns="#{bindings.CreatedOn.hints.displayWidth}"
-                          shortDesc="#{bindings.CreatedOn.hints.tooltip}" id="id1"
-                          binding="#{backingBeanScope.NewCustBean.id1}">
-              <f:validator binding="#{bindings.CreatedOn.validator}"/>
-              <af:convertDateTime pattern="#{bindings.CreatedOn.format}"/>
-            </af:inputDate>
-            <af:inputText value="#{bindings.LastUpdatedBy.inputValue}" label="#{bindings.LastUpdatedBy.hints.label}"
-                          required="#{bindings.LastUpdatedBy.hints.mandatory}"
-                          columns="#{bindings.LastUpdatedBy.hints.displayWidth}"
-                          maximumLength="#{bindings.LastUpdatedBy.hints.precision}"
-                          shortDesc="#{bindings.LastUpdatedBy.hints.tooltip}" id="it14"
-                          binding="#{backingBeanScope.NewCustBean.it14}">
-              <f:validator binding="#{bindings.LastUpdatedBy.validator}"/>
-            </af:inputText>
-            <af:inputDate value="#{bindings.LastUpdatedOn.inputValue}" label="#{bindings.LastUpdatedOn.hints.label}"
-                          required="#{bindings.LastUpdatedOn.hints.mandatory}"
-                          columns="#{bindings.LastUpdatedOn.hints.displayWidth}"
-                          shortDesc="#{bindings.LastUpdatedOn.hints.tooltip}" id="id2"
-                          binding="#{backingBeanScope.NewCustBean.id2}">
-              <f:validator binding="#{bindings.LastUpdatedOn.validator}"/>
-              <af:convertDateTime pattern="#{bindings.LastUpdatedOn.format}"/>
-            </af:inputDate>
-            <af:inputText value="#{bindings.VersionNo.inputValue}" label="#{bindings.VersionNo.hints.label}"
-                          required="#{bindings.VersionNo.hints.mandatory}"
-                          columns="#{bindings.VersionNo.hints.displayWidth}"
-                          maximumLength="#{bindings.VersionNo.hints.precision}"
-                          shortDesc="#{bindings.VersionNo.hints.tooltip}" id="it15"
-                          binding="#{backingBeanScope.NewCustBean.it15}">
-              <f:validator binding="#{bindings.VersionNo.validator}"/>
-              <af:convertNumber groupingUsed="false" pattern="#{bindings.VersionNo.format}"/>
-            </af:inputText>
-            <af:inputText value="#{bindings.IsActive.inputValue}" label="#{bindings.IsActive.hints.label}"
-                          required="#{bindings.IsActive.hints.mandatory}"
-                          columns="#{bindings.IsActive.hints.displayWidth}"
-                          maximumLength="#{bindings.IsActive.hints.precision}"
-                          shortDesc="#{bindings.IsActive.hints.tooltip}" id="it16"
-                          binding="#{backingBeanScope.NewCustBean.it16}">
-              <f:validator binding="#{bindings.IsActive.validator}"/>
-            </af:inputText>
-            <af:inputText value="#{bindings.ContactId.inputValue}" label="#{bindings.ContactId.hints.label}"
-                          required="#{bindings.ContactId.hints.mandatory}"
-                          columns="#{bindings.ContactId.hints.displayWidth}"
-                          maximumLength="#{bindings.ContactId.hints.precision}"
-                          shortDesc="#{bindings.ContactId.hints.tooltip}" id="it17"
-                          binding="#{backingBeanScope.NewCustBean.it17}">
-              <f:validator binding="#{bindings.ContactId.validator}"/>
-              <af:convertNumber groupingUsed="false" pattern="#{bindings.ContactId.format}"/>
             </af:inputText>
             <af:inputText value="#{bindings.FirstName.inputValue}" label="#{bindings.FirstName.hints.label}"
                           required="#{bindings.FirstName.hints.mandatory}"
@@ -216,15 +119,6 @@
               <f:validator binding="#{bindings.MobilePhone.validator}"/>
               <af:convertNumber groupingUsed="false" pattern="#{bindings.MobilePhone.format}"/>
             </af:inputText>
-            <af:inputText value="#{bindings.AddressId.inputValue}" label="#{bindings.AddressId.hints.label}"
-                          required="#{bindings.AddressId.hints.mandatory}"
-                          columns="#{bindings.AddressId.hints.displayWidth}"
-                          maximumLength="#{bindings.AddressId.hints.precision}"
-                          shortDesc="#{bindings.AddressId.hints.tooltip}" id="it24"
-                          binding="#{backingBeanScope.NewCustBean.it24}">
-              <f:validator binding="#{bindings.AddressId.validator}"/>
-              <af:convertNumber groupingUsed="false" pattern="#{bindings.AddressId.format}"/>
-            </af:inputText>
             <af:inputText value="#{bindings.BuyingRoleId.inputValue}" label="#{bindings.BuyingRoleId.hints.label}"
                           required="#{bindings.BuyingRoleId.hints.mandatory}"
                           columns="#{bindings.BuyingRoleId.hints.displayWidth}"
@@ -253,64 +147,6 @@
                           binding="#{backingBeanScope.NewCustBean.it27}">
               <f:validator binding="#{bindings.InfluenceLevelId.validator}"/>
               <af:convertNumber groupingUsed="false" pattern="#{bindings.InfluenceLevelId.format}"/>
-            </af:inputText>
-            <af:inputText value="#{bindings.CreatedBy1.inputValue}" label="#{bindings.CreatedBy1.hints.label}"
-                          required="#{bindings.CreatedBy1.hints.mandatory}"
-                          columns="#{bindings.CreatedBy1.hints.displayWidth}"
-                          maximumLength="#{bindings.CreatedBy1.hints.precision}"
-                          shortDesc="#{bindings.CreatedBy1.hints.tooltip}" id="it28"
-                          binding="#{backingBeanScope.NewCustBean.it28}">
-              <f:validator binding="#{bindings.CreatedBy1.validator}"/>
-            </af:inputText>
-            <af:inputDate value="#{bindings.CreatedOn1.inputValue}" label="#{bindings.CreatedOn1.hints.label}"
-                          required="#{bindings.CreatedOn1.hints.mandatory}"
-                          columns="#{bindings.CreatedOn1.hints.displayWidth}"
-                          shortDesc="#{bindings.CreatedOn1.hints.tooltip}" id="id3"
-                          binding="#{backingBeanScope.NewCustBean.id3}">
-              <f:validator binding="#{bindings.CreatedOn1.validator}"/>
-              <af:convertDateTime pattern="#{bindings.CreatedOn1.format}"/>
-            </af:inputDate>
-            <af:inputText value="#{bindings.LastUpdatedBy1.inputValue}" label="#{bindings.LastUpdatedBy1.hints.label}"
-                          required="#{bindings.LastUpdatedBy1.hints.mandatory}"
-                          columns="#{bindings.LastUpdatedBy1.hints.displayWidth}"
-                          maximumLength="#{bindings.LastUpdatedBy1.hints.precision}"
-                          shortDesc="#{bindings.LastUpdatedBy1.hints.tooltip}" id="it29"
-                          binding="#{backingBeanScope.NewCustBean.it29}">
-              <f:validator binding="#{bindings.LastUpdatedBy1.validator}"/>
-            </af:inputText>
-            <af:inputDate value="#{bindings.LastUpdatedOn1.inputValue}" label="#{bindings.LastUpdatedOn1.hints.label}"
-                          required="#{bindings.LastUpdatedOn1.hints.mandatory}"
-                          columns="#{bindings.LastUpdatedOn1.hints.displayWidth}"
-                          shortDesc="#{bindings.LastUpdatedOn1.hints.tooltip}" id="id4"
-                          binding="#{backingBeanScope.NewCustBean.id4}">
-              <f:validator binding="#{bindings.LastUpdatedOn1.validator}"/>
-              <af:convertDateTime pattern="#{bindings.LastUpdatedOn1.format}"/>
-            </af:inputDate>
-            <af:inputText value="#{bindings.VersionNo1.inputValue}" label="#{bindings.VersionNo1.hints.label}"
-                          required="#{bindings.VersionNo1.hints.mandatory}"
-                          columns="#{bindings.VersionNo1.hints.displayWidth}"
-                          maximumLength="#{bindings.VersionNo1.hints.precision}"
-                          shortDesc="#{bindings.VersionNo1.hints.tooltip}" id="it30"
-                          binding="#{backingBeanScope.NewCustBean.it30}">
-              <f:validator binding="#{bindings.VersionNo1.validator}"/>
-              <af:convertNumber groupingUsed="false" pattern="#{bindings.VersionNo1.format}"/>
-            </af:inputText>
-            <af:inputText value="#{bindings.IsActive1.inputValue}" label="#{bindings.IsActive1.hints.label}"
-                          required="#{bindings.IsActive1.hints.mandatory}"
-                          columns="#{bindings.IsActive1.hints.displayWidth}"
-                          maximumLength="#{bindings.IsActive1.hints.precision}"
-                          shortDesc="#{bindings.IsActive1.hints.tooltip}" id="it31"
-                          binding="#{backingBeanScope.NewCustBean.it31}">
-              <f:validator binding="#{bindings.IsActive1.validator}"/>
-            </af:inputText>
-            <af:inputText value="#{bindings.AddressId1.inputValue}" label="#{bindings.AddressId1.hints.label}"
-                          required="#{bindings.AddressId1.hints.mandatory}"
-                          columns="#{bindings.AddressId1.hints.displayWidth}"
-                          maximumLength="#{bindings.AddressId1.hints.precision}"
-                          shortDesc="#{bindings.AddressId1.hints.tooltip}" id="it32"
-                          binding="#{backingBeanScope.NewCustBean.it32}">
-              <f:validator binding="#{bindings.AddressId1.validator}"/>
-              <af:convertNumber groupingUsed="false" pattern="#{bindings.AddressId1.format}"/>
             </af:inputText>
             <af:inputText value="#{bindings.House.inputValue}" label="#{bindings.House.hints.label}"
                           required="#{bindings.House.hints.mandatory}" columns="#{bindings.House.hints.displayWidth}"
@@ -361,24 +197,6 @@
                           shortDesc="#{bindings.Country.hints.tooltip}" id="it39"
                           binding="#{backingBeanScope.NewCustBean.it39}">
               <f:validator binding="#{bindings.Country.validator}"/>
-            </af:inputText>
-            <af:inputText value="#{bindings.CustomerId1.inputValue}" label="#{bindings.CustomerId1.hints.label}"
-                          required="#{bindings.CustomerId1.hints.mandatory}"
-                          columns="#{bindings.CustomerId1.hints.displayWidth}"
-                          maximumLength="#{bindings.CustomerId1.hints.precision}"
-                          shortDesc="#{bindings.CustomerId1.hints.tooltip}" id="it40"
-                          binding="#{backingBeanScope.NewCustBean.it40}">
-              <f:validator binding="#{bindings.CustomerId1.validator}"/>
-              <af:convertNumber groupingUsed="false" pattern="#{bindings.CustomerId1.format}"/>
-            </af:inputText>
-            <af:inputText value="#{bindings.ContactId1.inputValue}" label="#{bindings.ContactId1.hints.label}"
-                          required="#{bindings.ContactId1.hints.mandatory}"
-                          columns="#{bindings.ContactId1.hints.displayWidth}"
-                          maximumLength="#{bindings.ContactId1.hints.precision}"
-                          shortDesc="#{bindings.ContactId1.hints.tooltip}" id="it41"
-                          binding="#{backingBeanScope.NewCustBean.it41}">
-              <f:validator binding="#{bindings.ContactId1.validator}"/>
-              <af:convertNumber groupingUsed="false" pattern="#{bindings.ContactId1.format}"/>
             </af:inputText>
           </af:panelFormLayout>
         </f:facet>
