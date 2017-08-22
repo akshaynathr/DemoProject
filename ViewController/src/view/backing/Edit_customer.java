@@ -5,16 +5,12 @@ import oracle.adf.view.rich.component.rich.input.RichInputText;
 import oracle.adf.view.rich.component.rich.layout.RichPanelFormLayout;
 import oracle.adf.view.rich.component.rich.layout.RichPanelGroupLayout;
 import oracle.adf.view.rich.component.rich.nav.RichButton;
-import oracle.adf.view.rich.component.rich.nav.RichLink;
 import oracle.adf.view.rich.component.rich.output.RichMessages;
-
-import oracle.adf.view.rich.component.rich.output.RichOutputText;
 
 
 public class Edit_customer {
     private RichMessages m1;
     private RichPanelGroupLayout pgl1;
-    private RichOutputText ot1;
     private RichPanelFormLayout pfl1;
     private RichInputText it1;
     private RichInputText it2;
@@ -31,7 +27,10 @@ public class Edit_customer {
     private RichInputText it13;
     private RichInputText it14;
     private RichButton b1;
-    private RichLink l1;
+    private RichPanelGroupLayout pgl3;
+    private RichPanelGroupLayout pgl4;
+    private RichPanelGroupLayout pgl2;
+    private RichButton b2;
 
 
     public void setM1(RichMessages m1) {
@@ -49,15 +48,6 @@ public class Edit_customer {
 
     public RichPanelGroupLayout getPgl1() {
         return pgl1;
-    }
-
-
-    public void setOt1(RichOutputText ot1) {
-        this.ot1 = ot1;
-    }
-
-    public RichOutputText getOt1() {
-        return ot1;
     }
 
 
@@ -189,11 +179,38 @@ public class Edit_customer {
         return b1;
     }
 
-    public void setL1(RichLink l1) {
-        this.l1 = l1;
+
+    public void setPgl3(RichPanelGroupLayout pgl3) {
+        this.pgl3 = pgl3;
     }
 
-    public RichLink getL1() {
-        return l1;
+    public RichPanelGroupLayout getPgl3() {
+        return pgl3;
     }
+
+    public void setPgl4(RichPanelGroupLayout pgl4) {
+        this.pgl4 = pgl4;
+    }
+
+    public RichPanelGroupLayout getPgl4() {
+        return pgl4;
+    }
+
+    public void setPgl2(RichPanelGroupLayout pgl2) {
+        this.pgl2 = pgl2;
+    }
+
+    public RichPanelGroupLayout getPgl2() {
+        return pgl2;
+    }
+
+    public void setB2(RichButton b2) {
+        this.b2 = b2;
+    }
+
+    public RichButton getB2() {
+        return b2;
+    }
+
+
 }

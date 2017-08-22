@@ -237,7 +237,7 @@
       <property
          name="fromOutcome">back</property>
       <property
-         name="sdm:polyPoints">B50,137.0,16.896484,305.0,131.44238,L50</property>
+         name="sdm:polyPoints">B56,140.5,16.896484,305.0,127.94238,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -248,5 +248,23 @@
          name="fromOutcome">report_sales_rep</property>
       <property
          name="sdm:polyPoints">L54,302.8411,134.94238,133.5,20.583279,B44</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase22"
+      from="View3">
+      <property
+         name="fromOutcome">create_opportunity</property>
+      <property
+         name="sdm:polyPoints">L46,663.64825,58.695312,487.02832,-12.701172,R54</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase23"
+      to="View3">
+      <property
+         name="fromOutcome">create_opportunity_return</property>
+      <property
+         name="sdm:polyPoints">R46,488.38486,-19.701172,665.0,51.695312,L38</property>
    </ControlFlowCase>
 </SDM>

@@ -748,5 +748,13 @@ public class AppModuleAMImpl extends ApplicationModuleImpl {
     public ViewLinkImpl getOpportunityCustomerDisplayVL1() {
         return (ViewLinkImpl) findViewLink("OpportunityCustomerDisplayVL1");
     }
+
+    /**
+     * Container's getter for CustomerNameLookUpR1.
+     * @return CustomerNameLookUpR1
+     */
+    public ViewObjectImpl getCustomerNameLookUpR1() {
+        return (ViewObjectImpl) findViewObject("CustomerNameLookUpR1");
+    }
 }
 

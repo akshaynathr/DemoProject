@@ -51,6 +51,10 @@
     Name="InfluenceLevelLookupVO1"
     ViewObjectName="model.RVO.InfluenceLevelLookupVO"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="CustomerNameLookUpRVO1"
+    ViewObjectName="model.customer.RVO.CustomerNameLookUpRVO"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_SalesMethodId"
     ListVOName="SalesMethodLookupVO1"
@@ -121,6 +125,23 @@
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
+  <ListBinding
+    Name="LOV_CustomerId"
+    ListVOName="CustomerNameLookUpRVO1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="CustomerId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="CustomerId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="CustomerName"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="OpportunityEO"
     Entity="model.customer.EO.OpportunityEO"/>
@@ -137,7 +158,15 @@
     PrecisionRule="true"
     EntityAttrName="CustomerId"
     EntityUsage="OpportunityEO"
-    AliasName="CUSTOMER_ID"/>
+    AliasName="CUSTOMER_ID"
+    LOVName="LOV_CustomerId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="WinProbablity"
     PrecisionRule="true"

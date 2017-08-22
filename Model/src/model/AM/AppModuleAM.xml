@@ -230,6 +230,9 @@
   <ViewUsage
     Name="CustomersU7"
     ViewObjectName="model.UVO.CustomersUVO"/>
+  <ViewUsage
+    Name="CustomerNameLookUpR1"
+    ViewObjectName="model.customer.RVO.CustomerNameLookUpRVO"/>
   <ViewLinkUsage
     Name="UsersFk1VL1"
     ViewLinkObjectName="model.UVO.UsersFk1VL"
