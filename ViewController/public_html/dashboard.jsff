@@ -19,7 +19,13 @@
             <af:panelGroupLayout id="pgl4" layout="vertical"/>
             <af:panelGroupLayout id="pgl5" layout="vertical">
               <af:outputText value="Team" id="ot5"/>
-              <af:outputText value="130" id="ot6" inlineStyle="font-weight:bolder; font-size:xx-large; color:#ABEBD9;"/>
+                <af:panelFormLayout id="pfl1">
+                  <af:outputText value="#{bindings.Selectobjects0.inputValue}"
+                                 shortDesc="#{bindings.Selectobjects0.hints.tooltip}" id="ot3"
+                                 inlineStyle="font-weight:bolder; font-size:xx-large; color:#ABEBD9;">
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.Selectobjects0.format}"/>
+                  </af:outputText>
+                </af:panelFormLayout>
             </af:panelGroupLayout>
           </af:panelGroupLayout>
         </af:panelGroupLayout>
@@ -94,8 +100,13 @@
           <af:spacer width="10" height="10" id="s19"/>
           <af:panelGroupLayout id="pgl14" layout="vertical">
             <af:outputText value="Total Customers" id="ot14"/>
-            <af:outputText value="130" id="ot15" inlineStyle="font-weight:bolder; font-size:xx-large; color:#ABEBD9;"/>
-          </af:panelGroupLayout>
+              <af:panelFormLayout id="pfl2" inlineStyle="font-weight:bolder; font-size:xx-large; color:#ABEBD9;">
+                <af:outputText value="#{bindings.Selectobjects01.inputValue}"
+                               shortDesc="#{bindings.Selectobjects01.hints.tooltip}" id="ot4">
+                  <af:convertNumber groupingUsed="false" pattern="#{bindings.Selectobjects01.format}"/>
+                </af:outputText>
+              </af:panelFormLayout>
+            </af:panelGroupLayout>
         </af:panelGroupLayout>
       </af:panelGroupLayout>
     </af:panelGroupLayout>

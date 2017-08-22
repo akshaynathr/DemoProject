@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="dashboardPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="CountMyTeamObj1" RangeSize="25" DataControl="AppModuleAMDataControl" id="CountMyTeamObj1Iterator"/>
+    <iterator Binds="CustomerCountR1" RangeSize="25" DataControl="AppModuleAMDataControl" id="CustomerCountR1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="CountMyTeamObj1Iterator" id="Selectobjects0">
+      <AttrNames>
+        <Item Value="Selectobjects0"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomerCountR1Iterator" id="Selectobjects01">
+      <AttrNames>
+        <Item Value="Selectobjects0"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

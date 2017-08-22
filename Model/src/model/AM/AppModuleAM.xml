@@ -215,6 +215,12 @@
   <ViewUsage
     Name="RevenueItem1"
     ViewObjectName="model.RVO.RevenueItemVO"/>
+  <ViewUsage
+    Name="CountMyTeamObj1"
+    ViewObjectName="model.RVO.CountMyTeamObjVO"/>
+  <ViewUsage
+    Name="CustomerCountR1"
+    ViewObjectName="model.customer.RVO.CustomerCountRVO"/>
   <ViewLinkUsage
     Name="UsersFk1VL1"
     ViewLinkObjectName="model.UVO.UsersFk1VL"

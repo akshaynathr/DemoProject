@@ -696,5 +696,21 @@ public class AppModuleAMImpl extends ApplicationModuleImpl {
     public ViewObjectImpl getRevenueItem1() {
         return (ViewObjectImpl) findViewObject("RevenueItem1");
     }
+
+    /**
+     * Container's getter for CountMyTeamObj1.
+     * @return CountMyTeamObj1
+     */
+    public ViewObjectImpl getCountMyTeamObj1() {
+        return (ViewObjectImpl) findViewObject("CountMyTeamObj1");
+    }
+
+    /**
+     * Container's getter for CustomerCountR1.
+     * @return CustomerCountR1
+     */
+    public ViewObjectImpl getCustomerCountR1() {
+        return (ViewObjectImpl) findViewObject("CustomerCountR1");
+    }
 }
 
