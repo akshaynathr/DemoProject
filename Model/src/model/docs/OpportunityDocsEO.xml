@@ -12,7 +12,6 @@
   BindingStyle="OracleName">
   <Attribute
     Name="DocId"
-    IsNotNull="true"
     Precision="10"
     Scale="0"
     ColumnName="DOC_ID"
@@ -20,7 +19,13 @@
     Type="java.lang.Long"
     ColumnType="NUMBER"
     TableName="OPPORTUNITY_DOCS"
-    PrimaryKey="true"/>
+    PrimaryKey="true"
+    IsNotNull="true">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="trusted"
+      CodeSourceName="OpportunityDocsEORow"/>
+  </Attribute>
   <Attribute
     Name="OpportunityId"
     Precision="10"
@@ -123,6 +128,18 @@
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
   </Attribute>
+  <Key
+    Name="OpportunityDocsDocIdCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"DOC_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="OPPORTUNITY_DOCS_DOC_ID_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.docs.OpportunityDocsEO.DocId"/>
+    </AttrArray>
+  </Key>
   <Key
     Name="OpportunityDocsPk"
     PrimaryKey="true">

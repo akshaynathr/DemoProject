@@ -1,0 +1,12 @@
+//Groovy Scripts for model.docs.OpportunityDocsEO
+
+package model.docs
+
+import oracle.jbo.script.annotation.TransientValueExpression;
+
+@TransientValueExpression(attributeName="DocId")
+def DocId_ExpressionScript_Expression()
+{
+(new oracle.jbo.server.SequenceImpl("NOTES_SEQ", adf.object.getDBTransaction())).getSequenceNumber()
+}
+

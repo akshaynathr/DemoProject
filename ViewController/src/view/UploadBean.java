@@ -39,8 +39,8 @@ public class UploadBean {
     public UploadBean() {
     }
     private static String filePath;
-    Long docId;
-    Long OppId;
+    private RichInputText docId;
+    private RichInputText oppId;
     private RichInputText it;
 
 
@@ -52,20 +52,20 @@ public class UploadBean {
         return filePath;
     }
 
-    public void setDocId(Long docId) {
+    public void setDocId(RichInputText docId) {
         this.docId = docId;
     }
 
-    public Long getDocId() {
+    public RichInputText getDocId() {
         return docId;
     }
 
-    public void setOppId(Long OppId) {
-        this.OppId = OppId;
+    public void setOppId(RichInputText OppId) {
+        this.oppId = OppId;
     }
 
-    public Long getOppId() {
-        return OppId;
+    public RichInputText getOppId() {
+        return oppId;
     }
 
     public void setIt(RichInputText it) {
@@ -88,7 +88,7 @@ public class UploadBean {
             OperationBinding ob = bindings.getOperationBinding("setFileData"); 
                     
                 //    OperationBinding ob = executeOperation("setFileData");
-                                    ob.getParamsMap().put("docId", "5");
+                                    ob.getParamsMap().put("docId", docId.getValue().toString());
                                     ob.getParamsMap().put("opptId",  "2");
                     ob.getParamsMap().put("name", fileVal.getFilename());
                     ob.getParamsMap().put("path", path);

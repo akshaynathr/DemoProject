@@ -101,7 +101,9 @@
                          filterable="true" sortable="true" headerText="Opportunity Name" id="c5">
                 <af:link text="#{row.OppurtunityName}" id="l3" action="oppurtunity_flow" useWindow="true"
                          windowEmbedStyle="inlineDocument" windowModalityType="applicationModal" windowHeight="800"
-                         windowWidth="1200" inlineStyle="color:#42c6ff; font-weight:bold;"/>
+                         windowWidth="1200" inlineStyle="color:#42c6ff; font-weight:bold;">
+                  <af:setPropertyListener type="action" from="#{row.OpportunityId}" to="#{pageFlowScope.fromOptyId}"/>
+                </af:link>
               </af:column>
               <af:column sortProperty="#{bindings.OppurtunityDashboardUser2.hints.CustomerName.name}" filterable="true"
                          sortable="true" headerText="Customer Name" id="c6">

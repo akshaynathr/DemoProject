@@ -35,6 +35,11 @@
         <document>/WEB-INF/oppurtunity-flow.xml</document>
         <id>oppurtunity-flow</id>
       </task-flow-reference>
+      <input-parameter id="__21">
+        <name>optyId</name>
+        <value>#{pageFlowScope.fromOptyId}</value>
+        <pass-by-value/>
+      </input-parameter>
       <run-as-dialog>
         <display-type>
           <inline-popup/>

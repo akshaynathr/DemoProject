@@ -5,6 +5,7 @@
     <af:form id="f1" usesUpload="true">
       <af:panelGroupLayout id="pgl1" layout="vertical">
         <af:link text="back" id="l1" action="return"/>
+        <af:outputText value="Value:#{pageFlowScope.OptyId}" id="ot1"/>
         <af:panelTabbed position="start" id="pt1">
           <af:showDetailItem id="tab1" text="Opportunity Details" icon="/icons/OPPURTUNITY.png">
             <af:panelFormLayout id="pfl1">
@@ -233,7 +234,8 @@
                               required="#{bindings.OpportunityDocs1.hints.DocId.mandatory}"
                               columns="#{bindings.OpportunityDocs1.hints.DocId.displayWidth}"
                               maximumLength="#{bindings.OpportunityDocs1.hints.DocId.precision}"
-                              shortDesc="#{bindings.OpportunityDocs1.hints.DocId.tooltip}" id="it22">
+                              shortDesc="#{bindings.OpportunityDocs1.hints.DocId.tooltip}" id="it22"
+                              binding="#{pageFlowScope.uploadBean.docId}">
                   <f:validator binding="#{row.bindings.DocId.validator}"/>
                   <af:convertNumber groupingUsed="false" pattern="#{bindings.OpportunityDocs1.hints.DocId.format}"/>
                 </af:inputText>
@@ -279,7 +281,7 @@
               <af:column id="c6">
                 <af:button text="x"
                            disabled="#{!bindings.Delete.enabled}" id="b2"
-                           action="#{pageFlowScope.upload_bean.deleteFile}"/>
+                           action="#{pageFlowScope.uploadBean.deleteFile}"/>
               </af:column>
             </af:table>
             <af:outputText value="Documents" id="ot3" inlineStyle="color:Black; font-size:x-large;"/>
