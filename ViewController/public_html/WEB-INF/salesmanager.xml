@@ -60,6 +60,17 @@
     <view id="report_sales_rep">
       <page>/report_sales_rep.jsff</page>
     </view>
+    <task-flow-call id="create-opportunity-flow">
+      <task-flow-reference>
+        <document>/WEB-INF/create-opportunity-flow.xml</document>
+        <id>create-opportunity-flow</id>
+      </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
+    </task-flow-call>
     <control-flow-rule id="__1">
       <from-activity-id>dashboard</from-activity-id>
       <control-flow-case id="__2">

@@ -46,7 +46,7 @@
       <property
          name="fromOutcome">inside</property>
       <property
-         name="sdm:polyPoints">R46,387.0,127.94238,664.14,58.695312,L46</property>
+         name="sdm:polyPoints">R46,387.0,127.94238,664.22485,65.69531,L54</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -56,7 +56,7 @@
       <property
          name="fromOutcome">back</property>
       <property
-         name="sdm:polyPoints">L54,665.0,65.69531,387.8587,134.94238,R54</property>
+         name="sdm:polyPoints">L62,665.0,72.69531,387.7741,134.94238,R54</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall6">
@@ -252,19 +252,40 @@
    <ControlFlowCase
       islink="true"
       id="ControlFlowCase22"
-      from="View3">
+      from="View3"
+      to="TaskFlowCall25">
       <property
          name="fromOutcome">create_opportunity</property>
       <property
-         name="sdm:polyPoints">L46,663.64825,58.695312,487.02832,-12.701172,R54</property>
+         name="sdm:polyPoints">L46,662.0504,58.695312,603.5283,-1.4013677,B44</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
       id="ControlFlowCase23"
+      from="TaskFlowCall25"
       to="View3">
       <property
          name="fromOutcome">create_opportunity_return</property>
       <property
-         name="sdm:polyPoints">R46,488.38486,-19.701172,665.0,51.695312,L38</property>
+         name="sdm:polyPoints">B56,610.5283,-4.201172,665.0,51.695312,L38</property>
    </ControlFlowCase>
+   <TaskFlowCall
+      id="TaskFlowCall25">
+      <property
+         name="runAsDialog">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>create-opportunity-flow&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">create-opportunity-flow</property>
+      <property
+         name="x">607.0283</property>
+      <property
+         name="y">-57.850586</property>
+      <property
+         name="documentReference">/WEB-INF/create-opportunity-flow.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">create-opportunity-flow</property>
+   </TaskFlowCall>
 </SDM>
