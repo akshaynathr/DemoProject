@@ -143,9 +143,10 @@
                     <af:commandLink text="Advanced" rendered="false" id="cl2"/>
                   </f:facet>
                 </af:quickQuery>
-                <af:button text="Create Customer" id="b2" action="create_customer" windowHeight="550"
+                <af:button text="Create Customer" id="b2" windowHeight="550"
                            windowWidth="1200" useWindow="true" windowEmbedStyle="inlineDocument"
-                           windowModalityType="applicationModal"/>
+                           windowModalityType="applicationModal" actionListener="#{bindings.CreateInsert.execute}"
+                           action="create_customer"/>
               </af:panelHeader>
               <af:table value="#{bindings.CustomerId_Address_ViewObj1.collectionModel}" var="row"
                         rows="#{bindings.CustomerId_Address_ViewObj1.rangeSize}"

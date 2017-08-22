@@ -6,7 +6,7 @@
       <af:panelStretchLayout id="psl1" binding="#{backingBeanScope.NewCustBean.psl1}">
         <f:facet name="top">
           <af:button text="Save" id="b1" binding="#{backingBeanScope.NewCustBean.b1}"
-                     actionListener="#{bindings.Commit.execute}"/>
+                     actionListener="#{bindings.Commit.execute}" action="#{backingBeanScope.NewCustBean.commit_now}"/>
         </f:facet>
         <f:facet name="bottom"/>
         <f:facet name="center">

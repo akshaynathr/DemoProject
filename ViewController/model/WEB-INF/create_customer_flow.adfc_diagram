@@ -9,13 +9,13 @@
       <property
          name="pageFragment">false</property>
       <property
-         name="x">646.0</property>
+         name="x">376.0</property>
       <property
          name="start">true</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>create_customer&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">263.68945</property>
+         name="y">205.23535</property>
       <property
          name="page">/create_customer.jsf</property>
       <property
@@ -26,11 +26,11 @@
       <property
          name="activityId">return_customer_create</property>
       <property
-         name="x">393.0</property>
+         name="x">616.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>return_customer_create&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  return_customer_create&lt;/p></property>
       <property
-         name="y">96.19531</property>
+         name="y">218.49414</property>
       <property
          name="finish">true</property>
       <property
@@ -44,6 +44,6 @@
       <property
          name="fromOutcome">return</property>
       <property
-         name="sdm:polyPoints">L50,605.0,263.33887,434.0,95.84473,R50</property>
+         name="sdm:polyPoints">R50,417.0,204.88477,575.0,218.14355,L50</property>
    </ControlFlowCase>
 </SDM>

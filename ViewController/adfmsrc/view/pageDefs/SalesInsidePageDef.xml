@@ -15,6 +15,7 @@
     <iterator Binds="MyTeamR1" RangeSize="25" DataControl="AppModuleAMDataControl" id="MyTeamR1Iterator"/>
     <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
                   Binds="MyTeamR1Iterator" id="ImplicitViewCriteriaQuery2"/>
+    <iterator Binds="MasterTable1" RangeSize="25" DataControl="AMDataControl" id="MasterTable1Iterator"/>
   </executables>
   <bindings>
     <tree IterBinding="CustomerId_Address_ViewObj1Iterator" id="CustomerId_Address_ViewObj1">
@@ -50,5 +51,6 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <action IterBinding="MasterTable1Iterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
   </bindings>
 </pageDefinition>

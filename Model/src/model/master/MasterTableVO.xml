@@ -311,14 +311,16 @@
     PrecisionRule="true"
     EntityAttrName="CustomerId"
     EntityUsage="CustomersContactsEO"
-    AliasName="CUSTOMER_ID1"/>
+    AliasName="CUSTOMER_ID1"
+    DefaultValue="0"/>
   <ViewAttribute
     Name="ContactId1"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="ContactId"
     EntityUsage="CustomersContactsEO"
-    AliasName="CONTACT_ID1"/>
+    AliasName="CONTACT_ID1"
+    DefaultValue="0"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.master.common.MasterTableVOMsgBundle"/>

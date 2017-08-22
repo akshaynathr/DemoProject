@@ -3,9 +3,9 @@
                 id="create_product_create_product_CreateInsertPageDef" Package="view.pageDefs" SkipValidation="true">
   <parameters/>
   <executables>
-    <iterator Binds="ProductsU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="ProductsU1Iterator"/>
+    <iterator Binds="MasterTable1" RangeSize="25" DataControl="AMDataControl" id="MasterTable1Iterator"/>
   </executables>
   <bindings>
-    <action IterBinding="ProductsU1Iterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action IterBinding="MasterTable1Iterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
   </bindings>
 </pageDefinition>
