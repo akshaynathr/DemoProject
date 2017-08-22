@@ -23,7 +23,8 @@
     IsUpdateable="while_insert"
     DefaultValue="@0"
     Domain="oracle.jbo.domain.DBSequence"
-    RetrievedOnInsert="true"/>
+    RetrievedOnInsert="true"
+    IsNotNull="true"/>
   <Attribute
     Name="CustomerId"
     Precision="10"
@@ -372,12 +373,11 @@
   </Attribute>
   <Attribute
     Name="DecisionLevelId"
-    Precision="10"
-    Scale="0"
+    Precision="20"
     ColumnName="DECISION_LEVEL_ID"
-    SQLType="NUMERIC"
-    Type="java.lang.Long"
-    ColumnType="NUMBER"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
     TableName="OPPORTUNITIES"/>
   <Attribute
     Name="OppurtunityName"
@@ -391,6 +391,15 @@
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
   </Attribute>
+  <Attribute
+    Name="QuarterNo"
+    Precision="1"
+    Scale="0"
+    ColumnName="QUARTER_NO"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="OPPORTUNITIES"/>
   <AccessorAttribute
     Name="OpportunityDoc"
     Association="model.customer.EO.OpportunityDocsLinkASSOC"
@@ -413,6 +422,18 @@
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <Key
+    Name="OpportunitiesOpportunityIdCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"OPPORTUNITY_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="OPPORTUNITIES_OPPORTUNITY_ID_C"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.customer.EO.OpportunityEO.OpportunityId"/>
+    </AttrArray>
+  </Key>
+  <Key
     Name="OpportunitiesPk"
     PrimaryKey="true">
     <DesignTime>
@@ -428,6 +449,7 @@
       <Attr Name="_referencedKey" Value="CUSTOMERS_PK"/>
       <Attr Name="_isForeign" Value="true"/>
       <Attr Name="_DBObjectName" Value="OPPORTUNITIES_FK1"/>
+      <Attr Name="_isDisabledConstraint" Value="true"/>
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.customer.EO.OpportunityEO.CustomerId"/>

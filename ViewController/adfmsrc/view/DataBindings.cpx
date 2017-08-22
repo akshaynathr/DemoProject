@@ -42,6 +42,7 @@
     <page path="/create_customer.jsf" usageId="view_create_customerPageDef"/>
     <page path="/WEB-INF/create_customer_flow.xml#create_customer_flow@Commit"
           usageId="view_create_customer_flow_create_customer_flow_CommitPageDef"/>
+    <page path="/report_sales_manager.jsff" usageId="view_report_sales_managerPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_HomePageDef" path="view.pageDefs.HomePageDef"/>
@@ -77,6 +78,7 @@
     <page id="view_create_customerPageDef" path="view.pageDefs.create_customerPageDef"/>
     <page id="view_create_customer_flow_create_customer_flow_CommitPageDef"
           path="view.pageDefs.create_customer_flow_create_customer_flow_CommitPageDef"/>
+    <page id="view_report_sales_managerPageDef" path="view.pageDefs.report_sales_managerPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleAMDataControl" Package="model.AM"
