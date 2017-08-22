@@ -74,8 +74,10 @@
         <af:showDetailItem text="Opportunities" id="sdi2"
                            inlineStyle="column-rule-color:transparent;" icon="/icons/images.png"
                            disclosed="#{(pageFlowScope.sales_manager_tabVal==2)?true:false}">
+          <af:link text="test_flow" id="l2" action="oppurtunity_flow" windowEmbedStyle="inlineDocument"
+                   windowModalityType="applicationModal" useWindow="true" windowHeight="500" windowWidth="600"/>
           <af:panelGroupLayout layout="vertical" id="pgl4">
-            <af:panelHeader text="Oppurtunities" id="ph1">
+            <af:panelHeader text="OppurtunityDashboardUser2" id="ph1">
               <af:quickQuery label="Search" searchDesc="Search" id="qryId1"
                              value="#{bindings.ImplicitViewCriteriaQuery.quickQueryDescriptor}"
                              model="#{bindings.ImplicitViewCriteriaQuery.queryModel}"
@@ -94,14 +96,12 @@
                       rowSelection="single" fetchSize="#{bindings.OppurtunityDashboardUser2.rangeSize}"
                       filterModel="#{bindings.ImplicitViewCriteriaQuery.quickQueryDescriptor}" filterVisible="true"
                       queryListener="#{bindings.ImplicitViewCriteriaQuery.processQuery}" varStatus="vs"
-                      partialTriggers="::qryId1" id="t2" columnStretching="column:c5">
+                      partialTriggers="::qryId1" id="t2">
               <af:column sortProperty="#{bindings.OppurtunityDashboardUser2.hints.OppurtunityName.name}"
                          filterable="true" sortable="true" headerText="Opportunity Name" id="c5">
                 <af:link text="#{row.OppurtunityName}" id="l3" action="oppurtunity_flow" useWindow="true"
                          windowEmbedStyle="inlineDocument" windowModalityType="applicationModal" windowHeight="800"
-                         windowWidth="1200" inlineStyle="color:#42c6ff; font-weight:bold;">
-                  <af:setPropertyListener from="#{row.OpportunityId}" to="#{pageFlowScope.oppId}" type="action"/>
-                </af:link>
+                         windowWidth="1200" inlineStyle="color:#42c6ff; font-weight:bold;"/>
               </af:column>
               <af:column sortProperty="#{bindings.OppurtunityDashboardUser2.hints.CustomerName.name}" filterable="true"
                          sortable="true" headerText="Customer Name" id="c6">
@@ -135,19 +135,18 @@
           <af:panelGroupLayout layout="vertical" id="pgl1">
             <af:panelGroupLayout layout="vertical" id="pgl2">
               <af:panelHeader text="Customers" id="ph2">
-                <af:panelGroupLayout id="pgl6" layout="horizontal">
-                  <af:quickQuery label="Search" searchDesc="Search" id="qryId2"
-                                 value="#{bindings.ImplicitViewCriteriaQuery1.quickQueryDescriptor}"
-                                 model="#{bindings.ImplicitViewCriteriaQuery1.queryModel}"
-                                 queryListener="#{bindings.ImplicitViewCriteriaQuery1.processQuery}">
-                    <f:facet name="end">
-                      <af:commandLink text="Advanced" rendered="false" id="cl2"/>
-                    </f:facet>
-                  </af:quickQuery>
-                  <af:button text="Create Customer" id="b2" action="create_customer" windowHeight="550"
-                             windowWidth="1200" useWindow="true" windowEmbedStyle="inlineDocument"
-                             windowModalityType="applicationModal"/>
-                </af:panelGroupLayout>
+                <af:quickQuery label="Search" searchDesc="Search" id="qryId2"
+                               value="#{bindings.ImplicitViewCriteriaQuery1.quickQueryDescriptor}"
+                               model="#{bindings.ImplicitViewCriteriaQuery1.queryModel}"
+                               queryListener="#{bindings.ImplicitViewCriteriaQuery1.processQuery}">
+                  <f:facet name="end">
+                    <af:commandLink text="Advanced" rendered="false" id="cl2"/>
+                  </f:facet>
+                </af:quickQuery>
+                <af:button text="Create Customer" id="b2" windowHeight="550"
+                           windowWidth="1200" useWindow="true" windowEmbedStyle="inlineDocument"
+                           windowModalityType="applicationModal" actionListener="#{bindings.CreateInsert.execute}"
+                           action="create_customer"/>
               </af:panelHeader>
               <af:table value="#{bindings.CustomerId_Address_ViewObj1.collectionModel}" var="row"
                         rows="#{bindings.CustomerId_Address_ViewObj1.rangeSize}"
@@ -156,7 +155,7 @@
                         selectedRowKeys="#{bindings.CustomerId_Address_ViewObj1.collectionModel.selectedRow}"
                         selectionListener="#{bindings.CustomerId_Address_ViewObj1.collectionModel.makeCurrent}"
                         rowSelection="single" fetchSize="#{bindings.CustomerId_Address_ViewObj1.rangeSize}"
-                        partialTriggers="::qryId2" id="t1" columnStretching="column:c1">
+                        partialTriggers="::qryId2" id="t1">
                 <af:column headerText="Name" id="c1">
                   <af:link text="#{row.CustomerName}" id="l1" action="customer" useWindow="true"
                            windowEmbedStyle="inlineDocument" windowModalityType="applicationModal" windowHeight="600"

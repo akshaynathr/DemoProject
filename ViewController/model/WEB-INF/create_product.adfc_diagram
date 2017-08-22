@@ -9,13 +9,13 @@
       <property
          name="pageFragment">false</property>
       <property
-         name="x">509.0</property>
+         name="x">429.0</property>
       <property
          name="start">false</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>createProduct&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">91.24707</property>
+         name="y">21.545898</property>
       <property
          name="page">/createProduct.jsf</property>
       <property
@@ -44,30 +44,30 @@
       <property
          name="fromOutcome">commit</property>
       <property
-         name="sdm:polyPoints">R50,550.0,90.896484,599.0,154.49414,L50</property>
+         name="sdm:polyPoints">R50,470.0,21.195312,599.0,154.49414,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
       id="ControlFlowCase6"
-      from="MethodCall9"
+      from="MethodCall7"
       to="View2">
       <property
          name="fromOutcome">CreateInsert</property>
       <property
-         name="sdm:polyPoints">T50,341.01465,274.0459,509.0,144.89648,B50</property>
+         name="sdm:polyPoints">R50,246.01465,92.69531,388.0,21.195312,L50</property>
    </ControlFlowCase>
    <MethodCall
-      id="MethodCall9">
+      id="MethodCall7">
       <property
          name="activityId">CreateInsert</property>
       <property
-         name="x">341.01465</property>
+         name="x">205.01465</property>
       <property
          name="start">true</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>CreateInsert&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
       <property
-         name="y">328.0459</property>
+         name="y">93.0459</property>
       <property
          name="exceptionHandler">false</property>
    </MethodCall>

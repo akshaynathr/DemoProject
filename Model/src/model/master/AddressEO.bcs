@@ -1,0 +1,12 @@
+//Groovy Scripts for model.master.AddressEO
+
+package model.master
+
+import oracle.jbo.script.annotation.TransientValueExpression;
+
+@TransientValueExpression(attributeName="AddressId")
+def AddressId_ExpressionScript_Expression()
+{
+(new oracle.jbo.server.SequenceImpl("ADDRESS_SEQ", adf.object.getDBTransaction())).getSequenceNumber()
+}
+

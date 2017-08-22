@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="create_customerPageDef"
+                Package="view.pageDefs" SkipValidation="true">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="MasterTable1" RangeSize="25" DataControl="AMDataControl" id="MasterTable1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="MasterTable1Iterator" id="CustomerName">
+      <AttrNames>
+        <Item Value="CustomerName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="MasterTable1Iterator" id="CustomerTypeId">
+      <AttrNames>
+        <Item Value="CustomerTypeId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="MasterTable1Iterator" id="Url">
+      <AttrNames>
+        <Item Value="Url"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="MasterTable1Iterator" id="ParentCompany">
+      <AttrNames>
+        <Item Value="ParentCompany"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="MasterTable1Iterator" id="Ceo">
+      <AttrNames>
+        <Item Value="Ceo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="MasterTable1Iterator" id="NoOfEmployees">
+      <AttrNames>
+        <Item Value="NoOfEmployees"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="MasterTable1Iterator" id="Fax">
+      <AttrNames>
+        <Item Value="Fax"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="MasterTable1Iterator" id="Email">
+      <AttrNames>
+        <Item Value="Email"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="MasterTable1Iterator" id="FirstName">
+      <AttrNames>
+        <Item Value="FirstName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="MasterTable1Iterator" id="LastName">
+      <AttrNames>
+        <Item Value="LastName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="MasterTable1Iterator" id="IsPrimary">
+      <AttrNames>
+        <Item Value="IsPrimary"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="MasterTable1Iterator" id="Email1">
+      <AttrNames>
+        <Item Value="Email1"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="MasterTable1Iterator" id="WorkPhone">
+      <AttrNames>
+        <Item Value="WorkPhone"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="MasterTable1Iterator" id="MobilePhone">
+      <AttrNames>
+        <Item Value="MobilePhone"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="MasterTable1Iterator" id="BuyingRoleId">
+      <AttrNames>
+        <Item Value="BuyingRoleId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="MasterTable1Iterator" id="DepartmentNameId">
+      <AttrNames>
+        <Item Value="DepartmentNameId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="MasterTable1Iterator" id="InfluenceLevelId">
+      <AttrNames>
+        <Item Value="InfluenceLevelId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="MasterTable1Iterator" id="House">
+      <AttrNames>
+        <Item Value="House"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="MasterTable1Iterator" id="Street">
+      <AttrNames>
+        <Item Value="Street"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="MasterTable1Iterator" id="Locality">
+      <AttrNames>
+        <Item Value="Locality"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="MasterTable1Iterator" id="City">
+      <AttrNames>
+        <Item Value="City"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="MasterTable1Iterator" id="Pincode">
+      <AttrNames>
+        <Item Value="Pincode"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="MasterTable1Iterator" id="State">
+      <AttrNames>
+        <Item Value="State"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="MasterTable1Iterator" id="Country">
+      <AttrNames>
+        <Item Value="Country"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AMDataControl"/>
+  </bindings>
+</pageDefinition>

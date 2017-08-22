@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="CustomersFk3VL"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  EntityAssociation="model.master.CustomersFk3ASSOC">
+  <ViewLinkDefEnd
+    Name="Address"
+    Cardinality="1"
+    Source="true"
+    Owner="model.master.AddressVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="Address"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.master.AddressVO.AddressId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="Customers1"
+    Cardinality="-1"
+    Owner="model.master.CustomersVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="Customers1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.master.CustomersVO.PrimaryAddressId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>
