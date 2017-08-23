@@ -45,6 +45,8 @@
     <page path="/report_sales_manager.jsff" usageId="view_report_sales_managerPageDef"/>
     <page path="/dashboard.jsff" usageId="view_dashboardPageDef"/>
     <page path="/create_opportunity.jsf" usageId="view_create_opportunityPageDef"/>
+    <page path="/WEB-INF/DeleteProductCategory-flow.xml#DeleteProductCategory-flow@Commit"
+          usageId="view_DeleteProductCategory_flow_DeleteProductCategory_flow_CommitPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_HomePageDef" path="view.pageDefs.HomePageDef"/>
@@ -83,6 +85,8 @@
     <page id="view_report_sales_managerPageDef" path="view.pageDefs.report_sales_managerPageDef"/>
     <page id="view_dashboardPageDef" path="view.pageDefs.dashboardPageDef"/>
     <page id="view_create_opportunityPageDef" path="view.pageDefs.create_opportunityPageDef"/>
+    <page id="view_DeleteProductCategory_flow_DeleteProductCategory_flow_CommitPageDef"
+          path="view.pageDefs.DeleteProductCategory_flow_DeleteProductCategory_flow_CommitPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleAMDataControl" Package="model.AM"

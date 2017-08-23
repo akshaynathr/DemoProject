@@ -4,32 +4,24 @@
     <af:messages id="m1"/>
     <af:form id="f1">
       <af:panelGroupLayout layout="vertical" id="pgl1">
-        <af:panelHeader text="Delete Category" id="ph1">
-          <af:panelGroupLayout id="pgl2">
-            <af:quickQuery label="Search" searchDesc="Search" id="qryId1"
-                           value="#{bindings.ImplicitViewCriteriaQuery.quickQueryDescriptor}"
-                           model="#{bindings.ImplicitViewCriteriaQuery.queryModel}"
-                           queryListener="#{bindings.ImplicitViewCriteriaQuery.processQuery}">
-              <f:facet name="end">
-                <af:commandLink text="Advanced" rendered="false" id="cl1"/>
-              </f:facet>
-            </af:quickQuery>
-            <af:button text="Delete Category" id="b1" actionListener="#{bindings.Delete.execute}" action="commit"/>
-          </af:panelGroupLayout>
-        </af:panelHeader>
-        <af:table value="#{bindings.LookupProdCatDel1.collectionModel}" var="row"
-                  rows="#{bindings.LookupProdCatDel1.rangeSize}"
-                  emptyText="#{bindings.LookupProdCatDel1.viewable ? 'No data to display.' : 'Access Denied.'}"
-                  rowBandingInterval="0" selectedRowKeys="#{bindings.LookupProdCatDel1.collectionModel.selectedRow}"
-                  selectionListener="#{bindings.LookupProdCatDel1.collectionModel.makeCurrent}" rowSelection="single"
-                  fetchSize="#{bindings.LookupProdCatDel1.rangeSize}" partialTriggers="::qryId1 ::b1" id="t1">
+        <af:panelGroupLayout id="pgl2">
+          <af:button text="Delete" id="b1" actionListener="#{bindings.Delete.execute}"
+                     disabled="#{!bindings.Delete.enabled}"/>
+          <af:button actionListener="#{bindings.Commit1.execute}" text="Close" disabled="#{!bindings.Commit1.enabled}"
+                     id="b2" action="deleteRow"/>
+        </af:panelGroupLayout>
+        <af:table value="#{bindings.Lookups1.collectionModel}" var="row" rows="#{bindings.Lookups1.rangeSize}"
+                  emptyText="#{bindings.Lookups1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                  rowBandingInterval="0" selectedRowKeys="#{bindings.Lookups1.collectionModel.selectedRow}"
+                  selectionListener="#{bindings.Lookups1.collectionModel.makeCurrent}" rowSelection="single"
+                  fetchSize="#{bindings.Lookups1.rangeSize}" id="t1" partialTriggers="::b1 ::b2">
           <af:column headerText="Category" id="c1">
-            <af:outputText value="#{row.PossibleValue}"
-                           shortDesc="#{bindings.LookupProdCatDel1.hints.PossibleValue.tooltip}" id="ot1"/>
+            <af:outputText value="#{row.PossibleValue}" shortDesc="#{bindings.Lookups1.hints.PossibleValue.tooltip}"
+                           id="ot1"/>
           </af:column>
-          <af:column headerText="#{bindings.LookupProdCatDel1.hints.Description.label}" id="c2">
-            <af:outputText value="#{row.Description}"
-                           shortDesc="#{bindings.LookupProdCatDel1.hints.Description.tooltip}" id="ot2"/>
+          <af:column headerText="Description" id="c2">
+            <af:outputText value="#{row.Description}" shortDesc="#{bindings.Lookups1.hints.Description.tooltip}"
+                           id="ot2"/>
           </af:column>
         </af:table>
       </af:panelGroupLayout>

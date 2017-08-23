@@ -15,7 +15,7 @@
       <property
          name="description">&lt;html>&lt;p>&lt;b>DeleteProductCategory&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">176.48242</property>
+         name="y">170.52246</property>
       <property
          name="page">/DeleteProductCategory.jsf</property>
       <property
@@ -23,23 +23,35 @@
    </View>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase4"
-      to="View2">
+      id="ControlFlowCase11"
+      from="View2">
       <property
-         name="fromOutcome">Delete</property>
+         name="tosrcid">__5</property>
       <property
-         name="sdm:polyPoints">R50,249.5,134.99414,430.0,172.88477,L50</property>
+         name="fromOutcome">deleteRow</property>
+      <property
+         name="fromsrcid">__3</property>
+      <property
+         name="sdm:polyPoints">R50,295.0,170.17188,464.5,167.69531,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase14">
+      <property
+         name="fromOutcome">*</property>
+      <property
+         name="sdm:polyPoints">R50,546.5,167.69531,666.5,199.79883,L50</property>
    </ControlFlowCase>
    <TaskFlowReturn
-      id="TaskFlowReturn5">
+      id="TaskFlowReturn15">
       <property
          name="activityId">return</property>
       <property
-         name="x">668.0</property>
+         name="x">884.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>return&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  return&lt;/p></property>
       <property
-         name="y">170.19531</property>
+         name="y">182.5459</property>
       <property
          name="finish">true</property>
       <property
@@ -47,12 +59,21 @@
    </TaskFlowReturn>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase6"
+      id="ControlFlowCase16"
+      to="TaskFlowReturn15">
+      <property
+         name="fromOutcome">*</property>
+      <property
+         name="sdm:polyPoints">R50,748.5,199.79883,843.0,182.19531,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase17"
       from="View2"
-      to="TaskFlowReturn5">
+      to="TaskFlowReturn15">
       <property
-         name="fromOutcome">commit</property>
+         name="fromOutcome">deleteRow</property>
       <property
-         name="sdm:polyPoints">R50,295.0,176.13184,627.0,169.84473,L50</property>
+         name="sdm:polyPoints">R50,295.0,170.17188,843.0,182.19531,L50</property>
    </ControlFlowCase>
 </SDM>

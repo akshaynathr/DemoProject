@@ -5,20 +5,19 @@
   <executables>
     <variableIterator id="variables"/>
     <iterator Binds="LookupsU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="LookupsU1Iterator"/>
-    <iterator Binds="LookupProdCatDel1" RangeSize="25" DataControl="AppModuleAMDataControl"
-              id="LookupProdCatDel1Iterator"/>
-    <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
-                  Binds="LookupProdCatDel1Iterator" id="ImplicitViewCriteriaQuery"/>
+    <iterator Binds="Lookups1" RangeSize="25" DataControl="AppModuleAMDataControl54" id="Lookups1Iterator"/>
   </executables>
   <bindings>
-    <tree IterBinding="LookupProdCatDel1Iterator" id="LookupProdCatDel1">
-      <nodeDefinition DefName="model.UVO.LookupProdCatDelVO" Name="LookupProdCatDel10">
+    <tree IterBinding="Lookups1Iterator" id="Lookups1">
+      <nodeDefinition DefName="model.lookup.LookupsVO" Name="Lookups10">
         <AttrNames>
           <Item Value="PossibleValue"/>
           <Item Value="Description"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <action IterBinding="LookupProdCatDel1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action IterBinding="Lookups1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action id="Commit" DataControl="AppModuleAMDataControl5" RequiresUpdateModel="true" Action="commitTransaction"/>
+    <action id="Commit1" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleAMDataControl54"/>
   </bindings>
 </pageDefinition>

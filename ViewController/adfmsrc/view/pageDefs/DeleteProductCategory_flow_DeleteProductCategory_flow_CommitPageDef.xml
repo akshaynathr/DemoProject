@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24"
+                id="DeleteProductCategory_flow_DeleteProductCategory_flow_CommitPageDef" Package="view.pageDefs"
+                SkipValidation="true">
+  <parameters/>
+  <executables/>
+  <bindings>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleAMDataControl5"/>
+  </bindings>
+</pageDefinition>
