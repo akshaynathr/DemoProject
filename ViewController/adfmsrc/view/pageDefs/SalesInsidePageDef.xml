@@ -31,16 +31,6 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <tree IterBinding="OppurtunityDashboardUser2Iterator" id="OppurtunityDashboardUser2">
-      <nodeDefinition DefName="model.customer.RVO.OppurtunityDashboardUserVO" Name="OppurtunityDashboardUser20">
-        <AttrNames>
-          <Item Value="OppurtunityName"/>
-          <Item Value="CustomerName"/>
-          <Item Value="CustomerId"/>
-          <Item Value="OpportunityId"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
     <tree IterBinding="MyTeamR1Iterator" id="MyTeamR1">
       <nodeDefinition DefName="model.RVO.MyTeamRVO" Name="MyTeamR10">
         <AttrNames>
@@ -51,6 +41,16 @@
           <Item Value="StartDate"/>
           <Item Value="EndDate"/>
           <Item Value="TeamId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="OppurtunityDashboardUser2Iterator" id="OppurtunityDashboardUser2">
+      <nodeDefinition DefName="model.customer.RVO.OppurtunityDashboardUserVO" Name="OppurtunityDashboardUser20">
+        <AttrNames>
+          <Item Value="OppurtunityName"/>
+          <Item Value="CustomerName"/>
+          <Item Value="CustomerId"/>
+          <Item Value="OpportunityId"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
