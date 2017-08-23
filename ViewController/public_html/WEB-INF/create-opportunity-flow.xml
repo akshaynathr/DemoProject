@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="create-opportunity-flow">
+    <default-activity>create_opportunity</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="create_opportunity">
+      <page>/create_opportunity.jsf</page>
+    </view>
+    <task-flow-return id="create_opportunity_return">
+      <outcome>
+        <name>create_opportunity_return</name>
+      </outcome>
+    </task-flow-return>
+    <control-flow-rule id="__1">
+      <from-activity-id>create_opportunity</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>commit</from-outcome>
+        <to-activity-id>create_opportunity_return</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+  </task-flow-definition>
+</adfc-config>

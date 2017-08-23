@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
-    <af:document title="Customers_tab.jsf" id="d1" binding="#{backingBeanScope.backing_Customers_tab.d1}">
+    <af:document id="d1" binding="#{backingBeanScope.backing_Customers_tab.d1}">
     <af:messages id="m1" binding="#{backingBeanScope.backing_Customers_tab.m1}"/>
     <af:form id="f1" binding="#{backingBeanScope.backing_Customers_tab.f1}">
               <af:panelStretchLayout id="psl1">

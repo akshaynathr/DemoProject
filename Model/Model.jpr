@@ -80,6 +80,29 @@
    <value n="jbo.JpxName" v="model.Model"/>
    <value n="jbo.NoAttrEnumClasses" v="true"/>
    <value n="JboProject" v="true"/>
+   <hash n="oracle.ide.model.ResourcePaths">
+      <hash n="resourcesContentSet">
+         <list n="constituent-sets">
+            <hash>
+               <list n="pattern-filters">
+                  <string v="+create_customer.jsf"/>
+               </list>
+               <list n="url-path">
+                  <url path="../ViewController/public_html/"/>
+               </list>
+            </hash>
+            <hash>
+               <list n="pattern-filters">
+                  <string v="+*"/>
+               </list>
+               <list n="url-path">
+                  <url path="."/>
+               </list>
+            </hash>
+         </list>
+         <list n="url-path"/>
+      </hash>
+   </hash>
    <hash n="oracle.ide.model.TechnologyScopeConfiguration">
       <list n="technologyScope">
          <string v="ADF_FACES"/>

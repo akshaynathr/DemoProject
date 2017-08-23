@@ -20,6 +20,7 @@
                   <af:commandLink text="Advanced" rendered="false" id="cl3"/>
                 </f:facet>
               </af:quickQuery>
+              <af:button text="Create Opportunity" id="b3"/>
             </af:panelHeader>
             <af:table value="#{bindings.MyTeamR1.collectionModel}" var="row" rows="#{bindings.MyTeamR1.rangeSize}"
                       emptyText="#{bindings.MyTeamR1.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -74,18 +75,23 @@
         <af:showDetailItem text="Opportunities" id="sdi2"
                            inlineStyle="column-rule-color:transparent;" icon="/icons/images.png"
                            disclosed="#{(pageFlowScope.sales_manager_tabVal==2)?true:false}">
-          <af:link text="test_flow" id="l2" action="oppurtunity_flow" windowEmbedStyle="inlineDocument"
-                   windowModalityType="applicationModal" useWindow="true" windowHeight="500" windowWidth="600"/>
           <af:panelGroupLayout layout="vertical" id="pgl4">
-            <af:panelHeader text="OppurtunityDashboardUser2" id="ph1">
-              <af:quickQuery label="Search" searchDesc="Search" id="qryId1"
-                             value="#{bindings.ImplicitViewCriteriaQuery.quickQueryDescriptor}"
-                             model="#{bindings.ImplicitViewCriteriaQuery.queryModel}"
-                             queryListener="#{bindings.ImplicitViewCriteriaQuery.processQuery}">
-                <f:facet name="end">
-                  <af:commandLink text="Advanced" rendered="false" id="cl1"/>
-                </f:facet>
-              </af:quickQuery>
+            <af:panelHeader text="Oppurtunities" id="ph1">
+              <af:panelGroupLayout id="pgl6" layout="vertical">
+                <af:panelGroupLayout id="pgl7" layout="horizontal">
+                  <af:quickQuery label="Search" searchDesc="Search" id="qryId1"
+                                 value="#{bindings.ImplicitViewCriteriaQuery.quickQueryDescriptor}"
+                                 model="#{bindings.ImplicitViewCriteriaQuery.queryModel}"
+                                 queryListener="#{bindings.ImplicitViewCriteriaQuery.processQuery}">
+                    <f:facet name="end">
+                      <af:commandLink text="Advanced" rendered="false" id="cl1"/>
+                    </f:facet>
+                  </af:quickQuery>
+                  <af:button text="Create Opportunity" id="b4" action="create_opportunity" useWindow="true"
+                             windowEmbedStyle="inlineDocument" windowModalityType="applicationModal"
+                             windowHeight="600" windowWidth="800"/>
+                </af:panelGroupLayout>
+              </af:panelGroupLayout>
             </af:panelHeader>
             <af:table value="#{bindings.OppurtunityDashboardUser2.collectionModel}" var="row"
                       rows="#{bindings.OppurtunityDashboardUser2.rangeSize}"
@@ -137,18 +143,19 @@
           <af:panelGroupLayout layout="vertical" id="pgl1">
             <af:panelGroupLayout layout="vertical" id="pgl2">
               <af:panelHeader text="Customers" id="ph2">
-                <af:quickQuery label="Search" searchDesc="Search" id="qryId2"
-                               value="#{bindings.ImplicitViewCriteriaQuery1.quickQueryDescriptor}"
-                               model="#{bindings.ImplicitViewCriteriaQuery1.queryModel}"
-                               queryListener="#{bindings.ImplicitViewCriteriaQuery1.processQuery}">
-                  <f:facet name="end">
-                    <af:commandLink text="Advanced" rendered="false" id="cl2"/>
-                  </f:facet>
-                </af:quickQuery>
-                <af:button text="Create Customer" id="b2" windowHeight="550"
-                           windowWidth="1200" useWindow="true" windowEmbedStyle="inlineDocument"
-                           windowModalityType="applicationModal" actionListener="#{bindings.CreateInsert.execute}"
-                           action="create_customer"/>
+                <af:panelGroupLayout id="pgl8" layout="horizontal">
+                  <af:quickQuery label="Search" searchDesc="Search" id="qryId2"
+                                 value="#{bindings.ImplicitViewCriteriaQuery1.quickQueryDescriptor}"
+                                 model="#{bindings.ImplicitViewCriteriaQuery1.queryModel}"
+                                 queryListener="#{bindings.ImplicitViewCriteriaQuery1.processQuery}">
+                    <f:facet name="end">
+                      <af:commandLink text="Advanced" rendered="false" id="cl2"/>
+                    </f:facet>
+                  </af:quickQuery>
+                  <af:button text="Create Customer" id="b2" windowHeight="550" windowWidth="1200" useWindow="true"
+                             windowEmbedStyle="inlineDocument" windowModalityType="applicationModal"
+                             actionListener="#{bindings.CreateInsert.execute}" action="create_customer"/>
+                </af:panelGroupLayout>
               </af:panelHeader>
               <af:table value="#{bindings.CustomerId_Address_ViewObj1.collectionModel}" var="row"
                         rows="#{bindings.CustomerId_Address_ViewObj1.rangeSize}"

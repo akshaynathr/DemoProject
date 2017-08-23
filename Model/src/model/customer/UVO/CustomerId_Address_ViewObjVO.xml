@@ -45,7 +45,14 @@
     EntityAttrName="Ceo"
     EntityUsage="CustomerEO"
     AliasName="CEO"
-    IsQueriable="false"/>
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="50"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="CustomerId"
     IsUpdateable="false"
@@ -75,41 +82,80 @@
     PrecisionRule="true"
     EntityAttrName="CustomerName"
     EntityUsage="CustomerEO"
-    AliasName="CUSTOMER_NAME"/>
+    AliasName="CUSTOMER_NAME">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="50"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="CustomerTypeId"
     PrecisionRule="true"
     EntityAttrName="CustomerTypeId"
     EntityUsage="CustomerEO"
-    AliasName="CUSTOMER_TYPE_ID"/>
+    AliasName="CUSTOMER_TYPE_ID">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="50"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Email"
     PrecisionRule="true"
     EntityAttrName="Email"
     EntityUsage="CustomerEO"
     AliasName="EMAIL"
-    IsQueriable="false"/>
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="50"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Fax"
     PrecisionRule="true"
     EntityAttrName="Fax"
     EntityUsage="CustomerEO"
     AliasName="FAX"
-    IsQueriable="false"/>
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="50"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="IsActive"
     PrecisionRule="true"
     EntityAttrName="IsActive"
     EntityUsage="CustomerEO"
     AliasName="IS_ACTIVE"
-    IsQueriable="false"/>
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="50"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="LastUpdatedBy"
     PrecisionRule="true"
     EntityAttrName="LastUpdatedBy"
     EntityUsage="CustomerEO"
     AliasName="LAST_UPDATED_BY"
-    IsQueriable="false"/>
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties/>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="LastUpdatedOn"
     PrecisionRule="true"
@@ -123,40 +169,82 @@
     EntityAttrName="NoOfEmployees"
     EntityUsage="CustomerEO"
     AliasName="NO_OF_EMPLOYEES"
-    IsQueriable="false"/>
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="50"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ParentCompany"
     PrecisionRule="true"
     EntityAttrName="ParentCompany"
     EntityUsage="CustomerEO"
-    AliasName="PARENT_COMPANY"/>
+    AliasName="PARENT_COMPANY">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="50"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="PrimaryAddressId"
     PrecisionRule="true"
     EntityAttrName="PrimaryAddressId"
     EntityUsage="CustomerEO"
     AliasName="PRIMARY_ADDRESS_ID"
-    IsQueriable="false"/>
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="50"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="PrimaryContactId"
     PrecisionRule="true"
     EntityAttrName="PrimaryContactId"
     EntityUsage="CustomerEO"
     AliasName="PRIMARY_CONTACT_ID"
-    IsQueriable="false"/>
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="50"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ShippingAddressId"
     PrecisionRule="true"
     EntityAttrName="ShippingAddressId"
     EntityUsage="CustomerEO"
-    AliasName="SHIPPING_ADDRESS_ID"/>
+    AliasName="SHIPPING_ADDRESS_ID">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="50"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Url"
     PrecisionRule="true"
     EntityAttrName="Url"
     EntityUsage="CustomerEO"
     AliasName="URL"
-    IsQueriable="false"/>
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="50"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="VersionNo"
     PrecisionRule="true"
@@ -176,43 +264,92 @@
     PrecisionRule="true"
     EntityAttrName="City"
     EntityUsage="AddressEO"
-    AliasName="CITY"/>
+    AliasName="CITY">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="50"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Country"
     PrecisionRule="true"
     EntityAttrName="Country"
     EntityUsage="AddressEO"
-    AliasName="COUNTRY"/>
+    AliasName="COUNTRY">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="50"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="House"
     PrecisionRule="true"
     EntityAttrName="House"
     EntityUsage="AddressEO"
-    AliasName="HOUSE"/>
+    AliasName="HOUSE">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="50"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Locality"
     PrecisionRule="true"
     EntityAttrName="Locality"
     EntityUsage="AddressEO"
-    AliasName="LOCALITY"/>
+    AliasName="LOCALITY">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="50"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Pincode"
     PrecisionRule="true"
     EntityAttrName="Pincode"
     EntityUsage="AddressEO"
-    AliasName="PINCODE"/>
+    AliasName="PINCODE">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="50"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="State"
     PrecisionRule="true"
     EntityAttrName="State"
     EntityUsage="AddressEO"
-    AliasName="STATE"/>
+    AliasName="STATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="50"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Street"
     PrecisionRule="true"
     EntityAttrName="Street"
     EntityUsage="AddressEO"
-    AliasName="STREET"/>
+    AliasName="STREET">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="50"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.customer.UVO.common.CustomerId_Address_ViewObjVOMsgBundle"/>

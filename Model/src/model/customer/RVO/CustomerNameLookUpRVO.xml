@@ -3,7 +3,7 @@
 <!---->
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="SalesStageLookupVO"
+  Name="CustomerNameLookUpRVO"
   Version="12.2.1.12.24"
   InheritPersonalization="merge"
   BindingStyle="OracleName"
@@ -15,48 +15,46 @@
   <Properties>
     <SchemaBasedProperties>
       <LABEL
-        ResId="SalesStageLookupVO_LABEL"/>
+        ResId="CustomerNameLookUpRVO_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
   <SQLQuery><![CDATA[SELECT  
-    LOOKUPS.LOOKUP_ID,  
-    LOOKUPS.POSSIBLE_VALUE  
+    CUSTOMERS.CUSTOMER_ID,  
+    CUSTOMERS.CUSTOMER_NAME  
 FROM  
-    LOOKUPS  
+    CUSTOMERS  
 WHERE  
-    LOOKUPS.LOOKUP_CATEGORY = 'SALES_STAGE']]></SQLQuery>
+    CUSTOMERS.IS_ACTIVE != 'n']]></SQLQuery>
   <ViewAttribute
-    Name="LookupId"
+    Name="CustomerId"
     IsUpdateable="false"
     IsPersistent="false"
     PrecisionRule="true"
-    Precision="10"
-    Scale="0"
     Type="java.lang.Long"
-    ColumnType="NUMBER"
-    AliasName="LOOKUP_ID"
-    Expression="LOOKUP_ID"
+    ColumnType="LONGINT"
+    AliasName="CUSTOMER_ID"
+    Expression="CUSTOMER_ID"
     SQLType="NUMERIC"/>
   <ViewAttribute
-    Name="PossibleValue"
+    Name="CustomerName"
     IsUpdateable="false"
     IsPersistent="false"
     PrecisionRule="true"
     Precision="50"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    AliasName="POSSIBLE_VALUE"
-    Expression="POSSIBLE_VALUE"
+    AliasName="CUSTOMER_NAME"
+    Expression="CUSTOMER_NAME"
     SQLType="VARCHAR">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
   </ViewAttribute>
   <AttrArray Name="KeyAttributes">
-    <Item Value="LookupId"/>
+    <Item Value="CustomerId"/>
   </AttrArray>
   <ResourceBundle>
     <PropertiesBundle
-      PropertiesFile="model.customer.RVO.common.SalesStageLookupVOMsgBundle"/>
+      PropertiesFile="model.customer.RVO.common.CustomerNameLookUpRVOMsgBundle"/>
   </ResourceBundle>
 </ViewObject>

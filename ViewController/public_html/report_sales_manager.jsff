@@ -1,10 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
-  <af:link text="back" id="l1" action="back"/>
-  <dvt:pieChart id="pieChart1" var="row" value="#{bindings.RevenueItem1.collectionModel}" title="Quarterwise Revenue"
-                footnote="Quarter">
-    <dvt:chartLegend id="cl1"/>
-    <dvt:pieDataItem id="di1" label="#{row.QuarterNo}" value="#{row.Revenue}"/>
-  </dvt:pieChart>
+  <af:panelGroupLayout id="pgl1" layout="vertical" inlineStyle="background-color:White;">
+    <af:button text="Dashboard" id="b1" icon="/icons/QUICK-icon-55344.png" action="back"/>
+    <dvt:pieChart id="pieChart1" var="row" value="#{bindings.RevenueItem1.collectionModel}" title="Quarterwise Revenue"
+                  threeDEffect="on" hoverBehavior="dim" inlineStyle="color:#000;">
+      <dvt:chartLegend id="cl1"/>
+      <dvt:pieDataItem id="di1" label="#{row.QuarterNo}" value="#{row.Revenue}"/>
+    </dvt:pieChart>
+  </af:panelGroupLayout>
 </ui:composition>

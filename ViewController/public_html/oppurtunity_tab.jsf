@@ -9,219 +9,151 @@
         <af:panelTabbed position="start" id="pt1">
           <af:showDetailItem id="tab1" text="Opportunity Details" icon="/icons/OPPURTUNITY.png">
             <af:panelFormLayout id="pfl1">
-              <af:inputText value="#{bindings.OppurtunityName.inputValue}"
-                            label="#{bindings.OppurtunityName.hints.label}"
+              <af:inputText value="#{bindings.OppurtunityName.inputValue}" label="Oppurtunity Name"
                             required="#{bindings.OppurtunityName.hints.mandatory}" readOnly="true"
                             columns="#{bindings.OppurtunityName.hints.displayWidth}"
                             maximumLength="#{bindings.OppurtunityName.hints.precision}"
                             shortDesc="#{bindings.OppurtunityName.hints.tooltip}" id="it1">
                 <f:validator binding="#{bindings.OppurtunityName.validator}"/>
               </af:inputText>
-              <af:inputText value="#{bindings.OpportunityId.inputValue}" label="#{bindings.OpportunityId.hints.label}"
-                            required="#{bindings.OpportunityId.hints.mandatory}" readOnly="true"
-                            columns="#{bindings.OpportunityId.hints.displayWidth}"
-                            maximumLength="#{bindings.OpportunityId.hints.precision}"
-                            shortDesc="#{bindings.OpportunityId.hints.tooltip}" id="it2">
-                <f:validator binding="#{bindings.OpportunityId.validator}"/>
-                <af:convertNumber groupingUsed="false" pattern="#{bindings.OpportunityId.format}"/>
-              </af:inputText>
-              <af:inputText value="#{bindings.CustomerId.inputValue}" label="#{bindings.CustomerId.hints.label}"
-                            required="#{bindings.CustomerId.hints.mandatory}" readOnly="true"
-                            columns="#{bindings.CustomerId.hints.displayWidth}"
-                            maximumLength="#{bindings.CustomerId.hints.precision}"
-                            shortDesc="#{bindings.CustomerId.hints.tooltip}" id="it3">
-                <f:validator binding="#{bindings.CustomerId.validator}"/>
-                <af:convertNumber groupingUsed="false" pattern="#{bindings.CustomerId.format}"/>
-              </af:inputText>
-              <af:inputText value="#{bindings.WinProbablity.inputValue}" label="#{bindings.WinProbablity.hints.label}"
-                            required="#{bindings.WinProbablity.hints.mandatory}" readOnly="true"
-                            columns="#{bindings.WinProbablity.hints.displayWidth}"
-                            maximumLength="#{bindings.WinProbablity.hints.precision}"
-                            shortDesc="#{bindings.WinProbablity.hints.tooltip}" id="it4">
-                <f:validator binding="#{bindings.WinProbablity.validator}"/>
-                <af:convertNumber groupingUsed="false" pattern="#{bindings.WinProbablity.format}"/>
-              </af:inputText>
-              <af:inputDate value="#{bindings.StartDate.inputValue}" readOnly="true"
-                            label="#{bindings.StartDate.hints.label}" required="#{bindings.StartDate.hints.mandatory}"
+              <af:inputDate value="#{bindings.StartDate.inputValue}" readOnly="true" label="Start Date"
+                            required="#{bindings.StartDate.hints.mandatory}"
                             columns="#{bindings.StartDate.hints.displayWidth}"
                             shortDesc="#{bindings.StartDate.hints.tooltip}" id="id1">
                 <f:validator binding="#{bindings.StartDate.validator}"/>
                 <af:convertDateTime pattern="#{bindings.StartDate.format}"/>
               </af:inputDate>
-              <af:inputDate value="#{bindings.EndDate.inputValue}" readOnly="true"
-                            label="#{bindings.EndDate.hints.label}" required="#{bindings.EndDate.hints.mandatory}"
+              <af:inputDate value="#{bindings.EndDate.inputValue}" readOnly="true" label="End Date"
+                            required="#{bindings.EndDate.hints.mandatory}"
                             columns="#{bindings.EndDate.hints.displayWidth}"
                             shortDesc="#{bindings.EndDate.hints.tooltip}" id="id2">
                 <f:validator binding="#{bindings.EndDate.validator}"/>
                 <af:convertDateTime pattern="#{bindings.EndDate.format}"/>
               </af:inputDate>
-              <af:inputText value="#{bindings.SalesStageId.inputValue}" label="#{bindings.SalesStageId.hints.label}"
-                            required="#{bindings.SalesStageId.hints.mandatory}" readOnly="true"
-                            columns="#{bindings.SalesStageId.hints.displayWidth}"
-                            maximumLength="#{bindings.SalesStageId.hints.precision}"
-                            shortDesc="#{bindings.SalesStageId.hints.tooltip}" id="it5">
-                <f:validator binding="#{bindings.SalesStageId.validator}"/>
-                <af:convertNumber groupingUsed="false" pattern="#{bindings.SalesStageId.format}"/>
+              <af:inputText value="#{bindings.WinProbablity.inputValue}" label="Win Probability"
+                            required="#{bindings.WinProbablity.hints.mandatory}" readOnly="true"
+                            columns="#{bindings.WinProbablity.hints.displayWidth}"
+                            maximumLength="#{bindings.WinProbablity.hints.precision}"
+                            shortDesc="#{bindings.WinProbablity.hints.tooltip}" id="it2">
+                <f:validator binding="#{bindings.WinProbablity.validator}"/>
+                <af:convertNumber groupingUsed="false" pattern="#{bindings.WinProbablity.format}"/>
               </af:inputText>
+              <af:selectOneChoice value="#{bindings.SalesStageId.inputValue}" label="#{bindings.SalesStageId.label}"
+                                  required="#{bindings.SalesStageId.hints.mandatory}"
+                                  shortDesc="#{bindings.SalesStageId.hints.tooltip}" readOnly="true" id="soc1">
+                <f:selectItems value="#{bindings.SalesStageId.items}" id="si1"/>
+                <f:validator binding="#{bindings.SalesStageId.validator}"/>
+              </af:selectOneChoice>
               <af:selectOneChoice value="#{bindings.SalesMethodId.inputValue}" label="#{bindings.SalesMethodId.label}"
                                   required="#{bindings.SalesMethodId.hints.mandatory}"
-                                  shortDesc="#{bindings.SalesMethodId.hints.tooltip}" readOnly="true" id="soc1">
-                <f:selectItems value="#{bindings.SalesMethodId.items}" id="si1"/>
+                                  shortDesc="#{bindings.SalesMethodId.hints.tooltip}" readOnly="true" id="soc2">
+                <f:selectItems value="#{bindings.SalesMethodId.items}" id="si2"/>
                 <f:validator binding="#{bindings.SalesMethodId.validator}"/>
               </af:selectOneChoice>
               <af:selectOneChoice value="#{bindings.SalesChannelId.inputValue}" label="#{bindings.SalesChannelId.label}"
                                   required="#{bindings.SalesChannelId.hints.mandatory}"
-                                  shortDesc="#{bindings.SalesChannelId.hints.tooltip}" readOnly="true" id="soc2">
-                <f:selectItems value="#{bindings.SalesChannelId.items}" id="si2"/>
+                                  shortDesc="#{bindings.SalesChannelId.hints.tooltip}" readOnly="true" id="soc3">
+                <f:selectItems value="#{bindings.SalesChannelId.items}" id="si3"/>
                 <f:validator binding="#{bindings.SalesChannelId.validator}"/>
               </af:selectOneChoice>
               <af:inputText value="#{bindings.Revenue.inputValue}" label="#{bindings.Revenue.hints.label}"
                             required="#{bindings.Revenue.hints.mandatory}" readOnly="true"
                             columns="#{bindings.Revenue.hints.displayWidth}"
                             maximumLength="#{bindings.Revenue.hints.precision}"
-                            shortDesc="#{bindings.Revenue.hints.tooltip}" id="it6">
+                            shortDesc="#{bindings.Revenue.hints.tooltip}" id="it3">
                 <f:validator binding="#{bindings.Revenue.validator}"/>
                 <af:convertNumber groupingUsed="false" pattern="#{bindings.Revenue.format}"/>
               </af:inputText>
-              <af:inputText value="#{bindings.BestCaseRevenue.inputValue}"
-                            label="#{bindings.BestCaseRevenue.hints.label}"
+              <af:inputText value="#{bindings.BestCaseRevenue.inputValue}" label="Best Case Revenue"
                             required="#{bindings.BestCaseRevenue.hints.mandatory}" readOnly="true"
                             columns="#{bindings.BestCaseRevenue.hints.displayWidth}"
                             maximumLength="#{bindings.BestCaseRevenue.hints.precision}"
-                            shortDesc="#{bindings.BestCaseRevenue.hints.tooltip}" id="it7">
+                            shortDesc="#{bindings.BestCaseRevenue.hints.tooltip}" id="it4">
                 <f:validator binding="#{bindings.BestCaseRevenue.validator}"/>
                 <af:convertNumber groupingUsed="false" pattern="#{bindings.BestCaseRevenue.format}"/>
               </af:inputText>
-              <af:inputText value="#{bindings.WorstCaseRevenue.inputValue}"
-                            label="#{bindings.WorstCaseRevenue.hints.label}"
+              <af:inputText value="#{bindings.WorstCaseRevenue.inputValue}" label="Worst Case Revenue"
                             required="#{bindings.WorstCaseRevenue.hints.mandatory}" readOnly="true"
                             columns="#{bindings.WorstCaseRevenue.hints.displayWidth}"
                             maximumLength="#{bindings.WorstCaseRevenue.hints.precision}"
-                            shortDesc="#{bindings.WorstCaseRevenue.hints.tooltip}" id="it8">
+                            shortDesc="#{bindings.WorstCaseRevenue.hints.tooltip}" id="it5">
                 <f:validator binding="#{bindings.WorstCaseRevenue.validator}"/>
                 <af:convertNumber groupingUsed="false" pattern="#{bindings.WorstCaseRevenue.format}"/>
               </af:inputText>
-              <af:inputText value="#{bindings.IsBudgeted.inputValue}" label="#{bindings.IsBudgeted.hints.label}"
+              <af:inputText value="#{bindings.IsBudgeted.inputValue}" label="Is Budgeted"
                             required="#{bindings.IsBudgeted.hints.mandatory}" readOnly="true"
                             columns="#{bindings.IsBudgeted.hints.displayWidth}"
                             maximumLength="#{bindings.IsBudgeted.hints.precision}"
-                            shortDesc="#{bindings.IsBudgeted.hints.tooltip}" id="it9">
+                            shortDesc="#{bindings.IsBudgeted.hints.tooltip}" id="it6">
                 <f:validator binding="#{bindings.IsBudgeted.validator}"/>
               </af:inputText>
-              <af:inputText value="#{bindings.BudgetAmount.inputValue}" label="#{bindings.BudgetAmount.hints.label}"
+              <af:inputText value="#{bindings.BudgetAmount.inputValue}" label="Budget Amount"
                             required="#{bindings.BudgetAmount.hints.mandatory}" readOnly="true"
                             columns="#{bindings.BudgetAmount.hints.displayWidth}"
                             maximumLength="#{bindings.BudgetAmount.hints.precision}"
-                            shortDesc="#{bindings.BudgetAmount.hints.tooltip}" id="it10">
+                            shortDesc="#{bindings.BudgetAmount.hints.tooltip}" id="it7">
                 <f:validator binding="#{bindings.BudgetAmount.validator}"/>
                 <af:convertNumber groupingUsed="false" pattern="#{bindings.BudgetAmount.format}"/>
               </af:inputText>
-              <af:inputText value="#{bindings.EstimatedDurationInDays.inputValue}"
-                            label="#{bindings.EstimatedDurationInDays.hints.label}"
+              <af:inputText value="#{bindings.EstimatedDurationInDays.inputValue}" label="Estimated Duration"
                             required="#{bindings.EstimatedDurationInDays.hints.mandatory}" readOnly="true"
                             columns="#{bindings.EstimatedDurationInDays.hints.displayWidth}"
                             maximumLength="#{bindings.EstimatedDurationInDays.hints.precision}"
-                            shortDesc="#{bindings.EstimatedDurationInDays.hints.tooltip}" id="it11">
+                            shortDesc="#{bindings.EstimatedDurationInDays.hints.tooltip}" id="it8">
                 <f:validator binding="#{bindings.EstimatedDurationInDays.validator}"/>
                 <af:convertNumber groupingUsed="false" pattern="#{bindings.EstimatedDurationInDays.format}"/>
               </af:inputText>
-              <af:inputText value="#{bindings.RiskLevel.inputValue}" label="#{bindings.RiskLevel.hints.label}"
+              <af:inputText value="#{bindings.RiskLevel.inputValue}" label="Risk Level"
                             required="#{bindings.RiskLevel.hints.mandatory}" readOnly="true"
                             columns="#{bindings.RiskLevel.hints.displayWidth}"
                             maximumLength="#{bindings.RiskLevel.hints.precision}"
-                            shortDesc="#{bindings.RiskLevel.hints.tooltip}" id="it12">
+                            shortDesc="#{bindings.RiskLevel.hints.tooltip}" id="it9">
                 <f:validator binding="#{bindings.RiskLevel.validator}"/>
               </af:inputText>
-              <af:inputText value="#{bindings.IsIncluded.inputValue}" label="#{bindings.IsIncluded.hints.label}"
+              <af:inputText value="#{bindings.IsIncluded.inputValue}" label="Is Included"
                             required="#{bindings.IsIncluded.hints.mandatory}" readOnly="true"
                             columns="#{bindings.IsIncluded.hints.displayWidth}"
                             maximumLength="#{bindings.IsIncluded.hints.precision}"
-                            shortDesc="#{bindings.IsIncluded.hints.tooltip}" id="it13">
+                            shortDesc="#{bindings.IsIncluded.hints.tooltip}" id="it10">
                 <f:validator binding="#{bindings.IsIncluded.validator}"/>
               </af:inputText>
-              <af:inputText value="#{bindings.CreatedById.inputValue}" label="#{bindings.CreatedById.hints.label}"
+              <af:inputText value="#{bindings.CreatedById.inputValue}" label="Created By"
                             required="#{bindings.CreatedById.hints.mandatory}" readOnly="true"
                             columns="#{bindings.CreatedById.hints.displayWidth}"
                             maximumLength="#{bindings.CreatedById.hints.precision}"
-                            shortDesc="#{bindings.CreatedById.hints.tooltip}" id="it14">
+                            shortDesc="#{bindings.CreatedById.hints.tooltip}" id="it11">
                 <f:validator binding="#{bindings.CreatedById.validator}"/>
                 <af:convertNumber groupingUsed="false" pattern="#{bindings.CreatedById.format}"/>
               </af:inputText>
-              <af:inputText value="#{bindings.IsSuccess.inputValue}" label="#{bindings.IsSuccess.hints.label}"
+              <af:inputText value="#{bindings.IsSuccess.inputValue}" label="Is Success"
                             required="#{bindings.IsSuccess.hints.mandatory}" readOnly="true"
                             columns="#{bindings.IsSuccess.hints.displayWidth}"
                             maximumLength="#{bindings.IsSuccess.hints.precision}"
-                            shortDesc="#{bindings.IsSuccess.hints.tooltip}" id="it15">
+                            shortDesc="#{bindings.IsSuccess.hints.tooltip}" id="it12">
                 <f:validator binding="#{bindings.IsSuccess.validator}"/>
               </af:inputText>
               <af:inputText value="#{bindings.PrimaryContact.inputValue}" label="#{bindings.PrimaryContact.hints.label}"
                             required="#{bindings.PrimaryContact.hints.mandatory}" readOnly="true"
                             columns="#{bindings.PrimaryContact.hints.displayWidth}"
                             maximumLength="#{bindings.PrimaryContact.hints.precision}"
-                            shortDesc="#{bindings.PrimaryContact.hints.tooltip}" id="it16">
+                            shortDesc="#{bindings.PrimaryContact.hints.tooltip}" id="it13">
                 <f:validator binding="#{bindings.PrimaryContact.validator}"/>
                 <af:convertNumber groupingUsed="false" pattern="#{bindings.PrimaryContact.format}"/>
               </af:inputText>
-              <af:inputText value="#{bindings.CreatedBy.inputValue}" label="#{bindings.CreatedBy.hints.label}"
-                            required="#{bindings.CreatedBy.hints.mandatory}" readOnly="true"
-                            columns="#{bindings.CreatedBy.hints.displayWidth}"
-                            maximumLength="#{bindings.CreatedBy.hints.precision}"
-                            shortDesc="#{bindings.CreatedBy.hints.tooltip}" id="it17">
-                <f:validator binding="#{bindings.CreatedBy.validator}"/>
-              </af:inputText>
-              <af:inputDate value="#{bindings.CreatedOn.inputValue}" readOnly="true"
-                            label="#{bindings.CreatedOn.hints.label}" required="#{bindings.CreatedOn.hints.mandatory}"
-                            columns="#{bindings.CreatedOn.hints.displayWidth}"
-                            shortDesc="#{bindings.CreatedOn.hints.tooltip}" id="id3">
-                <f:validator binding="#{bindings.CreatedOn.validator}"/>
-                <af:convertDateTime pattern="#{bindings.CreatedOn.format}"/>
-              </af:inputDate>
-              <af:inputText value="#{bindings.LastUpdatedBy.inputValue}" label="#{bindings.LastUpdatedBy.hints.label}"
-                            required="#{bindings.LastUpdatedBy.hints.mandatory}" readOnly="true"
-                            columns="#{bindings.LastUpdatedBy.hints.displayWidth}"
-                            maximumLength="#{bindings.LastUpdatedBy.hints.precision}"
-                            shortDesc="#{bindings.LastUpdatedBy.hints.tooltip}" id="it18">
-                <f:validator binding="#{bindings.LastUpdatedBy.validator}"/>
-              </af:inputText>
-              <af:inputDate value="#{bindings.LastUpdatedOn.inputValue}" readOnly="true"
-                            label="#{bindings.LastUpdatedOn.hints.label}"
-                            required="#{bindings.LastUpdatedOn.hints.mandatory}"
-                            columns="#{bindings.LastUpdatedOn.hints.displayWidth}"
-                            shortDesc="#{bindings.LastUpdatedOn.hints.tooltip}" id="id4">
-                <f:validator binding="#{bindings.LastUpdatedOn.validator}"/>
-                <af:convertDateTime pattern="#{bindings.LastUpdatedOn.format}"/>
-              </af:inputDate>
-              <af:inputText value="#{bindings.VersionNo.inputValue}" label="#{bindings.VersionNo.hints.label}"
-                            required="#{bindings.VersionNo.hints.mandatory}" readOnly="true"
-                            columns="#{bindings.VersionNo.hints.displayWidth}"
-                            maximumLength="#{bindings.VersionNo.hints.precision}"
-                            shortDesc="#{bindings.VersionNo.hints.tooltip}" id="it19">
-                <f:validator binding="#{bindings.VersionNo.validator}"/>
-                <af:convertNumber groupingUsed="false" pattern="#{bindings.VersionNo.format}"/>
-              </af:inputText>
-              <af:inputText value="#{bindings.IsActive.inputValue}" label="#{bindings.IsActive.hints.label}"
-                            required="#{bindings.IsActive.hints.mandatory}" readOnly="true"
-                            columns="#{bindings.IsActive.hints.displayWidth}"
-                            maximumLength="#{bindings.IsActive.hints.precision}"
-                            shortDesc="#{bindings.IsActive.hints.tooltip}" id="it20">
-                <f:validator binding="#{bindings.IsActive.validator}"/>
-              </af:inputText>
-              <af:inputText value="#{bindings.DecisionLevelId.inputValue}"
-                            label="#{bindings.DecisionLevelId.hints.label}"
-                            required="#{bindings.DecisionLevelId.hints.mandatory}" readOnly="true"
-                            columns="#{bindings.DecisionLevelId.hints.displayWidth}"
-                            maximumLength="#{bindings.DecisionLevelId.hints.precision}"
-                            shortDesc="#{bindings.DecisionLevelId.hints.tooltip}" id="it21">
+              <af:selectOneChoice value="#{bindings.DecisionLevelId.inputValue}"
+                                  label="#{bindings.DecisionLevelId.label}"
+                                  required="#{bindings.DecisionLevelId.hints.mandatory}"
+                                  shortDesc="#{bindings.DecisionLevelId.hints.tooltip}" readOnly="true" id="soc4">
+                <f:selectItems value="#{bindings.DecisionLevelId.items}" id="si4"/>
                 <f:validator binding="#{bindings.DecisionLevelId.validator}"/>
-                <af:convertNumber groupingUsed="false" pattern="#{bindings.DecisionLevelId.format}"/>
-              </af:inputText>
+              </af:selectOneChoice>
             </af:panelFormLayout>
           </af:showDetailItem>
           <af:showDetailItem id="tab2" text="Customers" icon="/icons/OPPURTUNITY(1).png"/>
           <af:showDetailItem id="tab3" text="Tasks" icon="/icons/business_business-opportunities-128.png"/>
-          <af:showDetailItem id="tab4" text="Notes" icon="icons/notes.png"/>
+          <af:showDetailItem id="tab4" text="Notes" icon="/icons/notes.png"/>
           <af:showDetailItem text="Appointments" id="sdi1" icon="/icons/appointments.png"/>
-          <af:showDetailItem text="Docs" id="sdi2">
+          <af:showDetailItem text="Docs" id="sdi2" icon="icons/attach.png">
             <af:table value="#{bindings.OpportunityDocs1.collectionModel}" var="row"
                       rows="#{bindings.OpportunityDocs1.rangeSize}"
                       emptyText="#{bindings.OpportunityDocs1.viewable ? 'No data to display.' : 'Access Denied.'}"

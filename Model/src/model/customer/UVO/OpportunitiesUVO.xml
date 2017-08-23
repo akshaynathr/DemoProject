@@ -33,7 +33,6 @@
     </Properties>
     <TransientExpression
       Name="VariableScript"
-      trustMode="trusted"
       CodeSourceName="OpportunitiesUVO"/>
   </Variable>
   <ViewAccessor
@@ -43,6 +42,18 @@
   <ViewAccessor
     Name="SalesChannelLookupVO1"
     ViewObjectName="model.customer.RVO.SalesChannelLookupVO"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="SalesStageLookupVO1"
+    ViewObjectName="model.customer.RVO.SalesStageLookupVO"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="InfluenceLevelLookupVO1"
+    ViewObjectName="model.RVO.InfluenceLevelLookupVO"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="CustomerNameLookUpRVO1"
+    ViewObjectName="model.customer.RVO.CustomerNameLookUpRVO"
     RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_SalesMethodId"
@@ -80,6 +91,57 @@
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
+  <ListBinding
+    Name="LOV_SalesStageId"
+    ListVOName="SalesStageLookupVO1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="SalesStageId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="LookupId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="PossibleValue"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_DecisionLevelId"
+    ListVOName="InfluenceLevelLookupVO1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="DecisionLevelId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="LookupId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="PossibleValue"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_CustomerId"
+    ListVOName="CustomerNameLookUpRVO1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="CustomerId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="CustomerId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="CustomerName"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="OpportunityEO"
     Entity="model.customer.EO.OpportunityEO"/>
@@ -96,7 +158,15 @@
     PrecisionRule="true"
     EntityAttrName="CustomerId"
     EntityUsage="OpportunityEO"
-    AliasName="CUSTOMER_ID"/>
+    AliasName="CUSTOMER_ID"
+    LOVName="LOV_CustomerId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="WinProbablity"
     PrecisionRule="true"
@@ -120,7 +190,15 @@
     PrecisionRule="true"
     EntityAttrName="SalesStageId"
     EntityUsage="OpportunityEO"
-    AliasName="SALES_STAGE_ID"/>
+    AliasName="SALES_STAGE_ID"
+    LOVName="LOV_SalesStageId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="SalesMethodId"
     PrecisionRule="true"
@@ -262,7 +340,15 @@
     EntityAttrName="DecisionLevelId"
     EntityUsage="OpportunityEO"
     AliasName="DECISION_LEVEL_ID"
-    IsQueriable="false"/>
+    IsQueriable="false"
+    LOVName="LOV_DecisionLevelId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="OppurtunityName"
     PrecisionRule="true"
@@ -321,6 +407,11 @@
     Name="ContactsOpportunitiesU"
     ViewLink="model.customer.UVO.ContactsOpportunitiesFk2VL"
     Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="CustomersU"
+    ViewLink="model.VL.OpportunityCustomerDisplayVL"
+    Type="oracle.jbo.server.ViewRowImpl"
     IsUpdateable="false"/>
   <DeclarativeWhereClause
     Name="DeclarativeWhereClause">

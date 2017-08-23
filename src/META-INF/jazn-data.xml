@@ -256,6 +256,11 @@
                                 <name>/WEB-INF/salesmanager.xml#test-flow</name>
                                 <actions>view</actions>
                             </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/create-opportunity-flow.xml#create-opportunity-flow</name>
+                                <actions>view</actions>
+                            </permission>
                         </permissions>
                     </grant>
                     <grant>

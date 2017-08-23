@@ -60,6 +60,17 @@
     <view id="report_sales_rep">
       <page>/report_sales_rep.jsff</page>
     </view>
+    <task-flow-call id="create-opportunity-flow">
+      <task-flow-reference>
+        <document>/WEB-INF/create-opportunity-flow.xml</document>
+        <id>create-opportunity-flow</id>
+      </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
+    </task-flow-call>
     <control-flow-rule id="__1">
       <from-activity-id>dashboard</from-activity-id>
       <control-flow-case id="__2">
@@ -92,6 +103,10 @@
       <control-flow-case id="__16">
         <from-outcome>create_customer</from-outcome>
         <to-activity-id>create_customer_flow</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__22">
+        <from-outcome>create_opportunity</from-outcome>
+        <to-activity-id>create-opportunity-flow</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__6">
@@ -127,6 +142,13 @@
       <control-flow-case id="__15">
         <from-outcome>back</from-outcome>
         <to-activity-id>dashboard</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__23">
+      <from-activity-id>create-opportunity-flow</from-activity-id>
+      <control-flow-case id="__24">
+        <from-outcome>create_opportunity_return</from-outcome>
+        <to-activity-id>SalesInside</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>
