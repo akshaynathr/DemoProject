@@ -19,6 +19,11 @@
     <iterator Binds="TasksU2" RangeSize="25" DataControl="AppModuleAMDataControl" id="TasksU2Iterator"/>
     <searchRegion Binds="TasksU2Iterator" Criteria="" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
                   id="TasksU2Query"/>
+    <iterator Binds="ContactsU4" RangeSize="25" DataControl="AppModuleAMDataControl" id="ContactsU4Iterator"/>
+    <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="ContactsU4Iterator" id="ImplicitViewCriteriaQuery3"/>
+    <iterator Binds="CustomersU6" RangeSize="25" DataControl="AppModuleAMDataControl" id="CustomersU6Iterator"/>
+    <iterator Binds="AddressU5" RangeSize="25" DataControl="AppModuleAMDataControl" id="AddressU5Iterator"/>
   </executables>
   <bindings>
     <tree IterBinding="CustomerId_Address_ViewObj1Iterator" id="CustomerId_Address_ViewObj1">
@@ -75,5 +80,84 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <tree IterBinding="ContactsU4Iterator" id="ContactsU4">
+      <nodeDefinition DefName="model.UVO.ContactsUVO" Name="ContactsU40">
+        <AttrNames>
+          <Item Value="FirstName"/>
+          <Item Value="LastName"/>
+          <Item Value="Email"/>
+          <Item Value="WorkPhone"/>
+          <Item Value="MobilePhone"/>
+          <Item Value="AddressId"/>
+          <Item Value="BuyingRoleId"/>
+          <Item Value="DepartmentNameId"/>
+          <Item Value="InfluenceLevelId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="CustomersU6Iterator" id="CustomersU6">
+      <nodeDefinition DefName="model.UVO.CustomersUVO" Name="CustomersU60">
+        <AttrNames>
+          <Item Value="CustomerId"/>
+          <Item Value="CustomerName"/>
+          <Item Value="CustomerTypeId"/>
+          <Item Value="PrimaryContactId"/>
+          <Item Value="Url"/>
+          <Item Value="ParentCompany"/>
+          <Item Value="Ceo"/>
+          <Item Value="NoOfEmployees"/>
+          <Item Value="Fax"/>
+          <Item Value="Email"/>
+          <Item Value="PrimaryAddressId"/>
+          <Item Value="ShippingAddressId"/>
+          <Item Value="CreatedBy"/>
+          <Item Value="CreatedOn"/>
+          <Item Value="LastUpdatedBy"/>
+          <Item Value="LastUpdatedOn"/>
+          <Item Value="VersionNo"/>
+          <Item Value="IsActive"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="AddressU5Iterator" id="AddressId">
+      <AttrNames>
+        <Item Value="AddressId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU5Iterator" id="House">
+      <AttrNames>
+        <Item Value="House"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU5Iterator" id="Street">
+      <AttrNames>
+        <Item Value="Street"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU5Iterator" id="Locality">
+      <AttrNames>
+        <Item Value="Locality"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU5Iterator" id="City">
+      <AttrNames>
+        <Item Value="City"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU5Iterator" id="Pincode">
+      <AttrNames>
+        <Item Value="Pincode"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU5Iterator" id="State">
+      <AttrNames>
+        <Item Value="State"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU5Iterator" id="Country">
+      <AttrNames>
+        <Item Value="Country"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>

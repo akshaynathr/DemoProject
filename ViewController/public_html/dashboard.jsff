@@ -48,22 +48,35 @@
           <af:image source="#{resource['images:qual_approved_32_full.png']}" id="i2"/>
           <af:spacer width="10" height="10" id="s6"/>
           <af:spacer width="10" height="10" id="s7"/>
-          <af:outputText value="38 Closed" id="ot8" inlineStyle="color:Gray; font-weight:bold; font-size:large;"/>
-        </af:panelGroupLayout>
-        <af:panelGroupLayout id="pgl7" layout="horizontal" inlineStyle="font-size:large;">
-          <af:spacer width="10" height="10" id="s13"/>
-          <af:image source="#{resource['images:qual_info_32_full.png']}" id="i3"/>
-          <af:spacer width="10" height="10" id="s8"/>
-          <af:spacer width="10" height="10" id="s9"/>
-          <af:outputText value="6 Pending" id="ot7" inlineStyle="font-weight:bolder; color:Gray;"/>
+            <af:panelFormLayout id="pfl5"
+                                inlineStyle="font-weight:bolder; line-height:normal; text-align:match-parent; text-indent:3pt; color:Gray; font-size:large;">
+              <af:panelGroupLayout id="pgl7">
+                <af:outputText value="#{bindings.Selectobjects04.inputValue}"
+                               shortDesc="#{bindings.Selectobjects04.hints.tooltip}" id="ot9">
+                  <af:convertNumber groupingUsed="false" pattern="#{bindings.Selectobjects04.format}"/>
+                </af:outputText>
+                <af:spacer width="10" height="10" id="s8"/>
+                <af:outputText value="Closed" id="ot8" inlineStyle="color:Gray; font-weight:bold; font-size:large;"/>
+              </af:panelGroupLayout>
+            </af:panelFormLayout>
         </af:panelGroupLayout>
         <af:panelGroupLayout id="pgl8" layout="horizontal">
           <af:spacer width="10" height="10" id="s14"/>
           <af:image source="#{resource['images:qual_reject_32_full.png']}" id="i4"/>
           <af:spacer width="10" height="10" id="s10"/>
           <af:spacer width="10" height="10" id="s11"/>
-          <af:outputText value="2 Rejected" id="ot9"
-                         inlineStyle="font-weight:bolder; line-height:normal; text-align:match-parent; text-indent:3pt; color:Gray; font-size:large;"/>
+            <af:panelFormLayout id="pfl4">
+              <af:panelGroupLayout id="pgl29">
+                <af:outputText value="#{bindings.Selectobjects03.inputValue}"
+                               shortDesc="#{bindings.Selectobjects03.hints.tooltip}" id="ot15"
+                               inlineStyle="font-weight:bolder; line-height:normal; text-align:match-parent; text-indent:3pt; color:Gray; font-size:large;">
+                  <af:convertNumber groupingUsed="false" pattern="#{bindings.Selectobjects03.format}"/>
+                </af:outputText>
+                <af:spacer width="10" height="10" id="s9"/>
+                <h:outputText value="Open" id="ot22"
+                              style="font-weight:bolder; line-height:normal; text-align:match-parent; text-indent:3pt; color:Gray; font-size:large;"/>
+              </af:panelGroupLayout>
+            </af:panelFormLayout>
         </af:panelGroupLayout>
       </af:panelGroupLayout>
     </af:panelGroupLayout>
@@ -125,8 +138,14 @@
           <af:spacer width="10" height="10" id="s18"/>
           <af:panelGroupLayout id="pgl16" layout="vertical">
             <af:outputText value="Completed" id="ot13"/>
-            <af:outputText value="13" id="ot16" inlineStyle="font-weight:bolder; font-size:xx-large; color:#ABEBD9;"/>
-          </af:panelGroupLayout>
+              <af:panelFormLayout id="pfl3">
+                <af:outputText value="#{bindings.Selectobjects02.inputValue}"
+                               shortDesc="#{bindings.Selectobjects02.hints.tooltip}" id="ot6"
+                               inlineStyle="font-weight:bolder; font-size:xx-large; color:#ABEBD9;">
+                  <af:convertNumber groupingUsed="false" pattern="#{bindings.Selectobjects02.format}"/>
+                </af:outputText>
+              </af:panelFormLayout>
+            </af:panelGroupLayout>
         </af:panelGroupLayout>
       </af:panelGroupLayout>
     </af:panelGroupLayout>
@@ -144,7 +163,13 @@
           <af:spacer width="10" height="10" id="s24"/>
           <af:panelGroupLayout id="pgl19" layout="vertical">
             <af:outputText value="Today" id="ot18" inlineStyle="color:Gray;"/>
-            <af:outputText value="1" id="ot19" inlineStyle="font-weight:bolder; font-size:xx-large; color:#ABEBD9;"/>
+              <af:panelFormLayout id="pfl7">
+                <af:outputText value="#{bindings.Selectobjects06.inputValue}"
+                               shortDesc="#{bindings.Selectobjects06.hints.tooltip}" id="ot24"
+                               inlineStyle="font-weight:bolder; font-size:xx-large; color:#ABEBD9;">
+                  <af:convertNumber groupingUsed="false" pattern="#{bindings.Selectobjects06.format}"/>
+                </af:outputText>
+              </af:panelFormLayout>
           </af:panelGroupLayout>
         </af:panelGroupLayout>
       </af:panelGroupLayout>
@@ -165,7 +190,13 @@
           <af:panelGroupLayout id="pgl24" layout="vertical">
             <af:panelGroupLayout id="pgl25" layout="vertical">
               <af:outputText value="Total" id="ot21"/>
-              <af:outputText value="35" id="ot22" inlineStyle="font-weight:bolder; font-size:xx-large; color:#4a85c5;"/>
+                <af:panelFormLayout id="pfl6">
+                  <af:outputText value="#{bindings.Selectobjects05.inputValue}"
+                                 shortDesc="#{bindings.Selectobjects05.hints.tooltip}" id="ot16"
+                                 inlineStyle="font-weight:bolder; font-size:xx-large; color:#4a85c5;">
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.Selectobjects05.format}"/>
+                  </af:outputText>
+                </af:panelFormLayout>
             </af:panelGroupLayout>
           </af:panelGroupLayout>
         </af:panelGroupLayout>

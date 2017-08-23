@@ -18,7 +18,6 @@
     <Attr Name="_appModuleNames3" Value="model.manymany.AppModuleAM"/>
     <Attr Name="_appModuleNames4" Value="model.master.AM"/>
     <Attr Name="_appModuleNames5" Value="model.docs.AppModuleAM"/>
-    <Attr Name="_appModuleNames6" Value="model.lookup.AppModuleAM"/>
   </DesignTime>
   <Containee
     Name="AM"
@@ -64,14 +63,6 @@
     <DesignTime>
       <Attr Name="_VO" Value="true"/>
       <Attr Name="_VL" Value="true"/>
-    </DesignTime>
-  </Containee>
-  <Containee
-    Name="VO"
-    PackageName="model.customer.VO"
-    ObjectType="JboPackage">
-    <DesignTime>
-      <Attr Name="_VO" Value="true"/>
     </DesignTime>
   </Containee>
   <Containee
