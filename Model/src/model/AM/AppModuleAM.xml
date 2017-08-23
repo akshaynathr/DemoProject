@@ -222,9 +222,6 @@
     Name="OpportunityCustomerDisplayR1"
     ViewObjectName="model.customer.RVO.OpportunityCustomerDisplayRVO"/>
   <ViewUsage
-    Name="AddressU2"
-    ViewObjectName="model.UVO.AddressUVO"/>
-  <ViewUsage
     Name="OpportunitiesU6"
     ViewObjectName="model.customer.UVO.OpportunitiesUVO"/>
   <ViewUsage
@@ -233,6 +230,12 @@
   <ViewUsage
     Name="CustomerNameLookUpR1"
     ViewObjectName="model.customer.RVO.CustomerNameLookUpRVO"/>
+  <ViewUsage
+    Name="AddressU2"
+    ViewObjectName="model.UVO.AddressUVO"/>
+  <ViewUsage
+    Name="OpportunityLookUpR1"
+    ViewObjectName="model.customer.RVO.OpportunityLookUpRVO"/>
   <ViewLinkUsage
     Name="UsersFk1VL1"
     ViewLinkObjectName="model.UVO.UsersFk1VL"

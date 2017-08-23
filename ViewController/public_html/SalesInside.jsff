@@ -193,9 +193,71 @@
           </af:panelGroupLayout>
         </af:showDetailItem>
         <af:showDetailItem text="Tasks" id="sdi4" icon="/icons/tasks.png"
-                           disclosed="#{(pageFlowScope.sales_manager_tabVal==4)?true:false}"/>
+                           disclosed="#{(pageFlowScope.sales_manager_tabVal==5)?true:false}">
+          <af:table value="#{bindings.TasksU2.collectionModel}" var="row" rows="#{bindings.TasksU2.rangeSize}"
+                    emptyText="#{bindings.TasksU2.viewable ? 'No data to display.' : 'Access Denied.'}"
+                    rowBandingInterval="0" selectedRowKeys="#{bindings.TasksU2.collectionModel.selectedRow}"
+                    selectionListener="#{bindings.TasksU2.collectionModel.makeCurrent}" rowSelection="single"
+                    fetchSize="#{bindings.TasksU2.rangeSize}" filterModel="#{bindings.TasksU2Query.queryDescriptor}"
+                    filterVisible="true" queryListener="#{bindings.TasksU2Query.processQuery}" varStatus="vs" id="t4"
+                    partialTriggers="l2">
+            <af:column sortProperty="#{bindings.TasksU2.hints.TaskName.name}" filterable="true" sortable="true"
+                       headerText="#{bindings.TasksU2.hints.TaskName.label}" id="c14">
+              <af:link text="#{row.TaskName}" id="l2" action="edit_tasks" useWindow="true"
+                       windowEmbedStyle="inlineDocument" windowModalityType="applicationModal" windowHeight="600"
+                       windowWidth="800"/>
+            </af:column>
+            <af:column sortProperty="#{bindings.TasksU2.hints.DueDate.name}" filterable="true" sortable="true"
+                       headerText="#{bindings.TasksU2.hints.DueDate.label}" id="c15">
+              <f:facet name="filter">
+                <af:inputDate value="#{bindings.TasksU2Query.queryDescriptor.filterConjunctionCriterion.criterionMap.DueDate.value}"
+                              id="id1">
+                  <af:convertDateTime pattern="#{bindings.TasksU2.hints.DueDate.format}"/>
+                </af:inputDate>
+              </f:facet>
+              <af:outputText value="#{row.DueDate}" shortDesc="#{bindings.TasksU2.hints.DueDate.tooltip}" id="ot13">
+                <af:convertDateTime pattern="#{bindings.TasksU2.hints.DueDate.format}"/>
+              </af:outputText>
+            </af:column>
+            <af:column sortProperty="#{bindings.TasksU2.hints.Priority.name}" sortable="true"
+                       headerText="#{bindings.TasksU2.hints.Priority.label}" filterable="true" id="c19">
+              <af:outputText value="#{row.Priority}" shortDesc="#{bindings.TasksU2.hints.Priority.tooltip}" id="ot17"/>
+            </af:column>
+            <af:column sortProperty="#{bindings.TasksU2.hints.AssigneeId.name}" filterable="true" sortable="true"
+                       headerText="#{bindings.TasksU2.hints.AssigneeId.label}" id="c20">
+              <af:selectOneChoice value="#{row.bindings.AssigneeId.inputValue}" label="#{row.bindings.AssigneeId.label}"
+                                  required="#{bindings.TasksU2.hints.AssigneeId.mandatory}"
+                                  shortDesc="#{bindings.TasksU2.hints.AssigneeId.tooltip}" readOnly="true" id="soc1">
+                <f:selectItems value="#{row.bindings.AssigneeId.items}" id="si1"/>
+                <f:validator binding="#{row.bindings.AssigneeId.validator}"/>
+              </af:selectOneChoice>
+            </af:column>
+            <af:column sortProperty="#{bindings.TasksU2.hints.OpportunityId.name}" filterable="true" sortable="true"
+                       headerText="#{bindings.TasksU2.hints.OpportunityId.label}" id="c21">
+              <af:selectOneChoice value="#{row.bindings.OpportunityId.inputValue}"
+                                  label="#{row.bindings.OpportunityId.label}"
+                                  required="#{bindings.TasksU2.hints.OpportunityId.mandatory}"
+                                  shortDesc="#{bindings.TasksU2.hints.OpportunityId.tooltip}" readOnly="true" id="soc2">
+                <f:selectItems value="#{row.bindings.OpportunityId.items}" id="si2"/>
+                <f:validator binding="#{row.bindings.OpportunityId.validator}"/>
+              </af:selectOneChoice>
+            </af:column>
+            <af:column sortProperty="#{bindings.TasksU2.hints.Description.name}" sortable="true"
+                       headerText="#{bindings.TasksU2.hints.Description.label}" filterable="true" id="c22">
+              <af:outputText value="#{row.Description}" shortDesc="#{bindings.TasksU2.hints.Description.tooltip}"
+                             id="ot18"/>
+            </af:column>
+            <af:column sortProperty="#{bindings.TasksU2.hints.PercentageCompleted.name}" sortable="true"
+                       headerText="#{bindings.TasksU2.hints.PercentageCompleted.label}" filterable="true" id="c23">
+              <af:outputText value="#{row.PercentageCompleted}"
+                             shortDesc="#{bindings.TasksU2.hints.PercentageCompleted.tooltip}" id="ot19">
+                <af:convertNumber groupingUsed="false" pattern="#{bindings.TasksU2.hints.PercentageCompleted.format}"/>
+              </af:outputText>
+            </af:column>
+          </af:table>
+        </af:showDetailItem>
         <af:showDetailItem text="Appointments" id="sdi5" icon="/icons/appointments.png"
-                           disclosed="#{(pageFlowScope.sales_manager_tabVal==5)?true:false}"/>
+                           disclosed="#{(pageFlowScope.sales_manager_tabVal==6)?true:false}"/>
         <af:showDetailItem text="Contacts" id="sdi6" icon="/icons/addUser.jpg"
                            disclosed="#{(pageFlowScope.sales_manager_tabVal==7)?true:false}"/>
       </af:panelSpringboard>

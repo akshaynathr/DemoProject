@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="edit_TasksPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TasksU2" RangeSize="25" DataControl="AppModuleAMDataControl" id="TasksU2Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="TasksU2Iterator" id="TaskName">
+      <AttrNames>
+        <Item Value="TaskName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TasksU2Iterator" id="DueDate">
+      <AttrNames>
+        <Item Value="DueDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TasksU2Iterator" id="Priority">
+      <AttrNames>
+        <Item Value="Priority"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="TasksU2Iterator" StaticList="false" Uses="LOV_AssigneeId" id="AssigneeId" DTSupportsMRU="false"
+          SelectItemValueMode="ListObject"/>
+    <list IterBinding="TasksU2Iterator" StaticList="false" Uses="LOV_OpportunityId" id="OpportunityId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="TasksU2Iterator" id="Description">
+      <AttrNames>
+        <Item Value="Description"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TasksU2Iterator" id="PercentageCompleted">
+      <AttrNames>
+        <Item Value="PercentageCompleted"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleAMDataControl"/>
+  </bindings>
+</pageDefinition>

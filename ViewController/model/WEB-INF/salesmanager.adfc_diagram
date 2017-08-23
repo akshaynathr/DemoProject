@@ -85,7 +85,7 @@
       <property
          name="fromOutcome">customer</property>
       <property
-         name="sdm:polyPoints">B33,695.5,116.19531,426.8418,339.12427,T44</property>
+         name="sdm:polyPoints">B21,688.5,116.19531,426.8418,339.1799,T44</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -95,7 +95,7 @@
       <property
          name="fromOutcome">return_customer</property>
       <property
-         name="sdm:polyPoints">T56,433.8418,342.39648,702.5,119.45231,B44</property>
+         name="sdm:polyPoints">T56,433.8418,342.39648,695.5,119.39698,B33</property>
    </ControlFlowCase>
    <View
       id="View9">
@@ -171,7 +171,7 @@
       <property
          name="fromOutcome">return_oppurtunity_flow</property>
       <property
-         name="sdm:polyPoints">T56,956.8545,292.87515,716.5,116.19531,B67</property>
+         name="sdm:polyPoints">T56,956.8545,292.9376,723.5,116.19531,B79</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall15">
@@ -257,7 +257,7 @@
       <property
          name="fromOutcome">create_opportunity</property>
       <property
-         name="sdm:polyPoints">L46,662.0504,58.695312,603.5283,-1.4013677,B44</property>
+         name="sdm:polyPoints">L38,665.0,51.695312,610.5283,-4.201172,B56</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -267,7 +267,7 @@
       <property
          name="fromOutcome">create_opportunity_return</property>
       <property
-         name="sdm:polyPoints">B56,610.5283,-4.201172,665.0,51.695312,L38</property>
+         name="sdm:polyPoints">B44,603.5283,-1.4013677,662.0504,58.695312,L46</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall25">
@@ -288,4 +288,43 @@
       <property
          name="taskFlowId">create-opportunity-flow</property>
    </TaskFlowCall>
+   <TaskFlowCall
+      id="TaskFlowCall26">
+      <property
+         name="runAsDialog">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>editTasks-flow&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">editTasks-flow</property>
+      <property
+         name="x">754.34375</property>
+      <property
+         name="y">398.1494</property>
+      <property
+         name="documentReference">/WEB-INF/editTasks-flow.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">editTasks-flow</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase27"
+      from="View3"
+      to="TaskFlowCall26">
+      <property
+         name="fromOutcome">edit_tasks</property>
+      <property
+         name="sdm:polyPoints">B50,706.0,121.76783,754.34375,343.79883,T50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase28"
+      from="TaskFlowCall26"
+      to="View3">
+      <property
+         name="fromOutcome">taskFlowReturn1</property>
+      <property
+         name="sdm:polyPoints">T56,757.84375,343.04453,709.5,121.7209,B56</property>
+   </ControlFlowCase>
 </SDM>

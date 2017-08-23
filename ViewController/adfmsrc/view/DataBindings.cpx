@@ -45,6 +45,7 @@
     <page path="/report_sales_manager.jsff" usageId="view_report_sales_managerPageDef"/>
     <page path="/dashboard.jsff" usageId="view_dashboardPageDef"/>
     <page path="/create_opportunity.jsf" usageId="view_create_opportunityPageDef"/>
+    <page path="/edit_Tasks.jsf" usageId="view_edit_TasksPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_HomePageDef" path="view.pageDefs.HomePageDef"/>
@@ -83,6 +84,7 @@
     <page id="view_report_sales_managerPageDef" path="view.pageDefs.report_sales_managerPageDef"/>
     <page id="view_dashboardPageDef" path="view.pageDefs.dashboardPageDef"/>
     <page id="view_create_opportunityPageDef" path="view.pageDefs.create_opportunityPageDef"/>
+    <page id="view_edit_TasksPageDef" path="view.pageDefs.edit_TasksPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleAMDataControl" Package="model.AM"
