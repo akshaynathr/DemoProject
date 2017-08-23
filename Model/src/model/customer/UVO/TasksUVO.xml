@@ -13,6 +13,51 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="OpportunityLookUpRVO1"
+    ViewObjectName="model.customer.RVO.OpportunityLookUpRVO"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="USERLOOKUPVO1"
+    ViewObjectName="model.customer.RVO.USERLOOKUPVO"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_OpportunityId"
+    ListVOName="OpportunityLookUpRVO1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="OpportunityId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="OpportunityId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="OppurtunityName"/>
+      <Item Value="CustomerName"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_AssigneeId"
+    ListVOName="USERLOOKUPVO1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="AssigneeId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="UserId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="FirstName"/>
+      <Item Value="LastName"/>
+      <Item Value="GlobalUsername"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="TaskEO"
     Entity="model.customer.EO.TaskEO"/>
@@ -22,83 +67,168 @@
     PrecisionRule="true"
     EntityAttrName="TaskId"
     EntityUsage="TaskEO"
-    AliasName="TASK_ID"/>
+    AliasName="TASK_ID"
+    IsUpdateable="while_insert"/>
   <ViewAttribute
     Name="TaskName"
     PrecisionRule="true"
     EntityAttrName="TaskName"
     EntityUsage="TaskEO"
-    AliasName="TASK_NAME"/>
+    AliasName="TASK_NAME">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="50"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="DueDate"
     PrecisionRule="true"
     EntityAttrName="DueDate"
     EntityUsage="TaskEO"
-    AliasName="DUE_DATE"/>
+    AliasName="DUE_DATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="50"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Priority"
     PrecisionRule="true"
     EntityAttrName="Priority"
     EntityUsage="TaskEO"
-    AliasName="PRIORITY"/>
+    AliasName="PRIORITY"
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="50"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="AssigneeId"
     PrecisionRule="true"
     EntityAttrName="AssigneeId"
     EntityUsage="TaskEO"
-    AliasName="ASSIGNEE_ID"/>
+    AliasName="ASSIGNEE_ID"
+    LOVName="LOV_AssigneeId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+        <DISPLAYWIDTH
+          Value="50"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="OpportunityId"
     PrecisionRule="true"
     EntityAttrName="OpportunityId"
     EntityUsage="TaskEO"
-    AliasName="OPPORTUNITY_ID"/>
+    AliasName="OPPORTUNITY_ID"
+    LOVName="LOV_OpportunityId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+        <DISPLAYWIDTH
+          Value="50"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Description"
     PrecisionRule="true"
     EntityAttrName="Description"
     EntityUsage="TaskEO"
-    AliasName="DESCRIPTION"/>
+    AliasName="DESCRIPTION"
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="50"/>
+        <DISPLAYHEIGHT
+          Value="5"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="PercentageCompleted"
     PrecisionRule="true"
     EntityAttrName="PercentageCompleted"
     EntityUsage="TaskEO"
-    AliasName="PERCENTAGE_COMPLETED"/>
+    AliasName="PERCENTAGE_COMPLETED"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="CreatedBy"
     PrecisionRule="true"
     EntityAttrName="CreatedBy"
     EntityUsage="TaskEO"
-    AliasName="CREATED_BY"/>
+    AliasName="CREATED_BY"
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="CreatedOn"
     PrecisionRule="true"
     EntityAttrName="CreatedOn"
     EntityUsage="TaskEO"
-    AliasName="CREATED_ON"/>
+    AliasName="CREATED_ON"
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="LastUpdatedBy"
     PrecisionRule="true"
     EntityAttrName="LastUpdatedBy"
     EntityUsage="TaskEO"
-    AliasName="LAST_UPDATED_BY"/>
+    AliasName="LAST_UPDATED_BY"
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="LastUpdatedOn"
     PrecisionRule="true"
     EntityAttrName="LastUpdatedOn"
     EntityUsage="TaskEO"
-    AliasName="LAST_UPDATED_ON"/>
+    AliasName="LAST_UPDATED_ON"
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="VersionNo"
     PrecisionRule="true"
     EntityAttrName="VersionNo"
     EntityUsage="TaskEO"
-    AliasName="VERSION_NO"/>
+    AliasName="VERSION_NO"
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="IsActive"
     PrecisionRule="true"
     EntityAttrName="IsActive"
     EntityUsage="TaskEO"
     AliasName="IS_ACTIVE"/>
+  <DeclarativeWhereClause
+    Name="DeclarativeWhereClause">
+    <ViewCriteria
+      Name="TasksUVOWhereCriteria"
+      ViewObjectName="model.customer.UVO.TasksUVO"
+      Conjunction="AND"
+      Mode="3">
+      <ViewCriteriaRow
+        Name="TasksUVOWhereCriteria_row_0"
+        UpperColumns="1">
+        <ViewCriteriaItem
+          Name="IsActive"
+          ViewAttribute="IsActive"
+          Operator="&lt;>"
+          Conjunction="AND"
+          Value="'n'"
+          Required="Optional"
+          UpperColumns="0"/>
+      </ViewCriteriaRow>
+    </ViewCriteria>
+  </DeclarativeWhereClause>
 </ViewObject>

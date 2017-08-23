@@ -71,6 +71,17 @@
         </display-type>
       </run-as-dialog>
     </task-flow-call>
+    <task-flow-call id="editTasks-flow">
+      <task-flow-reference>
+        <document>/WEB-INF/editTasks-flow.xml</document>
+        <id>editTasks-flow</id>
+      </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
+    </task-flow-call>
     <control-flow-rule id="__1">
       <from-activity-id>dashboard</from-activity-id>
       <control-flow-case id="__2">
@@ -107,6 +118,10 @@
       <control-flow-case id="__22">
         <from-outcome>create_opportunity</from-outcome>
         <to-activity-id>create-opportunity-flow</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__25">
+        <from-outcome>edit_tasks</from-outcome>
+        <to-activity-id>editTasks-flow</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__6">
@@ -148,6 +163,13 @@
       <from-activity-id>create-opportunity-flow</from-activity-id>
       <control-flow-case id="__24">
         <from-outcome>create_opportunity_return</from-outcome>
+        <to-activity-id>SalesInside</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__26">
+      <from-activity-id>editTasks-flow</from-activity-id>
+      <control-flow-case id="__27">
+        <from-outcome>taskFlowReturn1</from-outcome>
         <to-activity-id>SalesInside</to-activity-id>
       </control-flow-case>
     </control-flow-rule>

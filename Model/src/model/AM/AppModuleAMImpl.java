@@ -757,5 +757,53 @@ public class AppModuleAMImpl extends ApplicationModuleImpl {
     public ViewObjectImpl getCustomerNameLookUpR1() {
         return (ViewObjectImpl) findViewObject("CustomerNameLookUpR1");
     }
+
+    /**
+     * Container's getter for OpportunityLookUpR1.
+     * @return OpportunityLookUpR1
+     */
+    public ViewObjectImpl getOpportunityLookUpR1() {
+        return (ViewObjectImpl) findViewObject("OpportunityLookUpR1");
+    }
+
+    /**
+     * Container's getter for TaskCount1.
+     * @return TaskCount1
+     */
+    public ViewObjectImpl getTaskCount1() {
+        return (ViewObjectImpl) findViewObject("TaskCount1");
+    }
+
+    /**
+     * Container's getter for Appointments1.
+     * @return Appointments1
+     */
+    public ViewObjectImpl getAppointments1() {
+        return (ViewObjectImpl) findViewObject("Appointments1");
+    }
+
+    /**
+     * Container's getter for ContactsCount1.
+     * @return ContactsCount1
+     */
+    public ViewObjectImpl getContactsCount1() {
+        return (ViewObjectImpl) findViewObject("ContactsCount1");
+    }
+
+    /**
+     * Container's getter for ClosedOpportunityCount1.
+     * @return ClosedOpportunityCount1
+     */
+    public ViewObjectImpl getClosedOpportunityCount1() {
+        return (ViewObjectImpl) findViewObject("ClosedOpportunityCount1");
+    }
+
+    /**
+     * Container's getter for RejectedOpportunityCount1.
+     * @return RejectedOpportunityCount1
+     */
+    public ViewObjectImpl getRejectedOpportunityCount1() {
+        return (ViewObjectImpl) findViewObject("RejectedOpportunityCount1");
+    }
 }
 

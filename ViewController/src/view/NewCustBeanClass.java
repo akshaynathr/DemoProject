@@ -15,6 +15,8 @@ import oracle.adf.model.BindingContext;
 import oracle.adf.model.binding.DCBindingContainer;
 import oracle.adf.model.binding.DCIteratorBinding;
 
+import oracle.adf.view.rich.component.rich.layout.RichPanelGroupLayout;
+
 import oracle.jbo.Row;
 import oracle.jbo.RowSetIterator;
 
@@ -49,6 +51,7 @@ public class NewCustBeanClass {
     private RichInputText it37;
     private RichInputText it38;
     private RichInputText it39;
+    private RichPanelGroupLayout pgl1;
 
     public NewCustBeanClass() {
     }
@@ -327,5 +330,13 @@ public class NewCustBeanClass {
             operationBinding.execute();
             
             return "return";
+    }
+
+    public void setPgl1(RichPanelGroupLayout pgl1) {
+        this.pgl1 = pgl1;
+    }
+
+    public RichPanelGroupLayout getPgl1() {
+        return pgl1;
     }
 }

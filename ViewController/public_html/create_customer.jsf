@@ -5,52 +5,54 @@
     <af:form id="f1" binding="#{backingBeanScope.NewCustBean.f1}">
       <af:panelStretchLayout id="psl1" binding="#{backingBeanScope.NewCustBean.psl1}">
         <f:facet name="top">
-          <af:button text="Save" id="b1" binding="#{backingBeanScope.NewCustBean.b1}"
-                     actionListener="#{bindings.Commit.execute}" action="#{backingBeanScope.NewCustBean.commit_now}"/>
+          <af:panelGroupLayout id="pgl1" binding="#{backingBeanScope.NewCustBean.pgl1}">
+            <af:button text="Save" id="b1" binding="#{backingBeanScope.NewCustBean.b1}"
+                       actionListener="#{bindings.Commit.execute}" action="#{backingBeanScope.NewCustBean.commit_now}"/>
+          </af:panelGroupLayout>
         </f:facet>
         <f:facet name="bottom"/>
         <f:facet name="center">
           <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.NewCustBean.pfl1}">
-            <af:inputText value="#{bindings.CustomerName.inputValue}" label="#{bindings.CustomerName.hints.label}"
+            <af:inputText value="#{bindings.CustomerName.inputValue}" label="Name"
                           required="#{bindings.CustomerName.hints.mandatory}"
-                          columns="#{bindings.CustomerName.hints.displayWidth}"
+                          columns="30"
                           maximumLength="#{bindings.CustomerName.hints.precision}"
                           shortDesc="#{bindings.CustomerName.hints.tooltip}" id="it2"
                           binding="#{backingBeanScope.NewCustBean.it2}">
               <f:validator binding="#{bindings.CustomerName.validator}"/>
             </af:inputText>
-            <af:inputText value="#{bindings.CustomerTypeId.inputValue}" label="#{bindings.CustomerTypeId.hints.label}"
+            <af:inputText value="#{bindings.CustomerTypeId.inputValue}" label="Type"
                           required="#{bindings.CustomerTypeId.hints.mandatory}"
-                          columns="#{bindings.CustomerTypeId.hints.displayWidth}"
+                          columns="30"
                           maximumLength="#{bindings.CustomerTypeId.hints.precision}"
                           shortDesc="#{bindings.CustomerTypeId.hints.tooltip}" id="it3"
                           binding="#{backingBeanScope.NewCustBean.it3}">
               <f:validator binding="#{bindings.CustomerTypeId.validator}"/>
               <af:convertNumber groupingUsed="false" pattern="#{bindings.CustomerTypeId.format}"/>
             </af:inputText>
-            <af:inputText value="#{bindings.Url.inputValue}" label="#{bindings.Url.hints.label}"
-                          required="#{bindings.Url.hints.mandatory}" columns="#{bindings.Url.hints.displayWidth}"
+            <af:inputText value="#{bindings.Url.inputValue}" label="URL"
+                          required="#{bindings.Url.hints.mandatory}" columns="30"
                           maximumLength="#{bindings.Url.hints.precision}" shortDesc="#{bindings.Url.hints.tooltip}"
                           id="it5" binding="#{backingBeanScope.NewCustBean.it5}">
               <f:validator binding="#{bindings.Url.validator}"/>
             </af:inputText>
-            <af:inputText value="#{bindings.ParentCompany.inputValue}" label="#{bindings.ParentCompany.hints.label}"
+            <af:inputText value="#{bindings.ParentCompany.inputValue}" label="Parent Company"
                           required="#{bindings.ParentCompany.hints.mandatory}"
-                          columns="#{bindings.ParentCompany.hints.displayWidth}"
+                          columns="30"
                           maximumLength="#{bindings.ParentCompany.hints.precision}"
                           shortDesc="#{bindings.ParentCompany.hints.tooltip}" id="it6"
                           binding="#{backingBeanScope.NewCustBean.it6}">
               <f:validator binding="#{bindings.ParentCompany.validator}"/>
             </af:inputText>
-            <af:inputText value="#{bindings.Ceo.inputValue}" label="#{bindings.Ceo.hints.label}"
-                          required="#{bindings.Ceo.hints.mandatory}" columns="#{bindings.Ceo.hints.displayWidth}"
+            <af:inputText value="#{bindings.Ceo.inputValue}" label="CEO"
+                          required="#{bindings.Ceo.hints.mandatory}" columns="30"
                           maximumLength="#{bindings.Ceo.hints.precision}" shortDesc="#{bindings.Ceo.hints.tooltip}"
                           id="it7" binding="#{backingBeanScope.NewCustBean.it7}">
               <f:validator binding="#{bindings.Ceo.validator}"/>
             </af:inputText>
-            <af:inputText value="#{bindings.NoOfEmployees.inputValue}" label="#{bindings.NoOfEmployees.hints.label}"
+            <af:inputText value="#{bindings.NoOfEmployees.inputValue}" label="No of Employees"
                           required="#{bindings.NoOfEmployees.hints.mandatory}"
-                          columns="#{bindings.NoOfEmployees.hints.displayWidth}"
+                          columns="30"
                           maximumLength="#{bindings.NoOfEmployees.hints.precision}"
                           shortDesc="#{bindings.NoOfEmployees.hints.tooltip}" id="it8"
                           binding="#{backingBeanScope.NewCustBean.it8}">
@@ -58,21 +60,21 @@
               <af:convertNumber groupingUsed="false" pattern="#{bindings.NoOfEmployees.format}"/>
             </af:inputText>
             <af:inputText value="#{bindings.Fax.inputValue}" label="#{bindings.Fax.hints.label}"
-                          required="#{bindings.Fax.hints.mandatory}" columns="#{bindings.Fax.hints.displayWidth}"
+                          required="#{bindings.Fax.hints.mandatory}" columns="30"
                           maximumLength="#{bindings.Fax.hints.precision}" shortDesc="#{bindings.Fax.hints.tooltip}"
                           id="it9" binding="#{backingBeanScope.NewCustBean.it9}">
               <f:validator binding="#{bindings.Fax.validator}"/>
               <af:convertNumber groupingUsed="false" pattern="#{bindings.Fax.format}"/>
             </af:inputText>
             <af:inputText value="#{bindings.Email.inputValue}" label="#{bindings.Email.hints.label}"
-                          required="#{bindings.Email.hints.mandatory}" columns="#{bindings.Email.hints.displayWidth}"
+                          required="#{bindings.Email.hints.mandatory}" columns="30"
                           maximumLength="#{bindings.Email.hints.precision}" shortDesc="#{bindings.Email.hints.tooltip}"
                           id="it10" binding="#{backingBeanScope.NewCustBean.it10}">
               <f:validator binding="#{bindings.Email.validator}"/>
             </af:inputText>
             <af:inputText value="#{bindings.FirstName.inputValue}" label="#{bindings.FirstName.hints.label}"
                           required="#{bindings.FirstName.hints.mandatory}"
-                          columns="#{bindings.FirstName.hints.displayWidth}"
+                          columns="30"
                           maximumLength="#{bindings.FirstName.hints.precision}"
                           shortDesc="#{bindings.FirstName.hints.tooltip}" id="it18"
                           binding="#{backingBeanScope.NewCustBean.it18}">
@@ -80,7 +82,7 @@
             </af:inputText>
             <af:inputText value="#{bindings.LastName.inputValue}" label="#{bindings.LastName.hints.label}"
                           required="#{bindings.LastName.hints.mandatory}"
-                          columns="#{bindings.LastName.hints.displayWidth}"
+                          columns="30"
                           maximumLength="#{bindings.LastName.hints.precision}"
                           shortDesc="#{bindings.LastName.hints.tooltip}" id="it19"
                           binding="#{backingBeanScope.NewCustBean.it19}">
@@ -88,14 +90,14 @@
             </af:inputText>
             <af:inputText value="#{bindings.IsPrimary.inputValue}" label="#{bindings.IsPrimary.hints.label}"
                           required="#{bindings.IsPrimary.hints.mandatory}"
-                          columns="#{bindings.IsPrimary.hints.displayWidth}"
+                          columns="30"
                           maximumLength="#{bindings.IsPrimary.hints.precision}"
                           shortDesc="#{bindings.IsPrimary.hints.tooltip}" id="it20"
                           binding="#{backingBeanScope.NewCustBean.it20}">
               <f:validator binding="#{bindings.IsPrimary.validator}"/>
             </af:inputText>
             <af:inputText value="#{bindings.Email1.inputValue}" label="#{bindings.Email1.hints.label}"
-                          required="#{bindings.Email1.hints.mandatory}" columns="#{bindings.Email1.hints.displayWidth}"
+                          required="#{bindings.Email1.hints.mandatory}" columns="30"
                           maximumLength="#{bindings.Email1.hints.precision}"
                           shortDesc="#{bindings.Email1.hints.tooltip}" id="it21"
                           binding="#{backingBeanScope.NewCustBean.it21}">
@@ -103,16 +105,16 @@
             </af:inputText>
             <af:inputText value="#{bindings.WorkPhone.inputValue}" label="#{bindings.WorkPhone.hints.label}"
                           required="#{bindings.WorkPhone.hints.mandatory}"
-                          columns="#{bindings.WorkPhone.hints.displayWidth}"
+                          columns="30"
                           maximumLength="#{bindings.WorkPhone.hints.precision}"
                           shortDesc="#{bindings.WorkPhone.hints.tooltip}" id="it22"
-                          binding="#{backingBeanScope.NewCustBean.it22}">
+                          binding="#{backingBeanScope.NewCustBean.it22}" rows="1">
               <f:validator binding="#{bindings.WorkPhone.validator}"/>
               <af:convertNumber groupingUsed="false" pattern="#{bindings.WorkPhone.format}"/>
             </af:inputText>
             <af:inputText value="#{bindings.MobilePhone.inputValue}" label="#{bindings.MobilePhone.hints.label}"
                           required="#{bindings.MobilePhone.hints.mandatory}"
-                          columns="#{bindings.MobilePhone.hints.displayWidth}"
+                          columns="30"
                           maximumLength="#{bindings.MobilePhone.hints.precision}"
                           shortDesc="#{bindings.MobilePhone.hints.tooltip}" id="it23"
                           binding="#{backingBeanScope.NewCustBean.it23}">
@@ -121,7 +123,7 @@
             </af:inputText>
             <af:inputText value="#{bindings.BuyingRoleId.inputValue}" label="#{bindings.BuyingRoleId.hints.label}"
                           required="#{bindings.BuyingRoleId.hints.mandatory}"
-                          columns="#{bindings.BuyingRoleId.hints.displayWidth}"
+                          columns="30"
                           maximumLength="#{bindings.BuyingRoleId.hints.precision}"
                           shortDesc="#{bindings.BuyingRoleId.hints.tooltip}" id="it25"
                           binding="#{backingBeanScope.NewCustBean.it25}">
@@ -131,7 +133,7 @@
             <af:inputText value="#{bindings.DepartmentNameId.inputValue}"
                           label="#{bindings.DepartmentNameId.hints.label}"
                           required="#{bindings.DepartmentNameId.hints.mandatory}"
-                          columns="#{bindings.DepartmentNameId.hints.displayWidth}"
+                          columns="30"
                           maximumLength="#{bindings.DepartmentNameId.hints.precision}"
                           shortDesc="#{bindings.DepartmentNameId.hints.tooltip}" id="it26"
                           binding="#{backingBeanScope.NewCustBean.it26}">
@@ -141,7 +143,7 @@
             <af:inputText value="#{bindings.InfluenceLevelId.inputValue}"
                           label="#{bindings.InfluenceLevelId.hints.label}"
                           required="#{bindings.InfluenceLevelId.hints.mandatory}"
-                          columns="#{bindings.InfluenceLevelId.hints.displayWidth}"
+                          columns="30"
                           maximumLength="#{bindings.InfluenceLevelId.hints.precision}"
                           shortDesc="#{bindings.InfluenceLevelId.hints.tooltip}" id="it27"
                           binding="#{backingBeanScope.NewCustBean.it27}">
@@ -149,13 +151,13 @@
               <af:convertNumber groupingUsed="false" pattern="#{bindings.InfluenceLevelId.format}"/>
             </af:inputText>
             <af:inputText value="#{bindings.House.inputValue}" label="#{bindings.House.hints.label}"
-                          required="#{bindings.House.hints.mandatory}" columns="#{bindings.House.hints.displayWidth}"
+                          required="#{bindings.House.hints.mandatory}" columns="30"
                           maximumLength="#{bindings.House.hints.precision}" shortDesc="#{bindings.House.hints.tooltip}"
                           id="it33" binding="#{backingBeanScope.NewCustBean.it33}">
               <f:validator binding="#{bindings.House.validator}"/>
             </af:inputText>
             <af:inputText value="#{bindings.Street.inputValue}" label="#{bindings.Street.hints.label}"
-                          required="#{bindings.Street.hints.mandatory}" columns="#{bindings.Street.hints.displayWidth}"
+                          required="#{bindings.Street.hints.mandatory}" columns="30"
                           maximumLength="#{bindings.Street.hints.precision}"
                           shortDesc="#{bindings.Street.hints.tooltip}" id="it34"
                           binding="#{backingBeanScope.NewCustBean.it34}">
@@ -163,21 +165,21 @@
             </af:inputText>
             <af:inputText value="#{bindings.Locality.inputValue}" label="#{bindings.Locality.hints.label}"
                           required="#{bindings.Locality.hints.mandatory}"
-                          columns="#{bindings.Locality.hints.displayWidth}"
+                          columns="30"
                           maximumLength="#{bindings.Locality.hints.precision}"
                           shortDesc="#{bindings.Locality.hints.tooltip}" id="it35"
                           binding="#{backingBeanScope.NewCustBean.it35}">
               <f:validator binding="#{bindings.Locality.validator}"/>
             </af:inputText>
             <af:inputText value="#{bindings.City.inputValue}" label="#{bindings.City.hints.label}"
-                          required="#{bindings.City.hints.mandatory}" columns="#{bindings.City.hints.displayWidth}"
+                          required="#{bindings.City.hints.mandatory}" columns="30"
                           maximumLength="#{bindings.City.hints.precision}" shortDesc="#{bindings.City.hints.tooltip}"
-                          id="it36" binding="#{backingBeanScope.NewCustBean.it36}">
+                          id="it36" binding="#{backingBeanScope.NewCustBean.it36}" rows="1">
               <f:validator binding="#{bindings.City.validator}"/>
             </af:inputText>
             <af:inputText value="#{bindings.Pincode.inputValue}" label="#{bindings.Pincode.hints.label}"
                           required="#{bindings.Pincode.hints.mandatory}"
-                          columns="#{bindings.Pincode.hints.displayWidth}"
+                          columns="30"
                           maximumLength="#{bindings.Pincode.hints.precision}"
                           shortDesc="#{bindings.Pincode.hints.tooltip}" id="it37"
                           binding="#{backingBeanScope.NewCustBean.it37}">
@@ -185,14 +187,14 @@
               <af:convertNumber groupingUsed="false" pattern="#{bindings.Pincode.format}"/>
             </af:inputText>
             <af:inputText value="#{bindings.State.inputValue}" label="#{bindings.State.hints.label}"
-                          required="#{bindings.State.hints.mandatory}" columns="#{bindings.State.hints.displayWidth}"
+                          required="#{bindings.State.hints.mandatory}" columns="30"
                           maximumLength="#{bindings.State.hints.precision}" shortDesc="#{bindings.State.hints.tooltip}"
                           id="it38" binding="#{backingBeanScope.NewCustBean.it38}">
               <f:validator binding="#{bindings.State.validator}"/>
             </af:inputText>
             <af:inputText value="#{bindings.Country.inputValue}" label="#{bindings.Country.hints.label}"
                           required="#{bindings.Country.hints.mandatory}"
-                          columns="#{bindings.Country.hints.displayWidth}"
+                          columns="30"
                           maximumLength="#{bindings.Country.hints.precision}"
                           shortDesc="#{bindings.Country.hints.tooltip}" id="it39"
                           binding="#{backingBeanScope.NewCustBean.it39}">

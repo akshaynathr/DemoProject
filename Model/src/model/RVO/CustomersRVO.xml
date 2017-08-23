@@ -43,7 +43,8 @@ FROM CUSTOMERS Customers]]></SQLQuery>
     ColumnType="NUMBER"
     AliasName="CUSTOMER_ID"
     Expression="CUSTOMER_ID"
-    SQLType="NUMERIC"/>
+    SQLType="NUMERIC"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="CustomerName"
     IsUpdateable="false"
@@ -58,6 +59,12 @@ FROM CUSTOMERS Customers]]></SQLQuery>
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="CustomerName_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
   </ViewAttribute>
   <ViewAttribute
     Name="CustomerTypeId"
@@ -70,7 +77,15 @@ FROM CUSTOMERS Customers]]></SQLQuery>
     ColumnType="NUMBER"
     AliasName="CUSTOMER_TYPE_ID"
     Expression="CUSTOMER_TYPE_ID"
-    SQLType="NUMERIC"/>
+    SQLType="NUMERIC"
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="CustomerTypeId_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="PrimaryContactId"
     IsUpdateable="false"
@@ -82,7 +97,8 @@ FROM CUSTOMERS Customers]]></SQLQuery>
     ColumnType="NUMBER"
     AliasName="PRIMARY_CONTACT_ID"
     Expression="PRIMARY_CONTACT_ID"
-    SQLType="NUMERIC"/>
+    SQLType="NUMERIC"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Url"
     IsUpdateable="false"
@@ -93,7 +109,8 @@ FROM CUSTOMERS Customers]]></SQLQuery>
     ColumnType="VARCHAR2"
     AliasName="URL"
     Expression="URL"
-    SQLType="VARCHAR">
+    SQLType="VARCHAR"
+    IsQueriable="false">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="200"/>
     </DesignTime>
@@ -108,7 +125,8 @@ FROM CUSTOMERS Customers]]></SQLQuery>
     ColumnType="VARCHAR2"
     AliasName="PARENT_COMPANY"
     Expression="PARENT_COMPANY"
-    SQLType="VARCHAR">
+    SQLType="VARCHAR"
+    IsQueriable="false">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
@@ -127,6 +145,12 @@ FROM CUSTOMERS Customers]]></SQLQuery>
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="Ceo_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
   </ViewAttribute>
   <ViewAttribute
     Name="NoOfEmployees"
@@ -139,7 +163,15 @@ FROM CUSTOMERS Customers]]></SQLQuery>
     ColumnType="NUMBER"
     AliasName="NO_OF_EMPLOYEES"
     Expression="NO_OF_EMPLOYEES"
-    SQLType="NUMERIC"/>
+    SQLType="NUMERIC"
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="NoOfEmployees_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Fax"
     IsUpdateable="false"
@@ -151,7 +183,8 @@ FROM CUSTOMERS Customers]]></SQLQuery>
     ColumnType="NUMBER"
     AliasName="FAX"
     Expression="FAX"
-    SQLType="NUMERIC"/>
+    SQLType="NUMERIC"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Email"
     IsUpdateable="false"
@@ -178,7 +211,8 @@ FROM CUSTOMERS Customers]]></SQLQuery>
     ColumnType="NUMBER"
     AliasName="PRIMARY_ADDRESS_ID"
     Expression="PRIMARY_ADDRESS_ID"
-    SQLType="NUMERIC"/>
+    SQLType="NUMERIC"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="ShippingAddressId"
     IsUpdateable="false"
@@ -190,7 +224,8 @@ FROM CUSTOMERS Customers]]></SQLQuery>
     ColumnType="NUMBER"
     AliasName="SHIPPING_ADDRESS_ID"
     Expression="SHIPPING_ADDRESS_ID"
-    SQLType="NUMERIC"/>
+    SQLType="NUMERIC"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="CreatedBy"
     IsUpdateable="false"
@@ -201,7 +236,8 @@ FROM CUSTOMERS Customers]]></SQLQuery>
     ColumnType="VARCHAR2"
     AliasName="CREATED_BY"
     Expression="CREATED_BY"
-    SQLType="VARCHAR">
+    SQLType="VARCHAR"
+    IsQueriable="false">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
@@ -215,7 +251,8 @@ FROM CUSTOMERS Customers]]></SQLQuery>
     ColumnType="TIMESTAMP"
     AliasName="CREATED_ON"
     Expression="CREATED_ON"
-    SQLType="TIMESTAMP"/>
+    SQLType="DATE"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="LastUpdatedBy"
     IsUpdateable="false"
@@ -226,7 +263,8 @@ FROM CUSTOMERS Customers]]></SQLQuery>
     ColumnType="VARCHAR2"
     AliasName="LAST_UPDATED_BY"
     Expression="LAST_UPDATED_BY"
-    SQLType="VARCHAR">
+    SQLType="VARCHAR"
+    IsQueriable="false">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
@@ -240,7 +278,8 @@ FROM CUSTOMERS Customers]]></SQLQuery>
     ColumnType="TIMESTAMP"
     AliasName="LAST_UPDATED_ON"
     Expression="LAST_UPDATED_ON"
-    SQLType="TIMESTAMP"/>
+    SQLType="DATE"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="VersionNo"
     IsUpdateable="false"
@@ -252,7 +291,8 @@ FROM CUSTOMERS Customers]]></SQLQuery>
     ColumnType="NUMBER"
     AliasName="VERSION_NO"
     Expression="VERSION_NO"
-    SQLType="NUMERIC"/>
+    SQLType="NUMERIC"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="IsActive"
     IsUpdateable="false"
@@ -263,7 +303,8 @@ FROM CUSTOMERS Customers]]></SQLQuery>
     ColumnType="CHAR"
     AliasName="IS_ACTIVE"
     Expression="IS_ACTIVE"
-    SQLType="CHAR">
+    SQLType="VARCHAR"
+    IsQueriable="false">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -276,4 +317,8 @@ FROM CUSTOMERS Customers]]></SQLQuery>
     ViewLink="model.RVO.CustomersContactsFk1VL"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.RVO.common.CustomersRVOMsgBundle"/>
+  </ResourceBundle>
 </ViewObject>

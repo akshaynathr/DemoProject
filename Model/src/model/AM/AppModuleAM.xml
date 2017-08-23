@@ -236,6 +236,27 @@
   <ViewUsage
     Name="CustomerNameLookUpR1"
     ViewObjectName="model.customer.RVO.CustomerNameLookUpRVO"/>
+  <ViewUsage
+    Name="OpportunityLookUpR1"
+    ViewObjectName="model.customer.RVO.OpportunityLookUpRVO"/>
+  <ViewUsage
+    Name="AddressU2"
+    ViewObjectName="model.UVO.AddressUVO"/>
+  <ViewUsage
+    Name="TaskCount1"
+    ViewObjectName="model.customer.RVO.TaskCountVO"/>
+  <ViewUsage
+    Name="Appointments1"
+    ViewObjectName="model.customer.RVO.AppointmentsVO"/>
+  <ViewUsage
+    Name="ContactsCount1"
+    ViewObjectName="model.customer.RVO.ContactsCountVO"/>
+  <ViewUsage
+    Name="ClosedOpportunityCount1"
+    ViewObjectName="model.customer.RVO.ClosedOpportunityCountVO"/>
+  <ViewUsage
+    Name="RejectedOpportunityCount1"
+    ViewObjectName="model.customer.RVO.RejectedOpportunityCountVO"/>
   <ViewLinkUsage
     Name="UsersFk1VL1"
     ViewLinkObjectName="model.UVO.UsersFk1VL"

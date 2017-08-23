@@ -16,6 +16,9 @@
     <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
                   Binds="MyTeamR1Iterator" id="ImplicitViewCriteriaQuery2"/>
     <iterator Binds="MasterTable1" RangeSize="25" DataControl="AMDataControl" id="MasterTable1Iterator"/>
+    <iterator Binds="TasksU2" RangeSize="25" DataControl="AppModuleAMDataControl" id="TasksU2Iterator"/>
+    <searchRegion Binds="TasksU2Iterator" Criteria="" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="TasksU2Query"/>
   </executables>
   <bindings>
     <tree IterBinding="CustomerId_Address_ViewObj1Iterator" id="CustomerId_Address_ViewObj1">
@@ -25,16 +28,6 @@
           <Item Value="Ceo"/>
           <Item Value="Email"/>
           <Item Value="CustomerId"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
-    <tree IterBinding="OppurtunityDashboardUser2Iterator" id="OppurtunityDashboardUser2">
-      <nodeDefinition DefName="model.customer.RVO.OppurtunityDashboardUserVO" Name="OppurtunityDashboardUser20">
-        <AttrNames>
-          <Item Value="OppurtunityName"/>
-          <Item Value="CustomerName"/>
-          <Item Value="CustomerId"/>
-          <Item Value="OpportunityId"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
@@ -51,6 +44,36 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <tree IterBinding="OppurtunityDashboardUser2Iterator" id="OppurtunityDashboardUser2">
+      <nodeDefinition DefName="model.customer.RVO.OppurtunityDashboardUserVO" Name="OppurtunityDashboardUser20">
+        <AttrNames>
+          <Item Value="OppurtunityName"/>
+          <Item Value="CustomerName"/>
+          <Item Value="CustomerId"/>
+          <Item Value="OpportunityId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
     <action IterBinding="MasterTable1Iterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
+    <tree IterBinding="TasksU2Iterator" id="TasksU2">
+      <nodeDefinition DefName="model.customer.UVO.TasksUVO" Name="TasksU20">
+        <AttrNames>
+          <Item Value="TaskId"/>
+          <Item Value="TaskName"/>
+          <Item Value="DueDate"/>
+          <Item Value="Priority"/>
+          <Item Value="AssigneeId"/>
+          <Item Value="OpportunityId"/>
+          <Item Value="Description"/>
+          <Item Value="PercentageCompleted"/>
+          <Item Value="CreatedBy"/>
+          <Item Value="CreatedOn"/>
+          <Item Value="LastUpdatedBy"/>
+          <Item Value="LastUpdatedOn"/>
+          <Item Value="VersionNo"/>
+          <Item Value="IsActive"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
   </bindings>
 </pageDefinition>
