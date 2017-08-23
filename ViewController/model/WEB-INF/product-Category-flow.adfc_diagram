@@ -21,16 +21,6 @@
       <property
          name="exceptionHandler">false</property>
    </View>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase7"
-      from="MethodCall7"
-      to="View2">
-      <property
-         name="fromOutcome">CreateInsert</property>
-      <property
-         name="sdm:polyPoints">R50,285.01465,141.79883,393.0,57.091797,L50</property>
-   </ControlFlowCase>
    <TaskFlowReturn
       id="TaskFlowReturn9">
       <property
@@ -40,7 +30,7 @@
       <property
          name="description">&lt;html>&lt;p>&lt;b>commit&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  commit&lt;/p></property>
       <property
-         name="y">256.89648</property>
+         name="y">254.44238</property>
       <property
          name="finish">true</property>
       <property
@@ -54,21 +44,31 @@
       <property
          name="fromOutcome">commit</property>
       <property
-         name="sdm:polyPoints">B50,434.0,111.0918,634.0,256.5459,L50</property>
+         name="sdm:polyPoints">B50,434.0,111.0918,634.0,254.44238,L50</property>
    </ControlFlowCase>
    <MethodCall
       id="MethodCall7">
       <property
          name="activityId">CreateInsert</property>
       <property
-         name="x">244.01465</property>
+         name="x">231.01465</property>
       <property
          name="start">true</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>CreateInsert&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
       <property
-         name="y">142.14941</property>
+         name="y">212.74707</property>
       <property
          name="exceptionHandler">false</property>
    </MethodCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase8"
+      from="MethodCall7"
+      to="View2">
+      <property
+         name="fromOutcome">CreateInsert</property>
+      <property
+         name="sdm:polyPoints">T50,231.01465,158.39648,393.0,57.091797,L50</property>
+   </ControlFlowCase>
 </SDM>
