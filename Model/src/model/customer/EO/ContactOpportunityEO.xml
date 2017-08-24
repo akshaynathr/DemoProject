@@ -39,6 +39,20 @@
     AssociationOtherEnd="model.customer.EO.ContactsOpportunitiesFk2ASSOC.ContactOpportunity"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Opportunity1"
+    Association="model.ASSOC.OpportunityToContactsASSOCSource"
+    AssociationEnd="model.ASSOC.OpportunityToContactsASSOCSource.Opportunity1"
+    AssociationOtherEnd="model.ASSOC.OpportunityToContactsASSOCSource.ContactOpportunityEO"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Contact"
+    Association="model.ASSOC.OpportunityToContactsASSOCDestination"
+    AssociationEnd="model.ASSOC.OpportunityToContactsASSOCDestination.Contact"
+    AssociationOtherEnd="model.ASSOC.OpportunityToContactsASSOCDestination.ContactOpportunityEO"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
   <Key
     Name="ContactsOpportunitiesPk"
     PrimaryKey="true">

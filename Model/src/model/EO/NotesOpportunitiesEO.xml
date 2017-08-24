@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="NotesOpportunitiesEO"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="NOTES_OPPORTUNITIES"
+  AliasName="NotesOpportunitiesEO"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="NotesId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="NOTES_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="NOTES_OPPORTUNITIES"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="OpportunityId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="OPPORTUNITY_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="NOTES_OPPORTUNITIES"
+    PrimaryKey="true"/>
+  <AccessorAttribute
+    Name="Opportunity"
+    Association="model.ASSOC.OpportunityToNotesASSOCSource"
+    AssociationEnd="model.ASSOC.OpportunityToNotesASSOCSource.Opportunity"
+    AssociationOtherEnd="model.ASSOC.OpportunityToNotesASSOCSource.NotesOpportunitiesEO"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Notes"
+    Association="model.ASSOC.OpportunityToNotesASSOCDestination"
+    AssociationEnd="model.ASSOC.OpportunityToNotesASSOCDestination.Notes"
+    AssociationOtherEnd="model.ASSOC.OpportunityToNotesASSOCDestination.NotesOpportunitiesEO"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="NotesOpportunitiesPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="NOTES_OPPORTUNITIES_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.NotesOpportunitiesEO.NotesId"/>
+      <Item Value="model.EO.NotesOpportunitiesEO.OpportunityId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="NotesOpportunitiesFk1">
+    <DesignTime>
+      <Attr Name="_isCascadeDelete" Value="true"/>
+      <Attr Name="_referencedKey" Value="OPPORTUNITIES_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="NOTES_OPPORTUNITIES_FK1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.NotesOpportunitiesEO.OpportunityId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="NotesOpportunitiesNotesFk1">
+    <DesignTime>
+      <Attr Name="_isCascadeDelete" Value="true"/>
+      <Attr Name="_referencedKey" Value="NOTES_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="NOTES_OPPORTUNITIES_NOTES_FK1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.NotesOpportunitiesEO.NotesId"/>
+    </AttrArray>
+  </Key>
+</Entity>

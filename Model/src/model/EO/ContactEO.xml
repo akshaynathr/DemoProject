@@ -250,6 +250,20 @@
     AssociationOtherEnd="model.ASSOC.CustomerToContactsASSOC.Contact2"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Opportunity"
+    Association="model.ASSOC.OpportunityToContactsASSOC"
+    AssociationEnd="model.ASSOC.OpportunityToContactsASSOC.Opportunity"
+    AssociationOtherEnd="model.ASSOC.OpportunityToContactsASSOC.Contact"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="ContactOpportunityEO"
+    Association="model.ASSOC.OpportunityToContactsASSOCDestination"
+    AssociationEnd="model.ASSOC.OpportunityToContactsASSOCDestination.ContactOpportunityEO"
+    AssociationOtherEnd="model.ASSOC.OpportunityToContactsASSOCDestination.Contact"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="ContactsPk"
     PrimaryKey="true">

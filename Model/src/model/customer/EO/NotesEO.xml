@@ -126,6 +126,20 @@
     AssociationOtherEnd="model.ASSOC.NotesToCustomerASSOC.Notes1"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Opportunity"
+    Association="model.ASSOC.OpportunityToNotesASSOC"
+    AssociationEnd="model.ASSOC.OpportunityToNotesASSOC.Opportunity"
+    AssociationOtherEnd="model.ASSOC.OpportunityToNotesASSOC.Notes"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="NotesOpportunitiesEO"
+    Association="model.ASSOC.OpportunityToNotesASSOCDestination"
+    AssociationEnd="model.ASSOC.OpportunityToNotesASSOCDestination.NotesOpportunitiesEO"
+    AssociationOtherEnd="model.ASSOC.OpportunityToNotesASSOCDestination.Notes"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="NotesPk"
     PrimaryKey="true">

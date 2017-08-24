@@ -107,4 +107,10 @@
     Type="oracle.jbo.server.ViewRowImpl"
     Reversed="true"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="OpportunitiesU"
+    ViewLink="model.VL.OpportunitiesToAppointmentsVL"
+    Type="oracle.jbo.RowIterator"
+    Reversed="true"
+    IsUpdateable="false"/>
 </ViewObject>

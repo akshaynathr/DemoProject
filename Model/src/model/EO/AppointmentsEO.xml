@@ -147,6 +147,13 @@
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
   </Attribute>
+  <AccessorAttribute
+    Name="Opportunity"
+    Association="model.ASSOC.opportunitiesToAppointmentsASSOC"
+    AssociationEnd="model.ASSOC.opportunitiesToAppointmentsASSOC.Opportunity"
+    AssociationOtherEnd="model.ASSOC.opportunitiesToAppointmentsASSOC.Appointments"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="AppointmentsPk"
     PrimaryKey="true">

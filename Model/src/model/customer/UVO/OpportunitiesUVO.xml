@@ -419,6 +419,26 @@
     Type="oracle.jbo.server.ViewRowImpl"
     Reversed="true"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="RevenueItems"
+    ViewLink="model.VL.OpportuntiesToRevenueItemsVL"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="ContactsU"
+    ViewLink="model.VL.OpportunityToContactsVL"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="AppointmentsU"
+    ViewLink="model.VL.OpportunitiesToAppointmentsVL"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="NotesU"
+    ViewLink="model.VL.OpportunitiesToNotesL"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <DeclarativeWhereClause
     Name="DeclarativeWhereClause">
     <ViewCriteria

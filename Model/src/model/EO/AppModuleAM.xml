@@ -17,12 +17,6 @@
     Name="NotesU1"
     ViewObjectName="model.customer.UVO.NotesUVO"/>
   <ViewUsage
-    Name="NotesU2"
-    ViewObjectName="model.customer.UVO.NotesUVO"/>
-  <ViewUsage
-    Name="CustomersU2"
-    ViewObjectName="model.UVO.CustomersUVO"/>
-  <ViewUsage
     Name="TasksU1"
     ViewObjectName="model.customer.UVO.TasksUVO"/>
   <ViewUsage
@@ -34,17 +28,53 @@
   <ViewUsage
     Name="OpportunitiesU1"
     ViewObjectName="model.customer.UVO.OpportunitiesUVO"/>
+  <ViewUsage
+    Name="OpportunitiesU2"
+    ViewObjectName="model.customer.UVO.OpportunitiesUVO"/>
+  <ViewUsage
+    Name="TasksU2"
+    ViewObjectName="model.customer.UVO.TasksUVO"/>
+  <ViewUsage
+    Name="CustomersU3"
+    ViewObjectName="model.UVO.CustomersUVO"/>
+  <ViewUsage
+    Name="RevenueItems1"
+    ViewObjectName="model.customer.VO.RevenueItemsVO"/>
+  <ViewUsage
+    Name="ContactsU3"
+    ViewObjectName="model.UVO.ContactsUVO"/>
+  <ViewUsage
+    Name="OpportunitiesU4"
+    ViewObjectName="model.customer.UVO.OpportunitiesUVO"/>
+  <ViewUsage
+    Name="AppointmentsU1"
+    ViewObjectName="model.UVO.AppointmentsUVO"/>
+  <ViewUsage
+    Name="AppointmentsU2"
+    ViewObjectName="model.UVO.AppointmentsUVO"/>
+  <ViewUsage
+    Name="NotesU2"
+    ViewObjectName="model.customer.UVO.NotesUVO"/>
+  <ViewUsage
+    Name="TasksU3"
+    ViewObjectName="model.customer.UVO.TasksUVO"/>
+  <ViewUsage
+    Name="CustomersU2"
+    ViewObjectName="model.UVO.CustomersUVO"/>
+  <ViewUsage
+    Name="ContactsU1"
+    ViewObjectName="model.UVO.ContactsUVO"/>
+  <ViewUsage
+    Name="OpportunitiesU3"
+    ViewObjectName="model.customer.UVO.OpportunitiesUVO"/>
+  <ViewUsage
+    Name="CustomersU4"
+    ViewObjectName="model.UVO.CustomersUVO"/>
   <ViewLinkUsage
     Name="CustomerToNotes"
     ViewLinkObjectName="model.VL.CustomerToNotes"
     SrcViewUsageName="model.EO.AppModuleAM.CustomersU1"
     DstViewUsageName="model.EO.AppModuleAM.NotesU1"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="NotesToCustomersVL"
-    ViewLinkObjectName="model.VL.NotesToCustomersVL"
-    SrcViewUsageName="model.EO.AppModuleAM.NotesU2"
-    DstViewUsageName="model.EO.AppModuleAM.CustomersU2"
     Reversed="false"/>
   <ViewLinkUsage
     Name="CusotmersToTasksVL1"
@@ -69,5 +99,65 @@
     ViewLinkObjectName="model.VL.CustomerToOpportunityVL"
     SrcViewUsageName="model.EO.AppModuleAM.CustomersU1"
     DstViewUsageName="model.EO.AppModuleAM.OpportunitiesU1"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="TasksOppurtunityVL1"
+    ViewLinkObjectName="model.customer.UVO.TasksOppurtunityVL"
+    SrcViewUsageName="model.EO.AppModuleAM.OpportunitiesU2"
+    DstViewUsageName="model.EO.AppModuleAM.TasksU2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="CustomerToOpportunityVL2"
+    ViewLinkObjectName="model.VL.CustomerToOpportunityVL"
+    SrcViewUsageName="model.EO.AppModuleAM.OpportunitiesU2"
+    DstViewUsageName="model.EO.AppModuleAM.CustomersU3"
+    Reversed="true"/>
+  <ViewLinkUsage
+    Name="OpportuntiesToRevenueItemsVL1"
+    ViewLinkObjectName="model.VL.OpportuntiesToRevenueItemsVL"
+    SrcViewUsageName="model.EO.AppModuleAM.OpportunitiesU2"
+    DstViewUsageName="model.EO.AppModuleAM.RevenueItems1"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="OpportunityToContactsVL1"
+    ViewLinkObjectName="model.VL.OpportunityToContactsVL"
+    SrcViewUsageName="model.EO.AppModuleAM.OpportunitiesU2"
+    DstViewUsageName="model.EO.AppModuleAM.ContactsU3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="OpportunitiesToAppointmentsVL"
+    ViewLinkObjectName="model.VL.OpportunitiesToAppointmentsVL"
+    SrcViewUsageName="model.EO.AppModuleAM.OpportunitiesU4"
+    DstViewUsageName="model.EO.AppModuleAM.AppointmentsU1"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="OpportunitiesToAppointmentsVL1"
+    ViewLinkObjectName="model.VL.OpportunitiesToAppointmentsVL"
+    SrcViewUsageName="model.EO.AppModuleAM.OpportunitiesU2"
+    DstViewUsageName="model.EO.AppModuleAM.AppointmentsU2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="OpportunitiesToNotesL1"
+    ViewLinkObjectName="model.VL.OpportunitiesToNotesL"
+    SrcViewUsageName="model.EO.AppModuleAM.OpportunitiesU2"
+    DstViewUsageName="model.EO.AppModuleAM.NotesU2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="CusotmersToTasksVL2"
+    ViewLinkObjectName="model.VL.CusotmersToTasksVL"
+    SrcViewUsageName="model.EO.AppModuleAM.TasksU3"
+    DstViewUsageName="model.EO.AppModuleAM.CustomersU2"
+    Reversed="true"/>
+  <ViewLinkUsage
+    Name="OpportunityToContactsVL2"
+    ViewLinkObjectName="model.VL.OpportunityToContactsVL"
+    SrcViewUsageName="model.EO.AppModuleAM.ContactsU1"
+    DstViewUsageName="model.EO.AppModuleAM.OpportunitiesU3"
+    Reversed="true"/>
+  <ViewLinkUsage
+    Name="CustomerToContactsVL2"
+    ViewLinkObjectName="model.VL.CustomerToContactsVL"
+    SrcViewUsageName="model.EO.AppModuleAM.ContactsU1"
+    DstViewUsageName="model.EO.AppModuleAM.CustomersU4"
     Reversed="false"/>
 </AppModule>

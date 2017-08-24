@@ -93,6 +93,13 @@
     AssociationOtherEnd="model.customer.EO.OpportRevenueASSOC.RevenueItems"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Opportunity1"
+    Association="model.ASSOC.OpportunityToRevenueItemASSOC"
+    AssociationEnd="model.ASSOC.OpportunityToRevenueItemASSOC.Opportunity1"
+    AssociationOtherEnd="model.ASSOC.OpportunityToRevenueItemASSOC.RevenueItems1"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
   <Key
     Name="RevenueItemsPk"
     PrimaryKey="true">
@@ -132,6 +139,17 @@
       <Attr Name="_referencedKey" Value="OPPORTUNITIES_OPPORTUNITY_ID_C"/>
       <Attr Name="_isForeign" Value="true"/>
       <Attr Name="_DBObjectName" Value="FK_REVENUE_ITEMS_EO"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.customer.EO.RevenueItemsEO.OpportunityId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="fk_RevenueItemsEO1">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="OPPORTUNITIES_OPPORTUNITY_ID_C"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_REVENUE_ITEMS_EO1"/>
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.customer.EO.RevenueItemsEO.OpportunityId"/>

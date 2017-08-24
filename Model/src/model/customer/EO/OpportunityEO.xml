@@ -434,6 +434,48 @@
     AssociationOtherEnd="model.customer.EO.OpportRevenueASSOC.Opportunity"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="RevenueItems1"
+    Association="model.ASSOC.OpportunityToRevenueItemASSOC"
+    AssociationEnd="model.ASSOC.OpportunityToRevenueItemASSOC.RevenueItems1"
+    AssociationOtherEnd="model.ASSOC.OpportunityToRevenueItemASSOC.Opportunity1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Contact"
+    Association="model.ASSOC.OpportunityToContactsASSOC"
+    AssociationEnd="model.ASSOC.OpportunityToContactsASSOC.Contact"
+    AssociationOtherEnd="model.ASSOC.OpportunityToContactsASSOC.Opportunity"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="ContactOpportunityEO"
+    Association="model.ASSOC.OpportunityToContactsASSOCSource"
+    AssociationEnd="model.ASSOC.OpportunityToContactsASSOCSource.ContactOpportunityEO"
+    AssociationOtherEnd="model.ASSOC.OpportunityToContactsASSOCSource.Opportunity1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Appointments"
+    Association="model.ASSOC.opportunitiesToAppointmentsASSOC"
+    AssociationEnd="model.ASSOC.opportunitiesToAppointmentsASSOC.Appointments"
+    AssociationOtherEnd="model.ASSOC.opportunitiesToAppointmentsASSOC.Opportunity"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Notes"
+    Association="model.ASSOC.OpportunityToNotesASSOC"
+    AssociationEnd="model.ASSOC.OpportunityToNotesASSOC.Notes"
+    AssociationOtherEnd="model.ASSOC.OpportunityToNotesASSOC.Opportunity"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="NotesOpportunitiesEO"
+    Association="model.ASSOC.OpportunityToNotesASSOCSource"
+    AssociationEnd="model.ASSOC.OpportunityToNotesASSOCSource.NotesOpportunitiesEO"
+    AssociationOtherEnd="model.ASSOC.OpportunityToNotesASSOCSource.Opportunity"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="OpportunitiesOpportunityIdCheck">
     <DesignTime>

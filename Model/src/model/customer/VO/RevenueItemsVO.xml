@@ -66,4 +66,10 @@
     EntityAttrName="WorstCaseRevenue"
     EntityUsage="RevenueItemsEO"
     AliasName="WORST_CASE_REVENUE"/>
+  <ViewLinkAccessor
+    Name="OpportunitiesU"
+    ViewLink="model.VL.OpportuntiesToRevenueItemsVL"
+    Type="oracle.jbo.server.ViewRowImpl"
+    Reversed="true"
+    IsUpdateable="false"/>
 </ViewObject>

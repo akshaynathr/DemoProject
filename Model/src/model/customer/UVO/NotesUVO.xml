@@ -22,7 +22,8 @@
     PrecisionRule="true"
     EntityAttrName="NotesId"
     EntityUsage="NotesEO"
-    AliasName="NOTES_ID"/>
+    AliasName="NOTES_ID"
+    IsUpdateable="while_insert"/>
   <ViewAttribute
     Name="DateRecorded"
     PrecisionRule="true"
@@ -82,5 +83,11 @@
     Name="CustomersU"
     ViewLink="model.VL.NotesToCustomersVL"
     Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="OpportunitiesU"
+    ViewLink="model.VL.OpportunitiesToNotesL"
+    Type="oracle.jbo.RowIterator"
+    Reversed="true"
     IsUpdateable="false"/>
 </ViewObject>
