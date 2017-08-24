@@ -47,6 +47,15 @@
           Value="50"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:LengthValidationBean
+      Name="NameLength"
+      ResId="ProductName_Rule_0"
+      MessageFlavor="IGNORE_DETAILS"
+      OnAttribute="ProductName"
+      CompareType="GREATERTHANEQUALTO"
+      DataType="CHARACTER"
+      CompareLength="1"
+      Inverse="false"/>
   </Attribute>
   <Attribute
     Name="ProductDescription"
@@ -102,7 +111,7 @@
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
-          Value="50"/>
+          Value="80"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>

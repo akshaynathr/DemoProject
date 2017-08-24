@@ -48,7 +48,7 @@
                             emptyText="#{bindings.UsersU41.viewable ? 'No data to display.' : 'Access Denied.'}"
                             rowBandingInterval="0" selectedRowKeys="#{bindings.UsersU41.collectionModel.selectedRow}"
                             selectionListener="#{bindings.UsersU41.collectionModel.makeCurrent}" rowSelection="single"
-                            fetchSize="#{bindings.UsersU41.rangeSize}" partialTriggers="::qryId3" id="t1"
+                            fetchSize="#{bindings.UsersU41.rangeSize}" partialTriggers="::qryId3 ::b1" id="t1"
                             columnStretching="column:c1">
                     <af:column headerText="Global name" id="c1">
                       <af:link text="#{row.GlobalUsername}" id="l1" action="edit" useWindow="true" windowHeight="500"
@@ -95,7 +95,7 @@
                             rows="#{bindings.UserRolesMaster11.rangeSize}"
                             emptyText="#{bindings.UserRolesMaster11.viewable ? 'No data to display.' : 'Access Denied.'}"
                             rowBandingInterval="0" fetchSize="#{bindings.UserRolesMaster11.rangeSize}" id="t4"
-                            columnStretching="column:c26">
+                            columnStretching="column:c26" partialTriggers="::t1">
                     <af:column headerText="Role" id="c26">
                       <af:selectOneChoice value="#{row.bindings.RoleNameId.inputValue}"
                                           label="#{row.bindings.RoleNameId.label}"
@@ -160,7 +160,7 @@
                               selectedRowKeys="#{bindings.ProductsU1.collectionModel.selectedRow}"
                               selectionListener="#{bindings.ProductsU1.collectionModel.makeCurrent}"
                               rowSelection="single" fetchSize="#{bindings.ProductsU1.rangeSize}"
-                              partialTriggers="::qryId4" id="t2" columnStretching="column:c11">
+                              partialTriggers="::qryId4 ::b2 ::b6 ::b9" id="t2" columnStretching="column:c11">
                       <af:column headerText="Name" id="c10" minimumWidth="100">
                         <af:link text="#{row.ProductName}" id="l2" action="editProduct" useWindow="true"
                                  windowEmbedStyle="inlineDocument" windowHeight="500" windowWidth="600"/>
@@ -229,7 +229,7 @@
                             emptyText="#{bindings.RolesU1.viewable ? 'No data to display.' : 'Access Denied.'}"
                             rowBandingInterval="0" selectedRowKeys="#{bindings.RolesU1.collectionModel.selectedRow}"
                             selectionListener="#{bindings.RolesU1.collectionModel.makeCurrent}" rowSelection="single"
-                            fetchSize="#{bindings.RolesU1.rangeSize}" partialTriggers="::qryId1 ::b8" id="t3"
+                            fetchSize="#{bindings.RolesU1.rangeSize}" partialTriggers="::qryId1 ::b8 ::b7" id="t3"
                             columnStretching="column:c7">
                     <af:column headerText="Name" id="c7">
                       <af:selectOneChoice value="#{row.bindings.RoleNameId.inputValue}"

@@ -3,23 +3,30 @@
   <af:document id="d1" title="Create Product Category">
     <af:messages id="m1"/>
     <af:form id="f1">
-      <af:panelFormLayout id="pfl1">
-        <af:inputText value="#{bindings.PossibleValue.inputValue}" label="Category"
-                      required="#{bindings.PossibleValue.hints.mandatory}"
-                      columns="#{bindings.PossibleValue.hints.displayWidth}"
-                      maximumLength="#{bindings.PossibleValue.hints.precision}"
-                      shortDesc="#{bindings.PossibleValue.hints.tooltip}" id="it1">
-          <f:validator binding="#{bindings.PossibleValue.validator}"/>
-        </af:inputText>
-        <af:inputText value="#{bindings.Description.inputValue}" label="Description"
-                      required="#{bindings.Description.hints.mandatory}"
-                      columns="#{bindings.Description.hints.displayWidth}"
-                      maximumLength="#{bindings.Description.hints.precision}"
-                      shortDesc="#{bindings.Description.hints.tooltip}" id="it2" rows="10">
-          <f:validator binding="#{bindings.Description.validator}"/>
-        </af:inputText>
-      </af:panelFormLayout>
-      <af:button text="Save" id="b1" actionListener="#{bindings.Commit.execute}" action="commit"/>
+      <af:panelGridLayout id="pgl1">
+        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
+          <af:gridCell marginStart="5px" width="90%" id="gc1">
+            <af:panelFormLayout id="pfl1">
+              <af:inputText value="#{bindings.PossibleValue.inputValue}" label="Category"
+                            required="#{bindings.PossibleValue.hints.mandatory}"
+                            columns="#{bindings.PossibleValue.hints.displayWidth}"
+                            maximumLength="#{bindings.PossibleValue.hints.precision}"
+                            shortDesc="#{bindings.PossibleValue.hints.tooltip}" id="it1">
+                <f:validator binding="#{bindings.PossibleValue.validator}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.Description.inputValue}" label="Description"
+                            required="#{bindings.Description.hints.mandatory}" columns="50"
+                            maximumLength="#{bindings.Description.hints.precision}"
+                            shortDesc="#{bindings.Description.hints.tooltip}" id="it2" rows="10">
+                <f:validator binding="#{bindings.Description.validator}"/>
+              </af:inputText>
+            </af:panelFormLayout>
+          </af:gridCell>
+          <af:gridCell marginStart="5px" width="10%" marginEnd="5px" id="gc2">
+            <af:button text="Save" id="b1" actionListener="#{bindings.Commit.execute}" action="commit"/>
+          </af:gridCell>
+        </af:gridRow>
+      </af:panelGridLayout>
     </af:form>
   </af:document>
 </f:view>

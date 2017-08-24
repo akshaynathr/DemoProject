@@ -8,65 +8,70 @@
                 <f:facet name="top"/>
                 <f:facet name="bottom"/>
                 <f:facet name="start"/>
-                <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.backing_createRole.pfl1}">
-                    <af:panelGridLayout id="pgl1" binding="#{backingBeanScope.backing_createRole.pgl1}">
-                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1"
-                                    binding="#{backingBeanScope.backing_createRole.gr1}">
-                            <af:gridCell marginStart="5px" width="50%" id="gc1"
-                                         binding="#{backingBeanScope.backing_createRole.gc1}"/>
-                            <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc2"
-                                         binding="#{backingBeanScope.backing_createRole.gc2}" halign="end">
-                                <af:button text="Save" id="b1" binding="#{backingBeanScope.backing_createRole.b1}"
-                                           actionListener="#{bindings.Commit.execute}"
-                                           disabled="#{!bindings.Commit.enabled}"
-                                           action="#{backingBeanScope.backing_createRole.commit_now}"/>
-                            </af:gridCell>
-                        </af:gridRow>
-                    </af:panelGridLayout>
-                    <af:inputText value="#{bindings.PossibleValue.inputValue}"
-                                  label="#{bindings.PossibleValue.hints.label}"
-                                  required="#{bindings.PossibleValue.hints.mandatory}"
-                                  columns="#{bindings.PossibleValue.hints.displayWidth}"
-                                  maximumLength="#{bindings.PossibleValue.hints.precision}"
-                                  shortDesc="#{bindings.PossibleValue.hints.tooltip}" id="it1"
-                                  binding="#{backingBeanScope.backing_createRole.it1}">
-                        <f:validator binding="#{bindings.PossibleValue.validator}"/>
-                    </af:inputText>
-                    <af:inputDate value="#{bindings.StartDate.inputValue}" label="#{bindings.StartDate.hints.label}"
-                                  required="#{bindings.StartDate.hints.mandatory}"
-                                  columns="#{bindings.StartDate.hints.displayWidth}"
-                                  shortDesc="#{bindings.StartDate.hints.tooltip}" id="id1"
-                                  binding="#{backingBeanScope.backing_createRole.id1}">
-                        <f:validator binding="#{bindings.StartDate.validator}"/>
-                        <af:convertDateTime pattern="#{bindings.StartDate.format}"/>
-                    </af:inputDate>
-                    <af:inputDate value="#{bindings.EndDate.inputValue}" label="#{bindings.EndDate.hints.label}"
-                                  required="#{bindings.EndDate.hints.mandatory}"
-                                  columns="#{bindings.EndDate.hints.displayWidth}"
-                                  shortDesc="#{bindings.EndDate.hints.tooltip}" id="id2"
-                                  binding="#{backingBeanScope.backing_createRole.id2}">
-                        <f:validator binding="#{bindings.EndDate.validator}"/>
-                        <af:convertDateTime pattern="#{bindings.EndDate.format}"/>
-                    </af:inputDate>
-                    <af:inputText value="#{bindings.Description1.inputValue}"
-                                  label="#{bindings.Description1.hints.label}"
-                                  required="#{bindings.Description1.hints.mandatory}"
-                                  columns="#{bindings.Description1.hints.displayWidth}"
-                                  maximumLength="#{bindings.Description1.hints.precision}"
-                                  shortDesc="#{bindings.Description1.hints.tooltip}" id="it3"
-                                  binding="#{backingBeanScope.backing_createRole.it3}" rows="5" rendered="false">
-                        <f:validator binding="#{bindings.Description1.validator}"/>
-                    </af:inputText>
-                    <af:inputText value="#{bindings.Description.inputValue}" label="#{bindings.Description.hints.label}"
-                                  required="#{bindings.Description.hints.mandatory}"
-                                  columns="#{bindings.Description.hints.displayWidth}"
-                                  maximumLength="#{bindings.Description.hints.precision}"
-                                  shortDesc="#{bindings.Description.hints.tooltip}" id="it2"
-                                  binding="#{backingBeanScope.backing_createRole.it2}" rows="5">
-                        <f:validator binding="#{bindings.Description.validator}"/>
-                    </af:inputText>
-                </af:panelFormLayout>
                 <f:facet name="end"/>
+                <af:panelGridLayout id="pgl1" binding="#{backingBeanScope.backing_createRole.pgl1}">
+                    <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1"
+                                binding="#{backingBeanScope.backing_createRole.gr1}">
+                        <af:gridCell marginStart="5px" width="90%" id="gc1"
+                                     binding="#{backingBeanScope.backing_createRole.gc1}">
+                            <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.backing_createRole.pfl1}">
+                                <af:inputText value="#{bindings.PossibleValue.inputValue}"
+                                              label="#{bindings.PossibleValue.hints.label}"
+                                              required="#{bindings.PossibleValue.hints.mandatory}"
+                                              columns="#{bindings.PossibleValue.hints.displayWidth}"
+                                              maximumLength="#{bindings.PossibleValue.hints.precision}"
+                                              shortDesc="#{bindings.PossibleValue.hints.tooltip}" id="it1"
+                                              binding="#{backingBeanScope.backing_createRole.it1}">
+                                    <f:validator binding="#{bindings.PossibleValue.validator}"/>
+                                </af:inputText>
+                                <af:inputDate value="#{bindings.StartDate.inputValue}"
+                                              label="#{bindings.StartDate.hints.label}"
+                                              required="#{bindings.StartDate.hints.mandatory}"
+                                              columns="#{bindings.StartDate.hints.displayWidth}"
+                                              shortDesc="#{bindings.StartDate.hints.tooltip}" id="id1"
+                                              binding="#{backingBeanScope.backing_createRole.id1}">
+                                    <f:validator binding="#{bindings.StartDate.validator}"/>
+                                    <af:convertDateTime pattern="#{bindings.StartDate.format}"/>
+                                </af:inputDate>
+                                <af:inputDate value="#{bindings.EndDate.inputValue}"
+                                              label="#{bindings.EndDate.hints.label}"
+                                              required="#{bindings.EndDate.hints.mandatory}"
+                                              columns="#{bindings.EndDate.hints.displayWidth}"
+                                              shortDesc="#{bindings.EndDate.hints.tooltip}" id="id2"
+                                              binding="#{backingBeanScope.backing_createRole.id2}">
+                                    <f:validator binding="#{bindings.EndDate.validator}"/>
+                                    <af:convertDateTime pattern="#{bindings.EndDate.format}"/>
+                                </af:inputDate>
+                                <af:inputText value="#{bindings.Description1.inputValue}"
+                                              label="#{bindings.Description1.hints.label}"
+                                              required="#{bindings.Description1.hints.mandatory}"
+                                              columns="#{bindings.Description1.hints.displayWidth}"
+                                              maximumLength="#{bindings.Description1.hints.precision}"
+                                              shortDesc="#{bindings.Description1.hints.tooltip}" id="it3"
+                                              binding="#{backingBeanScope.backing_createRole.it3}" rows="5"
+                                              rendered="false">
+                                    <f:validator binding="#{bindings.Description1.validator}"/>
+                                </af:inputText>
+                                <af:inputText value="#{bindings.Description.inputValue}"
+                                              label="#{bindings.Description.hints.label}"
+                                              required="#{bindings.Description.hints.mandatory}"
+                                              columns="#{bindings.Description.hints.displayWidth}"
+                                              maximumLength="#{bindings.Description.hints.precision}"
+                                              shortDesc="#{bindings.Description.hints.tooltip}" id="it2"
+                                              binding="#{backingBeanScope.backing_createRole.it2}" rows="5">
+                                    <f:validator binding="#{bindings.Description.validator}"/>
+                                </af:inputText>
+                            </af:panelFormLayout>
+                        </af:gridCell>
+                        <af:gridCell marginStart="5px" width="10%" marginEnd="5px" id="gc2"
+                                     binding="#{backingBeanScope.backing_createRole.gc2}">
+                            <af:button text="Save" id="b1" binding="#{backingBeanScope.backing_createRole.b1}"
+                                       actionListener="#{bindings.Commit.execute}"
+                                       disabled="#{!bindings.Commit.enabled}"
+                                       action="#{backingBeanScope.backing_createRole.commit_now}"/>
+                        </af:gridCell>
+                    </af:gridRow>
+                </af:panelGridLayout>
             </af:panelBorderLayout>
         </af:form>
     </af:document>
