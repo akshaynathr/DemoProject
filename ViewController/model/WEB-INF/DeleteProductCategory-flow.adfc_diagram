@@ -9,39 +9,18 @@
       <property
          name="pageFragment">false</property>
       <property
-         name="x">254.0</property>
+         name="x">489.0</property>
       <property
          name="start">true</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>DeleteProductCategory&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">170.52246</property>
+         name="y">176.71777</property>
       <property
          name="page">/DeleteProductCategory.jsf</property>
       <property
          name="exceptionHandler">false</property>
    </View>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase11"
-      from="View2">
-      <property
-         name="tosrcid">__5</property>
-      <property
-         name="fromOutcome">deleteRow</property>
-      <property
-         name="fromsrcid">__3</property>
-      <property
-         name="sdm:polyPoints">R50,295.0,170.17188,464.5,167.69531,L50</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase14">
-      <property
-         name="fromOutcome">*</property>
-      <property
-         name="sdm:polyPoints">R50,546.5,167.69531,666.5,199.79883,L50</property>
-   </ControlFlowCase>
    <TaskFlowReturn
       id="TaskFlowReturn15">
       <property
@@ -51,21 +30,12 @@
       <property
          name="description">&lt;html>&lt;p>&lt;b>return&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  return&lt;/p></property>
       <property
-         name="y">182.5459</property>
+         name="y">180.79297</property>
       <property
          name="finish">true</property>
       <property
          name="exceptionHandler">false</property>
    </TaskFlowReturn>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase16"
-      to="TaskFlowReturn15">
-      <property
-         name="fromOutcome">*</property>
-      <property
-         name="sdm:polyPoints">R50,748.5,199.79883,843.0,182.19531,L50</property>
-   </ControlFlowCase>
    <ControlFlowCase
       islink="true"
       id="ControlFlowCase17"
@@ -74,6 +44,40 @@
       <property
          name="fromOutcome">deleteRow</property>
       <property
-         name="sdm:polyPoints">R50,295.0,170.17188,843.0,182.19531,L50</property>
+         name="sdm:polyPoints">R50,530.0,176.36719,843.0,180.44238,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase8"
+      to="TaskFlowReturn15">
+      <property
+         name="tosrcid">__9</property>
+      <property
+         name="fromOutcome">*</property>
+      <property
+         name="fromsrcid">__8</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase9">
+      <property
+         name="tosrcid">__7</property>
+      <property
+         name="fromOutcome">*</property>
+      <property
+         name="fromsrcid">__6</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase10"
+      from="View2">
+      <property
+         name="tosrcid">__5</property>
+      <property
+         name="fromOutcome">deleteRow</property>
+      <property
+         name="fromsrcid">__3</property>
+      <property
+         name="sdm:polyPoints">L50,448.0,177.06836,321.5,220.44824,R50</property>
    </ControlFlowCase>
 </SDM>

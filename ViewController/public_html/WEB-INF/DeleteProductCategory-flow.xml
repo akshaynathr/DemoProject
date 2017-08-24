@@ -2,6 +2,9 @@
 <adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
   <task-flow-definition id="DeleteProductCategory-flow">
     <default-activity>DeleteProductCategory</default-activity>
+    <transaction>
+      <new-transaction/>
+    </transaction>
     <data-control-scope>
       <shared/>
     </data-control-scope>
@@ -11,6 +14,7 @@
     <task-flow-return id="return">
       <outcome>
         <name>return</name>
+        <commit/>
       </outcome>
     </task-flow-return>
     <control-flow-rule id="__3">

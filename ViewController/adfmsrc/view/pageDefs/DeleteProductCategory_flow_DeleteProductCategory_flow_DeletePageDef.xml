@@ -4,9 +4,9 @@
                 SkipValidation="true">
   <parameters/>
   <executables>
-    <iterator Binds="Lookups1" RangeSize="25" DataControl="AppModuleAMDataControl54" id="Lookups1Iterator"/>
+    <iterator Binds="LookupsU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="LookupsU1Iterator"/>
   </executables>
   <bindings>
-    <action IterBinding="Lookups1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action IterBinding="LookupsU1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
   </bindings>
 </pageDefinition>
