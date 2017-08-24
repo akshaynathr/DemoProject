@@ -313,14 +313,84 @@
             <af:showDetailItem text="Revenue Items" id="sdi11">
               <af:panelGroupLayout layout="vertical" id="pgl9">
                 <af:panelHeader text="RevenueItemsEO" id="ph10">
-                  <af:quickQuery label="Search" searchDesc="Search" id="qryId2"
-                                 value="#{bindings.ImplicitViewCriteriaQuery1.quickQueryDescriptor}"
-                                 model="#{bindings.ImplicitViewCriteriaQuery1.queryModel}"
-                                 queryListener="#{bindings.ImplicitViewCriteriaQuery1.processQuery}">
-                    <f:facet name="end">
-                      <af:commandLink text="Advanced" rendered="false" id="cl2"/>
-                    </f:facet>
-                  </af:quickQuery>
+                  <af:panelGroupLayout id="pgl8" layout="horizontal">
+                    <af:quickQuery label="Search" searchDesc="Search" id="qryId2"
+                                   value="#{bindings.ImplicitViewCriteriaQuery1.quickQueryDescriptor}"
+                                   model="#{bindings.ImplicitViewCriteriaQuery1.queryModel}"
+                                   queryListener="#{bindings.ImplicitViewCriteriaQuery1.processQuery}">
+                      <f:facet name="end">
+                        <af:commandLink text="Advanced" rendered="false" id="cl2"/>
+                      </f:facet>
+                    </af:quickQuery>
+                    <af:button actionListener="#{bindings.CreateInsert4.execute}" text="Add Revenue Item"
+                               disabled="#{!bindings.CreateInsert4.enabled}" id="b3">
+                      <af:showPopupBehavior popupId="p1"/>
+                    </af:button>
+                    <af:popup childCreation="deferred" autoCancel="disabled" id="p1"
+                              popupFetchListener="#{backingBeanScope.InsertBean.insertOpRevenueItemPopFetch}"
+                              contentDelivery="lazyUncached">
+                      <af:dialog id="d2" affirmativeTextAndAccessKey="Save" cancelTextAndAccessKey="Cancel">
+                        <f:facet name="buttonBar"/>
+                        <af:panelFormLayout id="pfl2">
+                          <af:selectOneChoice value="#{bindings.ProductId.inputValue}"
+                                              label="#{bindings.ProductId.label}"
+                                              required="#{bindings.ProductId.hints.mandatory}"
+                                              shortDesc="#{bindings.ProductId.hints.tooltip}" id="soc15">
+                            <f:selectItems value="#{bindings.ProductId.items}" id="si15"/>
+                            <f:validator binding="#{bindings.ProductId.validator}"/>
+                          </af:selectOneChoice>
+                          <af:inputText value="#{bindings.EstimatedPrice.inputValue}" label="Estimated Price"
+                                        required="#{bindings.EstimatedPrice.hints.mandatory}"
+                                        columns="#{bindings.EstimatedPrice.hints.displayWidth}"
+                                        maximumLength="#{bindings.EstimatedPrice.hints.precision}"
+                                        shortDesc="#{bindings.EstimatedPrice.hints.tooltip}" id="it25">
+                            <f:validator binding="#{bindings.EstimatedPrice.validator}"/>
+                            <af:convertNumber groupingUsed="false" pattern="#{bindings.EstimatedPrice.format}"/>
+                          </af:inputText>
+                          <af:inputText value="#{bindings.Quantity.inputValue}" label="#{bindings.Quantity.hints.label}"
+                                        required="#{bindings.Quantity.hints.mandatory}"
+                                        columns="#{bindings.Quantity.hints.displayWidth}"
+                                        maximumLength="#{bindings.Quantity.hints.precision}"
+                                        shortDesc="#{bindings.Quantity.hints.tooltip}" id="it26">
+                            <f:validator binding="#{bindings.Quantity.validator}"/>
+                            <af:convertNumber groupingUsed="false" pattern="#{bindings.Quantity.format}"/>
+                          </af:inputText>
+                          <af:inputText value="#{bindings.Revenue.inputValue}" label="#{bindings.Revenue.hints.label}"
+                                        required="#{bindings.Revenue.hints.mandatory}"
+                                        columns="#{bindings.Revenue.hints.displayWidth}"
+                                        maximumLength="#{bindings.Revenue.hints.precision}"
+                                        shortDesc="#{bindings.Revenue.hints.tooltip}" id="it27">
+                            <f:validator binding="#{bindings.Revenue.validator}"/>
+                            <af:convertNumber groupingUsed="false" pattern="#{bindings.Revenue.format}"/>
+                          </af:inputText>
+                          <af:inputText value="#{bindings.WinProbablity.inputValue}" label="Win Probability"
+                                        required="#{bindings.WinProbablity.hints.mandatory}"
+                                        columns="#{bindings.WinProbablity.hints.displayWidth}"
+                                        maximumLength="#{bindings.WinProbablity.hints.precision}"
+                                        shortDesc="#{bindings.WinProbablity.hints.tooltip}" id="it28">
+                            <f:validator binding="#{bindings.WinProbablity.validator}"/>
+                            <af:convertNumber groupingUsed="false" pattern="#{bindings.WinProbablity.format}"/>
+                          </af:inputText>
+                          <af:inputText value="#{bindings.BestCaseRevenue.inputValue}" label="Best Case Revenue"
+                                        required="#{bindings.BestCaseRevenue.hints.mandatory}"
+                                        columns="#{bindings.BestCaseRevenue.hints.displayWidth}"
+                                        maximumLength="#{bindings.BestCaseRevenue.hints.precision}"
+                                        shortDesc="#{bindings.BestCaseRevenue.hints.tooltip}" id="it29">
+                            <f:validator binding="#{bindings.BestCaseRevenue.validator}"/>
+                            <af:convertNumber groupingUsed="false" pattern="#{bindings.BestCaseRevenue.format}"/>
+                          </af:inputText>
+                          <af:inputText value="#{bindings.WorstCaseRevenue.inputValue}" label="Worst Case Revenue"
+                                        required="#{bindings.WorstCaseRevenue.hints.mandatory}"
+                                        columns="#{bindings.WorstCaseRevenue.hints.displayWidth}"
+                                        maximumLength="#{bindings.WorstCaseRevenue.hints.precision}"
+                                        shortDesc="#{bindings.WorstCaseRevenue.hints.tooltip}" id="it30">
+                            <f:validator binding="#{bindings.WorstCaseRevenue.validator}"/>
+                            <af:convertNumber groupingUsed="false" pattern="#{bindings.WorstCaseRevenue.format}"/>
+                          </af:inputText>
+                        </af:panelFormLayout>
+                      </af:dialog>
+                    </af:popup>
+                  </af:panelGroupLayout>
                 </af:panelHeader>
               </af:panelGroupLayout>
               <af:table value="#{bindings.RevenueItems1.collectionModel}" var="row"
@@ -330,7 +400,8 @@
                         selectionListener="#{bindings.RevenueItems1.collectionModel.makeCurrent}" rowSelection="single"
                         fetchSize="#{bindings.RevenueItems1.rangeSize}"
                         filterModel="#{bindings.RevenueItems1Query.queryDescriptor}" filterVisible="true"
-                        queryListener="#{bindings.RevenueItems1Query.processQuery}" varStatus="vs" id="t10">
+                        queryListener="#{bindings.RevenueItems1Query.processQuery}" varStatus="vs" id="t10"
+                        partialTriggers="::b3">
                 <af:column sortProperty="#{bindings.RevenueItems1.hints.ProductId.name}" filterable="true"
                            sortable="true" headerText="#{bindings.RevenueItems1.hints.ProductId.label}" id="c170">
                   <af:outputText value="#{row.ProductId}" shortDesc="#{bindings.RevenueItems1.hints.ProductId.tooltip}"

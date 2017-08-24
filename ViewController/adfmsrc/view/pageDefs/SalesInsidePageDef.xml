@@ -437,5 +437,38 @@
     <list IterBinding="ContactsOpportunitiesU2Iterator" StaticList="false" Uses="LOV_ContactId" id="ContactId"
           DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
     <action id="Commit" DataControl="AppModuleAMDataControl1" RequiresUpdateModel="true" Action="commitTransaction"/>
+    <action IterBinding="RevenueItems1Iterator" id="CreateInsert4" RequiresUpdateModel="true" Action="createInsertRow"/>
+    <list IterBinding="RevenueItems1Iterator" StaticList="false" Uses="LOV_ProductId" id="ProductId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="RevenueItems1Iterator" id="EstimatedPrice">
+      <AttrNames>
+        <Item Value="EstimatedPrice"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RevenueItems1Iterator" id="Quantity">
+      <AttrNames>
+        <Item Value="Quantity"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RevenueItems1Iterator" id="Revenue">
+      <AttrNames>
+        <Item Value="Revenue"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RevenueItems1Iterator" id="WinProbablity">
+      <AttrNames>
+        <Item Value="WinProbablity"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RevenueItems1Iterator" id="BestCaseRevenue">
+      <AttrNames>
+        <Item Value="BestCaseRevenue"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RevenueItems1Iterator" id="WorstCaseRevenue">
+      <AttrNames>
+        <Item Value="WorstCaseRevenue"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>

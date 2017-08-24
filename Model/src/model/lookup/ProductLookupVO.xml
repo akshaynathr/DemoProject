@@ -18,7 +18,7 @@
         ResId="ProductLookupVO_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
-  <SQLQuery><![CDATA[select product_name from products]]></SQLQuery>
+  <SQLQuery><![CDATA[select product_name,product_id from products]]></SQLQuery>
   <ViewAttribute
     Name="ProductName"
     IsUpdateable="false"
@@ -34,6 +34,21 @@
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
   </ViewAttribute>
+  <ViewAttribute
+    Name="ProductId"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="10"
+    Scale="0"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    AliasName="PRODUCT_ID"
+    Expression="PRODUCT_ID"
+    SQLType="NUMERIC"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="ProductId"/>
+  </AttrArray>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.lookup.common.ProductLookupVOMsgBundle"/>

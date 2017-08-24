@@ -13,6 +13,28 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="ProductLookupVO1"
+    ViewObjectName="model.lookup.ProductLookupVO"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_ProductId"
+    ListVOName="ProductLookupVO1"
+    NullValueFlag="start"
+    NullValueId="LOV_ProductId_LOVUIHints_NullValueId"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ProductId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="ProductId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="ProductName"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="RevenueItemsEO"
     Entity="model.customer.EO.RevenueItemsEO"/>
@@ -22,7 +44,15 @@
     PrecisionRule="true"
     EntityAttrName="ProductId"
     EntityUsage="RevenueItemsEO"
-    AliasName="PRODUCT_ID"/>
+    AliasName="PRODUCT_ID"
+    LOVName="LOV_ProductId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="OpportunityId"
     IsNotNull="true"
@@ -47,7 +77,18 @@
     PrecisionRule="true"
     EntityAttrName="Revenue"
     EntityUsage="RevenueItemsEO"
-    AliasName="REVENUE"/>
+    AliasName="REVENUE">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="untrusted"
+      CodeSourceName="RevenueItemsVORow"/>
+    <Dependencies>
+      <Item
+        Value="EstimatedPrice"/>
+      <Item
+        Value="Quantity"/>
+    </Dependencies>
+  </ViewAttribute>
   <ViewAttribute
     Name="WinProbablity"
     PrecisionRule="true"
@@ -72,4 +113,8 @@
     Type="oracle.jbo.server.ViewRowImpl"
     Reversed="true"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.customer.VO.common.RevenueItemsVOMsgBundle"/>
+  </ResourceBundle>
 </ViewObject>
