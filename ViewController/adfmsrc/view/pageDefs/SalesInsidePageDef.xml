@@ -45,6 +45,12 @@
               id="OpportunitiesU3Iterator"/>
     <searchRegion Binds="OpportunitiesU3Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="OpportunitiesU3Query"/>
+    <iterator Binds="CustomersContactsU1" RangeSize="25" DataControl="AppModuleAMDataControl1"
+              id="CustomersContactsU1Iterator"/>
+    <iterator Binds="AppointmentsOpportunitiesU1" RangeSize="25" DataControl="AppModuleAMDataControl1"
+              id="AppointmentsOpportunitiesU1Iterator"/>
+    <iterator Binds="NotesOpportunitiesU1" RangeSize="25" DataControl="AppModuleAMDataControl1"
+              id="NotesOpportunitiesU1Iterator"/>
   </executables>
   <bindings>
     <tree IterBinding="MyTeamR1Iterator" id="MyTeamR1">
@@ -435,6 +441,31 @@
       <nodeDefinition DefName="model.UVO.CustomersUVO">
         <AttrNames>
           <Item Value="CustomerName"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="CustomersContactsU1Iterator" id="CustomersContactsU1">
+      <nodeDefinition DefName="model.UVO.CustomersContactsUVO" Name="CustomersContactsU10">
+        <AttrNames>
+          <Item Value="CustomerId"/>
+          <Item Value="ContactId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action id="Commit" DataControl="AppModuleAMDataControl1" RequiresUpdateModel="true" Action="commitTransaction"/>
+    <tree IterBinding="AppointmentsOpportunitiesU1Iterator" id="AppointmentsOpportunitiesU1">
+      <nodeDefinition DefName="model.UVO.AppointmentsOpportunitiesUVO" Name="AppointmentsOpportunitiesU10">
+        <AttrNames>
+          <Item Value="AppointmentId"/>
+          <Item Value="OpportunityId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="NotesOpportunitiesU1Iterator" id="NotesOpportunitiesU1">
+      <nodeDefinition DefName="model.UVO.NotesOpportunitiesUVO" Name="NotesOpportunitiesU10">
+        <AttrNames>
+          <Item Value="NotesId"/>
+          <Item Value="OpportunityId"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
