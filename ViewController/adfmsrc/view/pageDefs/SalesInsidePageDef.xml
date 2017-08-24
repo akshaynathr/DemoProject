@@ -23,8 +23,6 @@
               id="OpportunitiesU1Iterator"/>
     <searchRegion Binds="OpportunitiesU1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="OpportunitiesU1Query"/>
-    <iterator Binds="OpportunitiesU2" RangeSize="25" DataControl="AppModuleAMDataControl1"
-              id="OpportunitiesU2Iterator"/>
     <iterator Binds="CustomersU3" RangeSize="25" DataControl="AppModuleAMDataControl1" id="CustomersU3Iterator"/>
     <iterator Binds="TasksU2" RangeSize="25" DataControl="AppModuleAMDataControl1" id="TasksU2Iterator1"/>
     <iterator Binds="RevenueItems1" RangeSize="25" DataControl="AppModuleAMDataControl1" id="RevenueItems1Iterator"/>
@@ -45,6 +43,10 @@
               id="OpportunitiesU3Iterator"/>
     <searchRegion Binds="OpportunitiesU3Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="OpportunitiesU3Query"/>
+    <iterator Binds="ContactsOpportunitiesU2" RangeSize="25" DataControl="AppModuleAMDataControl1"
+              id="ContactsOpportunitiesU2Iterator"/>
+    <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="RevenueItems1Iterator" id="ImplicitViewCriteriaQuery1"/>
   </executables>
   <bindings>
     <tree IterBinding="MyTeamR1Iterator" id="MyTeamR1">
@@ -219,39 +221,6 @@
           <Item Value="Email"/>
           <Item Value="PrimaryAddressId"/>
           <Item Value="ShippingAddressId"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
-    <tree IterBinding="OpportunitiesU2Iterator" id="OpportunitiesU2">
-      <nodeDefinition DefName="model.customer.UVO.OpportunitiesUVO" Name="OpportunitiesU20">
-        <AttrNames>
-          <Item Value="OpportunityId"/>
-          <Item Value="CustomerId"/>
-          <Item Value="WinProbablity"/>
-          <Item Value="StartDate"/>
-          <Item Value="EndDate"/>
-          <Item Value="SalesStageId"/>
-          <Item Value="SalesMethodId"/>
-          <Item Value="SalesChannelId"/>
-          <Item Value="Revenue"/>
-          <Item Value="BestCaseRevenue"/>
-          <Item Value="WorstCaseRevenue"/>
-          <Item Value="IsBudgeted"/>
-          <Item Value="BudgetAmount"/>
-          <Item Value="EstimatedDurationInDays"/>
-          <Item Value="RiskLevel"/>
-          <Item Value="IsIncluded"/>
-          <Item Value="CreatedById"/>
-          <Item Value="IsSuccess"/>
-          <Item Value="PrimaryContact"/>
-          <Item Value="CreatedBy"/>
-          <Item Value="CreatedOn"/>
-          <Item Value="LastUpdatedBy"/>
-          <Item Value="LastUpdatedOn"/>
-          <Item Value="VersionNo"/>
-          <Item Value="IsActive"/>
-          <Item Value="DecisionLevelId"/>
-          <Item Value="OppurtunityName"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
@@ -438,5 +407,35 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <action IterBinding="ContactsOpportunitiesU2Iterator" id="CreateInsert3" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <attributeValues IterBinding="ContactsOpportunitiesU2Iterator" id="OpportunityId">
+      <AttrNames>
+        <Item Value="OpportunityId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AppointmentsU2Iterator" id="CustomerId">
+      <AttrNames>
+        <Item Value="CustomerId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AppointmentsU2Iterator" id="StartDate">
+      <AttrNames>
+        <Item Value="StartDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AppointmentsU2Iterator" id="EndDate">
+      <AttrNames>
+        <Item Value="EndDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ContactsU3Iterator" id="Email">
+      <AttrNames>
+        <Item Value="Email"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="ContactsOpportunitiesU2Iterator" StaticList="false" Uses="LOV_ContactId" id="ContactId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <action id="Commit" DataControl="AppModuleAMDataControl1" RequiresUpdateModel="true" Action="commitTransaction"/>
   </bindings>
 </pageDefinition>

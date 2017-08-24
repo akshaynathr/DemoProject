@@ -13,6 +13,69 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="BuyingroleLookupVO1"
+    ViewObjectName="model.RVO.BuyingroleLookupVO"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="DepartmentsLookupVO1"
+    ViewObjectName="model.RVO.DepartmentsLookupVO"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="InfluenceLevelLookupVO1"
+    ViewObjectName="model.RVO.InfluenceLevelLookupVO"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_BuyingRoleId"
+    ListVOName="BuyingroleLookupVO1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="BuyingRoleId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="LookupId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="PossibleValue"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_DepartmentNameId"
+    ListVOName="DepartmentsLookupVO1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="DepartmentNameId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="LookupId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="PossibleValue"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_InfluenceLevelId"
+    ListVOName="InfluenceLevelLookupVO1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="InfluenceLevelId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="LookupId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="PossibleValue"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="ContactEO"
     Entity="model.EO.ContactEO"/>
@@ -71,19 +134,43 @@
     PrecisionRule="true"
     EntityAttrName="BuyingRoleId"
     EntityUsage="ContactEO"
-    AliasName="BUYING_ROLE_ID"/>
+    AliasName="BUYING_ROLE_ID"
+    LOVName="LOV_BuyingRoleId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="DepartmentNameId"
     PrecisionRule="true"
     EntityAttrName="DepartmentNameId"
     EntityUsage="ContactEO"
-    AliasName="DEPARTMENT_NAME_ID"/>
+    AliasName="DEPARTMENT_NAME_ID"
+    LOVName="LOV_DepartmentNameId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="InfluenceLevelId"
     PrecisionRule="true"
     EntityAttrName="InfluenceLevelId"
     EntityUsage="ContactEO"
-    AliasName="INFLUENCE_LEVEL_ID"/>
+    AliasName="INFLUENCE_LEVEL_ID"
+    LOVName="LOV_InfluenceLevelId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="CreatedBy"
     PrecisionRule="true"

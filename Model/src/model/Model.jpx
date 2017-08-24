@@ -136,6 +136,15 @@
     </DesignTime>
   </Containee>
   <Containee
+    Name="taskusers"
+    PackageName="model.taskusers"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_EO" Value="true"/>
+      <Attr Name="_VO" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
     Name="master"
     PackageName="model.UVO.master"
     ObjectType="JboPackage">
@@ -149,6 +158,14 @@
     ObjectType="JboPackage">
     <DesignTime>
       <Attr Name="_VO" Value="true"/>
+      <Attr Name="_VL" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="insertion"
+    PackageName="model.VL.insertion"
+    ObjectType="JboPackage">
+    <DesignTime>
       <Attr Name="_VL" Value="true"/>
     </DesignTime>
   </Containee>

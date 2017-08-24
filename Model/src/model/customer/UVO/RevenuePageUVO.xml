@@ -130,7 +130,8 @@
     PrecisionRule="true"
     EntityAttrName="OpportunityId"
     EntityUsage="OpportunityEO"
-    AliasName="OPPORTUNITY_ID"/>
+    AliasName="OPPORTUNITY_ID"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="OppurtunityName"
     PrecisionRule="true"

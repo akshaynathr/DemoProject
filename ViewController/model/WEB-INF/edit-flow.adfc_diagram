@@ -1,0 +1,125 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View3">
+      <property
+         name="activityId">contact_edit</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">313.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>contact_edit&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">133.19531</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <View
+      id="View5">
+      <property
+         name="activityId">opportunity_edit</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">331.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>opportunity_edit&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">227.89648</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <View
+      id="View6">
+      <property
+         name="activityId">customer_edit</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">270.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>customer_edit&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">330.59766</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <View
+      id="View7">
+      <property
+         name="activityId">appointment_edit</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">204.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>appointment_edit&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">39.597656</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <View
+      id="View8">
+      <property
+         name="activityId">task_edit</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">107.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>task_edit&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">320.29883</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <Router
+      id="Router13">
+      <property
+         name="activityId">router1</property>
+      <property
+         name="x">67.0</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>router1&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Router&lt;/p></property>
+      <property
+         name="y">202.59766</property>
+      <property
+         name="exceptionHandler">false</property>
+   </Router>
+   <TaskFlowReturn
+      id="TaskFlowReturn14">
+      <property
+         name="activityId">save</property>
+      <property
+         name="x">526.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>save&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  save&lt;/p></property>
+      <property
+         name="y">254.74121</property>
+      <property
+         name="finish">true</property>
+      <property
+         name="exceptionHandler">false</property>
+   </TaskFlowReturn>
+   <TaskFlowReturn
+      id="TaskFlowReturn15">
+      <property
+         name="activityId">cancel</property>
+      <property
+         name="x">542.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>cancel&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  cancel&lt;/p></property>
+      <property
+         name="y">18.896484</property>
+      <property
+         name="finish">true</property>
+      <property
+         name="exceptionHandler">false</property>
+   </TaskFlowReturn>
+</SDM>

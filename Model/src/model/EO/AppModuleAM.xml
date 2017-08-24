@@ -6,7 +6,8 @@
   Name="AppModuleAM"
   Version="12.2.1.12.24"
   InheritPersonalization="merge"
-  ClearCacheOnRollback="true">
+  ClearCacheOnRollback="true"
+  ComponentInterface="model.EO.common.AppModuleAM">
   <ViewUsage
     Name="ProductsU1"
     ViewObjectName="model.UVO.ProductsUVO"/>
@@ -44,12 +45,6 @@
     Name="ContactsU3"
     ViewObjectName="model.UVO.ContactsUVO"/>
   <ViewUsage
-    Name="OpportunitiesU4"
-    ViewObjectName="model.customer.UVO.OpportunitiesUVO"/>
-  <ViewUsage
-    Name="AppointmentsU1"
-    ViewObjectName="model.UVO.AppointmentsUVO"/>
-  <ViewUsage
     Name="AppointmentsU2"
     ViewObjectName="model.UVO.AppointmentsUVO"/>
   <ViewUsage
@@ -70,6 +65,9 @@
   <ViewUsage
     Name="CustomersU4"
     ViewObjectName="model.UVO.CustomersUVO"/>
+  <ViewUsage
+    Name="ContactsOpportunitiesU2"
+    ViewObjectName="model.customer.UVO.ContactsOpportunitiesUVO"/>
   <ViewLinkUsage
     Name="CustomerToNotes"
     ViewLinkObjectName="model.VL.CustomerToNotes"
@@ -125,12 +123,6 @@
     DstViewUsageName="model.EO.AppModuleAM.ContactsU3"
     Reversed="false"/>
   <ViewLinkUsage
-    Name="OpportunitiesToAppointmentsVL"
-    ViewLinkObjectName="model.VL.OpportunitiesToAppointmentsVL"
-    SrcViewUsageName="model.EO.AppModuleAM.OpportunitiesU4"
-    DstViewUsageName="model.EO.AppModuleAM.AppointmentsU1"
-    Reversed="false"/>
-  <ViewLinkUsage
     Name="OpportunitiesToAppointmentsVL1"
     ViewLinkObjectName="model.VL.OpportunitiesToAppointmentsVL"
     SrcViewUsageName="model.EO.AppModuleAM.OpportunitiesU2"
@@ -159,5 +151,11 @@
     ViewLinkObjectName="model.VL.CustomerToContactsVL"
     SrcViewUsageName="model.EO.AppModuleAM.ContactsU1"
     DstViewUsageName="model.EO.AppModuleAM.CustomersU4"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="ContactsOpportunitiesFk2VL1"
+    ViewLinkObjectName="model.customer.UVO.ContactsOpportunitiesFk2VL"
+    SrcViewUsageName="model.EO.AppModuleAM.OpportunitiesU2"
+    DstViewUsageName="model.EO.AppModuleAM.ContactsOpportunitiesU2"
     Reversed="false"/>
 </AppModule>
