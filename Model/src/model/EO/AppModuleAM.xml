@@ -11,147 +11,63 @@
     Name="ProductsU1"
     ViewObjectName="model.UVO.ProductsUVO"/>
   <ViewUsage
-    Name="AddressU1"
-    ViewObjectName="model.UVO.AddressUVO"/>
-  <ViewUsage
-    Name="ContactsU1"
-    ViewObjectName="model.UVO.ContactsUVO"/>
-  <ViewUsage
     Name="CustomersU1"
     ViewObjectName="model.UVO.CustomersUVO"/>
   <ViewUsage
-    Name="CustomersContactsU1"
-    ViewObjectName="model.UVO.CustomersContactsUVO"/>
+    Name="NotesU1"
+    ViewObjectName="model.customer.UVO.NotesUVO"/>
   <ViewUsage
-    Name="AddressR1"
-    ViewObjectName="model.RVO.AddressRVO"/>
-  <ViewUsage
-    Name="ContactsR1"
-    ViewObjectName="model.RVO.ContactsRVO"/>
-  <ViewUsage
-    Name="CustomersR1"
-    ViewObjectName="model.RVO.CustomersRVO"/>
-  <ViewUsage
-    Name="CustomersContactsR1"
-    ViewObjectName="model.RVO.CustomersContactsRVO"/>
+    Name="NotesU2"
+    ViewObjectName="model.customer.UVO.NotesUVO"/>
   <ViewUsage
     Name="CustomersU2"
     ViewObjectName="model.UVO.CustomersUVO"/>
   <ViewUsage
-    Name="CustomersContactsU2"
-    ViewObjectName="model.UVO.CustomersContactsUVO"/>
-  <ViewUsage
-    Name="CustomersContactsU3"
-    ViewObjectName="model.UVO.CustomersContactsUVO"/>
+    Name="TasksU1"
+    ViewObjectName="model.customer.UVO.TasksUVO"/>
   <ViewUsage
     Name="ContactsU2"
     ViewObjectName="model.UVO.ContactsUVO"/>
   <ViewUsage
-    Name="CustomersU3"
-    ViewObjectName="model.UVO.CustomersUVO"/>
+    Name="AppointmentsU3"
+    ViewObjectName="model.UVO.AppointmentsUVO"/>
   <ViewUsage
-    Name="CustomersU4"
-    ViewObjectName="model.UVO.CustomersUVO"/>
-  <ViewUsage
-    Name="ContactsR2"
-    ViewObjectName="model.RVO.ContactsRVO"/>
-  <ViewUsage
-    Name="CustomersR2"
-    ViewObjectName="model.RVO.CustomersRVO"/>
-  <ViewUsage
-    Name="CustomersR3"
-    ViewObjectName="model.RVO.CustomersRVO"/>
-  <ViewUsage
-    Name="CustomersR4"
-    ViewObjectName="model.RVO.CustomersRVO"/>
-  <ViewUsage
-    Name="CustomersContactsR2"
-    ViewObjectName="model.RVO.CustomersContactsRVO"/>
-  <ViewUsage
-    Name="CustomersContactsR3"
-    ViewObjectName="model.RVO.CustomersContactsRVO"/>
-  <ViewUsage
-    Name="UsersOpportunities1"
-    ViewObjectName="model.EO.UsersOpportunitiesVO"/>
-  <ViewUsage
-    Name="UsersOpportunitiesU1"
-    ViewObjectName="model.UVO.UsersOpportunitiesUVO"/>
-  <ViewUsage
-    Name="UsersOpportunitiesR1"
-    ViewObjectName="model.RVO.UsersOpportunitiesRVO"/>
-  <ViewUsage
-    Name="Oppurtunity_dashboard_UserU1"
-    ViewObjectName="model.customer.UVO.Oppurtunity_dashboard_UserUVO"/>
+    Name="OpportunitiesU1"
+    ViewObjectName="model.customer.UVO.OpportunitiesUVO"/>
   <ViewLinkUsage
-    Name="CustomersFk1VL1"
-    ViewLinkObjectName="model.UVO.CustomersFk1VL"
-    SrcViewUsageName="model.EO.AppModuleAM.ContactsU1"
+    Name="CustomerToNotes"
+    ViewLinkObjectName="model.VL.CustomerToNotes"
+    SrcViewUsageName="model.EO.AppModuleAM.CustomersU1"
+    DstViewUsageName="model.EO.AppModuleAM.NotesU1"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="NotesToCustomersVL"
+    ViewLinkObjectName="model.VL.NotesToCustomersVL"
+    SrcViewUsageName="model.EO.AppModuleAM.NotesU2"
     DstViewUsageName="model.EO.AppModuleAM.CustomersU2"
     Reversed="false"/>
   <ViewLinkUsage
-    Name="CustomersContactsFk1VL1"
-    ViewLinkObjectName="model.UVO.CustomersContactsFk1VL"
+    Name="CusotmersToTasksVL1"
+    ViewLinkObjectName="model.VL.CusotmersToTasksVL"
     SrcViewUsageName="model.EO.AppModuleAM.CustomersU1"
-    DstViewUsageName="model.EO.AppModuleAM.CustomersContactsU2"
+    DstViewUsageName="model.EO.AppModuleAM.TasksU1"
     Reversed="false"/>
   <ViewLinkUsage
-    Name="CustomersContactsFk2VL1"
-    ViewLinkObjectName="model.UVO.CustomersContactsFk2VL"
-    SrcViewUsageName="model.EO.AppModuleAM.ContactsU1"
-    DstViewUsageName="model.EO.AppModuleAM.CustomersContactsU3"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="ContactsAddressVL1"
-    ViewLinkObjectName="model.UVO.ContactsAddressVL"
-    SrcViewUsageName="model.EO.AppModuleAM.AddressU1"
+    Name="CustomerToContactsVL1"
+    ViewLinkObjectName="model.VL.CustomerToContactsVL"
+    SrcViewUsageName="model.EO.AppModuleAM.CustomersU1"
     DstViewUsageName="model.EO.AppModuleAM.ContactsU2"
     Reversed="false"/>
   <ViewLinkUsage
-    Name="CustomersFk3VL1"
-    ViewLinkObjectName="model.UVO.CustomersFk3VL"
-    SrcViewUsageName="model.EO.AppModuleAM.AddressU1"
-    DstViewUsageName="model.EO.AppModuleAM.CustomersU3"
+    Name="CustomerToAppointmentsVL1"
+    ViewLinkObjectName="model.VL.CustomerToAppointmentsVL"
+    SrcViewUsageName="model.EO.AppModuleAM.CustomersU1"
+    DstViewUsageName="model.EO.AppModuleAM.AppointmentsU3"
     Reversed="false"/>
   <ViewLinkUsage
-    Name="CustomersFk2VL1"
-    ViewLinkObjectName="model.UVO.CustomersFk2VL"
-    SrcViewUsageName="model.EO.AppModuleAM.AddressU1"
-    DstViewUsageName="model.EO.AppModuleAM.CustomersU4"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="ContactsAddressVL2"
-    ViewLinkObjectName="model.RVO.ContactsAddressVL"
-    SrcViewUsageName="model.EO.AppModuleAM.AddressR1"
-    DstViewUsageName="model.EO.AppModuleAM.ContactsR2"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="CustomersFk2VL2"
-    ViewLinkObjectName="model.RVO.CustomersFk2VL"
-    SrcViewUsageName="model.EO.AppModuleAM.AddressR1"
-    DstViewUsageName="model.EO.AppModuleAM.CustomersR2"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="CustomersFk3VL2"
-    ViewLinkObjectName="model.RVO.CustomersFk3VL"
-    SrcViewUsageName="model.EO.AppModuleAM.AddressR1"
-    DstViewUsageName="model.EO.AppModuleAM.CustomersR3"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="CustomersFk1VL2"
-    ViewLinkObjectName="model.RVO.CustomersFk1VL"
-    SrcViewUsageName="model.EO.AppModuleAM.ContactsR1"
-    DstViewUsageName="model.EO.AppModuleAM.CustomersR4"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="CustomersContactsFk2VL2"
-    ViewLinkObjectName="model.RVO.CustomersContactsFk2VL"
-    SrcViewUsageName="model.EO.AppModuleAM.ContactsR1"
-    DstViewUsageName="model.EO.AppModuleAM.CustomersContactsR2"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="CustomersContactsFk1VL2"
-    ViewLinkObjectName="model.RVO.CustomersContactsFk1VL"
-    SrcViewUsageName="model.EO.AppModuleAM.CustomersR1"
-    DstViewUsageName="model.EO.AppModuleAM.CustomersContactsR3"
+    Name="CustomerToOpportunityVL1"
+    ViewLinkObjectName="model.VL.CustomerToOpportunityVL"
+    SrcViewUsageName="model.EO.AppModuleAM.CustomersU1"
+    DstViewUsageName="model.EO.AppModuleAM.OpportunitiesU1"
     Reversed="false"/>
 </AppModule>

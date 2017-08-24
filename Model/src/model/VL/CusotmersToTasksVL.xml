@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="CusotmersToTasksVL"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  EntityAssociation="model.ASSOC.CustomersToTasksASSOC">
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="CusotmersToTasksVL_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewLinkDefEnd
+    Name="CustomersU"
+    Cardinality="-1"
+    Source="true"
+    Owner="model.UVO.CustomersUVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_accessor" Value="true"/>
+      <Attr Name="_finderName" Value="CustomersU"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.UVO.CustomersUVO.CustomerId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="TasksU"
+    Cardinality="-1"
+    Owner="model.customer.UVO.TasksUVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="TasksU"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.customer.UVO.TasksUVO.TaskId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.VL.common.CusotmersToTasksVLMsgBundle"/>
+  </ResourceBundle>
+</ViewLink>

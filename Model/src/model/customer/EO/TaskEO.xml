@@ -206,6 +206,13 @@
     AssociationOtherEnd="model.customer.EO.TasksOppurtunityASSOC.Task"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Customer"
+    Association="model.ASSOC.CustomersToTasksASSOC"
+    AssociationEnd="model.ASSOC.CustomersToTasksASSOC.Customer"
+    AssociationOtherEnd="model.ASSOC.CustomersToTasksASSOC.Task"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="TasksPk"
     PrimaryKey="true">

@@ -243,6 +243,13 @@
     AssociationOtherEnd="model.ASSOC.CustomerContactPrimaryASSOC.Contact1"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Customer2"
+    Association="model.ASSOC.CustomerToContactsASSOC"
+    AssociationEnd="model.ASSOC.CustomerToContactsASSOC.Customer2"
+    AssociationOtherEnd="model.ASSOC.CustomerToContactsASSOC.Contact2"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="ContactsPk"
     PrimaryKey="true">

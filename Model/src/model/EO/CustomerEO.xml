@@ -272,6 +272,41 @@
     AssociationOtherEnd="model.ASSOC.CustomerShippingAddressFkAddressASSOC.Customer3Accessor"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Notes"
+    Association="model.ASSOC.CustomerToNotes"
+    AssociationEnd="model.ASSOC.CustomerToNotes.Notes"
+    AssociationOtherEnd="model.ASSOC.CustomerToNotes.Customer"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Notes1"
+    Association="model.ASSOC.NotesToCustomerASSOC"
+    AssociationEnd="model.ASSOC.NotesToCustomerASSOC.Notes1"
+    AssociationOtherEnd="model.ASSOC.NotesToCustomerASSOC.Customer1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Task"
+    Association="model.ASSOC.CustomersToTasksASSOC"
+    AssociationEnd="model.ASSOC.CustomersToTasksASSOC.Task"
+    AssociationOtherEnd="model.ASSOC.CustomersToTasksASSOC.Customer"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Contact2"
+    Association="model.ASSOC.CustomerToContactsASSOC"
+    AssociationEnd="model.ASSOC.CustomerToContactsASSOC.Contact2"
+    AssociationOtherEnd="model.ASSOC.CustomerToContactsASSOC.Customer2"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Opportunity"
+    Association="model.ASSOC.CustomerToOpportunityASSOC"
+    AssociationEnd="model.ASSOC.CustomerToOpportunityASSOC.Opportunity"
+    AssociationOtherEnd="model.ASSOC.CustomerToOpportunityASSOC.Customer"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="CustomersPk"
     PrimaryKey="true">

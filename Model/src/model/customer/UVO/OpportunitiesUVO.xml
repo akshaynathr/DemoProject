@@ -413,6 +413,12 @@
     ViewLink="model.VL.OpportunityCustomerDisplayVL"
     Type="oracle.jbo.server.ViewRowImpl"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="CustomersU1"
+    ViewLink="model.VL.CustomerToOpportunityVL"
+    Type="oracle.jbo.server.ViewRowImpl"
+    Reversed="true"
+    IsUpdateable="false"/>
   <DeclarativeWhereClause
     Name="DeclarativeWhereClause">
     <ViewCriteria

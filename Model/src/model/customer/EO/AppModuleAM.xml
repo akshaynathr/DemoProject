@@ -49,6 +49,21 @@
   <ViewUsage
     Name="ContactsOpportunitiesR2"
     ViewObjectName="model.customer.RVO.ContactsOpportunitiesRVO"/>
+  <ViewUsage
+    Name="NotesCustomers1"
+    ViewObjectName="model.customer.EO.NotesCustomersUVO"/>
+  <ViewUsage
+    Name="NotesU1"
+    ViewObjectName="model.customer.UVO.NotesUVO"/>
+  <ViewUsage
+    Name="CustomersU1"
+    ViewObjectName="model.UVO.CustomersUVO"/>
+  <ViewUsage
+    Name="NotesU2"
+    ViewObjectName="model.customer.UVO.NotesUVO"/>
+  <ViewUsage
+    Name="TasksCustomersU1"
+    ViewObjectName="model.customer.UVO.TasksCustomersUVO"/>
   <ViewLinkUsage
     Name="OpportunityDocsLinkVL1"
     ViewLinkObjectName="model.customer.UVO.OpportunityDocsLinkVL"
@@ -84,5 +99,11 @@
     ViewLinkObjectName="model.customer.RVO.ContactsOpportunitiesFk2VL"
     SrcViewUsageName="model.customer.EO.AppModuleAM.OpportunitiesR1"
     DstViewUsageName="model.customer.EO.AppModuleAM.ContactsOpportunitiesR2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="CustomerToNotes1"
+    ViewLinkObjectName="model.VL.CustomerToNotes"
+    SrcViewUsageName="model.customer.EO.AppModuleAM.CustomersU1"
+    DstViewUsageName="model.customer.EO.AppModuleAM.NotesU2"
     Reversed="false"/>
 </AppModule>

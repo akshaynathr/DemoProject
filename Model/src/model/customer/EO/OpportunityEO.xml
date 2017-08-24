@@ -23,8 +23,7 @@
     IsUpdateable="while_insert"
     DefaultValue="@0"
     Domain="oracle.jbo.domain.DBSequence"
-    RetrievedOnInsert="true"
-    IsNotNull="true"/>
+    RetrievedOnInsert="true"/>
   <Attribute
     Name="CustomerId"
     Precision="10"
@@ -421,6 +420,20 @@
     AssociationOtherEnd="model.customer.EO.ContactsOpportunitiesFk2ASSOC.Opportunity"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Customer"
+    Association="model.ASSOC.CustomerToOpportunityASSOC"
+    AssociationEnd="model.ASSOC.CustomerToOpportunityASSOC.Customer"
+    AssociationOtherEnd="model.ASSOC.CustomerToOpportunityASSOC.Opportunity"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="RevenueItems"
+    Association="model.customer.EO.OpportRevenueASSOC"
+    AssociationEnd="model.customer.EO.OpportRevenueASSOC.RevenueItems"
+    AssociationOtherEnd="model.customer.EO.OpportRevenueASSOC.Opportunity"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="OpportunitiesOpportunityIdCheck">
     <DesignTime>
@@ -464,6 +477,28 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.customer.EO.OpportunityEO.CreatedById"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="fk_OpportunityEO">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="CUSTOMERS_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_OPPORTUNITY_EO"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.customer.EO.OpportunityEO.CustomerId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="fk_OpportunityEO1">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="CUSTOMERS_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_OPPORTUNITY_EO1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.customer.EO.OpportunityEO.CustomerId"/>
     </AttrArray>
   </Key>
   <ResourceBundle>

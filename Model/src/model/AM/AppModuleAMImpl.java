@@ -718,15 +718,6 @@ public class AppModuleAMImpl extends ApplicationModuleImpl {
 
 
     /**
-     * Container's getter for AddressU2.
-     * @return AddressU2
-     */
-    public ViewObjectImpl getAddressU2() {
-        return (ViewObjectImpl) findViewObject("AddressU2");
-    }
-
-
-    /**
      * Container's getter for OpportunitiesU6.
      * @return OpportunitiesU6
      */
@@ -804,6 +795,46 @@ public class AppModuleAMImpl extends ApplicationModuleImpl {
      */
     public ViewObjectImpl getRejectedOpportunityCount1() {
         return (ViewObjectImpl) findViewObject("RejectedOpportunityCount1");
+    }
+
+    /**
+     * Container's getter for RevenueItem1.
+     * @return RevenueItem1
+     */
+    public ViewObjectImpl getRevenueItem1() {
+        return (ViewObjectImpl) findViewObject("RevenueItem1");
+    }
+
+    /**
+     * Container's getter for AddressU2.
+     * @return AddressU2
+     */
+    public ViewObjectImpl getAddressU2() {
+        return (ViewObjectImpl) findViewObject("AddressU2");
+    }
+
+    /**
+     * Container's getter for CustomersU8.
+     * @return CustomersU8
+     */
+    public ViewObjectImpl getCustomersU8() {
+        return (ViewObjectImpl) findViewObject("CustomersU8");
+    }
+
+    /**
+     * Container's getter for OpportunitiesU7.
+     * @return OpportunitiesU7
+     */
+    public OpportunitiesUVOImpl getOpportunitiesU7() {
+        return (OpportunitiesUVOImpl) findViewObject("OpportunitiesU7");
+    }
+
+    /**
+     * Container's getter for CustomerToOpportunityVL.
+     * @return CustomerToOpportunityVL
+     */
+    public ViewLinkImpl getCustomerToOpportunityVL() {
+        return (ViewLinkImpl) findViewLink("CustomerToOpportunityVL");
     }
 }
 

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="CustomerToAppointmentsVL"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge">
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="CustomerToAppointmentsVL_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewLinkDefEnd
+    Name="CustomersU"
+    Cardinality="1"
+    Source="true"
+    Owner="model.UVO.CustomersUVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_accessor" Value="true"/>
+      <Attr Name="_finderName" Value="CustomersU"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.UVO.CustomersUVO.CustomerId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="AppointmentsU"
+    Cardinality="-1"
+    Owner="model.UVO.AppointmentsUVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="AppointmentsU"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.UVO.AppointmentsUVO.CustomerId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.VL.common.CustomerToAppointmentsVLMsgBundle"/>
+  </ResourceBundle>
+</ViewLink>

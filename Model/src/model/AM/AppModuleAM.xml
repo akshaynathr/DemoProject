@@ -222,9 +222,6 @@
     Name="OpportunityCustomerDisplayR1"
     ViewObjectName="model.customer.RVO.OpportunityCustomerDisplayRVO"/>
   <ViewUsage
-    Name="AddressU2"
-    ViewObjectName="model.UVO.AddressUVO"/>
-  <ViewUsage
     Name="LookupProdCatDel1"
     ViewObjectName="model.UVO.LookupProdCatDelVO"/>
   <ViewUsage
@@ -240,9 +237,6 @@
     Name="OpportunityLookUpR1"
     ViewObjectName="model.customer.RVO.OpportunityLookUpRVO"/>
   <ViewUsage
-    Name="AddressU2"
-    ViewObjectName="model.UVO.AddressUVO"/>
-  <ViewUsage
     Name="TaskCount1"
     ViewObjectName="model.customer.RVO.TaskCountVO"/>
   <ViewUsage
@@ -257,6 +251,18 @@
   <ViewUsage
     Name="RejectedOpportunityCount1"
     ViewObjectName="model.customer.RVO.RejectedOpportunityCountVO"/>
+  <ViewUsage
+    Name="AddressU2"
+    ViewObjectName="model.UVO.AddressUVO"/>
+  <ViewUsage
+    Name="AddressU2"
+    ViewObjectName="model.UVO.AddressUVO"/>
+  <ViewUsage
+    Name="CustomersU8"
+    ViewObjectName="model.UVO.CustomersUVO"/>
+  <ViewUsage
+    Name="OpportunitiesU7"
+    ViewObjectName="model.customer.UVO.OpportunitiesUVO"/>
   <ViewLinkUsage
     Name="UsersFk1VL1"
     ViewLinkObjectName="model.UVO.UsersFk1VL"
@@ -361,5 +367,11 @@
     ViewLinkObjectName="model.VL.OpportunityCustomerDisplayVL"
     SrcViewUsageName="model.AM.AppModuleAM.OpportunitiesU6"
     DstViewUsageName="model.AM.AppModuleAM.CustomersU7"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="CustomerToOpportunityVL"
+    ViewLinkObjectName="model.VL.CustomerToOpportunityVL"
+    SrcViewUsageName="model.AM.AppModuleAM.CustomersU8"
+    DstViewUsageName="model.AM.AppModuleAM.OpportunitiesU7"
     Reversed="false"/>
 </AppModule>

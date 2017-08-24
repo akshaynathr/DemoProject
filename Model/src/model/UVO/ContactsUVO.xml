@@ -22,7 +22,8 @@
     PrecisionRule="true"
     EntityAttrName="ContactId"
     EntityUsage="ContactEO"
-    AliasName="CONTACT_ID"/>
+    AliasName="CONTACT_ID"
+    IsUpdateable="while_insert"/>
   <ViewAttribute
     Name="FirstName"
     PrecisionRule="true"
@@ -128,5 +129,11 @@
     Name="CustomersContactsU"
     ViewLink="model.UVO.CustomersContactsFk2VL"
     Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="CustomersU1"
+    ViewLink="model.VL.CustomerToContactsVL"
+    Type="oracle.jbo.RowIterator"
+    Reversed="true"
     IsUpdateable="false"/>
 </ViewObject>

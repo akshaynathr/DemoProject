@@ -210,6 +210,12 @@
     EntityAttrName="IsActive"
     EntityUsage="TaskEO"
     AliasName="IS_ACTIVE"/>
+  <ViewLinkAccessor
+    Name="CustomersU"
+    ViewLink="model.VL.CusotmersToTasksVL"
+    Type="oracle.jbo.RowIterator"
+    Reversed="true"
+    IsUpdateable="false"/>
   <DeclarativeWhereClause
     Name="DeclarativeWhereClause">
     <ViewCriteria
