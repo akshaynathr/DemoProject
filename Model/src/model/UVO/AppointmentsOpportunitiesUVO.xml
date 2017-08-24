@@ -30,4 +30,10 @@
     EntityAttrName="OpportunityId"
     EntityUsage="AppointmentsOpportunitiesEO"
     AliasName="OPPORTUNITY_ID"/>
+  <ViewLinkAccessor
+    Name="OpportunitiesU"
+    ViewLink="model.VL.insertion.OpportunityTOAppointmentVL"
+    Type="oracle.jbo.server.ViewRowImpl"
+    Reversed="true"
+    IsUpdateable="false"/>
 </ViewObject>

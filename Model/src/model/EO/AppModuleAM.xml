@@ -6,8 +6,7 @@
   Name="AppModuleAM"
   Version="12.2.1.12.24"
   InheritPersonalization="merge"
-  ClearCacheOnRollback="true"
-  ComponentInterface="model.EO.common.AppModuleAM">
+  ClearCacheOnRollback="true">
   <ViewUsage
     Name="ProductsU1"
     ViewObjectName="model.UVO.ProductsUVO"/>
@@ -68,6 +67,12 @@
   <ViewUsage
     Name="ContactsOpportunitiesU2"
     ViewObjectName="model.customer.UVO.ContactsOpportunitiesUVO"/>
+  <ViewUsage
+    Name="NotesOpportunitiesU1"
+    ViewObjectName="model.UVO.NotesOpportunitiesUVO"/>
+  <ViewUsage
+    Name="AppointmentsOpportunitiesU1"
+    ViewObjectName="model.UVO.AppointmentsOpportunitiesUVO"/>
   <ViewLinkUsage
     Name="CustomerToNotes"
     ViewLinkObjectName="model.VL.CustomerToNotes"
@@ -157,5 +162,17 @@
     ViewLinkObjectName="model.customer.UVO.ContactsOpportunitiesFk2VL"
     SrcViewUsageName="model.EO.AppModuleAM.OpportunitiesU2"
     DstViewUsageName="model.EO.AppModuleAM.ContactsOpportunitiesU2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="OpportunityToNotesOpportunityVL1"
+    ViewLinkObjectName="model.VL.insertion.OpportunityToNotesOpportunityVL"
+    SrcViewUsageName="model.EO.AppModuleAM.OpportunitiesU2"
+    DstViewUsageName="model.EO.AppModuleAM.NotesOpportunitiesU1"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="OpportunityTOAppointmentVL1"
+    ViewLinkObjectName="model.VL.insertion.OpportunityTOAppointmentVL"
+    SrcViewUsageName="model.EO.AppModuleAM.OpportunitiesU2"
+    DstViewUsageName="model.EO.AppModuleAM.AppointmentsOpportunitiesU1"
     Reversed="false"/>
 </AppModule>

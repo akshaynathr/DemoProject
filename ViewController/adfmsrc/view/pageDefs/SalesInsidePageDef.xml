@@ -47,6 +47,20 @@
               id="ContactsOpportunitiesU2Iterator"/>
     <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
                   Binds="RevenueItems1Iterator" id="ImplicitViewCriteriaQuery1"/>
+    <iterator Binds="OpportunitiesU2" RangeSize="25" DataControl="AppModuleAMDataControl1"
+              id="OpportunitiesU2Iterator"/>
+    <accessorIterator MasterBinding="OpportunitiesU2Iterator" Binds="CustomersU" RangeSize="25"
+                      DataControl="AppModuleAMDataControl1" BeanClass="model.UVO.CustomersUVO" id="CustomersUIterator"/>
+    <searchRegion Binds="OpportunitiesU2Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="OpportunitiesU2Query"/>
+    <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="AppointmentsU2Iterator" id="ImplicitViewCriteriaQuery"/>
+    <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="NotesU2Iterator" id="ImplicitViewCriteriaQuery3"/>
+    <iterator Binds="NotesOpportunitiesU1" RangeSize="25" DataControl="AppModuleAMDataControl1"
+              id="NotesOpportunitiesU1Iterator"/>
+    <iterator Binds="AppointmentsOpportunitiesU1" RangeSize="10" DataControl="AppModuleAMDataControl1"
+              id="AppointmentsOpportunitiesU1Iterator"/>
   </executables>
   <bindings>
     <tree IterBinding="MyTeamR1Iterator" id="MyTeamR1">
@@ -470,5 +484,86 @@
         <Item Value="WorstCaseRevenue"/>
       </AttrNames>
     </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU2Iterator" id="OppurtunityName">
+      <AttrNames>
+        <Item Value="OppurtunityName"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="OpportunitiesU2Iterator" StaticList="false" Uses="LOV_SalesStageId" id="SalesStageId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <list IterBinding="OpportunitiesU2Iterator" StaticList="false" Uses="LOV_SalesMethodId" id="SalesMethodId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <list IterBinding="OpportunitiesU2Iterator" StaticList="false" Uses="LOV_SalesChannelId" id="SalesChannelId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="OpportunitiesU2Iterator" id="IsBudgeted">
+      <AttrNames>
+        <Item Value="IsBudgeted"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU2Iterator" id="BudgetAmount">
+      <AttrNames>
+        <Item Value="BudgetAmount"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU2Iterator" id="EstimatedDurationInDays">
+      <AttrNames>
+        <Item Value="EstimatedDurationInDays"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU2Iterator" id="RiskLevel">
+      <AttrNames>
+        <Item Value="RiskLevel"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU2Iterator" id="IsIncluded">
+      <AttrNames>
+        <Item Value="IsIncluded"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU2Iterator" id="IsSuccess">
+      <AttrNames>
+        <Item Value="IsSuccess"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="OpportunitiesU2Iterator" StaticList="false" Uses="LOV_DecisionLevelId" id="DecisionLevelId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="CustomersUIterator" id="CustomerName">
+      <AttrNames>
+        <Item Value="CustomerName"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="OpportunitiesU2Iterator" id="OpportunitiesU2">
+      <nodeDefinition DefName="model.customer.UVO.OpportunitiesUVO" Name="OpportunitiesU20">
+        <AttrNames>
+          <Item Value="OppurtunityName"/>
+          <Item Value="CustomerId"/>
+          <Item Value="WinProbablity"/>
+          <Item Value="StartDate"/>
+          <Item Value="EndDate"/>
+          <Item Value="SalesStageId"/>
+          <Item Value="SalesMethodId"/>
+          <Item Value="SalesChannelId"/>
+          <Item Value="Revenue"/>
+          <Item Value="BestCaseRevenue"/>
+          <Item Value="WorstCaseRevenue"/>
+          <Item Value="IsBudgeted"/>
+          <Item Value="BudgetAmount"/>
+          <Item Value="EstimatedDurationInDays"/>
+          <Item Value="RiskLevel"/>
+          <Item Value="IsIncluded"/>
+          <Item Value="IsSuccess"/>
+          <Item Value="PrimaryContact"/>
+          <Item Value="DecisionLevelId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <list IterBinding="NotesOpportunitiesU1Iterator" StaticList="false" Uses="LOV_NotesId" id="NotesId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <action IterBinding="NotesOpportunitiesU1Iterator" id="CreateInsert5"
+            InstanceName="AppModuleAMDataControl1.NotesOpportunitiesU1" DataControl="AppModuleAMDataControl1"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action IterBinding="AppointmentsOpportunitiesU1Iterator" id="CreateInsert6"
+            InstanceName="AppModuleAMDataControl1.AppointmentsOpportunitiesU1" DataControl="AppModuleAMDataControl1"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
   </bindings>
 </pageDefinition>

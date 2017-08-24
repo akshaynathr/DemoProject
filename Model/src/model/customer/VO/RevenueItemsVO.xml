@@ -65,13 +65,15 @@
     PrecisionRule="true"
     EntityAttrName="EstimatedPrice"
     EntityUsage="RevenueItemsEO"
-    AliasName="ESTIMATED_PRICE"/>
+    AliasName="ESTIMATED_PRICE"
+    DefaultValue="0"/>
   <ViewAttribute
     Name="Quantity"
     PrecisionRule="true"
     EntityAttrName="Quantity"
     EntityUsage="RevenueItemsEO"
-    AliasName="QUANTITY"/>
+    AliasName="QUANTITY"
+    DefaultValue="0"/>
   <ViewAttribute
     Name="Revenue"
     PrecisionRule="true"

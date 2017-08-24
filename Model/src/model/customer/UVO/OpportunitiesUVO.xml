@@ -445,6 +445,16 @@
     ViewLink="model.VL.insertion.OpportunitiesToCustomerVL"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="NotesOpportunitiesU"
+    ViewLink="model.VL.insertion.OpportunityToNotesOpportunityVL"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="AppointmentsOpportunitiesU"
+    ViewLink="model.VL.insertion.OpportunityTOAppointmentVL"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <DeclarativeWhereClause
     Name="DeclarativeWhereClause">
     <ViewCriteria
