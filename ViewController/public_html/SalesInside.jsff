@@ -669,7 +669,7 @@
             </af:showDetailItem>
             <af:showDetailItem text="Contacts" id="sdi12" binding="#{backingBeanScope.InsertBean.sdi12}">
               <af:button text="Add Contact" id="b6" binding="#{backingBeanScope.InsertBean.b6}">
-                <af:showPopupBehavior popupId="Opportunities_contacts"/>
+                <af:showPopupBehavior popupId="opportunities_contacts"/>
               </af:button>
               <af:button actionListener="#{bindings.CreateInsert3.execute}" text="CreateInsert3"
                          disabled="#{!bindings.CreateInsert3.enabled}" id="b7" selected="false"

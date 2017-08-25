@@ -1729,4 +1729,6 @@ public class insertBean {
     public RichButton getB25() {
         return b25;
     }
+
+
 }
