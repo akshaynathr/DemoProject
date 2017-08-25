@@ -90,326 +90,205 @@
                            inlineStyle="column-rule-color:transparent;" icon="/icons/images.png"
                            disclosed="#{(pageFlowScope.sales_manager_tabVal==2)?true:false}"
                            binding="#{backingBeanScope.InsertBean.sdi2}">
-          <af:button actionListener="#{bindings.Delete2.execute}" text="Delete Opportunity" disabled="#{!bindings.Delete2.enabled}"
-                     id="b17" binding="#{backingBeanScope.InsertBean.b17}"/>
-          <af:button actionListener="#{bindings.Commit.execute}" text="Commit" disabled="#{!bindings.Commit.enabled}"
-                     id="b18" binding="#{backingBeanScope.InsertBean.b18}"/>
-          <af:table value="#{bindings.OpportunitiesU2.collectionModel}" var="row"
-                    rows="#{bindings.OpportunitiesU2.rangeSize}"
-                    emptyText="#{bindings.OpportunitiesU2.viewable ? 'No data to display.' : 'Access Denied.'}"
-                    rowBandingInterval="0" selectedRowKeys="#{bindings.OpportunitiesU2.collectionModel.selectedRow}"
-                    selectionListener="#{bindings.OpportunitiesU2.collectionModel.makeCurrent}" rowSelection="single"
-                    fetchSize="#{bindings.OpportunitiesU2.rangeSize}"
-                    filterModel="#{bindings.OpportunitiesU2Query.queryDescriptor}" filterVisible="true"
-                    queryListener="#{bindings.OpportunitiesU2Query.processQuery}" varStatus="vs" id="t16"
-                    binding="#{backingBeanScope.InsertBean.t16}" partialTriggers="::b17">
-            <af:column sortProperty="#{bindings.OpportunitiesU2.hints.OppurtunityName.name}" filterable="true"
-                       sortable="true" headerText="Name" id="c111">
-              <af:outputText value="#{row.OppurtunityName}"
-                             shortDesc="#{bindings.OpportunitiesU2.hints.OppurtunityName.tooltip}" id="ot71"/>
-            </af:column>
-            <af:column sortProperty="#{bindings.OpportunitiesU2.hints.CustomerId.name}" filterable="true"
-                       sortable="true" headerText="Customer" id="c112">
-              <af:selectOneChoice value="#{row.bindings.CustomerId.inputValue}" label="#{row.bindings.CustomerId.label}"
-                                  required="#{bindings.OpportunitiesU2.hints.CustomerId.mandatory}"
-                                  shortDesc="#{bindings.OpportunitiesU2.hints.CustomerId.tooltip}" readOnly="true"
-                                  id="soc16">
-                <f:selectItems value="#{row.bindings.CustomerId.items}" id="si16"/>
-                <f:validator binding="#{row.bindings.CustomerId.validator}"/>
-              </af:selectOneChoice>
-            </af:column>
-            <af:column sortProperty="#{bindings.OpportunitiesU2.hints.WinProbablity.name}" filterable="true"
-                       sortable="true" headerText="Win Probability" id="c113">
-              <af:outputText value="#{row.WinProbablity}"
-                             shortDesc="#{bindings.OpportunitiesU2.hints.WinProbablity.tooltip}" id="ot72">
-                <af:convertNumber groupingUsed="false"
-                                  pattern="#{bindings.OpportunitiesU2.hints.WinProbablity.format}"/>
-              </af:outputText>
-            </af:column>
-            <af:column sortProperty="#{bindings.OpportunitiesU2.hints.StartDate.name}" filterable="true" sortable="true"
-                       headerText="Start Date" id="c114">
-              <f:facet name="filter">
-                <af:inputDate value="#{bindings.OpportunitiesU2Query.queryDescriptor.filterConjunctionCriterion.criterionMap.StartDate.value}"
-                              id="id17" binding="#{backingBeanScope.InsertBean.id17}">
-                  <af:convertDateTime pattern="#{bindings.OpportunitiesU2.hints.StartDate.format}"/>
-                </af:inputDate>
-              </f:facet>
-              <af:outputText value="#{row.StartDate}" shortDesc="#{bindings.OpportunitiesU2.hints.StartDate.tooltip}"
-                             id="ot73">
-                <af:convertDateTime pattern="#{bindings.OpportunitiesU2.hints.StartDate.format}"/>
-              </af:outputText>
-            </af:column>
-            <af:column sortProperty="#{bindings.OpportunitiesU2.hints.EndDate.name}" filterable="true" sortable="true"
-                       headerText="End Date" id="c115">
-              <f:facet name="filter">
-                <af:inputDate value="#{bindings.OpportunitiesU2Query.queryDescriptor.filterConjunctionCriterion.criterionMap.EndDate.value}"
-                              id="id18" binding="#{backingBeanScope.InsertBean.id18}">
-                  <af:convertDateTime pattern="#{bindings.OpportunitiesU2.hints.EndDate.format}"/>
-                </af:inputDate>
-              </f:facet>
-              <af:outputText value="#{row.EndDate}" shortDesc="#{bindings.OpportunitiesU2.hints.EndDate.tooltip}"
-                             id="ot74">
-                <af:convertDateTime pattern="#{bindings.OpportunitiesU2.hints.EndDate.format}"/>
-              </af:outputText>
-            </af:column>
-            <af:column sortProperty="#{bindings.OpportunitiesU2.hints.SalesStageId.name}" filterable="true"
-                       sortable="true" headerText="Sales Stage" id="c116">
-              <af:selectOneChoice value="#{row.bindings.SalesStageId.inputValue}"
-                                  label="#{row.bindings.SalesStageId.label}"
-                                  required="#{bindings.OpportunitiesU2.hints.SalesStageId.mandatory}"
-                                  shortDesc="#{bindings.OpportunitiesU2.hints.SalesStageId.tooltip}" readOnly="true"
-                                  id="soc17">
-                <f:selectItems value="#{row.bindings.SalesStageId.items}" id="si17"/>
-                <f:validator binding="#{row.bindings.SalesStageId.validator}"/>
-              </af:selectOneChoice>
-            </af:column>
-            <af:column sortProperty="#{bindings.OpportunitiesU2.hints.SalesMethodId.name}" filterable="true"
-                       sortable="true" headerText="Sales Method" id="c117">
-              <af:selectOneChoice value="#{row.bindings.SalesMethodId.inputValue}"
-                                  label="#{row.bindings.SalesMethodId.label}"
-                                  required="#{bindings.OpportunitiesU2.hints.SalesMethodId.mandatory}"
-                                  shortDesc="#{bindings.OpportunitiesU2.hints.SalesMethodId.tooltip}" readOnly="true"
-                                  id="soc18">
-                <f:selectItems value="#{row.bindings.SalesMethodId.items}" id="si18"/>
-                <f:validator binding="#{row.bindings.SalesMethodId.validator}"/>
-              </af:selectOneChoice>
-            </af:column>
-            <af:column sortProperty="#{bindings.OpportunitiesU2.hints.SalesChannelId.name}" filterable="true"
-                       sortable="true" headerText="Sales Channel" id="c118">
-              <af:selectOneChoice value="#{row.bindings.SalesChannelId.inputValue}"
-                                  label="#{row.bindings.SalesChannelId.label}"
-                                  required="#{bindings.OpportunitiesU2.hints.SalesChannelId.mandatory}"
-                                  shortDesc="#{bindings.OpportunitiesU2.hints.SalesChannelId.tooltip}" readOnly="true"
-                                  id="soc19">
-                <f:selectItems value="#{row.bindings.SalesChannelId.items}" id="si19"/>
-                <f:validator binding="#{row.bindings.SalesChannelId.validator}"/>
-              </af:selectOneChoice>
-            </af:column>
-            <af:column sortProperty="#{bindings.OpportunitiesU2.hints.Revenue.name}" filterable="true" sortable="true"
-                       headerText="#{bindings.OpportunitiesU2.hints.Revenue.label}" id="c119">
-              <af:outputText value="#{row.Revenue}" shortDesc="#{bindings.OpportunitiesU2.hints.Revenue.tooltip}"
-                             id="ot75">
-                <af:convertNumber groupingUsed="false" pattern="#{bindings.OpportunitiesU2.hints.Revenue.format}"/>
-              </af:outputText>
-            </af:column>
-            <af:column sortProperty="#{bindings.OpportunitiesU2.hints.BestCaseRevenue.name}" filterable="true"
-                       sortable="true" headerText="Best Case Revenue" id="c120">
-              <af:outputText value="#{row.BestCaseRevenue}"
-                             shortDesc="#{bindings.OpportunitiesU2.hints.BestCaseRevenue.tooltip}" id="ot76">
-                <af:convertNumber groupingUsed="false"
-                                  pattern="#{bindings.OpportunitiesU2.hints.BestCaseRevenue.format}"/>
-              </af:outputText>
-            </af:column>
-            <af:column sortProperty="#{bindings.OpportunitiesU2.hints.WorstCaseRevenue.name}" filterable="true"
-                       sortable="true" headerText="Worst Case Revenue" id="c121">
-              <af:outputText value="#{row.WorstCaseRevenue}"
-                             shortDesc="#{bindings.OpportunitiesU2.hints.WorstCaseRevenue.tooltip}" id="ot77">
-                <af:convertNumber groupingUsed="false"
-                                  pattern="#{bindings.OpportunitiesU2.hints.WorstCaseRevenue.format}"/>
-              </af:outputText>
-            </af:column>
-            <af:column sortProperty="#{bindings.OpportunitiesU2.hints.IsBudgeted.name}" filterable="true"
-                       sortable="true" headerText="Is Budgeted" id="c122">
-              <af:outputText value="#{row.IsBudgeted}" shortDesc="#{bindings.OpportunitiesU2.hints.IsBudgeted.tooltip}"
-                             id="ot78"/>
-            </af:column>
-            <af:column sortProperty="#{bindings.OpportunitiesU2.hints.BudgetAmount.name}" filterable="true"
-                       sortable="true" headerText="Budget Amount" id="c123">
-              <af:outputText value="#{row.BudgetAmount}"
-                             shortDesc="#{bindings.OpportunitiesU2.hints.BudgetAmount.tooltip}" id="ot79">
-                <af:convertNumber groupingUsed="false" pattern="#{bindings.OpportunitiesU2.hints.BudgetAmount.format}"/>
-              </af:outputText>
-            </af:column>
-            <af:column sortProperty="#{bindings.OpportunitiesU2.hints.EstimatedDurationInDays.name}" filterable="true"
-                       sortable="true" headerText="Estimated Duration (days)" id="c124">
-              <af:outputText value="#{row.EstimatedDurationInDays}"
-                             shortDesc="#{bindings.OpportunitiesU2.hints.EstimatedDurationInDays.tooltip}" id="ot80">
-                <af:convertNumber groupingUsed="false"
-                                  pattern="#{bindings.OpportunitiesU2.hints.EstimatedDurationInDays.format}"/>
-              </af:outputText>
-            </af:column>
-            <af:column sortProperty="#{bindings.OpportunitiesU2.hints.RiskLevel.name}" filterable="true" sortable="true"
-                       headerText="Risk Level" id="c125">
-              <af:outputText value="#{row.RiskLevel}" shortDesc="#{bindings.OpportunitiesU2.hints.RiskLevel.tooltip}"
-                             id="ot81"/>
-            </af:column>
-            <af:column sortProperty="#{bindings.OpportunitiesU2.hints.IsIncluded.name}" filterable="true"
-                       sortable="true" headerText="Is Included" id="c126">
-              <af:outputText value="#{row.IsIncluded}" shortDesc="#{bindings.OpportunitiesU2.hints.IsIncluded.tooltip}"
-                             id="ot82"/>
-            </af:column>
-            <af:column sortProperty="#{bindings.OpportunitiesU2.hints.IsSuccess.name}" filterable="true" sortable="true"
-                       headerText="Is Success" id="c127">
-              <af:outputText value="#{row.IsSuccess}" shortDesc="#{bindings.OpportunitiesU2.hints.IsSuccess.tooltip}"
-                             id="ot83"/>
-            </af:column>
-            <af:column sortProperty="#{bindings.OpportunitiesU2.hints.PrimaryContact.name}" filterable="true"
-                       sortable="true" headerText="Primary Contact" id="c128">
-              <af:outputText value="#{row.PrimaryContact}"
-                             shortDesc="#{bindings.OpportunitiesU2.hints.PrimaryContact.tooltip}" id="ot84">
-                <af:convertNumber groupingUsed="false"
-                                  pattern="#{bindings.OpportunitiesU2.hints.PrimaryContact.format}"/>
-              </af:outputText>
-            </af:column>
-            <af:column sortProperty="#{bindings.OpportunitiesU2.hints.DecisionLevelId.name}" sortable="true"
-                       headerText="Decision Level" filterable="true" id="c129">
-              <af:selectOneChoice value="#{row.bindings.DecisionLevelId.inputValue}"
-                                  label="#{row.bindings.DecisionLevelId.label}"
-                                  required="#{bindings.OpportunitiesU2.hints.DecisionLevelId.mandatory}"
-                                  shortDesc="#{bindings.OpportunitiesU2.hints.DecisionLevelId.tooltip}" readOnly="true"
-                                  id="soc27">
-                <f:selectItems value="#{row.bindings.DecisionLevelId.items}" id="si27"/>
-                <f:validator binding="#{row.bindings.DecisionLevelId.validator}"/>
-              </af:selectOneChoice>
-            </af:column>
-          </af:table>
+          <af:panelBorderLayout id="pbl2" binding="#{backingBeanScope.InsertBean.pbl2}">
+            <f:facet name="top">
+              <af:panelGroupLayout id="pgl14" binding="#{backingBeanScope.InsertBean.pgl14}">
+                <af:button actionListener="#{bindings.Delete2.execute}" text="Delete Opportunity"
+                           disabled="#{!bindings.Delete2.enabled}" id="b17"
+                           binding="#{backingBeanScope.InsertBean.b17}"/>
+                <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
+                           disabled="#{!bindings.Commit.enabled}" id="b18"
+                           binding="#{backingBeanScope.InsertBean.b18}"/>
+              </af:panelGroupLayout>
+            </f:facet>
+            <f:facet name="bottom"/>
+            <f:facet name="start"/>
+            <f:facet name="end"/>
+            <af:panelGridLayout id="pgl13" binding="#{backingBeanScope.InsertBean.pgl13}">
+              <af:gridRow marginTop="5px" height="auto" id="gr2" binding="#{backingBeanScope.InsertBean.gr2}">
+                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2"
+                             binding="#{backingBeanScope.InsertBean.gc2}" halign="stretch">
+                  <af:table value="#{bindings.OpportunitiesU2.collectionModel}" var="row"
+                            rows="#{bindings.OpportunitiesU2.rangeSize}"
+                            emptyText="#{bindings.OpportunitiesU2.viewable ? 'No data to display.' : 'Access Denied.'}"
+                            rowBandingInterval="0"
+                            selectedRowKeys="#{bindings.OpportunitiesU2.collectionModel.selectedRow}"
+                            selectionListener="#{bindings.OpportunitiesU2.collectionModel.makeCurrent}"
+                            rowSelection="single" fetchSize="#{bindings.OpportunitiesU2.rangeSize}"
+                            filterModel="#{bindings.OpportunitiesU2Query.queryDescriptor}" filterVisible="true"
+                            queryListener="#{bindings.OpportunitiesU2Query.processQuery}" varStatus="vs" id="t16"
+                            binding="#{backingBeanScope.InsertBean.t16}" partialTriggers="::b17 ::b18">
+                    <af:column sortProperty="#{bindings.OpportunitiesU2.hints.OppurtunityName.name}" filterable="true"
+                               sortable="true" headerText="Name" id="c111">
+                      <af:outputText value="#{row.OppurtunityName}"
+                                     shortDesc="#{bindings.OpportunitiesU2.hints.OppurtunityName.tooltip}" id="ot71"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.OpportunitiesU2.hints.CustomerId.name}" filterable="true"
+                               sortable="true" headerText="Customer" id="c112">
+                      <af:selectOneChoice value="#{row.bindings.CustomerId.inputValue}"
+                                          label="#{row.bindings.CustomerId.label}"
+                                          required="#{bindings.OpportunitiesU2.hints.CustomerId.mandatory}"
+                                          shortDesc="#{bindings.OpportunitiesU2.hints.CustomerId.tooltip}"
+                                          readOnly="true" id="soc16">
+                        <f:selectItems value="#{row.bindings.CustomerId.items}" id="si16"/>
+                        <f:validator binding="#{row.bindings.CustomerId.validator}"/>
+                      </af:selectOneChoice>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.OpportunitiesU2.hints.WinProbablity.name}" filterable="true"
+                               sortable="true" headerText="Win Probability" id="c113">
+                      <af:outputText value="#{row.WinProbablity}"
+                                     shortDesc="#{bindings.OpportunitiesU2.hints.WinProbablity.tooltip}" id="ot72">
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.OpportunitiesU2.hints.WinProbablity.format}"/>
+                      </af:outputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.OpportunitiesU2.hints.StartDate.name}" filterable="true"
+                               sortable="true" headerText="Start Date" id="c114">
+                      <f:facet name="filter">
+                        <af:inputDate value="#{bindings.OpportunitiesU2Query.queryDescriptor.filterConjunctionCriterion.criterionMap.StartDate.value}"
+                                      id="id17" binding="#{backingBeanScope.InsertBean.id17}">
+                          <af:convertDateTime pattern="#{bindings.OpportunitiesU2.hints.StartDate.format}"/>
+                        </af:inputDate>
+                      </f:facet>
+                      <af:outputText value="#{row.StartDate}"
+                                     shortDesc="#{bindings.OpportunitiesU2.hints.StartDate.tooltip}" id="ot73">
+                        <af:convertDateTime pattern="#{bindings.OpportunitiesU2.hints.StartDate.format}"/>
+                      </af:outputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.OpportunitiesU2.hints.EndDate.name}" filterable="true"
+                               sortable="true" headerText="End Date" id="c115">
+                      <f:facet name="filter">
+                        <af:inputDate value="#{bindings.OpportunitiesU2Query.queryDescriptor.filterConjunctionCriterion.criterionMap.EndDate.value}"
+                                      id="id18" binding="#{backingBeanScope.InsertBean.id18}">
+                          <af:convertDateTime pattern="#{bindings.OpportunitiesU2.hints.EndDate.format}"/>
+                        </af:inputDate>
+                      </f:facet>
+                      <af:outputText value="#{row.EndDate}"
+                                     shortDesc="#{bindings.OpportunitiesU2.hints.EndDate.tooltip}" id="ot74">
+                        <af:convertDateTime pattern="#{bindings.OpportunitiesU2.hints.EndDate.format}"/>
+                      </af:outputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.OpportunitiesU2.hints.SalesChannelId.name}" filterable="true"
+                               sortable="true" headerText="Sales Channel" id="c118">
+                      <af:selectOneChoice value="#{row.bindings.SalesChannelId.inputValue}"
+                                          label="#{row.bindings.SalesChannelId.label}"
+                                          required="#{bindings.OpportunitiesU2.hints.SalesChannelId.mandatory}"
+                                          shortDesc="#{bindings.OpportunitiesU2.hints.SalesChannelId.tooltip}"
+                                          readOnly="true" id="soc19">
+                        <f:selectItems value="#{row.bindings.SalesChannelId.items}" id="si19"/>
+                        <f:validator binding="#{row.bindings.SalesChannelId.validator}"/>
+                      </af:selectOneChoice>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.OpportunitiesU2.hints.BestCaseRevenue.name}" filterable="true"
+                               sortable="true" headerText="Best Case Revenue" id="c120">
+                      <af:outputText value="#{row.BestCaseRevenue}"
+                                     shortDesc="#{bindings.OpportunitiesU2.hints.BestCaseRevenue.tooltip}" id="ot76">
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.OpportunitiesU2.hints.BestCaseRevenue.format}"/>
+                      </af:outputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.OpportunitiesU2.hints.WorstCaseRevenue.name}" filterable="true"
+                               sortable="true" headerText="Worst Case Revenue" id="c121">
+                      <af:outputText value="#{row.WorstCaseRevenue}"
+                                     shortDesc="#{bindings.OpportunitiesU2.hints.WorstCaseRevenue.tooltip}" id="ot77">
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.OpportunitiesU2.hints.WorstCaseRevenue.format}"/>
+                      </af:outputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.OpportunitiesU2.hints.BudgetAmount.name}" filterable="true"
+                               sortable="true" headerText="Budget Amount" id="c123">
+                      <af:outputText value="#{row.BudgetAmount}"
+                                     shortDesc="#{bindings.OpportunitiesU2.hints.BudgetAmount.tooltip}" id="ot79">
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.OpportunitiesU2.hints.BudgetAmount.format}"/>
+                      </af:outputText>
+                    </af:column>
+                  </af:table>
+                </af:gridCell>
+              </af:gridRow>
+              <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr3"
+                          binding="#{backingBeanScope.InsertBean.gr3}">
+                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc3"
+                             binding="#{backingBeanScope.InsertBean.gc3}"/>
+              </af:gridRow>
+            </af:panelGridLayout>
+          </af:panelBorderLayout>
           <af:panelTabbed position="above" id="pt1" binding="#{backingBeanScope.InsertBean.pt1}">
             <af:showDetailItem id="tab2" text="Customers" disclosed="true"
                                binding="#{backingBeanScope.InsertBean.tab2}">
               <af:panelGroupLayout id="pgl4" binding="#{backingBeanScope.InsertBean.pgl4}">
-                <af:panelHeader text="CustomersU3" id="ph6" binding="#{backingBeanScope.InsertBean.ph6}">
-                  <af:table rows="#{bindings.CustomersU3.rangeSize}" fetchSize="#{bindings.CustomersU3.rangeSize}"
-                            emptyText="#{bindings.CustomersU3.viewable ? 'No data to display.' : 'Access Denied.'}"
-                            var="row" value="#{bindings.CustomersU3.collectionModel}" rowBandingInterval="0"
-                            selectedRowKeys="#{bindings.CustomersU3.collectionModel.selectedRow}"
-                            selectionListener="#{bindings.CustomersU3.collectionModel.makeCurrent}"
-                            rowSelection="single" id="t8"  binding="#{backingBeanScope.InsertBean.t8}">
-                    <af:column headerText="#{bindings.CustomersU3.hints.CustomerId.label}"
-                               sortProperty="#{bindings.CustomersU3.hints.CustomerId.name}" sortable="false" id="c138">
-                      <af:selectOneChoice value="#{row.bindings.CustomerId.inputValue}"
-                                          label="#{row.bindings.CustomerId.label}"
-                                          required="#{bindings.CustomersU3.hints.CustomerId.mandatory}"
-                                          shortDesc="#{bindings.CustomersU3.hints.CustomerId.tooltip}" readOnly="true"
-                                          id="soc20">
-                        <f:selectItems value="#{row.bindings.CustomerId.items}" id="si20"/>
-                        <f:validator binding="#{row.bindings.CustomerId.validator}"/>
-                      </af:selectOneChoice>
-                    </af:column>
-                    <af:column headerText="#{bindings.CustomersU3.hints.CustomerName.label}"
-                               sortProperty="#{bindings.CustomersU3.hints.CustomerName.name}" sortable="false"
-                               id="c139">
-                      <af:outputText value="#{row.CustomerName}"
-                                     shortDesc="#{bindings.CustomersU3.hints.CustomerName.tooltip}" id="ot93"/>
-                    </af:column>
-                    <af:column headerText="#{bindings.CustomersU3.hints.CustomerTypeId.label}"
-                               sortProperty="#{bindings.CustomersU3.hints.CustomerTypeId.name}" sortable="false"
-                               id="c140">
-                      <af:selectOneChoice value="#{row.bindings.CustomerTypeId.inputValue}"
-                                          label="#{row.bindings.CustomerTypeId.label}"
-                                          required="#{bindings.CustomersU3.hints.CustomerTypeId.mandatory}"
-                                          shortDesc="#{bindings.CustomersU3.hints.CustomerTypeId.tooltip}"
-                                          readOnly="true" id="soc21">
-                        <f:selectItems value="#{row.bindings.CustomerTypeId.items}" id="si21"/>
-                        <f:validator binding="#{row.bindings.CustomerTypeId.validator}"/>
-                      </af:selectOneChoice>
-                    </af:column>
-                    <af:column headerText="#{bindings.CustomersU3.hints.PrimaryContactId.label}"
-                               sortProperty="#{bindings.CustomersU3.hints.PrimaryContactId.name}" sortable="false"
-                               id="c141">
-                      <af:selectOneChoice value="#{row.bindings.PrimaryContactId.inputValue}"
-                                          label="#{row.bindings.PrimaryContactId.label}"
-                                          required="#{bindings.CustomersU3.hints.PrimaryContactId.mandatory}"
-                                          shortDesc="#{bindings.CustomersU3.hints.PrimaryContactId.tooltip}"
-                                          readOnly="true" id="soc22">
-                        <f:selectItems value="#{row.bindings.PrimaryContactId.items}" id="si22"/>
-                        <f:validator binding="#{row.bindings.PrimaryContactId.validator}"/>
-                      </af:selectOneChoice>
-                    </af:column>
-                    <af:column headerText="#{bindings.CustomersU3.hints.Url.label}"
-                               sortProperty="#{bindings.CustomersU3.hints.Url.name}" sortable="false" id="c142">
-                      <af:outputText value="#{row.Url}" shortDesc="#{bindings.CustomersU3.hints.Url.tooltip}"
-                                     id="ot94"/>
-                    </af:column>
-                    <af:column headerText="#{bindings.CustomersU3.hints.ParentCompany.label}"
-                               sortProperty="#{bindings.CustomersU3.hints.ParentCompany.name}" sortable="false"
-                               id="c143">
-                      <af:outputText value="#{row.ParentCompany}"
-                                     shortDesc="#{bindings.CustomersU3.hints.ParentCompany.tooltip}" id="ot95"/>
-                    </af:column>
-                    <af:column headerText="#{bindings.CustomersU3.hints.Ceo.label}"
-                               sortProperty="#{bindings.CustomersU3.hints.Ceo.name}" sortable="false" id="c144">
-                      <af:outputText value="#{row.Ceo}" shortDesc="#{bindings.CustomersU3.hints.Ceo.tooltip}"
-                                     id="ot96"/>
-                    </af:column>
-                    <af:column headerText="#{bindings.CustomersU3.hints.NoOfEmployees.label}"
-                               sortProperty="#{bindings.CustomersU3.hints.NoOfEmployees.name}" sortable="false"
-                               id="c145">
-                      <af:outputText value="#{row.NoOfEmployees}"
-                                     shortDesc="#{bindings.CustomersU3.hints.NoOfEmployees.tooltip}" id="ot97">
-                        <af:convertNumber groupingUsed="false"
-                                          pattern="#{bindings.CustomersU3.hints.NoOfEmployees.format}"/>
-                      </af:outputText>
-                    </af:column>
-                    <af:column headerText="#{bindings.CustomersU3.hints.Fax.label}"
-                               sortProperty="#{bindings.CustomersU3.hints.Fax.name}" sortable="false" id="c146">
-                      <af:outputText value="#{row.Fax}" shortDesc="#{bindings.CustomersU3.hints.Fax.tooltip}" id="ot98">
-                        <af:convertNumber groupingUsed="false" pattern="#{bindings.CustomersU3.hints.Fax.format}"/>
-                      </af:outputText>
-                    </af:column>
-                    <af:column headerText="#{bindings.CustomersU3.hints.Email.label}"
-                               sortProperty="#{bindings.CustomersU3.hints.Email.name}" sortable="false" id="c147">
-                      <af:outputText value="#{row.Email}" shortDesc="#{bindings.CustomersU3.hints.Email.tooltip}"
-                                     id="ot99"/>
-                    </af:column>
-                    <af:column headerText="#{bindings.CustomersU3.hints.PrimaryAddressId.label}"
-                               sortProperty="#{bindings.CustomersU3.hints.PrimaryAddressId.name}" sortable="false"
-                               id="c148">
-                      <af:outputText value="#{row.PrimaryAddressId}"
-                                     shortDesc="#{bindings.CustomersU3.hints.PrimaryAddressId.tooltip}" id="ot100">
-                        <af:convertNumber groupingUsed="false"
-                                          pattern="#{bindings.CustomersU3.hints.PrimaryAddressId.format}"/>
-                      </af:outputText>
-                    </af:column>
-                    <af:column headerText="#{bindings.CustomersU3.hints.ShippingAddressId.label}"
-                               sortProperty="#{bindings.CustomersU3.hints.ShippingAddressId.name}" sortable="false"
-                               id="c149">
-                      <af:outputText value="#{row.ShippingAddressId}"
-                                     shortDesc="#{bindings.CustomersU3.hints.ShippingAddressId.tooltip}" id="ot101">
-                        <af:convertNumber groupingUsed="false"
-                                          pattern="#{bindings.CustomersU3.hints.ShippingAddressId.format}"/>
-                      </af:outputText>
-                    </af:column>
-                    <af:column headerText="#{bindings.CustomersU3.hints.CreatedBy.label}"
-                               sortProperty="#{bindings.CustomersU3.hints.CreatedBy.name}" sortable="false" id="c150">
-                      <af:outputText value="#{row.CreatedBy}"
-                                     shortDesc="#{bindings.CustomersU3.hints.CreatedBy.tooltip}" id="ot102"/>
-                    </af:column>
-                    <af:column headerText="#{bindings.CustomersU3.hints.CreatedOn.label}"
-                               sortProperty="#{bindings.CustomersU3.hints.CreatedOn.name}" sortable="false" id="c151">
-                      <af:outputText value="#{row.CreatedOn}"
-                                     shortDesc="#{bindings.CustomersU3.hints.CreatedOn.tooltip}" id="ot103">
-                        <af:convertDateTime pattern="#{bindings.CustomersU3.hints.CreatedOn.format}"/>
-                      </af:outputText>
-                    </af:column>
-                    <af:column headerText="#{bindings.CustomersU3.hints.LastUpdatedBy.label}"
-                               sortProperty="#{bindings.CustomersU3.hints.LastUpdatedBy.name}" sortable="false"
-                               id="c152">
-                      <af:outputText value="#{row.LastUpdatedBy}"
-                                     shortDesc="#{bindings.CustomersU3.hints.LastUpdatedBy.tooltip}" id="ot104"/>
-                    </af:column>
-                    <af:column headerText="#{bindings.CustomersU3.hints.LastUpdatedOn.label}"
-                               sortProperty="#{bindings.CustomersU3.hints.LastUpdatedOn.name}" sortable="false"
-                               id="c153">
-                      <af:outputText value="#{row.LastUpdatedOn}"
-                                     shortDesc="#{bindings.CustomersU3.hints.LastUpdatedOn.tooltip}" id="ot105">
-                        <af:convertDateTime pattern="#{bindings.CustomersU3.hints.LastUpdatedOn.format}"/>
-                      </af:outputText>
-                    </af:column>
-                    <af:column headerText="#{bindings.CustomersU3.hints.VersionNo.label}"
-                               sortProperty="#{bindings.CustomersU3.hints.VersionNo.name}" sortable="false" id="c154">
-                      <af:outputText value="#{row.VersionNo}"
-                                     shortDesc="#{bindings.CustomersU3.hints.VersionNo.tooltip}" id="ot106">
-                        <af:convertNumber groupingUsed="false"
-                                          pattern="#{bindings.CustomersU3.hints.VersionNo.format}"/>
-                      </af:outputText>
-                    </af:column>
-                    <af:column headerText="#{bindings.CustomersU3.hints.IsActive.label}"
-                               sortProperty="#{bindings.CustomersU3.hints.IsActive.name}" sortable="false" id="c155">
-                      <af:outputText value="#{row.IsActive}" shortDesc="#{bindings.CustomersU3.hints.IsActive.tooltip}"
-                                     id="ot107"/>
-                    </af:column>
-                  </af:table>
-                </af:panelHeader>
+                <af:panelGridLayout id="pgl12" binding="#{backingBeanScope.InsertBean.pgl12}">
+                  <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1"
+                              binding="#{backingBeanScope.InsertBean.gr1}">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc1"
+                                 binding="#{backingBeanScope.InsertBean.gc1}" halign="stretch">
+                      <af:table rows="#{bindings.CustomersU3.rangeSize}" fetchSize="#{bindings.CustomersU3.rangeSize}"
+                                emptyText="#{bindings.CustomersU3.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                var="row" value="#{bindings.CustomersU3.collectionModel}" rowBandingInterval="0"
+                                selectedRowKeys="#{bindings.CustomersU3.collectionModel.selectedRow}"
+                                selectionListener="#{bindings.CustomersU3.collectionModel.makeCurrent}"
+                                rowSelection="single" id="t8" binding="#{backingBeanScope.InsertBean.t8}"
+                                columnStretching="column:c139">
+                        <af:column headerText="Name"
+                                   sortProperty="#{bindings.CustomersU3.hints.CustomerName.name}" sortable="false"
+                                   id="c139">
+                          <af:outputText value="#{row.CustomerName}"
+                                         shortDesc="#{bindings.CustomersU3.hints.CustomerName.tooltip}" id="ot93"/>
+                        </af:column>
+                        <af:column headerText="Type"
+                                   sortProperty="#{bindings.CustomersU3.hints.CustomerTypeId.name}" sortable="false"
+                                   id="c140">
+                          <af:selectOneChoice value="#{row.bindings.CustomerTypeId.inputValue}"
+                                              label="#{row.bindings.CustomerTypeId.label}"
+                                              required="#{bindings.CustomersU3.hints.CustomerTypeId.mandatory}"
+                                              shortDesc="#{bindings.CustomersU3.hints.CustomerTypeId.tooltip}"
+                                              readOnly="true" id="soc21">
+                            <f:selectItems value="#{row.bindings.CustomerTypeId.items}" id="si21"/>
+                            <f:validator binding="#{row.bindings.CustomerTypeId.validator}"/>
+                          </af:selectOneChoice>
+                        </af:column>
+                        <af:column headerText="Primary Contact"
+                                   sortProperty="#{bindings.CustomersU3.hints.PrimaryContactId.name}" sortable="false"
+                                   id="c141">
+                          <af:selectOneChoice value="#{row.bindings.PrimaryContactId.inputValue}"
+                                              label="#{row.bindings.PrimaryContactId.label}"
+                                              required="#{bindings.CustomersU3.hints.PrimaryContactId.mandatory}"
+                                              shortDesc="#{bindings.CustomersU3.hints.PrimaryContactId.tooltip}"
+                                              readOnly="true" id="soc22">
+                            <f:selectItems value="#{row.bindings.PrimaryContactId.items}" id="si22"/>
+                            <f:validator binding="#{row.bindings.PrimaryContactId.validator}"/>
+                          </af:selectOneChoice>
+                        </af:column>
+                        <af:column headerText="URL"
+                                   sortProperty="#{bindings.CustomersU3.hints.Url.name}" sortable="false" id="c142">
+                          <af:outputText value="#{row.Url}" shortDesc="#{bindings.CustomersU3.hints.Url.tooltip}"
+                                         id="ot94"/>
+                        </af:column>
+                        <af:column headerText="Parent Company"
+                                   sortProperty="#{bindings.CustomersU3.hints.ParentCompany.name}" sortable="false"
+                                   id="c143">
+                          <af:outputText value="#{row.ParentCompany}"
+                                         shortDesc="#{bindings.CustomersU3.hints.ParentCompany.tooltip}" id="ot95"/>
+                        </af:column>
+                        <af:column headerText="CEO"
+                                   sortProperty="#{bindings.CustomersU3.hints.Ceo.name}" sortable="false" id="c144">
+                          <af:outputText value="#{row.Ceo}" shortDesc="#{bindings.CustomersU3.hints.Ceo.tooltip}"
+                                         id="ot96"/>
+                        </af:column>
+                        <af:column headerText="Workforce"
+                                   sortProperty="#{bindings.CustomersU3.hints.NoOfEmployees.name}" sortable="false"
+                                   id="c145">
+                          <af:outputText value="#{row.NoOfEmployees}"
+                                         shortDesc="#{bindings.CustomersU3.hints.NoOfEmployees.tooltip}" id="ot97">
+                            <af:convertNumber groupingUsed="false"
+                                              pattern="#{bindings.CustomersU3.hints.NoOfEmployees.format}"/>
+                          </af:outputText>
+                        </af:column>
+                      </af:table>
+                      <af:panelHeader text=" " id="ph6" binding="#{backingBeanScope.InsertBean.ph6}"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                </af:panelGridLayout>
               </af:panelGroupLayout>
             </af:showDetailItem>
             <af:showDetailItem id="tab1" text="Tasks" disclosed="false" binding="#{backingBeanScope.InsertBean.tab1}">
@@ -669,7 +548,7 @@
             </af:showDetailItem>
             <af:showDetailItem text="Contacts" id="sdi12" binding="#{backingBeanScope.InsertBean.sdi12}">
               <af:button text="Add Contact" id="b6" binding="#{backingBeanScope.InsertBean.b6}">
-                <af:showPopupBehavior popupId="Opportunities_contacts"/>
+                <af:showPopupBehavior popupId="opportunities_contacts"/>
               </af:button>
               <af:button actionListener="#{bindings.CreateInsert3.execute}" text="CreateInsert3"
                          disabled="#{!bindings.CreateInsert3.enabled}" id="b7" selected="false"

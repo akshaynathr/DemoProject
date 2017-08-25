@@ -12,8 +12,11 @@ import oracle.adf.view.rich.component.rich.data.RichTable;
 import oracle.adf.view.rich.component.rich.input.RichInputDate;
 import oracle.adf.view.rich.component.rich.input.RichInputText;
 import oracle.adf.view.rich.component.rich.input.RichSelectOneChoice;
+import oracle.adf.view.rich.component.rich.layout.RichGridCell;
+import oracle.adf.view.rich.component.rich.layout.RichGridRow;
 import oracle.adf.view.rich.component.rich.layout.RichPanelBorderLayout;
 import oracle.adf.view.rich.component.rich.layout.RichPanelFormLayout;
+import oracle.adf.view.rich.component.rich.layout.RichPanelGridLayout;
 import oracle.adf.view.rich.component.rich.layout.RichPanelGroupLayout;
 import oracle.adf.view.rich.component.rich.layout.RichPanelHeader;
 import oracle.adf.view.rich.component.rich.layout.RichPanelSpringboard;
@@ -175,6 +178,16 @@ public class insertBean {
     private RichButton b23;
     private RichButton b24;
     private RichButton b25;
+    private RichPanelGridLayout pgl12;
+    private RichGridRow gr1;
+    private RichGridCell gc1;
+    private RichPanelBorderLayout pbl2;
+    private RichPanelGridLayout pgl13;
+    private RichGridRow gr2;
+    private RichGridCell gc2;
+    private RichGridRow gr3;
+    private RichGridCell gc3;
+    private RichPanelGroupLayout pgl14;
 
     public insertBean() {
     }
@@ -1728,5 +1741,86 @@ public class insertBean {
 
     public RichButton getB25() {
         return b25;
+    }
+
+    public void setPgl12(RichPanelGridLayout pgl12) {
+        this.pgl12 = pgl12;
+    }
+
+    public RichPanelGridLayout getPgl12() {
+        return pgl12;
+    }
+
+    public void setGr1(RichGridRow gr1) {
+        this.gr1 = gr1;
+    }
+
+    public RichGridRow getGr1() {
+        return gr1;
+    }
+
+    public void setGc1(RichGridCell gc1) {
+        this.gc1 = gc1;
+    }
+
+    public RichGridCell getGc1() {
+        return gc1;
+    }
+
+
+    public void setPbl2(RichPanelBorderLayout pbl2) {
+        this.pbl2 = pbl2;
+    }
+
+    public RichPanelBorderLayout getPbl2() {
+        return pbl2;
+    }
+
+    public void setPgl13(RichPanelGridLayout pgl13) {
+        this.pgl13 = pgl13;
+    }
+
+    public RichPanelGridLayout getPgl13() {
+        return pgl13;
+    }
+
+    public void setGr2(RichGridRow gr2) {
+        this.gr2 = gr2;
+    }
+
+    public RichGridRow getGr2() {
+        return gr2;
+    }
+
+    public void setGc2(RichGridCell gc2) {
+        this.gc2 = gc2;
+    }
+
+    public RichGridCell getGc2() {
+        return gc2;
+    }
+
+    public void setGr3(RichGridRow gr3) {
+        this.gr3 = gr3;
+    }
+
+    public RichGridRow getGr3() {
+        return gr3;
+    }
+
+    public void setGc3(RichGridCell gc3) {
+        this.gc3 = gc3;
+    }
+
+    public RichGridCell getGc3() {
+        return gc3;
+    }
+
+    public void setPgl14(RichPanelGroupLayout pgl14) {
+        this.pgl14 = pgl14;
+    }
+
+    public RichPanelGroupLayout getPgl14() {
+        return pgl14;
     }
 }
