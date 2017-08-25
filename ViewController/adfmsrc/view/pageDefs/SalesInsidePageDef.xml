@@ -7,9 +7,6 @@
     <iterator Binds="MyTeamR1" RangeSize="25" DataControl="AppModuleAMDataControl" id="MyTeamR1Iterator"/>
     <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
                   Binds="MyTeamR1Iterator" id="ImplicitViewCriteriaQuery2"/>
-    <iterator Binds="TasksU2" RangeSize="25" DataControl="AppModuleAMDataControl" id="TasksU2Iterator"/>
-    <searchRegion Binds="TasksU2Iterator" Criteria="" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
-                  id="TasksU2Query"/>
     <iterator Binds="CustomersU1" RangeSize="25" DataControl="AppModuleAMDataControl1" id="CustomersU1Iterator"/>
     <iterator Binds="NotesU1" RangeSize="25" DataControl="AppModuleAMDataControl1" id="NotesU1Iterator"/>
     <iterator Binds="TasksU1" RangeSize="25" DataControl="AppModuleAMDataControl1" id="TasksU1Iterator"/>
@@ -65,6 +62,10 @@
               id="NotesCustomers1Iterator"/>
     <iterator Binds="CustomersContactsU1" RangeSize="25" DataControl="AppModuleAMDataControl1"
               id="CustomersContactsU1Iterator"/>
+    <iterator Binds="TasksU3" RangeSize="25" DataControl="AppModuleAMDataControl1" id="TasksU3Iterator"/>
+    <iterator Binds="CustomersU2" RangeSize="25" DataControl="AppModuleAMDataControl1" id="CustomersU2Iterator"/>
+    <searchRegion Binds="CustomersU2Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="CustomersU21Query"/>
   </executables>
   <bindings>
     <tree IterBinding="MyTeamR1Iterator" id="MyTeamR1">
@@ -77,26 +78,6 @@
           <Item Value="StartDate"/>
           <Item Value="EndDate"/>
           <Item Value="TeamId"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
-    <tree IterBinding="TasksU2Iterator" id="TasksU2">
-      <nodeDefinition DefName="model.customer.UVO.TasksUVO" Name="TasksU20">
-        <AttrNames>
-          <Item Value="TaskId"/>
-          <Item Value="TaskName"/>
-          <Item Value="DueDate"/>
-          <Item Value="Priority"/>
-          <Item Value="AssigneeId"/>
-          <Item Value="OpportunityId"/>
-          <Item Value="Description"/>
-          <Item Value="PercentageCompleted"/>
-          <Item Value="CreatedBy"/>
-          <Item Value="CreatedOn"/>
-          <Item Value="LastUpdatedBy"/>
-          <Item Value="LastUpdatedOn"/>
-          <Item Value="VersionNo"/>
-          <Item Value="IsActive"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
@@ -607,5 +588,64 @@
       </nodeDefinition>
     </tree>
     <action IterBinding="AppointmentsU3Iterator" id="Delete3" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <tree IterBinding="TasksU3Iterator" id="TasksU3">
+      <nodeDefinition DefName="model.customer.UVO.TasksUVO" Name="TasksU30">
+        <AttrNames>
+          <Item Value="TaskId"/>
+          <Item Value="TaskName"/>
+          <Item Value="DueDate"/>
+          <Item Value="Priority"/>
+          <Item Value="AssigneeId"/>
+          <Item Value="OpportunityId"/>
+          <Item Value="Description"/>
+          <Item Value="PercentageCompleted"/>
+          <Item Value="CreatedBy"/>
+          <Item Value="CreatedOn"/>
+          <Item Value="LastUpdatedBy"/>
+          <Item Value="LastUpdatedOn"/>
+          <Item Value="VersionNo"/>
+          <Item Value="IsActive"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="CustomersU2Iterator" id="CustomersU2">
+      <nodeDefinition DefName="model.UVO.CustomersUVO" Name="CustomersU20">
+        <AttrNames>
+          <Item Value="CustomerId"/>
+          <Item Value="CustomerName"/>
+          <Item Value="CustomerTypeId"/>
+          <Item Value="PrimaryContactId"/>
+          <Item Value="Url"/>
+          <Item Value="ParentCompany"/>
+          <Item Value="Ceo"/>
+          <Item Value="NoOfEmployees"/>
+          <Item Value="Fax"/>
+          <Item Value="Email"/>
+          <Item Value="PrimaryAddressId"/>
+          <Item Value="ShippingAddressId"/>
+          <Item Value="CreatedBy"/>
+          <Item Value="CreatedOn"/>
+          <Item Value="LastUpdatedBy"/>
+          <Item Value="LastUpdatedOn"/>
+          <Item Value="VersionNo"/>
+          <Item Value="IsActive"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="CustomersU2Iterator" id="CustomersU21">
+      <nodeDefinition DefName="model.UVO.CustomersUVO" Name="CustomersU210">
+        <AttrNames>
+          <Item Value="CustomerName"/>
+          <Item Value="CustomerTypeId"/>
+          <Item Value="PrimaryContactId"/>
+          <Item Value="Url"/>
+          <Item Value="ParentCompany"/>
+          <Item Value="Ceo"/>
+          <Item Value="NoOfEmployees"/>
+          <Item Value="Fax"/>
+          <Item Value="Email"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
   </bindings>
 </pageDefinition>

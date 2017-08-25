@@ -51,8 +51,6 @@ public class insertBean {
     private RichPanelHeader ph7;
     private RichShowDetailItem sdi6;
     private RichShowDetailItem sdi5;
-    private RichInputDate id1;
-    private RichTable t4;
     private RichShowDetailItem sdi4;
     private RichTable t2;
     private RichButton b5;
@@ -180,6 +178,15 @@ public class insertBean {
     private RichGridRow gr5;
     private RichGridCell gc5;
     private RichPanelGroupLayout pgl18;
+    private RichPanelGroupLayout pgl19;
+    private RichPanelHeader ph10;
+    private RichTable md2;
+    private RichPanelHeader ph11;
+    private RichTable t4;
+    private RichPanelTabbed pt4;
+    private RichShowDetailItem customers;
+    private RichShowDetailItem tab6;
+    private RichTable t23;
 
     public insertBean() {
     }
@@ -447,21 +454,6 @@ public class insertBean {
         return sdi5;
     }
 
-    public void setId1(RichInputDate id1) {
-        this.id1 = id1;
-    }
-
-    public RichInputDate getId1() {
-        return id1;
-    }
-
-    public void setT4(RichTable t4) {
-        this.t4 = t4;
-    }
-
-    public RichTable getT4() {
-        return t4;
-    }
 
     public void setSdi4(RichShowDetailItem sdi4) {
         this.sdi4 = sdi4;
@@ -1752,5 +1744,77 @@ public class insertBean {
 
     public RichPanelGroupLayout getPgl18() {
         return pgl18;
+    }
+
+    public void setPgl19(RichPanelGroupLayout pgl19) {
+        this.pgl19 = pgl19;
+    }
+
+    public RichPanelGroupLayout getPgl19() {
+        return pgl19;
+    }
+
+    public void setPh10(RichPanelHeader ph10) {
+        this.ph10 = ph10;
+    }
+
+    public RichPanelHeader getPh10() {
+        return ph10;
+    }
+
+    public void setMd2(RichTable md2) {
+        this.md2 = md2;
+    }
+
+    public RichTable getMd2() {
+        return md2;
+    }
+
+    public void setPh11(RichPanelHeader ph11) {
+        this.ph11 = ph11;
+    }
+
+    public RichPanelHeader getPh11() {
+        return ph11;
+    }
+
+    public void setT4(RichTable t4) {
+        this.t4 = t4;
+    }
+
+    public RichTable getT4() {
+        return t4;
+    }
+
+    public void setPt4(RichPanelTabbed pt4) {
+        this.pt4 = pt4;
+    }
+
+    public RichPanelTabbed getPt4() {
+        return pt4;
+    }
+
+    public void setCustomers(RichShowDetailItem customers) {
+        this.customers = customers;
+    }
+
+    public RichShowDetailItem getCustomers() {
+        return customers;
+    }
+
+    public void setTab6(RichShowDetailItem tab6) {
+        this.tab6 = tab6;
+    }
+
+    public RichShowDetailItem getTab6() {
+        return tab6;
+    }
+
+    public void setT23(RichTable t23) {
+        this.t23 = t23;
+    }
+
+    public RichTable getT23() {
+        return t23;
     }
 }
