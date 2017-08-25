@@ -1,12 +1,24 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
-                xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
+                xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces" xmlns:f="http://java.sun.com/jsf/core">
   <af:panelGroupLayout id="pgl1" layout="vertical" inlineStyle="background-color:White;">
     <af:button text="Dashboard" id="b1" icon="/icons/QUICK-icon-55344.png" action="back"/>
+    <af:spacer width="10" height="10" id="s2"/>
+    <af:spacer width="10" height="10" id="s3"/>
+    <af:outputText value="QUARTER WISE REVENUE OF MY TEAM" id="ot1"/>
     <dvt:pieChart id="pieChart1" var="row" value="#{bindings.RevenueItem1.collectionModel}" title="Quarterwise Revenue"
                   threeDEffect="on" hoverBehavior="dim" inlineStyle="color:#000;">
       <dvt:chartLegend id="cl1"/>
       <dvt:pieDataItem id="di1" label="#{row.QuarterNo}" value="#{row.Revenue}"/>
     </dvt:pieChart>
+    <af:spacer width="10" height="10" id="s1"/>
+    <af:outputText value="FUTURE FORECAST" id="ot2"/>
+    <dvt:lineChart id="lineChart1" var="row" value="#{bindings.ForecastLookup1.collectionModel}">
+      <dvt:chartLegend id="cl2"/>
+      <f:facet name="dataStamp">
+        <dvt:chartDataItem id="di2" series="#{bindings.ForecastLookup1.hints.Revenue.label}" value="#{row.Revenue}"
+                           group="#{row.OppurtunityName}"/>
+      </f:facet>
+    </dvt:lineChart>
   </af:panelGroupLayout>
 </ui:composition>

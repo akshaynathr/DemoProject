@@ -82,6 +82,9 @@
   <ViewUsage
     Name="CustomersContactsU1"
     ViewObjectName="model.UVO.CustomersContactsUVO"/>
+  <ViewUsage
+    Name="ForecastLookup1"
+    ViewObjectName="model.lookup.ForecastLookupVO"/>
   <ViewLinkUsage
     Name="CustomerToNotes"
     ViewLinkObjectName="model.VL.CustomerToNotes"

@@ -6,6 +6,13 @@
     <variableIterator id="variables"/>
     <iterator Binds="CountMyTeamObj1" RangeSize="25" DataControl="AppModuleAMDataControl" id="CountMyTeamObj1Iterator"/>
     <iterator Binds="CustomerCountR1" RangeSize="25" DataControl="AppModuleAMDataControl" id="CustomerCountR1Iterator"/>
+    <iterator Binds="ContactsCount1" RangeSize="25" DataControl="AppModuleAMDataControl" id="ContactsCount1Iterator"/>
+    <iterator Binds="Appointments1" RangeSize="25" DataControl="AppModuleAMDataControl" id="Appointments1Iterator"/>
+    <iterator Binds="TaskCount1" RangeSize="25" DataControl="AppModuleAMDataControl" id="TaskCount1Iterator"/>
+    <iterator Binds="ClosedOpportunityCount1" RangeSize="25" DataControl="AppModuleAMDataControl"
+              id="ClosedOpportunityCount1Iterator"/>
+    <iterator Binds="RejectedOpportunityCount1" RangeSize="25" DataControl="AppModuleAMDataControl"
+              id="RejectedOpportunityCount1Iterator"/>
   </executables>
   <bindings>
     <attributeValues IterBinding="CountMyTeamObj1Iterator" id="Selectobjects0">
@@ -14,6 +21,31 @@
       </AttrNames>
     </attributeValues>
     <attributeValues IterBinding="CustomerCountR1Iterator" id="Selectobjects01">
+      <AttrNames>
+        <Item Value="Selectobjects0"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ContactsCount1Iterator" id="Selectobjects02">
+      <AttrNames>
+        <Item Value="Selectobjects0"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="Appointments1Iterator" id="Selectobjects03">
+      <AttrNames>
+        <Item Value="Selectobjects0"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TaskCount1Iterator" id="Selectobjects04">
+      <AttrNames>
+        <Item Value="Selectobjects0"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ClosedOpportunityCount1Iterator" id="Selectobjects05">
+      <AttrNames>
+        <Item Value="Selectobjects0"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RejectedOpportunityCount1Iterator" id="Selectobjects06">
       <AttrNames>
         <Item Value="Selectobjects0"/>
       </AttrNames>

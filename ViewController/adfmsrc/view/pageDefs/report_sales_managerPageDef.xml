@@ -6,6 +6,8 @@
     <variableIterator id="variables"/>
     <iterator Binds="RevenuePageU1" RangeSize="-1" DataControl="AppModuleAMDataControl" id="RevenuePageU1Iterator"/>
     <iterator Binds="RevenueItem1" RangeSize="-1" DataControl="AppModuleAMDataControl" id="RevenueItem1Iterator"/>
+    <iterator Binds="ForecastLookup1" RangeSize="-1" DataControl="AppModuleAMDataControl1"
+              id="ForecastLookup1Iterator"/>
   </executables>
   <bindings>
     <tree IterBinding="RevenuePageU1Iterator" id="RevenuePageU1" ChangeEventPolicy="ppr">
@@ -21,6 +23,14 @@
         <AttrNames>
           <Item Value="Revenue"/>
           <Item Value="QuarterNo"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="ForecastLookup1Iterator" id="ForecastLookup1" ChangeEventPolicy="ppr">
+      <nodeDefinition DefName="model.lookup.ForecastLookupVO" Name="ForecastLookup1">
+        <AttrNames>
+          <Item Value="Revenue"/>
+          <Item Value="OppurtunityName"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
