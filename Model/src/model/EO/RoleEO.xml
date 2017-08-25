@@ -10,7 +10,8 @@
   DBObjectName="ROLES"
   AliasName="RoleEO"
   BindingStyle="OracleName"
-  RowClass="model.EO.RoleEOImpl">
+  RowClass="model.EO.RoleEOImpl"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <DesignTime>
     <Attr Name="_codeGenFlag2" Value="Delete|Access|DML"/>
     <Attr Name="_isCodegen" Value="true"/>
@@ -64,7 +65,8 @@
     SQLType="TIMESTAMP"
     Type="java.sql.Timestamp"
     ColumnType="TIMESTAMP"
-    TableName="ROLES">
+    TableName="ROLES"
+    IsNotNull="true">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
@@ -80,7 +82,8 @@
     SQLType="TIMESTAMP"
     Type="java.sql.Timestamp"
     ColumnType="TIMESTAMP"
-    TableName="ROLES">
+    TableName="ROLES"
+    IsNotNull="true">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
@@ -208,6 +211,18 @@
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <Key
+    Name="RolesEndDateCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"END_DATE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="ROLES_END_DATE_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.RoleEO.EndDate"/>
+    </AttrArray>
+  </Key>
+  <Key
     Name="RolesPk"
     PrimaryKey="true">
     <DesignTime>
@@ -215,6 +230,18 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.EO.RoleEO.RoleId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="RolesStartDateCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"START_DATE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="ROLES_START_DATE_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.RoleEO.StartDate"/>
     </AttrArray>
   </Key>
   <Key
@@ -228,6 +255,21 @@
       <Item Value="model.EO.RoleEO.RoleNameId"/>
     </AttrArray>
   </Key>
+  <validation:CompareValidationBean
+    Name="RoleEORule0"
+    ResId="RoleEO_Rule_0"
+    OnAttribute="EndDate"
+    OperandType="ATTR"
+    Inverse="false"
+    CompareType="GREATERTHAN"
+    CompareValue="StartDate">
+    <validation:OnAttributes>
+      <validation:Item
+        Value="EndDate"/>
+      <validation:Item
+        Value="StartDate"/>
+    </validation:OnAttributes>
+  </validation:CompareValidationBean>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.EO.common.RoleEOMsgBundle"/>

@@ -47,21 +47,22 @@
                             required="#{bindings.ProductName.hints.mandatory}"
                             columns="#{bindings.ProductName.hints.displayWidth}"
                             maximumLength="#{bindings.ProductName.hints.precision}"
-                            shortDesc="#{bindings.ProductName.hints.tooltip}" id="it5">
+                            shortDesc="#{bindings.ProductName.hints.tooltip}" id="it5" showRequired="true"
+                            autoSubmit="true">
                 <f:validator binding="#{bindings.ProductName.validator}"/>
               </af:inputText>
               <af:inputText value="#{bindings.CurrentPrice.inputValue}" label="Price"
                             required="#{bindings.CurrentPrice.hints.mandatory}"
                             columns="#{bindings.CurrentPrice.hints.displayWidth}"
                             maximumLength="#{bindings.CurrentPrice.hints.precision}"
-                            shortDesc="#{bindings.CurrentPrice.hints.tooltip}" id="it7">
+                            shortDesc="#{bindings.CurrentPrice.hints.tooltip}" id="it7" showRequired="true">
                 <f:validator binding="#{bindings.CurrentPrice.validator}"/>
                 <af:convertNumber groupingUsed="false" pattern="#{bindings.CurrentPrice.format}"/>
               </af:inputText>
               <af:selectOneChoice value="#{bindings.ProductCategoryId.inputValue}"
                                   label="#{bindings.ProductCategoryId.label}"
                                   required="#{bindings.ProductCategoryId.hints.mandatory}"
-                                  shortDesc="#{bindings.ProductCategoryId.hints.tooltip}" id="soc2">
+                                  shortDesc="#{bindings.ProductCategoryId.hints.tooltip}" id="soc2" showRequired="true">
                 <f:selectItems value="#{bindings.ProductCategoryId.items}" id="si2"/>
                 <f:validator binding="#{bindings.ProductCategoryId.validator}"/>
               </af:selectOneChoice>

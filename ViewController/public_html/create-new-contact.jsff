@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+    <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.backing_createnewcontact.pfl1}">
+        <af:inputText value="#{bindings.CustomerId.inputValue}" label="#{bindings.CustomerId.hints.label}"
+                      required="#{bindings.CustomerId.hints.mandatory}"
+                      columns="#{bindings.CustomerId.hints.displayWidth}"
+                      maximumLength="#{bindings.CustomerId.hints.precision}"
+                      shortDesc="#{bindings.CustomerId.hints.tooltip}" id="it1"
+                      binding="#{backingBeanScope.backing_createnewcontact.it1}">
+            <f:validator binding="#{bindings.CustomerId.validator}"/>
+            <af:convertNumber groupingUsed="false" pattern="#{bindings.CustomerId.format}"/>
+        </af:inputText>
+        <af:inputText value="#{bindings.ContactId.inputValue}" label="#{bindings.ContactId.hints.label}"
+                      required="#{bindings.ContactId.hints.mandatory}"
+                      columns="#{bindings.ContactId.hints.displayWidth}"
+                      maximumLength="#{bindings.ContactId.hints.precision}"
+                      shortDesc="#{bindings.ContactId.hints.tooltip}" id="it2"
+                      binding="#{backingBeanScope.backing_createnewcontact.it2}">
+            <f:validator binding="#{bindings.ContactId.validator}"/>
+            <af:convertNumber groupingUsed="false" pattern="#{bindings.ContactId.format}"/>
+        </af:inputText>
+        <f:facet name="footer">
+            <af:button text="Submit" id="b1" binding="#{backingBeanScope.backing_createnewcontact.b1}"
+                       actionListener="#{bindings.Commit.execute}" action="back"/>
+        </f:facet>
+    </af:panelFormLayout>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_createnewcontact-->
+</ui:composition>

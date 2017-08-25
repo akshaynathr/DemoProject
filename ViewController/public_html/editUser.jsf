@@ -10,7 +10,7 @@
                       required="#{bindings.FirstName.hints.mandatory}"
                       columns="#{bindings.FirstName.hints.displayWidth}"
                       maximumLength="#{bindings.FirstName.hints.precision}"
-                      shortDesc="#{bindings.FirstName.hints.tooltip}" id="it1">
+                      shortDesc="#{bindings.FirstName.hints.tooltip}" id="it1" showRequired="true">
           <f:validator binding="#{bindings.FirstName.validator}"/>
         </af:inputText>
         <af:inputText value="#{bindings.MiddleName.inputValue}" label="Middle Name"
@@ -23,7 +23,7 @@
         <af:inputText value="#{bindings.LastName.inputValue}" label="Last Name"
                       required="#{bindings.LastName.hints.mandatory}" columns="#{bindings.LastName.hints.displayWidth}"
                       maximumLength="#{bindings.LastName.hints.precision}"
-                      shortDesc="#{bindings.LastName.hints.tooltip}" id="it3">
+                      shortDesc="#{bindings.LastName.hints.tooltip}" id="it3" showRequired="true">
           <f:validator binding="#{bindings.LastName.validator}"/>
         </af:inputText>
         <af:selectOneChoice value="#{bindings.SupervisorId.inputValue}" label="#{bindings.SupervisorId.label}"

@@ -56,6 +56,8 @@ public class RoleEOImpl extends EntityImpl {
             return vals;
         }
     }
+
+
     public static final int ROLEID = AttributesEnum.RoleId.index();
     public static final int ROLENAMEID = AttributesEnum.RoleNameId.index();
     public static final int STARTDATE = AttributesEnum.StartDate.index();
@@ -77,6 +79,14 @@ public class RoleEOImpl extends EntityImpl {
      */
     public RoleEOImpl() {
     }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("model.EO.RoleEO");
+    }
+
 
     /**
      * Gets the attribute value for RoleId, using the alias name RoleId.
@@ -242,6 +252,7 @@ public class RoleEOImpl extends EntityImpl {
         return (RowIterator) getAttributeInternal(LOOKUP);
     }
 
+
     /**
      * @param roleId key constituent
 
@@ -249,13 +260,6 @@ public class RoleEOImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(DBSequence roleId) {
         return new Key(new Object[] { roleId });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("model.EO.RoleEO");
     }
 
     /**

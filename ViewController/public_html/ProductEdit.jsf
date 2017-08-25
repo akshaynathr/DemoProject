@@ -13,11 +13,12 @@
           <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
             <af:gridCell marginStart="5px" width="70%" id="gc1">
               <af:panelFormLayout id="pfl1">
-                <af:inputText value="#{bindings.ProductName.inputValue}" label="Name"
+                <af:inputText value="#{bindings.ProductName.inputValue}" label="#{bindings.ProductName.hints.label}"
                               required="#{bindings.ProductName.hints.mandatory}"
                               columns="#{bindings.ProductName.hints.displayWidth}"
                               maximumLength="#{bindings.ProductName.hints.precision}"
-                              shortDesc="#{bindings.ProductName.hints.tooltip}" id="it1">
+                              shortDesc="#{bindings.ProductName.hints.tooltip}" id="it1" immediate="true"
+                              autoSubmit="true">
                   <f:validator binding="#{bindings.ProductName.validator}"/>
                 </af:inputText>
                 <af:inputText value="#{bindings.CurrentPrice.inputValue}" label="Price"

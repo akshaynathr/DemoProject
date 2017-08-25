@@ -48,14 +48,13 @@
       </SchemaBasedProperties>
     </Properties>
     <validation:LengthValidationBean
-      Name="NameLength"
+      Name="ProductNameLength"
       ResId="ProductName_Rule_0"
-      MessageFlavor="IGNORE_DETAILS"
       OnAttribute="ProductName"
-      CompareType="GREATERTHANEQUALTO"
+      CompareType="EQUALTO"
       DataType="CHARACTER"
-      CompareLength="1"
-      Inverse="false"/>
+      CompareLength="0"
+      Inverse="true"/>
   </Attribute>
   <Attribute
     Name="ProductDescription"
@@ -84,13 +83,21 @@
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
     TableName="PRODUCTS">
+    <validation:LengthValidationBean
+      Name="CurrentPriceRule0"
+      ResId="CurrentPrice_Rule_1"
+      OnAttribute="CurrentPrice"
+      CompareType="GREATERTHANEQUALTO"
+      DataType="CHARACTER"
+      CompareLength="1"
+      Inverse="false"/>
     <validation:CompareValidationBean
       Name="CurrentPriceNonNegative"
       ResId="CurrentPrice_Rule_0"
       OnAttribute="CurrentPrice"
       OperandType="LITERAL"
       Inverse="false"
-      CompareType="GREATERTHANEQUALTO"
+      CompareType="GREATERTHAN"
       CompareValue="0"/>
     <Properties>
       <SchemaBasedProperties>
@@ -107,7 +114,8 @@
     SQLType="NUMERIC"
     Type="java.lang.Long"
     ColumnType="NUMBER"
-    TableName="PRODUCTS">
+    TableName="PRODUCTS"
+    IsNotNull="true">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
@@ -193,6 +201,18 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.EO.ProductEO.ProductId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="ProductsProductCategoryIdCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"PRODUCT_CATEGORY_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PRODUCTS_PRODUCT_CATEGORY_ID_C"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.ProductEO.ProductCategoryId"/>
     </AttrArray>
   </Key>
   <ResourceBundle>
