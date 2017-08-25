@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppointmentsToUsersASSOC"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="Appointments1"
+    Cardinality="-1"
+    Source="true"
+    Owner="model.EO.AppointmentsEO"
+    LockLevel="NONE"
+    IntersectEntity="model.EO.AppointmentsOpportunitiesEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="Appointments1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.AppointmentsEO.AppointmentId"/>
+    </AttrArray>
+    <AttrArray Name="IntersectAttributes">
+      <Item Value="model.EO.AppointmentsOpportunitiesEO.AppointmentId"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="Opportunity1"
+    Cardinality="-1"
+    Owner="model.customer.EO.OpportunityEO"
+    IntersectEntity="model.EO.AppointmentsOpportunitiesEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="Opportunity1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.customer.EO.OpportunityEO.OpportunityId"/>
+    </AttrArray>
+    <AttrArray Name="IntersectAttributes">
+      <Item Value="model.EO.AppointmentsOpportunitiesEO.OpportunityId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

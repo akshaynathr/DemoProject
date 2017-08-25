@@ -850,7 +850,7 @@
         <af:showDetailItem text="Customers" id="sdi3" icon="/customers.png"
                            disclosed="#{(pageFlowScope.sales_manager_tabVal==4)?true:false}"
                            inlineStyle="padding:20px;" binding="#{backingBeanScope.InsertBean.sdi3}">
-          <af:panelHeader text="CustomersU1" id="ph1" binding="#{backingBeanScope.InsertBean.ph1}">
+          <af:panelHeader text="Customers" id="ph1" binding="#{backingBeanScope.InsertBean.ph1}">
             <af:button actionListener="#{bindings.CreateInsert.execute}" text="Create Customer"
                        disabled="#{!bindings.CreateInsert.enabled}" id="b2"
                        binding="#{backingBeanScope.InsertBean.b2}"/>
@@ -1406,9 +1406,13 @@
                   </af:inputText>
                 </af:column>
               </af:table>
-              <af:button actionListener="#{bindings.Delete3.execute}" text="Delete" id="b24" binding="#{backingBeanScope.InsertBean.b24}"/>
-              <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
-                         disabled="#{!bindings.Commit.enabled}" id="b25" binding="#{backingBeanScope.InsertBean.b25}"/>
+              <af:panelGroupLayout id="pgl18" binding="#{backingBeanScope.InsertBean.pgl18}" layout="horizontal">
+                <af:button actionListener="#{bindings.Delete3.execute}" text="Delete" id="b24"
+                           binding="#{backingBeanScope.InsertBean.b24}"/>
+                <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
+                           disabled="#{!bindings.Commit.enabled}" id="b25"
+                           binding="#{backingBeanScope.InsertBean.b25}"/>
+              </af:panelGroupLayout>
             </af:showDetailItem>
             <af:showDetailItem text="Appointments" id="sdi9" binding="#{backingBeanScope.InsertBean.sdi9}">
               <af:table value="#{bindings.AppointmentsU3.collectionModel}" var="row"
@@ -1419,7 +1423,7 @@
                         fetchSize="#{bindings.AppointmentsU3.rangeSize}"
                         filterModel="#{bindings.AppointmentsU3Query.queryDescriptor}" filterVisible="true"
                         queryListener="#{bindings.AppointmentsU3Query.processQuery}" varStatus="vs" id="t6"
-                        binding="#{backingBeanScope.InsertBean.t6}" partialTriggers="::b22 ::b24">
+                        binding="#{backingBeanScope.InsertBean.t6}" partialTriggers="::b22 ::b24 ::b25">
                 <af:column sortProperty="#{bindings.AppointmentsU3.hints.AppointmentSubject.name}" filterable="true"
                            sortable="true" headerText="#{bindings.AppointmentsU3.hints.AppointmentSubject.label}"
                            id="c53">
@@ -1954,7 +1958,7 @@
         <af:showDetailItem text="Contacts" id="sdi6" icon="/icons/addUser.jpg"
                            disclosed="#{(pageFlowScope.sales_manager_tabVal==7)?true:false}"
                            binding="#{backingBeanScope.InsertBean.sdi6}">
-          <af:panelHeader text="ContactsU1" id="ph7" binding="#{backingBeanScope.InsertBean.ph7}">
+          <af:panelHeader text="Contacts" id="ph7" binding="#{backingBeanScope.InsertBean.ph7}">
             <af:table id="md3" rows="#{bindings.ContactsU1.rangeSize}" fetchSize="#{bindings.ContactsU1.rangeSize}"
                       emptyText="#{bindings.ContactsU1.viewable ? 'No data to display.' : 'Access Denied.'}" var="row"
                       value="#{bindings.ContactsU1.collectionModel}" rowBandingInterval="0"
@@ -2072,7 +2076,7 @@
           <af:panelTabbed position="above" id="pt3" binding="#{backingBeanScope.InsertBean.pt3}">
             <af:showDetailItem id="tab4" text="Customers" binding="#{backingBeanScope.InsertBean.tab4}">
               <af:panelGroupLayout id="pgl6" binding="#{backingBeanScope.InsertBean.pgl6}">
-                <af:panelHeader text="CustomersU4" id="ph8" binding="#{backingBeanScope.InsertBean.ph8}">
+                <af:panelHeader text="Customers" id="ph8" binding="#{backingBeanScope.InsertBean.ph8}">
                   <af:table rows="#{bindings.CustomersU4.rangeSize}" fetchSize="#{bindings.CustomersU4.rangeSize}"
                             emptyText="#{bindings.CustomersU4.viewable ? 'No data to display.' : 'Access Denied.'}"
                             var="row" value="#{bindings.CustomersU4.collectionModel}" rowBandingInterval="0"

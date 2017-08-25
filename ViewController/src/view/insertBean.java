@@ -179,6 +179,7 @@ public class insertBean {
     private RichPanelGridLayout pgl8;
     private RichGridRow gr5;
     private RichGridCell gc5;
+    private RichPanelGroupLayout pgl18;
 
     public insertBean() {
     }
@@ -1743,5 +1744,13 @@ public class insertBean {
 
     public RichGridCell getGc5() {
         return gc5;
+    }
+
+    public void setPgl18(RichPanelGroupLayout pgl18) {
+        this.pgl18 = pgl18;
+    }
+
+    public RichPanelGroupLayout getPgl18() {
+        return pgl18;
     }
 }
