@@ -13,6 +13,28 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="NoteLookupjVO1"
+    ViewObjectName="model.customer.RVO.NoteLookupjVO"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_NotesId"
+    ListVOName="NoteLookupjVO1"
+    NullValueFlag="start"
+    NullValueId="LOV_NotesId_LOVUIHints_NullValueId"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="NotesId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="NotesId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="NoteName"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="NotesOpportunitiesEO"
     Entity="model.EO.NotesOpportunitiesEO"/>
@@ -22,7 +44,15 @@
     PrecisionRule="true"
     EntityAttrName="NotesId"
     EntityUsage="NotesOpportunitiesEO"
-    AliasName="NOTES_ID"/>
+    AliasName="NOTES_ID"
+    LOVName="LOV_NotesId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="OpportunityId"
     IsNotNull="true"
@@ -30,4 +60,14 @@
     EntityAttrName="OpportunityId"
     EntityUsage="NotesOpportunitiesEO"
     AliasName="OPPORTUNITY_ID"/>
+  <ViewLinkAccessor
+    Name="OpportunitiesU"
+    ViewLink="model.VL.insertion.OpportunityToNotesOpportunityVL"
+    Type="oracle.jbo.server.ViewRowImpl"
+    Reversed="true"
+    IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.UVO.common.NotesOpportunitiesUVOMsgBundle"/>
+  </ResourceBundle>
 </ViewObject>

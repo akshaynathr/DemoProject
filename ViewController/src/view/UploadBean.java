@@ -5,6 +5,7 @@ import javax.faces.event.ValueChangeEvent;
 import oracle.adf.model.BindingContext;
 
 import oracle.adf.view.rich.component.rich.data.RichColumn;
+import oracle.adf.view.rich.event.DialogEvent;
 import oracle.adf.view.rich.util.ResetUtils;
 
 import oracle.binding.BindingContainer;
@@ -251,5 +252,32 @@ public class UploadBean {
         return null;
         }
 
-   
+
+    public void insert_Op_contacts(DialogEvent dialogEvent) {
+        // Add event code here...
+        System.out.print("Test");
+        System.out.println(dialogEvent.getOutcome() == DialogEvent.Outcome.ok);
+        if (dialogEvent.getOutcome() == DialogEvent.Outcome.ok)
+           {
+               insertOPCustomersCommitAction();
+           }
+    }
+    
+    public String insertOPCustomersCommitAction() {
+           System.out.print("Test");
+           BindingContainer bindings = getBindings();
+//           OperationBinding operationBinding = bindings.getOperationBinding("Delete");
+//           Object result = operationBinding.execute();
+//           if (!operationBinding.getErrors().isEmpty()) {
+//               return null;
+//           }
+           
+           OperationBinding operationBinding2 = bindings.getOperationBinding("Commit");
+           Object result2 = operationBinding2.execute();
+           if (!operationBinding2.getErrors().isEmpty()) {
+               return null;
+           }
+           
+           return null;
+       }
 }

@@ -1,0 +1,12 @@
+//Groovy Scripts for model.customer.VO.RevenueItemsVO
+
+package model.customer.VO
+
+import oracle.jbo.script.annotation.TransientValueExpression;
+
+@TransientValueExpression(attributeName="Revenue")
+def Revenue_ExpressionScript_Expression()
+{
+Quantity*EstimatedPrice
+}
+

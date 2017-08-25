@@ -152,7 +152,8 @@
     EntityAttrName="OpportunityId"
     EntityUsage="OpportunityEO"
     AliasName="OPPORTUNITY_ID"
-    IsUpdateable="while_insert"/>
+    IsUpdateable="while_insert"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="CustomerId"
     PrecisionRule="true"
@@ -437,6 +438,21 @@
   <ViewLinkAccessor
     Name="NotesU"
     ViewLink="model.VL.OpportunitiesToNotesL"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="ContactsOpportunitiesU1"
+    ViewLink="model.VL.insertion.OpportunitiesToCustomerVL"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="NotesOpportunitiesU"
+    ViewLink="model.VL.insertion.OpportunityToNotesOpportunityVL"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="AppointmentsOpportunitiesU"
+    ViewLink="model.VL.insertion.OpportunityTOAppointmentVL"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <DeclarativeWhereClause

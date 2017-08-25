@@ -79,6 +79,12 @@
     EntityAttrName="IsActive"
     EntityUsage="NotesEO"
     AliasName="IS_ACTIVE"/>
+  <ViewAttribute
+    Name="NoteName"
+    PrecisionRule="true"
+    EntityAttrName="NoteName"
+    EntityUsage="NotesEO"
+    AliasName="NOTE_NAME"/>
   <ViewLinkAccessor
     Name="CustomersU"
     ViewLink="model.VL.NotesToCustomersVL"

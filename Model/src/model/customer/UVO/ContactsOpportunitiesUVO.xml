@@ -13,6 +13,28 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="ContactNameLookupjVO1"
+    ViewObjectName="model.lookup.ContactNameLookupjVO"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_ContactId"
+    ListVOName="ContactNameLookupjVO1"
+    NullValueFlag="start"
+    MRUCount="0"
+    NullValueId="LOV_ContactId_LOVUIHints_NullValueId">
+    <AttrArray Name="AttrNames">
+      <Item Value="ContactId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="ContactId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="FirstName"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="ContactOpportunityEO"
     Entity="model.customer.EO.ContactOpportunityEO"/>
@@ -22,7 +44,15 @@
     PrecisionRule="true"
     EntityAttrName="ContactId"
     EntityUsage="ContactOpportunityEO"
-    AliasName="CONTACT_ID"/>
+    AliasName="CONTACT_ID"
+    LOVName="LOV_ContactId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="OpportunityId"
     IsNotNull="true"
@@ -30,4 +60,14 @@
     EntityAttrName="OpportunityId"
     EntityUsage="ContactOpportunityEO"
     AliasName="OPPORTUNITY_ID"/>
+  <ViewLinkAccessor
+    Name="OpportunitiesU"
+    ViewLink="model.VL.insertion.OpportunitiesToCustomerVL"
+    Type="oracle.jbo.server.ViewRowImpl"
+    Reversed="true"
+    IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.customer.UVO.common.ContactsOpportunitiesUVOMsgBundle"/>
+  </ResourceBundle>
 </ViewObject>
