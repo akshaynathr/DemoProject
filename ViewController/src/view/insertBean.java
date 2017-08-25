@@ -117,22 +117,6 @@ public class insertBean {
     private RichButton b6;
     private RichShowDetailItem sdi12;
     private RichTable t10;
-    private RichInputText it30;
-    private RichInputText it29;
-    private RichInputText it28;
-    private RichInputText it27;
-    private RichInputText it26;
-    private RichInputText it25;
-    private UISelectItems si15;
-    private RichSelectOneChoice soc15;
-    private RichPanelFormLayout pfl2;
-    private RichDialog d2;
-    private RichPopup p1;
-    private RichButton b3;
-    private RichCommandLink cl2;
-    private RichQuickQuery qryId2;
-    private RichPanelGroupLayout pgl8;
-    private RichPanelHeader ph10;
     private RichPanelGroupLayout pgl9;
     private RichShowDetailItem sdi11;
     private RichTable t9;
@@ -165,7 +149,6 @@ public class insertBean {
     private RichButton b13;
     private RichButton b14;
     private RichButton b15;
-    private RichButton b16;
     private RichButton b17;
     private RichButton b18;
     private RichTable t20;
@@ -188,6 +171,14 @@ public class insertBean {
     private RichGridRow gr3;
     private RichGridCell gc3;
     private RichPanelGroupLayout pgl14;
+    private RichPanelGroupLayout pgl15;
+    private RichPanelGridLayout pgl16;
+    private RichGridRow gr4;
+    private RichGridCell gc4;
+    private RichPanelGroupLayout pgl17;
+    private RichPanelGridLayout pgl8;
+    private RichGridRow gr5;
+    private RichGridCell gc5;
 
     public insertBean() {
     }
@@ -983,133 +974,6 @@ public class insertBean {
         return t10;
     }
 
-    public void setIt30(RichInputText it30) {
-        this.it30 = it30;
-    }
-
-    public RichInputText getIt30() {
-        return it30;
-    }
-
-    public void setIt29(RichInputText it29) {
-        this.it29 = it29;
-    }
-
-    public RichInputText getIt29() {
-        return it29;
-    }
-
-    public void setIt28(RichInputText it28) {
-        this.it28 = it28;
-    }
-
-    public RichInputText getIt28() {
-        return it28;
-    }
-
-    public void setIt27(RichInputText it27) {
-        this.it27 = it27;
-    }
-
-    public RichInputText getIt27() {
-        return it27;
-    }
-
-    public void setIt26(RichInputText it26) {
-        this.it26 = it26;
-    }
-
-    public RichInputText getIt26() {
-        return it26;
-    }
-
-    public void setIt25(RichInputText it25) {
-        this.it25 = it25;
-    }
-
-    public RichInputText getIt25() {
-        return it25;
-    }
-
-    public void setSi15(UISelectItems si15) {
-        this.si15 = si15;
-    }
-
-    public UISelectItems getSi15() {
-        return si15;
-    }
-
-    public void setSoc15(RichSelectOneChoice soc15) {
-        this.soc15 = soc15;
-    }
-
-    public RichSelectOneChoice getSoc15() {
-        return soc15;
-    }
-
-    public void setPfl2(RichPanelFormLayout pfl2) {
-        this.pfl2 = pfl2;
-    }
-
-    public RichPanelFormLayout getPfl2() {
-        return pfl2;
-    }
-
-    public void setD2(RichDialog d2) {
-        this.d2 = d2;
-    }
-
-    public RichDialog getD2() {
-        return d2;
-    }
-
-    public void setP1(RichPopup p1) {
-        this.p1 = p1;
-    }
-
-    public RichPopup getP1() {
-        return p1;
-    }
-
-    public void setB3(RichButton b3) {
-        this.b3 = b3;
-    }
-
-    public RichButton getB3() {
-        return b3;
-    }
-
-    public void setCl2(RichCommandLink cl2) {
-        this.cl2 = cl2;
-    }
-
-    public RichCommandLink getCl2() {
-        return cl2;
-    }
-
-    public void setQryId2(RichQuickQuery qryId2) {
-        this.qryId2 = qryId2;
-    }
-
-    public RichQuickQuery getQryId2() {
-        return qryId2;
-    }
-
-    public void setPgl8(RichPanelGroupLayout pgl8) {
-        this.pgl8 = pgl8;
-    }
-
-    public RichPanelGroupLayout getPgl8() {
-        return pgl8;
-    }
-
-    public void setPh10(RichPanelHeader ph10) {
-        this.ph10 = ph10;
-    }
-
-    public RichPanelHeader getPh10() {
-        return ph10;
-    }
 
     public void setPgl9(RichPanelGroupLayout pgl9) {
         this.pgl9 = pgl9;
@@ -1639,13 +1503,6 @@ public class insertBean {
         return b15;
     }
 
-    public void setB16(RichButton b16) {
-        this.b16 = b16;
-    }
-
-    public RichButton getB16() {
-        return b16;
-    }
 
     public void setB17(RichButton b17) {
         this.b17 = b17;
@@ -1822,5 +1679,69 @@ public class insertBean {
 
     public RichPanelGroupLayout getPgl14() {
         return pgl14;
+    }
+
+    public void setPgl15(RichPanelGroupLayout pgl15) {
+        this.pgl15 = pgl15;
+    }
+
+    public RichPanelGroupLayout getPgl15() {
+        return pgl15;
+    }
+
+    public void setPgl16(RichPanelGridLayout pgl16) {
+        this.pgl16 = pgl16;
+    }
+
+    public RichPanelGridLayout getPgl16() {
+        return pgl16;
+    }
+
+    public void setGr4(RichGridRow gr4) {
+        this.gr4 = gr4;
+    }
+
+    public RichGridRow getGr4() {
+        return gr4;
+    }
+
+    public void setGc4(RichGridCell gc4) {
+        this.gc4 = gc4;
+    }
+
+    public RichGridCell getGc4() {
+        return gc4;
+    }
+
+    public void setPgl17(RichPanelGroupLayout pgl17) {
+        this.pgl17 = pgl17;
+    }
+
+    public RichPanelGroupLayout getPgl17() {
+        return pgl17;
+    }
+
+    public void setPgl8(RichPanelGridLayout pgl8) {
+        this.pgl8 = pgl8;
+    }
+
+    public RichPanelGridLayout getPgl8() {
+        return pgl8;
+    }
+
+    public void setGr5(RichGridRow gr5) {
+        this.gr5 = gr5;
+    }
+
+    public RichGridRow getGr5() {
+        return gr5;
+    }
+
+    public void setGc5(RichGridCell gc5) {
+        this.gc5 = gc5;
+    }
+
+    public RichGridCell getGc5() {
+        return gc5;
     }
 }
