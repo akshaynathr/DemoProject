@@ -66,13 +66,8 @@
     <!--oracle-jdev-comment:managed-bean-jsp-link:1Customers_tab.jsf-->
   </managed-bean>
   <managed-bean id="__13">
-    <managed-bean-name>deleteCustomerContactLink</managed-bean-name>
-    <managed-bean-class>view.SalesInsideBeanClass</managed-bean-class>
+    <managed-bean-name>upload_bean</managed-bean-name>
+    <managed-bean-class>view.UploadBean</managed-bean-class>
     <managed-bean-scope>pageFlow</managed-bean-scope>
-  </managed-bean>
-  <managed-bean id="__4">
-    <managed-bean-name>deleteManagedBean</managed-bean-name>
-    <managed-bean-class></managed-bean-class>
-    <managed-bean-scope>request</managed-bean-scope>
   </managed-bean>
 </adfc-config>
