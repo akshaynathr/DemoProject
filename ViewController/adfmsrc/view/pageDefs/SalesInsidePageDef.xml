@@ -61,6 +61,12 @@
               id="NotesOpportunitiesU1Iterator"/>
     <iterator Binds="AppointmentsOpportunitiesU1" RangeSize="10" DataControl="AppModuleAMDataControl1"
               id="AppointmentsOpportunitiesU1Iterator"/>
+    <iterator Binds="TasksCustomersU1" RangeSize="25" DataControl="AppModuleAMDataControl1"
+              id="TasksCustomersU1Iterator"/>
+    <iterator Binds="NotesCustomers1" RangeSize="25" DataControl="AppModuleAMDataControl1"
+              id="NotesCustomers1Iterator"/>
+    <iterator Binds="CustomersContactsU1" RangeSize="25" DataControl="AppModuleAMDataControl1"
+              id="CustomersContactsU1Iterator"/>
   </executables>
   <bindings>
     <tree IterBinding="MyTeamR1Iterator" id="MyTeamR1">
@@ -565,5 +571,57 @@
     <action IterBinding="AppointmentsOpportunitiesU1Iterator" id="CreateInsert6"
             InstanceName="AppModuleAMDataControl1.AppointmentsOpportunitiesU1" DataControl="AppModuleAMDataControl1"
             RequiresUpdateModel="true" Action="createInsertRow"/>
+    <tree IterBinding="NotesOpportunitiesU1Iterator" id="NotesOpportunitiesU1">
+      <nodeDefinition DefName="model.UVO.NotesOpportunitiesUVO" Name="NotesOpportunitiesU10">
+        <AttrNames>
+          <Item Value="NotesId"/>
+          <Item Value="OpportunityId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="AppointmentsOpportunitiesU1Iterator" id="AppointmentsOpportunitiesU1">
+      <nodeDefinition DefName="model.UVO.AppointmentsOpportunitiesUVO" Name="AppointmentsOpportunitiesU10">
+        <AttrNames>
+          <Item Value="AppointmentId"/>
+          <Item Value="OpportunityId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="ContactsOpportunitiesU2Iterator" id="ContactsOpportunitiesU2">
+      <nodeDefinition DefName="model.customer.UVO.ContactsOpportunitiesUVO" Name="ContactsOpportunitiesU20">
+        <AttrNames>
+          <Item Value="ContactId"/>
+          <Item Value="OpportunityId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="RevenueItems1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action IterBinding="TasksU2Iterator1" id="Delete1" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action IterBinding="OpportunitiesU2Iterator" id="Delete2" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <tree IterBinding="TasksCustomersU1Iterator" id="TasksCustomersU1">
+      <nodeDefinition DefName="model.customer.UVO.TasksCustomersUVO" Name="TasksCustomersU10">
+        <AttrNames>
+          <Item Value="TaskId"/>
+          <Item Value="CustomerId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="NotesCustomers1Iterator" id="NotesCustomers1">
+      <nodeDefinition DefName="model.customer.UVO.NotesCustomersVO" Name="NotesCustomers10">
+        <AttrNames>
+          <Item Value="CustomerId"/>
+          <Item Value="NotesId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="CustomersContactsU1Iterator" id="CustomersContactsU1">
+      <nodeDefinition DefName="model.UVO.CustomersContactsUVO" Name="CustomersContactsU10">
+        <AttrNames>
+          <Item Value="CustomerId"/>
+          <Item Value="ContactId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="AppointmentsU3Iterator" id="Delete3" RequiresUpdateModel="false" Action="removeCurrentRow"/>
   </bindings>
 </pageDefinition>

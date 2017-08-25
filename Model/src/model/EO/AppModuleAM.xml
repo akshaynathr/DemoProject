@@ -73,6 +73,15 @@
   <ViewUsage
     Name="AppointmentsOpportunitiesU1"
     ViewObjectName="model.UVO.AppointmentsOpportunitiesUVO"/>
+  <ViewUsage
+    Name="TasksCustomersU1"
+    ViewObjectName="model.customer.UVO.TasksCustomersUVO"/>
+  <ViewUsage
+    Name="NotesCustomers1"
+    ViewObjectName="model.customer.UVO.NotesCustomersVO"/>
+  <ViewUsage
+    Name="CustomersContactsU1"
+    ViewObjectName="model.UVO.CustomersContactsUVO"/>
   <ViewLinkUsage
     Name="CustomerToNotes"
     ViewLinkObjectName="model.VL.CustomerToNotes"
