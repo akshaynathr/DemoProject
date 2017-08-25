@@ -7,6 +7,7 @@ import model.EO.UserEOImpl;
 import oracle.jbo.Row;
 import oracle.jbo.RowSet;
 import oracle.jbo.domain.DBSequence;
+import oracle.jbo.domain.NClobDomain;
 import oracle.jbo.server.EntityImpl;
 import oracle.jbo.server.ViewRowImpl;
 // ---------------------------------------------------------------------

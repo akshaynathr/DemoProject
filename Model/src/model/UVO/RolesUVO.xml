@@ -21,7 +21,8 @@
   <ListBinding
     Name="LOV_RoleNameId"
     ListVOName="RoleNameLookup1"
-    NullValueFlag="none"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
     MRUCount="0">
     <AttrArray Name="AttrNames">
       <Item Value="RoleNameId"/>

@@ -12,6 +12,28 @@
   <DesignTime>
     <Attr Name="_isExpertMode" Value="true"/>
   </DesignTime>
+  <ViewAccessor
+    Name="RoleNameLookupVO1"
+    ViewObjectName="model.RVO.RoleNameLookupVO"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_RoleNameId"
+    ListVOName="RoleNameLookupVO1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="RoleNameId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="RoleId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="PossibleValue"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <SQLQuery><![CDATA[SELECT Roles.ROLE_ID,
        Roles.ROLE_NAME_ID,
        Roles.START_DATE,
@@ -47,10 +69,17 @@ FROM ROLES Roles]]></SQLQuery>
     ColumnType="VARCHAR2"
     AliasName="ROLE_NAME_ID"
     Expression="ROLE_NAME_ID"
-    SQLType="VARCHAR">
+    SQLType="VARCHAR"
+    LOVName="LOV_RoleNameId">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
   </ViewAttribute>
   <ViewAttribute
     Name="StartDate"
@@ -61,7 +90,7 @@ FROM ROLES Roles]]></SQLQuery>
     ColumnType="TIMESTAMP"
     AliasName="START_DATE"
     Expression="START_DATE"
-    SQLType="TIMESTAMP"/>
+    SQLType="DATE"/>
   <ViewAttribute
     Name="EndDate"
     IsUpdateable="false"
@@ -71,7 +100,7 @@ FROM ROLES Roles]]></SQLQuery>
     ColumnType="TIMESTAMP"
     AliasName="END_DATE"
     Expression="END_DATE"
-    SQLType="TIMESTAMP"/>
+    SQLType="DATE"/>
   <ViewAttribute
     Name="Description"
     IsUpdateable="false"
@@ -111,7 +140,7 @@ FROM ROLES Roles]]></SQLQuery>
     ColumnType="TIMESTAMP"
     AliasName="CREATED_ON"
     Expression="CREATED_ON"
-    SQLType="TIMESTAMP"/>
+    SQLType="DATE"/>
   <ViewAttribute
     Name="LastUpdatedBy"
     IsUpdateable="false"
@@ -136,7 +165,7 @@ FROM ROLES Roles]]></SQLQuery>
     ColumnType="TIMESTAMP"
     AliasName="LAST_UPDATED_ON"
     Expression="LAST_UPDATED_ON"
-    SQLType="TIMESTAMP"/>
+    SQLType="DATE"/>
   <ViewAttribute
     Name="VersionNo"
     IsUpdateable="false"
@@ -159,7 +188,7 @@ FROM ROLES Roles]]></SQLQuery>
     ColumnType="CHAR"
     AliasName="IS_ACTIVE"
     Expression="IS_ACTIVE"
-    SQLType="CHAR">
+    SQLType="VARCHAR">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>

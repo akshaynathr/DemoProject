@@ -5,6 +5,8 @@ import java.sql.Timestamp;
 import oracle.jbo.Key;
 import oracle.jbo.RowIterator;
 import oracle.jbo.domain.DBSequence;
+import oracle.jbo.domain.NClobDomain;
+import oracle.jbo.domain.Number;
 import oracle.jbo.server.EntityDefImpl;
 import oracle.jbo.server.EntityImpl;
 import oracle.jbo.server.TransactionEvent;

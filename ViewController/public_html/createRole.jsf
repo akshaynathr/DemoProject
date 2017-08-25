@@ -21,7 +21,8 @@
                                               columns="#{bindings.PossibleValue.hints.displayWidth}"
                                               maximumLength="#{bindings.PossibleValue.hints.precision}"
                                               shortDesc="#{bindings.PossibleValue.hints.tooltip}" id="it1"
-                                              binding="#{backingBeanScope.backing_createRole.it1}" showRequired="true">
+                                              binding="#{backingBeanScope.backing_createRole.it1}" showRequired="true"
+                                              autoSubmit="false">
                                     <f:validator binding="#{bindings.PossibleValue.validator}"/>
                                 </af:inputText>
                                 <af:inputDate value="#{bindings.StartDate.inputValue}"

@@ -9,7 +9,8 @@
   DBObjectType="table"
   DBObjectName="LOOKUPS"
   AliasName="LookupEO"
-  BindingStyle="OracleName">
+  BindingStyle="OracleName"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <Attribute
     Name="LookupId"
     Precision="10"
@@ -32,7 +33,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="LOOKUPS">
+    TableName="LOOKUPS"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
@@ -44,6 +46,12 @@
           ResId="LookupCategory_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:PreDefinedValidationBean
+      Name="LookupCategoryRule0"
+      ResId="LookupCategory_Rule_0"
+      Description="Mandatory"
+      ValName="Mandatory"
+      Subtype="MANDATORY"/>
   </Attribute>
   <Attribute
     Name="PossibleValue"
@@ -91,6 +99,18 @@
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
   <Key
+    Name="LookupsLookupCategoryCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"LOOKUP_CATEGORY" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="LOOKUPS_LOOKUP_CATEGORY_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.LookupEO.LookupCategory"/>
+    </AttrArray>
+  </Key>
+  <Key
     Name="LookupsPk"
     PrimaryKey="true">
     <DesignTime>
@@ -111,6 +131,19 @@
       <Item Value="model.EO.LookupEO.LookupId"/>
     </AttrArray>
   </Key>
+  <validation:LengthValidationBean
+    Name="LookupEORule0"
+    ResId="LookupEO_Rule_0"
+    OnAttribute="LookupCategory"
+    CompareType="GREATERTHAN"
+    DataType="CHARACTER"
+    CompareLength="0"
+    Inverse="false">
+    <validation:OnAttributes>
+      <validation:Item
+        Value="LookupCategory"/>
+    </validation:OnAttributes>
+  </validation:LengthValidationBean>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.EO.common.LookupEOMsgBundle"/>

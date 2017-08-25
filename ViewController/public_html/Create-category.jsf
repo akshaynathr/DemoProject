@@ -11,7 +11,8 @@
                             required="#{bindings.PossibleValue.hints.mandatory}"
                             columns="#{bindings.PossibleValue.hints.displayWidth}"
                             maximumLength="#{bindings.PossibleValue.hints.precision}"
-                            shortDesc="#{bindings.PossibleValue.hints.tooltip}" id="it1" showRequired="true">
+                            shortDesc="#{bindings.PossibleValue.hints.tooltip}" id="it1" showRequired="true"
+                            autoSubmit="false">
                 <f:validator binding="#{bindings.PossibleValue.validator}"/>
               </af:inputText>
               <af:inputText value="#{bindings.Description.inputValue}" label="Description"

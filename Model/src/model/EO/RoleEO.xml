@@ -41,12 +41,12 @@
   </Attribute>
   <Attribute
     Name="RoleNameId"
-    Precision="20"
     ColumnName="ROLE_NAME_ID"
     SQLType="VARCHAR"
     Type="java.lang.String"
-    ColumnType="VARCHAR2"
-    TableName="ROLES">
+    ColumnType="NUMBER"
+    TableName="ROLES"
+    Precision="10">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
@@ -58,6 +58,13 @@
           Value="50"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:PreDefinedValidationBean
+      Name="RoleNameIdRule0"
+      ResId="RoleNameId_Rule_0"
+      MessageFlavor="IGNORE_DETAILS"
+      Description="Mandatory"
+      ValName="Mandatory"
+      Subtype="MANDATORY"/>
   </Attribute>
   <Attribute
     Name="StartDate"
@@ -256,7 +263,7 @@
     </AttrArray>
   </Key>
   <validation:CompareValidationBean
-    Name="RoleEORule0"
+    Name="DateRule"
     ResId="RoleEO_Rule_0"
     OnAttribute="EndDate"
     OperandType="ATTR"
