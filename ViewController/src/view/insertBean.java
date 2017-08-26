@@ -100,7 +100,6 @@ public class insertBean {
     private RichButton b9;
     private RichCommandLink cl1;
     private RichQuickQuery qryId1;
-    private RichPanelHeader ph4;
     private RichPanelGroupLayout pgl10;
     private RichShowDetailItem sdi13;
     private RichInputText it24;
@@ -119,7 +118,6 @@ public class insertBean {
     private RichTable t9;
     private RichShowDetailItem tab1;
     private RichTable t8;
-    private RichPanelHeader ph6;
     private RichPanelGroupLayout pgl4;
     private RichShowDetailItem tab2;
     private RichPanelTabbed pt1;
@@ -248,12 +246,27 @@ public class insertBean {
     private RichInputText it74;
     private RichInputText it75;
     private RichPanelGroupLayout pgl20;
-    private RichPanelHeader ph11;
     private RichQuickQuery qryId2;
     private RichCommandLink cl2;
     private RichPanelGroupLayout pgl2;
     private RichQuickQuery qryId5;
     private RichCommandLink cl5;
+    private RichPanelGroupLayout pgl21;
+    private RichQuickQuery qryId6;
+    private RichCommandLink cl6;
+    private RichPanelGroupLayout pgl22;
+    private RichQuickQuery qryId7;
+    private RichCommandLink cl7;
+    private RichQuickQuery qryId8;
+    private RichCommandLink cl8;
+    private RichPanelGroupLayout pgl23;
+    private RichQuickQuery qryId9;
+    private RichCommandLink cl9;
+    private RichPanelGroupLayout pgl24;
+    private RichQuickQuery qryId10;
+    private RichCommandLink cl10;
+    private RichQuickQuery qryId11;
+    private RichCommandLink cl11;
 
     public insertBean() {
     }
@@ -891,13 +904,6 @@ public class insertBean {
         return qryId1;
     }
 
-    public void setPh4(RichPanelHeader ph4) {
-        this.ph4 = ph4;
-    }
-
-    public RichPanelHeader getPh4() {
-        return ph4;
-    }
 
     public void setPgl10(RichPanelGroupLayout pgl10) {
         this.pgl10 = pgl10;
@@ -1044,13 +1050,6 @@ public class insertBean {
         return t8;
     }
 
-    public void setPh6(RichPanelHeader ph6) {
-        this.ph6 = ph6;
-    }
-
-    public RichPanelHeader getPh6() {
-        return ph6;
-    }
 
     public void setPgl4(RichPanelGroupLayout pgl4) {
         this.pgl4 = pgl4;
@@ -2354,13 +2353,6 @@ public class insertBean {
         return pgl20;
     }
 
-    public void setPh11(RichPanelHeader ph11) {
-        this.ph11 = ph11;
-    }
-
-    public RichPanelHeader getPh11() {
-        return ph11;
-    }
 
     public void setQryId2(RichQuickQuery qryId2) {
         this.qryId2 = qryId2;
@@ -2401,5 +2393,140 @@ public class insertBean {
 
     public RichCommandLink getCl5() {
         return cl5;
+    }
+
+    public void setPgl21(RichPanelGroupLayout pgl21) {
+        this.pgl21 = pgl21;
+    }
+
+    public RichPanelGroupLayout getPgl21() {
+        return pgl21;
+    }
+
+
+    public void setQryId6(RichQuickQuery qryId6) {
+        this.qryId6 = qryId6;
+    }
+
+    public RichQuickQuery getQryId6() {
+        return qryId6;
+    }
+
+    public void setCl6(RichCommandLink cl6) {
+        this.cl6 = cl6;
+    }
+
+    public RichCommandLink getCl6() {
+        return cl6;
+    }
+
+    public void setPgl22(RichPanelGroupLayout pgl22) {
+        this.pgl22 = pgl22;
+    }
+
+    public RichPanelGroupLayout getPgl22() {
+        return pgl22;
+    }
+
+
+    public void setQryId7(RichQuickQuery qryId7) {
+        this.qryId7 = qryId7;
+    }
+
+    public RichQuickQuery getQryId7() {
+        return qryId7;
+    }
+
+    public void setCl7(RichCommandLink cl7) {
+        this.cl7 = cl7;
+    }
+
+    public RichCommandLink getCl7() {
+        return cl7;
+    }
+
+
+    public void setQryId8(RichQuickQuery qryId8) {
+        this.qryId8 = qryId8;
+    }
+
+    public RichQuickQuery getQryId8() {
+        return qryId8;
+    }
+
+    public void setCl8(RichCommandLink cl8) {
+        this.cl8 = cl8;
+    }
+
+    public RichCommandLink getCl8() {
+        return cl8;
+    }
+
+
+    public void setPgl23(RichPanelGroupLayout pgl23) {
+        this.pgl23 = pgl23;
+    }
+
+    public RichPanelGroupLayout getPgl23() {
+        return pgl23;
+    }
+
+
+    public void setQryId9(RichQuickQuery qryId9) {
+        this.qryId9 = qryId9;
+    }
+
+    public RichQuickQuery getQryId9() {
+        return qryId9;
+    }
+
+    public void setCl9(RichCommandLink cl9) {
+        this.cl9 = cl9;
+    }
+
+    public RichCommandLink getCl9() {
+        return cl9;
+    }
+
+    public void setPgl24(RichPanelGroupLayout pgl24) {
+        this.pgl24 = pgl24;
+    }
+
+    public RichPanelGroupLayout getPgl24() {
+        return pgl24;
+    }
+
+
+    public void setQryId10(RichQuickQuery qryId10) {
+        this.qryId10 = qryId10;
+    }
+
+    public RichQuickQuery getQryId10() {
+        return qryId10;
+    }
+
+    public void setCl10(RichCommandLink cl10) {
+        this.cl10 = cl10;
+    }
+
+    public RichCommandLink getCl10() {
+        return cl10;
+    }
+
+
+    public void setQryId11(RichQuickQuery qryId11) {
+        this.qryId11 = qryId11;
+    }
+
+    public RichQuickQuery getQryId11() {
+        return qryId11;
+    }
+
+    public void setCl11(RichCommandLink cl11) {
+        this.cl11 = cl11;
+    }
+
+    public RichCommandLink getCl11() {
+        return cl11;
     }
 }

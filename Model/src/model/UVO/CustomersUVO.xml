@@ -107,7 +107,14 @@
     PrecisionRule="true"
     EntityAttrName="CustomerName"
     EntityUsage="CustomerEO"
-    AliasName="CUSTOMER_NAME"/>
+    AliasName="CUSTOMER_NAME">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="CustomerName_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="CustomerTypeId"
     PrecisionRule="true"
@@ -152,6 +159,8 @@
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="50"/>
+        <LABEL
+          ResId="Url_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -161,7 +170,14 @@
     EntityAttrName="ParentCompany"
     EntityUsage="CustomerEO"
     AliasName="PARENT_COMPANY"
-    IsQueriable="false"/>
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="ParentCompany_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Ceo"
     PrecisionRule="true"
@@ -239,7 +255,14 @@
     EntityUsage="CustomerEO"
     AliasName="CREATED_BY"
     IsUpdateable="false"
-    IsQueriable="false"/>
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="CreatedBy_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="CreatedOn"
     PrecisionRule="true"
@@ -247,7 +270,14 @@
     EntityUsage="CustomerEO"
     AliasName="CREATED_ON"
     IsUpdateable="false"
-    IsQueriable="false"/>
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="CreatedOn_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="LastUpdatedBy"
     PrecisionRule="true"
@@ -255,7 +285,14 @@
     EntityUsage="CustomerEO"
     AliasName="LAST_UPDATED_BY"
     IsUpdateable="false"
-    IsQueriable="false"/>
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="LastUpdatedBy_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="LastUpdatedOn"
     PrecisionRule="true"
@@ -263,14 +300,28 @@
     EntityUsage="CustomerEO"
     AliasName="LAST_UPDATED_ON"
     IsUpdateable="false"
-    IsQueriable="false"/>
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="LastUpdatedOn_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="VersionNo"
     PrecisionRule="true"
     EntityAttrName="VersionNo"
     EntityUsage="CustomerEO"
     AliasName="VERSION_NO"
-    IsQueriable="false"/>
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYHINT
+          Value="Hide"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="IsActive"
     PrecisionRule="true"
@@ -283,6 +334,8 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="IsActive_LABEL"/>
+        <DISPLAYHINT
+          Value="Hide"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>

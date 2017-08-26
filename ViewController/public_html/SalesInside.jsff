@@ -113,6 +113,18 @@
                       <af:button text="button 4" id="b3" binding="#{backingBeanScope.InsertBean.b3}"/>
                     </af:toolbar>
                   </af:toolbox>
+                  <af:panelGroupLayout layout="vertical" id="pgl22" binding="#{backingBeanScope.InsertBean.pgl22}">
+                    <af:quickQuery label="Search" searchDesc="Search" id="qryId7"
+                                   value="#{bindings.ImplicitViewCriteriaQuery6.quickQueryDescriptor}"
+                                   model="#{bindings.ImplicitViewCriteriaQuery6.queryModel}"
+                                   queryListener="#{bindings.ImplicitViewCriteriaQuery6.processQuery}"
+                                   binding="#{backingBeanScope.InsertBean.qryId7}">
+                      <f:facet name="end">
+                        <af:commandLink text="Advanced" rendered="false" id="cl7"
+                                        binding="#{backingBeanScope.InsertBean.cl7}"/>
+                      </f:facet>
+                    </af:quickQuery>
+                  </af:panelGroupLayout>
                   <af:table value="#{bindings.OpportunitiesU2.collectionModel}" var="row"
                             rows="#{bindings.OpportunitiesU2.rangeSize}"
                             emptyText="#{bindings.OpportunitiesU2.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -434,6 +446,16 @@
                               binding="#{backingBeanScope.InsertBean.gr1}">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc1"
                                  binding="#{backingBeanScope.InsertBean.gc1}" halign="stretch">
+                      <af:quickQuery label="Search" searchDesc="Search" id="qryId8"
+                                     value="#{bindings.ImplicitViewCriteriaQuery7.quickQueryDescriptor}"
+                                     model="#{bindings.ImplicitViewCriteriaQuery7.queryModel}"
+                                     queryListener="#{bindings.ImplicitViewCriteriaQuery7.processQuery}"
+                                     binding="#{backingBeanScope.InsertBean.qryId8}">
+                        <f:facet name="end">
+                          <af:commandLink text="Advanced" rendered="false" id="cl8"
+                                          binding="#{backingBeanScope.InsertBean.cl8}"/>
+                        </f:facet>
+                      </af:quickQuery>
                       <af:table rows="#{bindings.CustomersU3.rangeSize}" fetchSize="#{bindings.CustomersU3.rangeSize}"
                                 emptyText="#{bindings.CustomersU3.viewable ? 'No data to display.' : 'Access Denied.'}"
                                 var="row" value="#{bindings.CustomersU3.collectionModel}" rowBandingInterval="0"
@@ -497,16 +519,25 @@
                           </af:outputText>
                         </af:column>
                       </af:table>
-                      <af:panelHeader text=" " id="ph6" binding="#{backingBeanScope.InsertBean.ph6}"/>
                     </af:gridCell>
                   </af:gridRow>
                 </af:panelGridLayout>
               </af:panelGroupLayout>
             </af:showDetailItem>
             <af:showDetailItem id="tab1" text="Tasks" disclosed="false" binding="#{backingBeanScope.InsertBean.tab1}">
-              <af:panelGroupLayout id="pgl15" binding="#{backingBeanScope.InsertBean.pgl15}">
+              <af:panelGroupLayout id="pgl15" binding="#{backingBeanScope.InsertBean.pgl15}" layout="horizontal">
                 <af:button actionListener="#{bindings.Delete1.execute}" text="Delete Task related to Opportunity"
                            id="b15" binding="#{backingBeanScope.InsertBean.b15}"/>
+                <af:quickQuery label="Search" searchDesc="Search" id="qryId11"
+                               value="#{bindings.ImplicitViewCriteriaQuery10.quickQueryDescriptor}"
+                               model="#{bindings.ImplicitViewCriteriaQuery10.queryModel}"
+                               queryListener="#{bindings.ImplicitViewCriteriaQuery10.processQuery}"
+                               binding="#{backingBeanScope.InsertBean.qryId11}">
+                  <f:facet name="end">
+                    <af:commandLink text="Advanced" rendered="false" id="cl11"
+                                    binding="#{backingBeanScope.InsertBean.cl11}"/>
+                  </f:facet>
+                </af:quickQuery>
               </af:panelGroupLayout>
               <af:panelGridLayout id="pgl16" binding="#{backingBeanScope.InsertBean.pgl16}">
                 <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr4"
@@ -559,7 +590,20 @@
               </af:panelGridLayout>
             </af:showDetailItem>
             <af:showDetailItem text="Revenue Items" id="sdi11" binding="#{backingBeanScope.InsertBean.sdi11}">
-              <af:panelGroupLayout layout="vertical" id="pgl9" binding="#{backingBeanScope.InsertBean.pgl9}"/>
+              <af:panelGroupLayout layout="vertical" id="pgl9" binding="#{backingBeanScope.InsertBean.pgl9}">
+                <af:panelGroupLayout layout="vertical" id="pgl23" binding="#{backingBeanScope.InsertBean.pgl23}">
+                  <af:quickQuery label="Search" searchDesc="Search" id="qryId9"
+                                 value="#{bindings.ImplicitViewCriteriaQuery8.quickQueryDescriptor}"
+                                 model="#{bindings.ImplicitViewCriteriaQuery8.queryModel}"
+                                 queryListener="#{bindings.ImplicitViewCriteriaQuery8.processQuery}"
+                                 binding="#{backingBeanScope.InsertBean.qryId9}">
+                    <f:facet name="end">
+                      <af:commandLink text="Advanced" rendered="false" id="cl9"
+                                      binding="#{backingBeanScope.InsertBean.cl9}"/>
+                    </f:facet>
+                  </af:quickQuery>
+                </af:panelGroupLayout>
+              </af:panelGroupLayout>
               <af:panelGroupLayout id="pgl17" binding="#{backingBeanScope.InsertBean.pgl17}">
                 <af:button actionListener="#{bindings.Delete.execute}" text="Delete" id="b13"
                            binding="#{backingBeanScope.InsertBean.b13}"/>
@@ -647,12 +691,24 @@
               </af:panelGridLayout>
             </af:showDetailItem>
             <af:showDetailItem text="Contacts" id="sdi12" binding="#{backingBeanScope.InsertBean.sdi12}">
-              <af:button text="Add Contact" id="b6" binding="#{backingBeanScope.InsertBean.b6}">
-                <af:showPopupBehavior popupId="opportunities_contacts"/>
-              </af:button>
-              <af:button actionListener="#{bindings.CreateInsert3.execute}" text="CreateInsert3"
-                         disabled="#{!bindings.CreateInsert3.enabled}" id="b7" selected="false"
-                         binding="#{backingBeanScope.InsertBean.b7}"/>
+              <af:panelGroupLayout layout="vertical" id="pgl24" binding="#{backingBeanScope.InsertBean.pgl24}">
+                <af:quickQuery label="Search" searchDesc="Search" id="qryId10"
+                               value="#{bindings.ImplicitViewCriteriaQuery9.quickQueryDescriptor}"
+                               model="#{bindings.ImplicitViewCriteriaQuery9.queryModel}"
+                               queryListener="#{bindings.ImplicitViewCriteriaQuery9.processQuery}"
+                               binding="#{backingBeanScope.InsertBean.qryId10}">
+                  <f:facet name="end">
+                    <af:commandLink text="Advanced" rendered="false" id="cl10"
+                                    binding="#{backingBeanScope.InsertBean.cl10}"/>
+                  </f:facet>
+                </af:quickQuery>
+                <af:button text="Add Contact" id="b6" binding="#{backingBeanScope.InsertBean.b6}">
+                  <af:showPopupBehavior popupId="opportunities_contacts"/>
+                </af:button>
+                <af:button actionListener="#{bindings.CreateInsert3.execute}" text="CreateInsert3"
+                           disabled="#{!bindings.CreateInsert3.enabled}" id="b7" selected="false"
+                           binding="#{backingBeanScope.InsertBean.b7}"/>
+              </af:panelGroupLayout>
               <af:table value="#{bindings.ContactsU3.collectionModel}" var="row" rows="#{bindings.ContactsU3.rangeSize}"
                         emptyText="#{bindings.ContactsU3.viewable ? 'No data to display.' : 'Access Denied.'}"
                         rowBandingInterval="0" selectedRowKeys="#{bindings.ContactsU3.collectionModel.selectedRow}"
@@ -789,22 +845,23 @@
                          action="#{backingBeanScope.InsertBean.deleteOpportunitiesContactsLink}"/>
             </af:showDetailItem>
             <af:showDetailItem text="Appointments" id="sdi13" binding="#{backingBeanScope.InsertBean.sdi13}">
-              <af:panelGroupLayout layout="vertical" id="pgl10" binding="#{backingBeanScope.InsertBean.pgl10}">
-                <af:panelHeader text="AppointmentsEO" id="ph4" binding="#{backingBeanScope.InsertBean.ph4}">
-                  <af:quickQuery label="Search" searchDesc="Search" id="qryId1"
-                                 value="#{bindings.ImplicitViewCriteriaQuery.quickQueryDescriptor}"
-                                 model="#{bindings.ImplicitViewCriteriaQuery.queryModel}"
-                                 queryListener="#{bindings.ImplicitViewCriteriaQuery.processQuery}"
-                                 binding="#{backingBeanScope.InsertBean.qryId1}">
-                    <f:facet name="end">
-                      <af:commandLink text="Advanced" rendered="false" id="cl1"
-                                      binding="#{backingBeanScope.InsertBean.cl1}"/>
-                    </f:facet>
-                  </af:quickQuery>
-                  <af:button text="Add appointments" id="b9" binding="#{backingBeanScope.InsertBean.b9}">
-                    <af:showPopupBehavior popupId="p2"/>
-                  </af:button>
-                </af:panelHeader>
+              <af:panelGroupLayout layout="horizontal" id="pgl10" binding="#{backingBeanScope.InsertBean.pgl10}">
+                <af:quickQuery label="Search" searchDesc="Search" id="qryId1"
+                               value="#{bindings.ImplicitViewCriteriaQuery.quickQueryDescriptor}"
+                               model="#{bindings.ImplicitViewCriteriaQuery.queryModel}"
+                               queryListener="#{bindings.ImplicitViewCriteriaQuery.processQuery}"
+                               binding="#{backingBeanScope.InsertBean.qryId1}">
+                  <f:facet name="end">
+                    <af:commandLink text="Advanced" rendered="false" id="cl1"
+                                    binding="#{backingBeanScope.InsertBean.cl1}"/>
+                  </f:facet>
+                </af:quickQuery>
+                <af:button text="Add appointments" id="b9" binding="#{backingBeanScope.InsertBean.b9}">
+                  <af:showPopupBehavior popupId="p2"/>
+                </af:button>
+                <af:button text="Delete Appointments related to Opportunity" id="b11"
+                           binding="#{backingBeanScope.InsertBean.b11}"
+                           action="#{backingBeanScope.InsertBean.deleteOpportunitiesAppointmentsLink}"/>
               </af:panelGroupLayout>
               <af:table value="#{bindings.AppointmentsU2.collectionModel}" var="row"
                         rows="#{bindings.AppointmentsU2.rangeSize}"
@@ -910,8 +967,6 @@
                   </af:inputText>
                 </af:column>
               </af:table>
-              <af:button text="Delete Appointments related to Opportunity" id="b11" binding="#{backingBeanScope.InsertBean.b11}"
-                         action="#{backingBeanScope.InsertBean.deleteOpportunitiesAppointmentsLink}"/>
             </af:showDetailItem>
             <af:showDetailItem text="Notes" id="sdi14" binding="#{backingBeanScope.InsertBean.sdi14}">
               <af:panelGroupLayout layout="vertical" id="pgl11" binding="#{backingBeanScope.InsertBean.pgl11}">
@@ -1063,9 +1118,21 @@
                            disclosed="#{(pageFlowScope.sales_manager_tabVal==4)?true:false}"
                            inlineStyle="padding:20px;" binding="#{backingBeanScope.InsertBean.sdi3}">
           <af:panelHeader text="Customers" id="ph1" binding="#{backingBeanScope.InsertBean.ph1}">
-            <af:button actionListener="#{bindings.CreateInsert.execute}" text="Create Customer"
-                       disabled="#{!bindings.CreateInsert.enabled}" id="b2"
-                       binding="#{backingBeanScope.InsertBean.b2}"/>
+            <af:panelGroupLayout layout="horizontal" id="pgl21" binding="#{backingBeanScope.InsertBean.pgl21}">
+              <af:quickQuery label="Search" searchDesc="Search" id="qryId6"
+                             value="#{bindings.ImplicitViewCriteriaQuery5.quickQueryDescriptor}"
+                             model="#{bindings.ImplicitViewCriteriaQuery5.queryModel}"
+                             queryListener="#{bindings.ImplicitViewCriteriaQuery5.processQuery}"
+                             binding="#{backingBeanScope.InsertBean.qryId6}">
+                <f:facet name="end">
+                  <af:commandLink text="Advanced" rendered="false" id="cl6"
+                                  binding="#{backingBeanScope.InsertBean.cl6}"/>
+                </f:facet>
+              </af:quickQuery>
+              <af:button actionListener="#{bindings.CreateInsert.execute}" text="Create Customer"
+                         disabled="#{!bindings.CreateInsert.enabled}" id="b2"
+                         binding="#{backingBeanScope.InsertBean.b2}"/>
+            </af:panelGroupLayout>
             <af:popup childCreation="deferred" autoCancel="disabled" id="p4"
                       binding="#{backingBeanScope.InsertBean.p4}" contentDelivery="lazyUncached">
               <af:dialog id="d4" binding="#{backingBeanScope.InsertBean.d4}">
@@ -1401,22 +1468,17 @@
                   <af:convertDateTime pattern="#{bindings.CustomersU1.hints.LastUpdatedOn.format}"/>
                 </af:outputText>
               </af:column>
-              <af:column headerText="#{bindings.CustomersU1.hints.VersionNo.label}"
-                         sortProperty="#{bindings.CustomersU1.hints.VersionNo.name}" sortable="false" id="c31">
-                <af:outputText value="#{row.VersionNo}" shortDesc="#{bindings.CustomersU1.hints.VersionNo.tooltip}"
-                               id="ot25">
-                  <af:convertNumber groupingUsed="false" pattern="#{bindings.CustomersU1.hints.VersionNo.format}"/>
-                </af:outputText>
-              </af:column>
-              <af:column headerText="#{bindings.CustomersU1.hints.IsActive.label}"
-                         sortProperty="#{bindings.CustomersU1.hints.IsActive.name}" sortable="false" id="c32">
-                <af:outputText value="#{row.IsActive}" shortDesc="#{bindings.CustomersU1.hints.IsActive.tooltip}"
-                               id="ot26"/>
-              </af:column>
             </af:table>
           </af:panelHeader>
           <af:panelTabbed position="above" id="pt2" binding="#{backingBeanScope.InsertBean.pt2}">
             <af:showDetailItem text="Opportunities" id="sdi10" binding="#{backingBeanScope.InsertBean.sdi10}">
+              <af:panelGroupLayout id="pgl18" binding="#{backingBeanScope.InsertBean.pgl18}" layout="horizontal">
+                <af:button actionListener="#{bindings.Delete3.execute}" text="Delete" id="b24"
+                           binding="#{backingBeanScope.InsertBean.b24}"/>
+                <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
+                           disabled="#{!bindings.Commit.enabled}" id="b25"
+                           binding="#{backingBeanScope.InsertBean.b25}"/>
+              </af:panelGroupLayout>
               <af:table value="#{bindings.OpportunitiesU1.collectionModel}" var="row"
                         rows="#{bindings.OpportunitiesU1.rangeSize}"
                         emptyText="#{bindings.OpportunitiesU1.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -1839,29 +1901,8 @@
                   </af:inputText>
                 </af:column>
               </af:table>
-              <af:panelGroupLayout id="pgl18" binding="#{backingBeanScope.InsertBean.pgl18}" layout="horizontal">
-                <af:button actionListener="#{bindings.Delete3.execute}" text="Delete" id="b24"
-                           binding="#{backingBeanScope.InsertBean.b24}"/>
-                <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
-                           disabled="#{!bindings.Commit.enabled}" id="b25"
-                           binding="#{backingBeanScope.InsertBean.b25}"/>
-              </af:panelGroupLayout>
             </af:showDetailItem>
             <af:showDetailItem text="Appointments" id="sdi9" binding="#{backingBeanScope.InsertBean.sdi9}">
-              <af:panelGroupLayout layout="vertical" id="pgl20" binding="#{backingBeanScope.InsertBean.pgl20}">
-                <af:panelHeader text="Tasks" id="ph11" binding="#{backingBeanScope.InsertBean.ph11}">
-                  <af:quickQuery label="Search" searchDesc="Search" id="qryId2"
-                                 value="#{bindings.ImplicitViewCriteriaQuery1.quickQueryDescriptor}"
-                                 model="#{bindings.ImplicitViewCriteriaQuery1.queryModel}"
-                                 queryListener="#{bindings.ImplicitViewCriteriaQuery1.processQuery}"
-                                 binding="#{backingBeanScope.InsertBean.qryId2}">
-                    <f:facet name="end">
-                      <af:commandLink text="Advanced" rendered="false" id="cl2"
-                                      binding="#{backingBeanScope.InsertBean.cl2}"/>
-                    </f:facet>
-                  </af:quickQuery>
-                </af:panelHeader>
-              </af:panelGroupLayout>
               <af:table value="#{bindings.AppointmentsU3.collectionModel}" var="row"
                         rows="#{bindings.AppointmentsU3.rangeSize}"
                         emptyText="#{bindings.AppointmentsU3.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -2190,6 +2231,18 @@
                          action="#{backingBeanScope.InsertBean.deleteCustomerNotesLink}"/>
             </af:showDetailItem>
             <af:showDetailItem text="Tasks" id="sdi7" binding="#{backingBeanScope.InsertBean.sdi7}">
+              <af:panelGroupLayout layout="vertical" id="pgl20" binding="#{backingBeanScope.InsertBean.pgl20}">
+                <af:quickQuery label="Search" searchDesc="Search" id="qryId2"
+                               value="#{bindings.ImplicitViewCriteriaQuery1.quickQueryDescriptor}"
+                               model="#{bindings.ImplicitViewCriteriaQuery1.queryModel}"
+                               queryListener="#{bindings.ImplicitViewCriteriaQuery1.processQuery}"
+                               binding="#{backingBeanScope.InsertBean.qryId2}">
+                  <f:facet name="end">
+                    <af:commandLink text="Advanced" rendered="false" id="cl2"
+                                    binding="#{backingBeanScope.InsertBean.cl2}"/>
+                  </f:facet>
+                </af:quickQuery>
+              </af:panelGroupLayout>
               <af:table value="#{bindings.TasksCustomersU1.collectionModel}" var="row"
                         rows="#{bindings.TasksCustomersU1.rangeSize}"
                         emptyText="#{bindings.TasksCustomersU1.viewable ? 'No data to display.' : 'Access Denied.'}"
