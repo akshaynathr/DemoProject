@@ -13,4 +13,7 @@
   <ViewUsage
     Name="Products1"
     ViewObjectName="model.lookup.ProductsVO"/>
+  <ViewUsage
+    Name="DashboardManagerLookup1"
+    ViewObjectName="model.lookup.DashboardManagerLookup"/>
 </AppModule>

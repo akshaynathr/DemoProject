@@ -8,6 +8,8 @@
     <iterator Binds="RevenueItem1" RangeSize="-1" DataControl="AppModuleAMDataControl" id="RevenueItem1Iterator"/>
     <iterator Binds="ForecastLookup1" RangeSize="-1" DataControl="AppModuleAMDataControl1"
               id="ForecastLookup1Iterator"/>
+    <iterator Binds="DashboardManagerLookup1" RangeSize="-1" DataControl="AppModuleAMDataControl54"
+              id="DashboardManagerLookup1Iterator"/>
   </executables>
   <bindings>
     <tree IterBinding="RevenuePageU1Iterator" id="RevenuePageU1" ChangeEventPolicy="ppr">
@@ -31,6 +33,16 @@
         <AttrNames>
           <Item Value="Revenue"/>
           <Item Value="OppurtunityName"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="DashboardManagerLookup1Iterator" id="DashboardManagerLookup1" ChangeEventPolicy="ppr">
+      <nodeDefinition DefName="model.lookup.DashboardManagerLookup" Name="DashboardManagerLookup1">
+        <AttrNames>
+          <Item Value="BestCaseRevenue"/>
+          <Item Value="QuarterNo"/>
+          <Item Value="WorstCaseRevenue"/>
+          <Item Value="Revenue"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
