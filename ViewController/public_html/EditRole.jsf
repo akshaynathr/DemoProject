@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
   <af:document id="d1">
+    <af:messages id="m1"/>
     <af:form id="f1">
       <af:panelBorderLayout id="pbl1">
         <f:facet name="top">
@@ -19,34 +20,33 @@
         <af:panelGridLayout id="pgl2">
           <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr2">
             <af:gridCell marginStart="5px" width="90%" id="gc3">
-              <af:panelFormLayout id="pfl1">
-                <af:inputText value="#{bindings.PossibleValue.inputValue}" label="Name"
-                              required="#{bindings.PossibleValue.hints.mandatory}"
-                              columns="#{bindings.PossibleValue.hints.displayWidth}"
-                              maximumLength="#{bindings.PossibleValue.hints.precision}"
-                              shortDesc="#{bindings.PossibleValue.hints.tooltip}" id="it1">
-                  <f:validator binding="#{bindings.PossibleValue.validator}"/>
-                </af:inputText>
-                <af:inputDate value="#{bindings.StartDate.inputValue}" label="Start Date"
-                              required="#{bindings.StartDate.hints.mandatory}"
-                              columns="#{bindings.StartDate.hints.displayWidth}"
-                              shortDesc="#{bindings.StartDate.hints.tooltip}" id="id1">
-                  <f:validator binding="#{bindings.StartDate.validator}"/>
-                  <af:convertDateTime pattern="#{bindings.StartDate.format}"/>
+              <af:panelFormLayout id="pfl2">
+                <af:selectOneChoice value="#{bindings.RoleNameId.inputValue}" label="#{bindings.RoleNameId.label}"
+                                    required="#{bindings.RoleNameId.hints.mandatory}"
+                                    shortDesc="#{bindings.RoleNameId.hints.tooltip}" id="soc1">
+                  <f:selectItems value="#{bindings.RoleNameId.items}" id="si1"/>
+                  <f:validator binding="#{bindings.RoleNameId.validator}"/>
+                </af:selectOneChoice>
+                <af:inputDate value="#{bindings.StartDate1.inputValue}" label="#{bindings.StartDate1.hints.label}"
+                              required="#{bindings.StartDate1.hints.mandatory}"
+                              columns="#{bindings.StartDate1.hints.displayWidth}"
+                              shortDesc="#{bindings.StartDate1.hints.tooltip}" id="id3">
+                  <f:validator binding="#{bindings.StartDate1.validator}"/>
+                  <af:convertDateTime pattern="#{bindings.StartDate1.format}"/>
                 </af:inputDate>
-                <af:inputDate value="#{bindings.EndDate.inputValue}" label="End Date"
-                              required="#{bindings.EndDate.hints.mandatory}"
-                              columns="#{bindings.EndDate.hints.displayWidth}"
-                              shortDesc="#{bindings.EndDate.hints.tooltip}" id="id2">
-                  <f:validator binding="#{bindings.EndDate.validator}"/>
-                  <af:convertDateTime pattern="#{bindings.EndDate.format}"/>
+                <af:inputDate value="#{bindings.EndDate1.inputValue}" label="#{bindings.EndDate1.hints.label}"
+                              required="#{bindings.EndDate1.hints.mandatory}"
+                              columns="#{bindings.EndDate1.hints.displayWidth}"
+                              shortDesc="#{bindings.EndDate1.hints.tooltip}" id="id4">
+                  <f:validator binding="#{bindings.EndDate1.validator}"/>
+                  <af:convertDateTime pattern="#{bindings.EndDate1.format}"/>
                 </af:inputDate>
-                <af:inputText value="#{bindings.Description.inputValue}" label="#{bindings.Description.hints.label}"
-                              required="#{bindings.Description.hints.mandatory}"
-                              columns="#{bindings.Description.hints.displayWidth}"
-                              maximumLength="#{bindings.Description.hints.precision}"
-                              shortDesc="#{bindings.Description.hints.tooltip}" id="it2">
-                  <f:validator binding="#{bindings.Description.validator}"/>
+                <af:inputText value="#{bindings.Description1.inputValue}" label="#{bindings.Description1.hints.label}"
+                              required="#{bindings.Description1.hints.mandatory}"
+                              columns="#{bindings.Description1.hints.displayWidth}"
+                              maximumLength="#{bindings.Description1.hints.precision}"
+                              shortDesc="#{bindings.Description1.hints.tooltip}" id="it3">
+                  <f:validator binding="#{bindings.Description1.validator}"/>
                 </af:inputText>
               </af:panelFormLayout>
             </af:gridCell>

@@ -4,30 +4,26 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="RolesLookupMaster1" RangeSize="25" DataControl="AppModuleAMDataControl"
-              id="RolesLookupMaster1Iterator"/>
+    <iterator Binds="RolesU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="RolesU1Iterator"/>
   </executables>
   <bindings>
-    <attributeValues IterBinding="RolesLookupMaster1Iterator" id="PossibleValue">
-      <AttrNames>
-        <Item Value="PossibleValue"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="RolesLookupMaster1Iterator" id="StartDate">
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleAMDataControl"/>
+    <list IterBinding="RolesU1Iterator" StaticList="false" Uses="LOV_RoleNameId" id="RoleNameId" DTSupportsMRU="false"
+          SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="RolesU1Iterator" id="StartDate1">
       <AttrNames>
         <Item Value="StartDate"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="RolesLookupMaster1Iterator" id="EndDate">
+    <attributeValues IterBinding="RolesU1Iterator" id="EndDate1">
       <AttrNames>
         <Item Value="EndDate"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="RolesLookupMaster1Iterator" id="Description">
+    <attributeValues IterBinding="RolesU1Iterator" id="Description1">
       <AttrNames>
         <Item Value="Description"/>
       </AttrNames>
     </attributeValues>
-    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleAMDataControl"/>
   </bindings>
 </pageDefinition>
