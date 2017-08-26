@@ -24,6 +24,7 @@
                                               binding="#{backingBeanScope.backing_createRole.it1}" showRequired="true"
                                               autoSubmit="false">
                                     <f:validator binding="#{bindings.PossibleValue.validator}"/>
+                                    <f:validator validatorId="custom.NameValidator"/>
                                 </af:inputText>
                                 <af:inputDate value="#{bindings.StartDate.inputValue}"
                                               label="#{bindings.StartDate.hints.label}"
