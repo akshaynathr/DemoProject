@@ -13,7 +13,12 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full"
-  AutoRefresh="true">
+  AutoRefresh="true"
+  RowClass="model.UVO.RolesUVORowImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
   <ViewAccessor
     Name="RoleNameLookup1"
     ViewObjectName="model.RVO.RoleNameLookup"

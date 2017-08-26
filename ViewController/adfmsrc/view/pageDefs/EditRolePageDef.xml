@@ -10,17 +10,17 @@
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleAMDataControl"/>
     <list IterBinding="RolesU1Iterator" StaticList="false" Uses="LOV_RoleNameId" id="RoleNameId" DTSupportsMRU="false"
           SelectItemValueMode="ListObject"/>
-    <attributeValues IterBinding="RolesU1Iterator" id="StartDate1">
+    <attributeValues IterBinding="RolesU1Iterator" id="StartDate">
       <AttrNames>
         <Item Value="StartDate"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="RolesU1Iterator" id="EndDate1">
+    <attributeValues IterBinding="RolesU1Iterator" id="EndDate">
       <AttrNames>
         <Item Value="EndDate"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="RolesU1Iterator" id="Description1">
+    <attributeValues IterBinding="RolesU1Iterator" id="Description">
       <AttrNames>
         <Item Value="Description"/>
       </AttrNames>

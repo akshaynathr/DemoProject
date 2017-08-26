@@ -230,7 +230,7 @@
                             rowBandingInterval="0" selectedRowKeys="#{bindings.RolesU1.collectionModel.selectedRow}"
                             selectionListener="#{bindings.RolesU1.collectionModel.makeCurrent}" rowSelection="single"
                             fetchSize="#{bindings.RolesU1.rangeSize}" partialTriggers="::qryId1 ::b8 ::b7" id="t3"
-                            columnStretching="column:c7">
+                            columnStretching="column:c7" binding="#{backingBeanScope.backing_admin.roles_table}">
                     <af:column headerText="Name" id="c7">
                       <af:selectOneChoice value="#{row.bindings.RoleNameId.inputValue}"
                                           label="#{row.bindings.RoleNameId.label}"
@@ -240,8 +240,9 @@
                         <f:selectItems value="#{row.bindings.RoleNameId.items}" id="si3"/>
                         <f:validator binding="#{row.bindings.RoleNameId.validator}"/>
                       </af:selectOneChoice>
-                      <af:link text="#{row.RoleNameId}" id="l3" action="editRole" useWindow="true"
-                               windowEmbedStyle="window" windowHeight="500" windowWidth="600"/>
+                      <af:link text="#{row.bindings.RoleNameId.label}" id="l3" action="editRole" useWindow="true"
+                               windowEmbedStyle="window" windowHeight="500" windowWidth="600"
+                               returnListener="#{backingBeanScope.backing_admin.onReturnEditRoleDialog}"/>
                     </af:column>
                     <af:column headerText="Start Date" id="c9">
                       <af:outputText value="#{row.StartDate}" shortDesc="#{bindings.RolesU1.hints.StartDate.tooltip}"

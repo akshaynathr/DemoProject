@@ -147,7 +147,14 @@
     EntityAttrName="Url"
     EntityUsage="CustomerEO"
     AliasName="URL"
-    IsQueriable="false"/>
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="50"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ParentCompany"
     PrecisionRule="true"
