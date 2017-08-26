@@ -55,8 +55,6 @@
               id="NotesOpportunitiesU1Iterator"/>
     <iterator Binds="AppointmentsOpportunitiesU1" RangeSize="10" DataControl="AppModuleAMDataControl1"
               id="AppointmentsOpportunitiesU1Iterator"/>
-    <iterator Binds="TasksCustomersU1" RangeSize="25" DataControl="AppModuleAMDataControl1"
-              id="TasksCustomersU1Iterator"/>
     <iterator Binds="NotesCustomers1" RangeSize="25" DataControl="AppModuleAMDataControl1"
               id="NotesCustomers1Iterator"/>
     <iterator Binds="CustomersContactsU1" RangeSize="25" DataControl="AppModuleAMDataControl1"
@@ -85,6 +83,19 @@
                   Binds="ContactsU3Iterator" id="ImplicitViewCriteriaQuery9"/>
     <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
                   Binds="OpportunitiesU2Iterator" id="ImplicitViewCriteriaQuery10"/>
+    <iterator Binds="AppointmentsU1" RangeSize="25" DataControl="AppModuleAMDataControl1" id="AppointmentsU1Iterator"/>
+    <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="AppointmentsU1Iterator" id="ImplicitViewCriteriaQuery11"/>
+    <iterator Binds="Interactions2" RangeSize="25" DataControl="AppModuleAMDataControl1" id="Interactions2Iterator"/>
+    <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="Interactions2Iterator" id="ImplicitViewCriteriaQuery12"/>
+    <iterator Binds="CustomersU5" RangeSize="25" DataControl="AppModuleAMDataControl1" id="CustomersU5Iterator"/>
+    <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="CustomersU5Iterator" id="ImplicitViewCriteriaQuery14"/>
+    <iterator Binds="OpportunitiesU6" RangeSize="25" DataControl="AppModuleAMDataControl1"
+              id="OpportunitiesU6Iterator"/>
+    <searchRegion Binds="OpportunitiesU6Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="OpportunitiesU6Query"/>
   </executables>
   <bindings>
     <tree IterBinding="MyTeamR1Iterator" id="MyTeamR1">
@@ -561,14 +572,6 @@
     <action IterBinding="RevenueItems1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <action IterBinding="TasksU2Iterator1" id="Delete1" RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <action IterBinding="OpportunitiesU2Iterator" id="Delete2" RequiresUpdateModel="false" Action="removeCurrentRow"/>
-    <tree IterBinding="TasksCustomersU1Iterator" id="TasksCustomersU1">
-      <nodeDefinition DefName="model.customer.UVO.TasksCustomersUVO" Name="TasksCustomersU10">
-        <AttrNames>
-          <Item Value="TaskId"/>
-          <Item Value="CustomerId"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
     <tree IterBinding="NotesCustomers1Iterator" id="NotesCustomers1">
       <nodeDefinition DefName="model.customer.UVO.NotesCustomersVO" Name="NotesCustomers10">
         <AttrNames>
@@ -792,5 +795,72 @@
         <Item Value="Country"/>
       </AttrNames>
     </attributeValues>
+    <tree IterBinding="AppointmentsU1Iterator" id="AppointmentsU1">
+      <nodeDefinition DefName="model.UVO.AppointmentsUVO" Name="AppointmentsU10">
+        <AttrNames>
+          <Item Value="CustomerId"/>
+          <Item Value="AppointmentSubject"/>
+          <Item Value="Description"/>
+          <Item Value="StartDate"/>
+          <Item Value="EndDate"/>
+          <Item Value="LocationRoomNo"/>
+          <Item Value="AddressId"/>
+          <Item Value="CreatedBy"/>
+          <Item Value="CreatedOn"/>
+          <Item Value="LastUpdatedBy"/>
+          <Item Value="LastUpdatedOn"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="Interactions2Iterator" id="Interactions2">
+      <nodeDefinition DefName="model.EO.InteractionsVO" Name="Interactions20">
+        <AttrNames>
+          <Item Value="InteractionTypeId"/>
+          <Item Value="Description"/>
+          <Item Value="Resolution"/>
+          <Item Value="Direction"/>
+          <Item Value="StartDate"/>
+          <Item Value="EndDate"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="CustomersU5Iterator" id="CustomersU5">
+      <nodeDefinition DefName="model.UVO.CustomersUVO" Name="CustomersU50">
+        <AttrNames>
+          <Item Value="CustomerName"/>
+          <Item Value="CustomerTypeId"/>
+          <Item Value="PrimaryContactId"/>
+          <Item Value="Url"/>
+          <Item Value="ParentCompany"/>
+          <Item Value="Ceo"/>
+          <Item Value="NoOfEmployees"/>
+          <Item Value="Fax"/>
+          <Item Value="Email"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="OpportunitiesU6Iterator" id="OpportunitiesU6">
+      <nodeDefinition DefName="model.customer.UVO.OpportunitiesUVO" Name="OpportunitiesU60">
+        <AttrNames>
+          <Item Value="OppurtunityName"/>
+          <Item Value="CustomerId"/>
+          <Item Value="WinProbablity"/>
+          <Item Value="StartDate"/>
+          <Item Value="EndDate"/>
+          <Item Value="SalesStageId"/>
+          <Item Value="SalesMethodId"/>
+          <Item Value="SalesChannelId"/>
+          <Item Value="Revenue"/>
+          <Item Value="BestCaseRevenue"/>
+          <Item Value="WorstCaseRevenue"/>
+          <Item Value="IsBudgeted"/>
+          <Item Value="BudgetAmount"/>
+          <Item Value="EstimatedDurationInDays"/>
+          <Item Value="RiskLevel"/>
+          <Item Value="IsIncluded"/>
+          <Item Value="DecisionLevelId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
   </bindings>
 </pageDefinition>
