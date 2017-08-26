@@ -15,7 +15,7 @@
       <property
          name="description">&lt;html>&lt;p>&lt;b>DeleteProductCategory&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">176.71777</property>
+         name="y">165.84961</property>
       <property
          name="page">/DeleteProductCategory.jsf</property>
       <property
@@ -30,7 +30,7 @@
       <property
          name="description">&lt;html>&lt;p>&lt;b>return&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  return&lt;/p></property>
       <property
-         name="y">180.79297</property>
+         name="y">175.1836</property>
       <property
          name="finish">true</property>
       <property
@@ -40,44 +40,79 @@
       islink="true"
       id="ControlFlowCase17"
       from="View2"
-      to="TaskFlowReturn15">
+      to="MethodCall13">
       <property
          name="fromOutcome">deleteRow</property>
       <property
-         name="sdm:polyPoints">R50,530.0,176.36719,843.0,180.44238,L50</property>
+         name="sdm:polyPoints">B50,489.0,220.55078,676.5,340.79883,L50</property>
+   </ControlFlowCase>
+   <MethodCall
+      id="MethodCall13">
+      <property
+         name="activityId">Delete</property>
+      <property
+         name="x">717.5</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Delete&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="y">341.1494</property>
+      <property
+         name="exceptionHandler">false</property>
+   </MethodCall>
+   <MethodCall
+      id="MethodCall15">
+      <property
+         name="activityId">Execute</property>
+      <property
+         name="x">870.5</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Execute&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="y">337.74707</property>
+      <property
+         name="exceptionHandler">false</property>
+   </MethodCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase16"
+      from="MethodCall13"
+      to="MethodCall15">
+      <property
+         name="fromOutcome">Delete</property>
+      <property
+         name="sdm:polyPoints">R50,758.5,340.79883,829.5,337.39648,L50</property>
+   </ControlFlowCase>
+   <MethodCall
+      id="MethodCall17">
+      <property
+         name="activityId">Commit</property>
+      <property
+         name="x">1170.5</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Commit&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="y">341.1494</property>
+      <property
+         name="exceptionHandler">false</property>
+   </MethodCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase18"
+      from="MethodCall15"
+      to="MethodCall17">
+      <property
+         name="fromOutcome">Execute</property>
+      <property
+         name="sdm:polyPoints">R50,911.5,337.39648,1129.5,340.79883,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase8"
+      id="ControlFlowCase19"
+      from="MethodCall17"
       to="TaskFlowReturn15">
       <property
-         name="tosrcid">__9</property>
+         name="fromOutcome">Commit</property>
       <property
-         name="fromOutcome">*</property>
-      <property
-         name="fromsrcid">__8</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase9">
-      <property
-         name="tosrcid">__7</property>
-      <property
-         name="fromOutcome">*</property>
-      <property
-         name="fromsrcid">__6</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase10"
-      from="View2">
-      <property
-         name="tosrcid">__5</property>
-      <property
-         name="fromOutcome">deleteRow</property>
-      <property
-         name="fromsrcid">__3</property>
-      <property
-         name="sdm:polyPoints">L50,448.0,177.06836,321.5,220.44824,R50</property>
+         name="sdm:polyPoints">L46,1129.5,337.29883,925.0,174.83301,R50</property>
    </ControlFlowCase>
 </SDM>

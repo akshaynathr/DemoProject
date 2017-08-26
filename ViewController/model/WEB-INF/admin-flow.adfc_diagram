@@ -69,7 +69,7 @@
       <property
          name="fromsrcid">__3</property>
       <property
-         name="sdm:polyPoints">L62,414.0,123.0459,265.5,160.34473,R50</property>
+         name="sdm:polyPoints">L58,412.47278,119.5459,265.5,160.34473,R50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall9">
@@ -190,7 +190,7 @@
       <property
          name="fromsrcid">__1</property>
       <property
-         name="sdm:polyPoints">R46,144.21696,92.29297,412.23874,109.0459,L46</property>
+         name="sdm:polyPoints">R46,144.17169,92.29297,412.3158,105.5459,L42</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -200,7 +200,7 @@
       <property
          name="fromOutcome">create_product_category</property>
       <property
-         name="sdm:polyPoints">L38,414.0,102.0459,357.0244,32.79883,B50</property>
+         name="sdm:polyPoints">L34,414.0,98.5459,357.0244,32.79883,B50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall23">
@@ -239,7 +239,7 @@
       <property
          name="fromOutcome">back_admin_dashboard</property>
       <property
-         name="sdm:polyPoints">L54,412.0217,116.0459,144.0,99.29297,R54</property>
+         name="sdm:polyPoints">L50,412.14404,112.5459,144.0,99.29297,R54</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall27">
@@ -289,9 +289,38 @@
       <property
          name="taskFlowId">product-Category-flow</property>
    </TaskFlowCall>
+   <TaskFlowCall
+      id="TaskFlowCall31">
+      <property
+         name="runAsDialog">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>editRole&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">editRole</property>
+      <property
+         name="x">196.5</property>
+      <property
+         name="y">325.1494</property>
+      <property
+         name="documentReference">/WEB-INF/editRole.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">editRole</property>
+   </TaskFlowCall>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase29"
+      id="ControlFlowCase32"
+      from="View3"
+      to="TaskFlowCall31">
+      <property
+         name="fromOutcome">editRole</property>
+      <property
+         name="sdm:polyPoints">L66,414.0,126.5459,196.5,270.79883,T50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase33"
       from="View3">
       <property
          name="tosrcid">__6</property>

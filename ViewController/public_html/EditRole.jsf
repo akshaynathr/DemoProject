@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:document id="d1">
+    <af:form id="f1">
+      <af:panelBorderLayout id="pbl1">
+        <f:facet name="top">
+          <af:panelGridLayout id="pgl1">
+            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
+              <af:gridCell marginStart="5px" width="90%" id="gc1"/>
+              <af:gridCell marginStart="5px" width="10%" marginEnd="5px" id="gc2">
+                <af:button text="Save" id="b1" actionListener="#{bindings.Commit.execute}" action="commit"/>
+              </af:gridCell>
+            </af:gridRow>
+          </af:panelGridLayout>
+        </f:facet>
+        <f:facet name="bottom"/>
+        <f:facet name="start"/>
+        <f:facet name="end"/>
+        <af:panelGridLayout id="pgl2">
+          <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr2">
+            <af:gridCell marginStart="5px" width="90%" id="gc3">
+              <af:panelFormLayout id="pfl1">
+                <af:inputText value="#{bindings.PossibleValue.inputValue}" label="Name"
+                              required="#{bindings.PossibleValue.hints.mandatory}"
+                              columns="#{bindings.PossibleValue.hints.displayWidth}"
+                              maximumLength="#{bindings.PossibleValue.hints.precision}"
+                              shortDesc="#{bindings.PossibleValue.hints.tooltip}" id="it1">
+                  <f:validator binding="#{bindings.PossibleValue.validator}"/>
+                </af:inputText>
+                <af:inputDate value="#{bindings.StartDate.inputValue}" label="Start Date"
+                              required="#{bindings.StartDate.hints.mandatory}"
+                              columns="#{bindings.StartDate.hints.displayWidth}"
+                              shortDesc="#{bindings.StartDate.hints.tooltip}" id="id1">
+                  <f:validator binding="#{bindings.StartDate.validator}"/>
+                  <af:convertDateTime pattern="#{bindings.StartDate.format}"/>
+                </af:inputDate>
+                <af:inputDate value="#{bindings.EndDate.inputValue}" label="End Date"
+                              required="#{bindings.EndDate.hints.mandatory}"
+                              columns="#{bindings.EndDate.hints.displayWidth}"
+                              shortDesc="#{bindings.EndDate.hints.tooltip}" id="id2">
+                  <f:validator binding="#{bindings.EndDate.validator}"/>
+                  <af:convertDateTime pattern="#{bindings.EndDate.format}"/>
+                </af:inputDate>
+                <af:inputText value="#{bindings.Description.inputValue}" label="#{bindings.Description.hints.label}"
+                              required="#{bindings.Description.hints.mandatory}"
+                              columns="#{bindings.Description.hints.displayWidth}"
+                              maximumLength="#{bindings.Description.hints.precision}"
+                              shortDesc="#{bindings.Description.hints.tooltip}" id="it2">
+                  <f:validator binding="#{bindings.Description.validator}"/>
+                </af:inputText>
+              </af:panelFormLayout>
+            </af:gridCell>
+            <af:gridCell marginStart="5px" width="10%" marginEnd="5px" id="gc4"/>
+          </af:gridRow>
+        </af:panelGridLayout>
+      </af:panelBorderLayout>
+    </af:form>
+  </af:document>
+</f:view>

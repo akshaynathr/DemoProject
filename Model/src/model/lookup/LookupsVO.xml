@@ -12,7 +12,8 @@
   BindingStyle="OracleName"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <EntityUsage
     Name="LookupsEO"
     Entity="model.lookup.LookupsEO"/>
@@ -22,7 +23,8 @@
     PrecisionRule="true"
     EntityAttrName="LookupId"
     EntityUsage="LookupsEO"
-    AliasName="LOOKUP_ID"/>
+    AliasName="LOOKUP_ID"
+    IsUpdateable="while_insert"/>
   <ViewAttribute
     Name="LookupCategory"
     PrecisionRule="true"
@@ -35,7 +37,17 @@
     PrecisionRule="true"
     EntityAttrName="PossibleValue"
     EntityUsage="LookupsEO"
-    AliasName="POSSIBLE_VALUE"/>
+    AliasName="POSSIBLE_VALUE">
+    <validation:LengthValidationBean
+      Name="PossibleValueRule0"
+      ResId="PossibleValue_Rule_0"
+      MessageFlavor="IGNORE_DETAILS"
+      OnAttribute="PossibleValue"
+      CompareType="GREATERTHAN"
+      DataType="CHARACTER"
+      CompareLength="-1"
+      Inverse="false"/>
+  </ViewAttribute>
   <ViewAttribute
     Name="Description"
     PrecisionRule="true"
@@ -63,4 +75,8 @@
       </ViewCriteriaRow>
     </ViewCriteria>
   </DeclarativeWhereClause>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.lookup.common.LookupsVOMsgBundle"/>
+  </ResourceBundle>
 </ViewObject>

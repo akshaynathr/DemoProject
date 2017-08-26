@@ -14,6 +14,7 @@
                             shortDesc="#{bindings.PossibleValue.hints.tooltip}" id="it1" showRequired="true"
                             autoSubmit="false">
                 <f:validator binding="#{bindings.PossibleValue.validator}"/>
+                <f:validator validatorId="custom.NameValidator"/>
               </af:inputText>
               <af:inputText value="#{bindings.Description.inputValue}" label="Description"
                             required="#{bindings.Description.hints.mandatory}" columns="50"

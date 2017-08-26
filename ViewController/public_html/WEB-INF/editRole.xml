@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="editRole">
+    <default-activity>EditRole</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <task-flow-return id="back">
+      <outcome>
+        <name>back</name>
+      </outcome>
+    </task-flow-return>
+    <view id="EditRole">
+      <page>/EditRole.jsf</page>
+    </view>
+    <control-flow-rule id="__5">
+      <from-activity-id>EditRole</from-activity-id>
+      <control-flow-case id="__6">
+        <from-outcome>commit</from-outcome>
+        <to-activity-id>back</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+  </task-flow-definition>
+</adfc-config>

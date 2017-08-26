@@ -55,6 +55,15 @@
       ValName="Mandatory"
       Subtype="MANDATORY"
       MessageFlavor="IGNORE_DETAILS"/>
+    <validation:LengthValidationBean
+      Name="ProductNameRule1"
+      ResId="ProductName_Rule_2"
+      MessageFlavor="IGNORE_DETAILS"
+      OnAttribute="ProductName"
+      CompareType="GREATERTHAN"
+      DataType="CHARACTER"
+      CompareLength="-1"
+      Inverse="false"/>
   </Attribute>
   <Attribute
     Name="ProductDescription"

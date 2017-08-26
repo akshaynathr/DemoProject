@@ -2,9 +2,6 @@
 <adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
   <task-flow-definition id="DeleteProductCategory-flow">
     <default-activity>DeleteProductCategory</default-activity>
-    <transaction>
-      <new-transaction/>
-    </transaction>
     <data-control-scope>
       <shared/>
     </data-control-scope>
@@ -14,29 +11,51 @@
     <task-flow-return id="return">
       <outcome>
         <name>return</name>
-        <commit/>
       </outcome>
     </task-flow-return>
+    <method-call id="Delete">
+      <method>#{bindings.Commit.execute}</method>
+      <outcome>
+        <fixed-outcome>Delete</fixed-outcome>
+      </outcome>
+    </method-call>
+    <method-call id="Execute">
+      <method>#{bindings.Execute.execute}</method>
+      <outcome>
+        <fixed-outcome>Execute</fixed-outcome>
+      </outcome>
+    </method-call>
+    <method-call id="Commit">
+      <method>#{bindings.Commit.execute}</method>
+      <outcome>
+        <fixed-outcome>Commit</fixed-outcome>
+      </outcome>
+    </method-call>
     <control-flow-rule id="__3">
       <from-activity-id>DeleteProductCategory</from-activity-id>
-      <control-flow-case id="__5">
+      <control-flow-case id="__10">
         <from-outcome>deleteRow</from-outcome>
         <to-activity-id>Delete</to-activity-id>
       </control-flow-case>
-      <control-flow-case id="__10">
-        <from-outcome>deleteRow</from-outcome>
-        <to-activity-id>return</to-activity-id>
+    </control-flow-rule>
+    <control-flow-rule id="__4">
+      <from-activity-id>Delete</from-activity-id>
+      <control-flow-case id="__6">
+        <from-outcome>Delete</from-outcome>
+        <to-activity-id>Execute</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
-    <control-flow-rule id="__6">
-      <from-activity-id>Delete</from-activity-id>
-      <control-flow-case id="__7">
+    <control-flow-rule id="__7">
+      <from-activity-id>Execute</from-activity-id>
+      <control-flow-case id="__8">
+        <from-outcome>Execute</from-outcome>
         <to-activity-id>Commit</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
-    <control-flow-rule id="__8">
+    <control-flow-rule id="__9">
       <from-activity-id>Commit</from-activity-id>
-      <control-flow-case id="__9">
+      <control-flow-case id="__11">
+        <from-outcome>Commit</from-outcome>
         <to-activity-id>return</to-activity-id>
       </control-flow-case>
     </control-flow-rule>

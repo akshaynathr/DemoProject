@@ -44,7 +44,7 @@
       <property
          name="fromOutcome">back</property>
       <property
-         name="sdm:polyPoints">T41,362.2289,62.666332,483.03687,-57.225185,L43</property>
+         name="sdm:polyPoints">T44,364.5,66.828125,487.1382,-54.9541,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -54,7 +54,7 @@
       <property
          name="fromOutcome">commit</property>
       <property
-         name="sdm:polyPoints">T59,373.7711,67.47012,487.7289,-45.683018,L57</property>
+         name="sdm:polyPoints">T56,371.5,69.74121,490.0,-47.9541,L54</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"

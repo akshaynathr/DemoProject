@@ -4,33 +4,42 @@
     <af:messages id="m1"/>
     <af:form id="f1">
       <af:panelGroupLayout layout="vertical" id="pgl1">
-        <af:panelGridLayout id="pgl3">
-          <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
-            <af:gridCell marginStart="5px" width="90%" id="gc1" halign="stretch">
-              <af:table value="#{bindings.Lookups1.collectionModel}" var="row" rows="#{bindings.Lookups1.rangeSize}"
-                        emptyText="#{bindings.Lookups1.viewable ? 'No data to display.' : 'Access Denied.'}"
-                        rowBandingInterval="0" selectedRowKeys="#{bindings.Lookups1.collectionModel.selectedRow}"
-                        selectionListener="#{bindings.Lookups1.collectionModel.makeCurrent}" rowSelection="single"
-                        fetchSize="#{bindings.Lookups1.rangeSize}" id="t1" partialTriggers="::b1 ::b2"
-                        columnStretching="last">
-                <af:column headerText="Category" id="c1" minimumWidth="35">
-                  <af:outputText value="#{row.PossibleValue}"
-                                 shortDesc="#{bindings.Lookups1.hints.PossibleValue.tooltip}" id="ot1"/>
-                </af:column>
-                <af:column headerText="Description" id="c2">
-                  <af:outputText value="#{row.Description}" shortDesc="#{bindings.Lookups1.hints.Description.tooltip}"
-                                 id="ot2"/>
-                </af:column>
-              </af:table>
-            </af:gridCell>
-            <af:gridCell marginStart="5px" width="10%" marginEnd="5px" id="gc2">
-              <af:button text="Delete" id="b1" actionListener="#{bindings.Delete.execute}"
-                         disabled="#{!bindings.Delete.enabled}"/>
-              <af:button actionListener="#{bindings.Commit1.execute}" text="Close"
-                         disabled="#{!bindings.Commit1.enabled}" id="b2" action="deleteRow"/>
-            </af:gridCell>
-          </af:gridRow>
-        </af:panelGridLayout>
+        <af:panelBorderLayout id="pbl1">
+          <f:facet name="top">
+            <af:panelGridLayout id="pgl2">
+              <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr2">
+                <af:gridCell marginStart="5px" width="90%" id="gc2"/>
+                <af:gridCell marginStart="5px" width="10%" marginEnd="5px" id="gc3">
+                  <af:button text="Delete" id="b1" action="deleteRow"/>
+                </af:gridCell>
+              </af:gridRow>
+            </af:panelGridLayout>
+          </f:facet>
+          <f:facet name="bottom"/>
+          <f:facet name="start"/>
+          <f:facet name="end"/>
+          <af:panelGridLayout id="pgl3">
+            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
+              <af:gridCell marginStart="5px" width="75%" id="gc1" halign="stretch">
+                <af:table value="#{bindings.Lookups1.collectionModel}" var="row" rows="#{bindings.Lookups1.rangeSize}"
+                          emptyText="#{bindings.Lookups1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          rowBandingInterval="0" selectedRowKeys="#{bindings.Lookups1.collectionModel.selectedRow}"
+                          selectionListener="#{bindings.Lookups1.collectionModel.makeCurrent}" rowSelection="single"
+                          fetchSize="#{bindings.Lookups1.rangeSize}" id="t1" partialTriggers="::b1"
+                          columnStretching="last">
+                  <af:column headerText="Category" id="c1" minimumWidth="50">
+                    <af:outputText value="#{row.PossibleValue}"
+                                   shortDesc="#{bindings.Lookups1.hints.PossibleValue.tooltip}" id="ot1"/>
+                  </af:column>
+                  <af:column headerText="Description" id="c2">
+                    <af:outputText value="#{row.Description}" shortDesc="#{bindings.Lookups1.hints.Description.tooltip}"
+                                   id="ot2"/>
+                  </af:column>
+                </af:table>
+              </af:gridCell>
+            </af:gridRow>
+          </af:panelGridLayout>
+        </af:panelBorderLayout>
       </af:panelGroupLayout>
     </af:form>
   </af:document>

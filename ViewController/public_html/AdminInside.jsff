@@ -240,6 +240,8 @@
                         <f:selectItems value="#{row.bindings.RoleNameId.items}" id="si3"/>
                         <f:validator binding="#{row.bindings.RoleNameId.validator}"/>
                       </af:selectOneChoice>
+                      <af:link text="#{row.RoleNameId}" id="l3" action="editRole" useWindow="true"
+                               windowEmbedStyle="window" windowHeight="500" windowWidth="600"/>
                     </af:column>
                     <af:column headerText="Start Date" id="c9">
                       <af:outputText value="#{row.StartDate}" shortDesc="#{bindings.RolesU1.hints.StartDate.tooltip}"
