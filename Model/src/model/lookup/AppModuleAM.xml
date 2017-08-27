@@ -22,4 +22,7 @@
   <ViewUsage
     Name="GraphtotalOppurtunitiesCount1"
     ViewObjectName="model.lookup.GraphtotalOppurtunitiesCount"/>
+  <ViewUsage
+    Name="ForecastingLookup1"
+    ViewObjectName="model.lookup.ForecastingLookupVO"/>
 </AppModule>

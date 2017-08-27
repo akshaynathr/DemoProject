@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
-                xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces" xmlns:f="http://java.sun.com/jsf/core">
+                xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces" xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html">
   <af:panelGroupLayout id="pgl1" layout="vertical" inlineStyle="background-color:White;">
     <af:button text="Dashboard" id="b1" icon="/icons/QUICK-icon-55344.png" action="back"/>
     <af:spacer width="10" height="10" id="s2"/>
@@ -9,11 +10,14 @@
       <af:gridRow marginTop="5px" height="auto" id="gr1">
         <af:gridCell marginStart="5px" width="50%" id="gc1" inlineStyle="color:Lime;">
           <af:outputText value="QUARTER WISE REVENUE" id="ot1" inlineStyle="color:Green; font-size:large;"/>
-          <dvt:pieChart id="pieChart1" var="row" value="#{bindings.RevenueItem1.collectionModel}" threeDEffect="on"
-                        hoverBehavior="dim">
-            <dvt:chartLegend id="cl1"/>
-            <dvt:pieDataItem id="di1" label="#{row.QuarterNo}" value="#{row.Revenue}"/>
-          </dvt:pieChart>
+          <af:panelGroupLayout id="pgl5" halign="center" layout="horizontal">
+            <dvt:pieChart id="pieChart1" var="row" value="#{bindings.RevenueItem1.collectionModel}" threeDEffect="on"
+                          hoverBehavior="dim">
+              <dvt:chartLegend id="cl1"/>
+              <dvt:pieDataItem id="di1" label="#{row.QuarterNo}" value="#{row.Revenue}"/>
+            </dvt:pieChart>
+            <h:outputText value="Quarter" id="ot9" style="text-align:right; color:black;"/>
+          </af:panelGroupLayout>
         </af:gridCell>
         <af:gridCell id="gc2" inlineStyle="font-size:large;">
           <af:outputText value="OPPORTUNITY COMPARISON" id="ot2" inlineStyle="color:green;"/>
@@ -36,7 +40,7 @@
       <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr2">
         <af:gridCell marginStart="5px" width="50%" id="gc3">
           <af:activeOutputText value="REVENUE COMPARISON" id="aot1" inlineStyle="color:Green; font-size:large;"/>
-          <af:spacer width="10" height="10" id="s11"/>
+          <af:spacer width="10" height="30" id="s11"/>
           <dvt:lineChart id="lineChart2" var="row" value="#{bindings.DashboardManagerLookup1.collectionModel}" hoverBehavior="dim"
                          inlineStyle="column-rule-width:thin; min-width:100pt; font-size:small; border-right-width:thick;" dataLabelPosition="center">
             <dvt:chartLegend id="cl3"/>
@@ -55,7 +59,25 @@
           <af:spacer width="150" height="30" id="s1"/>
           <af:outputText value="Quarter" id="ot5"/>
         </af:gridCell>
-        <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc4" inlineStyle="vertical-align:middle;"/>
+        <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc4" inlineStyle="vertical-align:middle;">
+          <af:outputText value="FUTURE FORECAST" id="ot4" inlineStyle="color:green; font-size:large;"/>
+          <af:panelGroupLayout id="pgl4">
+            <af:outputText value="Quarter" id="ot6"/>
+            <dvt:barChart orientation="horizontal" id="barChart1" var="row"
+                          value="#{bindings.ForecastingLookup1.collectionModel}">
+              <dvt:chartLegend id="cl2"/>
+              <f:facet name="dataStamp">
+                <dvt:chartDataItem id="di2" series="#{bindings.ForecastingLookup1.hints.Revenue.label}"
+                                   value="#{row.Revenue}" group="#{row.QuarterNo}"/>
+              </f:facet>
+            </dvt:barChart>
+          </af:panelGroupLayout>
+          <af:spacer width="10" height="10" id="s8"/>
+          <af:spacer width="90" height="10" id="s9"/>
+          <af:spacer width="10" height="10" id="s10"/>
+          <af:outputText value="Revenue(In dollar)" id="ot8"/>
+          <af:spacer width="10" height="10" id="s12"/>
+        </af:gridCell>
       </af:gridRow>
     </af:panelGridLayout>
   </af:panelGroupLayout>

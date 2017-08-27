@@ -12,6 +12,8 @@
               id="GraphClosedOppLookup1Iterator"/>
     <iterator Binds="GraphtotalOppurtunitiesCount1" RangeSize="1" DataControl="AppModuleAMDataControl54"
               id="GraphtotalOppurtunitiesCount1Iterator"/>
+    <iterator Binds="ForecastingLookup1" RangeSize="-1" DataControl="AppModuleAMDataControl54"
+              id="ForecastingLookup1Iterator"/>
   </executables>
   <bindings>
     <tree IterBinding="RevenuePageU1Iterator" id="RevenuePageU1" ChangeEventPolicy="ppr">
@@ -50,5 +52,13 @@
         <Item Value="Failed"/>
       </AttrNames>
     </attributeValues>
+    <tree IterBinding="ForecastingLookup1Iterator" id="ForecastingLookup1" ChangeEventPolicy="ppr">
+      <nodeDefinition DefName="model.lookup.ForecastingLookupVO" Name="ForecastingLookup1">
+        <AttrNames>
+          <Item Value="Revenue"/>
+          <Item Value="QuarterNo"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
   </bindings>
 </pageDefinition>
