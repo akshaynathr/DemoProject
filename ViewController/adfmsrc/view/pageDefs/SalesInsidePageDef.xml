@@ -109,6 +109,8 @@
                   Binds="OpportunitiesU6Iterator" id="ImplicitViewCriteriaQuery18"/>
     <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
                   Binds="ContactsU1Iterator" id="ImplicitViewCriteriaQuery19"/>
+    <iterator Binds="TasksCustomersU1" RangeSize="25" DataControl="AppModuleAMDataControl1"
+              id="TasksCustomersU1Iterator"/>
   </executables>
   <bindings>
     <tree IterBinding="MyTeamR1Iterator" id="MyTeamR1">
@@ -861,6 +863,14 @@
           <Item Value="DepartmentNameId"/>
           <Item Value="InfluenceLevelId"/>
           <Item Value="Email"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="TasksCustomersU1Iterator" id="TasksCustomersU1">
+      <nodeDefinition DefName="model.customer.UVO.TasksCustomersUVO" Name="TasksCustomersU10">
+        <AttrNames>
+          <Item Value="TaskId"/>
+          <Item Value="CustomerId"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

@@ -373,6 +373,7 @@ public class insertBean {
     private RichDialog d26;
     private RichDialog d27;
     private RichDialog d28;
+    private RichTable t11;
 
     public insertBean() {
     }
@@ -3516,5 +3517,12 @@ public class insertBean {
 
     public RichDialog getD28() {
         return d28;
+	}
+    public void setT11(RichTable t11) {
+        this.t11 = t11;
+    }
+
+    public RichTable getT11() {
+        return t11;
     }
 }

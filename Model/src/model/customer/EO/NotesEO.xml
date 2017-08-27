@@ -152,6 +152,13 @@
     AssociationOtherEnd="model.ASSOC.OpportunityToNotesASSOCDestination.Notes"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Contact"
+    Association="model.ASSOC.insertion.ContactToNotesASSOC"
+    AssociationEnd="model.ASSOC.insertion.ContactToNotesASSOC.Contact"
+    AssociationOtherEnd="model.ASSOC.insertion.ContactToNotesASSOC.Notes"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="NotesPk"
     PrimaryKey="true">

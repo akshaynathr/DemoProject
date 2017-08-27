@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="CustomerToOpportunitiesVL"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge">
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="CustomerToOpportunitiesVL_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewLinkDefEnd
+    Name="CustomersU2"
+    Cardinality="1"
+    Source="true"
+    Owner="model.UVO.CustomersUVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="CustomersU2"/>
+      <Attr Name="_accessor" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.UVO.CustomersUVO.CustomerId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="OpportunitiesU1"
+    Cardinality="-1"
+    Owner="model.customer.UVO.OpportunitiesUVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="OpportunitiesU1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.customer.UVO.OpportunitiesUVO.CustomerId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.VL.insertion.common.CustomerToOpportunitiesVLMsgBundle"/>
+  </ResourceBundle>
+</ViewLink>

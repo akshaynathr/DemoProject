@@ -2434,6 +2434,26 @@
                     <af:commandLink text="Advanced" rendered="false" id="cl2"
                                     binding="#{backingBeanScope.InsertBean.cl2}"/>
                   </f:facet>
+                  <af:table value="#{bindings.TasksCustomersU1.collectionModel}" var="row"
+                            rows="#{bindings.TasksCustomersU1.rangeSize}"
+                            emptyText="#{bindings.TasksCustomersU1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                            rowBandingInterval="0" fetchSize="#{bindings.TasksCustomersU1.rangeSize}" id="t11"
+                            binding="#{backingBeanScope.InsertBean.t11}">
+                    <af:column headerText="#{bindings.TasksCustomersU1.hints.TaskId.label}" id="c178">
+                      <af:outputText value="#{row.TaskId}" shortDesc="#{bindings.TasksCustomersU1.hints.TaskId.tooltip}"
+                                     id="ot127">
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.TasksCustomersU1.hints.TaskId.format}"/>
+                      </af:outputText>
+                    </af:column>
+                    <af:column headerText="#{bindings.TasksCustomersU1.hints.CustomerId.label}" id="c179">
+                      <af:outputText value="#{row.CustomerId}"
+                                     shortDesc="#{bindings.TasksCustomersU1.hints.CustomerId.tooltip}" id="ot128">
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.TasksCustomersU1.hints.CustomerId.format}"/>
+                      </af:outputText>
+                    </af:column>
+                  </af:table>
                 </af:quickQuery>
                 <af:button text="Add" id="b32" binding="#{backingBeanScope.InsertBean.b32}"/>
                 <af:button text="Delete Tasks related to Customers" id="b19"

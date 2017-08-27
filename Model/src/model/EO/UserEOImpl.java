@@ -44,7 +44,8 @@ public class UserEOImpl extends EntityImpl {
         IsActive,
         User,
         SupervisorIdUser,
-        UserRole;
+        UserRole,
+        Task;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
 
@@ -88,6 +89,7 @@ public class UserEOImpl extends EntityImpl {
     public static final int USER = AttributesEnum.User.index();
     public static final int SUPERVISORIDUSER = AttributesEnum.SupervisorIdUser.index();
     public static final int USERROLE = AttributesEnum.UserRole.index();
+    public static final int TASK = AttributesEnum.Task.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -396,6 +398,13 @@ public class UserEOImpl extends EntityImpl {
         return (RowIterator) getAttributeInternal(USERROLE);
     }
 
+
+    /**
+     * @return the associated entity oracle.jbo.RowIterator.
+     */
+    public RowIterator getTask() {
+        return (RowIterator) getAttributeInternal(TASK);
+    }
 
     /**
      * @param userId key constituent

@@ -266,6 +266,13 @@
     AssociationOtherEnd="model.ASSOC.UsersFkUserRolesASSOC.User"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Task"
+    Association="model.ASSOC.insertion.TasksToUsersASSOC"
+    AssociationEnd="model.ASSOC.insertion.TasksToUsersASSOC.Task"
+    AssociationOtherEnd="model.ASSOC.insertion.TasksToUsersASSOC.UserEO"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="UsersPk"
     PrimaryKey="true">

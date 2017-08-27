@@ -120,4 +120,16 @@
     ViewLink="model.VL.AppointmentsToInteractionsVL"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="CustomersU1"
+    ViewLink="model.VL.insertion.CustomerToAppointmentsVL"
+    Type="oracle.jbo.server.ViewRowImpl"
+    Reversed="true"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TasksU"
+    ViewLink="model.VL.insertion.TaskToAppointmentsVL"
+    Type="oracle.jbo.RowIterator"
+    Reversed="true"
+    IsUpdateable="false"/>
 </ViewObject>

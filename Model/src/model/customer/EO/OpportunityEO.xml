@@ -536,6 +536,13 @@
     AssociationOtherEnd="model.ASSOC.OpportunityToNotesASSOCSource.Opportunity"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Contact1"
+    Association="model.ASSOC.insertion.ContactsToOpportunitiesASSOC"
+    AssociationEnd="model.ASSOC.insertion.ContactsToOpportunitiesASSOC.Contact1"
+    AssociationOtherEnd="model.ASSOC.insertion.ContactsToOpportunitiesASSOC.Opportunity1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="OpportunitiesOpportunityIdCheck">
     <DesignTime>

@@ -234,6 +234,13 @@
     AssociationOtherEnd="model.ASSOC.opportunitiesToAppointmentsASSOC.Appointments"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Task"
+    Association="model.ASSOC.insertion.TasksToAppointmentsASSOC"
+    AssociationEnd="model.ASSOC.insertion.TasksToAppointmentsASSOC.Task"
+    AssociationOtherEnd="model.ASSOC.insertion.TasksToAppointmentsASSOC.Appointments"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="AppointmentsPk"
     PrimaryKey="true">

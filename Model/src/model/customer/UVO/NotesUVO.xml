@@ -96,4 +96,16 @@
     Type="oracle.jbo.RowIterator"
     Reversed="true"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="CustomersU1"
+    ViewLink="model.VL.insertion.CustomerToNotesVL"
+    Type="oracle.jbo.RowIterator"
+    Reversed="true"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="ContactsU"
+    ViewLink="model.VL.insertion.ContactsToNotesVL"
+    Type="oracle.jbo.RowIterator"
+    Reversed="true"
+    IsUpdateable="false"/>
 </ViewObject>

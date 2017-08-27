@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TasksToUsersASSOC"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="Task"
+    Cardinality="-1"
+    Source="true"
+    Owner="model.customer.EO.TaskEO"
+    LockLevel="NONE"
+    IntersectEntity="model.customer.EO.TasksUsersEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="Task"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.customer.EO.TaskEO.TaskId"/>
+    </AttrArray>
+    <AttrArray Name="IntersectAttributes">
+      <Item Value="model.customer.EO.TasksUsersEO.TaskId"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="UserEO"
+    Cardinality="-1"
+    Owner="model.EO.UserEO"
+    IntersectEntity="model.customer.EO.TasksUsersEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.UserEO.TeamId"/>
+    </AttrArray>
+    <AttrArray Name="IntersectAttributes">
+      <Item Value="model.customer.EO.TasksUsersEO.UserId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>
