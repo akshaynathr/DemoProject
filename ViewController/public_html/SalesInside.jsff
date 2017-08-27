@@ -984,7 +984,8 @@
                         binding="#{backingBeanScope.InsertBean.p2}"/>
             </af:showDetailItem>
             <af:showDetailItem text="Notes" id="sdi14" binding="#{backingBeanScope.InsertBean.sdi14}">
-              <af:panelGroupLayout layout="vertical" id="pgl11" binding="#{backingBeanScope.InsertBean.pgl11}">
+              <af:panelGroupLayout layout="horizontal" id="pgl11" binding="#{backingBeanScope.InsertBean.pgl11}"
+                                   halign="center">
                 <af:quickQuery label="Search" searchDesc="Search" id="qryId4"
                                value="#{bindings.ImplicitViewCriteriaQuery3.quickQueryDescriptor}"
                                model="#{bindings.ImplicitViewCriteriaQuery3.queryModel}"
@@ -994,18 +995,49 @@
                     <af:commandLink text="Advanced" rendered="false" id="cl4"
                                     binding="#{backingBeanScope.InsertBean.cl4}"/>
                   </f:facet>
-                  <af:button text="Add notes" id="b8" binding="#{backingBeanScope.InsertBean.b8}">
-                    <af:showPopupBehavior popupId="::p3"/>
-                  </af:button>
+                  <af:table value="#{bindings.NotesOpportunitiesU1.collectionModel}" var="row"
+                            rows="#{bindings.NotesOpportunitiesU1.rangeSize}"
+                            emptyText="#{bindings.NotesOpportunitiesU1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                            rowBandingInterval="0" fetchSize="#{bindings.NotesOpportunitiesU1.rangeSize}" id="t17"
+                            binding="#{backingBeanScope.InsertBean.t17}">
+                    <af:column headerText="#{bindings.NotesOpportunitiesU1.hints.NotesId.label}" id="c130">
+                      <af:selectOneChoice value="#{row.bindings.NotesId.inputValue}"
+                                          label="#{row.bindings.NotesId.label}"
+                                          required="#{bindings.NotesOpportunitiesU1.hints.NotesId.mandatory}"
+                                          shortDesc="#{bindings.NotesOpportunitiesU1.hints.NotesId.tooltip}" id="soc29">
+                        <f:selectItems value="#{row.bindings.NotesId.items}" id="si29"/>
+                        <f:validator binding="#{row.bindings.NotesId.validator}"/>
+                      </af:selectOneChoice>
+                    </af:column>
+                    <af:column headerText="#{bindings.NotesOpportunitiesU1.hints.OpportunityId.label}" id="c131">
+                      <af:inputText value="#{row.bindings.OpportunityId.inputValue}"
+                                    label="#{bindings.NotesOpportunitiesU1.hints.OpportunityId.label}"
+                                    required="#{bindings.NotesOpportunitiesU1.hints.OpportunityId.mandatory}"
+                                    columns="#{bindings.NotesOpportunitiesU1.hints.OpportunityId.displayWidth}"
+                                    maximumLength="#{bindings.NotesOpportunitiesU1.hints.OpportunityId.precision}"
+                                    shortDesc="#{bindings.NotesOpportunitiesU1.hints.OpportunityId.tooltip}" id="it31">
+                        <f:validator binding="#{row.bindings.OpportunityId.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.NotesOpportunitiesU1.hints.OpportunityId.format}"/>
+                      </af:inputText>
+                    </af:column>
+                  </af:table>
                 </af:quickQuery>
+                <af:button text="Add" id="b8" binding="#{backingBeanScope.InsertBean.b8}">
+                  <af:showPopupBehavior popupId="::p3"/>
+                </af:button>
+                <af:button text="Delete" id="b10"
+                           binding="#{backingBeanScope.InsertBean.b10}"
+                           action="#{backingBeanScope.InsertBean.deleteOpportunitiesNotesLink}"/>
               </af:panelGroupLayout>
               <af:table value="#{bindings.NotesU2.collectionModel}" var="row" rows="#{bindings.NotesU2.rangeSize}"
                         emptyText="#{bindings.NotesU2.viewable ? 'No data to display.' : 'Access Denied.'}"
                         rowBandingInterval="0" selectedRowKeys="#{bindings.NotesU2.collectionModel.selectedRow}"
                         selectionListener="#{bindings.NotesU2.collectionModel.makeCurrent}" rowSelection="single"
                         fetchSize="#{bindings.NotesU2.rangeSize}" filterModel="#{bindings.NotesU2Query.queryDescriptor}"
-                        filterVisible="true" queryListener="#{bindings.NotesU2Query.processQuery}" varStatus="vs"
-                        id="t13" binding="#{backingBeanScope.InsertBean.t13}">
+                        filterVisible="false" queryListener="#{bindings.NotesU2Query.processQuery}" varStatus="vs"
+                        id="t13" binding="#{backingBeanScope.InsertBean.t13}" columnStretching="column:c196"
+                        partialTriggers="::b8 ::b10">
                 <af:column sortProperty="#{bindings.NotesU2.hints.DateRecorded.name}" filterable="true" sortable="true"
                            headerText="#{bindings.NotesU2.hints.DateRecorded.label}" id="c195">
                   <f:facet name="filter">
@@ -1096,34 +1128,6 @@
                   </af:panelFormLayout>
                 </af:dialog>
               </af:popup>
-              <af:table value="#{bindings.NotesOpportunitiesU1.collectionModel}" var="row"
-                        rows="#{bindings.NotesOpportunitiesU1.rangeSize}"
-                        emptyText="#{bindings.NotesOpportunitiesU1.viewable ? 'No data to display.' : 'Access Denied.'}"
-                        rowBandingInterval="0" fetchSize="#{bindings.NotesOpportunitiesU1.rangeSize}" id="t17"
-                        binding="#{backingBeanScope.InsertBean.t17}" rendered="false">
-                <af:column headerText="#{bindings.NotesOpportunitiesU1.hints.NotesId.label}" id="c130">
-                  <af:selectOneChoice value="#{row.bindings.NotesId.inputValue}" label="#{row.bindings.NotesId.label}"
-                                      required="#{bindings.NotesOpportunitiesU1.hints.NotesId.mandatory}"
-                                      shortDesc="#{bindings.NotesOpportunitiesU1.hints.NotesId.tooltip}" id="soc29">
-                    <f:selectItems value="#{row.bindings.NotesId.items}" id="si29"/>
-                    <f:validator binding="#{row.bindings.NotesId.validator}"/>
-                  </af:selectOneChoice>
-                </af:column>
-                <af:column headerText="#{bindings.NotesOpportunitiesU1.hints.OpportunityId.label}" id="c131">
-                  <af:inputText value="#{row.bindings.OpportunityId.inputValue}"
-                                label="#{bindings.NotesOpportunitiesU1.hints.OpportunityId.label}"
-                                required="#{bindings.NotesOpportunitiesU1.hints.OpportunityId.mandatory}"
-                                columns="#{bindings.NotesOpportunitiesU1.hints.OpportunityId.displayWidth}"
-                                maximumLength="#{bindings.NotesOpportunitiesU1.hints.OpportunityId.precision}"
-                                shortDesc="#{bindings.NotesOpportunitiesU1.hints.OpportunityId.tooltip}" id="it31">
-                    <f:validator binding="#{row.bindings.OpportunityId.validator}"/>
-                    <af:convertNumber groupingUsed="false"
-                                      pattern="#{bindings.NotesOpportunitiesU1.hints.OpportunityId.format}"/>
-                  </af:inputText>
-                </af:column>
-              </af:table>
-              <af:button text="Delete Notes related to Opportunity" id="b10" binding="#{backingBeanScope.InsertBean.b10}"
-                         action="#{backingBeanScope.InsertBean.deleteOpportunitiesNotesLink}"/>
             </af:showDetailItem>
           </af:panelTabbed>
         </af:showDetailItem>

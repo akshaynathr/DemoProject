@@ -1191,7 +1191,7 @@ public class insertBean {
            DCIteratorBinding dcItteratorBindings3 = bindings.findIteratorBinding(linkTable);
            
            ViewObject vo = dcItteratorBindings3.getViewObject();
-           
+           System.out.println("Rows: " + vo.getRowSet().getFetchedRowCount());
                    while (vo.getRowSet().getFetchedRowCount()>0) {  
                        
                        Row row = vo.getCurrentRow();
