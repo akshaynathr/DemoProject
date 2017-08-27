@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+    <af:panelBorderLayout id="pbl1" binding="#{backingBeanScope.backing_opptask.pbl1}">
+        <f:facet name="top">
+            <af:panelGridLayout id="pgl1" binding="#{backingBeanScope.backing_opptask.pgl1}">
+                <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1"
+                            binding="#{backingBeanScope.backing_opptask.gr1}">
+                    <af:gridCell marginStart="5px" width="90%" id="gc1"
+                                 binding="#{backingBeanScope.backing_opptask.gc1}"/>
+                    <af:gridCell marginStart="5px" width="10%" marginEnd="5px" id="gc2"
+                                 binding="#{backingBeanScope.backing_opptask.gc2}">
+                        <af:button text="Save"
+                                   disabled="#{!bindings.Commit.enabled}" id="b1"
+                                   binding="#{backingBeanScope.backing_opptask.b1}"
+                                   action="#{backingBeanScope.backing_opptask.b1_action}"/>
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </f:facet>
+        <f:facet name="bottom"/>
+        <f:facet name="start"/>
+        <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.backing_opptask.pfl1}">
+            <af:selectOneChoice value="#{bindings.TaskId.inputValue}" label="#{bindings.TaskId.label}"
+                                required="#{bindings.TaskId.hints.mandatory}"
+                                shortDesc="#{bindings.TaskId.hints.tooltip}" id="soc1"
+                                binding="#{backingBeanScope.backing_opptask.soc1}">
+                <f:selectItems value="#{bindings.TaskId.items}" id="si1"
+                               binding="#{backingBeanScope.backing_opptask.si1}"/>
+                <f:validator binding="#{bindings.TaskId.validator}"/>
+            </af:selectOneChoice>
+            <af:selectOneChoice value="#{bindings.OpportunityId.inputValue}" label="#{bindings.OpportunityId.label}"
+                                required="#{bindings.OpportunityId.hints.mandatory}"
+                                shortDesc="#{bindings.OpportunityId.hints.tooltip}" readOnly="true" id="soc2"
+                                binding="#{backingBeanScope.backing_opptask.soc2}">
+                <f:selectItems value="#{bindings.OpportunityId.items}" id="si2"
+                               binding="#{backingBeanScope.backing_opptask.si2}"/>
+                <f:validator binding="#{bindings.OpportunityId.validator}"/>
+            </af:selectOneChoice>
+        </af:panelFormLayout>
+        <f:facet name="end"/>
+    </af:panelBorderLayout>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_opptask-->
+</ui:composition>

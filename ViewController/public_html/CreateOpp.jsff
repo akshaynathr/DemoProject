@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+    <af:panelBorderLayout id="pbl1" binding="#{backingBeanScope.backing_CreateOpp.pbl1}">
+        <f:facet name="top">
+            <af:panelGridLayout id="pgl1" binding="#{backingBeanScope.backing_CreateOpp.pgl1}">
+                <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1"
+                            binding="#{backingBeanScope.backing_CreateOpp.gr1}">
+                    <af:gridCell marginStart="5px" width="90%" id="gc1"
+                                 binding="#{backingBeanScope.backing_CreateOpp.gc1}"/>
+                    <af:gridCell marginStart="5px" width="10%" marginEnd="5px" id="gc2"
+                                 binding="#{backingBeanScope.backing_CreateOpp.gc2}">
+                        <af:button text="Save" id="b1"
+                                   binding="#{backingBeanScope.backing_CreateOpp.b1}"
+                                   action="#{backingBeanScope.backing_CreateOpp.b1_action}"/>
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </f:facet>
+        <f:facet name="bottom"/>
+        <f:facet name="start"/>
+        <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.backing_CreateOpp.pfl1}">
+            <af:inputText value="#{bindings.OppurtunityName.inputValue}" label="#{bindings.OppurtunityName.hints.label}"
+                          required="#{bindings.OppurtunityName.hints.mandatory}"
+                          columns="#{bindings.OppurtunityName.hints.displayWidth}"
+                          maximumLength="#{bindings.OppurtunityName.hints.precision}"
+                          shortDesc="#{bindings.OppurtunityName.hints.tooltip}" id="it1"
+                          binding="#{backingBeanScope.backing_CreateOpp.it1}">
+                <f:validator binding="#{bindings.OppurtunityName.validator}"/>
+            </af:inputText>
+            <af:selectOneChoice value="#{bindings.CustomerId.inputValue}" label="#{bindings.CustomerId.label}"
+                                required="#{bindings.CustomerId.hints.mandatory}"
+                                shortDesc="#{bindings.CustomerId.hints.tooltip}" id="soc1"
+                                binding="#{backingBeanScope.backing_CreateOpp.soc1}">
+                <f:selectItems value="#{bindings.CustomerId.items}" id="si1"
+                               binding="#{backingBeanScope.backing_CreateOpp.si1}"/>
+                <f:validator binding="#{bindings.CustomerId.validator}"/>
+            </af:selectOneChoice>
+            <af:inputText value="#{bindings.WinProbablity.inputValue}" label="#{bindings.WinProbablity.hints.label}"
+                          required="#{bindings.WinProbablity.hints.mandatory}"
+                          columns="#{bindings.WinProbablity.hints.displayWidth}"
+                          maximumLength="#{bindings.WinProbablity.hints.precision}"
+                          shortDesc="#{bindings.WinProbablity.hints.tooltip}" id="it2"
+                          binding="#{backingBeanScope.backing_CreateOpp.it2}">
+                <f:validator binding="#{bindings.WinProbablity.validator}"/>
+                <af:convertNumber groupingUsed="false" pattern="#{bindings.WinProbablity.format}"/>
+            </af:inputText>
+            <af:inputDate value="#{bindings.StartDate.inputValue}" label="#{bindings.StartDate.hints.label}"
+                          required="#{bindings.StartDate.hints.mandatory}"
+                          columns="#{bindings.StartDate.hints.displayWidth}"
+                          shortDesc="#{bindings.StartDate.hints.tooltip}" id="id1"
+                          binding="#{backingBeanScope.backing_CreateOpp.id1}">
+                <f:validator binding="#{bindings.StartDate.validator}"/>
+                <af:convertDateTime pattern="#{bindings.StartDate.format}"/>
+            </af:inputDate>
+            <af:inputDate value="#{bindings.EndDate.inputValue}" label="#{bindings.EndDate.hints.label}"
+                          required="#{bindings.EndDate.hints.mandatory}"
+                          columns="#{bindings.EndDate.hints.displayWidth}" shortDesc="#{bindings.EndDate.hints.tooltip}"
+                          id="id2" binding="#{backingBeanScope.backing_CreateOpp.id2}">
+                <f:validator binding="#{bindings.EndDate.validator}"/>
+                <af:convertDateTime pattern="#{bindings.EndDate.format}"/>
+            </af:inputDate>
+            <af:selectOneChoice value="#{bindings.SalesStageId.inputValue}" label="#{bindings.SalesStageId.label}"
+                                required="#{bindings.SalesStageId.hints.mandatory}"
+                                shortDesc="#{bindings.SalesStageId.hints.tooltip}" id="soc2"
+                                binding="#{backingBeanScope.backing_CreateOpp.soc2}">
+                <f:selectItems value="#{bindings.SalesStageId.items}" id="si2"
+                               binding="#{backingBeanScope.backing_CreateOpp.si2}"/>
+                <f:validator binding="#{bindings.SalesStageId.validator}"/>
+            </af:selectOneChoice>
+            <af:selectOneChoice value="#{bindings.SalesMethodId.inputValue}" label="#{bindings.SalesMethodId.label}"
+                                required="#{bindings.SalesMethodId.hints.mandatory}"
+                                shortDesc="#{bindings.SalesMethodId.hints.tooltip}" id="soc3"
+                                binding="#{backingBeanScope.backing_CreateOpp.soc3}">
+                <f:selectItems value="#{bindings.SalesMethodId.items}" id="si3"
+                               binding="#{backingBeanScope.backing_CreateOpp.si3}"/>
+                <f:validator binding="#{bindings.SalesMethodId.validator}"/>
+            </af:selectOneChoice>
+            <af:selectOneChoice value="#{bindings.SalesChannelId.inputValue}" label="#{bindings.SalesChannelId.label}"
+                                required="#{bindings.SalesChannelId.hints.mandatory}"
+                                shortDesc="#{bindings.SalesChannelId.hints.tooltip}" id="soc4"
+                                binding="#{backingBeanScope.backing_CreateOpp.soc4}">
+                <f:selectItems value="#{bindings.SalesChannelId.items}" id="si4"
+                               binding="#{backingBeanScope.backing_CreateOpp.si4}"/>
+                <f:validator binding="#{bindings.SalesChannelId.validator}"/>
+            </af:selectOneChoice>
+            <af:inputText value="#{bindings.Revenue.inputValue}" label="#{bindings.Revenue.hints.label}"
+                          required="#{bindings.Revenue.hints.mandatory}"
+                          columns="#{bindings.Revenue.hints.displayWidth}"
+                          maximumLength="#{bindings.Revenue.hints.precision}"
+                          shortDesc="#{bindings.Revenue.hints.tooltip}" id="it3"
+                          binding="#{backingBeanScope.backing_CreateOpp.it3}">
+                <f:validator binding="#{bindings.Revenue.validator}"/>
+                <af:convertNumber groupingUsed="false" pattern="#{bindings.Revenue.format}"/>
+            </af:inputText>
+            <af:inputText value="#{bindings.BestCaseRevenue.inputValue}" label="#{bindings.BestCaseRevenue.hints.label}"
+                          required="#{bindings.BestCaseRevenue.hints.mandatory}"
+                          columns="#{bindings.BestCaseRevenue.hints.displayWidth}"
+                          maximumLength="#{bindings.BestCaseRevenue.hints.precision}"
+                          shortDesc="#{bindings.BestCaseRevenue.hints.tooltip}" id="it4"
+                          binding="#{backingBeanScope.backing_CreateOpp.it4}">
+                <f:validator binding="#{bindings.BestCaseRevenue.validator}"/>
+                <af:convertNumber groupingUsed="false" pattern="#{bindings.BestCaseRevenue.format}"/>
+            </af:inputText>
+            <af:inputText value="#{bindings.WorstCaseRevenue.inputValue}"
+                          label="#{bindings.WorstCaseRevenue.hints.label}"
+                          required="#{bindings.WorstCaseRevenue.hints.mandatory}"
+                          columns="#{bindings.WorstCaseRevenue.hints.displayWidth}"
+                          maximumLength="#{bindings.WorstCaseRevenue.hints.precision}"
+                          shortDesc="#{bindings.WorstCaseRevenue.hints.tooltip}" id="it5"
+                          binding="#{backingBeanScope.backing_CreateOpp.it5}">
+                <f:validator binding="#{bindings.WorstCaseRevenue.validator}"/>
+                <af:convertNumber groupingUsed="false" pattern="#{bindings.WorstCaseRevenue.format}"/>
+            </af:inputText>
+            <af:inputText value="#{bindings.IsBudgeted.inputValue}" label="#{bindings.IsBudgeted.hints.label}"
+                          required="#{bindings.IsBudgeted.hints.mandatory}"
+                          columns="#{bindings.IsBudgeted.hints.displayWidth}"
+                          maximumLength="#{bindings.IsBudgeted.hints.precision}"
+                          shortDesc="#{bindings.IsBudgeted.hints.tooltip}" id="it6"
+                          binding="#{backingBeanScope.backing_CreateOpp.it6}">
+                <f:validator binding="#{bindings.IsBudgeted.validator}"/>
+            </af:inputText>
+            <af:inputText value="#{bindings.BudgetAmount.inputValue}" label="#{bindings.BudgetAmount.hints.label}"
+                          required="#{bindings.BudgetAmount.hints.mandatory}"
+                          columns="#{bindings.BudgetAmount.hints.displayWidth}"
+                          maximumLength="#{bindings.BudgetAmount.hints.precision}"
+                          shortDesc="#{bindings.BudgetAmount.hints.tooltip}" id="it7"
+                          binding="#{backingBeanScope.backing_CreateOpp.it7}">
+                <f:validator binding="#{bindings.BudgetAmount.validator}"/>
+                <af:convertNumber groupingUsed="false" pattern="#{bindings.BudgetAmount.format}"/>
+            </af:inputText>
+            <af:inputText value="#{bindings.EstimatedDurationInDays.inputValue}"
+                          label="#{bindings.EstimatedDurationInDays.hints.label}"
+                          required="#{bindings.EstimatedDurationInDays.hints.mandatory}"
+                          columns="#{bindings.EstimatedDurationInDays.hints.displayWidth}"
+                          maximumLength="#{bindings.EstimatedDurationInDays.hints.precision}"
+                          shortDesc="#{bindings.EstimatedDurationInDays.hints.tooltip}" id="it8"
+                          binding="#{backingBeanScope.backing_CreateOpp.it8}">
+                <f:validator binding="#{bindings.EstimatedDurationInDays.validator}"/>
+                <af:convertNumber groupingUsed="false" pattern="#{bindings.EstimatedDurationInDays.format}"/>
+            </af:inputText>
+            <af:inputText value="#{bindings.RiskLevel.inputValue}" label="#{bindings.RiskLevel.hints.label}"
+                          required="#{bindings.RiskLevel.hints.mandatory}"
+                          columns="#{bindings.RiskLevel.hints.displayWidth}"
+                          maximumLength="#{bindings.RiskLevel.hints.precision}"
+                          shortDesc="#{bindings.RiskLevel.hints.tooltip}" id="it9"
+                          binding="#{backingBeanScope.backing_CreateOpp.it9}">
+                <f:validator binding="#{bindings.RiskLevel.validator}"/>
+            </af:inputText>
+            <af:inputText value="#{bindings.IsIncluded.inputValue}" label="#{bindings.IsIncluded.hints.label}"
+                          required="#{bindings.IsIncluded.hints.mandatory}"
+                          columns="#{bindings.IsIncluded.hints.displayWidth}"
+                          maximumLength="#{bindings.IsIncluded.hints.precision}"
+                          shortDesc="#{bindings.IsIncluded.hints.tooltip}" id="it10"
+                          binding="#{backingBeanScope.backing_CreateOpp.it10}">
+                <f:validator binding="#{bindings.IsIncluded.validator}"/>
+            </af:inputText>
+            <af:selectOneChoice value="#{bindings.DecisionLevelId.inputValue}" label="#{bindings.DecisionLevelId.label}"
+                                required="#{bindings.DecisionLevelId.hints.mandatory}"
+                                shortDesc="#{bindings.DecisionLevelId.hints.tooltip}" id="soc5"
+                                binding="#{backingBeanScope.backing_CreateOpp.soc5}">
+                <f:selectItems value="#{bindings.DecisionLevelId.items}" id="si5"
+                               binding="#{backingBeanScope.backing_CreateOpp.si5}"/>
+                <f:validator binding="#{bindings.DecisionLevelId.validator}"/>
+            </af:selectOneChoice>
+        </af:panelFormLayout>
+        <f:facet name="end"/>
+    </af:panelBorderLayout>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_CreateOpp-->
+</ui:composition>

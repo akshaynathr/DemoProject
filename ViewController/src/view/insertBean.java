@@ -9,6 +9,7 @@ import oracle.adf.view.rich.component.rich.RichDialog;
 import oracle.adf.view.rich.component.rich.RichPopup;
 import oracle.adf.view.rich.component.rich.RichQuickQuery;
 import oracle.adf.view.rich.component.rich.data.RichTable;
+import oracle.adf.view.rich.component.rich.fragment.RichRegion;
 import oracle.adf.view.rich.component.rich.input.RichInputDate;
 import oracle.adf.view.rich.component.rich.input.RichInputText;
 import oracle.adf.view.rich.component.rich.input.RichSelectOneChoice;
@@ -382,6 +383,11 @@ public class insertBean {
     private RichButton b49;
     private RichTable t31;
     private RichPanelGroupLayout pgl35;
+    private RichPopup p2;
+    private RichPanelBorderLayout pbl4;
+    private RichRegion r1;
+    private RichButton b50;
+    private RichPopup p3;
 
     public insertBean() {
     }
@@ -3842,5 +3848,45 @@ public class insertBean {
 
     public RichPanelGroupLayout getPgl35() {
         return pgl35;
+    }
+
+    public void setP2(RichPopup p2) {
+        this.p2 = p2;
+    }
+
+    public RichPopup getP2() {
+        return p2;
+    }
+
+    public void setPbl4(RichPanelBorderLayout pbl4) {
+        this.pbl4 = pbl4;
+    }
+
+    public RichPanelBorderLayout getPbl4() {
+        return pbl4;
+    }
+
+    public void setR1(RichRegion r1) {
+        this.r1 = r1;
+    }
+
+    public RichRegion getR1() {
+        return r1;
+    }
+
+    public void setB50(RichButton b50) {
+        this.b50 = b50;
+    }
+
+    public RichButton getB50() {
+        return b50;
+    }
+
+    public void setP3(RichPopup p3) {
+        this.p3 = p3;
+    }
+
+    public RichPopup getP3() {
+        return p3;
     }
 }

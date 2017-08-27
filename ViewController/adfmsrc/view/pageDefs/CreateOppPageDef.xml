@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="CreateOppPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="OpportunitiesU2" RangeSize="25" DataControl="AppModuleAMDataControl1"
+              id="OpportunitiesU2Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="OpportunitiesU2Iterator" id="OppurtunityName">
+      <AttrNames>
+        <Item Value="OppurtunityName"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="OpportunitiesU2Iterator" StaticList="false" Uses="LOV_CustomerId" id="CustomerId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="OpportunitiesU2Iterator" id="WinProbablity">
+      <AttrNames>
+        <Item Value="WinProbablity"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU2Iterator" id="StartDate">
+      <AttrNames>
+        <Item Value="StartDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU2Iterator" id="EndDate">
+      <AttrNames>
+        <Item Value="EndDate"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="OpportunitiesU2Iterator" StaticList="false" Uses="LOV_SalesStageId" id="SalesStageId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <list IterBinding="OpportunitiesU2Iterator" StaticList="false" Uses="LOV_SalesMethodId" id="SalesMethodId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <list IterBinding="OpportunitiesU2Iterator" StaticList="false" Uses="LOV_SalesChannelId" id="SalesChannelId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="OpportunitiesU2Iterator" id="Revenue">
+      <AttrNames>
+        <Item Value="Revenue"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU2Iterator" id="BestCaseRevenue">
+      <AttrNames>
+        <Item Value="BestCaseRevenue"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU2Iterator" id="WorstCaseRevenue">
+      <AttrNames>
+        <Item Value="WorstCaseRevenue"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU2Iterator" id="IsBudgeted">
+      <AttrNames>
+        <Item Value="IsBudgeted"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU2Iterator" id="BudgetAmount">
+      <AttrNames>
+        <Item Value="BudgetAmount"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU2Iterator" id="EstimatedDurationInDays">
+      <AttrNames>
+        <Item Value="EstimatedDurationInDays"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU2Iterator" id="RiskLevel">
+      <AttrNames>
+        <Item Value="RiskLevel"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesU2Iterator" id="IsIncluded">
+      <AttrNames>
+        <Item Value="IsIncluded"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="OpportunitiesU2Iterator" StaticList="false" Uses="LOV_DecisionLevelId" id="DecisionLevelId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleAMDataControl1"/>
+  </bindings>
+</pageDefinition>

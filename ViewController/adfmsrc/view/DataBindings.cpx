@@ -51,6 +51,10 @@
           usageId="view_DeleteProductCategory_flow_DeleteProductCategory_flow_ExecutePageDef"/>
     <page path="/EditRole.jsf" usageId="view_EditRolePageDef"/>
     <page path="/report_sales_rep.jsff" usageId="view_report_sales_repPageDef"/>
+    <page path="/WEB-INF/CreateOpp.xml#CreateOpp@CreateInsert" usageId="view_CreateOpp_CreateOpp_CreateInsertPageDef"/>
+    <page path="/CreateOpp.jsff" usageId="view_CreateOppPageDef"/>
+    <page path="/WEB-INF/OppTask.xml#OppTask@CreateInsert" usageId="view_OppTask_OppTask_CreateInsertPageDef"/>
+    <page path="/opptask.jsff" usageId="view_opptaskPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_HomePageDef" path="view.pageDefs.HomePageDef"/>
@@ -96,6 +100,11 @@
           path="view.pageDefs.DeleteProductCategory_flow_DeleteProductCategory_flow_ExecutePageDef"/>
     <page id="view_EditRolePageDef" path="view.pageDefs.EditRolePageDef"/>
     <page id="view_report_sales_repPageDef" path="view.pageDefs.report_sales_repPageDef"/>
+    <page id="view_CreateOpp_CreateOpp_CreateInsertPageDef"
+          path="view.pageDefs.CreateOpp_CreateOpp_CreateInsertPageDef"/>
+    <page id="view_CreateOppPageDef" path="view.pageDefs.CreateOppPageDef"/>
+    <page id="view_OppTask_OppTask_CreateInsertPageDef" path="view.pageDefs.OppTask_OppTask_CreateInsertPageDef"/>
+    <page id="view_opptaskPageDef" path="view.pageDefs.opptaskPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleAMDataControl" Package="model.AM"

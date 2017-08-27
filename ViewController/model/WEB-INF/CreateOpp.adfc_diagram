@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <MethodCall
+      id="MethodCall2">
+      <property
+         name="activityId">CreateInsert</property>
+      <property
+         name="x">163.01465</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>CreateInsert&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="y">306.74707</property>
+      <property
+         name="exceptionHandler">false</property>
+   </MethodCall>
+   <View
+      id="View3">
+      <property
+         name="activityId">createOpp</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">493.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>createOpp&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">201.29883</property>
+      <property
+         name="page">/CreateOpp.jsff</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="MethodCall2"
+      to="View3">
+      <property
+         name="fromOutcome">CreateInsert</property>
+      <property
+         name="sdm:polyPoints">R50,204.01465,306.39648,452.0,200.94824,L50</property>
+   </ControlFlowCase>
+   <TaskFlowReturn
+      id="TaskFlowReturn5">
+      <property
+         name="activityId">return</property>
+      <property
+         name="x">718.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>return&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  return&lt;/p></property>
+      <property
+         name="y">319.89648</property>
+      <property
+         name="finish">true</property>
+      <property
+         name="exceptionHandler">false</property>
+   </TaskFlowReturn>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase6"
+      from="View3"
+      to="TaskFlowReturn5">
+      <property
+         name="fromOutcome">return</property>
+      <property
+         name="sdm:polyPoints">R50,534.0,200.94824,677.0,319.5459,L50</property>
+   </ControlFlowCase>
+</SDM>

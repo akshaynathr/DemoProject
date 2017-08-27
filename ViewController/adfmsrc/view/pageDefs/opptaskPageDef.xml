@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="opptaskPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="Task1" RangeSize="25" DataControl="AppModuleAMDataControl1" id="Task1Iterator"/>
+  </executables>
+  <bindings>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleAMDataControl1"/>
+    <list IterBinding="Task1Iterator" StaticList="false" Uses="LOV_TaskId" id="TaskId" DTSupportsMRU="false"
+          SelectItemValueMode="ListObject"/>
+    <list IterBinding="Task1Iterator" StaticList="false" Uses="LOV_OpportunityId" id="OpportunityId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+  </bindings>
+</pageDefinition>

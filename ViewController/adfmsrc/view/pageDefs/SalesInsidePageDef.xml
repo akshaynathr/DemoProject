@@ -115,6 +115,8 @@
               id="AppointmentsOpportunitiesU2Iterator"/>
     <iterator Binds="ContactsOpportunitiesU1" RangeSize="25" DataControl="AppModuleAMDataControl1"
               id="ContactsOpportunitiesU1Iterator"/>
+    <taskFlow id="dynamicRegion1" taskFlowId="${viewScope.TestPopup.dynamicTaskFlowId}" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings>
     <tree IterBinding="MyTeamR1Iterator" id="MyTeamR1">

@@ -15,6 +15,16 @@
       <managed-bean-class>view.InsertBeanOPRevenu</managed-bean-class>
       <managed-bean-scope>request</managed-bean-scope>
     </managed-bean>
+    <managed-bean id="__30">
+      <managed-bean-name>PopupManagedBean</managed-bean-name>
+      <managed-bean-class>view.PopupBeanClass</managed-bean-class>
+      <managed-bean-scope>view</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__31">
+      <managed-bean-name>TestPopup</managed-bean-name>
+      <managed-bean-class>view.TestClass</managed-bean-class>
+      <managed-bean-scope>view</managed-bean-scope>
+    </managed-bean>
     <view id="dashboard">
       <page>/dashboard.jsff</page>
     </view>
