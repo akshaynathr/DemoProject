@@ -84,8 +84,124 @@
               </af:column>
             </af:table>
           </af:panelBorderLayout>
-          <af:panelGroupLayout layout="vertical" id="pgl5" binding="#{backingBeanScope.InsertBean.pgl5}"/>
-        </af:showDetailItem>
+          <af:panelGroupLayout layout="vertical" id="pgl5" binding="#{backingBeanScope.InsertBean.pgl5}">
+            <af:popup childCreation="deferred" autoCancel="disabled" id="p9"
+                      binding="#{backingBeanScope.InsertBean.p9}">
+              <af:dialog id="d10" binding="#{backingBeanScope.InsertBean.d10}" title="Add Contacts">
+                <f:facet name="buttonBar"/>
+              </af:dialog>
+            </af:popup>
+            <af:popup childCreation="deferred" autoCancel="disabled" id="p12"
+                      binding="#{backingBeanScope.InsertBean.p12}">
+              <af:dialog id="d12" binding="#{backingBeanScope.InsertBean.d12}">
+                <f:facet name="buttonBar"/>
+              </af:dialog>
+            </af:popup>
+            <af:popup childCreation="deferred" autoCancel="disabled" id="p13"
+                      binding="#{backingBeanScope.InsertBean.p13}">
+              <af:dialog id="d13" binding="#{backingBeanScope.InsertBean.d13}">
+                <f:facet name="buttonBar"/>
+              </af:dialog>
+            </af:popup>
+            <af:popup childCreation="deferred" autoCancel="disabled" id="p14"
+                      binding="#{backingBeanScope.InsertBean.p14}">
+              <af:dialog id="d14" binding="#{backingBeanScope.InsertBean.d14}">
+                <f:facet name="buttonBar"/>
+              </af:dialog>
+            </af:popup>
+            <af:popup childCreation="deferred" autoCancel="disabled" id="p15"
+                      binding="#{backingBeanScope.InsertBean.p15}">
+              <af:dialog id="d15" binding="#{backingBeanScope.InsertBean.d15}">
+                <f:facet name="buttonBar"/>
+              </af:dialog>
+            </af:popup>
+            <af:popup childCreation="deferred" autoCancel="disabled" id="p16"
+                      binding="#{backingBeanScope.InsertBean.p16}">
+              <af:dialog id="d17" binding="#{backingBeanScope.InsertBean.d17}">
+                <f:facet name="buttonBar"/>
+              </af:dialog>
+            </af:popup>
+            <af:popup childCreation="deferred" autoCancel="disabled" id="p17"
+                      binding="#{backingBeanScope.InsertBean.p17}">
+              <af:dialog id="d16" binding="#{backingBeanScope.InsertBean.d16}">
+                <f:facet name="buttonBar"/>
+              </af:dialog>
+            </af:popup>
+            <af:popup childCreation="deferred" autoCancel="disabled" id="p18"
+                      binding="#{backingBeanScope.InsertBean.p18}">
+              <af:dialog id="d18" binding="#{backingBeanScope.InsertBean.d18}">
+                <f:facet name="buttonBar"/>
+              </af:dialog>
+            </af:popup>
+            <af:popup childCreation="deferred" autoCancel="disabled" id="p19"
+                      binding="#{backingBeanScope.InsertBean.p19}">
+              <af:dialog id="d19" binding="#{backingBeanScope.InsertBean.d19}">
+                <f:facet name="buttonBar"/>
+              </af:dialog>
+            </af:popup>
+            <af:popup childCreation="deferred" autoCancel="disabled" id="p20"
+                      binding="#{backingBeanScope.InsertBean.p20}">
+              <af:dialog id="d20" binding="#{backingBeanScope.InsertBean.d20}">
+                <f:facet name="buttonBar"/>
+              </af:dialog>
+            </af:popup>
+            <af:popup childCreation="deferred" autoCancel="disabled" id="p21"
+                      binding="#{backingBeanScope.InsertBean.p21}">
+              <af:dialog id="d21" binding="#{backingBeanScope.InsertBean.d21}">
+                <f:facet name="buttonBar"/>
+              </af:dialog>
+            </af:popup>
+            <af:popup childCreation="deferred" autoCancel="disabled" id="p22"
+                      binding="#{backingBeanScope.InsertBean.p22}">
+              <af:dialog id="d22" binding="#{backingBeanScope.InsertBean.d22}">
+                <f:facet name="buttonBar"/>
+              </af:dialog>
+            </af:popup>
+            <af:popup childCreation="deferred" autoCancel="disabled" id="p23"
+                      binding="#{backingBeanScope.InsertBean.p23}">
+              <af:dialog id="d23" binding="#{backingBeanScope.InsertBean.d23}">
+                <f:facet name="buttonBar"/>
+              </af:dialog>
+            </af:popup>
+            <af:popup childCreation="deferred" autoCancel="disabled" id="p24"
+                      binding="#{backingBeanScope.InsertBean.p24}">
+              <af:dialog id="d24" binding="#{backingBeanScope.InsertBean.d24}">
+                <f:facet name="buttonBar"/>
+              </af:dialog>
+            </af:popup>
+            <af:popup childCreation="deferred" autoCancel="disabled" id="p25"
+                      binding="#{backingBeanScope.InsertBean.p25}">
+              <af:dialog id="d25" binding="#{backingBeanScope.InsertBean.d25}">
+                <f:facet name="buttonBar"/>
+              </af:dialog>
+            </af:popup>
+            <af:popup childCreation="deferred" autoCancel="disabled" id="p26"
+                      binding="#{backingBeanScope.InsertBean.p26}">
+              <af:dialog id="d26" binding="#{backingBeanScope.InsertBean.d26}">
+                <f:facet name="buttonBar"/>
+              </af:dialog>
+            </af:popup>
+            <af:popup childCreation="deferred" autoCancel="disabled" id="p27"
+                      binding="#{backingBeanScope.InsertBean.p27}">
+              <af:dialog id="d27" binding="#{backingBeanScope.InsertBean.d27}">
+                <f:facet name="buttonBar"/>
+              </af:dialog>
+            </af:popup>
+            <af:popup childCreation="deferred" autoCancel="disabled" id="p28"
+                      binding="#{backingBeanScope.InsertBean.p28}">
+              <af:dialog id="d28" binding="#{backingBeanScope.InsertBean.d28}">
+                <f:facet name="buttonBar"/>
+              </af:dialog>
+            </af:popup>
+          </af:panelGroupLayout>
+           
+           
+           
+           
+           
+           
+           
+           </af:showDetailItem>
         <af:showDetailItem text="Opportunities" id="sdi2"
                            inlineStyle="column-rule-color:transparent;" icon="/icons/images.png"
                            disclosed="#{(pageFlowScope.sales_manager_tabVal==2)?true:false}"
@@ -446,6 +562,12 @@
                   <f:facet name="top">
                     <af:panelGroupLayout id="pgl29" binding="#{backingBeanScope.InsertBean.pgl29}" halign="center"
                                          layout="horizontal">
+                      <af:popup childCreation="deferred" autoCancel="disabled" id="p6"
+                                binding="#{backingBeanScope.InsertBean.p6}">
+                        <af:dialog id="d6" binding="#{backingBeanScope.InsertBean.d6}" title="Add Customer">
+                          <f:facet name="buttonBar"/>
+                        </af:dialog>
+                      </af:popup>
                       <af:quickQuery label="Search" searchDesc="Search" id="qryId8"
                                      value="#{bindings.ImplicitViewCriteriaQuery7.quickQueryDescriptor}"
                                      model="#{bindings.ImplicitViewCriteriaQuery7.queryModel}"
@@ -456,7 +578,9 @@
                                           binding="#{backingBeanScope.InsertBean.cl8}"/>
                         </f:facet>
                       </af:quickQuery>
-                      <af:button text="Add " id="b16" binding="#{backingBeanScope.InsertBean.b16}"/>
+                      <af:button text="Add " id="b16" binding="#{backingBeanScope.InsertBean.b16}">
+                        <af:showPopupBehavior popupId="p6"/>
+                      </af:button>
                     </af:panelGroupLayout>
                   </f:facet>
                   <f:facet name="bottom"/>
@@ -555,9 +679,17 @@
             <af:showDetailItem id="tab1" text="Tasks" disclosed="false" binding="#{backingBeanScope.InsertBean.tab1}">
               <af:panelGroupLayout id="pgl15" binding="#{backingBeanScope.InsertBean.pgl15}" layout="horizontal"
                                    halign="center">
+                <af:button text="Add" id="b26" binding="#{backingBeanScope.InsertBean.b26}">
+                  <af:showPopupBehavior popupId="p7"/>
+                </af:button>
                 <af:button actionListener="#{bindings.Delete1.execute}" text="Delete Task related to Opportunity"
                            id="b15" binding="#{backingBeanScope.InsertBean.b15}"/>
-                <af:button text="Add" id="b26" binding="#{backingBeanScope.InsertBean.b26}"/>
+                <af:popup childCreation="deferred" autoCancel="disabled" id="p7"
+                          binding="#{backingBeanScope.InsertBean.p7}">
+                  <af:dialog id="d8" binding="#{backingBeanScope.InsertBean.d8}" title="Add Task">
+                    <f:facet name="buttonBar"/>
+                  </af:dialog>
+                </af:popup>
               </af:panelGroupLayout>
               <af:panelGridLayout id="pgl16" binding="#{backingBeanScope.InsertBean.pgl16}">
                 <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr4"
@@ -651,11 +783,19 @@
                                       binding="#{backingBeanScope.InsertBean.cl9}"/>
                     </f:facet>
                   </af:quickQuery>
+                  <af:button text="Add" id="b27" binding="#{backingBeanScope.InsertBean.b27}">
+                    <af:showPopupBehavior popupId="p8"/>
+                  </af:button>
                   <af:button actionListener="#{bindings.Commit.execute}" text="Commit" id="b14"
                              binding="#{backingBeanScope.InsertBean.b14}"/>
+                  <af:popup childCreation="deferred" autoCancel="disabled" id="p8"
+                            binding="#{backingBeanScope.InsertBean.p8}">
+                    <af:dialog id="d9" binding="#{backingBeanScope.InsertBean.d9}" title="Add Revenue Item">
+                      <f:facet name="buttonBar"/>
+                    </af:dialog>
+                  </af:popup>
                   <af:button actionListener="#{bindings.Delete.execute}" text="Delete" id="b13"
                              binding="#{backingBeanScope.InsertBean.b13}"/>
-                  <af:button text="Add" id="b27" binding="#{backingBeanScope.InsertBean.b27}"/>
                 </af:panelGroupLayout>
               </af:panelGroupLayout>
               <af:panelGridLayout id="pgl8" binding="#{backingBeanScope.InsertBean.pgl8}">
@@ -878,8 +1018,7 @@
               </af:panelGridLayout>
             </af:showDetailItem>
             <af:showDetailItem text="Appointments" id="sdi13" binding="#{backingBeanScope.InsertBean.sdi13}">
-              <af:panelGroupLayout layout="horizontal" id="pgl10" binding="#{backingBeanScope.InsertBean.pgl10}"
-                                   halign="center">
+              <af:panelGroupLayout layout="horizontal" id="pgl10" binding="#{backingBeanScope.InsertBean.pgl10}">
                 <af:quickQuery label="Search" searchDesc="Search" id="qryId1"
                                value="#{bindings.ImplicitViewCriteriaQuery.quickQueryDescriptor}"
                                model="#{bindings.ImplicitViewCriteriaQuery.queryModel}"
@@ -889,45 +1028,19 @@
                     <af:commandLink text="Advanced" rendered="false" id="cl1"
                                     binding="#{backingBeanScope.InsertBean.cl1}"/>
                   </f:facet>
-                  <af:table value="#{bindings.AppointmentsOpportunitiesU1.collectionModel}" var="row"
-                            rows="#{bindings.AppointmentsOpportunitiesU1.rangeSize}"
-                            emptyText="#{bindings.AppointmentsOpportunitiesU1.viewable ? 'No data to display.' : 'Access Denied.'}"
-                            rowBandingInterval="0" fetchSize="#{bindings.AppointmentsOpportunitiesU1.rangeSize}"
-                            id="t18" binding="#{backingBeanScope.InsertBean.t18}">
-                    <af:column headerText="#{bindings.AppointmentsOpportunitiesU1.hints.AppointmentId.label}" id="c132">
-                      <af:inputText value="#{row.bindings.AppointmentId.inputValue}"
-                                    label="#{bindings.AppointmentsOpportunitiesU1.hints.AppointmentId.label}"
-                                    required="#{bindings.AppointmentsOpportunitiesU1.hints.AppointmentId.mandatory}"
-                                    columns="#{bindings.AppointmentsOpportunitiesU1.hints.AppointmentId.displayWidth}"
-                                    maximumLength="#{bindings.AppointmentsOpportunitiesU1.hints.AppointmentId.precision}"
-                                    shortDesc="#{bindings.AppointmentsOpportunitiesU1.hints.AppointmentId.tooltip}"
-                                    id="it32">
-                        <f:validator binding="#{row.bindings.AppointmentId.validator}"/>
-                        <af:convertNumber groupingUsed="false"
-                                          pattern="#{bindings.AppointmentsOpportunitiesU1.hints.AppointmentId.format}"/>
-                      </af:inputText>
-                    </af:column>
-                    <af:column headerText="#{bindings.AppointmentsOpportunitiesU1.hints.OpportunityId.label}" id="c133">
-                      <af:inputText value="#{row.bindings.OpportunityId.inputValue}"
-                                    label="#{bindings.AppointmentsOpportunitiesU1.hints.OpportunityId.label}"
-                                    required="#{bindings.AppointmentsOpportunitiesU1.hints.OpportunityId.mandatory}"
-                                    columns="#{bindings.AppointmentsOpportunitiesU1.hints.OpportunityId.displayWidth}"
-                                    maximumLength="#{bindings.AppointmentsOpportunitiesU1.hints.OpportunityId.precision}"
-                                    shortDesc="#{bindings.AppointmentsOpportunitiesU1.hints.OpportunityId.tooltip}"
-                                    id="it33">
-                        <f:validator binding="#{row.bindings.OpportunityId.validator}"/>
-                        <af:convertNumber groupingUsed="false"
-                                          pattern="#{bindings.AppointmentsOpportunitiesU1.hints.OpportunityId.format}"/>
-                      </af:inputText>
-                    </af:column>
-                  </af:table>
                 </af:quickQuery>
-                <af:button text="Add" id="b9" binding="#{backingBeanScope.InsertBean.b9}">
-                  <af:showPopupBehavior popupId="p2"/>
+                <af:button text="Add " id="b9" binding="#{backingBeanScope.InsertBean.b9}">
+                  <af:showPopupBehavior popupId="p10"/>
                 </af:button>
-                <af:button text="Delete" id="b11"
+                <af:button text="Delete Appointments related to Opportunity" id="b11"
                            binding="#{backingBeanScope.InsertBean.b11}"
                            action="#{backingBeanScope.InsertBean.deleteOpportunitiesAppointmentsLink}"/>
+                <af:popup childCreation="deferred" autoCancel="disabled" id="p10"
+                          binding="#{backingBeanScope.InsertBean.p10}">
+                  <af:dialog id="d7" binding="#{backingBeanScope.InsertBean.d7}" title="Add Appointment">
+                    <f:facet name="buttonBar"/>
+                  </af:dialog>
+                </af:popup>
               </af:panelGroupLayout>
               <af:table value="#{bindings.AppointmentsU2.collectionModel}" var="row"
                         rows="#{bindings.AppointmentsU2.rangeSize}"
@@ -937,7 +1050,15 @@
                         fetchSize="#{bindings.AppointmentsU2.rangeSize}"
                         filterModel="#{bindings.AppointmentsU2Query.queryDescriptor}" filterVisible="true"
                         queryListener="#{bindings.AppointmentsU2Query.processQuery}" varStatus="vs" id="t12"
-                        binding="#{backingBeanScope.InsertBean.t12}" columnStretching="column:c190">
+                        binding="#{backingBeanScope.InsertBean.t12}">
+                <af:column sortProperty="#{bindings.AppointmentsU2.hints.CustomerId.name}" filterable="true"
+                           sortable="true" headerText="#{bindings.AppointmentsU2.hints.CustomerId.label}" id="c188">
+                  <af:outputText value="#{row.CustomerId}"
+                                 shortDesc="#{bindings.AppointmentsU2.hints.CustomerId.tooltip}" id="ot140">
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.AppointmentsU2.hints.CustomerId.format}"/>
+                  </af:outputText>
+                </af:column>
                 <af:column sortProperty="#{bindings.AppointmentsU2.hints.AppointmentSubject.name}" filterable="true"
                            sortable="true" headerText="#{bindings.AppointmentsU2.hints.AppointmentSubject.label}"
                            id="c189">
@@ -983,13 +1104,49 @@
                                       pattern="#{bindings.AppointmentsU2.hints.LocationRoomNo.format}"/>
                   </af:outputText>
                 </af:column>
+                <af:column sortProperty="#{bindings.AppointmentsU2.hints.AddressId.name}" filterable="true"
+                           sortable="true" headerText="#{bindings.AppointmentsU2.hints.AddressId.label}" id="c194">
+                  <af:outputText value="#{row.AddressId}" shortDesc="#{bindings.AppointmentsU2.hints.AddressId.tooltip}"
+                                 id="ot146">
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.AppointmentsU2.hints.AddressId.format}"/>
+                  </af:outputText>
+                </af:column>
               </af:table>
-              <af:popup childCreation="deferred" autoCancel="disabled" id="p2"
-                        binding="#{backingBeanScope.InsertBean.p2}"/>
+              <af:table value="#{bindings.AppointmentsOpportunitiesU1.collectionModel}" var="row"
+                        rows="#{bindings.AppointmentsOpportunitiesU1.rangeSize}"
+                        emptyText="#{bindings.AppointmentsOpportunitiesU1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                        rowBandingInterval="0" fetchSize="#{bindings.AppointmentsOpportunitiesU1.rangeSize}" id="t18"
+                        binding="#{backingBeanScope.InsertBean.t18}" rendered="false">
+                <af:column headerText="#{bindings.AppointmentsOpportunitiesU1.hints.AppointmentId.label}" id="c132">
+                  <af:inputText value="#{row.bindings.AppointmentId.inputValue}"
+                                label="#{bindings.AppointmentsOpportunitiesU1.hints.AppointmentId.label}"
+                                required="#{bindings.AppointmentsOpportunitiesU1.hints.AppointmentId.mandatory}"
+                                columns="#{bindings.AppointmentsOpportunitiesU1.hints.AppointmentId.displayWidth}"
+                                maximumLength="#{bindings.AppointmentsOpportunitiesU1.hints.AppointmentId.precision}"
+                                shortDesc="#{bindings.AppointmentsOpportunitiesU1.hints.AppointmentId.tooltip}"
+                                id="it32">
+                    <f:validator binding="#{row.bindings.AppointmentId.validator}"/>
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.AppointmentsOpportunitiesU1.hints.AppointmentId.format}"/>
+                  </af:inputText>
+                </af:column>
+                <af:column headerText="#{bindings.AppointmentsOpportunitiesU1.hints.OpportunityId.label}" id="c133">
+                  <af:inputText value="#{row.bindings.OpportunityId.inputValue}"
+                                label="#{bindings.AppointmentsOpportunitiesU1.hints.OpportunityId.label}"
+                                required="#{bindings.AppointmentsOpportunitiesU1.hints.OpportunityId.mandatory}"
+                                columns="#{bindings.AppointmentsOpportunitiesU1.hints.OpportunityId.displayWidth}"
+                                maximumLength="#{bindings.AppointmentsOpportunitiesU1.hints.OpportunityId.precision}"
+                                shortDesc="#{bindings.AppointmentsOpportunitiesU1.hints.OpportunityId.tooltip}"
+                                id="it33">
+                    <f:validator binding="#{row.bindings.OpportunityId.validator}"/>
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.AppointmentsOpportunitiesU1.hints.OpportunityId.format}"/>
+                  </af:inputText>
+                </af:column>
+              </af:table>
             </af:showDetailItem>
             <af:showDetailItem text="Notes" id="sdi14" binding="#{backingBeanScope.InsertBean.sdi14}">
-              <af:panelGroupLayout layout="horizontal" id="pgl11" binding="#{backingBeanScope.InsertBean.pgl11}"
-                                   halign="center">
+              <af:panelGroupLayout layout="horizontal" id="pgl11" binding="#{backingBeanScope.InsertBean.pgl11}">
                 <af:quickQuery label="Search" searchDesc="Search" id="qryId4"
                                value="#{bindings.ImplicitViewCriteriaQuery3.quickQueryDescriptor}"
                                model="#{bindings.ImplicitViewCriteriaQuery3.queryModel}"
@@ -999,49 +1156,27 @@
                     <af:commandLink text="Advanced" rendered="false" id="cl4"
                                     binding="#{backingBeanScope.InsertBean.cl4}"/>
                   </f:facet>
-                  <af:table value="#{bindings.NotesOpportunitiesU1.collectionModel}" var="row"
-                            rows="#{bindings.NotesOpportunitiesU1.rangeSize}"
-                            emptyText="#{bindings.NotesOpportunitiesU1.viewable ? 'No data to display.' : 'Access Denied.'}"
-                            rowBandingInterval="0" fetchSize="#{bindings.NotesOpportunitiesU1.rangeSize}" id="t17"
-                            binding="#{backingBeanScope.InsertBean.t17}">
-                    <af:column headerText="#{bindings.NotesOpportunitiesU1.hints.NotesId.label}" id="c130">
-                      <af:selectOneChoice value="#{row.bindings.NotesId.inputValue}"
-                                          label="#{row.bindings.NotesId.label}"
-                                          required="#{bindings.NotesOpportunitiesU1.hints.NotesId.mandatory}"
-                                          shortDesc="#{bindings.NotesOpportunitiesU1.hints.NotesId.tooltip}" id="soc29">
-                        <f:selectItems value="#{row.bindings.NotesId.items}" id="si29"/>
-                        <f:validator binding="#{row.bindings.NotesId.validator}"/>
-                      </af:selectOneChoice>
-                    </af:column>
-                    <af:column headerText="#{bindings.NotesOpportunitiesU1.hints.OpportunityId.label}" id="c131">
-                      <af:inputText value="#{row.bindings.OpportunityId.inputValue}"
-                                    label="#{bindings.NotesOpportunitiesU1.hints.OpportunityId.label}"
-                                    required="#{bindings.NotesOpportunitiesU1.hints.OpportunityId.mandatory}"
-                                    columns="#{bindings.NotesOpportunitiesU1.hints.OpportunityId.displayWidth}"
-                                    maximumLength="#{bindings.NotesOpportunitiesU1.hints.OpportunityId.precision}"
-                                    shortDesc="#{bindings.NotesOpportunitiesU1.hints.OpportunityId.tooltip}" id="it31">
-                        <f:validator binding="#{row.bindings.OpportunityId.validator}"/>
-                        <af:convertNumber groupingUsed="false"
-                                          pattern="#{bindings.NotesOpportunitiesU1.hints.OpportunityId.format}"/>
-                      </af:inputText>
-                    </af:column>
-                  </af:table>
+                  <af:button text="Add notes" id="b8" binding="#{backingBeanScope.InsertBean.b8}">
+                    <af:showPopupBehavior popupId="::p11"/>
+                  </af:button>
                 </af:quickQuery>
-                <af:button text="Add" id="b8" binding="#{backingBeanScope.InsertBean.b8}">
-                  <af:showPopupBehavior popupId="::p3"/>
+                <af:button text="Add" id="b28" binding="#{backingBeanScope.InsertBean.b28}">
+                  <af:showPopupBehavior popupId="p11"/>
                 </af:button>
-                <af:button text="Delete" id="b10"
-                           binding="#{backingBeanScope.InsertBean.b10}"
-                           action="#{backingBeanScope.InsertBean.deleteOpportunitiesNotesLink}"/>
+                <af:popup childCreation="deferred" autoCancel="disabled" id="p11"
+                          binding="#{backingBeanScope.InsertBean.p11}">
+                  <af:dialog id="d11" binding="#{backingBeanScope.InsertBean.d11}" title="Add Note">
+                    <f:facet name="buttonBar"/>
+                  </af:dialog>
+                </af:popup>
               </af:panelGroupLayout>
               <af:table value="#{bindings.NotesU2.collectionModel}" var="row" rows="#{bindings.NotesU2.rangeSize}"
                         emptyText="#{bindings.NotesU2.viewable ? 'No data to display.' : 'Access Denied.'}"
                         rowBandingInterval="0" selectedRowKeys="#{bindings.NotesU2.collectionModel.selectedRow}"
                         selectionListener="#{bindings.NotesU2.collectionModel.makeCurrent}" rowSelection="single"
                         fetchSize="#{bindings.NotesU2.rangeSize}" filterModel="#{bindings.NotesU2Query.queryDescriptor}"
-                        filterVisible="false" queryListener="#{bindings.NotesU2Query.processQuery}" varStatus="vs"
-                        id="t13" binding="#{backingBeanScope.InsertBean.t13}" columnStretching="column:c196"
-                        partialTriggers="::b8 ::b10">
+                        filterVisible="true" queryListener="#{bindings.NotesU2Query.processQuery}" varStatus="vs"
+                        id="t13" binding="#{backingBeanScope.InsertBean.t13}">
                 <af:column sortProperty="#{bindings.NotesU2.hints.DateRecorded.name}" filterable="true" sortable="true"
                            headerText="#{bindings.NotesU2.hints.DateRecorded.label}" id="c195">
                   <f:facet name="filter">
@@ -1114,24 +1249,34 @@
                                  id="ot155"/>
                 </af:column>
               </af:table>
-              <af:popup childCreation="deferred" autoCancel="disabled" id="p3"
-                        popupFetchListener="#{InsertBean_OP_REVENUE.insertOpRevenueItemPopFetch}"
-                        binding="#{backingBeanScope.InsertBean.p3}">
-                <af:dialog id="d3" dialogListener="#{backingBeanScope.InsertBean.insertOppNotes}"
-                           binding="#{backingBeanScope.InsertBean.d3}">
-                  <f:facet name="buttonBar"/>
-                  <af:panelFormLayout id="pfl3" binding="#{backingBeanScope.InsertBean.pfl3}">
-                    <af:selectOneChoice value="#{bindings.NotesId.inputValue}" label="#{bindings.NotesId.label}"
-                                        required="#{bindings.NotesId.hints.mandatory}"
-                                        shortDesc="#{bindings.NotesId.hints.tooltip}" id="soc28"
-                                        binding="#{backingBeanScope.InsertBean.soc28}">
-                      <f:selectItems value="#{bindings.NotesId.items}" id="si28"
-                                     binding="#{backingBeanScope.InsertBean.si28}"/>
-                      <f:validator binding="#{bindings.NotesId.validator}"/>
-                    </af:selectOneChoice>
-                  </af:panelFormLayout>
-                </af:dialog>
-              </af:popup>
+              <af:table value="#{bindings.NotesOpportunitiesU1.collectionModel}" var="row"
+                        rows="#{bindings.NotesOpportunitiesU1.rangeSize}"
+                        emptyText="#{bindings.NotesOpportunitiesU1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                        rowBandingInterval="0" fetchSize="#{bindings.NotesOpportunitiesU1.rangeSize}" id="t17"
+                        binding="#{backingBeanScope.InsertBean.t17}" rendered="false">
+                <af:column headerText="#{bindings.NotesOpportunitiesU1.hints.NotesId.label}" id="c130">
+                  <af:selectOneChoice value="#{row.bindings.NotesId.inputValue}" label="#{row.bindings.NotesId.label}"
+                                      required="#{bindings.NotesOpportunitiesU1.hints.NotesId.mandatory}"
+                                      shortDesc="#{bindings.NotesOpportunitiesU1.hints.NotesId.tooltip}" id="soc29">
+                    <f:selectItems value="#{row.bindings.NotesId.items}" id="si29"/>
+                    <f:validator binding="#{row.bindings.NotesId.validator}"/>
+                  </af:selectOneChoice>
+                </af:column>
+                <af:column headerText="#{bindings.NotesOpportunitiesU1.hints.OpportunityId.label}" id="c131">
+                  <af:inputText value="#{row.bindings.OpportunityId.inputValue}"
+                                label="#{bindings.NotesOpportunitiesU1.hints.OpportunityId.label}"
+                                required="#{bindings.NotesOpportunitiesU1.hints.OpportunityId.mandatory}"
+                                columns="#{bindings.NotesOpportunitiesU1.hints.OpportunityId.displayWidth}"
+                                maximumLength="#{bindings.NotesOpportunitiesU1.hints.OpportunityId.precision}"
+                                shortDesc="#{bindings.NotesOpportunitiesU1.hints.OpportunityId.tooltip}" id="it31">
+                    <f:validator binding="#{row.bindings.OpportunityId.validator}"/>
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.NotesOpportunitiesU1.hints.OpportunityId.format}"/>
+                  </af:inputText>
+                </af:column>
+              </af:table>
+              <af:button text="Delete Notes related to Opportunity" id="b10" binding="#{backingBeanScope.InsertBean.b10}"
+                         action="#{backingBeanScope.InsertBean.deleteOpportunitiesNotesLink}"/>
             </af:showDetailItem>
           </af:panelTabbed>
         </af:showDetailItem>

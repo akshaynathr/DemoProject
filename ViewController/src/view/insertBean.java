@@ -75,11 +75,6 @@ public class insertBean {
     private RichButton b2;
     private RichPanelHeader ph1;
     private RichShowDetailItem sdi3;
-    private UISelectItems si28;
-    private RichSelectOneChoice soc28;
-    private RichPanelFormLayout pfl3;
-    private RichDialog d3;
-    private RichPopup p3;
     private RichInputDate id14;
     private RichInputDate id13;
     private RichInputDate id12;
@@ -89,7 +84,6 @@ public class insertBean {
     private RichQuickQuery qryId4;
     private RichPanelGroupLayout pgl11;
     private RichShowDetailItem sdi14;
-    private RichPopup p2;
     private RichInputDate id11;
     private RichInputDate id10;
     private RichTable t12;
@@ -332,6 +326,53 @@ public class insertBean {
     private RichPanelGroupLayout pgl32;
     private RichQuickQuery qryId20;
     private RichCommandLink cl20;
+    private RichPopup p6;
+    private RichPopup p7;
+   
+    private RichPopup p8;
+    private RichPopup p9;
+    private RichPopup p10;
+    private RichPopup p11;
+    private RichPopup p12;
+    private RichPopup p13;
+    private RichPopup p14;
+    private RichPopup p15;
+    private RichPopup p16;
+    private RichPopup p17;
+    private RichPopup p18;
+    private RichPopup p19;
+    private RichPopup p20;
+    private RichPopup p21;
+    private RichPopup p22;
+    private RichPopup p23;
+    private RichPopup p24;
+    private RichPopup p25;
+    private RichPopup p26;
+    private RichPopup p27;
+    private RichPopup p28;
+    private RichDialog d6;
+    private RichDialog d7;
+    private RichDialog d8;
+    private RichDialog d9;
+    private RichDialog d10;
+    private RichDialog d11;
+    private RichDialog d12;
+    private RichDialog d13;
+    private RichDialog d14;
+    private RichDialog d15;
+    private RichDialog d16;
+    private RichDialog d17;
+    private RichDialog d18;
+    private RichDialog d19;
+    private RichDialog d20;
+    private RichDialog d21;
+    private RichDialog d22;
+    private RichDialog d23;
+    private RichDialog d24;
+    private RichDialog d25;
+    private RichDialog d26;
+    private RichDialog d27;
+    private RichDialog d28;
 
     public insertBean() {
     }
@@ -770,45 +811,6 @@ public class insertBean {
         return sdi3;
     }
 
-    public void setSi28(UISelectItems si28) {
-        this.si28 = si28;
-    }
-
-    public UISelectItems getSi28() {
-        return si28;
-    }
-
-    public void setSoc28(RichSelectOneChoice soc28) {
-        this.soc28 = soc28;
-    }
-
-    public RichSelectOneChoice getSoc28() {
-        return soc28;
-    }
-
-    public void setPfl3(RichPanelFormLayout pfl3) {
-        this.pfl3 = pfl3;
-    }
-
-    public RichPanelFormLayout getPfl3() {
-        return pfl3;
-    }
-
-    public void setD3(RichDialog d3) {
-        this.d3 = d3;
-    }
-
-    public RichDialog getD3() {
-        return d3;
-    }
-
-    public void setP3(RichPopup p3) {
-        this.p3 = p3;
-    }
-
-    public RichPopup getP3() {
-        return p3;
-    }
 
     public void setId14(RichInputDate id14) {
         this.id14 = id14;
@@ -883,13 +885,6 @@ public class insertBean {
         return sdi14;
     }
 
-    public void setP2(RichPopup p2) {
-        this.p2 = p2;
-    }
-
-    public RichPopup getP2() {
-        return p2;
-    }
 
     public void setId11(RichInputDate id11) {
         this.id11 = id11;
@@ -1220,7 +1215,7 @@ public class insertBean {
            DCIteratorBinding dcItteratorBindings3 = bindings.findIteratorBinding(linkTable);
            
            ViewObject vo = dcItteratorBindings3.getViewObject();
-           System.out.println("Rows: " + vo.getRowSet().getFetchedRowCount());
+           
                    while (vo.getRowSet().getFetchedRowCount()>0) {  
                        
                        Row row = vo.getCurrentRow();
@@ -1268,7 +1263,7 @@ public class insertBean {
            DCIteratorBinding dcItteratorBindings3 = bindings.findIteratorBinding(linkTable);
            
            ViewObject vo = dcItteratorBindings3.getViewObject();
-           System.out.println("Rows: " +vo.getRowSet().getFetchedRowCount());
+           
                    while (vo.getRowSet().getFetchedRowCount()>0) {  
                        
                        Row row = vo.getCurrentRow();
@@ -3151,5 +3146,375 @@ public class insertBean {
 
     public RichCommandLink getCl20() {
         return cl20;
+    }
+
+    public void setP6(RichPopup p6) {
+        this.p6 = p6;
+    }
+
+    public RichPopup getP6() {
+        return p6;
+    }
+
+    public void setP7(RichPopup p7) {
+        this.p7 = p7;
+    }
+
+    public RichPopup getP7() {
+        return p7;
+    }
+
+    
+
+    public void setP8(RichPopup p8) {
+        this.p8 = p8;
+    }
+
+    public RichPopup getP8() {
+        return p8;
+    }
+
+    public void setP9(RichPopup p9) {
+        this.p9 = p9;
+    }
+
+    public RichPopup getP9() {
+        return p9;
+    }
+
+    public void setP10(RichPopup p10) {
+        this.p10 = p10;
+    }
+
+    public RichPopup getP10() {
+        return p10;
+    }
+
+    public void setP11(RichPopup p11) {
+        this.p11 = p11;
+    }
+
+    public RichPopup getP11() {
+        return p11;
+    }
+
+    public void setP12(RichPopup p12) {
+        this.p12 = p12;
+    }
+
+    public RichPopup getP12() {
+        return p12;
+    }
+
+    public void setP13(RichPopup p13) {
+        this.p13 = p13;
+    }
+
+    public RichPopup getP13() {
+        return p13;
+    }
+
+    public void setP14(RichPopup p14) {
+        this.p14 = p14;
+    }
+
+    public RichPopup getP14() {
+        return p14;
+    }
+
+    public void setP15(RichPopup p15) {
+        this.p15 = p15;
+    }
+
+    public RichPopup getP15() {
+        return p15;
+    }
+
+    public void setP16(RichPopup p16) {
+        this.p16 = p16;
+    }
+
+    public RichPopup getP16() {
+        return p16;
+    }
+
+    public void setP17(RichPopup p17) {
+        this.p17 = p17;
+    }
+
+    public RichPopup getP17() {
+        return p17;
+    }
+
+    public void setP18(RichPopup p18) {
+        this.p18 = p18;
+    }
+
+    public RichPopup getP18() {
+        return p18;
+    }
+
+    public void setP19(RichPopup p19) {
+        this.p19 = p19;
+    }
+
+    public RichPopup getP19() {
+        return p19;
+    }
+
+    public void setP20(RichPopup p20) {
+        this.p20 = p20;
+    }
+
+    public RichPopup getP20() {
+        return p20;
+    }
+
+    public void setP21(RichPopup p21) {
+        this.p21 = p21;
+    }
+
+    public RichPopup getP21() {
+        return p21;
+    }
+
+    public void setP22(RichPopup p22) {
+        this.p22 = p22;
+    }
+
+    public RichPopup getP22() {
+        return p22;
+    }
+
+    public void setP23(RichPopup p23) {
+        this.p23 = p23;
+    }
+
+    public RichPopup getP23() {
+        return p23;
+    }
+
+    public void setP24(RichPopup p24) {
+        this.p24 = p24;
+    }
+
+    public RichPopup getP24() {
+        return p24;
+    }
+
+    public void setP25(RichPopup p25) {
+        this.p25 = p25;
+    }
+
+    public RichPopup getP25() {
+        return p25;
+    }
+
+    public void setP26(RichPopup p26) {
+        this.p26 = p26;
+    }
+
+    public RichPopup getP26() {
+        return p26;
+    }
+
+    public void setP27(RichPopup p27) {
+        this.p27 = p27;
+    }
+
+    public RichPopup getP27() {
+        return p27;
+    }
+
+    public void setP28(RichPopup p28) {
+        this.p28 = p28;
+    }
+
+    public RichPopup getP28() {
+        return p28;
+    }
+
+    public void setD6(RichDialog d6) {
+        this.d6 = d6;
+    }
+
+    public RichDialog getD6() {
+        return d6;
+    }
+
+    public void setD7(RichDialog d7) {
+        this.d7 = d7;
+    }
+
+    public RichDialog getD7() {
+        return d7;
+    }
+
+    public void setD8(RichDialog d8) {
+        this.d8 = d8;
+    }
+
+    public RichDialog getD8() {
+        return d8;
+    }
+
+    public void setD9(RichDialog d9) {
+        this.d9 = d9;
+    }
+
+    public RichDialog getD9() {
+        return d9;
+    }
+
+    public void setD10(RichDialog d10) {
+        this.d10 = d10;
+    }
+
+    public RichDialog getD10() {
+        return d10;
+    }
+
+    public void setD11(RichDialog d11) {
+        this.d11 = d11;
+    }
+
+    public RichDialog getD11() {
+        return d11;
+    }
+
+    public void setD12(RichDialog d12) {
+        this.d12 = d12;
+    }
+
+    public RichDialog getD12() {
+        return d12;
+    }
+
+    public void setD13(RichDialog d13) {
+        this.d13 = d13;
+    }
+
+    public RichDialog getD13() {
+        return d13;
+    }
+
+    public void setD14(RichDialog d14) {
+        this.d14 = d14;
+    }
+
+    public RichDialog getD14() {
+        return d14;
+    }
+
+    public void setD15(RichDialog d15) {
+        this.d15 = d15;
+    }
+
+    public RichDialog getD15() {
+        return d15;
+    }
+
+    public void setD16(RichDialog d16) {
+        this.d16 = d16;
+    }
+
+    public RichDialog getD16() {
+        return d16;
+    }
+
+    public void setD17(RichDialog d17) {
+        this.d17 = d17;
+    }
+
+    public RichDialog getD17() {
+        return d17;
+    }
+
+    public void setD18(RichDialog d18) {
+        this.d18 = d18;
+    }
+
+    public RichDialog getD18() {
+        return d18;
+    }
+
+    public void setD19(RichDialog d19) {
+        this.d19 = d19;
+    }
+
+    public RichDialog getD19() {
+        return d19;
+    }
+
+    public void setD20(RichDialog d20) {
+        this.d20 = d20;
+    }
+
+    public RichDialog getD20() {
+        return d20;
+    }
+
+    public void setD21(RichDialog d21) {
+        this.d21 = d21;
+    }
+
+    public RichDialog getD21() {
+        return d21;
+    }
+
+    public void setD22(RichDialog d22) {
+        this.d22 = d22;
+    }
+
+    public RichDialog getD22() {
+        return d22;
+    }
+
+    public void setD23(RichDialog d23) {
+        this.d23 = d23;
+    }
+
+    public RichDialog getD23() {
+        return d23;
+    }
+
+    public void setD24(RichDialog d24) {
+        this.d24 = d24;
+    }
+
+    public RichDialog getD24() {
+        return d24;
+    }
+
+    public void setD25(RichDialog d25) {
+        this.d25 = d25;
+    }
+
+    public RichDialog getD25() {
+        return d25;
+    }
+
+    public void setD26(RichDialog d26) {
+        this.d26 = d26;
+    }
+
+    public RichDialog getD26() {
+        return d26;
+    }
+
+    public void setD27(RichDialog d27) {
+        this.d27 = d27;
+    }
+
+    public RichDialog getD27() {
+        return d27;
+    }
+
+    public void setD28(RichDialog d28) {
+        this.d28 = d28;
+    }
+
+    public RichDialog getD28() {
+        return d28;
     }
 }
