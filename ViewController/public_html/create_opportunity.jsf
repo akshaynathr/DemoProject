@@ -130,7 +130,7 @@
           <f:validator binding="#{bindings.PrimaryContact.validator}"/>
           <af:convertNumber groupingUsed="false" pattern="#{bindings.PrimaryContact.format}"/>
         </af:inputText>
-        <af:selectOneChoice value="#{bindings.DecisionLevelId.inputValue}" label="#{bindings.DecisionLevelId.label}"
+        <af:selectOneChoice value="#{bindings.DecisionLevelId.inputValue}" label="Decision Level"
                             required="#{bindings.DecisionLevelId.hints.mandatory}"
                             shortDesc="#{bindings.DecisionLevelId.hints.tooltip}" id="soc5">
           <f:selectItems value="#{bindings.DecisionLevelId.items}" id="si5"/>

@@ -247,7 +247,6 @@ public class insertBean {
     private RichPanelGroupLayout pgl21;
     private RichQuickQuery qryId6;
     private RichCommandLink cl6;
-    private RichPanelGroupLayout pgl22;
     private RichQuickQuery qryId7;
     private RichCommandLink cl7;
     private RichQuickQuery qryId8;
@@ -302,6 +301,8 @@ public class insertBean {
     private RichTable t8;
     private RichTable t9;
     private RichInputDate id29;
+    private RichPanelBorderLayout pbl3;
+    private RichPanelGroupLayout pgl29;
 
     public insertBean() {
     }
@@ -2403,14 +2404,6 @@ public class insertBean {
         return cl6;
     }
 
-    public void setPgl22(RichPanelGroupLayout pgl22) {
-        this.pgl22 = pgl22;
-    }
-
-    public RichPanelGroupLayout getPgl22() {
-        return pgl22;
-    }
-
 
     public void setQryId7(RichQuickQuery qryId7) {
         this.qryId7 = qryId7;
@@ -2854,5 +2847,21 @@ public class insertBean {
 
     public RichInputDate getId29() {
         return id29;
+    }
+
+    public void setPbl3(RichPanelBorderLayout pbl3) {
+        this.pbl3 = pbl3;
+    }
+
+    public RichPanelBorderLayout getPbl3() {
+        return pbl3;
+    }
+
+    public void setPgl29(RichPanelGroupLayout pgl29) {
+        this.pgl29 = pgl29;
+    }
+
+    public RichPanelGroupLayout getPgl29() {
+        return pgl29;
     }
 }

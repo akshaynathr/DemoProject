@@ -92,7 +92,18 @@
                            binding="#{backingBeanScope.InsertBean.sdi2}">
           <af:panelBorderLayout id="pbl2" binding="#{backingBeanScope.InsertBean.pbl2}">
             <f:facet name="top">
-              <af:panelGroupLayout id="pgl14" binding="#{backingBeanScope.InsertBean.pgl14}">
+              <af:panelGroupLayout id="pgl14" binding="#{backingBeanScope.InsertBean.pgl14}" halign="center"
+                                   layout="horizontal">
+                <af:quickQuery label="Search" searchDesc="Search" id="qryId7"
+                               value="#{bindings.ImplicitViewCriteriaQuery6.quickQueryDescriptor}"
+                               model="#{bindings.ImplicitViewCriteriaQuery6.queryModel}"
+                               queryListener="#{bindings.ImplicitViewCriteriaQuery6.processQuery}"
+                               binding="#{backingBeanScope.InsertBean.qryId7}">
+                  <f:facet name="end">
+                    <af:commandLink text="Advanced" rendered="false" id="cl7"
+                                    binding="#{backingBeanScope.InsertBean.cl7}"/>
+                  </f:facet>
+                </af:quickQuery>
                 <af:button actionListener="#{bindings.Delete2.execute}" text="Delete Opportunity"
                            disabled="#{!bindings.Delete2.enabled}" id="b17"
                            binding="#{backingBeanScope.InsertBean.b17}"/>
@@ -110,21 +121,9 @@
                              binding="#{backingBeanScope.InsertBean.gc2}" halign="stretch">
                   <af:toolbox id="t24" binding="#{backingBeanScope.InsertBean.t24}">
                     <af:toolbar id="t25" binding="#{backingBeanScope.InsertBean.t25}">
-                      <af:button text="button 4" id="b3" binding="#{backingBeanScope.InsertBean.b3}"/>
+                      <af:button text="button 4" id="b3" binding="#{backingBeanScope.InsertBean.b3}" rendered="false"/>
                     </af:toolbar>
                   </af:toolbox>
-                  <af:panelGroupLayout layout="vertical" id="pgl22" binding="#{backingBeanScope.InsertBean.pgl22}">
-                    <af:quickQuery label="Search" searchDesc="Search" id="qryId7"
-                                   value="#{bindings.ImplicitViewCriteriaQuery6.quickQueryDescriptor}"
-                                   model="#{bindings.ImplicitViewCriteriaQuery6.queryModel}"
-                                   queryListener="#{bindings.ImplicitViewCriteriaQuery6.processQuery}"
-                                   binding="#{backingBeanScope.InsertBean.qryId7}">
-                      <f:facet name="end">
-                        <af:commandLink text="Advanced" rendered="false" id="cl7"
-                                        binding="#{backingBeanScope.InsertBean.cl7}"/>
-                      </f:facet>
-                    </af:quickQuery>
-                  </af:panelGroupLayout>
                   <af:table value="#{bindings.OpportunitiesU2.collectionModel}" var="row"
                             rows="#{bindings.OpportunitiesU2.rangeSize}"
                             emptyText="#{bindings.OpportunitiesU2.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -134,7 +133,8 @@
                             rowSelection="single" fetchSize="#{bindings.OpportunitiesU2.rangeSize}"
                             filterModel="#{bindings.OpportunitiesU2Query.queryDescriptor}" filterVisible="true"
                             queryListener="#{bindings.OpportunitiesU2Query.processQuery}" varStatus="vs" id="t16"
-                            binding="#{backingBeanScope.InsertBean.t16}" partialTriggers="::b17 ::b18">
+                            binding="#{backingBeanScope.InsertBean.t16}" partialTriggers="::b17 ::b18"
+                            columnStretching="column:c111">
                     <af:column sortProperty="#{bindings.OpportunitiesU2.hints.OppurtunityName.name}" filterable="true"
                                sortable="true" headerText="Name" id="c111">
                       <af:outputText value="#{row.OppurtunityName}"
@@ -441,11 +441,10 @@
             <af:showDetailItem id="tab2" text="Customers" disclosed="true"
                                binding="#{backingBeanScope.InsertBean.tab2}">
               <af:panelGroupLayout id="pgl4" binding="#{backingBeanScope.InsertBean.pgl4}">
-                <af:panelGridLayout id="pgl12" binding="#{backingBeanScope.InsertBean.pgl12}">
-                  <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1"
-                              binding="#{backingBeanScope.InsertBean.gr1}">
-                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc1"
-                                 binding="#{backingBeanScope.InsertBean.gc1}" halign="stretch">
+                <af:panelBorderLayout id="pbl3" binding="#{backingBeanScope.InsertBean.pbl3}">
+                  <f:facet name="top">
+                    <af:panelGroupLayout id="pgl29" binding="#{backingBeanScope.InsertBean.pgl29}" halign="center"
+                                         layout="horizontal">
                       <af:quickQuery label="Search" searchDesc="Search" id="qryId8"
                                      value="#{bindings.ImplicitViewCriteriaQuery7.quickQueryDescriptor}"
                                      model="#{bindings.ImplicitViewCriteriaQuery7.queryModel}"
@@ -456,6 +455,17 @@
                                           binding="#{backingBeanScope.InsertBean.cl8}"/>
                         </f:facet>
                       </af:quickQuery>
+                    </af:panelGroupLayout>
+                  </f:facet>
+                  <f:facet name="bottom"/>
+                  <f:facet name="start"/>
+                  <f:facet name="end"/>
+                </af:panelBorderLayout>
+                <af:panelGridLayout id="pgl12" binding="#{backingBeanScope.InsertBean.pgl12}">
+                  <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1"
+                              binding="#{backingBeanScope.InsertBean.gr1}">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc1"
+                                 binding="#{backingBeanScope.InsertBean.gc1}" halign="stretch">
                       <af:table value="#{bindings.CustomersU3.collectionModel}" var="row"
                                 rows="#{bindings.CustomersU3.rangeSize}"
                                 emptyText="#{bindings.CustomersU3.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -464,8 +474,9 @@
                                 selectionListener="#{bindings.CustomersU3.collectionModel.makeCurrent}"
                                 rowSelection="single" fetchSize="#{bindings.CustomersU3.rangeSize}"
                                 filterModel="#{bindings.ImplicitViewCriteriaQuery7.queryDescriptor}"
-                                filterVisible="true" queryListener="#{bindings.ImplicitViewCriteriaQuery7.processQuery}"
-                                varStatus="vs" id="t8" binding="#{backingBeanScope.InsertBean.t8}">
+                                filterVisible="false" queryListener="#{bindings.ImplicitViewCriteriaQuery7.processQuery}"
+                                varStatus="vs" id="t8" binding="#{backingBeanScope.InsertBean.t8}"
+                                columnStretching="column:c139">
                         <af:column sortProperty="#{bindings.CustomersU3.hints.CustomerName.name}" filterable="true"
                                    sortable="true" headerText="#{bindings.CustomersU3.hints.CustomerName.label}"
                                    id="c139">
@@ -486,7 +497,7 @@
                         </af:column>
                         <af:column sortProperty="#{bindings.CustomersU3.hints.PrimaryContactId.name}" sortable="true"
                                    headerText="#{bindings.CustomersU3.hints.PrimaryContactId.label}" filterable="true"
-                                   id="c141">
+                                   id="c141" rendered="false">
                           <af:selectOneChoice value="#{row.bindings.PrimaryContactId.inputValue}"
                                               label="#{row.bindings.PrimaryContactId.label}"
                                               required="#{bindings.CustomersU3.hints.PrimaryContactId.mandatory}"

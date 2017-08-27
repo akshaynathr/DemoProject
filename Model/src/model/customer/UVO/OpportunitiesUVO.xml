@@ -155,6 +155,19 @@
     IsUpdateable="while_insert"
     IsQueriable="false"/>
   <ViewAttribute
+    Name="OppurtunityName"
+    PrecisionRule="true"
+    EntityAttrName="OppurtunityName"
+    EntityUsage="OpportunityEO"
+    AliasName="OPPURTUNITY_NAME">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="OppurtunityName_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
     Name="CustomerId"
     PrecisionRule="true"
     EntityAttrName="CustomerId"
@@ -165,6 +178,8 @@
       <SchemaBasedProperties>
         <CONTROLTYPE
           Value="choice"/>
+        <LABEL
+          ResId="CustomerId_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -192,7 +207,8 @@
     EntityAttrName="SalesStageId"
     EntityUsage="OpportunityEO"
     AliasName="SALES_STAGE_ID"
-    LOVName="LOV_SalesStageId">
+    LOVName="LOV_SalesStageId"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE
@@ -206,7 +222,8 @@
     EntityAttrName="SalesMethodId"
     EntityUsage="OpportunityEO"
     AliasName="SALES_METHOD_ID"
-    LOVName="LOV_SalesMethodId">
+    LOVName="LOV_SalesMethodId"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE
@@ -251,7 +268,8 @@
     PrecisionRule="true"
     EntityAttrName="IsBudgeted"
     EntityUsage="OpportunityEO"
-    AliasName="IS_BUDGETED"/>
+    AliasName="IS_BUDGETED"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="BudgetAmount"
     PrecisionRule="true"
@@ -263,78 +281,90 @@
     PrecisionRule="true"
     EntityAttrName="EstimatedDurationInDays"
     EntityUsage="OpportunityEO"
-    AliasName="ESTIMATED_DURATION_IN_DAYS"/>
+    AliasName="ESTIMATED_DURATION_IN_DAYS"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="RiskLevel"
     PrecisionRule="true"
     EntityAttrName="RiskLevel"
     EntityUsage="OpportunityEO"
-    AliasName="RISK_LEVEL"/>
+    AliasName="RISK_LEVEL"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="IsIncluded"
     PrecisionRule="true"
     EntityAttrName="IsIncluded"
     EntityUsage="OpportunityEO"
-    AliasName="IS_INCLUDED"/>
+    AliasName="IS_INCLUDED"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="CreatedById"
     PrecisionRule="true"
     EntityAttrName="CreatedById"
     EntityUsage="OpportunityEO"
-    AliasName="CREATED_BY_ID"/>
+    AliasName="CREATED_BY_ID"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="IsSuccess"
     PrecisionRule="true"
     EntityAttrName="IsSuccess"
     EntityUsage="OpportunityEO"
-    AliasName="IS_SUCCESS"/>
+    AliasName="IS_SUCCESS"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="PrimaryContact"
     PrecisionRule="true"
     EntityAttrName="PrimaryContact"
     EntityUsage="OpportunityEO"
-    AliasName="PRIMARY_CONTACT"/>
+    AliasName="PRIMARY_CONTACT"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="CreatedBy"
     PrecisionRule="true"
     EntityAttrName="CreatedBy"
     EntityUsage="OpportunityEO"
     AliasName="CREATED_BY"
-    IsUpdateable="false"/>
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="CreatedOn"
     PrecisionRule="true"
     EntityAttrName="CreatedOn"
     EntityUsage="OpportunityEO"
     AliasName="CREATED_ON"
-    IsUpdateable="false"/>
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="LastUpdatedBy"
     PrecisionRule="true"
     EntityAttrName="LastUpdatedBy"
     EntityUsage="OpportunityEO"
     AliasName="LAST_UPDATED_BY"
-    IsUpdateable="false"/>
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="LastUpdatedOn"
     PrecisionRule="true"
     EntityAttrName="LastUpdatedOn"
     EntityUsage="OpportunityEO"
     AliasName="LAST_UPDATED_ON"
-    IsUpdateable="false"/>
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="VersionNo"
     PrecisionRule="true"
     EntityAttrName="VersionNo"
     EntityUsage="OpportunityEO"
     AliasName="VERSION_NO"
-    IsUpdateable="false"/>
+    IsUpdateable="false"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="IsActive"
     PrecisionRule="true"
     EntityAttrName="IsActive"
     EntityUsage="OpportunityEO"
-    AliasName="IS_ACTIVE"/>
+    AliasName="IS_ACTIVE"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="DecisionLevelId"
     PrecisionRule="true"
@@ -350,12 +380,6 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
-  <ViewAttribute
-    Name="OppurtunityName"
-    PrecisionRule="true"
-    EntityAttrName="OppurtunityName"
-    EntityUsage="OpportunityEO"
-    AliasName="OPPURTUNITY_NAME"/>
   <ViewCriteria
     Name="OpportunitiesUVOCriteria"
     ViewObjectName="model.customer.UVO.OpportunitiesUVO"

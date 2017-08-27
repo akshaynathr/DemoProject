@@ -9,7 +9,8 @@
   DBObjectType="table"
   DBObjectName="OPPORTUNITIES"
   AliasName="OpportunityEO"
-  BindingStyle="OracleName">
+  BindingStyle="OracleName"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <Attribute
     Name="OpportunityId"
     Precision="10"
@@ -48,6 +49,15 @@
           ResId="WinProbablity_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:RangeValidationBean
+      Name="WinProbablityRule0"
+      ResId="WinProbablity_Rule_0"
+      MessageFlavor="IGNORE_DETAILS"
+      OnAttribute="WinProbablity"
+      OperandType="LITERAL"
+      Inverse="false"
+      MinValue="0"
+      MaxValue="1"/>
   </Attribute>
   <Attribute
     Name="StartDate"
@@ -133,7 +143,17 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="OPPORTUNITIES"/>
+    TableName="OPPORTUNITIES">
+    <validation:CompareValidationBean
+      Name="RevenueRule0"
+      ResId="Revenue_Rule_0"
+      MessageFlavor="IGNORE_DETAILS"
+      OnAttribute="Revenue"
+      OperandType="LITERAL"
+      Inverse="false"
+      CompareType="GREATERTHAN"
+      CompareValue="0"/>
+  </Attribute>
   <Attribute
     Name="BestCaseRevenue"
     Precision="20"
@@ -149,6 +169,14 @@
           ResId="BestCaseRevenue_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:CompareValidationBean
+      Name="BestCaseRevenueRule0"
+      ResId="BestCaseRevenue_Rule_0"
+      OnAttribute="BestCaseRevenue"
+      OperandType="LITERAL"
+      Inverse="false"
+      CompareType="GREATERTHAN"
+      CompareValue="0"/>
   </Attribute>
   <Attribute
     Name="WorstCaseRevenue"
@@ -165,6 +193,15 @@
           ResId="WorstCaseRevenue_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:CompareValidationBean
+      Name="WorstCaseRevenueRule0"
+      ResId="WorstCaseRevenue_Rule_0"
+      MessageFlavor="IGNORE_DETAILS"
+      OnAttribute="WorstCaseRevenue"
+      OperandType="LITERAL"
+      Inverse="false"
+      CompareType="GREATERTHAN"
+      CompareValue="0"/>
   </Attribute>
   <Attribute
     Name="IsBudgeted"
@@ -201,6 +238,15 @@
           ResId="BudgetAmount_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:CompareValidationBean
+      Name="BudgetAmountRule0"
+      ResId="BudgetAmount_Rule_0"
+      MessageFlavor="IGNORE_DETAILS"
+      OnAttribute="BudgetAmount"
+      OperandType="LITERAL"
+      Inverse="false"
+      CompareType="GREATERTHAN"
+      CompareValue="0"/>
   </Attribute>
   <Attribute
     Name="EstimatedDurationInDays"
@@ -210,7 +256,8 @@
     SQLType="NUMERIC"
     Type="java.lang.Long"
     ColumnType="NUMBER"
-    TableName="OPPORTUNITIES">
+    TableName="OPPORTUNITIES"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
@@ -219,6 +266,15 @@
           ResId="EstimatedDurationInDays_TOOLTIP"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:CompareValidationBean
+      Name="EstimatedDurationInDaysRule0"
+      ResId="EstimatedDurationInDays_Rule_0"
+      MessageFlavor="IGNORE_DETAILS"
+      OnAttribute="EstimatedDurationInDays"
+      OperandType="LITERAL"
+      Inverse="false"
+      CompareType="GREATERTHAN"
+      CompareValue="0"/>
   </Attribute>
   <Attribute
     Name="RiskLevel"
@@ -227,7 +283,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="OPPORTUNITIES">
+    TableName="OPPORTUNITIES"
+    IsQueriable="false">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
@@ -245,7 +302,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="OPPORTUNITIES">
+    TableName="OPPORTUNITIES"
+    IsQueriable="false">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
@@ -389,6 +447,15 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
+    <validation:LengthValidationBean
+      Name="OppurtunityNameRule0"
+      ResId="OppurtunityName_Rule_0"
+      MessageFlavor="IGNORE_DETAILS"
+      OnAttribute="OppurtunityName"
+      CompareType="GREATERTHAN"
+      DataType="CHARACTER"
+      CompareLength="0"
+      Inverse="false"/>
   </Attribute>
   <Attribute
     Name="QuarterNo"
