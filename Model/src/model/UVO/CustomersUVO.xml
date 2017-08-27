@@ -385,6 +385,31 @@
     ViewLink="model.VL.CustomerToOpportunityVL"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="OpportunitiesU1"
+    ViewLink="model.VL.insertion.CustomerToOpportunitiesVL"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="AppointmentsU1"
+    ViewLink="model.VL.insertion.CustomerToAppointmentsVL"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="ContactsU1"
+    ViewLink="model.VL.insertion.CustomerToContactsVL"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="NotesU2"
+    ViewLink="model.VL.insertion.CustomerToNotesVL"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TasksU1"
+    ViewLink="model.VL.insertion.CustomerToTasksVL"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <DeclarativeWhereClause
     Name="DeclarativeWhereClause">
     <ViewCriteria

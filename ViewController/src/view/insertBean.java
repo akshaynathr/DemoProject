@@ -332,6 +332,7 @@ public class insertBean {
     private RichPanelGroupLayout pgl32;
     private RichQuickQuery qryId20;
     private RichCommandLink cl20;
+    private RichTable t11;
 
     public insertBean() {
     }
@@ -3151,5 +3152,13 @@ public class insertBean {
 
     public RichCommandLink getCl20() {
         return cl20;
+    }
+
+    public void setT11(RichTable t11) {
+        this.t11 = t11;
+    }
+
+    public RichTable getT11() {
+        return t11;
     }
 }
