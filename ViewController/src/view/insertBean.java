@@ -170,7 +170,6 @@ public class insertBean {
     private RichTable md2;
     private RichPanelTabbed pt4;
     private RichShowDetailItem customers;
-    private RichShowDetailItem tab6;
     private RichTable t23;
     private RichPopup p1;
     private RichDialog d2;
@@ -303,6 +302,36 @@ public class insertBean {
     private RichGridRow gr6;
     private RichGridCell gc6;
     private RichTable t10;
+    private RichButton b5;
+    private RichButton b16;
+    private RichButton b26;
+    private RichButton b27;
+    private RichButton b28;
+    private RichButton b29;
+    private RichButton b30;
+    private RichButton b31;
+    private RichButton b32;
+    private RichButton b33;
+    private RichButton b34;
+    private RichButton b35;
+    private RichButton b36;
+    private RichPanelGroupLayout pgl22;
+    private RichQuickQuery qryId11;
+    private RichCommandLink cl11;
+    private RichButton b37;
+    private RichPanelGroupLayout pgl30;
+    private RichQuickQuery qryId18;
+    private RichCommandLink cl18;
+    private RichButton b38;
+    private RichButton b39;
+    private RichPanelGroupLayout pgl31;
+    private RichQuickQuery qryId19;
+    private RichCommandLink cl19;
+    private RichButton b40;
+    private RichButton b41;
+    private RichPanelGroupLayout pgl32;
+    private RichQuickQuery qryId20;
+    private RichCommandLink cl20;
 
     public insertBean() {
     }
@@ -1803,13 +1832,6 @@ public class insertBean {
         return customers;
     }
 
-    public void setTab6(RichShowDetailItem tab6) {
-        this.tab6 = tab6;
-    }
-
-    public RichShowDetailItem getTab6() {
-        return tab6;
-    }
 
     public void setT23(RichTable t23) {
         this.t23 = t23;
@@ -2885,5 +2907,249 @@ public class insertBean {
 
     public RichTable getT10() {
         return t10;
+    }
+
+    public void setB5(RichButton b5) {
+        this.b5 = b5;
+    }
+
+    public RichButton getB5() {
+        return b5;
+    }
+
+    public void setB16(RichButton b16) {
+        this.b16 = b16;
+    }
+
+    public RichButton getB16() {
+        return b16;
+    }
+
+    public void setB26(RichButton b26) {
+        this.b26 = b26;
+    }
+
+    public RichButton getB26() {
+        return b26;
+    }
+
+    public void setB27(RichButton b27) {
+        this.b27 = b27;
+    }
+
+    public RichButton getB27() {
+        return b27;
+    }
+
+    public void setB28(RichButton b28) {
+        this.b28 = b28;
+    }
+
+    public RichButton getB28() {
+        return b28;
+    }
+
+    public void setB29(RichButton b29) {
+        this.b29 = b29;
+    }
+
+    public RichButton getB29() {
+        return b29;
+    }
+
+    public void setB30(RichButton b30) {
+        this.b30 = b30;
+    }
+
+    public RichButton getB30() {
+        return b30;
+    }
+
+    public void setB31(RichButton b31) {
+        this.b31 = b31;
+    }
+
+    public RichButton getB31() {
+        return b31;
+    }
+
+    public void setB32(RichButton b32) {
+        this.b32 = b32;
+    }
+
+    public RichButton getB32() {
+        return b32;
+    }
+
+    public void setB33(RichButton b33) {
+        this.b33 = b33;
+    }
+
+    public RichButton getB33() {
+        return b33;
+    }
+
+    public void setB34(RichButton b34) {
+        this.b34 = b34;
+    }
+
+    public RichButton getB34() {
+        return b34;
+    }
+
+    public void setB35(RichButton b35) {
+        this.b35 = b35;
+    }
+
+    public RichButton getB35() {
+        return b35;
+    }
+
+    public void setB36(RichButton b36) {
+        this.b36 = b36;
+    }
+
+    public RichButton getB36() {
+        return b36;
+    }
+
+    public void setPgl22(RichPanelGroupLayout pgl22) {
+        this.pgl22 = pgl22;
+    }
+
+    public RichPanelGroupLayout getPgl22() {
+        return pgl22;
+    }
+
+
+    public void setQryId11(RichQuickQuery qryId11) {
+        this.qryId11 = qryId11;
+    }
+
+    public RichQuickQuery getQryId11() {
+        return qryId11;
+    }
+
+    public void setCl11(RichCommandLink cl11) {
+        this.cl11 = cl11;
+    }
+
+    public RichCommandLink getCl11() {
+        return cl11;
+    }
+
+    public void setB37(RichButton b37) {
+        this.b37 = b37;
+    }
+
+    public RichButton getB37() {
+        return b37;
+    }
+
+    public void setPgl30(RichPanelGroupLayout pgl30) {
+        this.pgl30 = pgl30;
+    }
+
+    public RichPanelGroupLayout getPgl30() {
+        return pgl30;
+    }
+
+
+    public void setQryId18(RichQuickQuery qryId18) {
+        this.qryId18 = qryId18;
+    }
+
+    public RichQuickQuery getQryId18() {
+        return qryId18;
+    }
+
+    public void setCl18(RichCommandLink cl18) {
+        this.cl18 = cl18;
+    }
+
+    public RichCommandLink getCl18() {
+        return cl18;
+    }
+
+    public void setB38(RichButton b38) {
+        this.b38 = b38;
+    }
+
+    public RichButton getB38() {
+        return b38;
+    }
+
+    public void setB39(RichButton b39) {
+        this.b39 = b39;
+    }
+
+    public RichButton getB39() {
+        return b39;
+    }
+
+    public void setPgl31(RichPanelGroupLayout pgl31) {
+        this.pgl31 = pgl31;
+    }
+
+    public RichPanelGroupLayout getPgl31() {
+        return pgl31;
+    }
+
+
+    public void setQryId19(RichQuickQuery qryId19) {
+        this.qryId19 = qryId19;
+    }
+
+    public RichQuickQuery getQryId19() {
+        return qryId19;
+    }
+
+    public void setCl19(RichCommandLink cl19) {
+        this.cl19 = cl19;
+    }
+
+    public RichCommandLink getCl19() {
+        return cl19;
+    }
+
+    public void setB40(RichButton b40) {
+        this.b40 = b40;
+    }
+
+    public RichButton getB40() {
+        return b40;
+    }
+
+    public void setB41(RichButton b41) {
+        this.b41 = b41;
+    }
+
+    public RichButton getB41() {
+        return b41;
+    }
+
+    public void setPgl32(RichPanelGroupLayout pgl32) {
+        this.pgl32 = pgl32;
+    }
+
+    public RichPanelGroupLayout getPgl32() {
+        return pgl32;
+    }
+
+
+    public void setQryId20(RichQuickQuery qryId20) {
+        this.qryId20 = qryId20;
+    }
+
+    public RichQuickQuery getQryId20() {
+        return qryId20;
+    }
+
+    public void setCl20(RichCommandLink cl20) {
+        this.cl20 = cl20;
+    }
+
+    public RichCommandLink getCl20() {
+        return cl20;
     }
 }

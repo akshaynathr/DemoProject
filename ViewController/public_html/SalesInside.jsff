@@ -122,6 +122,7 @@
                   <af:toolbox id="t24" binding="#{backingBeanScope.InsertBean.t24}">
                     <af:toolbar id="t25" binding="#{backingBeanScope.InsertBean.t25}">
                       <af:button text="button 4" id="b3" binding="#{backingBeanScope.InsertBean.b3}" rendered="false"/>
+                      <af:button text="Create Opportunities" id="b5" binding="#{backingBeanScope.InsertBean.b5}"/>
                     </af:toolbar>
                   </af:toolbox>
                   <af:table value="#{bindings.OpportunitiesU2.collectionModel}" var="row"
@@ -455,6 +456,7 @@
                                           binding="#{backingBeanScope.InsertBean.cl8}"/>
                         </f:facet>
                       </af:quickQuery>
+                      <af:button text="Add " id="b16" binding="#{backingBeanScope.InsertBean.b16}"/>
                     </af:panelGroupLayout>
                   </f:facet>
                   <f:facet name="bottom"/>
@@ -555,6 +557,7 @@
                                    halign="center">
                 <af:button actionListener="#{bindings.Delete1.execute}" text="Delete Task related to Opportunity"
                            id="b15" binding="#{backingBeanScope.InsertBean.b15}"/>
+                <af:button text="Add" id="b26" binding="#{backingBeanScope.InsertBean.b26}"/>
               </af:panelGroupLayout>
               <af:panelGridLayout id="pgl16" binding="#{backingBeanScope.InsertBean.pgl16}">
                 <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr4"
@@ -652,6 +655,7 @@
                              binding="#{backingBeanScope.InsertBean.b14}"/>
                   <af:button actionListener="#{bindings.Delete.execute}" text="Delete" id="b13"
                              binding="#{backingBeanScope.InsertBean.b13}"/>
+                  <af:button text="Add" id="b27" binding="#{backingBeanScope.InsertBean.b27}"/>
                 </af:panelGroupLayout>
               </af:panelGroupLayout>
               <af:panelGridLayout id="pgl8" binding="#{backingBeanScope.InsertBean.pgl8}">
@@ -885,7 +889,7 @@
                                     binding="#{backingBeanScope.InsertBean.cl1}"/>
                   </f:facet>
                 </af:quickQuery>
-                <af:button text="Add appointments" id="b9" binding="#{backingBeanScope.InsertBean.b9}">
+                <af:button text="Add " id="b9" binding="#{backingBeanScope.InsertBean.b9}">
                   <af:showPopupBehavior popupId="p2"/>
                 </af:button>
                 <af:button text="Delete Appointments related to Opportunity" id="b11"
@@ -998,7 +1002,7 @@
               </af:table>
             </af:showDetailItem>
             <af:showDetailItem text="Notes" id="sdi14" binding="#{backingBeanScope.InsertBean.sdi14}">
-              <af:panelGroupLayout layout="vertical" id="pgl11" binding="#{backingBeanScope.InsertBean.pgl11}">
+              <af:panelGroupLayout layout="horizontal" id="pgl11" binding="#{backingBeanScope.InsertBean.pgl11}">
                 <af:quickQuery label="Search" searchDesc="Search" id="qryId4"
                                value="#{bindings.ImplicitViewCriteriaQuery3.quickQueryDescriptor}"
                                model="#{bindings.ImplicitViewCriteriaQuery3.queryModel}"
@@ -1012,6 +1016,7 @@
                     <af:showPopupBehavior popupId="::p3"/>
                   </af:button>
                 </af:quickQuery>
+                <af:button text="Add" id="b28" binding="#{backingBeanScope.InsertBean.b28}"/>
               </af:panelGroupLayout>
               <af:table value="#{bindings.NotesU2.collectionModel}" var="row" rows="#{bindings.NotesU2.rangeSize}"
                         emptyText="#{bindings.NotesU2.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -1510,6 +1515,7 @@
                                     binding="#{backingBeanScope.InsertBean.cl16}"/>
                   </f:facet>
                 </af:quickQuery>
+                <af:button text="Add" id="b29" binding="#{backingBeanScope.InsertBean.b29}"/>
                 <af:button actionListener="#{bindings.Delete3.execute}" text="Delete" id="b24"
                            binding="#{backingBeanScope.InsertBean.b24}"/>
                 <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
@@ -1951,6 +1957,7 @@
                                     binding="#{backingBeanScope.InsertBean.cl17}"/>
                   </f:facet>
                 </af:quickQuery>
+                <af:button text="Add" id="b30" binding="#{backingBeanScope.InsertBean.b30}"/>
                 <af:button actionListener="#{bindings.Delete3.execute}" text="Delete" id="b22"
                            binding="#{backingBeanScope.InsertBean.b22}"/>
                 <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
@@ -2069,6 +2076,7 @@
               </af:table>
             </af:showDetailItem>
             <af:showDetailItem text="Contacts" id="sdi8" binding="#{backingBeanScope.InsertBean.sdi8}">
+              <af:button text="Add " id="b31" binding="#{backingBeanScope.InsertBean.b31}"/>
               <af:table value="#{bindings.ContactsU2.collectionModel}" var="row" rows="#{bindings.ContactsU2.rangeSize}"
                         emptyText="#{bindings.ContactsU2.viewable ? 'No data to display.' : 'Access Denied.'}"
                         rowBandingInterval="0" selectedRowKeys="#{bindings.ContactsU2.collectionModel.selectedRow}"
@@ -2176,7 +2184,7 @@
             </af:showDetailItem>
             <af:showDetailItem id="tab3" text="Notes" binding="#{backingBeanScope.InsertBean.tab3}">
               <af:panelGroupLayout id="pgl1" binding="#{backingBeanScope.InsertBean.pgl1}">
-                <af:panelHeader text="NotesU1" id="ph2" binding="#{backingBeanScope.InsertBean.ph2}">
+                <af:panelHeader text="Notes" id="ph2" binding="#{backingBeanScope.InsertBean.ph2}">
                   <af:button actionListener="#{bindings.CreateInsert1.execute}" text="Create Notes"
                              disabled="#{!bindings.CreateInsert1.enabled}" id="b4"
                              binding="#{backingBeanScope.InsertBean.b4}"/>
@@ -2293,6 +2301,7 @@
                                     binding="#{backingBeanScope.InsertBean.cl2}"/>
                   </f:facet>
                 </af:quickQuery>
+                <af:button text="Add" id="b32" binding="#{backingBeanScope.InsertBean.b32}"/>
                 <af:button text="Delete Tasks related to Customers" id="b19"
                            binding="#{backingBeanScope.InsertBean.b19}"
                            action="#{backingBeanScope.InsertBean.deleteCustomerTasksLink}"/>
@@ -2395,7 +2404,7 @@
                            binding="#{backingBeanScope.InsertBean.sdi4}">
           <af:panelGroupLayout id="pgl19" binding="#{backingBeanScope.InsertBean.pgl19}">
             <af:panelHeader text="Tasks" id="ph10" binding="#{backingBeanScope.InsertBean.ph10}">
-              <af:panelGroupLayout layout="vertical" id="pgl2" binding="#{backingBeanScope.InsertBean.pgl2}">
+              <af:panelGroupLayout layout="horizontal" id="pgl2" binding="#{backingBeanScope.InsertBean.pgl2}">
                 <af:quickQuery label="Search" searchDesc="Search" id="qryId5"
                                value="#{bindings.ImplicitViewCriteriaQuery4.quickQueryDescriptor}"
                                model="#{bindings.ImplicitViewCriteriaQuery4.queryModel}"
@@ -2406,6 +2415,7 @@
                                     binding="#{backingBeanScope.InsertBean.cl5}"/>
                   </f:facet>
                 </af:quickQuery>
+                <af:button text="Add" id="b33" binding="#{backingBeanScope.InsertBean.b33}"/>
               </af:panelGroupLayout>
               <af:table id="md2" rows="#{bindings.TasksU3.rangeSize}" fetchSize="#{bindings.TasksU3.rangeSize}"
                         emptyText="#{bindings.TasksU3.viewable ? 'No data to display.' : 'Access Denied.'}" var="row"
@@ -2480,6 +2490,19 @@
             </af:panelHeader>
             <af:panelTabbed position="above" id="pt4" binding="#{backingBeanScope.InsertBean.pt4}">
               <af:showDetailItem id="customers" text="Customers" binding="#{backingBeanScope.InsertBean.customers}">
+                <af:panelGroupLayout layout="horizontal" id="pgl30" binding="#{backingBeanScope.InsertBean.pgl30}">
+                  <af:quickQuery label="Search" searchDesc="Search" id="qryId18"
+                                 value="#{bindings.ImplicitViewCriteriaQuery17.quickQueryDescriptor}"
+                                 model="#{bindings.ImplicitViewCriteriaQuery17.queryModel}"
+                                 queryListener="#{bindings.ImplicitViewCriteriaQuery17.processQuery}"
+                                 binding="#{backingBeanScope.InsertBean.qryId18}">
+                    <f:facet name="end">
+                      <af:commandLink text="Advanced" rendered="false" id="cl18"
+                                      binding="#{backingBeanScope.InsertBean.cl18}"/>
+                    </f:facet>
+                  </af:quickQuery>
+                  <af:button text="Add" id="b38" binding="#{backingBeanScope.InsertBean.b38}"/>
+                </af:panelGroupLayout>
                 <af:table value="#{bindings.CustomersU21.collectionModel}" var="row"
                           rows="#{bindings.CustomersU21.rangeSize}"
                           emptyText="#{bindings.CustomersU21.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -2552,7 +2575,6 @@
                   </af:column>
                 </af:table>
               </af:showDetailItem>
-              <af:showDetailItem id="tab6" text="Tab Label 6" binding="#{backingBeanScope.InsertBean.tab6}"/>
             </af:panelTabbed>
           </af:panelGroupLayout>
         </af:showDetailItem>
@@ -2571,6 +2593,7 @@
                                   binding="#{backingBeanScope.InsertBean.cl12}"/>
                 </f:facet>
               </af:quickQuery>
+              <af:button text="Add" id="b34" binding="#{backingBeanScope.InsertBean.b34}"/>
             </af:panelHeader>
             <af:table value="#{bindings.AppointmentsU1.collectionModel}" var="row"
                       rows="#{bindings.AppointmentsU1.rangeSize}"
@@ -2680,7 +2703,7 @@
           </af:panelGroupLayout>
           <af:panelTabbed position="above" id="pt5" binding="#{backingBeanScope.InsertBean.pt5}">
             <af:showDetailItem id="tab5" text="Interactions" binding="#{backingBeanScope.InsertBean.tab5}">
-              <af:panelGroupLayout layout="vertical" id="pgl26" binding="#{backingBeanScope.InsertBean.pgl26}">
+              <af:panelGroupLayout layout="horizontal" id="pgl26" binding="#{backingBeanScope.InsertBean.pgl26}">
                 <af:quickQuery label="Search" searchDesc="Search" id="qryId13"
                                value="#{bindings.ImplicitViewCriteriaQuery12.quickQueryDescriptor}"
                                model="#{bindings.ImplicitViewCriteriaQuery12.queryModel}"
@@ -2691,70 +2714,83 @@
                                     binding="#{backingBeanScope.InsertBean.cl13}"/>
                   </f:facet>
                 </af:quickQuery>
-                <af:table value="#{bindings.Interactions2.collectionModel}" var="row"
-                          rows="#{bindings.Interactions2.rangeSize}"
-                          emptyText="#{bindings.Interactions2.viewable ? 'No data to display.' : 'Access Denied.'}"
-                          rowBandingInterval="0" selectedRowKeys="#{bindings.Interactions2.collectionModel.selectedRow}"
-                          selectionListener="#{bindings.Interactions2.collectionModel.makeCurrent}"
-                          rowSelection="single" fetchSize="#{bindings.Interactions2.rangeSize}"
-                          filterModel="#{bindings.ImplicitViewCriteriaQuery12.quickQueryDescriptor}"
-                          filterVisible="true" queryListener="#{bindings.ImplicitViewCriteriaQuery12.processQuery}"
-                          varStatus="vs" partialTriggers="::qryId13" id="t4"
-                          binding="#{backingBeanScope.InsertBean.t4}">
-                  <af:column sortProperty="#{bindings.Interactions2.hints.InteractionTypeId.name}" filterable="true"
-                             sortable="true" headerText="#{bindings.Interactions2.hints.InteractionTypeId.label}"
-                             id="c68">
-                    <af:outputText value="#{row.InteractionTypeId}"
-                                   shortDesc="#{bindings.Interactions2.hints.InteractionTypeId.tooltip}" id="ot60">
-                      <af:convertNumber groupingUsed="false"
-                                        pattern="#{bindings.Interactions2.hints.InteractionTypeId.format}"/>
-                    </af:outputText>
-                  </af:column>
-                  <af:column sortProperty="#{bindings.Interactions2.hints.Description.name}" filterable="true"
-                             sortable="true" headerText="#{bindings.Interactions2.hints.Description.label}" id="c69">
-                    <af:outputText value="#{row.Description}"
-                                   shortDesc="#{bindings.Interactions2.hints.Description.tooltip}" id="ot61"/>
-                  </af:column>
-                  <af:column sortProperty="#{bindings.Interactions2.hints.Resolution.name}" filterable="true"
-                             sortable="true" headerText="#{bindings.Interactions2.hints.Resolution.label}" id="c70">
-                    <af:outputText value="#{row.Resolution}"
-                                   shortDesc="#{bindings.Interactions2.hints.Resolution.tooltip}" id="ot62"/>
-                  </af:column>
-                  <af:column sortProperty="#{bindings.Interactions2.hints.Direction.name}" filterable="true"
-                             sortable="true" headerText="#{bindings.Interactions2.hints.Direction.label}" id="c71">
-                    <af:outputText value="#{row.Direction}"
-                                   shortDesc="#{bindings.Interactions2.hints.Direction.tooltip}" id="ot63"/>
-                  </af:column>
-                  <af:column sortProperty="#{bindings.Interactions2.hints.StartDate.name}" filterable="true"
-                             sortable="true" headerText="#{bindings.Interactions2.hints.StartDate.label}" id="c72">
-                    <f:facet name="filter">
-                      <af:inputDate value="#{bindings.ImplicitViewCriteriaQuery12.queryDescriptor.filterConjunctionCriterion.criterionMap.StartDate.value}"
-                                    id="id24" binding="#{backingBeanScope.InsertBean.id24}">
-                        <af:convertDateTime pattern="#{bindings.Interactions2.hints.StartDate.format}"/>
-                      </af:inputDate>
-                    </f:facet>
-                    <af:outputText value="#{row.StartDate}"
-                                   shortDesc="#{bindings.Interactions2.hints.StartDate.tooltip}" id="ot81">
-                      <af:convertDateTime pattern="#{bindings.Interactions2.hints.StartDate.format}"/>
-                    </af:outputText>
-                  </af:column>
-                  <af:column sortProperty="#{bindings.Interactions2.hints.EndDate.name}" filterable="true"
-                             sortable="true" headerText="#{bindings.Interactions2.hints.EndDate.label}" id="c73">
-                    <f:facet name="filter">
-                      <af:inputDate value="#{bindings.ImplicitViewCriteriaQuery12.queryDescriptor.filterConjunctionCriterion.criterionMap.EndDate.value}"
-                                    id="id25" binding="#{backingBeanScope.InsertBean.id25}">
-                        <af:convertDateTime pattern="#{bindings.Interactions2.hints.EndDate.format}"/>
-                      </af:inputDate>
-                    </f:facet>
-                    <af:outputText value="#{row.EndDate}" shortDesc="#{bindings.Interactions2.hints.EndDate.tooltip}"
-                                   id="ot82">
-                      <af:convertDateTime pattern="#{bindings.Interactions2.hints.EndDate.format}"/>
-                    </af:outputText>
-                  </af:column>
-                </af:table>
+                <af:button text="Add" id="b39" binding="#{backingBeanScope.InsertBean.b39}"/>
               </af:panelGroupLayout>
+              <af:table value="#{bindings.Interactions2.collectionModel}" var="row"
+                        rows="#{bindings.Interactions2.rangeSize}"
+                        emptyText="#{bindings.Interactions2.viewable ? 'No data to display.' : 'Access Denied.'}"
+                        rowBandingInterval="0" selectedRowKeys="#{bindings.Interactions2.collectionModel.selectedRow}"
+                        selectionListener="#{bindings.Interactions2.collectionModel.makeCurrent}" rowSelection="single"
+                        fetchSize="#{bindings.Interactions2.rangeSize}"
+                        filterModel="#{bindings.ImplicitViewCriteriaQuery12.quickQueryDescriptor}" filterVisible="true"
+                        queryListener="#{bindings.ImplicitViewCriteriaQuery12.processQuery}" varStatus="vs"
+                        partialTriggers="::qryId13" id="t4" binding="#{backingBeanScope.InsertBean.t4}">
+                <af:column sortProperty="#{bindings.Interactions2.hints.InteractionTypeId.name}" filterable="true"
+                           sortable="true" headerText="#{bindings.Interactions2.hints.InteractionTypeId.label}"
+                           id="c68">
+                  <af:outputText value="#{row.InteractionTypeId}"
+                                 shortDesc="#{bindings.Interactions2.hints.InteractionTypeId.tooltip}" id="ot60">
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.Interactions2.hints.InteractionTypeId.format}"/>
+                  </af:outputText>
+                </af:column>
+                <af:column sortProperty="#{bindings.Interactions2.hints.Description.name}" filterable="true"
+                           sortable="true" headerText="#{bindings.Interactions2.hints.Description.label}" id="c69">
+                  <af:outputText value="#{row.Description}"
+                                 shortDesc="#{bindings.Interactions2.hints.Description.tooltip}" id="ot61"/>
+                </af:column>
+                <af:column sortProperty="#{bindings.Interactions2.hints.Resolution.name}" filterable="true"
+                           sortable="true" headerText="#{bindings.Interactions2.hints.Resolution.label}" id="c70">
+                  <af:outputText value="#{row.Resolution}"
+                                 shortDesc="#{bindings.Interactions2.hints.Resolution.tooltip}" id="ot62"/>
+                </af:column>
+                <af:column sortProperty="#{bindings.Interactions2.hints.Direction.name}" filterable="true"
+                           sortable="true" headerText="#{bindings.Interactions2.hints.Direction.label}" id="c71">
+                  <af:outputText value="#{row.Direction}" shortDesc="#{bindings.Interactions2.hints.Direction.tooltip}"
+                                 id="ot63"/>
+                </af:column>
+                <af:column sortProperty="#{bindings.Interactions2.hints.StartDate.name}" filterable="true"
+                           sortable="true" headerText="#{bindings.Interactions2.hints.StartDate.label}" id="c72">
+                  <f:facet name="filter">
+                    <af:inputDate value="#{bindings.ImplicitViewCriteriaQuery12.queryDescriptor.filterConjunctionCriterion.criterionMap.StartDate.value}"
+                                  id="id24" binding="#{backingBeanScope.InsertBean.id24}">
+                      <af:convertDateTime pattern="#{bindings.Interactions2.hints.StartDate.format}"/>
+                    </af:inputDate>
+                  </f:facet>
+                  <af:outputText value="#{row.StartDate}" shortDesc="#{bindings.Interactions2.hints.StartDate.tooltip}"
+                                 id="ot81">
+                    <af:convertDateTime pattern="#{bindings.Interactions2.hints.StartDate.format}"/>
+                  </af:outputText>
+                </af:column>
+                <af:column sortProperty="#{bindings.Interactions2.hints.EndDate.name}" filterable="true" sortable="true"
+                           headerText="#{bindings.Interactions2.hints.EndDate.label}" id="c73">
+                  <f:facet name="filter">
+                    <af:inputDate value="#{bindings.ImplicitViewCriteriaQuery12.queryDescriptor.filterConjunctionCriterion.criterionMap.EndDate.value}"
+                                  id="id25" binding="#{backingBeanScope.InsertBean.id25}">
+                      <af:convertDateTime pattern="#{bindings.Interactions2.hints.EndDate.format}"/>
+                    </af:inputDate>
+                  </f:facet>
+                  <af:outputText value="#{row.EndDate}" shortDesc="#{bindings.Interactions2.hints.EndDate.tooltip}"
+                                 id="ot82">
+                    <af:convertDateTime pattern="#{bindings.Interactions2.hints.EndDate.format}"/>
+                  </af:outputText>
+                </af:column>
+              </af:table>
             </af:showDetailItem>
             <af:showDetailItem text="Opportunities" id="sdi16" binding="#{backingBeanScope.InsertBean.sdi16}">
+              <af:panelGroupLayout layout="vertical" id="pgl31" binding="#{backingBeanScope.InsertBean.pgl31}">
+                <af:quickQuery label="Search" searchDesc="Search" id="qryId19"
+                               value="#{bindings.ImplicitViewCriteriaQuery18.quickQueryDescriptor}"
+                               model="#{bindings.ImplicitViewCriteriaQuery18.queryModel}"
+                               queryListener="#{bindings.ImplicitViewCriteriaQuery18.processQuery}"
+                               binding="#{backingBeanScope.InsertBean.qryId19}">
+                  <f:facet name="end">
+                    <af:commandLink text="Advanced" rendered="false" id="cl19"
+                                    binding="#{backingBeanScope.InsertBean.cl19}"/>
+                  </f:facet>
+                </af:quickQuery>
+                <af:button text="Add" id="b40" binding="#{backingBeanScope.InsertBean.b40}"/>
+              </af:panelGroupLayout>
               <af:table value="#{bindings.OpportunitiesU6.collectionModel}" var="row"
                         rows="#{bindings.OpportunitiesU6.rangeSize}"
                         emptyText="#{bindings.OpportunitiesU6.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -2922,7 +2958,7 @@
               </af:table>
             </af:showDetailItem>
             <af:showDetailItem text="Customers" id="sdi17" binding="#{backingBeanScope.InsertBean.sdi17}">
-              <af:panelGroupLayout layout="vertical" id="pgl28" binding="#{backingBeanScope.InsertBean.pgl28}">
+              <af:panelGroupLayout layout="horizontal" id="pgl28" binding="#{backingBeanScope.InsertBean.pgl28}">
                 <af:quickQuery label="Search" searchDesc="Search" id="qryId15"
                                value="#{bindings.ImplicitViewCriteriaQuery14.quickQueryDescriptor}"
                                model="#{bindings.ImplicitViewCriteriaQuery14.queryModel}"
@@ -2933,78 +2969,78 @@
                                     binding="#{backingBeanScope.InsertBean.cl15}"/>
                   </f:facet>
                 </af:quickQuery>
-                <af:table value="#{bindings.CustomersU5.collectionModel}" var="row"
-                          rows="#{bindings.CustomersU5.rangeSize}"
-                          emptyText="#{bindings.CustomersU5.viewable ? 'No data to display.' : 'Access Denied.'}"
-                          rowBandingInterval="0" selectedRowKeys="#{bindings.CustomersU5.collectionModel.selectedRow}"
-                          selectionListener="#{bindings.CustomersU5.collectionModel.makeCurrent}" rowSelection="single"
-                          fetchSize="#{bindings.CustomersU5.rangeSize}"
-                          filterModel="#{bindings.ImplicitViewCriteriaQuery14.quickQueryDescriptor}"
-                          filterVisible="true" queryListener="#{bindings.ImplicitViewCriteriaQuery14.processQuery}"
-                          varStatus="vs" partialTriggers="::qryId15" id="t26"
-                          binding="#{backingBeanScope.InsertBean.t26}">
-                  <af:column sortProperty="#{bindings.CustomersU5.hints.CustomerName.name}" filterable="true"
-                             sortable="true" headerText="#{bindings.CustomersU5.hints.CustomerName.label}" id="c153">
-                    <af:outputText value="#{row.CustomerName}"
-                                   shortDesc="#{bindings.CustomersU5.hints.CustomerName.tooltip}" id="ot102"/>
-                  </af:column>
-                  <af:column sortProperty="#{bindings.CustomersU5.hints.CustomerTypeId.name}" filterable="true"
-                             sortable="true" headerText="#{bindings.CustomersU5.hints.CustomerTypeId.label}" id="c154">
-                    <af:selectOneChoice value="#{row.bindings.CustomerTypeId.inputValue}"
-                                        label="#{row.bindings.CustomerTypeId.label}"
-                                        required="#{bindings.CustomersU5.hints.CustomerTypeId.mandatory}"
-                                        shortDesc="#{bindings.CustomersU5.hints.CustomerTypeId.tooltip}" readOnly="true"
-                                        id="soc18">
-                      <f:selectItems value="#{row.bindings.CustomerTypeId.items}" id="si18"/>
-                      <f:validator binding="#{row.bindings.CustomerTypeId.validator}"/>
-                    </af:selectOneChoice>
-                  </af:column>
-                  <af:column sortProperty="#{bindings.CustomersU5.hints.PrimaryContactId.name}" sortable="true"
-                             headerText="#{bindings.CustomersU5.hints.PrimaryContactId.label}" filterable="true"
-                             id="c155">
-                    <af:selectOneChoice value="#{row.bindings.PrimaryContactId.inputValue}"
-                                        label="#{row.bindings.PrimaryContactId.label}"
-                                        required="#{bindings.CustomersU5.hints.PrimaryContactId.mandatory}"
-                                        shortDesc="#{bindings.CustomersU5.hints.PrimaryContactId.tooltip}"
-                                        readOnly="true" id="soc38">
-                      <f:selectItems value="#{row.bindings.PrimaryContactId.items}" id="si38"/>
-                      <f:validator binding="#{row.bindings.PrimaryContactId.validator}"/>
-                    </af:selectOneChoice>
-                  </af:column>
-                  <af:column sortProperty="#{bindings.CustomersU5.hints.Url.name}" sortable="true"
-                             headerText="#{bindings.CustomersU5.hints.Url.label}" filterable="true" id="c156">
-                    <af:outputText value="#{row.Url}" shortDesc="#{bindings.CustomersU5.hints.Url.tooltip}" id="ot103"/>
-                  </af:column>
-                  <af:column sortProperty="#{bindings.CustomersU5.hints.ParentCompany.name}" sortable="true"
-                             headerText="#{bindings.CustomersU5.hints.ParentCompany.label}" filterable="true" id="c161">
-                    <af:outputText value="#{row.ParentCompany}"
-                                   shortDesc="#{bindings.CustomersU5.hints.ParentCompany.tooltip}" id="ot104"/>
-                  </af:column>
-                  <af:column sortProperty="#{bindings.CustomersU5.hints.Ceo.name}" sortable="true"
-                             headerText="#{bindings.CustomersU5.hints.Ceo.label}" filterable="true" id="c164">
-                    <af:outputText value="#{row.Ceo}" shortDesc="#{bindings.CustomersU5.hints.Ceo.tooltip}" id="ot105"/>
-                  </af:column>
-                  <af:column sortProperty="#{bindings.CustomersU5.hints.NoOfEmployees.name}" sortable="true"
-                             headerText="#{bindings.CustomersU5.hints.NoOfEmployees.label}" filterable="true" id="c165">
-                    <af:outputText value="#{row.NoOfEmployees}"
-                                   shortDesc="#{bindings.CustomersU5.hints.NoOfEmployees.tooltip}" id="ot119">
-                      <af:convertNumber groupingUsed="false"
-                                        pattern="#{bindings.CustomersU5.hints.NoOfEmployees.format}"/>
-                    </af:outputText>
-                  </af:column>
-                  <af:column sortProperty="#{bindings.CustomersU5.hints.Fax.name}" sortable="true"
-                             headerText="#{bindings.CustomersU5.hints.Fax.label}" filterable="true" id="c268">
-                    <af:outputText value="#{row.Fax}" shortDesc="#{bindings.CustomersU5.hints.Fax.tooltip}" id="ot120">
-                      <af:convertNumber groupingUsed="false" pattern="#{bindings.CustomersU5.hints.Fax.format}"/>
-                    </af:outputText>
-                  </af:column>
-                  <af:column sortProperty="#{bindings.CustomersU5.hints.Email.name}" sortable="true"
-                             headerText="#{bindings.CustomersU5.hints.Email.label}" filterable="true" id="c269">
-                    <af:outputText value="#{row.Email}" shortDesc="#{bindings.CustomersU5.hints.Email.tooltip}"
-                                   id="ot121"/>
-                  </af:column>
-                </af:table>
+                <af:button text="Add" id="b41" binding="#{backingBeanScope.InsertBean.b41}"/>
               </af:panelGroupLayout>
+              <af:table value="#{bindings.CustomersU5.collectionModel}" var="row"
+                        rows="#{bindings.CustomersU5.rangeSize}"
+                        emptyText="#{bindings.CustomersU5.viewable ? 'No data to display.' : 'Access Denied.'}"
+                        rowBandingInterval="0" selectedRowKeys="#{bindings.CustomersU5.collectionModel.selectedRow}"
+                        selectionListener="#{bindings.CustomersU5.collectionModel.makeCurrent}" rowSelection="single"
+                        fetchSize="#{bindings.CustomersU5.rangeSize}"
+                        filterModel="#{bindings.ImplicitViewCriteriaQuery14.quickQueryDescriptor}" filterVisible="true"
+                        queryListener="#{bindings.ImplicitViewCriteriaQuery14.processQuery}" varStatus="vs"
+                        partialTriggers="::qryId15" id="t26" binding="#{backingBeanScope.InsertBean.t26}">
+                <af:column sortProperty="#{bindings.CustomersU5.hints.CustomerName.name}" filterable="true"
+                           sortable="true" headerText="#{bindings.CustomersU5.hints.CustomerName.label}" id="c153">
+                  <af:outputText value="#{row.CustomerName}"
+                                 shortDesc="#{bindings.CustomersU5.hints.CustomerName.tooltip}" id="ot102"/>
+                </af:column>
+                <af:column sortProperty="#{bindings.CustomersU5.hints.CustomerTypeId.name}" filterable="true"
+                           sortable="true" headerText="#{bindings.CustomersU5.hints.CustomerTypeId.label}" id="c154">
+                  <af:selectOneChoice value="#{row.bindings.CustomerTypeId.inputValue}"
+                                      label="#{row.bindings.CustomerTypeId.label}"
+                                      required="#{bindings.CustomersU5.hints.CustomerTypeId.mandatory}"
+                                      shortDesc="#{bindings.CustomersU5.hints.CustomerTypeId.tooltip}" readOnly="true"
+                                      id="soc18">
+                    <f:selectItems value="#{row.bindings.CustomerTypeId.items}" id="si18"/>
+                    <f:validator binding="#{row.bindings.CustomerTypeId.validator}"/>
+                  </af:selectOneChoice>
+                </af:column>
+                <af:column sortProperty="#{bindings.CustomersU5.hints.PrimaryContactId.name}" sortable="true"
+                           headerText="#{bindings.CustomersU5.hints.PrimaryContactId.label}" filterable="true"
+                           id="c155">
+                  <af:selectOneChoice value="#{row.bindings.PrimaryContactId.inputValue}"
+                                      label="#{row.bindings.PrimaryContactId.label}"
+                                      required="#{bindings.CustomersU5.hints.PrimaryContactId.mandatory}"
+                                      shortDesc="#{bindings.CustomersU5.hints.PrimaryContactId.tooltip}" readOnly="true"
+                                      id="soc38">
+                    <f:selectItems value="#{row.bindings.PrimaryContactId.items}" id="si38"/>
+                    <f:validator binding="#{row.bindings.PrimaryContactId.validator}"/>
+                  </af:selectOneChoice>
+                </af:column>
+                <af:column sortProperty="#{bindings.CustomersU5.hints.Url.name}" sortable="true"
+                           headerText="#{bindings.CustomersU5.hints.Url.label}" filterable="true" id="c156">
+                  <af:outputText value="#{row.Url}" shortDesc="#{bindings.CustomersU5.hints.Url.tooltip}" id="ot103"/>
+                </af:column>
+                <af:column sortProperty="#{bindings.CustomersU5.hints.ParentCompany.name}" sortable="true"
+                           headerText="#{bindings.CustomersU5.hints.ParentCompany.label}" filterable="true" id="c161">
+                  <af:outputText value="#{row.ParentCompany}"
+                                 shortDesc="#{bindings.CustomersU5.hints.ParentCompany.tooltip}" id="ot104"/>
+                </af:column>
+                <af:column sortProperty="#{bindings.CustomersU5.hints.Ceo.name}" sortable="true"
+                           headerText="#{bindings.CustomersU5.hints.Ceo.label}" filterable="true" id="c164">
+                  <af:outputText value="#{row.Ceo}" shortDesc="#{bindings.CustomersU5.hints.Ceo.tooltip}" id="ot105"/>
+                </af:column>
+                <af:column sortProperty="#{bindings.CustomersU5.hints.NoOfEmployees.name}" sortable="true"
+                           headerText="#{bindings.CustomersU5.hints.NoOfEmployees.label}" filterable="true" id="c165">
+                  <af:outputText value="#{row.NoOfEmployees}"
+                                 shortDesc="#{bindings.CustomersU5.hints.NoOfEmployees.tooltip}" id="ot119">
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.CustomersU5.hints.NoOfEmployees.format}"/>
+                  </af:outputText>
+                </af:column>
+                <af:column sortProperty="#{bindings.CustomersU5.hints.Fax.name}" sortable="true"
+                           headerText="#{bindings.CustomersU5.hints.Fax.label}" filterable="true" id="c268">
+                  <af:outputText value="#{row.Fax}" shortDesc="#{bindings.CustomersU5.hints.Fax.tooltip}" id="ot120">
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.CustomersU5.hints.Fax.format}"/>
+                  </af:outputText>
+                </af:column>
+                <af:column sortProperty="#{bindings.CustomersU5.hints.Email.name}" sortable="true"
+                           headerText="#{bindings.CustomersU5.hints.Email.label}" filterable="true" id="c269">
+                  <af:outputText value="#{row.Email}" shortDesc="#{bindings.CustomersU5.hints.Email.tooltip}"
+                                 id="ot121"/>
+                </af:column>
+              </af:table>
             </af:showDetailItem>
           </af:panelTabbed>
         </af:showDetailItem>
@@ -3012,6 +3048,19 @@
                            disclosed="#{(pageFlowScope.sales_manager_tabVal==7)?true:false}"
                            binding="#{backingBeanScope.InsertBean.sdi6}">
           <af:panelHeader text="Contacts" id="ph7" binding="#{backingBeanScope.InsertBean.ph7}">
+            <af:panelGroupLayout layout="horizontal" id="pgl32" binding="#{backingBeanScope.InsertBean.pgl32}">
+              <af:quickQuery label="Search" searchDesc="Search" id="qryId20"
+                             value="#{bindings.ImplicitViewCriteriaQuery19.quickQueryDescriptor}"
+                             model="#{bindings.ImplicitViewCriteriaQuery19.queryModel}"
+                             queryListener="#{bindings.ImplicitViewCriteriaQuery19.processQuery}"
+                             binding="#{backingBeanScope.InsertBean.qryId20}">
+                <f:facet name="end">
+                  <af:commandLink text="Advanced" rendered="false" id="cl20"
+                                  binding="#{backingBeanScope.InsertBean.cl20}"/>
+                </f:facet>
+              </af:quickQuery>
+              <af:button text="Add" id="b35" binding="#{backingBeanScope.InsertBean.b35}"/>
+            </af:panelGroupLayout>
             <af:table id="md3" rows="#{bindings.ContactsU1.rangeSize}" fetchSize="#{bindings.ContactsU1.rangeSize}"
                       emptyText="#{bindings.ContactsU1.viewable ? 'No data to display.' : 'Access Denied.'}" var="row"
                       value="#{bindings.ContactsU1.collectionModel}" rowBandingInterval="0"
@@ -3128,7 +3177,7 @@
           </af:panelHeader>
           <af:panelTabbed position="above" id="pt3" binding="#{backingBeanScope.InsertBean.pt3}">
             <af:showDetailItem id="tab4" text="Customers" binding="#{backingBeanScope.InsertBean.tab4}">
-              <af:panelGroupLayout layout="vertical" id="pgl27" binding="#{backingBeanScope.InsertBean.pgl27}">
+              <af:panelGroupLayout layout="horizontal" id="pgl27" binding="#{backingBeanScope.InsertBean.pgl27}">
                 <af:quickQuery label="Search" searchDesc="Search" id="qryId14"
                                value="#{bindings.ImplicitViewCriteriaQuery13.quickQueryDescriptor}"
                                model="#{bindings.ImplicitViewCriteriaQuery13.queryModel}"
@@ -3139,67 +3188,79 @@
                                     binding="#{backingBeanScope.InsertBean.cl14}"/>
                   </f:facet>
                 </af:quickQuery>
-                <af:table value="#{bindings.CustomersU41.collectionModel}" var="row"
-                          rows="#{bindings.CustomersU41.rangeSize}"
-                          emptyText="#{bindings.CustomersU41.viewable ? 'No data to display.' : 'Access Denied.'}"
-                          rowBandingInterval="0" fetchSize="#{bindings.CustomersU41.rangeSize}"
-                          partialTriggers="::qryId14" id="t27" binding="#{backingBeanScope.InsertBean.t27}">
-                  <af:column headerText="#{bindings.CustomersU41.hints.CustomerName.label}" id="c151">
-                    <af:outputText value="#{row.CustomerName}"
-                                   shortDesc="#{bindings.CustomersU41.hints.CustomerName.tooltip}" id="ot100"/>
-                  </af:column>
-                  <af:column headerText="#{bindings.CustomersU41.hints.CustomerTypeId.label}" id="c152">
-                    <af:selectOneChoice value="#{row.bindings.CustomerTypeId.inputValue}"
-                                        label="#{row.bindings.CustomerTypeId.label}"
-                                        required="#{bindings.CustomersU41.hints.CustomerTypeId.mandatory}"
-                                        shortDesc="#{bindings.CustomersU41.hints.CustomerTypeId.tooltip}"
-                                        readOnly="true" id="soc39">
-                      <f:selectItems value="#{row.bindings.CustomerTypeId.items}" id="si39"/>
-                      <f:validator binding="#{row.bindings.CustomerTypeId.validator}"/>
-                    </af:selectOneChoice>
-                  </af:column>
-                  <af:column headerText="#{bindings.CustomersU41.hints.PrimaryContactId.label}" id="c270">
-                    <af:selectOneChoice value="#{row.bindings.PrimaryContactId.inputValue}"
-                                        label="#{row.bindings.PrimaryContactId.label}"
-                                        required="#{bindings.CustomersU41.hints.PrimaryContactId.mandatory}"
-                                        shortDesc="#{bindings.CustomersU41.hints.PrimaryContactId.tooltip}"
-                                        readOnly="true" id="soc40">
-                      <f:selectItems value="#{row.bindings.PrimaryContactId.items}" id="si40"/>
-                      <f:validator binding="#{row.bindings.PrimaryContactId.validator}"/>
-                    </af:selectOneChoice>
-                  </af:column>
-                  <af:column headerText="#{bindings.CustomersU41.hints.Url.label}" id="c271">
-                    <af:outputText value="#{row.Url}" shortDesc="#{bindings.CustomersU41.hints.Url.tooltip}"
-                                   id="ot101"/>
-                  </af:column>
-                  <af:column headerText="#{bindings.CustomersU41.hints.ParentCompany.label}" id="c272">
-                    <af:outputText value="#{row.ParentCompany}"
-                                   shortDesc="#{bindings.CustomersU41.hints.ParentCompany.tooltip}" id="ot122"/>
-                  </af:column>
-                  <af:column headerText="#{bindings.CustomersU41.hints.Ceo.label}" id="c273">
-                    <af:outputText value="#{row.Ceo}" shortDesc="#{bindings.CustomersU41.hints.Ceo.tooltip}"
-                                   id="ot123"/>
-                  </af:column>
-                  <af:column headerText="#{bindings.CustomersU41.hints.NoOfEmployees.label}" id="c274">
-                    <af:outputText value="#{row.NoOfEmployees}"
-                                   shortDesc="#{bindings.CustomersU41.hints.NoOfEmployees.tooltip}" id="ot209">
-                      <af:convertNumber groupingUsed="false"
-                                        pattern="#{bindings.CustomersU41.hints.NoOfEmployees.format}"/>
-                    </af:outputText>
-                  </af:column>
-                  <af:column headerText="#{bindings.CustomersU41.hints.Fax.label}" id="c275">
-                    <af:outputText value="#{row.Fax}" shortDesc="#{bindings.CustomersU41.hints.Fax.tooltip}" id="ot210">
-                      <af:convertNumber groupingUsed="false" pattern="#{bindings.CustomersU41.hints.Fax.format}"/>
-                    </af:outputText>
-                  </af:column>
-                  <af:column headerText="#{bindings.CustomersU41.hints.Email.label}" id="c276">
-                    <af:outputText value="#{row.Email}" shortDesc="#{bindings.CustomersU41.hints.Email.tooltip}"
-                                   id="ot211"/>
-                  </af:column>
-                </af:table>
+                <af:button text="Add" id="b36" binding="#{backingBeanScope.InsertBean.b36}"/>
               </af:panelGroupLayout>
+              <af:table value="#{bindings.CustomersU41.collectionModel}" var="row"
+                        rows="#{bindings.CustomersU41.rangeSize}"
+                        emptyText="#{bindings.CustomersU41.viewable ? 'No data to display.' : 'Access Denied.'}"
+                        rowBandingInterval="0" fetchSize="#{bindings.CustomersU41.rangeSize}"
+                        partialTriggers="::qryId14" id="t27" binding="#{backingBeanScope.InsertBean.t27}">
+                <af:column headerText="#{bindings.CustomersU41.hints.CustomerName.label}" id="c151">
+                  <af:outputText value="#{row.CustomerName}"
+                                 shortDesc="#{bindings.CustomersU41.hints.CustomerName.tooltip}" id="ot100"/>
+                </af:column>
+                <af:column headerText="#{bindings.CustomersU41.hints.CustomerTypeId.label}" id="c152">
+                  <af:selectOneChoice value="#{row.bindings.CustomerTypeId.inputValue}"
+                                      label="#{row.bindings.CustomerTypeId.label}"
+                                      required="#{bindings.CustomersU41.hints.CustomerTypeId.mandatory}"
+                                      shortDesc="#{bindings.CustomersU41.hints.CustomerTypeId.tooltip}" readOnly="true"
+                                      id="soc39">
+                    <f:selectItems value="#{row.bindings.CustomerTypeId.items}" id="si39"/>
+                    <f:validator binding="#{row.bindings.CustomerTypeId.validator}"/>
+                  </af:selectOneChoice>
+                </af:column>
+                <af:column headerText="#{bindings.CustomersU41.hints.PrimaryContactId.label}" id="c270">
+                  <af:selectOneChoice value="#{row.bindings.PrimaryContactId.inputValue}"
+                                      label="#{row.bindings.PrimaryContactId.label}"
+                                      required="#{bindings.CustomersU41.hints.PrimaryContactId.mandatory}"
+                                      shortDesc="#{bindings.CustomersU41.hints.PrimaryContactId.tooltip}"
+                                      readOnly="true" id="soc40">
+                    <f:selectItems value="#{row.bindings.PrimaryContactId.items}" id="si40"/>
+                    <f:validator binding="#{row.bindings.PrimaryContactId.validator}"/>
+                  </af:selectOneChoice>
+                </af:column>
+                <af:column headerText="#{bindings.CustomersU41.hints.Url.label}" id="c271">
+                  <af:outputText value="#{row.Url}" shortDesc="#{bindings.CustomersU41.hints.Url.tooltip}" id="ot101"/>
+                </af:column>
+                <af:column headerText="#{bindings.CustomersU41.hints.ParentCompany.label}" id="c272">
+                  <af:outputText value="#{row.ParentCompany}"
+                                 shortDesc="#{bindings.CustomersU41.hints.ParentCompany.tooltip}" id="ot122"/>
+                </af:column>
+                <af:column headerText="#{bindings.CustomersU41.hints.Ceo.label}" id="c273">
+                  <af:outputText value="#{row.Ceo}" shortDesc="#{bindings.CustomersU41.hints.Ceo.tooltip}" id="ot123"/>
+                </af:column>
+                <af:column headerText="#{bindings.CustomersU41.hints.NoOfEmployees.label}" id="c274">
+                  <af:outputText value="#{row.NoOfEmployees}"
+                                 shortDesc="#{bindings.CustomersU41.hints.NoOfEmployees.tooltip}" id="ot209">
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.CustomersU41.hints.NoOfEmployees.format}"/>
+                  </af:outputText>
+                </af:column>
+                <af:column headerText="#{bindings.CustomersU41.hints.Fax.label}" id="c275">
+                  <af:outputText value="#{row.Fax}" shortDesc="#{bindings.CustomersU41.hints.Fax.tooltip}" id="ot210">
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.CustomersU41.hints.Fax.format}"/>
+                  </af:outputText>
+                </af:column>
+                <af:column headerText="#{bindings.CustomersU41.hints.Email.label}" id="c276">
+                  <af:outputText value="#{row.Email}" shortDesc="#{bindings.CustomersU41.hints.Email.tooltip}"
+                                 id="ot211"/>
+                </af:column>
+              </af:table>
             </af:showDetailItem>
             <af:showDetailItem text="Opportunities" id="sdi15" binding="#{backingBeanScope.InsertBean.sdi15}">
+              <af:panelGroupLayout layout="vertical" id="pgl22" binding="#{backingBeanScope.InsertBean.pgl22}">
+                <af:quickQuery label="Search" searchDesc="Search" id="qryId11"
+                               value="#{bindings.ImplicitViewCriteriaQuery10.quickQueryDescriptor}"
+                               model="#{bindings.ImplicitViewCriteriaQuery10.queryModel}"
+                               queryListener="#{bindings.ImplicitViewCriteriaQuery10.processQuery}"
+                               binding="#{backingBeanScope.InsertBean.qryId11}">
+                  <f:facet name="end">
+                    <af:commandLink text="Advanced" rendered="false" id="cl11"
+                                    binding="#{backingBeanScope.InsertBean.cl11}"/>
+                  </f:facet>
+                </af:quickQuery>
+                <af:button text="Add" id="b37" binding="#{backingBeanScope.InsertBean.b37}"/>
+              </af:panelGroupLayout>
               <af:table value="#{bindings.OpportunitiesU3.collectionModel}" var="row"
                         rows="#{bindings.OpportunitiesU3.rangeSize}"
                         emptyText="#{bindings.OpportunitiesU3.viewable ? 'No data to display.' : 'Access Denied.'}"
