@@ -142,7 +142,7 @@
                 </af:button>
                 <af:button text="Create Category" id="b6" windowModalityType="applicationModal"
                            windowEmbedStyle="inlineDocument" useWindow="true" windowHeight="500" windowWidth="600" action="create_product_category"/>
-                <af:button text="Delete Category" id="b9" action="delete_product_category"
+                <af:button text="View Category" id="b9" action="delete_product_category"
                            windowEmbedStyle="inlineDocument" useWindow="true" windowHeight="500" windowWidth="600"/>
               </af:panelGroupLayout>
             </f:facet>

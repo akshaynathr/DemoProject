@@ -10,7 +10,17 @@
               <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr2">
                 <af:gridCell marginStart="5px" width="90%" id="gc2"/>
                 <af:gridCell marginStart="5px" width="10%" marginEnd="5px" id="gc3">
-                  <af:button text="Delete" id="b1" action="deleteRow"/>
+                  <af:button text="Delete" id="b1" actionListener="#{bindings.Delete.execute}"
+                             disabled="#{!bindings.Delete.enabled}">
+                    <af:showPopupBehavior popupId="p1"/>
+                  </af:button>
+                  <af:popup childCreation="deferred" autoCancel="disabled" id="p1">
+                    <af:dialog id="d2"
+                               dialogListener="#{backingBeanScope.delete_confirmation.dialogDeleteListenerProductCategory}">
+                      <f:facet name="buttonBar"/>
+                      <af:outputText value="Are you sure you want to delete this category?" id="ot3"/>
+                    </af:dialog>
+                  </af:popup>
                 </af:gridCell>
               </af:gridRow>
             </af:panelGridLayout>

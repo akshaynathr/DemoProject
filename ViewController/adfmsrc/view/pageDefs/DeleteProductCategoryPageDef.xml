@@ -16,6 +16,7 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <action IterBinding="Lookups1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <action id="Commit" DataControl="AppModuleAMDataControl5" RequiresUpdateModel="true" Action="commitTransaction"/>
   </bindings>
 </pageDefinition>
