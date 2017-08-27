@@ -16,4 +16,10 @@
   <ViewUsage
     Name="DashboardManagerLookup1"
     ViewObjectName="model.lookup.DashboardManagerLookup"/>
+  <ViewUsage
+    Name="GraphClosedOppLookup1"
+    ViewObjectName="model.lookup.GraphClosedOppLookup"/>
+  <ViewUsage
+    Name="GraphtotalOppurtunitiesCount1"
+    ViewObjectName="model.lookup.GraphtotalOppurtunitiesCount"/>
 </AppModule>

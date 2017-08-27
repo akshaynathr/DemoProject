@@ -7,45 +7,55 @@
     <af:spacer width="10" height="10" id="s3"/>
     <af:panelGridLayout id="pgl2">
       <af:gridRow marginTop="5px" height="auto" id="gr1">
-        <af:gridCell marginStart="5px" width="50%" id="gc1">
-          <af:outputText value="QUARTER WISE REVENUE OF MY TEAM" id="ot1" inlineStyle="color:Green; font-size:large;"/>
-          <dvt:pieChart id="pieChart1" var="row" value="#{bindings.RevenueItem1.collectionModel}" threeDEffect="on" hoverBehavior="dim" inlineStyle="color:#000;">
+        <af:gridCell marginStart="5px" width="50%" id="gc1" inlineStyle="color:Lime;">
+          <af:outputText value="QUARTER WISE REVENUE" id="ot1" inlineStyle="color:Green; font-size:large;"/>
+          <dvt:pieChart id="pieChart1" var="row" value="#{bindings.RevenueItem1.collectionModel}" threeDEffect="on"
+                        hoverBehavior="dim">
             <dvt:chartLegend id="cl1"/>
             <dvt:pieDataItem id="di1" label="#{row.QuarterNo}" value="#{row.Revenue}"/>
           </dvt:pieChart>
         </af:gridCell>
-        <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc2">
-          <af:outputText value="FUTURE FORECAST" id="ot2" inlineStyle="color:Green; font-size:large;"/>
-          <af:spacer width="10" height="10" id="s1"/>
-          <dvt:lineChart id="lineChart1" var="row" value="#{bindings.ForecastLookup1.collectionModel}">
-            <dvt:chartLegend id="cl2"/>
-            <f:facet name="dataStamp">
-              <dvt:chartDataItem id="di2" series="#{bindings.ForecastLookup1.hints.Revenue.label}"
-                                 value="#{row.Revenue}" group="#{row.OppurtunityName}"/>
-            </f:facet>
-          </dvt:lineChart>
-          <af:spacer width="10" height="10" id="s4"/>
+        <af:gridCell id="gc2" inlineStyle="font-size:large;">
+          <af:outputText value="OPPORTUNITY COMPARISON" id="ot2" inlineStyle="color:green;"/>
+          <af:panelGroupLayout id="pgl3" halign="center" valign="middle" layout="vertical">
+            <af:spacer width="10" height="20" id="s5"/>
+            <af:outputText value="SUCCESS" id="ot7" inlineStyle="color:green; font-size:small;"/>
+            <af:spacer width="10" height="30" id="s4"/>
+            <dvt:ledGauge id="ledGauge1" value="#{bindings.Success.inputValue}" color="green" size="3.0">
+              <dvt:gaugeMetricLabel rendered="true" id="gml1"/>
+            </dvt:ledGauge>
+            <af:spacer width="10" height="30" id="s6"/>
+            <af:outputText value="FAIL" id="ot3" inlineStyle="color:red; font-size:small;"/>
+            <af:spacer width="10" height="30" id="s7"/>
+            <dvt:ledGauge id="ledGauge2" value="#{bindings.Failed.inputValue}" color="red" size="3.0">
+              <dvt:gaugeMetricLabel rendered="true" id="gml2"/>
+            </dvt:ledGauge>
+          </af:panelGroupLayout>
         </af:gridCell>
       </af:gridRow>
       <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr2">
         <af:gridCell marginStart="5px" width="50%" id="gc3">
           <af:activeOutputText value="REVENUE COMPARISON" id="aot1" inlineStyle="color:Green; font-size:large;"/>
           <af:spacer width="10" height="10" id="s11"/>
-          <dvt:lineChart id="lineChart2" var="row" value="#{bindings.DashboardManagerLookup1.collectionModel}" hoverBehavior="dim" inlineStyle="column-rule-width:thin;">
+          <dvt:lineChart id="lineChart2" var="row" value="#{bindings.DashboardManagerLookup1.collectionModel}" hoverBehavior="dim"
+                         inlineStyle="column-rule-width:thin; min-width:100pt; font-size:small; border-right-width:thick;" dataLabelPosition="center">
             <dvt:chartLegend id="cl3"/>
             <f:facet name="dataStamp">
               <af:group id="g1">
-                <dvt:chartDataItem id="di3" series="#{bindings.DashboardManagerLookup1.hints.BestCaseRevenue.label}"
-                                   value="#{row.BestCaseRevenue}" group="#{row.QuarterNo}"/>
-                <dvt:chartDataItem id="di4" series="#{bindings.DashboardManagerLookup1.hints.WorstCaseRevenue.label}"
+                <dvt:chartDataItem id="di3" series="Best Case "
+                                   value="#{row.BestCaseRevenue}" group="#{row.QuarterNo}"
+                                   borderWidth="10"/>
+                <dvt:chartDataItem id="di4" series="Worst Case"
                                    value="#{row.WorstCaseRevenue}" group="#{row.QuarterNo}"/>
-                <dvt:chartDataItem id="di5" series="#{bindings.DashboardManagerLookup1.hints.Revenue.label}"
+                <dvt:chartDataItem id="di5" series="Expected"
                                    value="#{row.Revenue}" group="#{row.QuarterNo}"/>
               </af:group>
             </f:facet>
           </dvt:lineChart>
+          <af:spacer width="150" height="30" id="s1"/>
+          <af:outputText value="Quarter" id="ot5"/>
         </af:gridCell>
-        <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc4"/>
+        <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc4" inlineStyle="vertical-align:middle;"/>
       </af:gridRow>
     </af:panelGridLayout>
   </af:panelGroupLayout>

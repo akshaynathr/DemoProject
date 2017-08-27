@@ -5,11 +5,13 @@
   <executables>
     <variableIterator id="variables"/>
     <iterator Binds="RevenuePageU1" RangeSize="-1" DataControl="AppModuleAMDataControl" id="RevenuePageU1Iterator"/>
-    <iterator Binds="RevenueItem1" RangeSize="-1" DataControl="AppModuleAMDataControl" id="RevenueItem1Iterator"/>
-    <iterator Binds="ForecastLookup1" RangeSize="-1" DataControl="AppModuleAMDataControl1"
-              id="ForecastLookup1Iterator"/>
     <iterator Binds="DashboardManagerLookup1" RangeSize="-1" DataControl="AppModuleAMDataControl54"
               id="DashboardManagerLookup1Iterator"/>
+    <iterator Binds="RevenueItem1" RangeSize="-1" DataControl="AppModuleAMDataControl" id="RevenueItem1Iterator"/>
+    <iterator Binds="GraphClosedOppLookup1" RangeSize="1" DataControl="AppModuleAMDataControl54"
+              id="GraphClosedOppLookup1Iterator"/>
+    <iterator Binds="GraphtotalOppurtunitiesCount1" RangeSize="1" DataControl="AppModuleAMDataControl54"
+              id="GraphtotalOppurtunitiesCount1Iterator"/>
   </executables>
   <bindings>
     <tree IterBinding="RevenuePageU1Iterator" id="RevenuePageU1" ChangeEventPolicy="ppr">
@@ -17,22 +19,6 @@
         <AttrNames>
           <Item Value="QuarterNumber"/>
           <Item Value="Revenue"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
-    <tree IterBinding="RevenueItem1Iterator" id="RevenueItem1" ChangeEventPolicy="ppr">
-      <nodeDefinition DefName="model.RVO.RevenueItemVO" Name="RevenueItem1">
-        <AttrNames>
-          <Item Value="Revenue"/>
-          <Item Value="QuarterNo"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
-    <tree IterBinding="ForecastLookup1Iterator" id="ForecastLookup1" ChangeEventPolicy="ppr">
-      <nodeDefinition DefName="model.lookup.ForecastLookupVO" Name="ForecastLookup1">
-        <AttrNames>
-          <Item Value="Revenue"/>
-          <Item Value="OppurtunityName"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
@@ -46,5 +32,23 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <tree IterBinding="RevenueItem1Iterator" id="RevenueItem1" ChangeEventPolicy="ppr">
+      <nodeDefinition DefName="model.RVO.RevenueItemVO" Name="RevenueItem1">
+        <AttrNames>
+          <Item Value="Revenue"/>
+          <Item Value="QuarterNo"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="GraphClosedOppLookup1Iterator" id="Success">
+      <AttrNames>
+        <Item Value="Success"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="GraphtotalOppurtunitiesCount1Iterator" id="Failed">
+      <AttrNames>
+        <Item Value="Failed"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>

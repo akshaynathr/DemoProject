@@ -19,15 +19,15 @@
         ResId="DashboardManagerLookup_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
-  <SQLQuery><![CDATA[SELECT DISTINCT          
-    OPPORTUNITIES.QUARTER_NO,          
-    SUM(OPPORTUNITIES.BEST_CASE_REVENUE) AS "Best Case Revenue" ,SUM(OPPORTUNITIES.WORST_CASE_REVENUE) AS "Worst Case Revenue" , SUM(OPPORTUNITIES.REVENUE) AS Revenue    
-FROM          
-    USERS,          
-    OPPORTUNITIES          
-WHERE          
-    OPPORTUNITIES.IS_ACTIVE != 'n' AND USERS.IS_ACTIVE != 'n' AND OPPORTUNITIES.CREATED_BY_ID = USERS.USER_ID AND USERS.SUPERVISOR_ID = 4          
-GROUP BY          
+  <SQLQuery><![CDATA[SELECT DISTINCT           
+    OPPORTUNITIES.QUARTER_NO,           
+    SUM(OPPORTUNITIES.BEST_CASE_REVENUE) AS "Best Case Revenue" ,SUM(OPPORTUNITIES.WORST_CASE_REVENUE) AS "Worst Case Revenue" , SUM(OPPORTUNITIES.REVENUE) AS Revenue     
+FROM           
+    USERS,           
+    OPPORTUNITIES           
+WHERE           
+    OPPORTUNITIES.IS_ACTIVE != 'n' AND USERS.IS_ACTIVE != 'n' AND OPPORTUNITIES.CREATED_BY_ID = USERS.USER_ID AND (USERS.SUPERVISOR_ID = 4 OR USERS.USER_ID=4) AND OPPORTUNITIES.END_DATE < TO_TIMESTAMP('31-MAR-18 05.53.57.120000000 AM') AND  OPPORTUNITIES.START_DATE > TO_TIMESTAMP('01-APR-17 05.53.57.120000000 AM')          
+GROUP BY           
     OPPORTUNITIES.QUARTER_NO]]></SQLQuery>
   <ViewAttribute
     Name="QuarterNo"
@@ -38,7 +38,7 @@ GROUP BY
     ColumnType="INTEGER"
     AliasName="QUARTER_NO"
     Expression="QUARTER_NO"
-    SQLType="NUMERIC"/>
+    SQLType="INTEGER"/>
   <ViewAttribute
     Name="BestCaseRevenue"
     IsUpdateable="false"
