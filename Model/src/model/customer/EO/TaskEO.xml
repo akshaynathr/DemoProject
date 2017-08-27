@@ -9,7 +9,8 @@
   DBObjectType="table"
   DBObjectName="TASKS"
   AliasName="TaskEO"
-  BindingStyle="OracleName">
+  BindingStyle="OracleName"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <Attribute
     Name="TaskId"
     Precision="10"
@@ -41,6 +42,14 @@
           ResId="TaskName_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:LengthValidationBean
+      Name="TaskNameRule0"
+      ResId="TaskName_Rule_0"
+      OnAttribute="TaskName"
+      CompareType="GREATERTHAN"
+      DataType="CHARACTER"
+      CompareLength="0"
+      Inverse="false"/>
   </Attribute>
   <Attribute
     Name="DueDate"
@@ -128,6 +137,14 @@
           ResId="PercentageCompleted_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:RangeValidationBean
+      Name="PercentageCompletedRule0"
+      ResId="PercentageCompleted_Rule_0"
+      OnAttribute="PercentageCompleted"
+      OperandType="LITERAL"
+      Inverse="false"
+      MinValue="0"
+      MaxValue="100"/>
   </Attribute>
   <Attribute
     Name="CreatedBy"

@@ -610,6 +610,22 @@
       <Item Value="model.customer.EO.OpportunityEO.CustomerId"/>
     </AttrArray>
   </Key>
+  <validation:CompareValidationBean
+    Name="StartDateEndDateValidation"
+    ResId="OpportunityEO_Rule_1"
+    OnAttribute="EndDate"
+    OperandType="ATTR"
+    Inverse="false"
+    CompareType="GREATERTHAN"
+    CompareValue="StartDate"
+    MessageFlavor="IGNORE_DETAILS">
+    <validation:OnAttributes>
+      <validation:Item
+        Value="EndDate"/>
+      <validation:Item
+        Value="StartDate"/>
+    </validation:OnAttributes>
+  </validation:CompareValidationBean>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.customer.EO.common.OpportunityEOMsgBundle"/>

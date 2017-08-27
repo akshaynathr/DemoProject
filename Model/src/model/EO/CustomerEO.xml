@@ -37,6 +37,14 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
+    <validation:LengthValidationBean
+      Name="CustomerNameRule0"
+      ResId="CustomerName_Rule_0"
+      OnAttribute="CustomerName"
+      CompareType="GREATERTHAN"
+      DataType="CHARACTER"
+      CompareLength="0"
+      Inverse="false"/>
   </Attribute>
   <Attribute
     Name="CustomerTypeId"
@@ -93,6 +101,14 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
+    <validation:LengthValidationBean
+      Name="CeoRule0"
+      OnAttribute="Ceo"
+      CompareType="GREATERTHAN"
+      DataType="CHARACTER"
+      CompareLength="0"
+      Inverse="false"
+      ResId="Ceo_Rule_0"/>
   </Attribute>
   <Attribute
     Name="NoOfEmployees"
@@ -103,7 +119,16 @@
     Type="java.lang.Long"
     ColumnType="NUMBER"
     TableName="CUSTOMERS"
-    IsQueriable="false"/>
+    IsQueriable="false">
+    <validation:CompareValidationBean
+      Name="NoOfEmployeesRule0"
+      ResId="NoOfEmployees_Rule_0"
+      OnAttribute="NoOfEmployees"
+      OperandType="LITERAL"
+      Inverse="false"
+      CompareType="GREATERTHAN"
+      CompareValue="0"/>
+  </Attribute>
   <Attribute
     Name="Fax"
     Precision="10"
