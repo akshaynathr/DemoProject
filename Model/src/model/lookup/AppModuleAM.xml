@@ -25,4 +25,19 @@
   <ViewUsage
     Name="ForecastingLookup1"
     ViewObjectName="model.lookup.ForecastingLookupVO"/>
+  <ViewUsage
+    Name="SAREPGraph1_1"
+    ViewObjectName="model.RVO.SAREPGraph1"/>
+  <ViewUsage
+    Name="SAREPGraphclosedOppLookup1"
+    ViewObjectName="model.lookup.SAREPGraphclosedOppLookup"/>
+  <ViewUsage
+    Name="SAREPFailedOppLookup1"
+    ViewObjectName="model.lookup.SAREPFailedOppLookup"/>
+  <ViewUsage
+    Name="SARepRevenueComparisonLookup1"
+    ViewObjectName="model.RVO.SARepRevenueComparisonLookup"/>
+  <ViewUsage
+    Name="SAREPForecastLookup1"
+    ViewObjectName="model.lookup.SAREPForecastLookup"/>
 </AppModule>

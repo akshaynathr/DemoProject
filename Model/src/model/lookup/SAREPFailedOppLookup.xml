@@ -3,7 +3,7 @@
 <!---->
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="GraphtotalOppurtunitiesCount"
+  Name="SAREPFailedOppLookup"
   Version="12.2.1.12.24"
   InheritPersonalization="merge"
   BindingStyle="OracleName"
@@ -15,15 +15,15 @@
   <Properties>
     <SchemaBasedProperties>
       <LABEL
-        ResId="GraphtotalOppurtunitiesCount_LABEL"/>
+        ResId="SAREPFailedOppLookup_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
-  <SQLQuery><![CDATA[SELECT          
-    COUNT(OPPORTUNITIES.OPPORTUNITY_ID) as Failed      
-FROM          
-    OPPORTUNITIES,USERS          
-WHERE          
-    OPPORTUNITIES.CREATED_BY_ID=USERS.USER_ID AND USERS.IS_ACTIVE='y' AND OPPORTUNITIES.IS_SUCCESS='n' AND (USERS.SUPERVISOR_ID=4 OR USERS.USER_ID=4) AND OPPORTUNITIES.END_DATE < TO_TIMESTAMP('31-MAR-18 05.53.57.120000000 AM') AND  OPPORTUNITIES.START_DATE > TO_TIMESTAMP('01-APR-17 05.53.57.120000000 AM')]]></SQLQuery>
+  <SQLQuery><![CDATA[SELECT        
+    COUNT(OPPORTUNITIES.OPPORTUNITY_ID) as Failed    
+FROM        
+    OPPORTUNITIES,USERS        
+WHERE        
+    OPPORTUNITIES.CREATED_BY_ID=USERS.USER_ID AND USERS.IS_ACTIVE='y' AND OPPORTUNITIES.IS_SUCCESS='n' AND  USERS.USER_ID=5 AND OPPORTUNITIES.END_DATE < TO_TIMESTAMP('31-MAR-18 05.53.57.120000000 AM') AND  OPPORTUNITIES.START_DATE > TO_TIMESTAMP('01-APR-17 05.53.57.120000000 AM')]]></SQLQuery>
   <ViewAttribute
     Name="Failed"
     IsUpdateable="false"
@@ -36,6 +36,6 @@ WHERE
     SQLType="NUMERIC"/>
   <ResourceBundle>
     <PropertiesBundle
-      PropertiesFile="model.lookup.common.GraphtotalOppurtunitiesCountMsgBundle"/>
+      PropertiesFile="model.lookup.common.SAREPFailedOppLookupMsgBundle"/>
   </ResourceBundle>
 </ViewObject>

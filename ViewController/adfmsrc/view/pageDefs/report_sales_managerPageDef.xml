@@ -47,11 +47,6 @@
         <Item Value="Success"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="GraphtotalOppurtunitiesCount1Iterator" id="Failed">
-      <AttrNames>
-        <Item Value="Failed"/>
-      </AttrNames>
-    </attributeValues>
     <tree IterBinding="ForecastingLookup1Iterator" id="ForecastingLookup1" ChangeEventPolicy="ppr">
       <nodeDefinition DefName="model.lookup.ForecastingLookupVO" Name="ForecastingLookup1">
         <AttrNames>
@@ -60,5 +55,10 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <attributeValues IterBinding="GraphtotalOppurtunitiesCount1Iterator" id="Failed1">
+      <AttrNames>
+        <Item Value="Failed"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>

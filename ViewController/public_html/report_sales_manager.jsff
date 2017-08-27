@@ -31,8 +31,8 @@
             <af:spacer width="10" height="30" id="s6"/>
             <af:outputText value="FAIL" id="ot3" inlineStyle="color:red; font-size:small;"/>
             <af:spacer width="10" height="30" id="s7"/>
-            <dvt:ledGauge id="ledGauge2" value="#{bindings.Failed.inputValue}" color="red" size="3.0">
-              <dvt:gaugeMetricLabel rendered="true" id="gml2"/>
+            <dvt:ledGauge id="ledGauge3" value="#{bindings.Failed1.inputValue}" size="3.0" color="red">
+              <dvt:gaugeMetricLabel rendered="true" id="gml3"/>
             </dvt:ledGauge>
           </af:panelGroupLayout>
         </af:gridCell>
