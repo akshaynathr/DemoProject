@@ -3,7 +3,7 @@
 <!---->
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="AppointmentsUVO"
+  Name="InteractionsVO"
   Version="12.2.1.12.24"
   InheritPersonalization="merge"
   SelectListFlags="1"
@@ -14,108 +14,97 @@
   SelectAllAttributes="false"
   PageIterMode="Full">
   <EntityUsage
-    Name="AppointmentsEO"
-    Entity="model.EO.AppointmentsEO"/>
+    Name="InteractionsEO"
+    Entity="model.EO.InteractionsEO"/>
   <ViewAttribute
-    Name="AppointmentId"
+    Name="InteractionId"
     IsNotNull="true"
     PrecisionRule="true"
-    EntityAttrName="AppointmentId"
-    EntityUsage="AppointmentsEO"
-    AliasName="APPOINTMENT_ID"/>
+    EntityAttrName="InteractionId"
+    EntityUsage="InteractionsEO"
+    AliasName="INTERACTION_ID"/>
   <ViewAttribute
-    Name="CustomerId"
+    Name="InteractionTypeId"
     PrecisionRule="true"
-    EntityAttrName="CustomerId"
-    EntityUsage="AppointmentsEO"
-    AliasName="CUSTOMER_ID"/>
-  <ViewAttribute
-    Name="AppointmentSubject"
-    PrecisionRule="true"
-    EntityAttrName="AppointmentSubject"
-    EntityUsage="AppointmentsEO"
-    AliasName="APPOINTMENT_SUBJECT"/>
+    EntityAttrName="InteractionTypeId"
+    EntityUsage="InteractionsEO"
+    AliasName="INTERACTION_TYPE_ID"/>
   <ViewAttribute
     Name="Description"
     PrecisionRule="true"
     EntityAttrName="Description"
-    EntityUsage="AppointmentsEO"
+    EntityUsage="InteractionsEO"
     AliasName="DESCRIPTION"/>
+  <ViewAttribute
+    Name="Resolution"
+    PrecisionRule="true"
+    EntityAttrName="Resolution"
+    EntityUsage="InteractionsEO"
+    AliasName="RESOLUTION"/>
+  <ViewAttribute
+    Name="Direction"
+    PrecisionRule="true"
+    EntityAttrName="Direction"
+    EntityUsage="InteractionsEO"
+    AliasName="DIRECTION"/>
   <ViewAttribute
     Name="StartDate"
     PrecisionRule="true"
     EntityAttrName="StartDate"
-    EntityUsage="AppointmentsEO"
+    EntityUsage="InteractionsEO"
     AliasName="START_DATE"/>
   <ViewAttribute
     Name="EndDate"
     PrecisionRule="true"
     EntityAttrName="EndDate"
-    EntityUsage="AppointmentsEO"
+    EntityUsage="InteractionsEO"
     AliasName="END_DATE"/>
   <ViewAttribute
-    Name="LocationRoomNo"
+    Name="AppoinmentId"
     PrecisionRule="true"
-    EntityAttrName="LocationRoomNo"
-    EntityUsage="AppointmentsEO"
-    AliasName="LOCATION_ROOM_NO"/>
-  <ViewAttribute
-    Name="AddressId"
-    PrecisionRule="true"
-    EntityAttrName="AddressId"
-    EntityUsage="AppointmentsEO"
-    AliasName="ADDRESS_ID"/>
+    EntityAttrName="AppoinmentId"
+    EntityUsage="InteractionsEO"
+    AliasName="APPOINMENT_ID"/>
   <ViewAttribute
     Name="CreatedBy"
     PrecisionRule="true"
     EntityAttrName="CreatedBy"
-    EntityUsage="AppointmentsEO"
+    EntityUsage="InteractionsEO"
     AliasName="CREATED_BY"/>
   <ViewAttribute
     Name="CreatedOn"
     PrecisionRule="true"
     EntityAttrName="CreatedOn"
-    EntityUsage="AppointmentsEO"
+    EntityUsage="InteractionsEO"
     AliasName="CREATED_ON"/>
   <ViewAttribute
     Name="LastUpdatedBy"
     PrecisionRule="true"
     EntityAttrName="LastUpdatedBy"
-    EntityUsage="AppointmentsEO"
+    EntityUsage="InteractionsEO"
     AliasName="LAST_UPDATED_BY"/>
   <ViewAttribute
     Name="LastUpdatedOn"
     PrecisionRule="true"
     EntityAttrName="LastUpdatedOn"
-    EntityUsage="AppointmentsEO"
+    EntityUsage="InteractionsEO"
     AliasName="LAST_UPDATED_ON"/>
   <ViewAttribute
     Name="VersionNo"
     PrecisionRule="true"
     EntityAttrName="VersionNo"
-    EntityUsage="AppointmentsEO"
+    EntityUsage="InteractionsEO"
     AliasName="VERSION_NO"/>
   <ViewAttribute
     Name="IsActive"
     PrecisionRule="true"
     EntityAttrName="IsActive"
-    EntityUsage="AppointmentsEO"
+    EntityUsage="InteractionsEO"
     AliasName="IS_ACTIVE"/>
   <ViewLinkAccessor
-    Name="CustomersU"
-    ViewLink="model.VL.CustomerToAppointmentsVL"
+    Name="AppointmentsU"
+    ViewLink="model.VL.AppointmentsToInteractionsVL"
     Type="oracle.jbo.server.ViewRowImpl"
     Reversed="true"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
-    Name="OpportunitiesU"
-    ViewLink="model.VL.OpportunitiesToAppointmentsVL"
-    Type="oracle.jbo.RowIterator"
-    Reversed="true"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
-    Name="Interactions"
-    ViewLink="model.VL.AppointmentsToInteractionsVL"
-    Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
 </ViewObject>

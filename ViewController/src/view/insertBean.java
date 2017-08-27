@@ -45,9 +45,6 @@ public class insertBean {
     private RichInputDate id15;
     private RichTable t15;
     private RichShowDetailItem sdi15;
-    private RichTable t14;
-    private RichPanelHeader ph8;
-    private RichPanelGroupLayout pgl6;
     private RichShowDetailItem tab4;
     private RichPanelTabbed pt3;
     private RichTable md3;
@@ -90,7 +87,6 @@ public class insertBean {
     private RichButton b8;
     private RichCommandLink cl4;
     private RichQuickQuery qryId4;
-    private RichPanelHeader ph9;
     private RichPanelGroupLayout pgl11;
     private RichShowDetailItem sdi14;
     private RichPopup p2;
@@ -115,9 +111,7 @@ public class insertBean {
     private RichTable t10;
     private RichPanelGroupLayout pgl9;
     private RichShowDetailItem sdi11;
-    private RichTable t9;
     private RichShowDetailItem tab1;
-    private RichTable t8;
     private RichPanelGroupLayout pgl4;
     private RichShowDetailItem tab2;
     private RichPanelTabbed pt1;
@@ -146,7 +140,6 @@ public class insertBean {
     private RichButton b15;
     private RichButton b17;
     private RichButton b18;
-    private RichTable t20;
     private RichButton b19;
     private RichTable t21;
     private RichButton b20;
@@ -267,6 +260,48 @@ public class insertBean {
     private RichCommandLink cl10;
     private RichQuickQuery qryId11;
     private RichCommandLink cl11;
+    private RichPanelGroupLayout pgl25;
+    private RichPanelHeader ph4;
+    private RichQuickQuery qryId12;
+    private RichCommandLink cl12;
+    private RichTable t2;
+    private RichInputDate id20;
+    private RichInputDate id21;
+    private RichInputDate id22;
+    private RichInputDate id23;
+    private RichPanelTabbed pt5;
+    private RichShowDetailItem tab5;
+    private RichPanelGroupLayout pgl26;
+    private RichQuickQuery qryId13;
+    private RichCommandLink cl13;
+    private RichTable t4;
+    private RichInputDate id24;
+    private RichInputDate id25;
+    private RichShowDetailItem sdi16;
+    private RichShowDetailItem sdi17;
+    private RichPanelGroupLayout pgl28;
+    private RichQuickQuery qryId15;
+    private RichCommandLink cl15;
+    private RichTable t26;
+    private RichTable t20;
+    private RichInputDate id26;
+    private RichInputDate id27;
+    private RichPanelGroupLayout pgl27;
+    private RichQuickQuery qryId14;
+    private RichCommandLink cl14;
+    private RichTable t27;
+    private RichPopup p5;
+    private RichDialog d5;
+    private RichQuickQuery qryId16;
+    private RichCommandLink cl16;
+    private RichPanelGroupLayout pgl6;
+    private RichQuickQuery qryId17;
+    private RichCommandLink cl17;
+    private RichTable t14;
+    private RichInputDate id28;
+    private RichTable t8;
+    private RichTable t9;
+    private RichInputDate id29;
 
     public insertBean() {
     }
@@ -462,29 +497,6 @@ public class insertBean {
         return sdi15;
     }
 
-    public void setT14(RichTable t14) {
-        this.t14 = t14;
-    }
-
-    public RichTable getT14() {
-        return t14;
-    }
-
-    public void setPh8(RichPanelHeader ph8) {
-        this.ph8 = ph8;
-    }
-
-    public RichPanelHeader getPh8() {
-        return ph8;
-    }
-
-    public void setPgl6(RichPanelGroupLayout pgl6) {
-        this.pgl6 = pgl6;
-    }
-
-    public RichPanelGroupLayout getPgl6() {
-        return pgl6;
-    }
 
     public void setTab4(RichShowDetailItem tab4) {
         this.tab4 = tab4;
@@ -824,13 +836,6 @@ public class insertBean {
         return qryId4;
     }
 
-    public void setPh9(RichPanelHeader ph9) {
-        this.ph9 = ph9;
-    }
-
-    public RichPanelHeader getPh9() {
-        return ph9;
-    }
 
     public void setPgl11(RichPanelGroupLayout pgl11) {
         this.pgl11 = pgl11;
@@ -1026,13 +1031,6 @@ public class insertBean {
         return sdi11;
     }
 
-    public void setT9(RichTable t9) {
-        this.t9 = t9;
-    }
-
-    public RichTable getT9() {
-        return t9;
-    }
 
     public void setTab1(RichShowDetailItem tab1) {
         this.tab1 = tab1;
@@ -1040,14 +1038,6 @@ public class insertBean {
 
     public RichShowDetailItem getTab1() {
         return tab1;
-    }
-
-    public void setT8(RichTable t8) {
-        this.t8 = t8;
-    }
-
-    public RichTable getT8() {
-        return t8;
     }
 
 
@@ -1548,13 +1538,6 @@ public class insertBean {
         return b18;
     }
 
-    public void setT20(RichTable t20) {
-        this.t20 = t20;
-    }
-
-    public RichTable getT20() {
-        return t20;
-    }
 
     public void setB19(RichButton b19) {
         this.b19 = b19;
@@ -2528,5 +2511,348 @@ public class insertBean {
 
     public RichCommandLink getCl11() {
         return cl11;
+    }
+
+    public void setPgl25(RichPanelGroupLayout pgl25) {
+        this.pgl25 = pgl25;
+    }
+
+    public RichPanelGroupLayout getPgl25() {
+        return pgl25;
+    }
+
+    public void setPh4(RichPanelHeader ph4) {
+        this.ph4 = ph4;
+    }
+
+    public RichPanelHeader getPh4() {
+        return ph4;
+    }
+
+    public void setQryId12(RichQuickQuery qryId12) {
+        this.qryId12 = qryId12;
+    }
+
+    public RichQuickQuery getQryId12() {
+        return qryId12;
+    }
+
+    public void setCl12(RichCommandLink cl12) {
+        this.cl12 = cl12;
+    }
+
+    public RichCommandLink getCl12() {
+        return cl12;
+    }
+
+    public void setT2(RichTable t2) {
+        this.t2 = t2;
+    }
+
+    public RichTable getT2() {
+        return t2;
+    }
+
+    public void setId20(RichInputDate id20) {
+        this.id20 = id20;
+    }
+
+    public RichInputDate getId20() {
+        return id20;
+    }
+
+    public void setId21(RichInputDate id21) {
+        this.id21 = id21;
+    }
+
+    public RichInputDate getId21() {
+        return id21;
+    }
+
+    public void setId22(RichInputDate id22) {
+        this.id22 = id22;
+    }
+
+    public RichInputDate getId22() {
+        return id22;
+    }
+
+    public void setId23(RichInputDate id23) {
+        this.id23 = id23;
+    }
+
+    public RichInputDate getId23() {
+        return id23;
+    }
+
+    public void setPt5(RichPanelTabbed pt5) {
+        this.pt5 = pt5;
+    }
+
+    public RichPanelTabbed getPt5() {
+        return pt5;
+    }
+
+    public void setTab5(RichShowDetailItem tab5) {
+        this.tab5 = tab5;
+    }
+
+    public RichShowDetailItem getTab5() {
+        return tab5;
+    }
+
+    public void setPgl26(RichPanelGroupLayout pgl26) {
+        this.pgl26 = pgl26;
+    }
+
+    public RichPanelGroupLayout getPgl26() {
+        return pgl26;
+    }
+
+
+    public void setQryId13(RichQuickQuery qryId13) {
+        this.qryId13 = qryId13;
+    }
+
+    public RichQuickQuery getQryId13() {
+        return qryId13;
+    }
+
+    public void setCl13(RichCommandLink cl13) {
+        this.cl13 = cl13;
+    }
+
+    public RichCommandLink getCl13() {
+        return cl13;
+    }
+
+    public void setT4(RichTable t4) {
+        this.t4 = t4;
+    }
+
+    public RichTable getT4() {
+        return t4;
+    }
+
+    public void setId24(RichInputDate id24) {
+        this.id24 = id24;
+    }
+
+    public RichInputDate getId24() {
+        return id24;
+    }
+
+    public void setId25(RichInputDate id25) {
+        this.id25 = id25;
+    }
+
+    public RichInputDate getId25() {
+        return id25;
+    }
+
+    public void setSdi16(RichShowDetailItem sdi16) {
+        this.sdi16 = sdi16;
+    }
+
+    public RichShowDetailItem getSdi16() {
+        return sdi16;
+    }
+
+
+    public void setSdi17(RichShowDetailItem sdi17) {
+        this.sdi17 = sdi17;
+    }
+
+    public RichShowDetailItem getSdi17() {
+        return sdi17;
+    }
+
+    public void setPgl28(RichPanelGroupLayout pgl28) {
+        this.pgl28 = pgl28;
+    }
+
+    public RichPanelGroupLayout getPgl28() {
+        return pgl28;
+    }
+
+
+    public void setQryId15(RichQuickQuery qryId15) {
+        this.qryId15 = qryId15;
+    }
+
+    public RichQuickQuery getQryId15() {
+        return qryId15;
+    }
+
+    public void setCl15(RichCommandLink cl15) {
+        this.cl15 = cl15;
+    }
+
+    public RichCommandLink getCl15() {
+        return cl15;
+    }
+
+    public void setT26(RichTable t26) {
+        this.t26 = t26;
+    }
+
+    public RichTable getT26() {
+        return t26;
+    }
+
+
+    public void setT20(RichTable t20) {
+        this.t20 = t20;
+    }
+
+    public RichTable getT20() {
+        return t20;
+    }
+
+    public void setId26(RichInputDate id26) {
+        this.id26 = id26;
+    }
+
+    public RichInputDate getId26() {
+        return id26;
+    }
+
+    public void setId27(RichInputDate id27) {
+        this.id27 = id27;
+    }
+
+    public RichInputDate getId27() {
+        return id27;
+    }
+
+    public void setPgl27(RichPanelGroupLayout pgl27) {
+        this.pgl27 = pgl27;
+    }
+
+    public RichPanelGroupLayout getPgl27() {
+        return pgl27;
+    }
+
+
+    public void setQryId14(RichQuickQuery qryId14) {
+        this.qryId14 = qryId14;
+    }
+
+    public RichQuickQuery getQryId14() {
+        return qryId14;
+    }
+
+    public void setCl14(RichCommandLink cl14) {
+        this.cl14 = cl14;
+    }
+
+    public RichCommandLink getCl14() {
+        return cl14;
+    }
+
+    public void setT27(RichTable t27) {
+        this.t27 = t27;
+    }
+
+    public RichTable getT27() {
+        return t27;
+    }
+
+    public void setP5(RichPopup p5) {
+        this.p5 = p5;
+    }
+
+    public RichPopup getP5() {
+        return p5;
+    }
+
+    public void setD5(RichDialog d5) {
+        this.d5 = d5;
+    }
+
+    public RichDialog getD5() {
+        return d5;
+    }
+
+
+    public void setQryId16(RichQuickQuery qryId16) {
+        this.qryId16 = qryId16;
+    }
+
+    public RichQuickQuery getQryId16() {
+        return qryId16;
+    }
+
+    public void setCl16(RichCommandLink cl16) {
+        this.cl16 = cl16;
+    }
+
+    public RichCommandLink getCl16() {
+        return cl16;
+    }
+
+    public void setPgl6(RichPanelGroupLayout pgl6) {
+        this.pgl6 = pgl6;
+    }
+
+    public RichPanelGroupLayout getPgl6() {
+        return pgl6;
+    }
+
+
+    public void setQryId17(RichQuickQuery qryId17) {
+        this.qryId17 = qryId17;
+    }
+
+    public RichQuickQuery getQryId17() {
+        return qryId17;
+    }
+
+    public void setCl17(RichCommandLink cl17) {
+        this.cl17 = cl17;
+    }
+
+    public RichCommandLink getCl17() {
+        return cl17;
+    }
+
+    public void setT14(RichTable t14) {
+        this.t14 = t14;
+    }
+
+    public RichTable getT14() {
+        return t14;
+    }
+
+    public void setId28(RichInputDate id28) {
+        this.id28 = id28;
+    }
+
+    public RichInputDate getId28() {
+        return id28;
+    }
+
+    public void setT8(RichTable t8) {
+        this.t8 = t8;
+    }
+
+    public RichTable getT8() {
+        return t8;
+    }
+
+    public void setT9(RichTable t9) {
+        this.t9 = t9;
+    }
+
+    public RichTable getT9() {
+        return t9;
+    }
+
+    public void setId29(RichInputDate id29) {
+        this.id29 = id29;
+    }
+
+    public RichInputDate getId29() {
+        return id29;
     }
 }

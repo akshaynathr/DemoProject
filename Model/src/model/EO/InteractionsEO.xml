@@ -3,77 +3,83 @@
 <!---->
 <Entity
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="AppointmentsEO"
+  Name="InteractionsEO"
   Version="12.2.1.12.24"
   InheritPersonalization="merge"
   DBObjectType="table"
-  DBObjectName="APPOINTMENTS"
-  AliasName="AppointmentsEO"
+  DBObjectName="INTERACTIONS"
+  AliasName="InteractionsEO"
   BindingStyle="OracleName">
   <Attribute
-    Name="AppointmentId"
+    Name="InteractionId"
     IsNotNull="true"
     Precision="10"
     Scale="0"
-    ColumnName="APPOINTMENT_ID"
+    ColumnName="INTERACTION_ID"
     SQLType="NUMERIC"
     Type="java.lang.Long"
     ColumnType="NUMBER"
-    TableName="APPOINTMENTS"
+    TableName="INTERACTIONS"
     PrimaryKey="true"/>
   <Attribute
-    Name="CustomerId"
+    Name="InteractionTypeId"
     Precision="10"
     Scale="0"
-    ColumnName="CUSTOMER_ID"
+    ColumnName="INTERACTION_TYPE_ID"
     SQLType="NUMERIC"
     Type="java.lang.Long"
     ColumnType="NUMBER"
-    TableName="APPOINTMENTS">
+    TableName="INTERACTIONS">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
-          ResId="CustomerId_LABEL"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </Attribute>
-  <Attribute
-    Name="AppointmentSubject"
-    Precision="50"
-    ColumnName="APPOINTMENT_SUBJECT"
-    SQLType="VARCHAR"
-    Type="java.lang.String"
-    ColumnType="VARCHAR2"
-    TableName="APPOINTMENTS">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="50"/>
-    </DesignTime>
-    <Properties>
-      <SchemaBasedProperties>
-        <LABEL
-          ResId="AppointmentSubject_LABEL"/>
+          ResId="InteractionTypeId_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
   <Attribute
     Name="Description"
-    Precision="1024"
+    Precision="50"
     ColumnName="DESCRIPTION"
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="APPOINTMENTS">
+    TableName="INTERACTIONS">
     <DesignTime>
-      <Attr Name="_DisplaySize" Value="1024"/>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Resolution"
+    Precision="15"
+    ColumnName="RESOLUTION"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="INTERACTIONS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="15"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Direction"
+    Precision="20"
+    ColumnName="DIRECTION"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="INTERACTIONS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
   </Attribute>
   <Attribute
     Name="StartDate"
     ColumnName="START_DATE"
-    SQLType="TIMESTAMP"
+    SQLType="DATE"
     Type="java.sql.Timestamp"
-    ColumnType="TIMESTAMP"
-    TableName="APPOINTMENTS">
+    ColumnType="DATE"
+    TableName="INTERACTIONS">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
@@ -84,10 +90,10 @@
   <Attribute
     Name="EndDate"
     ColumnName="END_DATE"
-    SQLType="TIMESTAMP"
+    SQLType="DATE"
     Type="java.sql.Timestamp"
-    ColumnType="TIMESTAMP"
-    TableName="APPOINTMENTS">
+    ColumnType="DATE"
+    TableName="INTERACTIONS">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
@@ -96,34 +102,20 @@
     </Properties>
   </Attribute>
   <Attribute
-    Name="LocationRoomNo"
-    Precision="20"
-    Scale="0"
-    ColumnName="LOCATION_ROOM_NO"
-    SQLType="NUMERIC"
-    Type="java.math.BigInteger"
-    ColumnType="NUMBER"
-    TableName="APPOINTMENTS">
-    <Properties>
-      <SchemaBasedProperties>
-        <LABEL
-          ResId="LocationRoomNo_LABEL"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </Attribute>
-  <Attribute
-    Name="AddressId"
+    Name="AppoinmentId"
     Precision="10"
     Scale="0"
-    ColumnName="ADDRESS_ID"
+    ColumnName="APPOINMENT_ID"
     SQLType="NUMERIC"
     Type="java.lang.Long"
     ColumnType="NUMBER"
-    TableName="APPOINTMENTS">
+    TableName="INTERACTIONS">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
-          ResId="AddressId_LABEL"/>
+          ResId="AppoinmentId_LABEL"/>
+        <DISPLAYHINT
+          Value="Hide"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -134,14 +126,14 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="APPOINTMENTS">
+    TableName="INTERACTIONS">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
     <Properties>
       <SchemaBasedProperties>
-        <LABEL
-          ResId="CreatedBy_LABEL"/>
+        <DISPLAYHINT
+          Value="Hide"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -151,11 +143,11 @@
     SQLType="TIMESTAMP"
     Type="java.sql.Timestamp"
     ColumnType="TIMESTAMP"
-    TableName="APPOINTMENTS">
+    TableName="INTERACTIONS">
     <Properties>
       <SchemaBasedProperties>
-        <LABEL
-          ResId="CreatedOn_LABEL"/>
+        <DISPLAYHINT
+          Value="Hide"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -166,14 +158,14 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="APPOINTMENTS">
+    TableName="INTERACTIONS">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
     <Properties>
       <SchemaBasedProperties>
-        <LABEL
-          ResId="LastUpdatedBy_LABEL"/>
+        <DISPLAYHINT
+          Value="Hide"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -183,11 +175,11 @@
     SQLType="TIMESTAMP"
     Type="java.sql.Timestamp"
     ColumnType="TIMESTAMP"
-    TableName="APPOINTMENTS">
+    TableName="INTERACTIONS">
     <Properties>
       <SchemaBasedProperties>
-        <LABEL
-          ResId="LastUpdatedOn_LABEL"/>
+        <DISPLAYHINT
+          Value="Hide"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -199,7 +191,7 @@
     SQLType="NUMERIC"
     Type="java.lang.Long"
     ColumnType="NUMBER"
-    TableName="APPOINTMENTS">
+    TableName="INTERACTIONS">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYHINT
@@ -214,7 +206,7 @@
     SQLType="CHAR"
     Type="java.lang.String"
     ColumnType="CHAR"
-    TableName="APPOINTMENTS"
+    TableName="INTERACTIONS"
     RetrievedOnUpdate="true"
     RetrievedOnInsert="true">
     <DesignTime>
@@ -227,49 +219,29 @@
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
-  <AccessorAttribute
-    Name="Opportunity"
-    Association="model.ASSOC.opportunitiesToAppointmentsASSOC"
-    AssociationEnd="model.ASSOC.opportunitiesToAppointmentsASSOC.Opportunity"
-    AssociationOtherEnd="model.ASSOC.opportunitiesToAppointmentsASSOC.Appointments"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
   <Key
-    Name="AppointmentsPk"
+    Name="InteractionsPk"
     PrimaryKey="true">
     <DesignTime>
-      <Attr Name="_DBObjectName" Value="APPOINTMENTS_PK"/>
+      <Attr Name="_DBObjectName" Value="INTERACTIONS_PK"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="model.EO.AppointmentsEO.AppointmentId"/>
+      <Item Value="model.EO.InteractionsEO.InteractionId"/>
     </AttrArray>
   </Key>
   <Key
-    Name="AppointmentsFk1">
+    Name="InteractionsAppointments">
     <DesignTime>
-      <Attr Name="_isDisabledConstraint" Value="true"/>
-      <Attr Name="_referencedKey" Value="CUSTOMERS_PK"/>
+      <Attr Name="_referencedKey" Value="APPOINTMENTS_PK"/>
       <Attr Name="_isForeign" Value="true"/>
-      <Attr Name="_DBObjectName" Value="APPOINTMENTS_FK1"/>
+      <Attr Name="_DBObjectName" Value="INTERACTIONS_APPOINTMENTS"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="model.EO.AppointmentsEO.CustomerId"/>
-    </AttrArray>
-  </Key>
-  <Key
-    Name="AppointmentsLocation">
-    <DesignTime>
-      <Attr Name="_isDisabledConstraint" Value="true"/>
-      <Attr Name="_referencedKey" Value="ADDRESS_PK"/>
-      <Attr Name="_isForeign" Value="true"/>
-      <Attr Name="_DBObjectName" Value="APPOINTMENTS_LOCATION"/>
-    </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="model.EO.AppointmentsEO.AddressId"/>
+      <Item Value="model.EO.InteractionsEO.AppoinmentId"/>
     </AttrArray>
   </Key>
   <ResourceBundle>
     <PropertiesBundle
-      PropertiesFile="model.EO.common.AppointmentsEOMsgBundle"/>
+      PropertiesFile="model.EO.common.InteractionsEOMsgBundle"/>
   </ResourceBundle>
 </Entity>

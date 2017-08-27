@@ -85,6 +85,21 @@
   <ViewUsage
     Name="ForecastLookup1"
     ViewObjectName="model.lookup.ForecastLookupVO"/>
+  <ViewUsage
+    Name="Interactions1"
+    ViewObjectName="model.EO.InteractionsVO"/>
+  <ViewUsage
+    Name="AppointmentsU1"
+    ViewObjectName="model.UVO.AppointmentsUVO"/>
+  <ViewUsage
+    Name="CustomersU5"
+    ViewObjectName="model.UVO.CustomersUVO"/>
+  <ViewUsage
+    Name="Interactions2"
+    ViewObjectName="model.EO.InteractionsVO"/>
+  <ViewUsage
+    Name="OpportunitiesU6"
+    ViewObjectName="model.customer.UVO.OpportunitiesUVO"/>
   <ViewLinkUsage
     Name="CustomerToNotes"
     ViewLinkObjectName="model.VL.CustomerToNotes"
@@ -187,4 +202,22 @@
     SrcViewUsageName="model.EO.AppModuleAM.OpportunitiesU2"
     DstViewUsageName="model.EO.AppModuleAM.AppointmentsOpportunitiesU1"
     Reversed="false"/>
+  <ViewLinkUsage
+    Name="CustomerToAppointmentsVL2"
+    ViewLinkObjectName="model.VL.CustomerToAppointmentsVL"
+    SrcViewUsageName="model.EO.AppModuleAM.AppointmentsU1"
+    DstViewUsageName="model.EO.AppModuleAM.CustomersU5"
+    Reversed="true"/>
+  <ViewLinkUsage
+    Name="AppointmentsToInteractionsVL1"
+    ViewLinkObjectName="model.VL.AppointmentsToInteractionsVL"
+    SrcViewUsageName="model.EO.AppModuleAM.AppointmentsU1"
+    DstViewUsageName="model.EO.AppModuleAM.Interactions2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="OpportunitiesToAppointmentsVL4"
+    ViewLinkObjectName="model.VL.OpportunitiesToAppointmentsVL"
+    SrcViewUsageName="model.EO.AppModuleAM.AppointmentsU1"
+    DstViewUsageName="model.EO.AppModuleAM.OpportunitiesU6"
+    Reversed="true"/>
 </AppModule>

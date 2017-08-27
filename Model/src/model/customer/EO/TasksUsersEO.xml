@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TasksUsersEO"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TASKS_USERS"
+  AliasName="TasksUsersEO"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="TaskId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="TASK_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="TASKS_USERS"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="UserId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="USER_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="TASKS_USERS"
+    PrimaryKey="true"/>
+  <Key
+    Name="TasksUsersPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="TASKS_USERS_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.customer.EO.TasksUsersEO.TaskId"/>
+      <Item Value="model.customer.EO.TasksUsersEO.UserId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="TasksUsersTasksFk1">
+    <DesignTime>
+      <Attr Name="_isCascadeDelete" Value="true"/>
+      <Attr Name="_referencedKey" Value="TASKS_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="TASKS_USERS_TASKS_FK1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.customer.EO.TasksUsersEO.TaskId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="TasksUsersUsersFk1">
+    <DesignTime>
+      <Attr Name="_isCascadeDelete" Value="true"/>
+      <Attr Name="_referencedKey" Value="USERS_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="TASKS_USERS_USERS_FK1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.customer.EO.TasksUsersEO.UserId"/>
+    </AttrArray>
+  </Key>
+</Entity>
