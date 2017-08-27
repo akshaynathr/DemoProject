@@ -103,6 +103,9 @@
   <ViewUsage
     Name="AppointmentsOpportunitiesU2"
     ViewObjectName="model.UVO.AppointmentsOpportunitiesUVO"/>
+  <ViewUsage
+    Name="ContactsOpportunitiesU1"
+    ViewObjectName="model.customer.UVO.ContactsOpportunitiesUVO"/>
   <ViewLinkUsage
     Name="CustomerToNotes"
     ViewLinkObjectName="model.VL.CustomerToNotes"

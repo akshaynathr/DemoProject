@@ -113,6 +113,8 @@
                   Binds="TasksU2Iterator1" id="ImplicitViewCriteriaQuery20"/>
     <iterator Binds="AppointmentsOpportunitiesU2" RangeSize="25" DataControl="AppModuleAMDataControl1"
               id="AppointmentsOpportunitiesU2Iterator"/>
+    <iterator Binds="ContactsOpportunitiesU1" RangeSize="25" DataControl="AppModuleAMDataControl1"
+              id="ContactsOpportunitiesU1Iterator"/>
   </executables>
   <bindings>
     <tree IterBinding="MyTeamR1Iterator" id="MyTeamR1">
@@ -808,6 +810,22 @@
       <nodeDefinition DefName="model.UVO.AppointmentsOpportunitiesUVO" Name="AppointmentsOpportunitiesU20">
         <AttrNames>
           <Item Value="AppointmentId"/>
+          <Item Value="OpportunityId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="CustomersContactsU1Iterator" id="CustomersContactsU11">
+      <nodeDefinition DefName="model.UVO.CustomersContactsUVO" Name="CustomersContactsU110">
+        <AttrNames>
+          <Item Value="CustomerId"/>
+          <Item Value="ContactId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="ContactsOpportunitiesU1Iterator" id="ContactsOpportunitiesU1">
+      <nodeDefinition DefName="model.customer.UVO.ContactsOpportunitiesUVO" Name="ContactsOpportunitiesU10">
+        <AttrNames>
+          <Item Value="ContactId"/>
           <Item Value="OpportunityId"/>
         </AttrNames>
       </nodeDefinition>

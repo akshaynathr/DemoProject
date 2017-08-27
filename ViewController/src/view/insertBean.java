@@ -378,6 +378,11 @@ public class insertBean {
     private RichPanelGroupLayout pgl26;
     private RichButton b46;
     private RichTable t29;
+    private RichButton b47;
+    private RichButton b48;
+    private RichTable t30;
+    private RichButton b49;
+    private RichTable t31;
 
     public insertBean() {
     }
@@ -1491,6 +1496,103 @@ public class insertBean {
            return "null";
         }
     
+    public String deleteCustomersContactsLink(){
+           String masterTable = "ContactsU1Iterator";
+           String detailTable = "CustomersU4Iterator";
+           String linkTable = "CustomersContactsU1Iterator";
+           String masterId = "ContactId";
+           String detailId = "CustomerId";
+           
+           DCBindingContainer bindings = (DCBindingContainer)BindingContext.getCurrent().getCurrentBindingsEntry();
+           DCIteratorBinding dcItteratorBindings = bindings.findIteratorBinding(masterTable);
+           
+           ViewObject masterData = dcItteratorBindings.getViewObject();
+           
+           Row rowMasterSelected = masterData.getCurrentRow();
+           System.out.println(rowMasterSelected.getAttribute(masterId));
+           
+           DCIteratorBinding dcItteratorBindings2 = bindings.findIteratorBinding(detailTable);
+           
+           
+           ViewObject detailData = dcItteratorBindings2.getViewObject();
+           
+           Row rowDetailSelected = detailData.getCurrentRow();
+           
+           System.out.println(rowDetailSelected.getAttribute(detailId));
+           
+
+           DCIteratorBinding dcItteratorBindings3 = bindings.findIteratorBinding(linkTable);
+           
+           ViewObject vo = dcItteratorBindings3.getViewObject();
+           
+                   while (vo.getRowSet().getFetchedRowCount()>0) {  
+                       
+                       Row row = vo.getCurrentRow();
+                       System.out.println("Inside "+row.getAttribute(detailId)+" "+ row.getAttribute(masterId));
+                       if(row.getAttribute(detailId).toString().equals(rowDetailSelected.getAttribute(detailId).toString())&&
+                            row.getAttribute(masterId).toString().equals(rowMasterSelected.getAttribute(masterId).toString())){
+                               System.out.println("Deleting "+rowDetailSelected.getAttribute(detailId)+
+                                               " "+rowMasterSelected.getAttribute(masterId));
+                               vo.setCurrentRow(row);
+                               vo.removeCurrentRow();
+                               break;
+                           }
+                       row = vo.next();
+               }
+           OperationBinding operation = (OperationBinding)BindingContext.getCurrent().getCurrentBindingsEntry().get("Commit");
+           operation.execute();
+           return "null";
+        }
+    
+    public String deleteContactsOpportunitiesLink(){
+           String masterTable = "ContactsU1Iterator";
+           String detailTable = "OpportunitiesU3Iterator";
+           String linkTable = "ContactsOpportunitiesU1Iterator";
+           String masterId = "ContactId";
+           String detailId = "OpportunityId";
+           
+           DCBindingContainer bindings = (DCBindingContainer)BindingContext.getCurrent().getCurrentBindingsEntry();
+           DCIteratorBinding dcItteratorBindings = bindings.findIteratorBinding(masterTable);
+           
+           ViewObject masterData = dcItteratorBindings.getViewObject();
+           
+           Row rowMasterSelected = masterData.getCurrentRow();
+           System.out.println(rowMasterSelected.getAttribute(masterId));
+           
+           DCIteratorBinding dcItteratorBindings2 = bindings.findIteratorBinding(detailTable);
+           
+           
+           ViewObject detailData = dcItteratorBindings2.getViewObject();
+           
+           Row rowDetailSelected = detailData.getCurrentRow();
+           
+           System.out.println(rowDetailSelected.getAttribute(detailId));
+           
+
+           DCIteratorBinding dcItteratorBindings3 = bindings.findIteratorBinding(linkTable);
+           
+           ViewObject vo = dcItteratorBindings3.getViewObject();
+           
+                   while (vo.getRowSet().getFetchedRowCount()>0) {  
+                       
+                       Row row = vo.getCurrentRow();
+                       System.out.println("Inside "+row.getAttribute(detailId)+" "+ row.getAttribute(masterId));
+                       if(row.getAttribute(detailId).toString().equals(rowDetailSelected.getAttribute(detailId).toString())&&
+                            row.getAttribute(masterId).toString().equals(rowMasterSelected.getAttribute(masterId).toString())){
+                               System.out.println("Deleting "+rowDetailSelected.getAttribute(detailId)+
+                                               " "+rowMasterSelected.getAttribute(masterId));
+                               vo.setCurrentRow(row);
+                               vo.removeCurrentRow();
+                               break;
+                           }
+                       row = vo.next();
+               }
+           OperationBinding operation = (OperationBinding)BindingContext.getCurrent().getCurrentBindingsEntry().get("Commit");
+           operation.execute();
+           return "null";
+        }
+    
+    
     public String confirmedDeleteTasks(){
         String masterTable = "TasksU3Iterator";
         
@@ -1509,6 +1611,22 @@ public class insertBean {
     
     public String confirmedDeleteAppointments(){
         String masterTable = "AppointmentsU1Iterator";
+        
+        DCBindingContainer bindings = (DCBindingContainer)BindingContext.getCurrent().getCurrentBindingsEntry();
+        DCIteratorBinding dcItteratorBindings = bindings.findIteratorBinding(masterTable);
+        
+        ViewObject masterData = dcItteratorBindings.getViewObject();
+        Row row = masterData.getCurrentRow();
+        masterData.setCurrentRow(row);
+        masterData.removeCurrentRow();
+        
+        OperationBinding operation = (OperationBinding)BindingContext.getCurrent().getCurrentBindingsEntry().get("Commit");
+        operation.execute();
+        return "Deleted";
+    }
+    
+    public String confirmedDeleteContacts(){
+        String masterTable = "ContactsU1Iterator";
         
         DCBindingContainer bindings = (DCBindingContainer)BindingContext.getCurrent().getCurrentBindingsEntry();
         DCIteratorBinding dcItteratorBindings = bindings.findIteratorBinding(masterTable);
@@ -3660,5 +3778,45 @@ public class insertBean {
 
     public RichTable getT29() {
         return t29;
+    }
+
+    public void setB47(RichButton b47) {
+        this.b47 = b47;
+    }
+
+    public RichButton getB47() {
+        return b47;
+    }
+
+    public void setB48(RichButton b48) {
+        this.b48 = b48;
+    }
+
+    public RichButton getB48() {
+        return b48;
+    }
+
+    public void setT30(RichTable t30) {
+        this.t30 = t30;
+    }
+
+    public RichTable getT30() {
+        return t30;
+    }
+
+    public void setB49(RichButton b49) {
+        this.b49 = b49;
+    }
+
+    public RichButton getB49() {
+        return b49;
+    }
+
+    public void setT31(RichTable t31) {
+        this.t31 = t31;
+    }
+
+    public RichTable getT31() {
+        return t31;
     }
 }
