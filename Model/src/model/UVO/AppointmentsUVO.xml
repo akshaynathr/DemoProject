@@ -22,13 +22,15 @@
     PrecisionRule="true"
     EntityAttrName="AppointmentId"
     EntityUsage="AppointmentsEO"
-    AliasName="APPOINTMENT_ID"/>
+    AliasName="APPOINTMENT_ID"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="CustomerId"
     PrecisionRule="true"
     EntityAttrName="CustomerId"
     EntityUsage="AppointmentsEO"
-    AliasName="CUSTOMER_ID"/>
+    AliasName="CUSTOMER_ID"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="AppointmentSubject"
     PrecisionRule="true"
