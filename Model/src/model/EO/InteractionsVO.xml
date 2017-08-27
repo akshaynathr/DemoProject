@@ -13,6 +13,27 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="InteractionTypeRVO1"
+    ViewObjectName="model.customer.RVO.InteractionTypeRVO"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_InteractionTypeId"
+    ListVOName="InteractionTypeRVO1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="InteractionTypeId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="LookupId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="PossibleValue"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="InteractionsEO"
     Entity="model.EO.InteractionsEO"/>
@@ -22,13 +43,22 @@
     PrecisionRule="true"
     EntityAttrName="InteractionId"
     EntityUsage="InteractionsEO"
-    AliasName="INTERACTION_ID"/>
+    AliasName="INTERACTION_ID"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="InteractionTypeId"
     PrecisionRule="true"
     EntityAttrName="InteractionTypeId"
     EntityUsage="InteractionsEO"
-    AliasName="INTERACTION_TYPE_ID"/>
+    AliasName="INTERACTION_TYPE_ID"
+    LOVName="LOV_InteractionTypeId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Description"
     PrecisionRule="true"

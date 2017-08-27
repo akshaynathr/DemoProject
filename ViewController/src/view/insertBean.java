@@ -66,17 +66,12 @@ public class insertBean {
     private RichInputDate id2;
     private RichTable t6;
     private RichShowDetailItem sdi9;
-    private RichInputDate id8;
-    private RichInputDate id6;
-    private RichTable t7;
     private RichShowDetailItem sdi10;
     private RichPanelTabbed pt2;
     private RichTable md1;
     private RichButton b2;
     private RichPanelHeader ph1;
     private RichShowDetailItem sdi3;
-    private RichInputDate id14;
-    private RichInputDate id13;
     private RichInputDate id12;
     private RichTable t13;
     private RichButton b8;
@@ -139,8 +134,6 @@ public class insertBean {
     private RichButton b21;
     private RichButton b22;
     private RichButton b23;
-    private RichButton b24;
-    private RichButton b25;
     private RichPanelGridLayout pgl12;
     private RichGridRow gr1;
     private RichGridCell gc1;
@@ -254,11 +247,8 @@ public class insertBean {
     private RichTable t2;
     private RichInputDate id20;
     private RichInputDate id21;
-    private RichInputDate id22;
-    private RichInputDate id23;
     private RichPanelTabbed pt5;
     private RichShowDetailItem tab5;
-    private RichPanelGroupLayout pgl26;
     private RichQuickQuery qryId13;
     private RichCommandLink cl13;
     private RichTable t4;
@@ -374,6 +364,20 @@ public class insertBean {
     private RichDialog d27;
     private RichDialog d28;
     private RichTable t11;
+    private RichQuickQuery qryId21;
+    private RichCommandLink cl21;
+    private RichTable t7;
+    private RichButton b24;
+    private RichButton b25;
+    private RichButton b42;
+    private RichButton b43;
+    private RichPanelGroupLayout pgl33;
+    private RichButton b44;
+    private RichButton b45;
+    private RichPanelGroupLayout pgl34;
+    private RichPanelGroupLayout pgl26;
+    private RichButton b46;
+    private RichTable t29;
 
     public insertBean() {
     }
@@ -740,29 +744,6 @@ public class insertBean {
         return sdi9;
     }
 
-    public void setId8(RichInputDate id8) {
-        this.id8 = id8;
-    }
-
-    public RichInputDate getId8() {
-        return id8;
-    }
-
-    public void setId6(RichInputDate id6) {
-        this.id6 = id6;
-    }
-
-    public RichInputDate getId6() {
-        return id6;
-    }
-
-    public void setT7(RichTable t7) {
-        this.t7 = t7;
-    }
-
-    public RichTable getT7() {
-        return t7;
-    }
 
     public void setSdi10(RichShowDetailItem sdi10) {
         this.sdi10 = sdi10;
@@ -812,22 +793,6 @@ public class insertBean {
         return sdi3;
     }
 
-
-    public void setId14(RichInputDate id14) {
-        this.id14 = id14;
-    }
-
-    public RichInputDate getId14() {
-        return id14;
-    }
-
-    public void setId13(RichInputDate id13) {
-        this.id13 = id13;
-    }
-
-    public RichInputDate getId13() {
-        return id13;
-    }
 
     public void setId12(RichInputDate id12) {
         this.id12 = id12;
@@ -1477,6 +1442,102 @@ public class insertBean {
            operation.execute();
            return "null";
         }
+    
+    public String deleteAppointmentOpportunitiesLink(){
+           String masterTable = "AppointmentsU1Iterator";
+           String detailTable = "OpportunitiesU6Iterator";
+           String linkTable = "AppointmentsOpportunitiesU2Iterator";
+           String masterId = "AppointmentId";
+           String detailId = "OpportunityId";
+           
+           DCBindingContainer bindings = (DCBindingContainer)BindingContext.getCurrent().getCurrentBindingsEntry();
+           DCIteratorBinding dcItteratorBindings = bindings.findIteratorBinding(masterTable);
+           
+           ViewObject masterData = dcItteratorBindings.getViewObject();
+           
+           Row rowMasterSelected = masterData.getCurrentRow();
+           System.out.println(rowMasterSelected.getAttribute(masterId));
+           
+           DCIteratorBinding dcItteratorBindings2 = bindings.findIteratorBinding(detailTable);
+           
+           
+           ViewObject detailData = dcItteratorBindings2.getViewObject();
+           
+           Row rowDetailSelected = detailData.getCurrentRow();
+           
+           System.out.println(rowDetailSelected.getAttribute(detailId));
+           
+
+           DCIteratorBinding dcItteratorBindings3 = bindings.findIteratorBinding(linkTable);
+           
+           ViewObject vo = dcItteratorBindings3.getViewObject();
+           
+                   while (vo.getRowSet().getFetchedRowCount()>0) {  
+                       
+                       Row row = vo.getCurrentRow();
+                       System.out.println("Inside "+row.getAttribute(detailId)+" "+ row.getAttribute(masterId));
+                       if(row.getAttribute(detailId).toString().equals(rowDetailSelected.getAttribute(detailId).toString())&&
+                            row.getAttribute(masterId).toString().equals(rowMasterSelected.getAttribute(masterId).toString())){
+                               System.out.println("Deleting "+rowDetailSelected.getAttribute(detailId)+
+                                               " "+rowMasterSelected.getAttribute(masterId));
+                               vo.setCurrentRow(row);
+                               vo.removeCurrentRow();
+                               break;
+                           }
+                       row = vo.next();
+               }
+           OperationBinding operation = (OperationBinding)BindingContext.getCurrent().getCurrentBindingsEntry().get("Commit");
+           operation.execute();
+           return "null";
+        }
+    
+    public String confirmedDeleteTasks(){
+        String masterTable = "TasksU3Iterator";
+        
+        DCBindingContainer bindings = (DCBindingContainer)BindingContext.getCurrent().getCurrentBindingsEntry();
+        DCIteratorBinding dcItteratorBindings = bindings.findIteratorBinding(masterTable);
+        
+        ViewObject masterData = dcItteratorBindings.getViewObject();
+        Row row = masterData.getCurrentRow();
+        masterData.setCurrentRow(row);
+        masterData.removeCurrentRow();
+        
+        OperationBinding operation = (OperationBinding)BindingContext.getCurrent().getCurrentBindingsEntry().get("Commit");
+        operation.execute();
+        return "Deleted";
+    }
+    
+    public String confirmedDeleteAppointments(){
+        String masterTable = "AppointmentsU1Iterator";
+        
+        DCBindingContainer bindings = (DCBindingContainer)BindingContext.getCurrent().getCurrentBindingsEntry();
+        DCIteratorBinding dcItteratorBindings = bindings.findIteratorBinding(masterTable);
+        
+        ViewObject masterData = dcItteratorBindings.getViewObject();
+        Row row = masterData.getCurrentRow();
+        masterData.setCurrentRow(row);
+        masterData.removeCurrentRow();
+        
+        OperationBinding operation = (OperationBinding)BindingContext.getCurrent().getCurrentBindingsEntry().get("Commit");
+        operation.execute();
+        return "Deleted";
+    }
+    
+    public String confirmedDeleteInteraction(){
+        String masterTable = "Interactions2Iterator";
+        
+        DCBindingContainer bindings = (DCBindingContainer)BindingContext.getCurrent().getCurrentBindingsEntry();
+        DCIteratorBinding dcItteratorBindings = bindings.findIteratorBinding(masterTable);
+        
+        ViewObject masterData = dcItteratorBindings.getViewObject();
+        Row row = masterData.getCurrentRow();
+        masterData.setCurrentRow(row);
+        masterData.removeCurrentRow();
+        
+        OperationBinding operation = (OperationBinding)BindingContext.getCurrent().getCurrentBindingsEntry().get("Commit");
+        operation.execute();
+        return "Deleted";
+    }
 
     public void setT17(RichTable t17) {
         this.t17 = t17;
@@ -1625,21 +1686,6 @@ public class insertBean {
         return b23;
     }
 
-    public void setB24(RichButton b24) {
-        this.b24 = b24;
-    }
-
-    public RichButton getB24() {
-        return b24;
-    }
-
-    public void setB25(RichButton b25) {
-        this.b25 = b25;
-    }
-
-    public RichButton getB25() {
-        return b25;
-    }
 
     public void setPgl12(RichPanelGridLayout pgl12) {
         this.pgl12 = pgl12;
@@ -2561,21 +2607,6 @@ public class insertBean {
         return id21;
     }
 
-    public void setId22(RichInputDate id22) {
-        this.id22 = id22;
-    }
-
-    public RichInputDate getId22() {
-        return id22;
-    }
-
-    public void setId23(RichInputDate id23) {
-        this.id23 = id23;
-    }
-
-    public RichInputDate getId23() {
-        return id23;
-    }
 
     public void setPt5(RichPanelTabbed pt5) {
         this.pt5 = pt5;
@@ -2591,14 +2622,6 @@ public class insertBean {
 
     public RichShowDetailItem getTab5() {
         return tab5;
-    }
-
-    public void setPgl26(RichPanelGroupLayout pgl26) {
-        this.pgl26 = pgl26;
-    }
-
-    public RichPanelGroupLayout getPgl26() {
-        return pgl26;
     }
 
 
@@ -3524,5 +3547,118 @@ public class insertBean {
 
     public RichTable getT11() {
         return t11;
+    }
+
+
+    public void setQryId21(RichQuickQuery qryId21) {
+        this.qryId21 = qryId21;
+    }
+
+    public RichQuickQuery getQryId21() {
+        return qryId21;
+    }
+
+    public void setCl21(RichCommandLink cl21) {
+        this.cl21 = cl21;
+    }
+
+    public RichCommandLink getCl21() {
+        return cl21;
+    }
+
+    public void setT7(RichTable t7) {
+        this.t7 = t7;
+    }
+
+    public RichTable getT7() {
+        return t7;
+    }
+
+    public void setB24(RichButton b24) {
+        this.b24 = b24;
+    }
+
+    public RichButton getB24() {
+        return b24;
+    }
+
+    public void setB25(RichButton b25) {
+        this.b25 = b25;
+    }
+
+    public RichButton getB25() {
+        return b25;
+    }
+
+    public void setB42(RichButton b42) {
+        this.b42 = b42;
+    }
+
+    public RichButton getB42() {
+        return b42;
+    }
+
+    public void setB43(RichButton b43) {
+        this.b43 = b43;
+    }
+
+    public RichButton getB43() {
+        return b43;
+    }
+
+    public void setPgl33(RichPanelGroupLayout pgl33) {
+        this.pgl33 = pgl33;
+    }
+
+    public RichPanelGroupLayout getPgl33() {
+        return pgl33;
+    }
+
+    public void setB44(RichButton b44) {
+        this.b44 = b44;
+    }
+
+    public RichButton getB44() {
+        return b44;
+    }
+
+    public void setB45(RichButton b45) {
+        this.b45 = b45;
+    }
+
+    public RichButton getB45() {
+        return b45;
+    }
+
+    public void setPgl34(RichPanelGroupLayout pgl34) {
+        this.pgl34 = pgl34;
+    }
+
+    public RichPanelGroupLayout getPgl34() {
+        return pgl34;
+    }
+
+    public void setPgl26(RichPanelGroupLayout pgl26) {
+        this.pgl26 = pgl26;
+    }
+
+    public RichPanelGroupLayout getPgl26() {
+        return pgl26;
+    }
+
+    public void setB46(RichButton b46) {
+        this.b46 = b46;
+    }
+
+    public RichButton getB46() {
+        return b46;
+    }
+
+    public void setT29(RichTable t29) {
+        this.t29 = t29;
+    }
+
+    public RichTable getT29() {
+        return t29;
     }
 }

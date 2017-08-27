@@ -23,68 +23,104 @@
     EntityAttrName="NotesId"
     EntityUsage="NotesEO"
     AliasName="NOTES_ID"
-    IsUpdateable="while_insert"/>
+    IsUpdateable="while_insert"
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="NotesId_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="NoteName"
+    PrecisionRule="true"
+    EntityAttrName="NoteName"
+    EntityUsage="NotesEO"
+    AliasName="NOTE_NAME">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="NoteName_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="DateRecorded"
     PrecisionRule="true"
     EntityAttrName="DateRecorded"
     EntityUsage="NotesEO"
-    AliasName="DATE_RECORDED"/>
+    AliasName="DATE_RECORDED">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="DateRecorded_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Description"
     PrecisionRule="true"
     EntityAttrName="Description"
     EntityUsage="NotesEO"
-    AliasName="DESCRIPTION"/>
+    AliasName="DESCRIPTION"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="AttachedImage"
     IsQueriable="false"
     PrecisionRule="true"
     EntityAttrName="AttachedImage"
     EntityUsage="NotesEO"
-    AliasName="ATTACHED_IMAGE"/>
+    AliasName="ATTACHED_IMAGE">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="AttachedImage_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="CreatedBy"
     PrecisionRule="true"
     EntityAttrName="CreatedBy"
     EntityUsage="NotesEO"
-    AliasName="CREATED_BY"/>
+    AliasName="CREATED_BY"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="CreatedOn"
     PrecisionRule="true"
     EntityAttrName="CreatedOn"
     EntityUsage="NotesEO"
-    AliasName="CREATED_ON"/>
+    AliasName="CREATED_ON"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="LastUpdatedBy"
     PrecisionRule="true"
     EntityAttrName="LastUpdatedBy"
     EntityUsage="NotesEO"
-    AliasName="LAST_UPDATED_BY"/>
+    AliasName="LAST_UPDATED_BY"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="LastUpdatedOn"
     PrecisionRule="true"
     EntityAttrName="LastUpdatedOn"
     EntityUsage="NotesEO"
-    AliasName="LAST_UPDATED_ON"/>
+    AliasName="LAST_UPDATED_ON"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="VersionNo"
     PrecisionRule="true"
     EntityAttrName="VersionNo"
     EntityUsage="NotesEO"
-    AliasName="VERSION_NO"/>
+    AliasName="VERSION_NO"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="IsActive"
     PrecisionRule="true"
     EntityAttrName="IsActive"
     EntityUsage="NotesEO"
-    AliasName="IS_ACTIVE"/>
-  <ViewAttribute
-    Name="NoteName"
-    PrecisionRule="true"
-    EntityAttrName="NoteName"
-    EntityUsage="NotesEO"
-    AliasName="NOTE_NAME"/>
+    AliasName="IS_ACTIVE"
+    IsQueriable="false"/>
   <ViewLinkAccessor
     Name="CustomersU"
     ViewLink="model.VL.NotesToCustomersVL"
@@ -108,4 +144,8 @@
     Type="oracle.jbo.RowIterator"
     Reversed="true"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.customer.UVO.common.NotesUVOMsgBundle"/>
+  </ResourceBundle>
 </ViewObject>

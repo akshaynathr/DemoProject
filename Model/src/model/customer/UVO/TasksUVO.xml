@@ -68,7 +68,8 @@
     EntityAttrName="TaskId"
     EntityUsage="TaskEO"
     AliasName="TASK_ID"
-    IsUpdateable="while_insert"/>
+    IsUpdateable="while_insert"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="TaskName"
     PrecisionRule="true"
@@ -209,7 +210,8 @@
     PrecisionRule="true"
     EntityAttrName="IsActive"
     EntityUsage="TaskEO"
-    AliasName="IS_ACTIVE"/>
+    AliasName="IS_ACTIVE"
+    IsQueriable="false"/>
   <ViewLinkAccessor
     Name="CustomersU"
     ViewLink="model.VL.CusotmersToTasksVL"
