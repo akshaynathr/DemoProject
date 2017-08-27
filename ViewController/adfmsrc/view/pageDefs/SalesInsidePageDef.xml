@@ -23,8 +23,6 @@
     <iterator Binds="TasksU2" RangeSize="25" DataControl="AppModuleAMDataControl1" id="TasksU2Iterator1"/>
     <iterator Binds="RevenueItems1" RangeSize="25" DataControl="AppModuleAMDataControl1" id="RevenueItems1Iterator"/>
     <iterator Binds="ContactsU3" RangeSize="25" DataControl="AppModuleAMDataControl1" id="ContactsU3Iterator"/>
-    <searchRegion Binds="ContactsU3Iterator" Criteria="" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
-                  id="ContactsU3Query"/>
     <iterator Binds="AppointmentsU2" RangeSize="25" DataControl="AppModuleAMDataControl1" id="AppointmentsU2Iterator"/>
     <searchRegion Binds="AppointmentsU2Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="AppointmentsU2Query"/>
@@ -236,22 +234,6 @@
           <Item Value="Email"/>
           <Item Value="PrimaryAddressId"/>
           <Item Value="ShippingAddressId"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
-    <tree IterBinding="ContactsU3Iterator" id="ContactsU3">
-      <nodeDefinition DefName="model.UVO.ContactsUVO" Name="ContactsU30">
-        <AttrNames>
-          <Item Value="FirstName"/>
-          <Item Value="LastName"/>
-          <Item Value="IsPrimary"/>
-          <Item Value="Email"/>
-          <Item Value="WorkPhone"/>
-          <Item Value="MobilePhone"/>
-          <Item Value="AddressId"/>
-          <Item Value="BuyingRoleId"/>
-          <Item Value="DepartmentNameId"/>
-          <Item Value="InfluenceLevelId"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
@@ -858,6 +840,19 @@
           <Item Value="WinProbablity"/>
           <Item Value="BestCaseRevenue"/>
           <Item Value="WorstCaseRevenue"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="ContactsU3Iterator" id="ContactsU31">
+      <nodeDefinition DefName="model.UVO.ContactsUVO" Name="ContactsU310">
+        <AttrNames>
+          <Item Value="FirstName"/>
+          <Item Value="LastName"/>
+          <Item Value="WorkPhone"/>
+          <Item Value="BuyingRoleId"/>
+          <Item Value="DepartmentNameId"/>
+          <Item Value="InfluenceLevelId"/>
+          <Item Value="Email"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

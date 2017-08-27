@@ -86,49 +86,96 @@
     EntityAttrName="ContactId"
     EntityUsage="ContactEO"
     AliasName="CONTACT_ID"
-    IsUpdateable="while_insert"/>
+    IsUpdateable="while_insert"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="FirstName"
     PrecisionRule="true"
     EntityAttrName="FirstName"
     EntityUsage="ContactEO"
-    AliasName="FIRST_NAME"/>
+    AliasName="FIRST_NAME">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="FirstName_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="LastName"
     PrecisionRule="true"
     EntityAttrName="LastName"
     EntityUsage="ContactEO"
-    AliasName="LAST_NAME"/>
+    AliasName="LAST_NAME">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="LastName_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="IsPrimary"
     PrecisionRule="true"
     EntityAttrName="IsPrimary"
     EntityUsage="ContactEO"
-    AliasName="IS_PRIMARY"/>
+    AliasName="IS_PRIMARY"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Email"
     PrecisionRule="true"
     EntityAttrName="Email"
     EntityUsage="ContactEO"
-    AliasName="EMAIL"/>
+    AliasName="EMAIL">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="Email_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="WorkPhone"
     PrecisionRule="true"
     EntityAttrName="WorkPhone"
     EntityUsage="ContactEO"
-    AliasName="WORK_PHONE"/>
+    AliasName="WORK_PHONE"
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="WorkPhone_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="MobilePhone"
     PrecisionRule="true"
     EntityAttrName="MobilePhone"
     EntityUsage="ContactEO"
-    AliasName="MOBILE_PHONE"/>
+    AliasName="MOBILE_PHONE"
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="MobilePhone_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="AddressId"
     PrecisionRule="true"
     EntityAttrName="AddressId"
     EntityUsage="ContactEO"
-    AliasName="ADDRESS_ID"/>
+    AliasName="ADDRESS_ID"
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="AddressId_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="BuyingRoleId"
     PrecisionRule="true"
@@ -140,6 +187,8 @@
       <SchemaBasedProperties>
         <CONTROLTYPE
           Value="choice"/>
+        <LABEL
+          ResId="BuyingRoleId_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -154,6 +203,8 @@
       <SchemaBasedProperties>
         <CONTROLTYPE
           Value="choice"/>
+        <LABEL
+          ResId="DepartmentNameId_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -168,6 +219,8 @@
       <SchemaBasedProperties>
         <CONTROLTYPE
           Value="choice"/>
+        <LABEL
+          ResId="InfluenceLevelId_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -176,37 +229,43 @@
     PrecisionRule="true"
     EntityAttrName="CreatedBy"
     EntityUsage="ContactEO"
-    AliasName="CREATED_BY"/>
+    AliasName="CREATED_BY"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="CreatedOn"
     PrecisionRule="true"
     EntityAttrName="CreatedOn"
     EntityUsage="ContactEO"
-    AliasName="CREATED_ON"/>
+    AliasName="CREATED_ON"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="LastUpdatedBy"
     PrecisionRule="true"
     EntityAttrName="LastUpdatedBy"
     EntityUsage="ContactEO"
-    AliasName="LAST_UPDATED_BY"/>
+    AliasName="LAST_UPDATED_BY"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="LastUpdatedOn"
     PrecisionRule="true"
     EntityAttrName="LastUpdatedOn"
     EntityUsage="ContactEO"
-    AliasName="LAST_UPDATED_ON"/>
+    AliasName="LAST_UPDATED_ON"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="VersionNo"
     PrecisionRule="true"
     EntityAttrName="VersionNo"
     EntityUsage="ContactEO"
-    AliasName="VERSION_NO"/>
+    AliasName="VERSION_NO"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="IsActive"
     PrecisionRule="true"
     EntityAttrName="IsActive"
     EntityUsage="ContactEO"
-    AliasName="IS_ACTIVE"/>
+    AliasName="IS_ACTIVE"
+    IsQueriable="false"/>
   <ViewLinkAccessor
     Name="CustomersU"
     ViewLink="model.UVO.CustomersFk1VL"
@@ -229,4 +288,8 @@
     Type="oracle.jbo.RowIterator"
     Reversed="true"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.UVO.common.ContactsUVOMsgBundle"/>
+  </ResourceBundle>
 </ViewObject>

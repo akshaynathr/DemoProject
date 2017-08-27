@@ -104,7 +104,6 @@ public class insertBean {
     private RichPanelFormLayout pfl1;
     private RichDialog d1;
     private RichPopup opportunities_contacts;
-    private RichTable t11;
     private RichButton b7;
     private RichButton b6;
     private RichShowDetailItem sdi12;
@@ -300,6 +299,10 @@ public class insertBean {
     private RichPanelBorderLayout pbl3;
     private RichPanelGroupLayout pgl29;
     private RichTable t28;
+    private RichPanelGridLayout pgl17;
+    private RichGridRow gr6;
+    private RichGridCell gc6;
+    private RichTable t10;
 
     public insertBean() {
     }
@@ -972,13 +975,6 @@ public class insertBean {
         return opportunities_contacts;
     }
 
-    public void setT11(RichTable t11) {
-        this.t11 = t11;
-    }
-
-    public RichTable getT11() {
-        return t11;
-    }
 
     public void setB7(RichButton b7) {
         this.b7 = b7;
@@ -1195,9 +1191,10 @@ public class insertBean {
            DCIteratorBinding dcItteratorBindings3 = bindings.findIteratorBinding(linkTable);
            
            ViewObject vo = dcItteratorBindings3.getViewObject();
-                   while (vo.getRowSet().hasNext()) {  
+           
+                   while (vo.getRowSet().getFetchedRowCount()>0) {  
                        
-                       Row row = vo.next();
+                       Row row = vo.getCurrentRow();
                        System.out.println("Inside "+row.getAttribute(detailId)+" "+ row.getAttribute(masterId));
                        if(row.getAttribute(detailId).toString().equals(rowDetailSelected.getAttribute(detailId).toString())&&
                             row.getAttribute(masterId).toString().equals(rowMasterSelected.getAttribute(masterId).toString())){
@@ -1205,12 +1202,14 @@ public class insertBean {
                                                " "+rowMasterSelected.getAttribute(masterId));
                                vo.setCurrentRow(row);
                                vo.removeCurrentRow();
-                           }                 
+                               break;
+                           }
+                       row = vo.next();
                }
            OperationBinding operation = (OperationBinding)BindingContext.getCurrent().getCurrentBindingsEntry().get("Commit");
            operation.execute();
            return "null";
-       }
+           }
 
     public String deleteOpportunitiesAppointmentsLink(){
            String masterTable = "OpportunitiesU2Iterator";
@@ -1240,9 +1239,10 @@ public class insertBean {
            DCIteratorBinding dcItteratorBindings3 = bindings.findIteratorBinding(linkTable);
            
            ViewObject vo = dcItteratorBindings3.getViewObject();
-                   while (vo.getRowSet().hasNext()) {  
+           
+                   while (vo.getRowSet().getFetchedRowCount()>0) {  
                        
-                       Row row = vo.next();
+                       Row row = vo.getCurrentRow();
                        System.out.println("Inside "+row.getAttribute(detailId)+" "+ row.getAttribute(masterId));
                        if(row.getAttribute(detailId).toString().equals(rowDetailSelected.getAttribute(detailId).toString())&&
                             row.getAttribute(masterId).toString().equals(rowMasterSelected.getAttribute(masterId).toString())){
@@ -1250,12 +1250,14 @@ public class insertBean {
                                                " "+rowMasterSelected.getAttribute(masterId));
                                vo.setCurrentRow(row);
                                vo.removeCurrentRow();
-                           }                 
+                               break;
+                           }
+                       row = vo.next();
                }
            OperationBinding operation = (OperationBinding)BindingContext.getCurrent().getCurrentBindingsEntry().get("Commit");
            operation.execute();
            return "null";
-       }
+           }
     
     public String deleteOpportunitiesContactsLink(){
            String masterTable = "OpportunitiesU2Iterator";
@@ -1284,10 +1286,13 @@ public class insertBean {
 
            DCIteratorBinding dcItteratorBindings3 = bindings.findIteratorBinding(linkTable);
            
+           
+           
            ViewObject vo = dcItteratorBindings3.getViewObject();
-                   while (vo.getRowSet().hasNext()) {  
+           System.out.println("Rows: "+ vo.getRowSet().getFetchedRowCount());
+                   while (vo.getRowSet().getFetchedRowCount()>0) {  
                        
-                       Row row = vo.next();
+                       Row row = vo.getCurrentRow();
                        System.out.println("Inside "+row.getAttribute(detailId)+" "+ row.getAttribute(masterId));
                        if(row.getAttribute(detailId).toString().equals(rowDetailSelected.getAttribute(detailId).toString())&&
                             row.getAttribute(masterId).toString().equals(rowMasterSelected.getAttribute(masterId).toString())){
@@ -1295,12 +1300,14 @@ public class insertBean {
                                                " "+rowMasterSelected.getAttribute(masterId));
                                vo.setCurrentRow(row);
                                vo.removeCurrentRow();
-                           }                 
+                               break;
+                           }
+                       row = vo.next();
                }
            OperationBinding operation = (OperationBinding)BindingContext.getCurrent().getCurrentBindingsEntry().get("Commit");
            operation.execute();
            return "null";
-       }
+           }
     
     public String deleteCustomerTasksLink(){
            String masterTable = "CustomersU1Iterator";
@@ -1330,9 +1337,10 @@ public class insertBean {
            DCIteratorBinding dcItteratorBindings3 = bindings.findIteratorBinding(linkTable);
            
            ViewObject vo = dcItteratorBindings3.getViewObject();
-                   while (vo.getRowSet().hasNext()) {  
+           
+                   while (vo.getRowSet().getFetchedRowCount()>0) {  
                        
-                       Row row = vo.next();
+                       Row row = vo.getCurrentRow();
                        System.out.println("Inside "+row.getAttribute(detailId)+" "+ row.getAttribute(masterId));
                        if(row.getAttribute(detailId).toString().equals(rowDetailSelected.getAttribute(detailId).toString())&&
                             row.getAttribute(masterId).toString().equals(rowMasterSelected.getAttribute(masterId).toString())){
@@ -1340,12 +1348,14 @@ public class insertBean {
                                                " "+rowMasterSelected.getAttribute(masterId));
                                vo.setCurrentRow(row);
                                vo.removeCurrentRow();
-                           }                 
+                               break;
+                           }
+                       row = vo.next();
                }
            OperationBinding operation = (OperationBinding)BindingContext.getCurrent().getCurrentBindingsEntry().get("Commit");
            operation.execute();
            return "null";
-       }
+           }
     
     public String deleteCustomerNotesLink(){
            String masterTable = "CustomersU1Iterator";
@@ -1375,9 +1385,10 @@ public class insertBean {
            DCIteratorBinding dcItteratorBindings3 = bindings.findIteratorBinding(linkTable);
            
            ViewObject vo = dcItteratorBindings3.getViewObject();
-                   while (vo.getRowSet().hasNext()) {  
+           
+                   while (vo.getRowSet().getFetchedRowCount()>0) {  
                        
-                       Row row = vo.next();
+                       Row row = vo.getCurrentRow();
                        System.out.println("Inside "+row.getAttribute(detailId)+" "+ row.getAttribute(masterId));
                        if(row.getAttribute(detailId).toString().equals(rowDetailSelected.getAttribute(detailId).toString())&&
                             row.getAttribute(masterId).toString().equals(rowMasterSelected.getAttribute(masterId).toString())){
@@ -1385,12 +1396,14 @@ public class insertBean {
                                                " "+rowMasterSelected.getAttribute(masterId));
                                vo.setCurrentRow(row);
                                vo.removeCurrentRow();
-                           }                 
+                               break;
+                           }
+                       row = vo.next();
                }
            OperationBinding operation = (OperationBinding)BindingContext.getCurrent().getCurrentBindingsEntry().get("Commit");
            operation.execute();
            return "null";
-       }
+           }
     
     public String deleteCustomerContactsLink(){
            String masterTable = "CustomersU1Iterator";
@@ -1420,9 +1433,10 @@ public class insertBean {
            DCIteratorBinding dcItteratorBindings3 = bindings.findIteratorBinding(linkTable);
            
            ViewObject vo = dcItteratorBindings3.getViewObject();
-                   while (vo.getRowSet().hasNext()) {  
+           
+                   while (vo.getRowSet().getFetchedRowCount()>0) {  
                        
-                       Row row = vo.next();
+                       Row row = vo.getCurrentRow();
                        System.out.println("Inside "+row.getAttribute(detailId)+" "+ row.getAttribute(masterId));
                        if(row.getAttribute(detailId).toString().equals(rowDetailSelected.getAttribute(detailId).toString())&&
                             row.getAttribute(masterId).toString().equals(rowMasterSelected.getAttribute(masterId).toString())){
@@ -1430,13 +1444,14 @@ public class insertBean {
                                                " "+rowMasterSelected.getAttribute(masterId));
                                vo.setCurrentRow(row);
                                vo.removeCurrentRow();
-                           }                 
+                               break;
+                           }
+                       row = vo.next();
                }
            OperationBinding operation = (OperationBinding)BindingContext.getCurrent().getCurrentBindingsEntry().get("Commit");
            operation.execute();
            return "null";
-       }
-
+        }
 
     public void setT17(RichTable t17) {
         this.t17 = t17;
@@ -2838,5 +2853,37 @@ public class insertBean {
 
     public RichTable getT28() {
         return t28;
+    }
+
+    public void setPgl17(RichPanelGridLayout pgl17) {
+        this.pgl17 = pgl17;
+    }
+
+    public RichPanelGridLayout getPgl17() {
+        return pgl17;
+    }
+
+    public void setGr6(RichGridRow gr6) {
+        this.gr6 = gr6;
+    }
+
+    public RichGridRow getGr6() {
+        return gr6;
+    }
+
+    public void setGc6(RichGridCell gc6) {
+        this.gc6 = gc6;
+    }
+
+    public RichGridCell getGc6() {
+        return gc6;
+    }
+
+    public void setT10(RichTable t10) {
+        this.t10 = t10;
+    }
+
+    public RichTable getT10() {
+        return t10;
     }
 }
