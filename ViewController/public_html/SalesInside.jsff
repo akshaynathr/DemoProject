@@ -2555,7 +2555,8 @@
               </af:table>
             </af:showDetailItem>
             <af:showDetailItem text="Customers" id="sdi17" binding="#{backingBeanScope.InsertBean.sdi17}">
-              <af:panelGroupLayout layout="horizontal" id="pgl28" binding="#{backingBeanScope.InsertBean.pgl28}">
+              <af:panelGroupLayout layout="horizontal" id="pgl28" binding="#{backingBeanScope.InsertBean.pgl28}"
+                                   halign="center">
                 <af:quickQuery label="Search" searchDesc="Search" id="qryId15"
                                value="#{bindings.ImplicitViewCriteriaQuery14.quickQueryDescriptor}"
                                model="#{bindings.ImplicitViewCriteriaQuery14.queryModel}"
@@ -2576,7 +2577,8 @@
                         fetchSize="#{bindings.CustomersU5.rangeSize}"
                         filterModel="#{bindings.ImplicitViewCriteriaQuery14.quickQueryDescriptor}" filterVisible="true"
                         queryListener="#{bindings.ImplicitViewCriteriaQuery14.processQuery}" varStatus="vs"
-                        partialTriggers="::qryId15" id="t26" binding="#{backingBeanScope.InsertBean.t26}">
+                        partialTriggers="::qryId15" id="t26" binding="#{backingBeanScope.InsertBean.t26}"
+                        columnStretching="column:c153">
                 <af:column sortProperty="#{bindings.CustomersU5.hints.CustomerName.name}" filterable="true"
                            sortable="true" headerText="#{bindings.CustomersU5.hints.CustomerName.label}" id="c153">
                   <af:outputText value="#{row.CustomerName}"
@@ -2591,18 +2593,6 @@
                                       id="soc18">
                     <f:selectItems value="#{row.bindings.CustomerTypeId.items}" id="si18"/>
                     <f:validator binding="#{row.bindings.CustomerTypeId.validator}"/>
-                  </af:selectOneChoice>
-                </af:column>
-                <af:column sortProperty="#{bindings.CustomersU5.hints.PrimaryContactId.name}" sortable="true"
-                           headerText="#{bindings.CustomersU5.hints.PrimaryContactId.label}" filterable="true"
-                           id="c155">
-                  <af:selectOneChoice value="#{row.bindings.PrimaryContactId.inputValue}"
-                                      label="#{row.bindings.PrimaryContactId.label}"
-                                      required="#{bindings.CustomersU5.hints.PrimaryContactId.mandatory}"
-                                      shortDesc="#{bindings.CustomersU5.hints.PrimaryContactId.tooltip}" readOnly="true"
-                                      id="soc38">
-                    <f:selectItems value="#{row.bindings.PrimaryContactId.items}" id="si38"/>
-                    <f:validator binding="#{row.bindings.PrimaryContactId.validator}"/>
                   </af:selectOneChoice>
                 </af:column>
                 <af:column sortProperty="#{bindings.CustomersU5.hints.Url.name}" sortable="true"
@@ -2624,12 +2614,6 @@
                                  shortDesc="#{bindings.CustomersU5.hints.NoOfEmployees.tooltip}" id="ot119">
                     <af:convertNumber groupingUsed="false"
                                       pattern="#{bindings.CustomersU5.hints.NoOfEmployees.format}"/>
-                  </af:outputText>
-                </af:column>
-                <af:column sortProperty="#{bindings.CustomersU5.hints.Fax.name}" sortable="true"
-                           headerText="#{bindings.CustomersU5.hints.Fax.label}" filterable="true" id="c268">
-                  <af:outputText value="#{row.Fax}" shortDesc="#{bindings.CustomersU5.hints.Fax.tooltip}" id="ot120">
-                    <af:convertNumber groupingUsed="false" pattern="#{bindings.CustomersU5.hints.Fax.format}"/>
                   </af:outputText>
                 </af:column>
                 <af:column sortProperty="#{bindings.CustomersU5.hints.Email.name}" sortable="true"
