@@ -222,7 +222,8 @@
     PrecisionRule="true"
     EntityAttrName="BestCaseRevenue"
     EntityUsage="RevenueItemsEO"
-    AliasName="BEST_CASE_REVENUE1"/>
+    AliasName="BEST_CASE_REVENUE1"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="EstimatedPrice"
     PrecisionRule="true"
@@ -248,7 +249,8 @@
     PrecisionRule="true"
     EntityAttrName="Quantity"
     EntityUsage="RevenueItemsEO"
-    AliasName="QUANTITY"/>
+    AliasName="QUANTITY"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Revenue1"
     PrecisionRule="true"
@@ -260,13 +262,15 @@
     PrecisionRule="true"
     EntityAttrName="WinProbablity"
     EntityUsage="RevenueItemsEO"
-    AliasName="WIN_PROBABLITY1"/>
+    AliasName="WIN_PROBABLITY1"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="WorstCaseRevenue1"
     PrecisionRule="true"
     EntityAttrName="WorstCaseRevenue"
     EntityUsage="RevenueItemsEO"
-    AliasName="WORST_CASE_REVENUE1"/>
+    AliasName="WORST_CASE_REVENUE1"
+    IsQueriable="false"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.customer.EO.common.MasterOppReveueVOMsgBundle"/>

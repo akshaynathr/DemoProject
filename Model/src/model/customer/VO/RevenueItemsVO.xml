@@ -50,6 +50,8 @@
       <SchemaBasedProperties>
         <CONTROLTYPE
           Value="choice"/>
+        <LABEL
+          ResId="ProductId_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -59,21 +61,30 @@
     PrecisionRule="true"
     EntityAttrName="OpportunityId"
     EntityUsage="RevenueItemsEO"
-    AliasName="OPPORTUNITY_ID"/>
+    AliasName="OPPORTUNITY_ID"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="EstimatedPrice"
     PrecisionRule="true"
     EntityAttrName="EstimatedPrice"
     EntityUsage="RevenueItemsEO"
     AliasName="ESTIMATED_PRICE"
-    DefaultValue="0"/>
+    DefaultValue="0">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="EstimatedPrice_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Quantity"
     PrecisionRule="true"
     EntityAttrName="Quantity"
     EntityUsage="RevenueItemsEO"
     AliasName="QUANTITY"
-    DefaultValue="0"/>
+    DefaultValue="0"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Revenue"
     PrecisionRule="true"
@@ -96,19 +107,43 @@
     PrecisionRule="true"
     EntityAttrName="WinProbablity"
     EntityUsage="RevenueItemsEO"
-    AliasName="WIN_PROBABLITY"/>
+    AliasName="WIN_PROBABLITY"
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="WinProbablity_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="BestCaseRevenue"
     PrecisionRule="true"
     EntityAttrName="BestCaseRevenue"
     EntityUsage="RevenueItemsEO"
-    AliasName="BEST_CASE_REVENUE"/>
+    AliasName="BEST_CASE_REVENUE"
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="BestCaseRevenue_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="WorstCaseRevenue"
     PrecisionRule="true"
     EntityAttrName="WorstCaseRevenue"
     EntityUsage="RevenueItemsEO"
-    AliasName="WORST_CASE_REVENUE"/>
+    AliasName="WORST_CASE_REVENUE"
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="WorstCaseRevenue_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="OpportunitiesU"
     ViewLink="model.VL.OpportuntiesToRevenueItemsVL"

@@ -551,19 +551,10 @@
               </af:panelGroupLayout>
             </af:showDetailItem>
             <af:showDetailItem id="tab1" text="Tasks" disclosed="false" binding="#{backingBeanScope.InsertBean.tab1}">
-              <af:panelGroupLayout id="pgl15" binding="#{backingBeanScope.InsertBean.pgl15}" layout="horizontal">
-                <af:quickQuery label="Search" searchDesc="Search" id="qryId11"
-                               value="#{bindings.ImplicitViewCriteriaQuery10.quickQueryDescriptor}"
-                               model="#{bindings.ImplicitViewCriteriaQuery10.queryModel}"
-                               queryListener="#{bindings.ImplicitViewCriteriaQuery10.processQuery}"
-                               binding="#{backingBeanScope.InsertBean.qryId11}">
-                  <f:facet name="end">
-                    <af:commandLink text="Advanced" rendered="false" id="cl11"
-                                    binding="#{backingBeanScope.InsertBean.cl11}"/>
-                  </f:facet>
-                  <af:button actionListener="#{bindings.Delete1.execute}" text="Delete Task related to Opportunity"
-                             id="b15" binding="#{backingBeanScope.InsertBean.b15}"/>
-                </af:quickQuery>
+              <af:panelGroupLayout id="pgl15" binding="#{backingBeanScope.InsertBean.pgl15}" layout="horizontal"
+                                   halign="center">
+                <af:button actionListener="#{bindings.Delete1.execute}" text="Delete Task related to Opportunity"
+                           id="b15" binding="#{backingBeanScope.InsertBean.b15}"/>
               </af:panelGroupLayout>
               <af:panelGridLayout id="pgl16" binding="#{backingBeanScope.InsertBean.pgl16}">
                 <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr4"
@@ -577,7 +568,8 @@
                               fetchSize="#{bindings.TasksU2.rangeSize}"
                               filterModel="#{bindings.TasksU2Query.queryDescriptor}" filterVisible="true"
                               queryListener="#{bindings.TasksU2Query.processQuery}" varStatus="vs" id="t9"
-                              partialTriggers="::qryId11:b15" binding="#{backingBeanScope.InsertBean.t9}">
+                              partialTriggers="::b15" binding="#{backingBeanScope.InsertBean.t9}"
+                              columnStretching="column:c157">
                       <af:column sortProperty="#{bindings.TasksU2.hints.TaskName.name}" filterable="true"
                                  sortable="true" headerText="#{bindings.TasksU2.hints.TaskName.label}" id="c157">
                         <af:outputText value="#{row.TaskName}" shortDesc="#{bindings.TasksU2.hints.TaskName.tooltip}"
@@ -644,7 +636,8 @@
             </af:showDetailItem>
             <af:showDetailItem text="Revenue Items" id="sdi11" binding="#{backingBeanScope.InsertBean.sdi11}">
               <af:panelGroupLayout layout="vertical" id="pgl9" binding="#{backingBeanScope.InsertBean.pgl9}">
-                <af:panelGroupLayout layout="horizontal" id="pgl23" binding="#{backingBeanScope.InsertBean.pgl23}">
+                <af:panelGroupLayout layout="horizontal" id="pgl23" binding="#{backingBeanScope.InsertBean.pgl23}"
+                                     halign="center">
                   <af:quickQuery label="Search" searchDesc="Search" id="qryId9"
                                  value="#{bindings.ImplicitViewCriteriaQuery8.quickQueryDescriptor}"
                                  model="#{bindings.ImplicitViewCriteriaQuery8.queryModel}"
@@ -655,12 +648,10 @@
                                       binding="#{backingBeanScope.InsertBean.cl9}"/>
                     </f:facet>
                   </af:quickQuery>
-                  <af:panelGroupLayout id="pgl17" binding="#{backingBeanScope.InsertBean.pgl17}" layout="horizontal">
-                    <af:button actionListener="#{bindings.Delete.execute}" text="Delete" id="b13"
-                               binding="#{backingBeanScope.InsertBean.b13}"/>
-                    <af:button actionListener="#{bindings.Commit.execute}" text="Commit" id="b14"
-                               binding="#{backingBeanScope.InsertBean.b14}"/>
-                  </af:panelGroupLayout>
+                  <af:button actionListener="#{bindings.Commit.execute}" text="Commit" id="b14"
+                             binding="#{backingBeanScope.InsertBean.b14}"/>
+                  <af:button actionListener="#{bindings.Delete.execute}" text="Delete" id="b13"
+                             binding="#{backingBeanScope.InsertBean.b13}"/>
                 </af:panelGroupLayout>
               </af:panelGroupLayout>
               <af:panelGridLayout id="pgl8" binding="#{backingBeanScope.InsertBean.pgl8}">
@@ -668,75 +659,65 @@
                             binding="#{backingBeanScope.InsertBean.gr5}">
                   <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5"
                                binding="#{backingBeanScope.InsertBean.gc5}" halign="stretch">
-                    <af:table value="#{bindings.RevenueItems1.collectionModel}" var="row"
-                              rows="#{bindings.RevenueItems1.rangeSize}"
-                              emptyText="#{bindings.RevenueItems1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                    <af:table value="#{bindings.RevenueItems11.collectionModel}" var="row"
+                              rows="#{bindings.RevenueItems11.rangeSize}"
+                              emptyText="#{bindings.RevenueItems11.viewable ? 'No data to display.' : 'Access Denied.'}"
                               rowBandingInterval="0"
-                              selectedRowKeys="#{bindings.RevenueItems1.collectionModel.selectedRow}"
-                              selectionListener="#{bindings.RevenueItems1.collectionModel.makeCurrent}"
-                              rowSelection="single" fetchSize="#{bindings.RevenueItems1.rangeSize}"
-                              filterModel="#{bindings.RevenueItems1Query.queryDescriptor}" filterVisible="true"
-                              queryListener="#{bindings.RevenueItems1Query.processQuery}" varStatus="vs" id="t10"
-                              binding="#{backingBeanScope.InsertBean.t10}" columnStretching="column:c170"
-                              partialTriggers="::b13 ::b14">
-                      <af:column sortProperty="#{bindings.RevenueItems1.hints.ProductId.name}" filterable="true"
-                                 sortable="true" headerText="#{bindings.RevenueItems1.hints.ProductId.label}" id="c170">
-                        <af:outputText value="#{row.ProductId}"
-                                       shortDesc="#{bindings.RevenueItems1.hints.ProductId.tooltip}">
-                          <af:convertNumber groupingUsed="false"
-                                            pattern="#{bindings.RevenueItems1.hints.ProductId.format}"/>
-                        </af:outputText>
+                              selectedRowKeys="#{bindings.RevenueItems11.collectionModel.selectedRow}"
+                              selectionListener="#{bindings.RevenueItems11.collectionModel.makeCurrent}"
+                              rowSelection="single" fetchSize="#{bindings.RevenueItems11.rangeSize}" id="t28"
+                              partialTriggers="::b13 ::b14" binding="#{backingBeanScope.InsertBean.t28}"
+                              columnStretching="column:c235">
+                      <af:column headerText="#{bindings.RevenueItems11.hints.ProductId.label}" id="c235">
+                        <af:selectOneChoice value="#{row.bindings.ProductId.inputValue}"
+                                            label="#{row.bindings.ProductId.label}"
+                                            required="#{bindings.RevenueItems11.hints.ProductId.mandatory}"
+                                            shortDesc="#{bindings.RevenueItems11.hints.ProductId.tooltip}"
+                                            readOnly="true" id="soc42">
+                          <f:selectItems value="#{row.bindings.ProductId.items}" id="si42"/>
+                          <f:validator binding="#{row.bindings.ProductId.validator}"/>
+                        </af:selectOneChoice>
                       </af:column>
-                      <af:column sortProperty="#{bindings.RevenueItems1.hints.EstimatedPrice.name}" filterable="true"
-                                 sortable="true" headerText="#{bindings.RevenueItems1.hints.EstimatedPrice.label}"
-                                 id="c172">
+                      <af:column headerText="#{bindings.RevenueItems11.hints.EstimatedPrice.label}" id="c236">
                         <af:outputText value="#{row.EstimatedPrice}"
-                                       shortDesc="#{bindings.RevenueItems1.hints.EstimatedPrice.tooltip}" id="ot124">
+                                       shortDesc="#{bindings.RevenueItems11.hints.EstimatedPrice.tooltip}" id="ot115">
                           <af:convertNumber groupingUsed="false"
-                                            pattern="#{bindings.RevenueItems1.hints.EstimatedPrice.format}"/>
+                                            pattern="#{bindings.RevenueItems11.hints.EstimatedPrice.format}"/>
                         </af:outputText>
                       </af:column>
-                      <af:column sortProperty="#{bindings.RevenueItems1.hints.Quantity.name}" filterable="true"
-                                 sortable="true" headerText="#{bindings.RevenueItems1.hints.Quantity.label}" id="c173">
+                      <af:column headerText="#{bindings.RevenueItems11.hints.Quantity.label}" id="c237">
                         <af:outputText value="#{row.Quantity}"
-                                       shortDesc="#{bindings.RevenueItems1.hints.Quantity.tooltip}" id="ot125">
+                                       shortDesc="#{bindings.RevenueItems11.hints.Quantity.tooltip}" id="ot184">
                           <af:convertNumber groupingUsed="false"
-                                            pattern="#{bindings.RevenueItems1.hints.Quantity.format}"/>
+                                            pattern="#{bindings.RevenueItems11.hints.Quantity.format}"/>
                         </af:outputText>
                       </af:column>
-                      <af:column sortProperty="#{bindings.RevenueItems1.hints.Revenue.name}" filterable="true"
-                                 sortable="true" headerText="#{bindings.RevenueItems1.hints.Revenue.label}" id="c174">
+                      <af:column headerText="#{bindings.RevenueItems11.hints.Revenue.label}" id="c238">
                         <af:outputText value="#{row.Revenue}"
-                                       shortDesc="#{bindings.RevenueItems1.hints.Revenue.tooltip}" id="ot126">
+                                       shortDesc="#{bindings.RevenueItems11.hints.Revenue.tooltip}" id="ot185">
                           <af:convertNumber groupingUsed="false"
-                                            pattern="#{bindings.RevenueItems1.hints.Revenue.format}"/>
+                                            pattern="#{bindings.RevenueItems11.hints.Revenue.format}"/>
                         </af:outputText>
                       </af:column>
-                      <af:column sortProperty="#{bindings.RevenueItems1.hints.WinProbablity.name}" filterable="true"
-                                 sortable="true" headerText="#{bindings.RevenueItems1.hints.WinProbablity.label}"
-                                 id="c175">
+                      <af:column headerText="#{bindings.RevenueItems11.hints.WinProbablity.label}" id="c277">
                         <af:outputText value="#{row.WinProbablity}"
-                                       shortDesc="#{bindings.RevenueItems1.hints.WinProbablity.tooltip}" id="ot127">
+                                       shortDesc="#{bindings.RevenueItems11.hints.WinProbablity.tooltip}" id="ot186">
                           <af:convertNumber groupingUsed="false"
-                                            pattern="#{bindings.RevenueItems1.hints.WinProbablity.format}"/>
+                                            pattern="#{bindings.RevenueItems11.hints.WinProbablity.format}"/>
                         </af:outputText>
                       </af:column>
-                      <af:column sortProperty="#{bindings.RevenueItems1.hints.BestCaseRevenue.name}" filterable="true"
-                                 sortable="true" headerText="#{bindings.RevenueItems1.hints.BestCaseRevenue.label}"
-                                 id="c176">
+                      <af:column headerText="#{bindings.RevenueItems11.hints.BestCaseRevenue.label}" id="c278">
                         <af:outputText value="#{row.BestCaseRevenue}"
-                                       shortDesc="#{bindings.RevenueItems1.hints.BestCaseRevenue.tooltip}" id="ot128">
+                                       shortDesc="#{bindings.RevenueItems11.hints.BestCaseRevenue.tooltip}" id="ot187">
                           <af:convertNumber groupingUsed="false"
-                                            pattern="#{bindings.RevenueItems1.hints.BestCaseRevenue.format}"/>
+                                            pattern="#{bindings.RevenueItems11.hints.BestCaseRevenue.format}"/>
                         </af:outputText>
                       </af:column>
-                      <af:column sortProperty="#{bindings.RevenueItems1.hints.WorstCaseRevenue.name}" filterable="true"
-                                 sortable="true" headerText="#{bindings.RevenueItems1.hints.WorstCaseRevenue.label}"
-                                 id="c177">
+                      <af:column headerText="#{bindings.RevenueItems11.hints.WorstCaseRevenue.label}" id="c279">
                         <af:outputText value="#{row.WorstCaseRevenue}"
-                                       shortDesc="#{bindings.RevenueItems1.hints.WorstCaseRevenue.tooltip}" id="ot129">
+                                       shortDesc="#{bindings.RevenueItems11.hints.WorstCaseRevenue.tooltip}" id="ot212">
                           <af:convertNumber groupingUsed="false"
-                                            pattern="#{bindings.RevenueItems1.hints.WorstCaseRevenue.format}"/>
+                                            pattern="#{bindings.RevenueItems11.hints.WorstCaseRevenue.format}"/>
                         </af:outputText>
                       </af:column>
                     </af:table>

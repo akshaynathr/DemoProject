@@ -108,7 +108,6 @@ public class insertBean {
     private RichButton b7;
     private RichButton b6;
     private RichShowDetailItem sdi12;
-    private RichTable t10;
     private RichPanelGroupLayout pgl9;
     private RichShowDetailItem sdi11;
     private RichShowDetailItem tab1;
@@ -163,7 +162,6 @@ public class insertBean {
     private RichPanelGridLayout pgl16;
     private RichGridRow gr4;
     private RichGridCell gc4;
-    private RichPanelGroupLayout pgl17;
     private RichPanelGridLayout pgl8;
     private RichGridRow gr5;
     private RichGridCell gc5;
@@ -257,8 +255,6 @@ public class insertBean {
     private RichPanelGroupLayout pgl24;
     private RichQuickQuery qryId10;
     private RichCommandLink cl10;
-    private RichQuickQuery qryId11;
-    private RichCommandLink cl11;
     private RichPanelGroupLayout pgl25;
     private RichPanelHeader ph4;
     private RichQuickQuery qryId12;
@@ -303,6 +299,7 @@ public class insertBean {
     private RichInputDate id29;
     private RichPanelBorderLayout pbl3;
     private RichPanelGroupLayout pgl29;
+    private RichTable t28;
 
     public insertBean() {
     }
@@ -1005,14 +1002,6 @@ public class insertBean {
 
     public RichShowDetailItem getSdi12() {
         return sdi12;
-    }
-
-    public void setT10(RichTable t10) {
-        this.t10 = t10;
-    }
-
-    public RichTable getT10() {
-        return t10;
     }
 
 
@@ -1725,13 +1714,6 @@ public class insertBean {
         return gc4;
     }
 
-    public void setPgl17(RichPanelGroupLayout pgl17) {
-        this.pgl17 = pgl17;
-    }
-
-    public RichPanelGroupLayout getPgl17() {
-        return pgl17;
-    }
 
     public void setPgl8(RichPanelGridLayout pgl8) {
         this.pgl8 = pgl8;
@@ -2490,22 +2472,6 @@ public class insertBean {
     }
 
 
-    public void setQryId11(RichQuickQuery qryId11) {
-        this.qryId11 = qryId11;
-    }
-
-    public RichQuickQuery getQryId11() {
-        return qryId11;
-    }
-
-    public void setCl11(RichCommandLink cl11) {
-        this.cl11 = cl11;
-    }
-
-    public RichCommandLink getCl11() {
-        return cl11;
-    }
-
     public void setPgl25(RichPanelGroupLayout pgl25) {
         this.pgl25 = pgl25;
     }
@@ -2863,5 +2829,14 @@ public class insertBean {
 
     public RichPanelGroupLayout getPgl29() {
         return pgl29;
+    }
+
+
+    public void setT28(RichTable t28) {
+        this.t28 = t28;
+    }
+
+    public RichTable getT28() {
+        return t28;
     }
 }
