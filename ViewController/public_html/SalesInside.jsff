@@ -874,7 +874,8 @@
               </af:panelGridLayout>
             </af:showDetailItem>
             <af:showDetailItem text="Appointments" id="sdi13" binding="#{backingBeanScope.InsertBean.sdi13}">
-              <af:panelGroupLayout layout="horizontal" id="pgl10" binding="#{backingBeanScope.InsertBean.pgl10}">
+              <af:panelGroupLayout layout="horizontal" id="pgl10" binding="#{backingBeanScope.InsertBean.pgl10}"
+                                   halign="center">
                 <af:quickQuery label="Search" searchDesc="Search" id="qryId1"
                                value="#{bindings.ImplicitViewCriteriaQuery.quickQueryDescriptor}"
                                model="#{bindings.ImplicitViewCriteriaQuery.queryModel}"
@@ -884,11 +885,43 @@
                     <af:commandLink text="Advanced" rendered="false" id="cl1"
                                     binding="#{backingBeanScope.InsertBean.cl1}"/>
                   </f:facet>
+                  <af:table value="#{bindings.AppointmentsOpportunitiesU1.collectionModel}" var="row"
+                            rows="#{bindings.AppointmentsOpportunitiesU1.rangeSize}"
+                            emptyText="#{bindings.AppointmentsOpportunitiesU1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                            rowBandingInterval="0" fetchSize="#{bindings.AppointmentsOpportunitiesU1.rangeSize}"
+                            id="t18" binding="#{backingBeanScope.InsertBean.t18}">
+                    <af:column headerText="#{bindings.AppointmentsOpportunitiesU1.hints.AppointmentId.label}" id="c132">
+                      <af:inputText value="#{row.bindings.AppointmentId.inputValue}"
+                                    label="#{bindings.AppointmentsOpportunitiesU1.hints.AppointmentId.label}"
+                                    required="#{bindings.AppointmentsOpportunitiesU1.hints.AppointmentId.mandatory}"
+                                    columns="#{bindings.AppointmentsOpportunitiesU1.hints.AppointmentId.displayWidth}"
+                                    maximumLength="#{bindings.AppointmentsOpportunitiesU1.hints.AppointmentId.precision}"
+                                    shortDesc="#{bindings.AppointmentsOpportunitiesU1.hints.AppointmentId.tooltip}"
+                                    id="it32">
+                        <f:validator binding="#{row.bindings.AppointmentId.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.AppointmentsOpportunitiesU1.hints.AppointmentId.format}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column headerText="#{bindings.AppointmentsOpportunitiesU1.hints.OpportunityId.label}" id="c133">
+                      <af:inputText value="#{row.bindings.OpportunityId.inputValue}"
+                                    label="#{bindings.AppointmentsOpportunitiesU1.hints.OpportunityId.label}"
+                                    required="#{bindings.AppointmentsOpportunitiesU1.hints.OpportunityId.mandatory}"
+                                    columns="#{bindings.AppointmentsOpportunitiesU1.hints.OpportunityId.displayWidth}"
+                                    maximumLength="#{bindings.AppointmentsOpportunitiesU1.hints.OpportunityId.precision}"
+                                    shortDesc="#{bindings.AppointmentsOpportunitiesU1.hints.OpportunityId.tooltip}"
+                                    id="it33">
+                        <f:validator binding="#{row.bindings.OpportunityId.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.AppointmentsOpportunitiesU1.hints.OpportunityId.format}"/>
+                      </af:inputText>
+                    </af:column>
+                  </af:table>
                 </af:quickQuery>
-                <af:button text="Add appointments" id="b9" binding="#{backingBeanScope.InsertBean.b9}">
+                <af:button text="Add" id="b9" binding="#{backingBeanScope.InsertBean.b9}">
                   <af:showPopupBehavior popupId="p2"/>
                 </af:button>
-                <af:button text="Delete Appointments related to Opportunity" id="b11"
+                <af:button text="Delete" id="b11"
                            binding="#{backingBeanScope.InsertBean.b11}"
                            action="#{backingBeanScope.InsertBean.deleteOpportunitiesAppointmentsLink}"/>
               </af:panelGroupLayout>
@@ -900,15 +933,7 @@
                         fetchSize="#{bindings.AppointmentsU2.rangeSize}"
                         filterModel="#{bindings.AppointmentsU2Query.queryDescriptor}" filterVisible="true"
                         queryListener="#{bindings.AppointmentsU2Query.processQuery}" varStatus="vs" id="t12"
-                        binding="#{backingBeanScope.InsertBean.t12}">
-                <af:column sortProperty="#{bindings.AppointmentsU2.hints.CustomerId.name}" filterable="true"
-                           sortable="true" headerText="#{bindings.AppointmentsU2.hints.CustomerId.label}" id="c188">
-                  <af:outputText value="#{row.CustomerId}"
-                                 shortDesc="#{bindings.AppointmentsU2.hints.CustomerId.tooltip}" id="ot140">
-                    <af:convertNumber groupingUsed="false"
-                                      pattern="#{bindings.AppointmentsU2.hints.CustomerId.format}"/>
-                  </af:outputText>
-                </af:column>
+                        binding="#{backingBeanScope.InsertBean.t12}" columnStretching="column:c190">
                 <af:column sortProperty="#{bindings.AppointmentsU2.hints.AppointmentSubject.name}" filterable="true"
                            sortable="true" headerText="#{bindings.AppointmentsU2.hints.AppointmentSubject.label}"
                            id="c189">
@@ -954,48 +979,9 @@
                                       pattern="#{bindings.AppointmentsU2.hints.LocationRoomNo.format}"/>
                   </af:outputText>
                 </af:column>
-                <af:column sortProperty="#{bindings.AppointmentsU2.hints.AddressId.name}" filterable="true"
-                           sortable="true" headerText="#{bindings.AppointmentsU2.hints.AddressId.label}" id="c194">
-                  <af:outputText value="#{row.AddressId}" shortDesc="#{bindings.AppointmentsU2.hints.AddressId.tooltip}"
-                                 id="ot146">
-                    <af:convertNumber groupingUsed="false" pattern="#{bindings.AppointmentsU2.hints.AddressId.format}"/>
-                  </af:outputText>
-                </af:column>
               </af:table>
               <af:popup childCreation="deferred" autoCancel="disabled" id="p2"
                         binding="#{backingBeanScope.InsertBean.p2}"/>
-              <af:table value="#{bindings.AppointmentsOpportunitiesU1.collectionModel}" var="row"
-                        rows="#{bindings.AppointmentsOpportunitiesU1.rangeSize}"
-                        emptyText="#{bindings.AppointmentsOpportunitiesU1.viewable ? 'No data to display.' : 'Access Denied.'}"
-                        rowBandingInterval="0" fetchSize="#{bindings.AppointmentsOpportunitiesU1.rangeSize}" id="t18"
-                        binding="#{backingBeanScope.InsertBean.t18}" rendered="false">
-                <af:column headerText="#{bindings.AppointmentsOpportunitiesU1.hints.AppointmentId.label}" id="c132">
-                  <af:inputText value="#{row.bindings.AppointmentId.inputValue}"
-                                label="#{bindings.AppointmentsOpportunitiesU1.hints.AppointmentId.label}"
-                                required="#{bindings.AppointmentsOpportunitiesU1.hints.AppointmentId.mandatory}"
-                                columns="#{bindings.AppointmentsOpportunitiesU1.hints.AppointmentId.displayWidth}"
-                                maximumLength="#{bindings.AppointmentsOpportunitiesU1.hints.AppointmentId.precision}"
-                                shortDesc="#{bindings.AppointmentsOpportunitiesU1.hints.AppointmentId.tooltip}"
-                                id="it32">
-                    <f:validator binding="#{row.bindings.AppointmentId.validator}"/>
-                    <af:convertNumber groupingUsed="false"
-                                      pattern="#{bindings.AppointmentsOpportunitiesU1.hints.AppointmentId.format}"/>
-                  </af:inputText>
-                </af:column>
-                <af:column headerText="#{bindings.AppointmentsOpportunitiesU1.hints.OpportunityId.label}" id="c133">
-                  <af:inputText value="#{row.bindings.OpportunityId.inputValue}"
-                                label="#{bindings.AppointmentsOpportunitiesU1.hints.OpportunityId.label}"
-                                required="#{bindings.AppointmentsOpportunitiesU1.hints.OpportunityId.mandatory}"
-                                columns="#{bindings.AppointmentsOpportunitiesU1.hints.OpportunityId.displayWidth}"
-                                maximumLength="#{bindings.AppointmentsOpportunitiesU1.hints.OpportunityId.precision}"
-                                shortDesc="#{bindings.AppointmentsOpportunitiesU1.hints.OpportunityId.tooltip}"
-                                id="it33">
-                    <f:validator binding="#{row.bindings.OpportunityId.validator}"/>
-                    <af:convertNumber groupingUsed="false"
-                                      pattern="#{bindings.AppointmentsOpportunitiesU1.hints.OpportunityId.format}"/>
-                  </af:inputText>
-                </af:column>
-              </af:table>
             </af:showDetailItem>
             <af:showDetailItem text="Notes" id="sdi14" binding="#{backingBeanScope.InsertBean.sdi14}">
               <af:panelGroupLayout layout="vertical" id="pgl11" binding="#{backingBeanScope.InsertBean.pgl11}">
