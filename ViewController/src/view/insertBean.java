@@ -60,8 +60,6 @@ public class insertBean {
     private RichShowDetailItem tab3;
     private RichTable t5;
     private RichShowDetailItem sdi8;
-    private RichInputDate id5;
-    private RichInputDate id4;
     private RichInputDate id3;
     private RichInputDate id2;
     private RichTable t6;
@@ -383,6 +381,7 @@ public class insertBean {
     private RichTable t30;
     private RichButton b49;
     private RichTable t31;
+    private RichPanelGroupLayout pgl35;
 
     public insertBean() {
     }
@@ -701,21 +700,6 @@ public class insertBean {
         return sdi8;
     }
 
-    public void setId5(RichInputDate id5) {
-        this.id5 = id5;
-    }
-
-    public RichInputDate getId5() {
-        return id5;
-    }
-
-    public void setId4(RichInputDate id4) {
-        this.id4 = id4;
-    }
-
-    public RichInputDate getId4() {
-        return id4;
-    }
 
     public void setId3(RichInputDate id3) {
         this.id3 = id3;
@@ -1656,7 +1640,39 @@ public class insertBean {
         operation.execute();
         return "Deleted";
     }
-
+    
+    public String confirmedDeleteAppointment(){
+        String masterTable = "AppointmentsU3Iterator";
+        
+        DCBindingContainer bindings = (DCBindingContainer)BindingContext.getCurrent().getCurrentBindingsEntry();
+        DCIteratorBinding dcItteratorBindings = bindings.findIteratorBinding(masterTable);
+        
+        ViewObject masterData = dcItteratorBindings.getViewObject();
+        Row row = masterData.getCurrentRow();
+        masterData.setCurrentRow(row);
+        masterData.removeCurrentRow();
+        
+        OperationBinding operation = (OperationBinding)BindingContext.getCurrent().getCurrentBindingsEntry().get("Commit");
+        operation.execute();
+        return "Deleted";
+    }
+    
+    public String confirmedDeleteOpportunities(){
+        String masterTable = "OpportunitiesU1Iterator";
+        
+        DCBindingContainer bindings = (DCBindingContainer)BindingContext.getCurrent().getCurrentBindingsEntry();
+        DCIteratorBinding dcItteratorBindings = bindings.findIteratorBinding(masterTable);
+        
+        ViewObject masterData = dcItteratorBindings.getViewObject();
+        Row row = masterData.getCurrentRow();
+        masterData.setCurrentRow(row);
+        masterData.removeCurrentRow();
+        
+        OperationBinding operation = (OperationBinding)BindingContext.getCurrent().getCurrentBindingsEntry().get("Commit");
+        operation.execute();
+        return "Deleted";
+    }
+    
     public void setT17(RichTable t17) {
         this.t17 = t17;
     }
@@ -3818,5 +3834,13 @@ public class insertBean {
 
     public RichTable getT31() {
         return t31;
+    }
+
+    public void setPgl35(RichPanelGroupLayout pgl35) {
+        this.pgl35 = pgl35;
+    }
+
+    public RichPanelGroupLayout getPgl35() {
+        return pgl35;
     }
 }

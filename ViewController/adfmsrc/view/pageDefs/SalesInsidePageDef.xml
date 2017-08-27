@@ -425,7 +425,6 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <action IterBinding="AppointmentsU3Iterator" id="Delete3" RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <tree IterBinding="TasksU3Iterator" id="TasksU3">
       <nodeDefinition DefName="model.customer.UVO.TasksUVO" Name="TasksU30">
         <AttrNames>
