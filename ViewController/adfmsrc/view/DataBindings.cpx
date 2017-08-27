@@ -50,6 +50,7 @@
     <page path="/WEB-INF/DeleteProductCategory-flow.xml#DeleteProductCategory-flow@Execute"
           usageId="view_DeleteProductCategory_flow_DeleteProductCategory_flow_ExecutePageDef"/>
     <page path="/EditRole.jsf" usageId="view_EditRolePageDef"/>
+    <page path="/report_sales_rep.jsff" usageId="view_report_sales_repPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_HomePageDef" path="view.pageDefs.HomePageDef"/>
@@ -94,6 +95,7 @@
     <page id="view_DeleteProductCategory_flow_DeleteProductCategory_flow_ExecutePageDef"
           path="view.pageDefs.DeleteProductCategory_flow_DeleteProductCategory_flow_ExecutePageDef"/>
     <page id="view_EditRolePageDef" path="view.pageDefs.EditRolePageDef"/>
+    <page id="view_report_sales_repPageDef" path="view.pageDefs.report_sales_repPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleAMDataControl" Package="model.AM"

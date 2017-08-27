@@ -1,2 +1,61 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"></ui:composition>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces" xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelGridLayout id="pgl1">
+    <af:gridRow marginTop="5px" height="auto" id="gr1">
+      <af:gridCell marginStart="5px" width="50%" id="gc1">
+        <af:outputText value="QUARTERWISE REVENUE" id="ot1" inlineStyle="color:green; font-size:large;"/>
+        <af:panelGroupLayout id="pgl2">
+          <dvt:pieChart id="pieChart1" var="row" value="#{bindings.SAREPGraph1_1.collectionModel}">
+            <dvt:chartLegend id="cl1"/>
+            <dvt:pieDataItem id="di1" label="#{row.QuarterNo}" value="#{row.Revenue}"/>
+          </dvt:pieChart>
+          <af:outputText value="Quarter" id="ot2"/>
+        </af:panelGroupLayout>
+      </af:gridCell>
+      <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc2">
+        <af:outputText value="OPPORTUNITY COMPARISON" id="ot3" inlineStyle="color:green; font-size:large;"/>
+        <af:panelGroupLayout id="pgl3" layout="vertical" halign="center">
+          <af:spacer width="30" height="30" id="s1"/>
+          <af:outputText value="SUCCESS" id="ot4" inlineStyle="color:green;"/>
+          <af:spacer width="10" height="30" id="s2"/>
+          <dvt:ledGauge id="ledGauge1" value="#{bindings.Success.inputValue}" color="green" size="3.0">
+            <dvt:gaugeMetricLabel rendered="true" id="gml1"/>
+          </dvt:ledGauge>
+          <af:spacer width="10" height="30" id="s3"/>
+          <af:outputText value="FAIL" id="ot5" inlineStyle="color:red;"/>
+          <af:spacer width="10" height="30" id="s4"/>
+          <dvt:ledGauge id="ledGauge2" value="#{bindings.Failed.inputValue}" size="3.0" color="red">
+            <dvt:gaugeMetricLabel rendered="true" id="gml2"/>
+          </dvt:ledGauge>
+        </af:panelGroupLayout>
+      </af:gridCell>
+    </af:gridRow>
+    <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr2">
+      <af:gridCell marginStart="5px" width="50%" id="gc3">
+        <af:outputText value="REVENUE COMPARISON" id="ot6" inlineStyle="color:GREEN; font-size:large;"/>
+        <af:panelGroupLayout id="pgl4">
+          <af:activeOutputText value="Revenue" id="aot1" inlineStyle="text-align:right;"/>
+          <dvt:lineChart id="lineChart1" var="row" value="#{bindings.SARepRevenueComparisonLookup1.collectionModel}">
+            <dvt:chartLegend id="cl2"/>
+            <f:facet name="dataStamp">
+              <af:group id="g1">
+                <dvt:chartDataItem id="di3" series="#{bindings.SARepRevenueComparisonLookup1.hints.Revenue.label}"
+                                   value="#{row.Revenue}" group="#{row.QuarterNo}" label="Expected"/>
+                <dvt:chartDataItem id="di4"
+                                   series="#{bindings.SARepRevenueComparisonLookup1.hints.BestCaseRevenue.label}"
+                                   value="#{row.BestCaseRevenue}" group="#{row.QuarterNo}" label="Best Caes"/>
+                <dvt:chartDataItem id="di2"
+                                   series="#{bindings.SARepRevenueComparisonLookup1.hints.WorstCaseRevenue.label}"
+                                   value="#{row.WorstCaseRevenue}" group="#{row.QuarterNo}" label="Worst Case"/>
+              </af:group>
+            </f:facet>
+          </dvt:lineChart>
+          <af:activeOutputText value="Quarter" id="aot2"/>
+        </af:panelGroupLayout>
+      </af:gridCell>
+      <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc4"/>
+    </af:gridRow>
+  </af:panelGridLayout>
+  h
+</ui:composition>
