@@ -19,6 +19,7 @@
     <Attr Name="_appModuleNames4" Value="model.master.AM"/>
     <Attr Name="_appModuleNames5" Value="model.docs.AppModuleAM"/>
     <Attr Name="_appModuleNames6" Value="model.lookup.AppModuleAM"/>
+    <Attr Name="_appModuleNames7" Value="model.ASSOC.insertion.AppModuleAM"/>
   </DesignTime>
   <Containee
     Name="AM"
@@ -34,6 +35,15 @@
     ObjectType="JboPackage">
     <DesignTime>
       <Attr Name="_AS" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="insertion"
+    PackageName="model.ASSOC.insertion"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_AS" Value="true"/>
+      <Attr Name="_AM" Value="true"/>
     </DesignTime>
   </Containee>
   <Containee

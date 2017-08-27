@@ -213,6 +213,41 @@
     AssociationOtherEnd="model.ASSOC.CustomersToTasksASSOC.Task"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Appointments"
+    Association="model.ASSOC.insertion.TasksToAppointmentsASSOC"
+    AssociationEnd="model.ASSOC.insertion.TasksToAppointmentsASSOC.Appointments"
+    AssociationOtherEnd="model.ASSOC.insertion.TasksToAppointmentsASSOC.Task"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Contact"
+    Association="model.ASSOC.insertion.TasksToContactsASSOC"
+    AssociationEnd="model.ASSOC.insertion.TasksToContactsASSOC.Contact"
+    AssociationOtherEnd="model.ASSOC.insertion.TasksToContactsASSOC.Task"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Customer1"
+    Association="model.ASSOC.insertion.TasksToCustomersASSOC"
+    AssociationEnd="model.ASSOC.insertion.TasksToCustomersASSOC.Customer1"
+    AssociationOtherEnd="model.ASSOC.insertion.TasksToCustomersASSOC.Task1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="User"
+    Association="model.ASSOC.insertion.TasksToUsersASSOC"
+    AssociationEnd="model.ASSOC.insertion.TasksToUsersASSOC.UserEO"
+    AssociationOtherEnd="model.ASSOC.insertion.TasksToUsersASSOC.Task"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Contact1"
+    Association="model.ASSOC.insertion.ContactsToTasksASSOC"
+    AssociationEnd="model.ASSOC.insertion.ContactsToTasksASSOC.Contact1"
+    AssociationOtherEnd="model.ASSOC.insertion.ContactsToTasksASSOC.Task1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="TasksPk"
     PrimaryKey="true">

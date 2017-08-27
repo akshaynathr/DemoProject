@@ -222,6 +222,37 @@
     Type="oracle.jbo.RowIterator"
     Reversed="true"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="AppointmentsU"
+    ViewLink="model.VL.insertion.TaskToAppointmentsVL"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="UsersU"
+    ViewLink="model.VL.insertion.TaskToUsersVL"
+    Type="oracle.jbo.server.ViewRowImpl"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="ContactsU"
+    ViewLink="model.VL.insertion.TaskToContactsVL"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="CustomersU2"
+    ViewLink="model.VL.insertion.TaskToCustomersVL"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="ContactsU1"
+    ViewLink="model.VL.insertion.ContactsToTasksVL"
+    Type="oracle.jbo.RowIterator"
+    Reversed="true"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TasksU_2"
+    ViewLink="model.VL.insertion.ViewLinkVL"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <DeclarativeWhereClause
     Name="DeclarativeWhereClause">
     <ViewCriteria

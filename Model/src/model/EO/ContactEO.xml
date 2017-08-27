@@ -257,6 +257,34 @@
     AssociationOtherEnd="model.ASSOC.OpportunityToContactsASSOC.Contact"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Task"
+    Association="model.ASSOC.insertion.TasksToContactsASSOC"
+    AssociationEnd="model.ASSOC.insertion.TasksToContactsASSOC.Task"
+    AssociationOtherEnd="model.ASSOC.insertion.TasksToContactsASSOC.Contact"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Notes"
+    Association="model.ASSOC.insertion.ContactToNotesASSOC"
+    AssociationEnd="model.ASSOC.insertion.ContactToNotesASSOC.Notes"
+    AssociationOtherEnd="model.ASSOC.insertion.ContactToNotesASSOC.Contact"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Opportunity1"
+    Association="model.ASSOC.insertion.ContactsToOpportunitiesASSOC"
+    AssociationEnd="model.ASSOC.insertion.ContactsToOpportunitiesASSOC.Opportunity1"
+    AssociationOtherEnd="model.ASSOC.insertion.ContactsToOpportunitiesASSOC.Contact1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Task1"
+    Association="model.ASSOC.insertion.ContactsToTasksASSOC"
+    AssociationEnd="model.ASSOC.insertion.ContactsToTasksASSOC.Task1"
+    AssociationOtherEnd="model.ASSOC.insertion.ContactsToTasksASSOC.Contact1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="ContactsPk"
     PrimaryKey="true">

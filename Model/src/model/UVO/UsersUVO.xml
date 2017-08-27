@@ -23,7 +23,6 @@
     <ParameterMap>
       <PIMap Variable="UserIdVar">
         <TransientExpression
-          trustMode="trusted"
           Name="ExpressionScript"><![CDATA[UserId]]></TransientExpression>
       </PIMap>
     </ParameterMap>
@@ -271,6 +270,12 @@
     Name="UserRolesMaster"
     ViewLink="model.VL.UsersRolesMasterVL"
     Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TasksU"
+    ViewLink="model.VL.insertion.TaskToUsersVL"
+    Type="oracle.jbo.RowIterator"
+    Reversed="true"
     IsUpdateable="false"/>
   <ResourceBundle>
     <PropertiesBundle

@@ -307,6 +307,13 @@
     AssociationOtherEnd="model.ASSOC.CustomerToOpportunityASSOC.Customer"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Task1"
+    Association="model.ASSOC.insertion.TasksToCustomersASSOC"
+    AssociationEnd="model.ASSOC.insertion.TasksToCustomersASSOC.Task1"
+    AssociationOtherEnd="model.ASSOC.insertion.TasksToCustomersASSOC.Customer1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="CustomersPk"
     PrimaryKey="true">
