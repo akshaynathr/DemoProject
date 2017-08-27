@@ -37,4 +37,7 @@
   <ViewUsage
     Name="SARepRevenueComparisonLookup1"
     ViewObjectName="model.RVO.SARepRevenueComparisonLookup"/>
+  <ViewUsage
+    Name="SAREPForecastLookup1"
+    ViewObjectName="model.lookup.SAREPForecastLookup"/>
 </AppModule>

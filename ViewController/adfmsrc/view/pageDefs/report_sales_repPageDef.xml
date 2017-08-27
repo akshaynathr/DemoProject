@@ -11,6 +11,8 @@
               id="SAREPFailedOppLookup1Iterator"/>
     <iterator Binds="SARepRevenueComparisonLookup1" RangeSize="-1" DataControl="AppModuleAMDataControl54"
               id="SARepRevenueComparisonLookup1Iterator"/>
+    <iterator Binds="SAREPForecastLookup1" RangeSize="-1" DataControl="AppModuleAMDataControl54"
+              id="SAREPForecastLookup1Iterator"/>
   </executables>
   <bindings>
     <tree IterBinding="SAREPGraph1_1Iterator" id="SAREPGraph1_1" ChangeEventPolicy="ppr">
@@ -39,6 +41,14 @@
           <Item Value="QuarterNo"/>
           <Item Value="Revenue"/>
           <Item Value="BestCaseRevenue"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="SAREPForecastLookup1Iterator" id="SAREPForecastLookup1" ChangeEventPolicy="ppr">
+      <nodeDefinition DefName="model.lookup.SAREPForecastLookup" Name="SAREPForecastLookup1">
+        <AttrNames>
+          <Item Value="Revenue"/>
+          <Item Value="QuarterNo"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

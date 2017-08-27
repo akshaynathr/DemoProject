@@ -54,7 +54,22 @@
           <af:activeOutputText value="Quarter" id="aot2"/>
         </af:panelGroupLayout>
       </af:gridCell>
-      <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc4"/>
+      <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc4">
+        <af:outputText value="FUTURE FORECAST" id="ot7" inlineStyle="color:green; font-size:large;"/>
+        <af:panelGroupLayout id="pgl5" layout="horizontal">
+          <af:outputText value="Quarter" id="ot8"/>
+          <dvt:barChart orientation="horizontal" id="barChart1" var="row"
+                        value="#{bindings.SAREPForecastLookup1.collectionModel}">
+            <dvt:chartLegend id="cl3"/>
+            <f:facet name="dataStamp">
+              <dvt:chartDataItem id="di5" series="#{bindings.SAREPForecastLookup1.hints.Revenue.label}"
+                                 value="#{row.Revenue}" group="#{row.QuarterNo}"/>
+            </f:facet>
+          </dvt:barChart>
+        </af:panelGroupLayout>
+        <af:spacer width="130" height="10" id="s5"/>
+        <af:outputText value="Revenue(in dollar)" id="ot11"/>
+      </af:gridCell>
     </af:gridRow>
   </af:panelGridLayout>
   h
