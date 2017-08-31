@@ -214,8 +214,10 @@
                   </f:facet>
                 </af:quickQuery>
                 <af:button text="Create Role" id="b7" action="createRoll" useWindow="true" windowEmbedStyle="window"
-                           windowHeight="400" windowWidth="500"/>
-                <af:button text="Delete" disabled="#{!bindings.Delete2.enabled}" id="b8">
+                           windowHeight="400" windowWidth="500"
+                           returnListener="#{backingBeanScope.backing_admin.onReturnEditRoleDialog}"/>
+                <af:button text="Delete" disabled="#{!bindings.Delete2.enabled}" id="b8"
+                           returnListener="#{backingBeanScope.backing_admin.onReturnEditRoleDialog}">
                   <af:showPopupBehavior popupId="p3"/>
                 </af:button>
               </af:panelGroupLayout>

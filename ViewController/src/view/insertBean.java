@@ -374,6 +374,10 @@ public class insertBean {
     private RichDialog d27;
     private RichDialog d28;
     private RichTable t11;
+    private RichPanelFormLayout pfl3;
+    private RichInputText it35;
+    private RichInputDate id30;
+    private RichInputText it36;
 
     public insertBean() {
     }
@@ -3524,5 +3528,38 @@ public class insertBean {
 
     public RichTable getT11() {
         return t11;
+    }
+
+
+    public void setPfl3(RichPanelFormLayout pfl3) {
+        this.pfl3 = pfl3;
+    }
+
+    public RichPanelFormLayout getPfl3() {
+        return pfl3;
+    }
+
+    public void setIt35(RichInputText it35) {
+        this.it35 = it35;
+    }
+
+    public RichInputText getIt35() {
+        return it35;
+    }
+
+    public void setId30(RichInputDate id30) {
+        this.id30 = id30;
+    }
+
+    public RichInputDate getId30() {
+        return id30;
+    }
+
+    public void setIt36(RichInputText it36) {
+        this.it36 = it36;
+    }
+
+    public RichInputText getIt36() {
+        return it36;
     }
 }

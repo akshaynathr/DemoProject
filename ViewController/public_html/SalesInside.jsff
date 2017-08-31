@@ -4,28 +4,28 @@
                 xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
   <af:panelStretchLayout id="psl1"
                          inlineStyle="outline-color:transparent; outline-style:hidden; border-image-width:0ch;"
-                         binding="#{backingBeanScope.InsertBean.psl1}">
+                         binding="#{backingBeanScope.SALESINSIDE.psl1}">
     <f:facet name="center">
       <af:panelSpringboard id="ps1" displayMode="strip"
                            inlineStyle="background-color:#fff; color:White; border-color:inherit;"
-                           binding="#{backingBeanScope.InsertBean.ps1}">
+                           binding="#{backingBeanScope.SALESINSIDE.ps1}">
         <af:showDetailItem text="My Team" id="sdi1"
                            inlineStyle="background-color:White; border-image-width:0; outline-color:ButtonText; outline-style:none; border-left-color:ThreeDShadow; border-right-color:ThreeDShadow;"
                            icon="/icons/Team.png" disclosed="#{(pageFlowScope.sales_manager_tabVal==1)?true:false}"
-                           binding="#{backingBeanScope.InsertBean.sdi1}">
-          <af:panelBorderLayout id="pbl1" binding="#{backingBeanScope.InsertBean.pbl1}">
+                           binding="#{backingBeanScope.SALESINSIDE.sdi1}">
+          <af:panelBorderLayout id="pbl1" binding="#{backingBeanScope.SALESINSIDE.pbl1}">
             <f:facet name="top">
-              <af:panelHeader text="My Team" id="ph3" binding="#{backingBeanScope.InsertBean.ph3}">
+              <af:panelHeader text="My Team" id="ph3" binding="#{backingBeanScope.SALESINSIDE.ph3}">
                 <af:panelGroupLayout id="pgl7" halign="center" layout="horizontal"
-                                     binding="#{backingBeanScope.InsertBean.pgl7}">
+                                     binding="#{backingBeanScope.SALESINSIDE.pgl7}">
                   <af:quickQuery label="Search" searchDesc="Search" id="qryId3"
                                  value="#{bindings.ImplicitViewCriteriaQuery2.quickQueryDescriptor}"
                                  model="#{bindings.ImplicitViewCriteriaQuery2.queryModel}"
                                  queryListener="#{bindings.ImplicitViewCriteriaQuery2.processQuery}"
-                                 binding="#{backingBeanScope.InsertBean.qryId3}">
+                                 binding="#{backingBeanScope.SALESINSIDE.qryId3}">
                     <f:facet name="end">
                       <af:commandLink text="Advanced" rendered="false" id="cl3"
-                                      binding="#{backingBeanScope.InsertBean.cl3}"/>
+                                      binding="#{backingBeanScope.SALESINSIDE.cl3}"/>
                     </f:facet>
                   </af:quickQuery>
                 </af:panelGroupLayout>
@@ -42,7 +42,7 @@
                       filterModel="#{bindings.ImplicitViewCriteriaQuery2.queryDescriptor}" filterVisible="true"
                       queryListener="#{bindings.ImplicitViewCriteriaQuery2.processQuery}" varStatus="vs"
                       partialTriggers="::qryId3" id="t3" columnStretching="column:c10"
-                      binding="#{backingBeanScope.InsertBean.t3}">
+                      binding="#{backingBeanScope.SALESINSIDE.t3}">
               <af:column sortProperty="#{bindings.MyTeamR1.hints.GlobalUsername.name}" filterable="true" sortable="true"
                          headerText="Global Username" id="c10">
                 <af:outputText value="#{row.GlobalUsername}"
@@ -84,112 +84,112 @@
               </af:column>
             </af:table>
           </af:panelBorderLayout>
-          <af:panelGroupLayout layout="vertical" id="pgl5" binding="#{backingBeanScope.InsertBean.pgl5}">
+          <af:panelGroupLayout layout="vertical" id="pgl5" binding="#{backingBeanScope.SALESINSIDE.pgl5}">
             <af:popup childCreation="deferred" autoCancel="disabled" id="p9"
-                      binding="#{backingBeanScope.InsertBean.p9}">
-              <af:dialog id="d10" binding="#{backingBeanScope.InsertBean.d10}" title="Add Contacts">
+                      binding="#{backingBeanScope.SALESINSIDE.p9}">
+              <af:dialog id="d10" binding="#{backingBeanScope.SALESINSIDE.d10}" title="Add Contacts">
                 <f:facet name="buttonBar"/>
               </af:dialog>
             </af:popup>
             <af:popup childCreation="deferred" autoCancel="disabled" id="p12"
-                      binding="#{backingBeanScope.InsertBean.p12}">
-              <af:dialog id="d12" binding="#{backingBeanScope.InsertBean.d12}">
+                      binding="#{backingBeanScope.SALESINSIDE.p12}">
+              <af:dialog id="d12" binding="#{backingBeanScope.SALESINSIDE.d12}">
                 <f:facet name="buttonBar"/>
               </af:dialog>
             </af:popup>
             <af:popup childCreation="deferred" autoCancel="disabled" id="p13"
-                      binding="#{backingBeanScope.InsertBean.p13}">
-              <af:dialog id="d13" binding="#{backingBeanScope.InsertBean.d13}">
+                      binding="#{backingBeanScope.SALESINSIDE.p13}">
+              <af:dialog id="d13" binding="#{backingBeanScope.SALESINSIDE.d13}">
                 <f:facet name="buttonBar"/>
               </af:dialog>
             </af:popup>
             <af:popup childCreation="deferred" autoCancel="disabled" id="p14"
-                      binding="#{backingBeanScope.InsertBean.p14}">
-              <af:dialog id="d14" binding="#{backingBeanScope.InsertBean.d14}">
+                      binding="#{backingBeanScope.SALESINSIDE.p14}">
+              <af:dialog id="d14" binding="#{backingBeanScope.SALESINSIDE.d14}">
                 <f:facet name="buttonBar"/>
               </af:dialog>
             </af:popup>
             <af:popup childCreation="deferred" autoCancel="disabled" id="p15"
-                      binding="#{backingBeanScope.InsertBean.p15}">
-              <af:dialog id="d15" binding="#{backingBeanScope.InsertBean.d15}">
+                      binding="#{backingBeanScope.SALESINSIDE.p15}">
+              <af:dialog id="d15" binding="#{backingBeanScope.SALESINSIDE.d15}">
                 <f:facet name="buttonBar"/>
               </af:dialog>
             </af:popup>
             <af:popup childCreation="deferred" autoCancel="disabled" id="p16"
-                      binding="#{backingBeanScope.InsertBean.p16}">
-              <af:dialog id="d17" binding="#{backingBeanScope.InsertBean.d17}">
+                      binding="#{backingBeanScope.SALESINSIDE.p16}">
+              <af:dialog id="d17" binding="#{backingBeanScope.SALESINSIDE.d17}">
                 <f:facet name="buttonBar"/>
               </af:dialog>
             </af:popup>
             <af:popup childCreation="deferred" autoCancel="disabled" id="p17"
-                      binding="#{backingBeanScope.InsertBean.p17}">
-              <af:dialog id="d16" binding="#{backingBeanScope.InsertBean.d16}">
+                      binding="#{backingBeanScope.SALESINSIDE.p17}">
+              <af:dialog id="d16" binding="#{backingBeanScope.SALESINSIDE.d16}">
                 <f:facet name="buttonBar"/>
               </af:dialog>
             </af:popup>
             <af:popup childCreation="deferred" autoCancel="disabled" id="p18"
-                      binding="#{backingBeanScope.InsertBean.p18}">
-              <af:dialog id="d18" binding="#{backingBeanScope.InsertBean.d18}">
+                      binding="#{backingBeanScope.SALESINSIDE.p18}">
+              <af:dialog id="d18" binding="#{backingBeanScope.SALESINSIDE.d18}">
                 <f:facet name="buttonBar"/>
               </af:dialog>
             </af:popup>
             <af:popup childCreation="deferred" autoCancel="disabled" id="p19"
-                      binding="#{backingBeanScope.InsertBean.p19}">
-              <af:dialog id="d19" binding="#{backingBeanScope.InsertBean.d19}">
+                      binding="#{backingBeanScope.SALESINSIDE.p19}">
+              <af:dialog id="d19" binding="#{backingBeanScope.SALESINSIDE.d19}">
                 <f:facet name="buttonBar"/>
               </af:dialog>
             </af:popup>
             <af:popup childCreation="deferred" autoCancel="disabled" id="p20"
-                      binding="#{backingBeanScope.InsertBean.p20}">
-              <af:dialog id="d20" binding="#{backingBeanScope.InsertBean.d20}">
+                      binding="#{backingBeanScope.SALESINSIDE.p20}">
+              <af:dialog id="d20" binding="#{backingBeanScope.SALESINSIDE.d20}">
                 <f:facet name="buttonBar"/>
               </af:dialog>
             </af:popup>
             <af:popup childCreation="deferred" autoCancel="disabled" id="p21"
-                      binding="#{backingBeanScope.InsertBean.p21}">
-              <af:dialog id="d21" binding="#{backingBeanScope.InsertBean.d21}">
+                      binding="#{backingBeanScope.SALESINSIDE.p21}">
+              <af:dialog id="d21" binding="#{backingBeanScope.SALESINSIDE.d21}">
                 <f:facet name="buttonBar"/>
               </af:dialog>
             </af:popup>
             <af:popup childCreation="deferred" autoCancel="disabled" id="p22"
-                      binding="#{backingBeanScope.InsertBean.p22}">
-              <af:dialog id="d22" binding="#{backingBeanScope.InsertBean.d22}">
+                      binding="#{backingBeanScope.SALESINSIDE.p22}">
+              <af:dialog id="d22" binding="#{backingBeanScope.SALESINSIDE.d22}">
                 <f:facet name="buttonBar"/>
               </af:dialog>
             </af:popup>
             <af:popup childCreation="deferred" autoCancel="disabled" id="p23"
-                      binding="#{backingBeanScope.InsertBean.p23}">
-              <af:dialog id="d23" binding="#{backingBeanScope.InsertBean.d23}">
+                      binding="#{backingBeanScope.SALESINSIDE.p23}">
+              <af:dialog id="d23" binding="#{backingBeanScope.SALESINSIDE.d23}">
                 <f:facet name="buttonBar"/>
               </af:dialog>
             </af:popup>
             <af:popup childCreation="deferred" autoCancel="disabled" id="p24"
-                      binding="#{backingBeanScope.InsertBean.p24}">
-              <af:dialog id="d24" binding="#{backingBeanScope.InsertBean.d24}">
+                      binding="#{backingBeanScope.SALESINSIDE.p24}">
+              <af:dialog id="d24" binding="#{backingBeanScope.SALESINSIDE.d24}">
                 <f:facet name="buttonBar"/>
               </af:dialog>
             </af:popup>
             <af:popup childCreation="deferred" autoCancel="disabled" id="p25"
-                      binding="#{backingBeanScope.InsertBean.p25}">
-              <af:dialog id="d25" binding="#{backingBeanScope.InsertBean.d25}">
+                      binding="#{backingBeanScope.SALESINSIDE.p25}">
+              <af:dialog id="d25" binding="#{backingBeanScope.SALESINSIDE.d25}">
                 <f:facet name="buttonBar"/>
               </af:dialog>
             </af:popup>
             <af:popup childCreation="deferred" autoCancel="disabled" id="p26"
-                      binding="#{backingBeanScope.InsertBean.p26}">
-              <af:dialog id="d26" binding="#{backingBeanScope.InsertBean.d26}">
+                      binding="#{backingBeanScope.SALESINSIDE.p26}">
+              <af:dialog id="d26" binding="#{backingBeanScope.SALESINSIDE.d26}">
                 <f:facet name="buttonBar"/>
               </af:dialog>
             </af:popup>
             <af:popup childCreation="deferred" autoCancel="disabled" id="p27"
-                      binding="#{backingBeanScope.InsertBean.p27}">
-              <af:dialog id="d27" binding="#{backingBeanScope.InsertBean.d27}">
+                      binding="#{backingBeanScope.SALESINSIDE.p27}">
+              <af:dialog id="d27" binding="#{backingBeanScope.SALESINSIDE.d27}">
                 <f:facet name="buttonBar"/>
               </af:dialog>
             </af:popup>
             <af:popup childCreation="deferred" autoCancel="disabled" id="p28"
-                      binding="#{backingBeanScope.InsertBean.p28}">
-              <af:dialog id="d28" binding="#{backingBeanScope.InsertBean.d28}">
+                      binding="#{backingBeanScope.SALESINSIDE.p28}">
+              <af:dialog id="d28" binding="#{backingBeanScope.SALESINSIDE.d28}">
                 <f:facet name="buttonBar"/>
               </af:dialog>
             </af:popup>
@@ -205,40 +205,40 @@
         <af:showDetailItem text="Opportunities" id="sdi2"
                            inlineStyle="column-rule-color:transparent;" icon="/icons/images.png"
                            disclosed="#{(pageFlowScope.sales_manager_tabVal==2)?true:false}"
-                           binding="#{backingBeanScope.InsertBean.sdi2}">
-          <af:panelBorderLayout id="pbl2" binding="#{backingBeanScope.InsertBean.pbl2}">
+                           binding="#{backingBeanScope.SALESINSIDE.sdi2}">
+          <af:panelBorderLayout id="pbl2" binding="#{backingBeanScope.SALESINSIDE.pbl2}">
             <f:facet name="top">
-              <af:panelGroupLayout id="pgl14" binding="#{backingBeanScope.InsertBean.pgl14}" halign="center"
+              <af:panelGroupLayout id="pgl14" binding="#{backingBeanScope.SALESINSIDE.pgl14}" halign="center"
                                    layout="horizontal">
                 <af:quickQuery label="Search" searchDesc="Search" id="qryId7"
                                value="#{bindings.ImplicitViewCriteriaQuery6.quickQueryDescriptor}"
                                model="#{bindings.ImplicitViewCriteriaQuery6.queryModel}"
                                queryListener="#{bindings.ImplicitViewCriteriaQuery6.processQuery}"
-                               binding="#{backingBeanScope.InsertBean.qryId7}">
+                               binding="#{backingBeanScope.SALESINSIDE.qryId7}">
                   <f:facet name="end">
                     <af:commandLink text="Advanced" rendered="false" id="cl7"
-                                    binding="#{backingBeanScope.InsertBean.cl7}"/>
+                                    binding="#{backingBeanScope.SALESINSIDE.cl7}"/>
                   </f:facet>
                 </af:quickQuery>
                 <af:button actionListener="#{bindings.Delete2.execute}" text="Delete Opportunity"
                            disabled="#{!bindings.Delete2.enabled}" id="b17"
-                           binding="#{backingBeanScope.InsertBean.b17}"/>
+                           binding="#{backingBeanScope.SALESINSIDE.b17}"/>
                 <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
                            disabled="#{!bindings.Commit.enabled}" id="b18"
-                           binding="#{backingBeanScope.InsertBean.b18}"/>
+                           binding="#{backingBeanScope.SALESINSIDE.b18}"/>
               </af:panelGroupLayout>
             </f:facet>
             <f:facet name="bottom"/>
             <f:facet name="start"/>
             <f:facet name="end"/>
-            <af:panelGridLayout id="pgl13" binding="#{backingBeanScope.InsertBean.pgl13}">
-              <af:gridRow marginTop="5px" height="auto" id="gr2" binding="#{backingBeanScope.InsertBean.gr2}">
+            <af:panelGridLayout id="pgl13" binding="#{backingBeanScope.SALESINSIDE.pgl13}">
+              <af:gridRow marginTop="5px" height="auto" id="gr2" binding="#{backingBeanScope.SALESINSIDE.gr2}">
                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2"
-                             binding="#{backingBeanScope.InsertBean.gc2}" halign="stretch">
-                  <af:toolbox id="t24" binding="#{backingBeanScope.InsertBean.t24}">
-                    <af:toolbar id="t25" binding="#{backingBeanScope.InsertBean.t25}">
-                      <af:button text="button 4" id="b3" binding="#{backingBeanScope.InsertBean.b3}" rendered="false"/>
-                      <af:button text="Create Opportunities" id="b5" binding="#{backingBeanScope.InsertBean.b5}"/>
+                             binding="#{backingBeanScope.SALESINSIDE.gc2}" halign="stretch">
+                  <af:toolbox id="t24" binding="#{backingBeanScope.SALESINSIDE.t24}">
+                    <af:toolbar id="t25" binding="#{backingBeanScope.SALESINSIDE.t25}">
+                      <af:button text="button 4" id="b3" binding="#{backingBeanScope.SALESINSIDE.b3}" rendered="false"/>
+                      <af:button text="Create Opportunities" id="b5" binding="#{backingBeanScope.SALESINSIDE.b5}"/>
                     </af:toolbar>
                   </af:toolbox>
                   <af:table value="#{bindings.OpportunitiesU2.collectionModel}" var="row"
@@ -250,7 +250,7 @@
                             rowSelection="single" fetchSize="#{bindings.OpportunitiesU2.rangeSize}"
                             filterModel="#{bindings.OpportunitiesU2Query.queryDescriptor}" filterVisible="true"
                             queryListener="#{bindings.OpportunitiesU2Query.processQuery}" varStatus="vs" id="t16"
-                            binding="#{backingBeanScope.InsertBean.t16}" partialTriggers="::b17 ::b18"
+                            binding="#{backingBeanScope.SALESINSIDE.t16}" partialTriggers="::b17 ::b18"
                             columnStretching="column:c111">
                     <af:column sortProperty="#{bindings.OpportunitiesU2.hints.OppurtunityName.name}" filterable="true"
                                sortable="true" headerText="Name" id="c111">
@@ -284,7 +284,7 @@
                                sortable="true" headerText="Start Date" id="c114">
                       <f:facet name="filter">
                         <af:inputDate value="#{bindings.OpportunitiesU2Query.queryDescriptor.filterConjunctionCriterion.criterionMap.StartDate.value}"
-                                      id="id17" binding="#{backingBeanScope.InsertBean.id17}">
+                                      id="id17" binding="#{backingBeanScope.SALESINSIDE.id17}">
                           <af:convertDateTime pattern="#{bindings.OpportunitiesU2.hints.StartDate.format}"/>
                         </af:inputDate>
                       </f:facet>
@@ -297,7 +297,7 @@
                                sortable="true" headerText="End Date" id="c115">
                       <f:facet name="filter">
                         <af:inputDate value="#{bindings.OpportunitiesU2Query.queryDescriptor.filterConjunctionCriterion.criterionMap.EndDate.value}"
-                                      id="id18" binding="#{backingBeanScope.InsertBean.id18}">
+                                      id="id18" binding="#{backingBeanScope.SALESINSIDE.id18}">
                           <af:convertDateTime pattern="#{bindings.OpportunitiesU2.hints.EndDate.format}"/>
                         </af:inputDate>
                       </f:facet>
@@ -344,17 +344,17 @@
                     </af:column>
                   </af:table>
                   <af:popup childCreation="deferred" autoCancel="disabled" id="opportunityEdit"
-                            binding="#{backingBeanScope.InsertBean.p1}" contentDelivery="lazyUncached" animate="true">
-                    <af:dialog id="d2" binding="#{backingBeanScope.InsertBean.d2}">
+                            binding="#{backingBeanScope.SALESINSIDE.opportunityEdit}" contentDelivery="lazyUncached" animate="true">
+                    <af:dialog id="d2" binding="#{backingBeanScope.SALESINSIDE.d2}">
                       <f:facet name="buttonBar"/>
-                      <af:panelFormLayout id="pfl2" binding="#{backingBeanScope.InsertBean.pfl2}">
+                      <af:panelFormLayout id="pfl2" binding="#{backingBeanScope.SALESINSIDE.pfl2}">
                         <af:inputText value="#{bindings.OpportunityId1.inputValue}"
                                       label="#{bindings.OpportunityId1.hints.label}"
                                       required="#{bindings.OpportunityId1.hints.mandatory}"
                                       columns="#{bindings.OpportunityId1.hints.displayWidth}"
                                       maximumLength="#{bindings.OpportunityId1.hints.precision}"
                                       shortDesc="#{bindings.OpportunityId1.hints.tooltip}" id="it25"
-                                      binding="#{backingBeanScope.InsertBean.it25}" editable="onAccess">
+                                      binding="#{backingBeanScope.SALESINSIDE.it25}" editable="onAccess">
                           <f:validator binding="#{bindings.OpportunityId1.validator}"/>
                           <af:convertNumber groupingUsed="false" pattern="#{bindings.OpportunityId1.format}"/>
                         </af:inputText>
@@ -362,9 +362,9 @@
                                             label="#{bindings.CustomerId1.label}"
                                             required="#{bindings.CustomerId1.hints.mandatory}"
                                             shortDesc="#{bindings.CustomerId1.hints.tooltip}" id="soc31"
-                                            binding="#{backingBeanScope.InsertBean.soc31}" editable="onAccess">
+                                            binding="#{backingBeanScope.SALESINSIDE.soc31}" editable="onAccess">
                           <f:selectItems value="#{bindings.CustomerId1.items}" id="si31"
-                                         binding="#{backingBeanScope.InsertBean.si31}"/>
+                                         binding="#{backingBeanScope.SALESINSIDE.si31}"/>
                           <f:validator binding="#{bindings.CustomerId1.validator}"/>
                         </af:selectOneChoice>
                         <af:inputText value="#{bindings.WinProbablity1.inputValue}"
@@ -373,7 +373,7 @@
                                       columns="#{bindings.WinProbablity1.hints.displayWidth}"
                                       maximumLength="#{bindings.WinProbablity1.hints.precision}"
                                       shortDesc="#{bindings.WinProbablity1.hints.tooltip}" id="it26"
-                                      binding="#{backingBeanScope.InsertBean.it26}" editable="onAccess">
+                                      binding="#{backingBeanScope.SALESINSIDE.it26}" editable="onAccess">
                           <f:validator binding="#{bindings.WinProbablity1.validator}"/>
                           <af:convertNumber groupingUsed="false" pattern="#{bindings.WinProbablity1.format}"/>
                         </af:inputText>
@@ -382,7 +382,7 @@
                                       required="#{bindings.StartDate1.hints.mandatory}"
                                       columns="#{bindings.StartDate1.hints.displayWidth}"
                                       shortDesc="#{bindings.StartDate1.hints.tooltip}" id="id1"
-                                      binding="#{backingBeanScope.InsertBean.id1}" editable="onAccess">
+                                      binding="#{backingBeanScope.SALESINSIDE.id1}" editable="onAccess">
                           <f:validator binding="#{bindings.StartDate1.validator}"/>
                           <af:convertDateTime pattern="#{bindings.StartDate1.format}"/>
                         </af:inputDate>
@@ -390,7 +390,7 @@
                                       required="#{bindings.EndDate1.hints.mandatory}"
                                       columns="#{bindings.EndDate1.hints.displayWidth}"
                                       shortDesc="#{bindings.EndDate1.hints.tooltip}" id="id19"
-                                      binding="#{backingBeanScope.InsertBean.id19}" editable="onAccess">
+                                      binding="#{backingBeanScope.SALESINSIDE.id19}" editable="onAccess">
                           <f:validator binding="#{bindings.EndDate1.validator}"/>
                           <af:convertDateTime pattern="#{bindings.EndDate1.format}"/>
                         </af:inputDate>
@@ -398,27 +398,27 @@
                                             label="#{bindings.SalesStageId.label}"
                                             required="#{bindings.SalesStageId.hints.mandatory}"
                                             shortDesc="#{bindings.SalesStageId.hints.tooltip}" id="soc32"
-                                            binding="#{backingBeanScope.InsertBean.soc32}" editable="onAccess">
+                                            binding="#{backingBeanScope.SALESINSIDE.soc32}" editable="onAccess">
                           <f:selectItems value="#{bindings.SalesStageId.items}" id="si32"
-                                         binding="#{backingBeanScope.InsertBean.si32}"/>
+                                         binding="#{backingBeanScope.SALESINSIDE.si32}"/>
                           <f:validator binding="#{bindings.SalesStageId.validator}"/>
                         </af:selectOneChoice>
                         <af:selectOneChoice value="#{bindings.SalesMethodId.inputValue}"
                                             label="#{bindings.SalesMethodId.label}"
                                             required="#{bindings.SalesMethodId.hints.mandatory}"
                                             shortDesc="#{bindings.SalesMethodId.hints.tooltip}" id="soc33"
-                                            binding="#{backingBeanScope.InsertBean.soc33}" editable="onAccess">
+                                            binding="#{backingBeanScope.SALESINSIDE.soc33}" editable="onAccess">
                           <f:selectItems value="#{bindings.SalesMethodId.items}" id="si33"
-                                         binding="#{backingBeanScope.InsertBean.si33}"/>
+                                         binding="#{backingBeanScope.SALESINSIDE.si33}"/>
                           <f:validator binding="#{bindings.SalesMethodId.validator}"/>
                         </af:selectOneChoice>
                         <af:selectOneChoice value="#{bindings.SalesChannelId.inputValue}"
                                             label="#{bindings.SalesChannelId.label}"
                                             required="#{bindings.SalesChannelId.hints.mandatory}"
                                             shortDesc="#{bindings.SalesChannelId.hints.tooltip}" id="soc34"
-                                            binding="#{backingBeanScope.InsertBean.soc34}" editable="onAccess">
+                                            binding="#{backingBeanScope.SALESINSIDE.soc34}" editable="onAccess">
                           <f:selectItems value="#{bindings.SalesChannelId.items}" id="si34"
-                                         binding="#{backingBeanScope.InsertBean.si34}"/>
+                                         binding="#{backingBeanScope.SALESINSIDE.si34}"/>
                           <f:validator binding="#{bindings.SalesChannelId.validator}"/>
                         </af:selectOneChoice>
                         <af:inputText value="#{bindings.Revenue1.inputValue}" label="#{bindings.Revenue1.hints.label}"
@@ -426,7 +426,7 @@
                                       columns="#{bindings.Revenue1.hints.displayWidth}"
                                       maximumLength="#{bindings.Revenue1.hints.precision}"
                                       shortDesc="#{bindings.Revenue1.hints.tooltip}" id="it27"
-                                      binding="#{backingBeanScope.InsertBean.it27}" editable="onAccess">
+                                      binding="#{backingBeanScope.SALESINSIDE.it27}" editable="onAccess">
                           <f:validator binding="#{bindings.Revenue1.validator}"/>
                           <af:convertNumber groupingUsed="false" pattern="#{bindings.Revenue1.format}"/>
                         </af:inputText>
@@ -436,7 +436,7 @@
                                       columns="#{bindings.BestCaseRevenue1.hints.displayWidth}"
                                       maximumLength="#{bindings.BestCaseRevenue1.hints.precision}"
                                       shortDesc="#{bindings.BestCaseRevenue1.hints.tooltip}" id="it28"
-                                      binding="#{backingBeanScope.InsertBean.it28}" editable="onAccess">
+                                      binding="#{backingBeanScope.SALESINSIDE.it28}" editable="onAccess">
                           <f:validator binding="#{bindings.BestCaseRevenue1.validator}"/>
                           <af:convertNumber groupingUsed="false" pattern="#{bindings.BestCaseRevenue1.format}"/>
                         </af:inputText>
@@ -446,7 +446,7 @@
                                       columns="#{bindings.WorstCaseRevenue1.hints.displayWidth}"
                                       maximumLength="#{bindings.WorstCaseRevenue1.hints.precision}"
                                       shortDesc="#{bindings.WorstCaseRevenue1.hints.tooltip}" id="it29"
-                                      binding="#{backingBeanScope.InsertBean.it29}" editable="onAccess">
+                                      binding="#{backingBeanScope.SALESINSIDE.it29}" editable="onAccess">
                           <f:validator binding="#{bindings.WorstCaseRevenue1.validator}"/>
                           <af:convertNumber groupingUsed="false" pattern="#{bindings.WorstCaseRevenue1.format}"/>
                         </af:inputText>
@@ -456,7 +456,7 @@
                                       columns="#{bindings.IsBudgeted.hints.displayWidth}"
                                       maximumLength="#{bindings.IsBudgeted.hints.precision}"
                                       shortDesc="#{bindings.IsBudgeted.hints.tooltip}" id="it30"
-                                      binding="#{backingBeanScope.InsertBean.it30}" editable="onAccess">
+                                      binding="#{backingBeanScope.SALESINSIDE.it30}" editable="onAccess">
                           <f:validator binding="#{bindings.IsBudgeted.validator}"/>
                         </af:inputText>
                         <af:inputText value="#{bindings.BudgetAmount.inputValue}"
@@ -465,7 +465,7 @@
                                       columns="#{bindings.BudgetAmount.hints.displayWidth}"
                                       maximumLength="#{bindings.BudgetAmount.hints.precision}"
                                       shortDesc="#{bindings.BudgetAmount.hints.tooltip}" id="it41"
-                                      binding="#{backingBeanScope.InsertBean.it41}" editable="onAccess">
+                                      binding="#{backingBeanScope.SALESINSIDE.it41}" editable="onAccess">
                           <f:validator binding="#{bindings.BudgetAmount.validator}"/>
                           <af:convertNumber groupingUsed="false" pattern="#{bindings.BudgetAmount.format}"/>
                         </af:inputText>
@@ -475,7 +475,7 @@
                                       columns="#{bindings.EstimatedDurationInDays.hints.displayWidth}"
                                       maximumLength="#{bindings.EstimatedDurationInDays.hints.precision}"
                                       shortDesc="#{bindings.EstimatedDurationInDays.hints.tooltip}" id="it42"
-                                      binding="#{backingBeanScope.InsertBean.it42}" editable="onAccess">
+                                      binding="#{backingBeanScope.SALESINSIDE.it42}" editable="onAccess">
                           <f:validator binding="#{bindings.EstimatedDurationInDays.validator}"/>
                           <af:convertNumber groupingUsed="false" pattern="#{bindings.EstimatedDurationInDays.format}"/>
                         </af:inputText>
@@ -484,7 +484,7 @@
                                       columns="#{bindings.RiskLevel.hints.displayWidth}"
                                       maximumLength="#{bindings.RiskLevel.hints.precision}"
                                       shortDesc="#{bindings.RiskLevel.hints.tooltip}" id="it43"
-                                      binding="#{backingBeanScope.InsertBean.it43}" editable="onAccess">
+                                      binding="#{backingBeanScope.SALESINSIDE.it43}" editable="onAccess">
                           <f:validator binding="#{bindings.RiskLevel.validator}"/>
                         </af:inputText>
                         <af:inputText value="#{bindings.IsIncluded.inputValue}"
@@ -493,7 +493,7 @@
                                       columns="#{bindings.IsIncluded.hints.displayWidth}"
                                       maximumLength="#{bindings.IsIncluded.hints.precision}"
                                       shortDesc="#{bindings.IsIncluded.hints.tooltip}" id="it44"
-                                      binding="#{backingBeanScope.InsertBean.it44}" editable="onAccess">
+                                      binding="#{backingBeanScope.SALESINSIDE.it44}" editable="onAccess">
                           <f:validator binding="#{bindings.IsIncluded.validator}"/>
                         </af:inputText>
                         <af:inputText value="#{bindings.CreatedById.inputValue}"
@@ -502,7 +502,7 @@
                                       columns="#{bindings.CreatedById.hints.displayWidth}"
                                       maximumLength="#{bindings.CreatedById.hints.precision}"
                                       shortDesc="#{bindings.CreatedById.hints.tooltip}" id="it45"
-                                      binding="#{backingBeanScope.InsertBean.it45}" editable="onAccess">
+                                      binding="#{backingBeanScope.SALESINSIDE.it45}" editable="onAccess">
                           <f:validator binding="#{bindings.CreatedById.validator}"/>
                           <af:convertNumber groupingUsed="false" pattern="#{bindings.CreatedById.format}"/>
                         </af:inputText>
@@ -511,7 +511,7 @@
                                       columns="#{bindings.IsSuccess.hints.displayWidth}"
                                       maximumLength="#{bindings.IsSuccess.hints.precision}"
                                       shortDesc="#{bindings.IsSuccess.hints.tooltip}" id="it46"
-                                      binding="#{backingBeanScope.InsertBean.it46}" editable="onAccess">
+                                      binding="#{backingBeanScope.SALESINSIDE.it46}" editable="onAccess">
                           <f:validator binding="#{bindings.IsSuccess.validator}"/>
                         </af:inputText>
                         <af:inputText value="#{bindings.PrimaryContact.inputValue}"
@@ -520,7 +520,7 @@
                                       columns="#{bindings.PrimaryContact.hints.displayWidth}"
                                       maximumLength="#{bindings.PrimaryContact.hints.precision}"
                                       shortDesc="#{bindings.PrimaryContact.hints.tooltip}" id="it47"
-                                      binding="#{backingBeanScope.InsertBean.it47}" editable="onAccess">
+                                      binding="#{backingBeanScope.SALESINSIDE.it47}" editable="onAccess">
                           <f:validator binding="#{bindings.PrimaryContact.validator}"/>
                           <af:convertNumber groupingUsed="false" pattern="#{bindings.PrimaryContact.format}"/>
                         </af:inputText>
@@ -528,9 +528,9 @@
                                             label="#{bindings.DecisionLevelId.label}"
                                             required="#{bindings.DecisionLevelId.hints.mandatory}"
                                             shortDesc="#{bindings.DecisionLevelId.hints.tooltip}" id="soc35"
-                                            binding="#{backingBeanScope.InsertBean.soc35}" editable="onAccess">
+                                            binding="#{backingBeanScope.SALESINSIDE.soc35}" editable="onAccess">
                           <f:selectItems value="#{bindings.DecisionLevelId.items}" id="si35"
-                                         binding="#{backingBeanScope.InsertBean.si35}"/>
+                                         binding="#{backingBeanScope.SALESINSIDE.si35}"/>
                           <f:validator binding="#{bindings.DecisionLevelId.validator}"/>
                         </af:selectOneChoice>
                         <af:inputText value="#{bindings.OppurtunityName.inputValue}"
@@ -539,7 +539,7 @@
                                       columns="#{bindings.OppurtunityName.hints.displayWidth}"
                                       maximumLength="#{bindings.OppurtunityName.hints.precision}"
                                       shortDesc="#{bindings.OppurtunityName.hints.tooltip}" id="it48"
-                                      binding="#{backingBeanScope.InsertBean.it48}" editable="onAccess">
+                                      binding="#{backingBeanScope.SALESINSIDE.it48}" editable="onAccess">
                           <f:validator binding="#{bindings.OppurtunityName.validator}"/>
                         </af:inputText>
                       </af:panelFormLayout>
@@ -548,23 +548,23 @@
                 </af:gridCell>
               </af:gridRow>
               <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr3"
-                          binding="#{backingBeanScope.InsertBean.gr3}">
+                          binding="#{backingBeanScope.SALESINSIDE.gr3}">
                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc3"
-                             binding="#{backingBeanScope.InsertBean.gc3}"/>
+                             binding="#{backingBeanScope.SALESINSIDE.gc3}"/>
               </af:gridRow>
             </af:panelGridLayout>
           </af:panelBorderLayout>
-          <af:panelTabbed position="above" id="pt1" binding="#{backingBeanScope.InsertBean.pt1}">
+          <af:panelTabbed position="above" id="pt1" binding="#{backingBeanScope.SALESINSIDE.pt1}">
             <af:showDetailItem id="tab2" text="Customers" disclosed="true"
-                               binding="#{backingBeanScope.InsertBean.tab2}">
-              <af:panelGroupLayout id="pgl4" binding="#{backingBeanScope.InsertBean.pgl4}">
-                <af:panelBorderLayout id="pbl3" binding="#{backingBeanScope.InsertBean.pbl3}">
+                               binding="#{backingBeanScope.SALESINSIDE.tab2}">
+              <af:panelGroupLayout id="pgl4" binding="#{backingBeanScope.SALESINSIDE.pgl4}">
+                <af:panelBorderLayout id="pbl3" binding="#{backingBeanScope.SALESINSIDE.pbl3}">
                   <f:facet name="top">
-                    <af:panelGroupLayout id="pgl29" binding="#{backingBeanScope.InsertBean.pgl29}" halign="center"
+                    <af:panelGroupLayout id="pgl29" binding="#{backingBeanScope.SALESINSIDE.pgl29}" halign="center"
                                          layout="horizontal">
                       <af:popup childCreation="deferred" autoCancel="disabled" id="p6"
-                                binding="#{backingBeanScope.InsertBean.p6}">
-                        <af:dialog id="d6" binding="#{backingBeanScope.InsertBean.d6}" title="Add Customer">
+                                binding="#{backingBeanScope.SALESINSIDE.p6}">
+                        <af:dialog id="d6" binding="#{backingBeanScope.SALESINSIDE.d6}" title="Add Customer">
                           <f:facet name="buttonBar"/>
                         </af:dialog>
                       </af:popup>
@@ -572,13 +572,13 @@
                                      value="#{bindings.ImplicitViewCriteriaQuery7.quickQueryDescriptor}"
                                      model="#{bindings.ImplicitViewCriteriaQuery7.queryModel}"
                                      queryListener="#{bindings.ImplicitViewCriteriaQuery7.processQuery}"
-                                     binding="#{backingBeanScope.InsertBean.qryId8}">
+                                     binding="#{backingBeanScope.SALESINSIDE.qryId8}">
                         <f:facet name="end">
                           <af:commandLink text="Advanced" rendered="false" id="cl8"
-                                          binding="#{backingBeanScope.InsertBean.cl8}"/>
+                                          binding="#{backingBeanScope.SALESINSIDE.cl8}"/>
                         </f:facet>
                       </af:quickQuery>
-                      <af:button text="Add " id="b16" binding="#{backingBeanScope.InsertBean.b16}">
+                      <af:button text="Add " id="b16" binding="#{backingBeanScope.SALESINSIDE.b16}" rendered="false">
                         <af:showPopupBehavior popupId="p6"/>
                       </af:button>
                     </af:panelGroupLayout>
@@ -587,11 +587,11 @@
                   <f:facet name="start"/>
                   <f:facet name="end"/>
                 </af:panelBorderLayout>
-                <af:panelGridLayout id="pgl12" binding="#{backingBeanScope.InsertBean.pgl12}">
+                <af:panelGridLayout id="pgl12" binding="#{backingBeanScope.SALESINSIDE.pgl12}">
                   <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1"
-                              binding="#{backingBeanScope.InsertBean.gr1}">
+                              binding="#{backingBeanScope.SALESINSIDE.gr1}">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc1"
-                                 binding="#{backingBeanScope.InsertBean.gc1}" halign="stretch">
+                                 binding="#{backingBeanScope.SALESINSIDE.gc1}" halign="stretch">
                       <af:table value="#{bindings.CustomersU3.collectionModel}" var="row"
                                 rows="#{bindings.CustomersU3.rangeSize}"
                                 emptyText="#{bindings.CustomersU3.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -601,7 +601,7 @@
                                 rowSelection="single" fetchSize="#{bindings.CustomersU3.rangeSize}"
                                 filterModel="#{bindings.ImplicitViewCriteriaQuery7.queryDescriptor}"
                                 filterVisible="false" queryListener="#{bindings.ImplicitViewCriteriaQuery7.processQuery}"
-                                varStatus="vs" id="t8" binding="#{backingBeanScope.InsertBean.t8}"
+                                varStatus="vs" id="t8" binding="#{backingBeanScope.SALESINSIDE.t8}"
                                 columnStretching="column:c139">
                         <af:column sortProperty="#{bindings.CustomersU3.hints.CustomerName.name}" filterable="true"
                                    sortable="true" headerText="#{bindings.CustomersU3.hints.CustomerName.label}"
@@ -676,26 +676,26 @@
                 </af:panelGridLayout>
               </af:panelGroupLayout>
             </af:showDetailItem>
-            <af:showDetailItem id="tab1" text="Tasks" disclosed="false" binding="#{backingBeanScope.InsertBean.tab1}">
-              <af:panelGroupLayout id="pgl15" binding="#{backingBeanScope.InsertBean.pgl15}" layout="horizontal"
+            <af:showDetailItem id="tab1" text="Tasks" disclosed="false" binding="#{backingBeanScope.SALESINSIDE.tab1}">
+              <af:panelGroupLayout id="pgl15" binding="#{backingBeanScope.SALESINSIDE.pgl15}" layout="horizontal"
                                    halign="center">
-                <af:button text="Add" id="b26" binding="#{backingBeanScope.InsertBean.b26}">
+                <af:button text="Add" id="b26" binding="#{backingBeanScope.SALESINSIDE.b26}">
                   <af:showPopupBehavior popupId="p7"/>
                 </af:button>
                 <af:button actionListener="#{bindings.Delete1.execute}" text="Delete Task related to Opportunity"
-                           id="b15" binding="#{backingBeanScope.InsertBean.b15}"/>
+                           id="b15" binding="#{backingBeanScope.SALESINSIDE.b15}"/>
                 <af:popup childCreation="deferred" autoCancel="disabled" id="p7"
-                          binding="#{backingBeanScope.InsertBean.p7}">
-                  <af:dialog id="d8" binding="#{backingBeanScope.InsertBean.d8}" title="Add Task">
+                          binding="#{backingBeanScope.SALESINSIDE.p7}">
+                  <af:dialog id="d8" binding="#{backingBeanScope.SALESINSIDE.d8}" title="Add Task">
                     <f:facet name="buttonBar"/>
                   </af:dialog>
                 </af:popup>
               </af:panelGroupLayout>
-              <af:panelGridLayout id="pgl16" binding="#{backingBeanScope.InsertBean.pgl16}">
+              <af:panelGridLayout id="pgl16" binding="#{backingBeanScope.SALESINSIDE.pgl16}">
                 <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr4"
-                            binding="#{backingBeanScope.InsertBean.gr4}">
+                            binding="#{backingBeanScope.SALESINSIDE.gr4}">
                   <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4"
-                               binding="#{backingBeanScope.InsertBean.gc4}" halign="stretch">
+                               binding="#{backingBeanScope.SALESINSIDE.gc4}" halign="stretch">
                     <af:table value="#{bindings.TasksU2.collectionModel}" var="row" rows="#{bindings.TasksU2.rangeSize}"
                               emptyText="#{bindings.TasksU2.viewable ? 'No data to display.' : 'Access Denied.'}"
                               rowBandingInterval="0" selectedRowKeys="#{bindings.TasksU2.collectionModel.selectedRow}"
@@ -703,7 +703,7 @@
                               fetchSize="#{bindings.TasksU2.rangeSize}"
                               filterModel="#{bindings.TasksU2Query.queryDescriptor}" filterVisible="true"
                               queryListener="#{bindings.TasksU2Query.processQuery}" varStatus="vs" id="t9"
-                              partialTriggers="::b15" binding="#{backingBeanScope.InsertBean.t9}"
+                              partialTriggers="::b15" binding="#{backingBeanScope.SALESINSIDE.t9}"
                               columnStretching="column:c157">
                       <af:column sortProperty="#{bindings.TasksU2.hints.TaskName.name}" filterable="true"
                                  sortable="true" headerText="#{bindings.TasksU2.hints.TaskName.label}" id="c157">
@@ -714,7 +714,7 @@
                                  headerText="#{bindings.TasksU2.hints.DueDate.label}" id="c158">
                         <f:facet name="filter">
                           <af:inputDate value="#{bindings.TasksU2Query.queryDescriptor.filterConjunctionCriterion.criterionMap.DueDate.value}"
-                                        id="id29" binding="#{backingBeanScope.InsertBean.id29}">
+                                        id="id29" binding="#{backingBeanScope.SALESINSIDE.id29}">
                             <af:convertDateTime pattern="#{bindings.TasksU2.hints.DueDate.format}"/>
                           </af:inputDate>
                         </f:facet>
@@ -769,40 +769,40 @@
                 </af:gridRow>
               </af:panelGridLayout>
             </af:showDetailItem>
-            <af:showDetailItem text="Revenue Items" id="sdi11" binding="#{backingBeanScope.InsertBean.sdi11}">
-              <af:panelGroupLayout layout="vertical" id="pgl9" binding="#{backingBeanScope.InsertBean.pgl9}">
-                <af:panelGroupLayout layout="horizontal" id="pgl23" binding="#{backingBeanScope.InsertBean.pgl23}"
+            <af:showDetailItem text="Revenue Items" id="sdi11" binding="#{backingBeanScope.SALESINSIDE.sdi11}">
+              <af:panelGroupLayout layout="vertical" id="pgl9" binding="#{backingBeanScope.SALESINSIDE.pgl9}">
+                <af:panelGroupLayout layout="horizontal" id="pgl23" binding="#{backingBeanScope.SALESINSIDE.pgl23}"
                                      halign="center">
                   <af:quickQuery label="Search" searchDesc="Search" id="qryId9"
                                  value="#{bindings.ImplicitViewCriteriaQuery8.quickQueryDescriptor}"
                                  model="#{bindings.ImplicitViewCriteriaQuery8.queryModel}"
                                  queryListener="#{bindings.ImplicitViewCriteriaQuery8.processQuery}"
-                                 binding="#{backingBeanScope.InsertBean.qryId9}">
+                                 binding="#{backingBeanScope.SALESINSIDE.qryId9}">
                     <f:facet name="end">
                       <af:commandLink text="Advanced" rendered="false" id="cl9"
-                                      binding="#{backingBeanScope.InsertBean.cl9}"/>
+                                      binding="#{backingBeanScope.SALESINSIDE.cl9}"/>
                     </f:facet>
                   </af:quickQuery>
-                  <af:button text="Add" id="b27" binding="#{backingBeanScope.InsertBean.b27}">
+                  <af:button text="Add" id="b27" binding="#{backingBeanScope.SALESINSIDE.b27}">
                     <af:showPopupBehavior popupId="p8"/>
                   </af:button>
                   <af:button actionListener="#{bindings.Commit.execute}" text="Commit" id="b14"
-                             binding="#{backingBeanScope.InsertBean.b14}"/>
+                             binding="#{backingBeanScope.SALESINSIDE.b14}"/>
                   <af:popup childCreation="deferred" autoCancel="disabled" id="p8"
-                            binding="#{backingBeanScope.InsertBean.p8}">
-                    <af:dialog id="d9" binding="#{backingBeanScope.InsertBean.d9}" title="Add Revenue Item">
+                            binding="#{backingBeanScope.SALESINSIDE.p8}">
+                    <af:dialog id="d9" binding="#{backingBeanScope.SALESINSIDE.d9}" title="Add Revenue Item">
                       <f:facet name="buttonBar"/>
                     </af:dialog>
                   </af:popup>
                   <af:button actionListener="#{bindings.Delete.execute}" text="Delete" id="b13"
-                             binding="#{backingBeanScope.InsertBean.b13}"/>
+                             binding="#{backingBeanScope.SALESINSIDE.b13}"/>
                 </af:panelGroupLayout>
               </af:panelGroupLayout>
-              <af:panelGridLayout id="pgl8" binding="#{backingBeanScope.InsertBean.pgl8}">
+              <af:panelGridLayout id="pgl8" binding="#{backingBeanScope.SALESINSIDE.pgl8}">
                 <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr5"
-                            binding="#{backingBeanScope.InsertBean.gr5}">
+                            binding="#{backingBeanScope.SALESINSIDE.gr5}">
                   <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5"
-                               binding="#{backingBeanScope.InsertBean.gc5}" halign="stretch">
+                               binding="#{backingBeanScope.SALESINSIDE.gc5}" halign="stretch">
                     <af:table value="#{bindings.RevenueItems11.collectionModel}" var="row"
                               rows="#{bindings.RevenueItems11.rangeSize}"
                               emptyText="#{bindings.RevenueItems11.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -810,7 +810,7 @@
                               selectedRowKeys="#{bindings.RevenueItems11.collectionModel.selectedRow}"
                               selectionListener="#{bindings.RevenueItems11.collectionModel.makeCurrent}"
                               rowSelection="single" fetchSize="#{bindings.RevenueItems11.rangeSize}" id="t28"
-                              partialTriggers="::b13 ::b14" binding="#{backingBeanScope.InsertBean.t28}"
+                              partialTriggers="::b13 ::b14" binding="#{backingBeanScope.SALESINSIDE.t28}"
                               columnStretching="column:c235">
                       <af:column headerText="#{bindings.RevenueItems11.hints.ProductId.label}" id="c235">
                         <af:selectOneChoice value="#{row.bindings.ProductId.inputValue}"
@@ -869,45 +869,45 @@
                 </af:gridRow>
               </af:panelGridLayout>
             </af:showDetailItem>
-            <af:showDetailItem text="Contacts" id="sdi12" binding="#{backingBeanScope.InsertBean.sdi12}">
-              <af:panelGroupLayout layout="horizontal" id="pgl24" binding="#{backingBeanScope.InsertBean.pgl24}"
+            <af:showDetailItem text="Contacts" id="sdi12" binding="#{backingBeanScope.SALESINSIDE.sdi12}">
+              <af:panelGroupLayout layout="horizontal" id="pgl24" binding="#{backingBeanScope.SALESINSIDE.pgl24}"
                                    halign="center">
                 <af:quickQuery label="Search" searchDesc="Search" id="qryId10"
                                value="#{bindings.ImplicitViewCriteriaQuery9.quickQueryDescriptor}"
                                model="#{bindings.ImplicitViewCriteriaQuery9.queryModel}"
                                queryListener="#{bindings.ImplicitViewCriteriaQuery9.processQuery}"
-                               binding="#{backingBeanScope.InsertBean.qryId10}">
+                               binding="#{backingBeanScope.SALESINSIDE.qryId10}">
                   <f:facet name="end">
                     <af:commandLink text="Advanced" rendered="false" id="cl10"
-                                    binding="#{backingBeanScope.InsertBean.cl10}"/>
+                                    binding="#{backingBeanScope.SALESINSIDE.cl10}"/>
                   </f:facet>
                 </af:quickQuery>
-                <af:button text="Add" id="b6" binding="#{backingBeanScope.InsertBean.b6}">
+                <af:button text="Add" id="b6" binding="#{backingBeanScope.SALESINSIDE.b6}">
                   <af:showPopupBehavior popupId="opportunities_contacts"/>
                 </af:button>
                 <af:button actionListener="#{bindings.CreateInsert3.execute}" text="CreateInsert3"
                            disabled="#{!bindings.CreateInsert3.enabled}" id="b7" selected="false"
-                           binding="#{backingBeanScope.InsertBean.b7}" rendered="false"/>
+                           binding="#{backingBeanScope.SALESINSIDE.b7}" rendered="false"/>
                 <af:button text="Delete" id="b12"
-                           binding="#{backingBeanScope.InsertBean.b12}"
+                           binding="#{backingBeanScope.SALESINSIDE.b12}"
                            action="#{backingBeanScope.InsertBean.deleteOpportunitiesContactsLink}"/>
               </af:panelGroupLayout>
               <af:popup childCreation="deferred" autoCancel="disabled" id="opportunities_contacts"
                         contentDelivery="lazyUncached"
                         popupFetchListener="#{backingBeanScope.InsertBean.insertOpContactPopFetch}"
-                        binding="#{backingBeanScope.InsertBean.opportunities_contacts}">
+                        binding="#{backingBeanScope.SALESINSIDE.opportunities_contacts}">
                 <af:dialog id="d1" title="Add Contact" affirmativeTextAndAccessKey="Save"
                            cancelTextAndAccessKey="Cancel"
                            dialogListener="#{backingBeanScope.InsertBean.insertOppContacts}"
-                           binding="#{backingBeanScope.InsertBean.d1}">
+                           binding="#{backingBeanScope.SALESINSIDE.d1}">
                   <f:facet name="buttonBar"/>
-                  <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.InsertBean.pfl1}">
+                  <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.SALESINSIDE.pfl1}">
                     <af:selectOneChoice value="#{bindings.ContactId.inputValue}" label="#{bindings.ContactId.label}"
                                         required="#{bindings.ContactId.hints.mandatory}"
                                         shortDesc="#{bindings.ContactId.hints.tooltip}" id="soc26"
-                                        binding="#{backingBeanScope.InsertBean.soc26}">
+                                        binding="#{backingBeanScope.SALESINSIDE.soc26}">
                       <f:selectItems value="#{bindings.ContactId.items}" id="si26"
-                                     binding="#{backingBeanScope.InsertBean.si26}"/>
+                                     binding="#{backingBeanScope.SALESINSIDE.si26}"/>
                       <f:validator binding="#{bindings.ContactId.validator}"/>
                     </af:selectOneChoice>
                     <af:inputText value="#{bindings.OpportunityId.inputValue}"
@@ -916,7 +916,7 @@
                                   columns="#{bindings.OpportunityId.hints.displayWidth}"
                                   maximumLength="#{bindings.OpportunityId.hints.precision}"
                                   shortDesc="#{bindings.OpportunityId.hints.tooltip}" id="it24"
-                                  binding="#{backingBeanScope.InsertBean.it24}">
+                                  binding="#{backingBeanScope.SALESINSIDE.it24}">
                       <f:validator binding="#{bindings.OpportunityId.validator}"/>
                       <af:convertNumber groupingUsed="false" pattern="#{bindings.OpportunityId.format}"/>
                     </af:inputText>
@@ -927,7 +927,7 @@
                         rows="#{bindings.ContactsOpportunitiesU2.rangeSize}"
                         emptyText="#{bindings.ContactsOpportunitiesU2.viewable ? 'No data to display.' : 'Access Denied.'}"
                         rowBandingInterval="0" fetchSize="#{bindings.ContactsOpportunitiesU2.rangeSize}" id="t19"
-                        partialTriggers="::b7" binding="#{backingBeanScope.InsertBean.t19}" rendered="false">
+                        partialTriggers="::b7" binding="#{backingBeanScope.SALESINSIDE.t19}" rendered="false">
                 <af:column headerText="#{bindings.ContactsOpportunitiesU2.hints.ContactId.label}" id="c134">
                   <af:selectOneChoice value="#{row.bindings.ContactId.inputValue}"
                                       label="#{row.bindings.ContactId.label}"
@@ -951,11 +951,11 @@
                   </af:inputText>
                 </af:column>
               </af:table>
-              <af:panelGridLayout id="pgl17" binding="#{backingBeanScope.InsertBean.pgl17}">
+              <af:panelGridLayout id="pgl17" binding="#{backingBeanScope.SALESINSIDE.pgl17}">
                 <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr6"
-                            binding="#{backingBeanScope.InsertBean.gr6}">
+                            binding="#{backingBeanScope.SALESINSIDE.gr6}">
                   <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6"
-                               binding="#{backingBeanScope.InsertBean.gc6}" halign="stretch">
+                               binding="#{backingBeanScope.SALESINSIDE.gc6}" halign="stretch">
                     <af:table value="#{bindings.ContactsU31.collectionModel}" var="row"
                               rows="#{bindings.ContactsU31.rangeSize}"
                               emptyText="#{bindings.ContactsU31.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -963,7 +963,7 @@
                               selectedRowKeys="#{bindings.ContactsU31.collectionModel.selectedRow}"
                               selectionListener="#{bindings.ContactsU31.collectionModel.makeCurrent}"
                               rowSelection="single" fetchSize="#{bindings.ContactsU31.rangeSize}" id="t10"
-                              binding="#{backingBeanScope.InsertBean.t10}" columnStretching="last">
+                              binding="#{backingBeanScope.SALESINSIDE.t10}" columnStretching="last">
                       <af:column headerText="#{bindings.ContactsU31.hints.FirstName.label}" id="c170">
                         <af:outputText value="#{row.FirstName}"
                                        shortDesc="#{bindings.ContactsU31.hints.FirstName.tooltip}" id="ot124"/>
@@ -1017,27 +1017,27 @@
                 </af:gridRow>
               </af:panelGridLayout>
             </af:showDetailItem>
-            <af:showDetailItem text="Appointments" id="sdi13" binding="#{backingBeanScope.InsertBean.sdi13}">
-              <af:panelGroupLayout layout="horizontal" id="pgl10" binding="#{backingBeanScope.InsertBean.pgl10}">
+            <af:showDetailItem text="Appointments" id="sdi13" binding="#{backingBeanScope.SALESINSIDE.sdi13}">
+              <af:panelGroupLayout layout="horizontal" id="pgl10" binding="#{backingBeanScope.SALESINSIDE.pgl10}">
                 <af:quickQuery label="Search" searchDesc="Search" id="qryId1"
                                value="#{bindings.ImplicitViewCriteriaQuery.quickQueryDescriptor}"
                                model="#{bindings.ImplicitViewCriteriaQuery.queryModel}"
                                queryListener="#{bindings.ImplicitViewCriteriaQuery.processQuery}"
-                               binding="#{backingBeanScope.InsertBean.qryId1}">
+                               binding="#{backingBeanScope.SALESINSIDE.qryId1}">
                   <f:facet name="end">
                     <af:commandLink text="Advanced" rendered="false" id="cl1"
-                                    binding="#{backingBeanScope.InsertBean.cl1}"/>
+                                    binding="#{backingBeanScope.SALESINSIDE.cl1}"/>
                   </f:facet>
                 </af:quickQuery>
-                <af:button text="Add " id="b9" binding="#{backingBeanScope.InsertBean.b9}">
+                <af:button text="Add " id="b9" binding="#{backingBeanScope.SALESINSIDE.b9}">
                   <af:showPopupBehavior popupId="p10"/>
                 </af:button>
                 <af:button text="Delete Appointments related to Opportunity" id="b11"
-                           binding="#{backingBeanScope.InsertBean.b11}"
+                           binding="#{backingBeanScope.SALESINSIDE.b11}"
                            action="#{backingBeanScope.InsertBean.deleteOpportunitiesAppointmentsLink}"/>
                 <af:popup childCreation="deferred" autoCancel="disabled" id="p10"
-                          binding="#{backingBeanScope.InsertBean.p10}">
-                  <af:dialog id="d7" binding="#{backingBeanScope.InsertBean.d7}" title="Add Appointment">
+                          binding="#{backingBeanScope.SALESINSIDE.p10}">
+                  <af:dialog id="d7" binding="#{backingBeanScope.SALESINSIDE.d7}" title="Add Appointment">
                     <f:facet name="buttonBar"/>
                   </af:dialog>
                 </af:popup>
@@ -1050,7 +1050,7 @@
                         fetchSize="#{bindings.AppointmentsU2.rangeSize}"
                         filterModel="#{bindings.AppointmentsU2Query.queryDescriptor}" filterVisible="true"
                         queryListener="#{bindings.AppointmentsU2Query.processQuery}" varStatus="vs" id="t12"
-                        binding="#{backingBeanScope.InsertBean.t12}">
+                        binding="#{backingBeanScope.SALESINSIDE.t12}">
                 <af:column sortProperty="#{bindings.AppointmentsU2.hints.CustomerId.name}" filterable="true"
                            sortable="true" headerText="#{bindings.AppointmentsU2.hints.CustomerId.label}" id="c188">
                   <af:outputText value="#{row.CustomerId}"
@@ -1074,7 +1074,7 @@
                            sortable="true" headerText="#{bindings.AppointmentsU2.hints.StartDate.label}" id="c191">
                   <f:facet name="filter">
                     <af:inputDate value="#{bindings.AppointmentsU2Query.queryDescriptor.filterConjunctionCriterion.criterionMap.StartDate.value}"
-                                  id="id10" binding="#{backingBeanScope.InsertBean.id10}">
+                                  id="id10" binding="#{backingBeanScope.SALESINSIDE.id10}">
                       <af:convertDateTime pattern="#{bindings.AppointmentsU2.hints.StartDate.format}"/>
                     </af:inputDate>
                   </f:facet>
@@ -1087,7 +1087,7 @@
                            sortable="true" headerText="#{bindings.AppointmentsU2.hints.EndDate.label}" id="c192">
                   <f:facet name="filter">
                     <af:inputDate value="#{bindings.AppointmentsU2Query.queryDescriptor.filterConjunctionCriterion.criterionMap.EndDate.value}"
-                                  id="id11" binding="#{backingBeanScope.InsertBean.id11}">
+                                  id="id11" binding="#{backingBeanScope.SALESINSIDE.id11}">
                       <af:convertDateTime pattern="#{bindings.AppointmentsU2.hints.EndDate.format}"/>
                     </af:inputDate>
                   </f:facet>
@@ -1116,7 +1116,7 @@
                         rows="#{bindings.AppointmentsOpportunitiesU1.rangeSize}"
                         emptyText="#{bindings.AppointmentsOpportunitiesU1.viewable ? 'No data to display.' : 'Access Denied.'}"
                         rowBandingInterval="0" fetchSize="#{bindings.AppointmentsOpportunitiesU1.rangeSize}" id="t18"
-                        binding="#{backingBeanScope.InsertBean.t18}" rendered="false">
+                        binding="#{backingBeanScope.SALESINSIDE.t18}" rendered="false">
                 <af:column headerText="#{bindings.AppointmentsOpportunitiesU1.hints.AppointmentId.label}" id="c132">
                   <af:inputText value="#{row.bindings.AppointmentId.inputValue}"
                                 label="#{bindings.AppointmentsOpportunitiesU1.hints.AppointmentId.label}"
@@ -1145,28 +1145,62 @@
                 </af:column>
               </af:table>
             </af:showDetailItem>
-            <af:showDetailItem text="Notes" id="sdi14" binding="#{backingBeanScope.InsertBean.sdi14}">
-              <af:panelGroupLayout layout="horizontal" id="pgl11" binding="#{backingBeanScope.InsertBean.pgl11}">
+            <af:showDetailItem text="Notes" id="sdi14" binding="#{backingBeanScope.SALESINSIDE.sdi14}">
+              <af:panelGroupLayout layout="horizontal" id="pgl11" binding="#{backingBeanScope.SALESINSIDE.pgl11}">
                 <af:quickQuery label="Search" searchDesc="Search" id="qryId4"
                                value="#{bindings.ImplicitViewCriteriaQuery3.quickQueryDescriptor}"
                                model="#{bindings.ImplicitViewCriteriaQuery3.queryModel}"
                                queryListener="#{bindings.ImplicitViewCriteriaQuery3.processQuery}"
-                               binding="#{backingBeanScope.InsertBean.qryId4}">
+                               binding="#{backingBeanScope.SALESINSIDE.qryId4}">
                   <f:facet name="end">
                     <af:commandLink text="Advanced" rendered="false" id="cl4"
-                                    binding="#{backingBeanScope.InsertBean.cl4}"/>
+                                    binding="#{backingBeanScope.SALESINSIDE.cl4}"/>
                   </f:facet>
-                  <af:button text="Add notes" id="b8" binding="#{backingBeanScope.InsertBean.b8}">
+                  <af:button text="Add notes" id="b8" binding="#{backingBeanScope.SALESINSIDE.b8}">
                     <af:showPopupBehavior popupId="::p11"/>
                   </af:button>
                 </af:quickQuery>
-                <af:button text="Add" id="b28" binding="#{backingBeanScope.InsertBean.b28}">
+                <af:button text="Add" id="b28" binding="#{backingBeanScope.SALESINSIDE.b28}">
                   <af:showPopupBehavior popupId="p11"/>
                 </af:button>
+                <af:button text="Delete" id="b10"
+                           binding="#{backingBeanScope.SALESINSIDE.b10}"
+                           action="#{backingBeanScope.InsertBean.deleteOpportunitiesNotesLink}"/>
                 <af:popup childCreation="deferred" autoCancel="disabled" id="p11"
-                          binding="#{backingBeanScope.InsertBean.p11}">
-                  <af:dialog id="d11" binding="#{backingBeanScope.InsertBean.d11}" title="Add Note">
+                          binding="#{backingBeanScope.SALESINSIDE.p11}" contentDelivery="lazyUncached"
+                          popupFetchListener="#{backingBeanScope.SALESINSIDE.insertNotes}"
+                          popupCanceledListener="#{backingBeanScope.SALESINSIDE.Cancel}">
+                  <af:dialog id="d11" binding="#{backingBeanScope.SALESINSIDE.d11}" title="Add Note"
+                             dialogListener="#{backingBeanScope.SALESINSIDE.Savenotes}">
                     <f:facet name="buttonBar"/>
+                    <af:panelFormLayout id="pfl3" binding="#{backingBeanScope.SALESINSIDE.pfl3}">
+                      <af:inputText value="#{bindings.NoteName.inputValue}" label="Name"
+                                    required="#{bindings.NoteName.hints.mandatory}"
+                                    columns="#{bindings.NoteName.hints.displayWidth}"
+                                    maximumLength="#{bindings.NoteName.hints.precision}"
+                                    shortDesc="#{bindings.NoteName.hints.tooltip}" id="it35"
+                                    binding="#{backingBeanScope.SALESINSIDE.it35}">
+                        <f:validator binding="#{bindings.NoteName.validator}"/>
+                      </af:inputText>
+                      <af:inputDate value="#{bindings.DateRecorded.inputValue}"
+                                    label="#{bindings.DateRecorded.hints.label}"
+                                    required="#{bindings.DateRecorded.hints.mandatory}"
+                                    columns="#{bindings.DateRecorded.hints.displayWidth}"
+                                    shortDesc="#{bindings.DateRecorded.hints.tooltip}" id="id30"
+                                    binding="#{backingBeanScope.SALESINSIDE.id30}">
+                        <f:validator binding="#{bindings.DateRecorded.validator}"/>
+                        <af:convertDateTime pattern="#{bindings.DateRecorded.format}"/>
+                      </af:inputDate>
+                      <af:inputText value="#{bindings.Description.inputValue}"
+                                    label="#{bindings.Description.hints.label}"
+                                    required="#{bindings.Description.hints.mandatory}"
+                                    columns="#{bindings.Description.hints.displayWidth}"
+                                    maximumLength="#{bindings.Description.hints.precision}"
+                                    shortDesc="#{bindings.Description.hints.tooltip}" id="it36"
+                                    binding="#{backingBeanScope.SALESINSIDE.it36}">
+                        <f:validator binding="#{bindings.Description.validator}"/>
+                      </af:inputText>
+                    </af:panelFormLayout>
                   </af:dialog>
                 </af:popup>
               </af:panelGroupLayout>
@@ -1176,12 +1210,12 @@
                         selectionListener="#{bindings.NotesU2.collectionModel.makeCurrent}" rowSelection="single"
                         fetchSize="#{bindings.NotesU2.rangeSize}" filterModel="#{bindings.NotesU2Query.queryDescriptor}"
                         filterVisible="true" queryListener="#{bindings.NotesU2Query.processQuery}" varStatus="vs"
-                        id="t13" binding="#{backingBeanScope.InsertBean.t13}">
+                        id="t13" binding="#{backingBeanScope.SALESINSIDE.t13}">
                 <af:column sortProperty="#{bindings.NotesU2.hints.DateRecorded.name}" filterable="true" sortable="true"
                            headerText="#{bindings.NotesU2.hints.DateRecorded.label}" id="c195">
                   <f:facet name="filter">
                     <af:inputDate value="#{bindings.NotesU2Query.queryDescriptor.filterConjunctionCriterion.criterionMap.DateRecorded.value}"
-                                  id="id12" binding="#{backingBeanScope.InsertBean.id12}">
+                                  id="id12" binding="#{backingBeanScope.SALESINSIDE.id12}">
                       <af:convertDateTime pattern="#{bindings.NotesU2.hints.DateRecorded.format}"/>
                     </af:inputDate>
                   </f:facet>
@@ -1209,7 +1243,7 @@
                            headerText="#{bindings.NotesU2.hints.CreatedOn.label}" id="c199">
                   <f:facet name="filter">
                     <af:inputDate value="#{bindings.NotesU2Query.queryDescriptor.filterConjunctionCriterion.criterionMap.CreatedOn.value}"
-                                  id="id13" binding="#{backingBeanScope.InsertBean.id13}">
+                                  id="id13" binding="#{backingBeanScope.SALESINSIDE.id13}">
                       <af:convertDateTime pattern="#{bindings.NotesU2.hints.CreatedOn.format}"/>
                     </af:inputDate>
                   </f:facet>
@@ -1227,7 +1261,7 @@
                            headerText="#{bindings.NotesU2.hints.LastUpdatedOn.label}" id="c201">
                   <f:facet name="filter">
                     <af:inputDate value="#{bindings.NotesU2Query.queryDescriptor.filterConjunctionCriterion.criterionMap.LastUpdatedOn.value}"
-                                  id="id14" binding="#{backingBeanScope.InsertBean.id14}">
+                                  id="id14" binding="#{backingBeanScope.SALESINSIDE.id14}">
                       <af:convertDateTime pattern="#{bindings.NotesU2.hints.LastUpdatedOn.format}"/>
                     </af:inputDate>
                   </f:facet>
@@ -1253,7 +1287,7 @@
                         rows="#{bindings.NotesOpportunitiesU1.rangeSize}"
                         emptyText="#{bindings.NotesOpportunitiesU1.viewable ? 'No data to display.' : 'Access Denied.'}"
                         rowBandingInterval="0" fetchSize="#{bindings.NotesOpportunitiesU1.rangeSize}" id="t17"
-                        binding="#{backingBeanScope.InsertBean.t17}" rendered="false">
+                        binding="#{backingBeanScope.SALESINSIDE.t17}" rendered="false">
                 <af:column headerText="#{bindings.NotesOpportunitiesU1.hints.NotesId.label}" id="c130">
                   <af:selectOneChoice value="#{row.bindings.NotesId.inputValue}" label="#{row.bindings.NotesId.label}"
                                       required="#{bindings.NotesOpportunitiesU1.hints.NotesId.mandatory}"
@@ -1275,67 +1309,65 @@
                   </af:inputText>
                 </af:column>
               </af:table>
-              <af:button text="Delete Notes related to Opportunity" id="b10" binding="#{backingBeanScope.InsertBean.b10}"
-                         action="#{backingBeanScope.InsertBean.deleteOpportunitiesNotesLink}"/>
             </af:showDetailItem>
           </af:panelTabbed>
         </af:showDetailItem>
         <af:showDetailItem text="Customers" id="sdi3" icon="/customers.png"
                            disclosed="#{(pageFlowScope.sales_manager_tabVal==4)?true:false}"
-                           inlineStyle="padding:20px;" binding="#{backingBeanScope.InsertBean.sdi3}">
-          <af:panelHeader text="Customers" id="ph1" binding="#{backingBeanScope.InsertBean.ph1}">
-            <af:panelGroupLayout layout="horizontal" id="pgl21" binding="#{backingBeanScope.InsertBean.pgl21}">
+                           inlineStyle="padding:20px;" binding="#{backingBeanScope.SALESINSIDE.sdi3}">
+          <af:panelHeader text="Customers" id="ph1" binding="#{backingBeanScope.SALESINSIDE.ph1}">
+            <af:panelGroupLayout layout="horizontal" id="pgl21" binding="#{backingBeanScope.SALESINSIDE.pgl21}">
               <af:quickQuery label="Search" searchDesc="Search" id="qryId6"
                              value="#{bindings.ImplicitViewCriteriaQuery5.quickQueryDescriptor}"
                              model="#{bindings.ImplicitViewCriteriaQuery5.queryModel}"
                              queryListener="#{bindings.ImplicitViewCriteriaQuery5.processQuery}"
-                             binding="#{backingBeanScope.InsertBean.qryId6}">
+                             binding="#{backingBeanScope.SALESINSIDE.qryId6}">
                 <f:facet name="end">
                   <af:commandLink text="Advanced" rendered="false" id="cl6"
-                                  binding="#{backingBeanScope.InsertBean.cl6}"/>
+                                  binding="#{backingBeanScope.SALESINSIDE.cl6}"/>
                 </f:facet>
               </af:quickQuery>
               <af:button actionListener="#{bindings.CreateInsert.execute}" text="Create Customer"
                          disabled="#{!bindings.CreateInsert.enabled}" id="b2"
-                         binding="#{backingBeanScope.InsertBean.b2}"/>
+                         binding="#{backingBeanScope.SALESINSIDE.b2}"/>
             </af:panelGroupLayout>
             <af:popup childCreation="deferred" autoCancel="disabled" id="p4"
-                      binding="#{backingBeanScope.InsertBean.p4}" contentDelivery="lazyUncached">
-              <af:dialog id="d4" binding="#{backingBeanScope.InsertBean.d4}">
+                      binding="#{backingBeanScope.SALESINSIDE.p4}" contentDelivery="lazyUncached">
+              <af:dialog id="d4" binding="#{backingBeanScope.SALESINSIDE.d4}">
                 <f:facet name="buttonBar"/>
-                <af:panelFormLayout id="pfl4" binding="#{backingBeanScope.InsertBean.pfl4}">
+                <af:panelFormLayout id="pfl4" binding="#{backingBeanScope.SALESINSIDE.pfl4}">
                   <af:inputText value="#{bindings.CustomerName1.inputValue}"
                                 label="#{bindings.CustomerName1.hints.label}"
                                 required="#{bindings.CustomerName1.hints.mandatory}"
                                 columns="#{bindings.CustomerName1.hints.displayWidth}"
                                 maximumLength="#{bindings.CustomerName1.hints.precision}"
                                 shortDesc="#{bindings.CustomerName1.hints.tooltip}" id="it49"
-                                binding="#{backingBeanScope.InsertBean.it49}">
+                                binding="#{backingBeanScope.SALESINSIDE.it49}">
                     <f:validator binding="#{bindings.CustomerName1.validator}"/>
                   </af:inputText>
                   <af:selectOneChoice value="#{bindings.CustomerTypeId.inputValue}"
                                       label="#{bindings.CustomerTypeId.label}"
                                       required="#{bindings.CustomerTypeId.hints.mandatory}"
                                       shortDesc="#{bindings.CustomerTypeId.hints.tooltip}" id="soc36"
-                                      binding="#{backingBeanScope.InsertBean.soc36}">
+                                      binding="#{backingBeanScope.SALESINSIDE.soc36}">
                     <f:selectItems value="#{bindings.CustomerTypeId.items}" id="si36"
-                                   binding="#{backingBeanScope.InsertBean.si36}"/>
+                                   binding="#{backingBeanScope.SALESINSIDE.si36}"/>
                     <f:validator binding="#{bindings.CustomerTypeId.validator}"/>
                   </af:selectOneChoice>
                   <af:selectOneChoice value="#{bindings.PrimaryContactId.inputValue}"
                                       label="#{bindings.PrimaryContactId.label}"
                                       required="#{bindings.PrimaryContactId.hints.mandatory}"
                                       shortDesc="#{bindings.PrimaryContactId.hints.tooltip}" id="soc37"
-                                      binding="#{backingBeanScope.InsertBean.soc37}">
+                                      binding="#{backingBeanScope.SALESINSIDE.soc37}">
                     <f:selectItems value="#{bindings.PrimaryContactId.items}" id="si37"
-                                   binding="#{backingBeanScope.InsertBean.si37}"/>
+                                   binding="#{backingBeanScope.SALESINSIDE.si37}"/>
                     <f:validator binding="#{bindings.PrimaryContactId.validator}"/>
                   </af:selectOneChoice>
                   <af:inputText value="#{bindings.Url.inputValue}" label="#{bindings.Url.hints.label}"
                                 required="#{bindings.Url.hints.mandatory}" columns="#{bindings.Url.hints.displayWidth}"
                                 maximumLength="#{bindings.Url.hints.precision}"
                                 shortDesc="#{bindings.Url.hints.tooltip}" id="it50"
-                                binding="#{backingBeanScope.InsertBean.it50}">
+                                binding="#{backingBeanScope.SALESINSIDE.it50}">
                     <f:validator binding="#{bindings.Url.validator}"/>
                   </af:inputText>
                   <af:inputText value="#{bindings.ParentCompany.inputValue}"
@@ -1344,14 +1376,14 @@
                                 columns="#{bindings.ParentCompany.hints.displayWidth}"
                                 maximumLength="#{bindings.ParentCompany.hints.precision}"
                                 shortDesc="#{bindings.ParentCompany.hints.tooltip}" id="it51"
-                                binding="#{backingBeanScope.InsertBean.it51}">
+                                binding="#{backingBeanScope.SALESINSIDE.it51}">
                     <f:validator binding="#{bindings.ParentCompany.validator}"/>
                   </af:inputText>
                   <af:inputText value="#{bindings.Ceo.inputValue}" label="#{bindings.Ceo.hints.label}"
                                 required="#{bindings.Ceo.hints.mandatory}" columns="#{bindings.Ceo.hints.displayWidth}"
                                 maximumLength="#{bindings.Ceo.hints.precision}"
                                 shortDesc="#{bindings.Ceo.hints.tooltip}" id="it52"
-                                binding="#{backingBeanScope.InsertBean.it52}">
+                                binding="#{backingBeanScope.SALESINSIDE.it52}">
                     <f:validator binding="#{bindings.Ceo.validator}"/>
                   </af:inputText>
                   <af:inputText value="#{bindings.NoOfEmployees.inputValue}"
@@ -1360,7 +1392,7 @@
                                 columns="#{bindings.NoOfEmployees.hints.displayWidth}"
                                 maximumLength="#{bindings.NoOfEmployees.hints.precision}"
                                 shortDesc="#{bindings.NoOfEmployees.hints.tooltip}" id="it53"
-                                binding="#{backingBeanScope.InsertBean.it53}">
+                                binding="#{backingBeanScope.SALESINSIDE.it53}">
                     <f:validator binding="#{bindings.NoOfEmployees.validator}"/>
                     <af:convertNumber groupingUsed="false" pattern="#{bindings.NoOfEmployees.format}"/>
                   </af:inputText>
@@ -1368,7 +1400,7 @@
                                 required="#{bindings.Fax.hints.mandatory}" columns="#{bindings.Fax.hints.displayWidth}"
                                 maximumLength="#{bindings.Fax.hints.precision}"
                                 shortDesc="#{bindings.Fax.hints.tooltip}" id="it54"
-                                binding="#{backingBeanScope.InsertBean.it54}">
+                                binding="#{backingBeanScope.SALESINSIDE.it54}">
                     <f:validator binding="#{bindings.Fax.validator}"/>
                     <af:convertNumber groupingUsed="false" pattern="#{bindings.Fax.format}"/>
                   </af:inputText>
@@ -1377,7 +1409,7 @@
                                 columns="#{bindings.Email1.hints.displayWidth}"
                                 maximumLength="#{bindings.Email1.hints.precision}"
                                 shortDesc="#{bindings.Email1.hints.tooltip}" id="it55"
-                                binding="#{backingBeanScope.InsertBean.it55}">
+                                binding="#{backingBeanScope.SALESINSIDE.it55}">
                     <f:validator binding="#{bindings.Email1.validator}"/>
                   </af:inputText>
                   <af:inputText value="#{bindings.CreatedBy.inputValue}" label="#{bindings.CreatedBy.hints.label}"
@@ -1385,16 +1417,17 @@
                                 columns="#{bindings.CreatedBy.hints.displayWidth}"
                                 maximumLength="#{bindings.CreatedBy.hints.precision}"
                                 shortDesc="#{bindings.CreatedBy.hints.tooltip}" id="it56"
-                                binding="#{backingBeanScope.InsertBean.it56}">
+                                binding="#{backingBeanScope.SALESINSIDE.it56}">
                     <f:validator binding="#{bindings.CreatedBy.validator}"/>
                   </af:inputText>
-                  <af:group id="PrimaryAddress" title="Primary Address">
+                  <af:group id="primaryAddress" title="Primary Address"
+                            binding="#{backingBeanScope.SALESINSIDE.primaryAddress}">
                     <af:inputText value="#{bindings.AddressId.inputValue}" label="#{bindings.AddressId.hints.label}"
                                   required="#{bindings.AddressId.hints.mandatory}"
                                   columns="#{bindings.AddressId.hints.displayWidth}"
                                   maximumLength="#{bindings.AddressId.hints.precision}"
                                   shortDesc="#{bindings.AddressId.hints.tooltip}" id="it60"
-                                  binding="#{backingBeanScope.InsertBean.it60}">
+                                  binding="#{backingBeanScope.SALESINSIDE.it60}">
                       <f:validator binding="#{bindings.AddressId.validator}"/>
                       <af:convertNumber groupingUsed="false" pattern="#{bindings.AddressId.format}"/>
                     </af:inputText>
@@ -1403,7 +1436,7 @@
                                   columns="#{bindings.House.hints.displayWidth}"
                                   maximumLength="#{bindings.House.hints.precision}"
                                   shortDesc="#{bindings.House.hints.tooltip}" id="it61"
-                                  binding="#{backingBeanScope.InsertBean.it61}">
+                                  binding="#{backingBeanScope.SALESINSIDE.it61}">
                       <f:validator binding="#{bindings.House.validator}"/>
                     </af:inputText>
                     <af:inputText value="#{bindings.Street.inputValue}" label="#{bindings.Street.hints.label}"
@@ -1411,7 +1444,7 @@
                                   columns="#{bindings.Street.hints.displayWidth}"
                                   maximumLength="#{bindings.Street.hints.precision}"
                                   shortDesc="#{bindings.Street.hints.tooltip}" id="it62"
-                                  binding="#{backingBeanScope.InsertBean.it62}">
+                                  binding="#{backingBeanScope.SALESINSIDE.it62}">
                       <f:validator binding="#{bindings.Street.validator}"/>
                     </af:inputText>
                     <af:inputText value="#{bindings.Locality.inputValue}" label="#{bindings.Locality.hints.label}"
@@ -1419,7 +1452,7 @@
                                   columns="#{bindings.Locality.hints.displayWidth}"
                                   maximumLength="#{bindings.Locality.hints.precision}"
                                   shortDesc="#{bindings.Locality.hints.tooltip}" id="it63"
-                                  binding="#{backingBeanScope.InsertBean.it63}">
+                                  binding="#{backingBeanScope.SALESINSIDE.it63}">
                       <f:validator binding="#{bindings.Locality.validator}"/>
                     </af:inputText>
                     <af:inputText value="#{bindings.City.inputValue}" label="#{bindings.City.hints.label}"
@@ -1427,7 +1460,7 @@
                                   columns="#{bindings.City.hints.displayWidth}"
                                   maximumLength="#{bindings.City.hints.precision}"
                                   shortDesc="#{bindings.City.hints.tooltip}" id="it64"
-                                  binding="#{backingBeanScope.InsertBean.it64}">
+                                  binding="#{backingBeanScope.SALESINSIDE.it64}">
                       <f:validator binding="#{bindings.City.validator}"/>
                     </af:inputText>
                     <af:inputText value="#{bindings.Pincode.inputValue}" label="#{bindings.Pincode.hints.label}"
@@ -1435,7 +1468,7 @@
                                   columns="#{bindings.Pincode.hints.displayWidth}"
                                   maximumLength="#{bindings.Pincode.hints.precision}"
                                   shortDesc="#{bindings.Pincode.hints.tooltip}" id="it65"
-                                  binding="#{backingBeanScope.InsertBean.it65}">
+                                  binding="#{backingBeanScope.SALESINSIDE.it65}">
                       <f:validator binding="#{bindings.Pincode.validator}"/>
                       <af:convertNumber groupingUsed="false" pattern="#{bindings.Pincode.format}"/>
                     </af:inputText>
@@ -1444,7 +1477,7 @@
                                   columns="#{bindings.State.hints.displayWidth}"
                                   maximumLength="#{bindings.State.hints.precision}"
                                   shortDesc="#{bindings.State.hints.tooltip}" id="it66"
-                                  binding="#{backingBeanScope.InsertBean.it66}">
+                                  binding="#{backingBeanScope.SALESINSIDE.it66}">
                       <f:validator binding="#{bindings.State.validator}"/>
                     </af:inputText>
                     <af:inputText value="#{bindings.Country.inputValue}" label="#{bindings.Country.hints.label}"
@@ -1452,17 +1485,18 @@
                                   columns="#{bindings.Country.hints.displayWidth}"
                                   maximumLength="#{bindings.Country.hints.precision}"
                                   shortDesc="#{bindings.Country.hints.tooltip}" id="it67"
-                                  binding="#{backingBeanScope.InsertBean.it67}">
+                                  binding="#{backingBeanScope.SALESINSIDE.it67}">
                       <f:validator binding="#{bindings.Country.validator}"/>
                     </af:inputText>
                   </af:group>
-                  <af:group id="ShippingAddress" title="Shipping Address">
+                  <af:group id="shippingAddress" title="Shipping Address"
+                            binding="#{backingBeanScope.SALESINSIDE.shippingAddress}">
                     <af:inputText value="#{bindings.AddressId1.inputValue}" label="#{bindings.AddressId1.hints.label}"
                                   required="#{bindings.AddressId1.hints.mandatory}"
                                   columns="#{bindings.AddressId1.hints.displayWidth}"
                                   maximumLength="#{bindings.AddressId1.hints.precision}"
                                   shortDesc="#{bindings.AddressId1.hints.tooltip}" id="it68"
-                                  binding="#{backingBeanScope.InsertBean.it68}">
+                                  binding="#{backingBeanScope.SALESINSIDE.it68}">
                       <f:validator binding="#{bindings.AddressId1.validator}"/>
                       <af:convertNumber groupingUsed="false" pattern="#{bindings.AddressId1.format}"/>
                     </af:inputText>
@@ -1471,7 +1505,7 @@
                                   columns="#{bindings.House1.hints.displayWidth}"
                                   maximumLength="#{bindings.House1.hints.precision}"
                                   shortDesc="#{bindings.House1.hints.tooltip}" id="it69"
-                                  binding="#{backingBeanScope.InsertBean.it69}">
+                                  binding="#{backingBeanScope.SALESINSIDE.it69}">
                       <f:validator binding="#{bindings.House1.validator}"/>
                     </af:inputText>
                     <af:inputText value="#{bindings.Street1.inputValue}" label="#{bindings.Street1.hints.label}"
@@ -1479,7 +1513,7 @@
                                   columns="#{bindings.Street1.hints.displayWidth}"
                                   maximumLength="#{bindings.Street1.hints.precision}"
                                   shortDesc="#{bindings.Street1.hints.tooltip}" id="it70"
-                                  binding="#{backingBeanScope.InsertBean.it70}">
+                                  binding="#{backingBeanScope.SALESINSIDE.it70}">
                       <f:validator binding="#{bindings.Street1.validator}"/>
                     </af:inputText>
                     <af:inputText value="#{bindings.Locality1.inputValue}" label="#{bindings.Locality1.hints.label}"
@@ -1487,7 +1521,7 @@
                                   columns="#{bindings.Locality1.hints.displayWidth}"
                                   maximumLength="#{bindings.Locality1.hints.precision}"
                                   shortDesc="#{bindings.Locality1.hints.tooltip}" id="it71"
-                                  binding="#{backingBeanScope.InsertBean.it71}">
+                                  binding="#{backingBeanScope.SALESINSIDE.it71}">
                       <f:validator binding="#{bindings.Locality1.validator}"/>
                     </af:inputText>
                     <af:inputText value="#{bindings.City1.inputValue}" label="#{bindings.City1.hints.label}"
@@ -1495,7 +1529,7 @@
                                   columns="#{bindings.City1.hints.displayWidth}"
                                   maximumLength="#{bindings.City1.hints.precision}"
                                   shortDesc="#{bindings.City1.hints.tooltip}" id="it72"
-                                  binding="#{backingBeanScope.InsertBean.it72}">
+                                  binding="#{backingBeanScope.SALESINSIDE.it72}">
                       <f:validator binding="#{bindings.City1.validator}"/>
                     </af:inputText>
                     <af:inputText value="#{bindings.Pincode1.inputValue}" label="#{bindings.Pincode1.hints.label}"
@@ -1503,7 +1537,7 @@
                                   columns="#{bindings.Pincode1.hints.displayWidth}"
                                   maximumLength="#{bindings.Pincode1.hints.precision}"
                                   shortDesc="#{bindings.Pincode1.hints.tooltip}" id="it73"
-                                  binding="#{backingBeanScope.InsertBean.it73}">
+                                  binding="#{backingBeanScope.SALESINSIDE.it73}">
                       <f:validator binding="#{bindings.Pincode1.validator}"/>
                       <af:convertNumber groupingUsed="false" pattern="#{bindings.Pincode1.format}"/>
                     </af:inputText>
@@ -1512,7 +1546,7 @@
                                   columns="#{bindings.State1.hints.displayWidth}"
                                   maximumLength="#{bindings.State1.hints.precision}"
                                   shortDesc="#{bindings.State1.hints.tooltip}" id="it74"
-                                  binding="#{backingBeanScope.InsertBean.it74}">
+                                  binding="#{backingBeanScope.SALESINSIDE.it74}">
                       <f:validator binding="#{bindings.State1.validator}"/>
                     </af:inputText>
                     <af:inputText value="#{bindings.Country1.inputValue}" label="#{bindings.Country1.hints.label}"
@@ -1520,7 +1554,7 @@
                                   columns="#{bindings.Country1.hints.displayWidth}"
                                   maximumLength="#{bindings.Country1.hints.precision}"
                                   shortDesc="#{bindings.Country1.hints.tooltip}" id="it75"
-                                  binding="#{backingBeanScope.InsertBean.it75}">
+                                  binding="#{backingBeanScope.SALESINSIDE.it75}">
                       <f:validator binding="#{bindings.Country1.validator}"/>
                     </af:inputText>
                   </af:group>
@@ -1532,7 +1566,7 @@
                       value="#{bindings.CustomersU1.collectionModel}" rowBandingInterval="0"
                       selectedRowKeys="#{bindings.CustomersU1.collectionModel.selectedRow}"
                       selectionListener="#{bindings.CustomersU1.collectionModel.makeCurrent}" rowSelection="single"
-                      partialTriggers="::b2" binding="#{backingBeanScope.InsertBean.md1}">
+                      partialTriggers="::b2" binding="#{backingBeanScope.SALESINSIDE.md1}">
               <af:column headerText="#{bindings.CustomersU1.hints.CustomerName.label}"
                          sortProperty="#{bindings.CustomersU1.hints.CustomerName.name}" sortable="false" id="c2">
                 <af:outputText value="#{row.CustomerName}"
@@ -1636,25 +1670,25 @@
               </af:column>
             </af:table>
           </af:panelHeader>
-          <af:panelTabbed position="above" id="pt2" binding="#{backingBeanScope.InsertBean.pt2}">
-            <af:showDetailItem text="Opportunities" id="sdi10" binding="#{backingBeanScope.InsertBean.sdi10}">
-              <af:panelGroupLayout id="pgl18" binding="#{backingBeanScope.InsertBean.pgl18}" layout="horizontal">
+          <af:panelTabbed position="above" id="pt2" binding="#{backingBeanScope.SALESINSIDE.pt2}">
+            <af:showDetailItem text="Opportunities" id="sdi10" binding="#{backingBeanScope.SALESINSIDE.sdi10}">
+              <af:panelGroupLayout id="pgl18" binding="#{backingBeanScope.SALESINSIDE.pgl18}" layout="horizontal">
                 <af:quickQuery label="Search" searchDesc="Search" id="qryId16"
                                value="#{bindings.ImplicitViewCriteriaQuery15.quickQueryDescriptor}"
                                model="#{bindings.ImplicitViewCriteriaQuery15.queryModel}"
                                queryListener="#{bindings.ImplicitViewCriteriaQuery15.processQuery}"
-                               binding="#{backingBeanScope.InsertBean.qryId16}">
+                               binding="#{backingBeanScope.SALESINSIDE.qryId16}">
                   <f:facet name="end">
                     <af:commandLink text="Advanced" rendered="false" id="cl16"
-                                    binding="#{backingBeanScope.InsertBean.cl16}"/>
+                                    binding="#{backingBeanScope.SALESINSIDE.cl16}"/>
                   </f:facet>
                 </af:quickQuery>
-                <af:button text="Add" id="b29" binding="#{backingBeanScope.InsertBean.b29}"/>
+                <af:button text="Add" id="b29" binding="#{backingBeanScope.SALESINSIDE.b29}"/>
                 <af:button actionListener="#{bindings.Delete3.execute}" text="Delete" id="b24"
-                           binding="#{backingBeanScope.InsertBean.b24}"/>
+                           binding="#{backingBeanScope.SALESINSIDE.b24}"/>
                 <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
                            disabled="#{!bindings.Commit.enabled}" id="b25"
-                           binding="#{backingBeanScope.InsertBean.b25}"/>
+                           binding="#{backingBeanScope.SALESINSIDE.b25}"/>
               </af:panelGroupLayout>
               <af:table value="#{bindings.OpportunitiesU1.collectionModel}" var="row"
                         rows="#{bindings.OpportunitiesU1.rangeSize}"
@@ -1664,7 +1698,7 @@
                         rowSelection="single" fetchSize="#{bindings.OpportunitiesU1.rangeSize}"
                         filterModel="#{bindings.OpportunitiesU1Query.queryDescriptor}" filterVisible="true"
                         queryListener="#{bindings.OpportunitiesU1Query.processQuery}" varStatus="vs" id="t7"
-                        binding="#{backingBeanScope.InsertBean.t7}">
+                        binding="#{backingBeanScope.SALESINSIDE.t7}">
                 <af:column sortProperty="#{bindings.OpportunitiesU1.hints.OpportunityId.name}" filterable="true"
                            sortable="true" headerText="#{bindings.OpportunitiesU1.hints.OpportunityId.label}" id="c79">
                   <af:inputText value="#{row.bindings.OpportunityId.inputValue}"
@@ -1705,7 +1739,7 @@
                            sortable="true" headerText="#{bindings.OpportunitiesU1.hints.StartDate.label}" id="c82">
                   <f:facet name="filter">
                     <af:inputDate value="#{bindings.OpportunitiesU1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.StartDate.value}"
-                                  id="id6" binding="#{backingBeanScope.InsertBean.id6}">
+                                  id="id6" binding="#{backingBeanScope.SALESINSIDE.id6}">
                       <af:convertDateTime pattern="#{bindings.OpportunitiesU1.hints.StartDate.format}"/>
                     </af:inputDate>
                   </f:facet>
@@ -1722,7 +1756,7 @@
                            sortable="true" headerText="#{bindings.OpportunitiesU1.hints.EndDate.label}" id="c83">
                   <f:facet name="filter">
                     <af:inputDate value="#{bindings.OpportunitiesU1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.EndDate.value}"
-                                  id="id8" binding="#{backingBeanScope.InsertBean.id8}">
+                                  id="id8" binding="#{backingBeanScope.SALESINSIDE.id8}">
                       <af:convertDateTime pattern="#{bindings.OpportunitiesU1.hints.EndDate.format}"/>
                     </af:inputDate>
                   </f:facet>
@@ -2079,24 +2113,24 @@
                 </af:column>
               </af:table>
             </af:showDetailItem>
-            <af:showDetailItem text="Appointments" id="sdi9" binding="#{backingBeanScope.InsertBean.sdi9}">
-              <af:panelGroupLayout layout="horizontal" id="pgl6" binding="#{backingBeanScope.InsertBean.pgl6}">
+            <af:showDetailItem text="Appointments" id="sdi9" binding="#{backingBeanScope.SALESINSIDE.sdi9}">
+              <af:panelGroupLayout layout="horizontal" id="pgl6" binding="#{backingBeanScope.SALESINSIDE.pgl6}">
                 <af:quickQuery label="Search" searchDesc="Search" id="qryId17"
                                value="#{bindings.ImplicitViewCriteriaQuery16.quickQueryDescriptor}"
                                model="#{bindings.ImplicitViewCriteriaQuery16.queryModel}"
                                queryListener="#{bindings.ImplicitViewCriteriaQuery16.processQuery}"
-                               binding="#{backingBeanScope.InsertBean.qryId17}">
+                               binding="#{backingBeanScope.SALESINSIDE.qryId17}">
                   <f:facet name="end">
                     <af:commandLink text="Advanced" rendered="false" id="cl17"
-                                    binding="#{backingBeanScope.InsertBean.cl17}"/>
+                                    binding="#{backingBeanScope.SALESINSIDE.cl17}"/>
                   </f:facet>
                 </af:quickQuery>
-                <af:button text="Add" id="b30" binding="#{backingBeanScope.InsertBean.b30}"/>
+                <af:button text="Add" id="b30" binding="#{backingBeanScope.SALESINSIDE.b30}"/>
                 <af:button actionListener="#{bindings.Delete3.execute}" text="Delete" id="b22"
-                           binding="#{backingBeanScope.InsertBean.b22}"/>
+                           binding="#{backingBeanScope.SALESINSIDE.b22}"/>
                 <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
                            disabled="#{!bindings.Commit.enabled}" id="b23"
-                           binding="#{backingBeanScope.InsertBean.b23}"/>
+                           binding="#{backingBeanScope.SALESINSIDE.b23}"/>
               </af:panelGroupLayout>
               <af:table value="#{bindings.AppointmentsU3.collectionModel}" var="row"
                         rows="#{bindings.AppointmentsU3.rangeSize}"
@@ -2106,7 +2140,7 @@
                         fetchSize="#{bindings.AppointmentsU3.rangeSize}"
                         filterModel="#{bindings.AppointmentsU3Query.queryDescriptor}" filterVisible="true"
                         queryListener="#{bindings.AppointmentsU3Query.processQuery}" varStatus="vs" id="t6"
-                        binding="#{backingBeanScope.InsertBean.t6}" partialTriggers="::b22 ::b24 ::b25 ::b23">
+                        binding="#{backingBeanScope.SALESINSIDE.t6}" partialTriggers="::b22 ::b24 ::b25 ::b23">
                 <af:column sortProperty="#{bindings.AppointmentsU3.hints.AppointmentSubject.name}" filterable="true"
                            sortable="true" headerText="#{bindings.AppointmentsU3.hints.AppointmentSubject.label}"
                            id="c53">
@@ -2122,7 +2156,7 @@
                            sortable="true" headerText="#{bindings.AppointmentsU3.hints.StartDate.label}" id="c55">
                   <f:facet name="filter">
                     <af:inputDate value="#{bindings.AppointmentsU3Query.queryDescriptor.filterConjunctionCriterion.criterionMap.StartDate.value}"
-                                  id="id2" binding="#{backingBeanScope.InsertBean.id2}">
+                                  id="id2" binding="#{backingBeanScope.SALESINSIDE.id2}">
                       <af:convertDateTime pattern="#{bindings.AppointmentsU3.hints.StartDate.format}"/>
                     </af:inputDate>
                   </f:facet>
@@ -2135,7 +2169,7 @@
                            sortable="true" headerText="#{bindings.AppointmentsU3.hints.EndDate.label}" id="c56">
                   <f:facet name="filter">
                     <af:inputDate value="#{bindings.AppointmentsU3Query.queryDescriptor.filterConjunctionCriterion.criterionMap.EndDate.value}"
-                                  id="id3" binding="#{backingBeanScope.InsertBean.id3}">
+                                  id="id3" binding="#{backingBeanScope.SALESINSIDE.id3}">
                       <af:convertDateTime pattern="#{bindings.AppointmentsU3.hints.EndDate.format}"/>
                     </af:inputDate>
                   </f:facet>
@@ -2168,7 +2202,7 @@
                            sortable="true" headerText="#{bindings.AppointmentsU3.hints.CreatedOn.label}" id="c60">
                   <f:facet name="filter">
                     <af:inputDate value="#{bindings.AppointmentsU3Query.queryDescriptor.filterConjunctionCriterion.criterionMap.CreatedOn.value}"
-                                  id="id4" binding="#{backingBeanScope.InsertBean.id4}">
+                                  id="id4" binding="#{backingBeanScope.SALESINSIDE.id4}">
                       <af:convertDateTime pattern="#{bindings.AppointmentsU3.hints.CreatedOn.format}"/>
                     </af:inputDate>
                   </f:facet>
@@ -2186,7 +2220,7 @@
                            sortable="true" headerText="#{bindings.AppointmentsU3.hints.LastUpdatedOn.label}" id="c76">
                   <f:facet name="filter">
                     <af:inputDate value="#{bindings.AppointmentsU3Query.queryDescriptor.filterConjunctionCriterion.criterionMap.LastUpdatedOn.value}"
-                                  id="id5" binding="#{backingBeanScope.InsertBean.id5}">
+                                  id="id5" binding="#{backingBeanScope.SALESINSIDE.id5}">
                       <af:convertDateTime pattern="#{bindings.AppointmentsU3.hints.LastUpdatedOn.format}"/>
                     </af:inputDate>
                   </f:facet>
@@ -2209,8 +2243,8 @@
                 </af:column>
               </af:table>
             </af:showDetailItem>
-            <af:showDetailItem text="Contacts" id="sdi8" binding="#{backingBeanScope.InsertBean.sdi8}">
-              <af:button text="Add " id="b31" binding="#{backingBeanScope.InsertBean.b31}"/>
+            <af:showDetailItem text="Contacts" id="sdi8" binding="#{backingBeanScope.SALESINSIDE.sdi8}">
+              <af:button text="Add " id="b31" binding="#{backingBeanScope.SALESINSIDE.b31}"/>
               <af:table value="#{bindings.ContactsU2.collectionModel}" var="row" rows="#{bindings.ContactsU2.rangeSize}"
                         emptyText="#{bindings.ContactsU2.viewable ? 'No data to display.' : 'Access Denied.'}"
                         rowBandingInterval="0" selectedRowKeys="#{bindings.ContactsU2.collectionModel.selectedRow}"
@@ -2218,7 +2252,7 @@
                         fetchSize="#{bindings.ContactsU2.rangeSize}"
                         filterModel="#{bindings.ContactsU2Query.queryDescriptor}" filterVisible="true"
                         queryListener="#{bindings.ContactsU2Query.processQuery}" varStatus="vs" id="t5"
-                        binding="#{backingBeanScope.InsertBean.t5}">
+                        binding="#{backingBeanScope.SALESINSIDE.t5}">
                 <af:column sortProperty="#{bindings.ContactsU2.hints.FirstName.name}" filterable="true" sortable="true"
                            headerText="#{bindings.ContactsU2.hints.FirstName.label}" id="c43">
                   <af:outputText value="#{row.FirstName}" shortDesc="#{bindings.ContactsU2.hints.FirstName.tooltip}"
@@ -2287,7 +2321,7 @@
                         rows="#{bindings.CustomersContactsU1.rangeSize}"
                         emptyText="#{bindings.CustomersContactsU1.viewable ? 'No data to display.' : 'Access Denied.'}"
                         rowBandingInterval="0" fetchSize="#{bindings.CustomersContactsU1.rangeSize}" id="t22"
-                        binding="#{backingBeanScope.InsertBean.t22}" rendered="false">
+                        binding="#{backingBeanScope.SALESINSIDE.t22}" rendered="false">
                 <af:column headerText="#{bindings.CustomersContactsU1.hints.CustomerId.label}" id="c262">
                   <af:inputText value="#{row.bindings.CustomerId.inputValue}"
                                 label="#{bindings.CustomersContactsU1.hints.CustomerId.label}"
@@ -2313,21 +2347,23 @@
                   </af:inputText>
                 </af:column>
               </af:table>
-              <af:button text="Delete Contacts related to Customers" id="b21" binding="#{backingBeanScope.InsertBean.b21}"
+              <af:button text="Delete Contacts related to Customers" id="b21"
+                         binding="#{backingBeanScope.SALESINSIDE.b21}"
                          action="#{backingBeanScope.InsertBean.deleteCustomerContactsLink}"/>
             </af:showDetailItem>
-            <af:showDetailItem id="tab3" text="Notes" binding="#{backingBeanScope.InsertBean.tab3}">
-              <af:panelGroupLayout id="pgl1" binding="#{backingBeanScope.InsertBean.pgl1}">
-                <af:panelHeader text="Notes" id="ph2" binding="#{backingBeanScope.InsertBean.ph2}">
+            <af:showDetailItem id="tab3" text="Notes" binding="#{backingBeanScope.SALESINSIDE.tab3}">
+              <af:panelGroupLayout id="pgl1" binding="#{backingBeanScope.SALESINSIDE.pgl1}">
+                <af:panelHeader text="Notes" id="ph2" binding="#{backingBeanScope.SALESINSIDE.ph2}">
                   <af:button actionListener="#{bindings.CreateInsert1.execute}" text="Create Notes"
                              disabled="#{!bindings.CreateInsert1.enabled}" id="b4"
-                             binding="#{backingBeanScope.InsertBean.b4}"/>
+                             binding="#{backingBeanScope.SALESINSIDE.b4}"/>
                   <af:table rows="#{bindings.NotesU1.rangeSize}" fetchSize="#{bindings.NotesU1.rangeSize}"
                             emptyText="#{bindings.NotesU1.viewable ? 'No data to display.' : 'Access Denied.'}"
                             var="row" value="#{bindings.NotesU1.collectionModel}" rowBandingInterval="0"
                             selectedRowKeys="#{bindings.NotesU1.collectionModel.selectedRow}"
                             selectionListener="#{bindings.NotesU1.collectionModel.makeCurrent}" rowSelection="single"
-                            id="t1" partialTriggers="::b4" binding="#{backingBeanScope.InsertBean.t1}">
+                            id="t1"
+                            partialTriggers="::b4 ::b15 ::b24 ::b17 ::b23 ::b13 ::b2 ::b7 ::b14 ::b18 ::b25 ::b22" binding="#{backingBeanScope.SALESINSIDE.t1}">
                     <af:column headerText="#{bindings.NotesU1.hints.NotesId.label}"
                                sortProperty="#{bindings.NotesU1.hints.NotesId.name}" sortable="false" id="c33">
                       <af:outputText value="#{row.NotesId}" shortDesc="#{bindings.NotesU1.hints.NotesId.tooltip}"
@@ -2395,7 +2431,7 @@
                         rows="#{bindings.NotesCustomers1.rangeSize}"
                         emptyText="#{bindings.NotesCustomers1.viewable ? 'No data to display.' : 'Access Denied.'}"
                         rowBandingInterval="0" fetchSize="#{bindings.NotesCustomers1.rangeSize}" id="t21"
-                        binding="#{backingBeanScope.InsertBean.t21}" rendered="false">
+                        binding="#{backingBeanScope.SALESINSIDE.t21}" rendered="false">
                 <af:column headerText="#{bindings.NotesCustomers1.hints.CustomerId.label}" id="c260">
                   <af:inputText value="#{row.bindings.CustomerId.inputValue}"
                                 label="#{bindings.NotesCustomers1.hints.CustomerId.label}"
@@ -2420,25 +2456,25 @@
                   </af:inputText>
                 </af:column>
               </af:table>
-              <af:button text="Delete Notes related to Customer" id="b20" binding="#{backingBeanScope.InsertBean.b20}"
+              <af:button text="Delete Notes related to Customer" id="b20" binding="#{backingBeanScope.SALESINSIDE.b20}"
                          action="#{backingBeanScope.InsertBean.deleteCustomerNotesLink}"/>
             </af:showDetailItem>
-            <af:showDetailItem text="Tasks" id="sdi7" binding="#{backingBeanScope.InsertBean.sdi7}">
-              <af:panelGroupLayout layout="horizontal" id="pgl20" binding="#{backingBeanScope.InsertBean.pgl20}">
+            <af:showDetailItem text="Tasks" id="sdi7" binding="#{backingBeanScope.SALESINSIDE.sdi7}">
+              <af:panelGroupLayout layout="horizontal" id="pgl20" binding="#{backingBeanScope.SALESINSIDE.pgl20}">
                 <af:quickQuery label="Search" searchDesc="Search" id="qryId2"
                                value="#{bindings.ImplicitViewCriteriaQuery1.quickQueryDescriptor}"
                                model="#{bindings.ImplicitViewCriteriaQuery1.queryModel}"
                                queryListener="#{bindings.ImplicitViewCriteriaQuery1.processQuery}"
-                               binding="#{backingBeanScope.InsertBean.qryId2}">
+                               binding="#{backingBeanScope.SALESINSIDE.qryId2}">
                   <f:facet name="end">
                     <af:commandLink text="Advanced" rendered="false" id="cl2"
-                                    binding="#{backingBeanScope.InsertBean.cl2}"/>
+                                    binding="#{backingBeanScope.SALESINSIDE.cl2}"/>
                   </f:facet>
                   <af:table value="#{bindings.TasksCustomersU1.collectionModel}" var="row"
                             rows="#{bindings.TasksCustomersU1.rangeSize}"
                             emptyText="#{bindings.TasksCustomersU1.viewable ? 'No data to display.' : 'Access Denied.'}"
                             rowBandingInterval="0" fetchSize="#{bindings.TasksCustomersU1.rangeSize}" id="t11"
-                            binding="#{backingBeanScope.InsertBean.t11}">
+                            binding="#{backingBeanScope.SALESINSIDE.t11}">
                     <af:column headerText="#{bindings.TasksCustomersU1.hints.TaskId.label}" id="c178">
                       <af:outputText value="#{row.TaskId}" shortDesc="#{bindings.TasksCustomersU1.hints.TaskId.tooltip}"
                                      id="ot127">
@@ -2455,9 +2491,9 @@
                     </af:column>
                   </af:table>
                 </af:quickQuery>
-                <af:button text="Add" id="b32" binding="#{backingBeanScope.InsertBean.b32}"/>
+                <af:button text="Add" id="b32" binding="#{backingBeanScope.SALESINSIDE.b32}"/>
                 <af:button text="Delete Tasks related to Customers" id="b19"
-                           binding="#{backingBeanScope.InsertBean.b19}"
+                           binding="#{backingBeanScope.SALESINSIDE.b19}"
                            action="#{backingBeanScope.InsertBean.deleteCustomerTasksLink}"/>
               </af:panelGroupLayout>
               <af:table value="#{bindings.TasksU1.collectionModel}" var="row" rows="#{bindings.TasksU1.rangeSize}"
@@ -2466,7 +2502,7 @@
                         selectionListener="#{bindings.TasksU1.collectionModel.makeCurrent}" rowSelection="single"
                         fetchSize="#{bindings.TasksU1.rangeSize}" filterModel="#{bindings.TasksU1Query.queryDescriptor}"
                         filterVisible="true" queryListener="#{bindings.TasksU1Query.processQuery}" varStatus="vs"
-                        id="t14" binding="#{backingBeanScope.InsertBean.t14}">
+                        id="t14" binding="#{backingBeanScope.SALESINSIDE.t14}">
                 <af:column sortProperty="#{bindings.TasksU1.hints.TaskName.name}" filterable="true" sortable="true"
                            headerText="#{bindings.TasksU1.hints.TaskName.label}" id="c221">
                   <af:outputText value="#{row.TaskName}" shortDesc="#{bindings.TasksU1.hints.TaskName.tooltip}"
@@ -2476,7 +2512,7 @@
                            headerText="#{bindings.TasksU1.hints.DueDate.label}" id="c222">
                   <f:facet name="filter">
                     <af:inputDate value="#{bindings.TasksU1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.DueDate.value}"
-                                  id="id28" binding="#{backingBeanScope.InsertBean.id28}">
+                                  id="id28" binding="#{backingBeanScope.SALESINSIDE.id28}">
                       <af:convertDateTime pattern="#{bindings.TasksU1.hints.DueDate.format}"/>
                     </af:inputDate>
                   </f:facet>
@@ -2555,28 +2591,28 @@
         </af:showDetailItem>
         <af:showDetailItem text="Tasks" id="sdi4" icon="/icons/tasks.png"
                            disclosed="#{(pageFlowScope.sales_manager_tabVal==5)?true:false}"
-                           binding="#{backingBeanScope.InsertBean.sdi4}">
-          <af:panelGroupLayout id="pgl19" binding="#{backingBeanScope.InsertBean.pgl19}">
-            <af:panelHeader text="Tasks" id="ph10" binding="#{backingBeanScope.InsertBean.ph10}">
-              <af:panelGroupLayout layout="horizontal" id="pgl2" binding="#{backingBeanScope.InsertBean.pgl2}">
+                           binding="#{backingBeanScope.SALESINSIDE.sdi4}">
+          <af:panelGroupLayout id="pgl19" binding="#{backingBeanScope.SALESINSIDE.pgl19}">
+            <af:panelHeader text="Tasks" id="ph10" binding="#{backingBeanScope.SALESINSIDE.ph10}">
+              <af:panelGroupLayout layout="horizontal" id="pgl2" binding="#{backingBeanScope.SALESINSIDE.pgl2}">
                 <af:quickQuery label="Search" searchDesc="Search" id="qryId5"
                                value="#{bindings.ImplicitViewCriteriaQuery4.quickQueryDescriptor}"
                                model="#{bindings.ImplicitViewCriteriaQuery4.queryModel}"
                                queryListener="#{bindings.ImplicitViewCriteriaQuery4.processQuery}"
-                               binding="#{backingBeanScope.InsertBean.qryId5}">
+                               binding="#{backingBeanScope.SALESINSIDE.qryId5}">
                   <f:facet name="end">
                     <af:commandLink text="Advanced" rendered="false" id="cl5"
-                                    binding="#{backingBeanScope.InsertBean.cl5}"/>
+                                    binding="#{backingBeanScope.SALESINSIDE.cl5}"/>
                   </f:facet>
                 </af:quickQuery>
-                <af:button text="Add" id="b33" binding="#{backingBeanScope.InsertBean.b33}"/>
+                <af:button text="Add" id="b33" binding="#{backingBeanScope.SALESINSIDE.b33}"/>
               </af:panelGroupLayout>
               <af:table id="md2" rows="#{bindings.TasksU3.rangeSize}" fetchSize="#{bindings.TasksU3.rangeSize}"
                         emptyText="#{bindings.TasksU3.viewable ? 'No data to display.' : 'Access Denied.'}" var="row"
                         value="#{bindings.TasksU3.collectionModel}" rowBandingInterval="0"
                         selectedRowKeys="#{bindings.TasksU3.collectionModel.selectedRow}"
                         selectionListener="#{bindings.TasksU3.collectionModel.makeCurrent}" rowSelection="single"
-                        binding="#{backingBeanScope.InsertBean.md2}">
+                        binding="#{backingBeanScope.SALESINSIDE.md2}">
                 <af:column headerText="#{bindings.TasksU3.hints.TaskName.label}"
                            sortProperty="#{bindings.TasksU3.hints.TaskName.name}" sortable="false" id="c15">
                   <af:outputText value="#{row.TaskName}" shortDesc="#{bindings.TasksU3.hints.TaskName.tooltip}"
@@ -2636,26 +2672,26 @@
                 </af:column>
               </af:table>
               <af:popup childCreation="deferred" autoCancel="disabled" id="p5"
-                        binding="#{backingBeanScope.InsertBean.p5}">
-                <af:dialog id="d5" binding="#{backingBeanScope.InsertBean.d5}">
+                        binding="#{backingBeanScope.SALESINSIDE.p5}">
+                <af:dialog id="d5" binding="#{backingBeanScope.SALESINSIDE.d5}">
                   <f:facet name="buttonBar"/>
                 </af:dialog>
               </af:popup>
             </af:panelHeader>
-            <af:panelTabbed position="above" id="pt4" binding="#{backingBeanScope.InsertBean.pt4}">
-              <af:showDetailItem id="customers" text="Customers" binding="#{backingBeanScope.InsertBean.customers}">
-                <af:panelGroupLayout layout="horizontal" id="pgl30" binding="#{backingBeanScope.InsertBean.pgl30}">
+            <af:panelTabbed position="above" id="pt4" binding="#{backingBeanScope.SALESINSIDE.pt4}">
+              <af:showDetailItem id="customers" text="Customers" binding="#{backingBeanScope.SALESINSIDE.customers}">
+                <af:panelGroupLayout layout="horizontal" id="pgl30" binding="#{backingBeanScope.SALESINSIDE.pgl30}">
                   <af:quickQuery label="Search" searchDesc="Search" id="qryId18"
                                  value="#{bindings.ImplicitViewCriteriaQuery17.quickQueryDescriptor}"
                                  model="#{bindings.ImplicitViewCriteriaQuery17.queryModel}"
                                  queryListener="#{bindings.ImplicitViewCriteriaQuery17.processQuery}"
-                                 binding="#{backingBeanScope.InsertBean.qryId18}">
+                                 binding="#{backingBeanScope.SALESINSIDE.qryId18}">
                     <f:facet name="end">
                       <af:commandLink text="Advanced" rendered="false" id="cl18"
-                                      binding="#{backingBeanScope.InsertBean.cl18}"/>
+                                      binding="#{backingBeanScope.SALESINSIDE.cl18}"/>
                     </f:facet>
                   </af:quickQuery>
-                  <af:button text="Add" id="b38" binding="#{backingBeanScope.InsertBean.b38}"/>
+                  <af:button text="Add" id="b38" binding="#{backingBeanScope.SALESINSIDE.b38}"/>
                 </af:panelGroupLayout>
                 <af:table value="#{bindings.CustomersU21.collectionModel}" var="row"
                           rows="#{bindings.CustomersU21.rangeSize}"
@@ -2665,7 +2701,7 @@
                           fetchSize="#{bindings.CustomersU21.rangeSize}"
                           filterModel="#{bindings.CustomersU21Query.queryDescriptor}" filterVisible="true"
                           queryListener="#{bindings.CustomersU21Query.processQuery}" varStatus="vs" id="t23"
-                          binding="#{backingBeanScope.InsertBean.t23}">
+                          binding="#{backingBeanScope.SALESINSIDE.t23}">
                   <af:column sortProperty="#{bindings.CustomersU21.hints.CustomerName.name}" filterable="true"
                              sortable="true" headerText="Name" id="c166">
                     <af:outputText value="#{row.CustomerName}"
@@ -2734,20 +2770,20 @@
         </af:showDetailItem>
         <af:showDetailItem text="Appointments" id="sdi5" icon="/icons/appointments.png"
                            disclosed="#{(pageFlowScope.sales_manager_tabVal==6)?true:false}"
-                           binding="#{backingBeanScope.InsertBean.sdi5}" inlineStyle="padding:2%;">
-          <af:panelGroupLayout layout="vertical" id="pgl25" binding="#{backingBeanScope.InsertBean.pgl25}">
-            <af:panelHeader text="Appointments" id="ph4" binding="#{backingBeanScope.InsertBean.ph4}">
+                           binding="#{backingBeanScope.SALESINSIDE.sdi5}" inlineStyle="padding:2%;">
+          <af:panelGroupLayout layout="vertical" id="pgl25" binding="#{backingBeanScope.SALESINSIDE.pgl25}">
+            <af:panelHeader text="Appointments" id="ph4" binding="#{backingBeanScope.SALESINSIDE.ph4}">
               <af:quickQuery label="Search" searchDesc="Search" id="qryId12"
                              value="#{bindings.ImplicitViewCriteriaQuery11.quickQueryDescriptor}"
                              model="#{bindings.ImplicitViewCriteriaQuery11.queryModel}"
                              queryListener="#{bindings.ImplicitViewCriteriaQuery11.processQuery}"
-                             binding="#{backingBeanScope.InsertBean.qryId12}">
+                             binding="#{backingBeanScope.SALESINSIDE.qryId12}">
                 <f:facet name="end">
                   <af:commandLink text="Advanced" rendered="false" id="cl12"
-                                  binding="#{backingBeanScope.InsertBean.cl12}"/>
+                                  binding="#{backingBeanScope.SALESINSIDE.cl12}"/>
                 </f:facet>
               </af:quickQuery>
-              <af:button text="Add" id="b34" binding="#{backingBeanScope.InsertBean.b34}"/>
+              <af:button text="Add" id="b34" binding="#{backingBeanScope.SALESINSIDE.b34}"/>
             </af:panelHeader>
             <af:table value="#{bindings.AppointmentsU1.collectionModel}" var="row"
                       rows="#{bindings.AppointmentsU1.rangeSize}"
@@ -2757,7 +2793,7 @@
                       fetchSize="#{bindings.AppointmentsU1.rangeSize}"
                       filterModel="#{bindings.ImplicitViewCriteriaQuery11.quickQueryDescriptor}" filterVisible="true"
                       queryListener="#{bindings.ImplicitViewCriteriaQuery11.processQuery}" varStatus="vs"
-                      partialTriggers="::qryId12" id="t2" binding="#{backingBeanScope.InsertBean.t2}">
+                      partialTriggers="::qryId12" id="t2" binding="#{backingBeanScope.SALESINSIDE.t2}">
               <af:column sortProperty="#{bindings.AppointmentsU1.hints.CustomerId.name}" filterable="true"
                          sortable="true" headerText="#{bindings.AppointmentsU1.hints.CustomerId.label}" id="c1">
                 <af:outputText value="#{row.CustomerId}" shortDesc="#{bindings.AppointmentsU1.hints.CustomerId.tooltip}"
@@ -2780,7 +2816,7 @@
                          sortable="true" headerText="#{bindings.AppointmentsU1.hints.StartDate.label}" id="c32">
                 <f:facet name="filter">
                   <af:inputDate value="#{bindings.ImplicitViewCriteriaQuery11.queryDescriptor.filterConjunctionCriterion.criterionMap.StartDate.value}"
-                                id="id20" binding="#{backingBeanScope.InsertBean.id20}">
+                                id="id20" binding="#{backingBeanScope.SALESINSIDE.id20}">
                     <af:convertDateTime pattern="#{bindings.AppointmentsU1.hints.StartDate.format}"/>
                   </af:inputDate>
                 </f:facet>
@@ -2793,7 +2829,7 @@
                          headerText="#{bindings.AppointmentsU1.hints.EndDate.label}" id="c61">
                 <f:facet name="filter">
                   <af:inputDate value="#{bindings.ImplicitViewCriteriaQuery11.queryDescriptor.filterConjunctionCriterion.criterionMap.EndDate.value}"
-                                id="id21" binding="#{backingBeanScope.InsertBean.id21}">
+                                id="id21" binding="#{backingBeanScope.SALESINSIDE.id21}">
                     <af:convertDateTime pattern="#{bindings.AppointmentsU1.hints.EndDate.format}"/>
                   </af:inputDate>
                 </f:facet>
@@ -2826,7 +2862,7 @@
                          sortable="true" headerText="#{bindings.AppointmentsU1.hints.CreatedOn.label}" id="c65">
                 <f:facet name="filter">
                   <af:inputDate value="#{bindings.ImplicitViewCriteriaQuery11.queryDescriptor.filterConjunctionCriterion.criterionMap.CreatedOn.value}"
-                                id="id22" binding="#{backingBeanScope.InsertBean.id22}">
+                                id="id22" binding="#{backingBeanScope.SALESINSIDE.id22}">
                     <af:convertDateTime pattern="#{bindings.AppointmentsU1.hints.CreatedOn.format}"/>
                   </af:inputDate>
                 </f:facet>
@@ -2844,7 +2880,7 @@
                          sortable="true" headerText="#{bindings.AppointmentsU1.hints.LastUpdatedOn.label}" id="c67">
                 <f:facet name="filter">
                   <af:inputDate value="#{bindings.ImplicitViewCriteriaQuery11.queryDescriptor.filterConjunctionCriterion.criterionMap.LastUpdatedOn.value}"
-                                id="id23" binding="#{backingBeanScope.InsertBean.id23}">
+                                id="id23" binding="#{backingBeanScope.SALESINSIDE.id23}">
                     <af:convertDateTime pattern="#{bindings.AppointmentsU1.hints.LastUpdatedOn.format}"/>
                   </af:inputDate>
                 </f:facet>
@@ -2855,20 +2891,20 @@
               </af:column>
             </af:table>
           </af:panelGroupLayout>
-          <af:panelTabbed position="above" id="pt5" binding="#{backingBeanScope.InsertBean.pt5}">
-            <af:showDetailItem id="tab5" text="Interactions" binding="#{backingBeanScope.InsertBean.tab5}">
-              <af:panelGroupLayout layout="horizontal" id="pgl26" binding="#{backingBeanScope.InsertBean.pgl26}">
+          <af:panelTabbed position="above" id="pt5" binding="#{backingBeanScope.SALESINSIDE.pt5}">
+            <af:showDetailItem id="tab5" text="Interactions" binding="#{backingBeanScope.SALESINSIDE.tab5}">
+              <af:panelGroupLayout layout="horizontal" id="pgl26" binding="#{backingBeanScope.SALESINSIDE.pgl26}">
                 <af:quickQuery label="Search" searchDesc="Search" id="qryId13"
                                value="#{bindings.ImplicitViewCriteriaQuery12.quickQueryDescriptor}"
                                model="#{bindings.ImplicitViewCriteriaQuery12.queryModel}"
                                queryListener="#{bindings.ImplicitViewCriteriaQuery12.processQuery}"
-                               binding="#{backingBeanScope.InsertBean.qryId13}">
+                               binding="#{backingBeanScope.SALESINSIDE.qryId13}">
                   <f:facet name="end">
                     <af:commandLink text="Advanced" rendered="false" id="cl13"
-                                    binding="#{backingBeanScope.InsertBean.cl13}"/>
+                                    binding="#{backingBeanScope.SALESINSIDE.cl13}"/>
                   </f:facet>
                 </af:quickQuery>
-                <af:button text="Add" id="b39" binding="#{backingBeanScope.InsertBean.b39}"/>
+                <af:button text="Add" id="b39" binding="#{backingBeanScope.SALESINSIDE.b39}"/>
               </af:panelGroupLayout>
               <af:table value="#{bindings.Interactions2.collectionModel}" var="row"
                         rows="#{bindings.Interactions2.rangeSize}"
@@ -2878,7 +2914,7 @@
                         fetchSize="#{bindings.Interactions2.rangeSize}"
                         filterModel="#{bindings.ImplicitViewCriteriaQuery12.quickQueryDescriptor}" filterVisible="true"
                         queryListener="#{bindings.ImplicitViewCriteriaQuery12.processQuery}" varStatus="vs"
-                        partialTriggers="::qryId13" id="t4" binding="#{backingBeanScope.InsertBean.t4}">
+                        partialTriggers="::qryId13" id="t4" binding="#{backingBeanScope.SALESINSIDE.t4}">
                 <af:column sortProperty="#{bindings.Interactions2.hints.InteractionTypeId.name}" filterable="true"
                            sortable="true" headerText="#{bindings.Interactions2.hints.InteractionTypeId.label}"
                            id="c68">
@@ -2907,7 +2943,7 @@
                            sortable="true" headerText="#{bindings.Interactions2.hints.StartDate.label}" id="c72">
                   <f:facet name="filter">
                     <af:inputDate value="#{bindings.ImplicitViewCriteriaQuery12.queryDescriptor.filterConjunctionCriterion.criterionMap.StartDate.value}"
-                                  id="id24" binding="#{backingBeanScope.InsertBean.id24}">
+                                  id="id24" binding="#{backingBeanScope.SALESINSIDE.id24}">
                       <af:convertDateTime pattern="#{bindings.Interactions2.hints.StartDate.format}"/>
                     </af:inputDate>
                   </f:facet>
@@ -2920,7 +2956,7 @@
                            headerText="#{bindings.Interactions2.hints.EndDate.label}" id="c73">
                   <f:facet name="filter">
                     <af:inputDate value="#{bindings.ImplicitViewCriteriaQuery12.queryDescriptor.filterConjunctionCriterion.criterionMap.EndDate.value}"
-                                  id="id25" binding="#{backingBeanScope.InsertBean.id25}">
+                                  id="id25" binding="#{backingBeanScope.SALESINSIDE.id25}">
                       <af:convertDateTime pattern="#{bindings.Interactions2.hints.EndDate.format}"/>
                     </af:inputDate>
                   </f:facet>
@@ -2931,19 +2967,19 @@
                 </af:column>
               </af:table>
             </af:showDetailItem>
-            <af:showDetailItem text="Opportunities" id="sdi16" binding="#{backingBeanScope.InsertBean.sdi16}">
-              <af:panelGroupLayout layout="vertical" id="pgl31" binding="#{backingBeanScope.InsertBean.pgl31}">
+            <af:showDetailItem text="Opportunities" id="sdi16" binding="#{backingBeanScope.SALESINSIDE.sdi16}">
+              <af:panelGroupLayout layout="vertical" id="pgl31" binding="#{backingBeanScope.SALESINSIDE.pgl31}">
                 <af:quickQuery label="Search" searchDesc="Search" id="qryId19"
                                value="#{bindings.ImplicitViewCriteriaQuery18.quickQueryDescriptor}"
                                model="#{bindings.ImplicitViewCriteriaQuery18.queryModel}"
                                queryListener="#{bindings.ImplicitViewCriteriaQuery18.processQuery}"
-                               binding="#{backingBeanScope.InsertBean.qryId19}">
+                               binding="#{backingBeanScope.SALESINSIDE.qryId19}">
                   <f:facet name="end">
                     <af:commandLink text="Advanced" rendered="false" id="cl19"
-                                    binding="#{backingBeanScope.InsertBean.cl19}"/>
+                                    binding="#{backingBeanScope.SALESINSIDE.cl19}"/>
                   </f:facet>
                 </af:quickQuery>
-                <af:button text="Add" id="b40" binding="#{backingBeanScope.InsertBean.b40}"/>
+                <af:button text="Add" id="b40" binding="#{backingBeanScope.SALESINSIDE.b40}"/>
               </af:panelGroupLayout>
               <af:table value="#{bindings.OpportunitiesU6.collectionModel}" var="row"
                         rows="#{bindings.OpportunitiesU6.rangeSize}"
@@ -2953,7 +2989,7 @@
                         rowSelection="single" fetchSize="#{bindings.OpportunitiesU6.rangeSize}"
                         filterModel="#{bindings.OpportunitiesU6Query.queryDescriptor}" filterVisible="true"
                         queryListener="#{bindings.OpportunitiesU6Query.processQuery}" varStatus="vs" id="t20"
-                        binding="#{backingBeanScope.InsertBean.t20}">
+                        binding="#{backingBeanScope.SALESINSIDE.t20}">
                 <af:column sortProperty="#{bindings.OpportunitiesU6.hints.OppurtunityName.name}" filterable="true"
                            sortable="true" headerText="#{bindings.OpportunitiesU6.hints.OppurtunityName.label}"
                            id="c74">
@@ -2983,7 +3019,7 @@
                            sortable="true" headerText="#{bindings.OpportunitiesU6.hints.StartDate.label}" id="c124">
                   <f:facet name="filter">
                     <af:inputDate value="#{bindings.OpportunitiesU6Query.queryDescriptor.filterConjunctionCriterion.criterionMap.StartDate.value}"
-                                  id="id26" binding="#{backingBeanScope.InsertBean.id26}">
+                                  id="id26" binding="#{backingBeanScope.SALESINSIDE.id26}">
                       <af:convertDateTime pattern="#{bindings.OpportunitiesU6.hints.StartDate.format}"/>
                     </af:inputDate>
                   </f:facet>
@@ -2996,7 +3032,7 @@
                            sortable="true" headerText="#{bindings.OpportunitiesU6.hints.EndDate.label}" id="c125">
                   <f:facet name="filter">
                     <af:inputDate value="#{bindings.OpportunitiesU6Query.queryDescriptor.filterConjunctionCriterion.criterionMap.EndDate.value}"
-                                  id="id27" binding="#{backingBeanScope.InsertBean.id27}">
+                                  id="id27" binding="#{backingBeanScope.SALESINSIDE.id27}">
                       <af:convertDateTime pattern="#{bindings.OpportunitiesU6.hints.EndDate.format}"/>
                     </af:inputDate>
                   </f:facet>
@@ -3111,19 +3147,19 @@
                 </af:column>
               </af:table>
             </af:showDetailItem>
-            <af:showDetailItem text="Customers" id="sdi17" binding="#{backingBeanScope.InsertBean.sdi17}">
-              <af:panelGroupLayout layout="horizontal" id="pgl28" binding="#{backingBeanScope.InsertBean.pgl28}">
+            <af:showDetailItem text="Customers" id="sdi17" binding="#{backingBeanScope.SALESINSIDE.sdi17}">
+              <af:panelGroupLayout layout="horizontal" id="pgl28" binding="#{backingBeanScope.SALESINSIDE.pgl28}">
                 <af:quickQuery label="Search" searchDesc="Search" id="qryId15"
                                value="#{bindings.ImplicitViewCriteriaQuery14.quickQueryDescriptor}"
                                model="#{bindings.ImplicitViewCriteriaQuery14.queryModel}"
                                queryListener="#{bindings.ImplicitViewCriteriaQuery14.processQuery}"
-                               binding="#{backingBeanScope.InsertBean.qryId15}">
+                               binding="#{backingBeanScope.SALESINSIDE.qryId15}">
                   <f:facet name="end">
                     <af:commandLink text="Advanced" rendered="false" id="cl15"
-                                    binding="#{backingBeanScope.InsertBean.cl15}"/>
+                                    binding="#{backingBeanScope.SALESINSIDE.cl15}"/>
                   </f:facet>
                 </af:quickQuery>
-                <af:button text="Add" id="b41" binding="#{backingBeanScope.InsertBean.b41}"/>
+                <af:button text="Add" id="b41" binding="#{backingBeanScope.SALESINSIDE.b41}"/>
               </af:panelGroupLayout>
               <af:table value="#{bindings.CustomersU5.collectionModel}" var="row"
                         rows="#{bindings.CustomersU5.rangeSize}"
@@ -3133,7 +3169,7 @@
                         fetchSize="#{bindings.CustomersU5.rangeSize}"
                         filterModel="#{bindings.ImplicitViewCriteriaQuery14.quickQueryDescriptor}" filterVisible="true"
                         queryListener="#{bindings.ImplicitViewCriteriaQuery14.processQuery}" varStatus="vs"
-                        partialTriggers="::qryId15" id="t26" binding="#{backingBeanScope.InsertBean.t26}">
+                        partialTriggers="::qryId15" id="t26" binding="#{backingBeanScope.SALESINSIDE.t26}">
                 <af:column sortProperty="#{bindings.CustomersU5.hints.CustomerName.name}" filterable="true"
                            sortable="true" headerText="#{bindings.CustomersU5.hints.CustomerName.label}" id="c153">
                   <af:outputText value="#{row.CustomerName}"
@@ -3200,27 +3236,27 @@
         </af:showDetailItem>
         <af:showDetailItem text="Contacts" id="sdi6" icon="/icons/addUser.jpg"
                            disclosed="#{(pageFlowScope.sales_manager_tabVal==7)?true:false}"
-                           binding="#{backingBeanScope.InsertBean.sdi6}">
-          <af:panelHeader text="Contacts" id="ph7" binding="#{backingBeanScope.InsertBean.ph7}">
-            <af:panelGroupLayout layout="horizontal" id="pgl32" binding="#{backingBeanScope.InsertBean.pgl32}">
+                           binding="#{backingBeanScope.SALESINSIDE.sdi6}">
+          <af:panelHeader text="Contacts" id="ph7" binding="#{backingBeanScope.SALESINSIDE.ph7}">
+            <af:panelGroupLayout layout="horizontal" id="pgl32" binding="#{backingBeanScope.SALESINSIDE.pgl32}">
               <af:quickQuery label="Search" searchDesc="Search" id="qryId20"
                              value="#{bindings.ImplicitViewCriteriaQuery19.quickQueryDescriptor}"
                              model="#{bindings.ImplicitViewCriteriaQuery19.queryModel}"
                              queryListener="#{bindings.ImplicitViewCriteriaQuery19.processQuery}"
-                             binding="#{backingBeanScope.InsertBean.qryId20}">
+                             binding="#{backingBeanScope.SALESINSIDE.qryId20}">
                 <f:facet name="end">
                   <af:commandLink text="Advanced" rendered="false" id="cl20"
-                                  binding="#{backingBeanScope.InsertBean.cl20}"/>
+                                  binding="#{backingBeanScope.SALESINSIDE.cl20}"/>
                 </f:facet>
               </af:quickQuery>
-              <af:button text="Add" id="b35" binding="#{backingBeanScope.InsertBean.b35}"/>
+              <af:button text="Add" id="b35" binding="#{backingBeanScope.SALESINSIDE.b35}"/>
             </af:panelGroupLayout>
             <af:table id="md3" rows="#{bindings.ContactsU1.rangeSize}" fetchSize="#{bindings.ContactsU1.rangeSize}"
                       emptyText="#{bindings.ContactsU1.viewable ? 'No data to display.' : 'Access Denied.'}" var="row"
                       value="#{bindings.ContactsU1.collectionModel}" rowBandingInterval="0"
                       selectedRowKeys="#{bindings.ContactsU1.collectionModel.selectedRow}"
                       selectionListener="#{bindings.ContactsU1.collectionModel.makeCurrent}" rowSelection="single"
-                      binding="#{backingBeanScope.InsertBean.md3}">
+                      binding="#{backingBeanScope.SALESINSIDE.md3}">
               <af:column headerText="#{bindings.ContactsU1.hints.ContactId.label}"
                          sortProperty="#{bindings.ContactsU1.hints.ContactId.name}" sortable="false" id="c204">
                 <af:outputText value="#{row.ContactId}" shortDesc="#{bindings.ContactsU1.hints.ContactId.tooltip}"
@@ -3329,26 +3365,26 @@
               </af:column>
             </af:table>
           </af:panelHeader>
-          <af:panelTabbed position="above" id="pt3" binding="#{backingBeanScope.InsertBean.pt3}">
-            <af:showDetailItem id="tab4" text="Customers" binding="#{backingBeanScope.InsertBean.tab4}">
-              <af:panelGroupLayout layout="horizontal" id="pgl27" binding="#{backingBeanScope.InsertBean.pgl27}">
+          <af:panelTabbed position="above" id="pt3" binding="#{backingBeanScope.SALESINSIDE.pt3}">
+            <af:showDetailItem id="tab4" text="Customers" binding="#{backingBeanScope.SALESINSIDE.tab4}">
+              <af:panelGroupLayout layout="horizontal" id="pgl27" binding="#{backingBeanScope.SALESINSIDE.pgl27}">
                 <af:quickQuery label="Search" searchDesc="Search" id="qryId14"
                                value="#{bindings.ImplicitViewCriteriaQuery13.quickQueryDescriptor}"
                                model="#{bindings.ImplicitViewCriteriaQuery13.queryModel}"
                                queryListener="#{bindings.ImplicitViewCriteriaQuery13.processQuery}"
-                               binding="#{backingBeanScope.InsertBean.qryId14}">
+                               binding="#{backingBeanScope.SALESINSIDE.qryId14}">
                   <f:facet name="end">
                     <af:commandLink text="Advanced" rendered="false" id="cl14"
-                                    binding="#{backingBeanScope.InsertBean.cl14}"/>
+                                    binding="#{backingBeanScope.SALESINSIDE.cl14}"/>
                   </f:facet>
                 </af:quickQuery>
-                <af:button text="Add" id="b36" binding="#{backingBeanScope.InsertBean.b36}"/>
+                <af:button text="Add" id="b36" binding="#{backingBeanScope.SALESINSIDE.b36}"/>
               </af:panelGroupLayout>
               <af:table value="#{bindings.CustomersU41.collectionModel}" var="row"
                         rows="#{bindings.CustomersU41.rangeSize}"
                         emptyText="#{bindings.CustomersU41.viewable ? 'No data to display.' : 'Access Denied.'}"
                         rowBandingInterval="0" fetchSize="#{bindings.CustomersU41.rangeSize}"
-                        partialTriggers="::qryId14" id="t27" binding="#{backingBeanScope.InsertBean.t27}">
+                        partialTriggers="::qryId14" id="t27" binding="#{backingBeanScope.SALESINSIDE.t27}">
                 <af:column headerText="#{bindings.CustomersU41.hints.CustomerName.label}" id="c151">
                   <af:outputText value="#{row.CustomerName}"
                                  shortDesc="#{bindings.CustomersU41.hints.CustomerName.tooltip}" id="ot100"/>
@@ -3401,19 +3437,19 @@
                 </af:column>
               </af:table>
             </af:showDetailItem>
-            <af:showDetailItem text="Opportunities" id="sdi15" binding="#{backingBeanScope.InsertBean.sdi15}">
-              <af:panelGroupLayout layout="vertical" id="pgl22" binding="#{backingBeanScope.InsertBean.pgl22}">
+            <af:showDetailItem text="Opportunities" id="sdi15" binding="#{backingBeanScope.SALESINSIDE.sdi15}">
+              <af:panelGroupLayout layout="vertical" id="pgl22" binding="#{backingBeanScope.SALESINSIDE.pgl22}">
                 <af:quickQuery label="Search" searchDesc="Search" id="qryId11"
                                value="#{bindings.ImplicitViewCriteriaQuery10.quickQueryDescriptor}"
                                model="#{bindings.ImplicitViewCriteriaQuery10.queryModel}"
                                queryListener="#{bindings.ImplicitViewCriteriaQuery10.processQuery}"
-                               binding="#{backingBeanScope.InsertBean.qryId11}">
+                               binding="#{backingBeanScope.SALESINSIDE.qryId11}">
                   <f:facet name="end">
                     <af:commandLink text="Advanced" rendered="false" id="cl11"
-                                    binding="#{backingBeanScope.InsertBean.cl11}"/>
+                                    binding="#{backingBeanScope.SALESINSIDE.cl11}"/>
                   </f:facet>
                 </af:quickQuery>
-                <af:button text="Add" id="b37" binding="#{backingBeanScope.InsertBean.b37}"/>
+                <af:button text="Add" id="b37" binding="#{backingBeanScope.SALESINSIDE.b37}"/>
               </af:panelGroupLayout>
               <af:table value="#{bindings.OpportunitiesU3.collectionModel}" var="row"
                         rows="#{bindings.OpportunitiesU3.rangeSize}"
@@ -3423,7 +3459,7 @@
                         rowSelection="single" fetchSize="#{bindings.OpportunitiesU3.rangeSize}"
                         filterModel="#{bindings.OpportunitiesU3Query.queryDescriptor}" filterVisible="true"
                         queryListener="#{bindings.OpportunitiesU3Query.processQuery}" varStatus="vs" id="t15"
-                        binding="#{backingBeanScope.InsertBean.t15}">
+                        binding="#{backingBeanScope.SALESINSIDE.t15}">
                 <af:column sortProperty="#{bindings.OpportunitiesU3.hints.CustomerId.name}" filterable="true"
                            sortable="true" headerText="#{bindings.OpportunitiesU3.hints.CustomerId.label}" id="c239">
                   <af:outputText value="#{row.CustomerId}"
@@ -3444,7 +3480,7 @@
                            sortable="true" headerText="#{bindings.OpportunitiesU3.hints.StartDate.label}" id="c241">
                   <f:facet name="filter">
                     <af:inputDate value="#{bindings.OpportunitiesU3Query.queryDescriptor.filterConjunctionCriterion.criterionMap.StartDate.value}"
-                                  id="id15" binding="#{backingBeanScope.InsertBean.id15}">
+                                  id="id15" binding="#{backingBeanScope.SALESINSIDE.id15}">
                       <af:convertDateTime pattern="#{bindings.OpportunitiesU3.hints.StartDate.format}"/>
                     </af:inputDate>
                   </f:facet>
@@ -3457,7 +3493,7 @@
                            sortable="true" headerText="#{bindings.OpportunitiesU3.hints.EndDate.label}" id="c242">
                   <f:facet name="filter">
                     <af:inputDate value="#{bindings.OpportunitiesU3Query.queryDescriptor.filterConjunctionCriterion.criterionMap.EndDate.value}"
-                                  id="id16" binding="#{backingBeanScope.InsertBean.id16}">
+                                  id="id16" binding="#{backingBeanScope.SALESINSIDE.id16}">
                       <af:convertDateTime pattern="#{bindings.OpportunitiesU3.hints.EndDate.format}"/>
                     </af:inputDate>
                   </f:facet>
@@ -3598,11 +3634,11 @@
     </f:facet>
     <f:facet name="top">
       <af:panelGroupLayout id="pgl3" inlineStyle="background-color:#fff;" layout="horizontal"
-                           binding="#{backingBeanScope.InsertBean.pgl3}">
+                           binding="#{backingBeanScope.SALESINSIDE.pgl3}">
         <af:button text="Dashboard" id="b1" icon="/icons/QUICK-icon-55344.png" action="back"
-                   binding="#{backingBeanScope.InsertBean.b1}"/>
+                   binding="#{backingBeanScope.SALESINSIDE.b1}"/>
       </af:panelGroupLayout>
     </f:facet>
   </af:panelStretchLayout>
-  <!--oracle-jdev-comment:auto-binding-backing-bean-name:InsertBean-->
+  <!--oracle-jdev-comment:auto-binding-backing-bean-name:SALESINSIDE-->
 </ui:composition>

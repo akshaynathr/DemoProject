@@ -1,8 +1,13 @@
 package view.backing;
 
+import oracle.adf.model.BindingContext;
 import oracle.adf.view.rich.component.rich.RichDocument;
 import oracle.adf.view.rich.component.rich.RichForm;
 import oracle.adf.view.rich.component.rich.fragment.RichPageTemplate;
+import oracle.adf.view.rich.event.PopupFetchEvent;
+
+import oracle.binding.BindingContainer;
+import oracle.binding.OperationBinding;
 
 public class Manager_dashboard {
     private RichPageTemplate pt1;
@@ -32,4 +37,10 @@ public class Manager_dashboard {
     public RichDocument getD1() {
         return d1;
     }
+    
+    
+  
+    
+    
+    
 }

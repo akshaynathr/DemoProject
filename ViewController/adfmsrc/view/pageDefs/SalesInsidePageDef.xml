@@ -111,6 +111,7 @@
                   Binds="ContactsU1Iterator" id="ImplicitViewCriteriaQuery19"/>
     <iterator Binds="TasksCustomersU1" RangeSize="25" DataControl="AppModuleAMDataControl1"
               id="TasksCustomersU1Iterator"/>
+    <iterator Binds="NotesU3" RangeSize="25" DataControl="AppModuleAMDataControl1" id="NotesU3Iterator"/>
   </executables>
   <bindings>
     <tree IterBinding="MyTeamR1Iterator" id="MyTeamR1">
@@ -874,5 +875,24 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <attributeValues IterBinding="NotesU3Iterator" id="NoteName">
+      <AttrNames>
+        <Item Value="NoteName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="NotesU3Iterator" id="DateRecorded">
+      <AttrNames>
+        <Item Value="DateRecorded"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="NotesU3Iterator" id="Description">
+      <AttrNames>
+        <Item Value="Description"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="NotesU3Iterator" id="CreateInsertNotes" InstanceName="AppModuleAMDataControl1.NotesU3"
+            DataControl="AppModuleAMDataControl1" RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action id="Rollback" DataControl="AppModuleAMDataControl1" RequiresUpdateModel="false"
+            Action="rollbackTransaction"/>
   </bindings>
 </pageDefinition>

@@ -35,7 +35,14 @@
     PrecisionRule="true"
     EntityAttrName="Description"
     EntityUsage="NotesEO"
-    AliasName="DESCRIPTION"/>
+    AliasName="DESCRIPTION">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="100"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="AttachedImage"
     IsQueriable="false"
