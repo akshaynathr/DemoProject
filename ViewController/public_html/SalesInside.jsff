@@ -237,10 +237,196 @@
                              binding="#{backingBeanScope.SALESINSIDE.gc2}" halign="stretch">
                   <af:toolbox id="t24" binding="#{backingBeanScope.SALESINSIDE.t24}">
                     <af:toolbar id="t25" binding="#{backingBeanScope.SALESINSIDE.t25}">
-                      <af:button text="button 4" id="b3" binding="#{backingBeanScope.SALESINSIDE.b3}" rendered="false"/>
-                      <af:button text="Create Opportunities" id="b5" binding="#{backingBeanScope.SALESINSIDE.b5}"/>
+                      <af:button text="Create Opportunities" id="b5" binding="#{backingBeanScope.SALESINSIDE.b5}">
+                        <af:showPopupBehavior popupId="p29"/>
+                      </af:button>
                     </af:toolbar>
                   </af:toolbox>
+                  <af:popup childCreation="deferred" autoCancel="disabled" id="p29"
+                            binding="#{backingBeanScope.SALESINSIDE.p29}"
+                            popupFetchListener="#{backingBeanScope.SALESINSIDE.insertOpp}"
+                            popupCanceledListener="#{backingBeanScope.SALESINSIDE.Cancel}">
+                    <af:dialog id="d32" binding="#{backingBeanScope.SALESINSIDE.d32}"
+                               dialogListener="#{backingBeanScope.SALESINSIDE.Save}" title="Create Opportunity">
+                      <f:facet name="buttonBar"/>
+                      <af:panelFormLayout id="pfl9" binding="#{backingBeanScope.SALESINSIDE.pfl9}">
+                        <af:inputText value="#{bindings.OppurtunityName.inputValue}"
+                                      label="#{bindings.OppurtunityName.hints.label}"
+                                      required="#{bindings.OppurtunityName.hints.mandatory}"
+                                      columns="#{bindings.OppurtunityName.hints.displayWidth}"
+                                      maximumLength="#{bindings.OppurtunityName.hints.precision}"
+                                      shortDesc="#{bindings.OppurtunityName.hints.tooltip}" id="it112"
+                                      binding="#{backingBeanScope.SALESINSIDE.it112}">
+                          <f:validator binding="#{bindings.OppurtunityName.validator}"/>
+                        </af:inputText>
+                        <af:selectOneChoice value="#{bindings.CustomerId1.inputValue}"
+                                            label="#{bindings.CustomerId1.label}"
+                                            required="#{bindings.CustomerId1.hints.mandatory}"
+                                            shortDesc="#{bindings.CustomerId1.hints.tooltip}" id="soc52"
+                                            binding="#{backingBeanScope.SALESINSIDE.soc52}">
+                          <f:selectItems value="#{bindings.CustomerId1.items}" id="si52"
+                                         binding="#{backingBeanScope.SALESINSIDE.si52}"/>
+                          <f:validator binding="#{bindings.CustomerId1.validator}"/>
+                        </af:selectOneChoice>
+                        <af:inputText value="#{bindings.WinProbablity1.inputValue}"
+                                      label="#{bindings.WinProbablity1.hints.label}"
+                                      required="#{bindings.WinProbablity1.hints.mandatory}"
+                                      columns="#{bindings.WinProbablity1.hints.displayWidth}"
+                                      maximumLength="#{bindings.WinProbablity1.hints.precision}"
+                                      shortDesc="#{bindings.WinProbablity1.hints.tooltip}" id="it113"
+                                      binding="#{backingBeanScope.SALESINSIDE.it113}">
+                          <f:validator binding="#{bindings.WinProbablity1.validator}"/>
+                          <af:convertNumber groupingUsed="false" pattern="#{bindings.WinProbablity1.format}"/>
+                        </af:inputText>
+                        <af:inputDate value="#{bindings.StartDate1.inputValue}"
+                                      label="#{bindings.StartDate1.hints.label}"
+                                      required="#{bindings.StartDate1.hints.mandatory}"
+                                      columns="#{bindings.StartDate1.hints.displayWidth}"
+                                      shortDesc="#{bindings.StartDate1.hints.tooltip}" id="id31"
+                                      binding="#{backingBeanScope.SALESINSIDE.id31}">
+                          <f:validator binding="#{bindings.StartDate1.validator}"/>
+                          <af:convertDateTime pattern="#{bindings.StartDate1.format}"/>
+                        </af:inputDate>
+                        <af:inputDate value="#{bindings.EndDate1.inputValue}" label="#{bindings.EndDate1.hints.label}"
+                                      required="#{bindings.EndDate1.hints.mandatory}"
+                                      columns="#{bindings.EndDate1.hints.displayWidth}"
+                                      shortDesc="#{bindings.EndDate1.hints.tooltip}" id="id32"
+                                      binding="#{backingBeanScope.SALESINSIDE.id32}">
+                          <f:validator binding="#{bindings.EndDate1.validator}"/>
+                          <af:convertDateTime pattern="#{bindings.EndDate1.format}"/>
+                        </af:inputDate>
+                        <af:selectOneChoice value="#{bindings.SalesStageId.inputValue}"
+                                            label="#{bindings.SalesStageId.label}"
+                                            required="#{bindings.SalesStageId.hints.mandatory}"
+                                            shortDesc="#{bindings.SalesStageId.hints.tooltip}" id="soc53"
+                                            binding="#{backingBeanScope.SALESINSIDE.soc53}">
+                          <f:selectItems value="#{bindings.SalesStageId.items}" id="si53"
+                                         binding="#{backingBeanScope.SALESINSIDE.si53}"/>
+                          <f:validator binding="#{bindings.SalesStageId.validator}"/>
+                        </af:selectOneChoice>
+                        <af:selectOneChoice value="#{bindings.SalesMethodId.inputValue}"
+                                            label="#{bindings.SalesMethodId.label}"
+                                            required="#{bindings.SalesMethodId.hints.mandatory}"
+                                            shortDesc="#{bindings.SalesMethodId.hints.tooltip}" id="soc54"
+                                            binding="#{backingBeanScope.SALESINSIDE.soc54}">
+                          <f:selectItems value="#{bindings.SalesMethodId.items}" id="si54"
+                                         binding="#{backingBeanScope.SALESINSIDE.si54}"/>
+                          <f:validator binding="#{bindings.SalesMethodId.validator}"/>
+                        </af:selectOneChoice>
+                        <af:selectOneChoice value="#{bindings.SalesChannelId.inputValue}"
+                                            label="#{bindings.SalesChannelId.label}"
+                                            required="#{bindings.SalesChannelId.hints.mandatory}"
+                                            shortDesc="#{bindings.SalesChannelId.hints.tooltip}" id="soc55"
+                                            binding="#{backingBeanScope.SALESINSIDE.soc55}">
+                          <f:selectItems value="#{bindings.SalesChannelId.items}" id="si55"
+                                         binding="#{backingBeanScope.SALESINSIDE.si55}"/>
+                          <f:validator binding="#{bindings.SalesChannelId.validator}"/>
+                        </af:selectOneChoice>
+                        <af:inputText value="#{bindings.Revenue1.inputValue}" label="#{bindings.Revenue1.hints.label}"
+                                      required="#{bindings.Revenue1.hints.mandatory}"
+                                      columns="#{bindings.Revenue1.hints.displayWidth}"
+                                      maximumLength="#{bindings.Revenue1.hints.precision}"
+                                      shortDesc="#{bindings.Revenue1.hints.tooltip}" id="it114"
+                                      binding="#{backingBeanScope.SALESINSIDE.it114}">
+                          <f:validator binding="#{bindings.Revenue1.validator}"/>
+                          <af:convertNumber groupingUsed="false" pattern="#{bindings.Revenue1.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.BestCaseRevenue1.inputValue}"
+                                      label="#{bindings.BestCaseRevenue1.hints.label}"
+                                      required="#{bindings.BestCaseRevenue1.hints.mandatory}"
+                                      columns="#{bindings.BestCaseRevenue1.hints.displayWidth}"
+                                      maximumLength="#{bindings.BestCaseRevenue1.hints.precision}"
+                                      shortDesc="#{bindings.BestCaseRevenue1.hints.tooltip}" id="it115"
+                                      binding="#{backingBeanScope.SALESINSIDE.it115}">
+                          <f:validator binding="#{bindings.BestCaseRevenue1.validator}"/>
+                          <af:convertNumber groupingUsed="false" pattern="#{bindings.BestCaseRevenue1.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.WorstCaseRevenue1.inputValue}"
+                                      label="#{bindings.WorstCaseRevenue1.hints.label}"
+                                      required="#{bindings.WorstCaseRevenue1.hints.mandatory}"
+                                      columns="#{bindings.WorstCaseRevenue1.hints.displayWidth}"
+                                      maximumLength="#{bindings.WorstCaseRevenue1.hints.precision}"
+                                      shortDesc="#{bindings.WorstCaseRevenue1.hints.tooltip}" id="it116"
+                                      binding="#{backingBeanScope.SALESINSIDE.it116}">
+                          <f:validator binding="#{bindings.WorstCaseRevenue1.validator}"/>
+                          <af:convertNumber groupingUsed="false" pattern="#{bindings.WorstCaseRevenue1.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.IsBudgeted.inputValue}"
+                                      label="#{bindings.IsBudgeted.hints.label}"
+                                      required="#{bindings.IsBudgeted.hints.mandatory}"
+                                      columns="#{bindings.IsBudgeted.hints.displayWidth}"
+                                      maximumLength="#{bindings.IsBudgeted.hints.precision}"
+                                      shortDesc="#{bindings.IsBudgeted.hints.tooltip}" id="it117"
+                                      binding="#{backingBeanScope.SALESINSIDE.it117}">
+                          <f:validator binding="#{bindings.IsBudgeted.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.BudgetAmount.inputValue}"
+                                      label="#{bindings.BudgetAmount.hints.label}"
+                                      required="#{bindings.BudgetAmount.hints.mandatory}"
+                                      columns="#{bindings.BudgetAmount.hints.displayWidth}"
+                                      maximumLength="#{bindings.BudgetAmount.hints.precision}"
+                                      shortDesc="#{bindings.BudgetAmount.hints.tooltip}" id="it118"
+                                      binding="#{backingBeanScope.SALESINSIDE.it118}">
+                          <f:validator binding="#{bindings.BudgetAmount.validator}"/>
+                          <af:convertNumber groupingUsed="false" pattern="#{bindings.BudgetAmount.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.EstimatedDurationInDays.inputValue}"
+                                      label="#{bindings.EstimatedDurationInDays.hints.label}"
+                                      required="#{bindings.EstimatedDurationInDays.hints.mandatory}"
+                                      columns="#{bindings.EstimatedDurationInDays.hints.displayWidth}"
+                                      maximumLength="#{bindings.EstimatedDurationInDays.hints.precision}"
+                                      shortDesc="#{bindings.EstimatedDurationInDays.hints.tooltip}" id="it119"
+                                      binding="#{backingBeanScope.SALESINSIDE.it119}">
+                          <f:validator binding="#{bindings.EstimatedDurationInDays.validator}"/>
+                          <af:convertNumber groupingUsed="false" pattern="#{bindings.EstimatedDurationInDays.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.RiskLevel.inputValue}" label="#{bindings.RiskLevel.hints.label}"
+                                      required="#{bindings.RiskLevel.hints.mandatory}"
+                                      columns="#{bindings.RiskLevel.hints.displayWidth}"
+                                      maximumLength="#{bindings.RiskLevel.hints.precision}"
+                                      shortDesc="#{bindings.RiskLevel.hints.tooltip}" id="it120"
+                                      binding="#{backingBeanScope.SALESINSIDE.it120}">
+                          <f:validator binding="#{bindings.RiskLevel.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.IsIncluded.inputValue}"
+                                      label="#{bindings.IsIncluded.hints.label}"
+                                      required="#{bindings.IsIncluded.hints.mandatory}"
+                                      columns="#{bindings.IsIncluded.hints.displayWidth}"
+                                      maximumLength="#{bindings.IsIncluded.hints.precision}"
+                                      shortDesc="#{bindings.IsIncluded.hints.tooltip}" id="it121"
+                                      binding="#{backingBeanScope.SALESINSIDE.it121}">
+                          <f:validator binding="#{bindings.IsIncluded.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.IsSuccess.inputValue}" label="#{bindings.IsSuccess.hints.label}"
+                                      required="#{bindings.IsSuccess.hints.mandatory}"
+                                      columns="#{bindings.IsSuccess.hints.displayWidth}"
+                                      maximumLength="#{bindings.IsSuccess.hints.precision}"
+                                      shortDesc="#{bindings.IsSuccess.hints.tooltip}" id="it122"
+                                      binding="#{backingBeanScope.SALESINSIDE.it122}">
+                          <f:validator binding="#{bindings.IsSuccess.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.PrimaryContact.inputValue}"
+                                      label="#{bindings.PrimaryContact.hints.label}"
+                                      required="#{bindings.PrimaryContact.hints.mandatory}"
+                                      columns="#{bindings.PrimaryContact.hints.displayWidth}"
+                                      maximumLength="#{bindings.PrimaryContact.hints.precision}"
+                                      shortDesc="#{bindings.PrimaryContact.hints.tooltip}" id="it123"
+                                      binding="#{backingBeanScope.SALESINSIDE.it123}">
+                          <f:validator binding="#{bindings.PrimaryContact.validator}"/>
+                          <af:convertNumber groupingUsed="false" pattern="#{bindings.PrimaryContact.format}"/>
+                        </af:inputText>
+                        <af:selectOneChoice value="#{bindings.DecisionLevelId.inputValue}"
+                                            label="#{bindings.DecisionLevelId.label}"
+                                            required="#{bindings.DecisionLevelId.hints.mandatory}"
+                                            shortDesc="#{bindings.DecisionLevelId.hints.tooltip}" id="soc56"
+                                            binding="#{backingBeanScope.SALESINSIDE.soc56}">
+                          <f:selectItems value="#{bindings.DecisionLevelId.items}" id="si56"
+                                         binding="#{backingBeanScope.SALESINSIDE.si56}"/>
+                          <f:validator binding="#{bindings.DecisionLevelId.validator}"/>
+                        </af:selectOneChoice>
+                      </af:panelFormLayout>
+                    </af:dialog>
+                  </af:popup>
                   <af:table value="#{bindings.OpportunitiesU2.collectionModel}" var="row"
                             rows="#{bindings.OpportunitiesU2.rangeSize}"
                             emptyText="#{bindings.OpportunitiesU2.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -586,6 +772,247 @@
                   <f:facet name="bottom"/>
                   <f:facet name="start"/>
                   <f:facet name="end"/>
+                  <af:popup childCreation="deferred" autoCancel="disabled" id="p3"
+                            binding="#{backingBeanScope.SALESINSIDE.p3}">
+                    <af:dialog id="d31" binding="#{backingBeanScope.SALESINSIDE.d31}">
+                      <f:facet name="buttonBar"/>
+                      <af:panelFormLayout id="pfl8" binding="#{backingBeanScope.SALESINSIDE.pfl8}">
+                        <af:inputText value="#{bindings.CustomerName2.inputValue}"
+                                      label="#{bindings.CustomerName2.hints.label}"
+                                      required="#{bindings.CustomerName2.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.CustomerName2.hints.displayWidth}"
+                                      maximumLength="#{bindings.CustomerName2.hints.precision}"
+                                      shortDesc="#{bindings.CustomerName2.hints.tooltip}" id="it87"
+                                      binding="#{backingBeanScope.SALESINSIDE.it87}">
+                          <f:validator binding="#{bindings.CustomerName2.validator}"/>
+                        </af:inputText>
+                        <af:selectOneChoice value="#{bindings.CustomerTypeId1.inputValue}"
+                                            label="#{bindings.CustomerTypeId1.label}"
+                                            required="#{bindings.CustomerTypeId1.hints.mandatory}"
+                                            shortDesc="#{bindings.CustomerTypeId1.hints.tooltip}" readOnly="true"
+                                            id="soc50" binding="#{backingBeanScope.SALESINSIDE.soc50}">
+                          <f:selectItems value="#{bindings.CustomerTypeId1.items}" id="si50"
+                                         binding="#{backingBeanScope.SALESINSIDE.si50}"/>
+                          <f:validator binding="#{bindings.CustomerTypeId1.validator}"/>
+                        </af:selectOneChoice>
+                        <af:selectOneChoice value="#{bindings.PrimaryContactId1.inputValue}"
+                                            label="#{bindings.PrimaryContactId1.label}"
+                                            required="#{bindings.PrimaryContactId1.hints.mandatory}"
+                                            shortDesc="#{bindings.PrimaryContactId1.hints.tooltip}" readOnly="true"
+                                            id="soc51" binding="#{backingBeanScope.SALESINSIDE.soc51}">
+                          <f:selectItems value="#{bindings.PrimaryContactId1.items}" id="si51"
+                                         binding="#{backingBeanScope.SALESINSIDE.si51}"/>
+                          <f:validator binding="#{bindings.PrimaryContactId1.validator}"/>
+                        </af:selectOneChoice>
+                        <af:inputText value="#{bindings.Url1.inputValue}" label="#{bindings.Url1.hints.label}"
+                                      required="#{bindings.Url1.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.Url1.hints.displayWidth}"
+                                      maximumLength="#{bindings.Url1.hints.precision}"
+                                      shortDesc="#{bindings.Url1.hints.tooltip}" id="it88"
+                                      binding="#{backingBeanScope.SALESINSIDE.it88}">
+                          <f:validator binding="#{bindings.Url1.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.ParentCompany1.inputValue}"
+                                      label="#{bindings.ParentCompany1.hints.label}"
+                                      required="#{bindings.ParentCompany1.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.ParentCompany1.hints.displayWidth}"
+                                      maximumLength="#{bindings.ParentCompany1.hints.precision}"
+                                      shortDesc="#{bindings.ParentCompany1.hints.tooltip}" id="it89"
+                                      binding="#{backingBeanScope.SALESINSIDE.it89}">
+                          <f:validator binding="#{bindings.ParentCompany1.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Ceo1.inputValue}" label="#{bindings.Ceo1.hints.label}"
+                                      required="#{bindings.Ceo1.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.Ceo1.hints.displayWidth}"
+                                      maximumLength="#{bindings.Ceo1.hints.precision}"
+                                      shortDesc="#{bindings.Ceo1.hints.tooltip}" id="it90"
+                                      binding="#{backingBeanScope.SALESINSIDE.it90}">
+                          <f:validator binding="#{bindings.Ceo1.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.NoOfEmployees1.inputValue}"
+                                      label="#{bindings.NoOfEmployees1.hints.label}"
+                                      required="#{bindings.NoOfEmployees1.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.NoOfEmployees1.hints.displayWidth}"
+                                      maximumLength="#{bindings.NoOfEmployees1.hints.precision}"
+                                      shortDesc="#{bindings.NoOfEmployees1.hints.tooltip}" id="it91"
+                                      binding="#{backingBeanScope.SALESINSIDE.it91}">
+                          <f:validator binding="#{bindings.NoOfEmployees1.validator}"/>
+                          <af:convertNumber groupingUsed="false" pattern="#{bindings.NoOfEmployees1.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Fax1.inputValue}" label="#{bindings.Fax1.hints.label}"
+                                      required="#{bindings.Fax1.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.Fax1.hints.displayWidth}"
+                                      maximumLength="#{bindings.Fax1.hints.precision}"
+                                      shortDesc="#{bindings.Fax1.hints.tooltip}" id="it92"
+                                      binding="#{backingBeanScope.SALESINSIDE.it92}">
+                          <f:validator binding="#{bindings.Fax1.validator}"/>
+                          <af:convertNumber groupingUsed="false" pattern="#{bindings.Fax1.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Email2.inputValue}" label="#{bindings.Email2.hints.label}"
+                                      required="#{bindings.Email2.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.Email2.hints.displayWidth}"
+                                      maximumLength="#{bindings.Email2.hints.precision}"
+                                      shortDesc="#{bindings.Email2.hints.tooltip}" id="it93"
+                                      binding="#{backingBeanScope.SALESINSIDE.it93}">
+                          <f:validator binding="#{bindings.Email2.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.PrimaryAddressId.inputValue}"
+                                      label="#{bindings.PrimaryAddressId.hints.label}"
+                                      required="#{bindings.PrimaryAddressId.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.PrimaryAddressId.hints.displayWidth}"
+                                      maximumLength="#{bindings.PrimaryAddressId.hints.precision}"
+                                      shortDesc="#{bindings.PrimaryAddressId.hints.tooltip}" id="it94"
+                                      binding="#{backingBeanScope.SALESINSIDE.it94}">
+                          <f:validator binding="#{bindings.PrimaryAddressId.validator}"/>
+                          <af:convertNumber groupingUsed="false" pattern="#{bindings.PrimaryAddressId.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.ShippingAddressId.inputValue}"
+                                      label="#{bindings.ShippingAddressId.hints.label}"
+                                      required="#{bindings.ShippingAddressId.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.ShippingAddressId.hints.displayWidth}"
+                                      maximumLength="#{bindings.ShippingAddressId.hints.precision}"
+                                      shortDesc="#{bindings.ShippingAddressId.hints.tooltip}" id="it95"
+                                      binding="#{backingBeanScope.SALESINSIDE.it95}">
+                          <f:validator binding="#{bindings.ShippingAddressId.validator}"/>
+                          <af:convertNumber groupingUsed="false" pattern="#{bindings.ShippingAddressId.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.AddressId2.inputValue}"
+                                      label="#{bindings.AddressId2.hints.label}"
+                                      required="#{bindings.AddressId2.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.AddressId2.hints.displayWidth}"
+                                      maximumLength="#{bindings.AddressId2.hints.precision}"
+                                      shortDesc="#{bindings.AddressId2.hints.tooltip}" id="it96"
+                                      binding="#{backingBeanScope.SALESINSIDE.it96}">
+                          <f:validator binding="#{bindings.AddressId2.validator}"/>
+                          <af:convertNumber groupingUsed="false" pattern="#{bindings.AddressId2.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.House2.inputValue}" label="#{bindings.House2.hints.label}"
+                                      required="#{bindings.House2.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.House2.hints.displayWidth}"
+                                      maximumLength="#{bindings.House2.hints.precision}"
+                                      shortDesc="#{bindings.House2.hints.tooltip}" id="it97"
+                                      binding="#{backingBeanScope.SALESINSIDE.it97}">
+                          <f:validator binding="#{bindings.House2.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Street2.inputValue}" label="#{bindings.Street2.hints.label}"
+                                      required="#{bindings.Street2.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.Street2.hints.displayWidth}"
+                                      maximumLength="#{bindings.Street2.hints.precision}"
+                                      shortDesc="#{bindings.Street2.hints.tooltip}" id="it98"
+                                      binding="#{backingBeanScope.SALESINSIDE.it98}">
+                          <f:validator binding="#{bindings.Street2.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Locality2.inputValue}" label="#{bindings.Locality2.hints.label}"
+                                      required="#{bindings.Locality2.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.Locality2.hints.displayWidth}"
+                                      maximumLength="#{bindings.Locality2.hints.precision}"
+                                      shortDesc="#{bindings.Locality2.hints.tooltip}" id="it99"
+                                      binding="#{backingBeanScope.SALESINSIDE.it99}">
+                          <f:validator binding="#{bindings.Locality2.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.City2.inputValue}" label="#{bindings.City2.hints.label}"
+                                      required="#{bindings.City2.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.City2.hints.displayWidth}"
+                                      maximumLength="#{bindings.City2.hints.precision}"
+                                      shortDesc="#{bindings.City2.hints.tooltip}" id="it100"
+                                      binding="#{backingBeanScope.SALESINSIDE.it100}">
+                          <f:validator binding="#{bindings.City2.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Pincode2.inputValue}" label="#{bindings.Pincode2.hints.label}"
+                                      required="#{bindings.Pincode2.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.Pincode2.hints.displayWidth}"
+                                      maximumLength="#{bindings.Pincode2.hints.precision}"
+                                      shortDesc="#{bindings.Pincode2.hints.tooltip}" id="it101"
+                                      binding="#{backingBeanScope.SALESINSIDE.it101}">
+                          <f:validator binding="#{bindings.Pincode2.validator}"/>
+                          <af:convertNumber groupingUsed="false" pattern="#{bindings.Pincode2.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.State2.inputValue}" label="#{bindings.State2.hints.label}"
+                                      required="#{bindings.State2.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.State2.hints.displayWidth}"
+                                      maximumLength="#{bindings.State2.hints.precision}"
+                                      shortDesc="#{bindings.State2.hints.tooltip}" id="it102"
+                                      binding="#{backingBeanScope.SALESINSIDE.it102}">
+                          <f:validator binding="#{bindings.State2.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Country2.inputValue}" label="#{bindings.Country2.hints.label}"
+                                      required="#{bindings.Country2.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.Country2.hints.displayWidth}"
+                                      maximumLength="#{bindings.Country2.hints.precision}"
+                                      shortDesc="#{bindings.Country2.hints.tooltip}" id="it103"
+                                      binding="#{backingBeanScope.SALESINSIDE.it103}">
+                          <f:validator binding="#{bindings.Country2.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.AddressId3.inputValue}"
+                                      label="#{bindings.AddressId3.hints.label}"
+                                      required="#{bindings.AddressId3.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.AddressId3.hints.displayWidth}"
+                                      maximumLength="#{bindings.AddressId3.hints.precision}"
+                                      shortDesc="#{bindings.AddressId3.hints.tooltip}" id="it104"
+                                      binding="#{backingBeanScope.SALESINSIDE.it104}">
+                          <f:validator binding="#{bindings.AddressId3.validator}"/>
+                          <af:convertNumber groupingUsed="false" pattern="#{bindings.AddressId3.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.House3.inputValue}" label="#{bindings.House3.hints.label}"
+                                      required="#{bindings.House3.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.House3.hints.displayWidth}"
+                                      maximumLength="#{bindings.House3.hints.precision}"
+                                      shortDesc="#{bindings.House3.hints.tooltip}" id="it105"
+                                      binding="#{backingBeanScope.SALESINSIDE.it105}">
+                          <f:validator binding="#{bindings.House3.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Street3.inputValue}" label="#{bindings.Street3.hints.label}"
+                                      required="#{bindings.Street3.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.Street3.hints.displayWidth}"
+                                      maximumLength="#{bindings.Street3.hints.precision}"
+                                      shortDesc="#{bindings.Street3.hints.tooltip}" id="it106"
+                                      binding="#{backingBeanScope.SALESINSIDE.it106}">
+                          <f:validator binding="#{bindings.Street3.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Locality3.inputValue}" label="#{bindings.Locality3.hints.label}"
+                                      required="#{bindings.Locality3.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.Locality3.hints.displayWidth}"
+                                      maximumLength="#{bindings.Locality3.hints.precision}"
+                                      shortDesc="#{bindings.Locality3.hints.tooltip}" id="it107"
+                                      binding="#{backingBeanScope.SALESINSIDE.it107}">
+                          <f:validator binding="#{bindings.Locality3.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.City3.inputValue}" label="#{bindings.City3.hints.label}"
+                                      required="#{bindings.City3.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.City3.hints.displayWidth}"
+                                      maximumLength="#{bindings.City3.hints.precision}"
+                                      shortDesc="#{bindings.City3.hints.tooltip}" id="it108"
+                                      binding="#{backingBeanScope.SALESINSIDE.it108}">
+                          <f:validator binding="#{bindings.City3.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Pincode3.inputValue}" label="#{bindings.Pincode3.hints.label}"
+                                      required="#{bindings.Pincode3.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.Pincode3.hints.displayWidth}"
+                                      maximumLength="#{bindings.Pincode3.hints.precision}"
+                                      shortDesc="#{bindings.Pincode3.hints.tooltip}" id="it109"
+                                      binding="#{backingBeanScope.SALESINSIDE.it109}">
+                          <f:validator binding="#{bindings.Pincode3.validator}"/>
+                          <af:convertNumber groupingUsed="false" pattern="#{bindings.Pincode3.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.State3.inputValue}" label="#{bindings.State3.hints.label}"
+                                      required="#{bindings.State3.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.State3.hints.displayWidth}"
+                                      maximumLength="#{bindings.State3.hints.precision}"
+                                      shortDesc="#{bindings.State3.hints.tooltip}" id="it110"
+                                      binding="#{backingBeanScope.SALESINSIDE.it110}">
+                          <f:validator binding="#{bindings.State3.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Country3.inputValue}" label="#{bindings.Country3.hints.label}"
+                                      required="#{bindings.Country3.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.Country3.hints.displayWidth}"
+                                      maximumLength="#{bindings.Country3.hints.precision}"
+                                      shortDesc="#{bindings.Country3.hints.tooltip}" id="it111"
+                                      binding="#{backingBeanScope.SALESINSIDE.it111}">
+                          <f:validator binding="#{bindings.Country3.validator}"/>
+                        </af:inputText>
+                      </af:panelFormLayout>
+                    </af:dialog>
+                  </af:popup>
                 </af:panelBorderLayout>
                 <af:panelGridLayout id="pgl12" binding="#{backingBeanScope.SALESINSIDE.pgl12}">
                   <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1"
@@ -606,8 +1033,9 @@
                         <af:column sortProperty="#{bindings.CustomersU3.hints.CustomerName.name}" filterable="true"
                                    sortable="true" headerText="#{bindings.CustomersU3.hints.CustomerName.label}"
                                    id="c139">
-                          <af:outputText value="#{row.CustomerName}"
-                                         shortDesc="#{bindings.CustomersU3.hints.CustomerName.tooltip}" id="ot93"/>
+                          <af:link text="#{row.CustomerName}" id="l6">
+                            <af:showPopupBehavior popupId="::p3"/>
+                          </af:link>
                         </af:column>
                         <af:column sortProperty="#{bindings.CustomersU3.hints.CustomerTypeId.name}" filterable="true"
                                    sortable="true" headerText="#{bindings.CustomersU3.hints.CustomerTypeId.label}"
@@ -679,15 +1107,95 @@
             <af:showDetailItem id="tab1" text="Tasks" disclosed="false" binding="#{backingBeanScope.SALESINSIDE.tab1}">
               <af:panelGroupLayout id="pgl15" binding="#{backingBeanScope.SALESINSIDE.pgl15}" layout="horizontal"
                                    halign="center">
-                <af:button text="Add" id="b26" binding="#{backingBeanScope.SALESINSIDE.b26}">
-                  <af:showPopupBehavior popupId="p7"/>
-                </af:button>
-                <af:button actionListener="#{bindings.Delete1.execute}" text="Delete Task related to Opportunity"
-                           id="b15" binding="#{backingBeanScope.SALESINSIDE.b15}"/>
+                <af:panelGroupLayout layout="horizontal" id="pgl33" binding="#{backingBeanScope.SALESINSIDE.pgl33}">
+                  <af:quickQuery label="Search" searchDesc="Search" id="qryId21"
+                                 value="#{bindings.ImplicitViewCriteriaQuery20.quickQueryDescriptor}"
+                                 model="#{bindings.ImplicitViewCriteriaQuery20.queryModel}"
+                                 queryListener="#{bindings.ImplicitViewCriteriaQuery20.processQuery}"
+                                 binding="#{backingBeanScope.SALESINSIDE.qryId21}">
+                    <f:facet name="end">
+                      <af:commandLink text="Advanced" rendered="false" id="cl21"
+                                      binding="#{backingBeanScope.SALESINSIDE.cl21}"/>
+                    </f:facet>
+                  </af:quickQuery>
+                  <af:button text="Add" id="b26" binding="#{backingBeanScope.SALESINSIDE.b26}">
+                    <af:showPopupBehavior popupId="p7"/>
+                  </af:button>
+                  <af:button actionListener="#{bindings.Delete1.execute}" text="Delete Task "
+                             id="b15" binding="#{backingBeanScope.SALESINSIDE.b15}"/>
+                </af:panelGroupLayout>
                 <af:popup childCreation="deferred" autoCancel="disabled" id="p7"
                           binding="#{backingBeanScope.SALESINSIDE.p7}">
                   <af:dialog id="d8" binding="#{backingBeanScope.SALESINSIDE.d8}" title="Add Task">
                     <f:facet name="buttonBar"/>
+                  </af:dialog>
+                </af:popup>
+                <af:popup childCreation="deferred" autoCancel="disabled" id="p1"
+                          binding="#{backingBeanScope.SALESINSIDE.p1}">
+                  <af:dialog id="d3" binding="#{backingBeanScope.SALESINSIDE.d3}"
+                             dialogListener="#{backingBeanScope.SALESINSIDE.Save}">
+                    <f:facet name="buttonBar"/>
+                    <af:panelFormLayout id="pfl6" binding="#{backingBeanScope.SALESINSIDE.pfl6}">
+                      <af:inputText value="#{bindings.TaskName.inputValue}" label="Task Name"
+                                    required="#{bindings.TaskName.hints.mandatory}"
+                                    columns="#{bindings.TaskName.hints.displayWidth}"
+                                    maximumLength="#{bindings.TaskName.hints.precision}"
+                                    shortDesc="#{bindings.TaskName.hints.tooltip}" id="it77"
+                                    binding="#{backingBeanScope.SALESINSIDE.it77}">
+                        <f:validator binding="#{bindings.TaskName.validator}"/>
+                      </af:inputText>
+                      <af:inputDate value="#{bindings.DueDate.inputValue}" label="Due Date"
+                                    required="#{bindings.DueDate.hints.mandatory}"
+                                    columns="#{bindings.DueDate.hints.displayWidth}"
+                                    shortDesc="#{bindings.DueDate.hints.tooltip}" id="id30"
+                                    binding="#{backingBeanScope.SALESINSIDE.id30}">
+                        <f:validator binding="#{bindings.DueDate.validator}"/>
+                        <af:convertDateTime pattern="#{bindings.DueDate.format}"/>
+                      </af:inputDate>
+                      <af:inputText value="#{bindings.Priority.inputValue}" label="#{bindings.Priority.hints.label}"
+                                    required="#{bindings.Priority.hints.mandatory}"
+                                    columns="#{bindings.Priority.hints.displayWidth}"
+                                    maximumLength="#{bindings.Priority.hints.precision}"
+                                    shortDesc="#{bindings.Priority.hints.tooltip}" id="it78"
+                                    binding="#{backingBeanScope.SALESINSIDE.it78}">
+                        <f:validator binding="#{bindings.Priority.validator}"/>
+                      </af:inputText>
+                      <af:selectOneChoice value="#{bindings.AssigneeId.inputValue}" label="#{bindings.AssigneeId.label}"
+                                          required="#{bindings.AssigneeId.hints.mandatory}"
+                                          shortDesc="#{bindings.AssigneeId.hints.tooltip}" id="soc47"
+                                          binding="#{backingBeanScope.SALESINSIDE.soc47}">
+                        <f:selectItems value="#{bindings.AssigneeId.items}" id="si47"
+                                       binding="#{backingBeanScope.SALESINSIDE.si47}"/>
+                        <f:validator binding="#{bindings.AssigneeId.validator}"/>
+                      </af:selectOneChoice>
+                      <af:selectOneChoice value="#{bindings.OpportunityId2.inputValue}"
+                                          label="#{bindings.OpportunityId2.label}"
+                                          required="#{bindings.OpportunityId2.hints.mandatory}"
+                                          shortDesc="#{bindings.OpportunityId2.hints.tooltip}" id="soc48"
+                                          binding="#{backingBeanScope.SALESINSIDE.soc48}">
+                        <f:selectItems value="#{bindings.OpportunityId2.items}" id="si48"
+                                       binding="#{backingBeanScope.SALESINSIDE.si48}"/>
+                        <f:validator binding="#{bindings.OpportunityId2.validator}"/>
+                      </af:selectOneChoice>
+                      <af:inputText value="#{bindings.Description.inputValue}"
+                                    label="#{bindings.Description.hints.label}"
+                                    required="#{bindings.Description.hints.mandatory}"
+                                    columns="#{bindings.Description.hints.displayWidth}"
+                                    maximumLength="#{bindings.Description.hints.precision}"
+                                    shortDesc="#{bindings.Description.hints.tooltip}" id="it79"
+                                    binding="#{backingBeanScope.SALESINSIDE.it79}">
+                        <f:validator binding="#{bindings.Description.validator}"/>
+                      </af:inputText>
+                      <af:inputText value="#{bindings.PercentageCompleted.inputValue}" label="Percentage Completed"
+                                    required="#{bindings.PercentageCompleted.hints.mandatory}"
+                                    columns="#{bindings.PercentageCompleted.hints.displayWidth}"
+                                    maximumLength="#{bindings.PercentageCompleted.hints.precision}"
+                                    shortDesc="#{bindings.PercentageCompleted.hints.tooltip}" id="it80"
+                                    binding="#{backingBeanScope.SALESINSIDE.it80}">
+                        <f:validator binding="#{bindings.PercentageCompleted.validator}"/>
+                        <af:convertNumber groupingUsed="false" pattern="#{bindings.PercentageCompleted.format}"/>
+                      </af:inputText>
+                    </af:panelFormLayout>
                   </af:dialog>
                 </af:popup>
               </af:panelGroupLayout>
@@ -707,8 +1215,9 @@
                               columnStretching="column:c157">
                       <af:column sortProperty="#{bindings.TasksU2.hints.TaskName.name}" filterable="true"
                                  sortable="true" headerText="#{bindings.TasksU2.hints.TaskName.label}" id="c157">
-                        <af:outputText value="#{row.TaskName}" shortDesc="#{bindings.TasksU2.hints.TaskName.tooltip}"
-                                       id="ot109"/>
+                        <af:link text="#{row.TaskName}" id="l4">
+                          <af:showPopupBehavior popupId="::p1"/>
+                        </af:link>
                       </af:column>
                       <af:column sortProperty="#{bindings.TasksU2.hints.DueDate.name}" filterable="true" sortable="true"
                                  headerText="#{bindings.TasksU2.hints.DueDate.label}" id="c158">
@@ -792,6 +1301,141 @@
                             binding="#{backingBeanScope.SALESINSIDE.p8}">
                     <af:dialog id="d9" binding="#{backingBeanScope.SALESINSIDE.d9}" title="Add Revenue Item">
                       <f:facet name="buttonBar"/>
+                      <af:panelFormLayout id="pfl5" binding="#{backingBeanScope.SALESINSIDE.pfl5}">
+                        <af:selectOneChoice value="#{bindings.ProductId.inputValue}" label="#{bindings.ProductId.label}"
+                                            required="#{bindings.ProductId.hints.mandatory}"
+                                            shortDesc="#{bindings.ProductId.hints.tooltip}" id="soc46"
+                                            binding="#{backingBeanScope.SALESINSIDE.soc46}">
+                          <f:selectItems value="#{bindings.ProductId.items}" id="si46"
+                                         binding="#{backingBeanScope.SALESINSIDE.si46}"/>
+                          <f:validator binding="#{bindings.ProductId.validator}"/>
+                        </af:selectOneChoice>
+                        <af:inputText value="#{bindings.EstimatedPrice.inputValue}" label="Estimated Price"
+                                      required="#{bindings.EstimatedPrice.hints.mandatory}"
+                                      columns="#{bindings.EstimatedPrice.hints.displayWidth}"
+                                      maximumLength="#{bindings.EstimatedPrice.hints.precision}"
+                                      shortDesc="#{bindings.EstimatedPrice.hints.tooltip}" id="it35"
+                                      binding="#{backingBeanScope.SALESINSIDE.it35}">
+                          <f:validator binding="#{bindings.EstimatedPrice.validator}"/>
+                          <af:convertNumber groupingUsed="false" pattern="#{bindings.EstimatedPrice.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Quantity.inputValue}" label="#{bindings.Quantity.hints.label}"
+                                      required="#{bindings.Quantity.hints.mandatory}"
+                                      columns="#{bindings.Quantity.hints.displayWidth}"
+                                      maximumLength="#{bindings.Quantity.hints.precision}"
+                                      shortDesc="#{bindings.Quantity.hints.tooltip}" id="it36"
+                                      binding="#{backingBeanScope.SALESINSIDE.it36}">
+                          <f:validator binding="#{bindings.Quantity.validator}"/>
+                          <af:convertNumber groupingUsed="false" pattern="#{bindings.Quantity.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Revenue.inputValue}" label="#{bindings.Revenue.hints.label}"
+                                      required="#{bindings.Revenue.hints.mandatory}"
+                                      columns="#{bindings.Revenue.hints.displayWidth}"
+                                      maximumLength="#{bindings.Revenue.hints.precision}"
+                                      shortDesc="#{bindings.Revenue.hints.tooltip}" id="it57"
+                                      binding="#{backingBeanScope.SALESINSIDE.it57}">
+                          <f:validator binding="#{bindings.Revenue.validator}"/>
+                          <af:convertNumber groupingUsed="false" pattern="#{bindings.Revenue.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.WinProbablity.inputValue}" label="Win Probably"
+                                      required="#{bindings.WinProbablity.hints.mandatory}"
+                                      columns="#{bindings.WinProbablity.hints.displayWidth}"
+                                      maximumLength="#{bindings.WinProbablity.hints.precision}"
+                                      shortDesc="#{bindings.WinProbablity.hints.tooltip}" id="it58"
+                                      binding="#{backingBeanScope.SALESINSIDE.it58}">
+                          <f:validator binding="#{bindings.WinProbablity.validator}"/>
+                          <af:convertNumber groupingUsed="false" pattern="#{bindings.WinProbablity.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.BestCaseRevenue.inputValue}" label=" Best Case Revenue"
+                                      required="#{bindings.BestCaseRevenue.hints.mandatory}"
+                                      columns="#{bindings.BestCaseRevenue.hints.displayWidth}"
+                                      maximumLength="#{bindings.BestCaseRevenue.hints.precision}"
+                                      shortDesc="#{bindings.BestCaseRevenue.hints.tooltip}" id="it59"
+                                      binding="#{backingBeanScope.SALESINSIDE.it59}">
+                          <f:validator binding="#{bindings.BestCaseRevenue.validator}"/>
+                          <af:convertNumber groupingUsed="false" pattern="#{bindings.BestCaseRevenue.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.WorstCaseRevenue.inputValue}" label="Worst Case Revenue"
+                                      required="#{bindings.WorstCaseRevenue.hints.mandatory}"
+                                      columns="#{bindings.WorstCaseRevenue.hints.displayWidth}"
+                                      maximumLength="#{bindings.WorstCaseRevenue.hints.precision}"
+                                      shortDesc="#{bindings.WorstCaseRevenue.hints.tooltip}" id="it76"
+                                      binding="#{backingBeanScope.SALESINSIDE.it76}">
+                          <f:validator binding="#{bindings.WorstCaseRevenue.validator}"/>
+                          <af:convertNumber groupingUsed="false" pattern="#{bindings.WorstCaseRevenue.format}"/>
+                        </af:inputText>
+                      </af:panelFormLayout>
+                    </af:dialog>
+                  </af:popup>
+                  <af:popup childCreation="deferred" autoCancel="disabled" id="p2"
+                            binding="#{backingBeanScope.SALESINSIDE.p2}">
+                    <af:dialog id="d30" binding="#{backingBeanScope.SALESINSIDE.d30}"
+                               dialogListener="#{backingBeanScope.SALESINSIDE.Save}">
+                      <f:facet name="buttonBar"/>
+                      <af:panelFormLayout id="pfl7" binding="#{backingBeanScope.SALESINSIDE.pfl7}">
+                        <af:selectOneChoice value="#{bindings.ProductId.inputValue}" label="#{bindings.ProductId.label}"
+                                            required="#{bindings.ProductId.hints.mandatory}"
+                                            shortDesc="#{bindings.ProductId.hints.tooltip}" id="soc49"
+                                            binding="#{backingBeanScope.SALESINSIDE.soc49}">
+                          <f:selectItems value="#{bindings.ProductId.items}" id="si49"
+                                         binding="#{backingBeanScope.SALESINSIDE.si49}"/>
+                          <f:validator binding="#{bindings.ProductId.validator}"/>
+                        </af:selectOneChoice>
+                        <af:inputText value="#{bindings.EstimatedPrice.inputValue}" label="Estimated Price"
+                                      required="#{bindings.EstimatedPrice.hints.mandatory}"
+                                      columns="#{bindings.EstimatedPrice.hints.displayWidth}"
+                                      maximumLength="#{bindings.EstimatedPrice.hints.precision}"
+                                      shortDesc="#{bindings.EstimatedPrice.hints.tooltip}" id="it81"
+                                      binding="#{backingBeanScope.SALESINSIDE.it81}">
+                          <f:validator binding="#{bindings.EstimatedPrice.validator}"/>
+                          <af:convertNumber groupingUsed="false" pattern="#{bindings.EstimatedPrice.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Quantity.inputValue}" label="#{bindings.Quantity.hints.label}"
+                                      required="#{bindings.Quantity.hints.mandatory}"
+                                      columns="#{bindings.Quantity.hints.displayWidth}"
+                                      maximumLength="#{bindings.Quantity.hints.precision}"
+                                      shortDesc="#{bindings.Quantity.hints.tooltip}" id="it82"
+                                      binding="#{backingBeanScope.SALESINSIDE.it82}">
+                          <f:validator binding="#{bindings.Quantity.validator}"/>
+                          <af:convertNumber groupingUsed="false" pattern="#{bindings.Quantity.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Revenue.inputValue}" label="#{bindings.Revenue.hints.label}"
+                                      required="#{bindings.Revenue.hints.mandatory}"
+                                      columns="#{bindings.Revenue.hints.displayWidth}"
+                                      maximumLength="#{bindings.Revenue.hints.precision}"
+                                      shortDesc="#{bindings.Revenue.hints.tooltip}" id="it83"
+                                      binding="#{backingBeanScope.SALESINSIDE.it83}">
+                          <f:validator binding="#{bindings.Revenue.validator}"/>
+                          <af:convertNumber groupingUsed="false" pattern="#{bindings.Revenue.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.WinProbablity.inputValue}" label="Win Probability"
+                                      required="#{bindings.WinProbablity.hints.mandatory}"
+                                      columns="#{bindings.WinProbablity.hints.displayWidth}"
+                                      maximumLength="#{bindings.WinProbablity.hints.precision}"
+                                      shortDesc="#{bindings.WinProbablity.hints.tooltip}" id="it84"
+                                      binding="#{backingBeanScope.SALESINSIDE.it84}">
+                          <f:validator binding="#{bindings.WinProbablity.validator}"/>
+                          <af:convertNumber groupingUsed="false" pattern="#{bindings.WinProbablity.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.BestCaseRevenue.inputValue}" label="Best Case Revenue"
+                                      required="#{bindings.BestCaseRevenue.hints.mandatory}"
+                                      columns="#{bindings.BestCaseRevenue.hints.displayWidth}"
+                                      maximumLength="#{bindings.BestCaseRevenue.hints.precision}"
+                                      shortDesc="#{bindings.BestCaseRevenue.hints.tooltip}" id="it85"
+                                      binding="#{backingBeanScope.SALESINSIDE.it85}">
+                          <f:validator binding="#{bindings.BestCaseRevenue.validator}"/>
+                          <af:convertNumber groupingUsed="false" pattern="#{bindings.BestCaseRevenue.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.WorstCaseRevenue.inputValue}" label="Worst Case Revenue"
+                                      required="#{bindings.WorstCaseRevenue.hints.mandatory}"
+                                      columns="#{bindings.WorstCaseRevenue.hints.displayWidth}"
+                                      maximumLength="#{bindings.WorstCaseRevenue.hints.precision}"
+                                      shortDesc="#{bindings.WorstCaseRevenue.hints.tooltip}" id="it86"
+                                      binding="#{backingBeanScope.SALESINSIDE.it86}">
+                          <f:validator binding="#{bindings.WorstCaseRevenue.validator}"/>
+                          <af:convertNumber groupingUsed="false" pattern="#{bindings.WorstCaseRevenue.format}"/>
+                        </af:inputText>
+                      </af:panelFormLayout>
                     </af:dialog>
                   </af:popup>
                   <af:button actionListener="#{bindings.Delete.execute}" text="Delete" id="b13"
@@ -813,14 +1457,19 @@
                               partialTriggers="::b13 ::b14" binding="#{backingBeanScope.SALESINSIDE.t28}"
                               columnStretching="column:c235">
                       <af:column headerText="#{bindings.RevenueItems11.hints.ProductId.label}" id="c235">
-                        <af:selectOneChoice value="#{row.bindings.ProductId.inputValue}"
-                                            label="#{row.bindings.ProductId.label}"
-                                            required="#{bindings.RevenueItems11.hints.ProductId.mandatory}"
-                                            shortDesc="#{bindings.RevenueItems11.hints.ProductId.tooltip}"
-                                            readOnly="true" id="soc42">
-                          <f:selectItems value="#{row.bindings.ProductId.items}" id="si42"/>
-                          <f:validator binding="#{row.bindings.ProductId.validator}"/>
-                        </af:selectOneChoice>
+                        <af:panelGroupLayout id="pgl34" layout="horizontal">
+                          <af:selectOneChoice value="#{row.bindings.ProductId.inputValue}"
+                                              label="#{row.bindings.ProductId.label}"
+                                              required="#{bindings.RevenueItems11.hints.ProductId.mandatory}"
+                                              shortDesc="#{bindings.RevenueItems11.hints.ProductId.tooltip}"
+                                              readOnly="true" id="soc42" inlineStyle="color:#64bfff;">
+                            <f:selectItems value="#{row.bindings.ProductId.items}" id="si42"/>
+                            <f:validator binding="#{row.bindings.ProductId.validator}"/>
+                          </af:selectOneChoice>
+                          <af:link text="." id="l5">
+                            <af:showPopupBehavior popupId="::p2"/>
+                          </af:link>
+                        </af:panelGroupLayout>
                       </af:column>
                       <af:column headerText="#{bindings.RevenueItems11.hints.EstimatedPrice.label}" id="c236">
                         <af:outputText value="#{row.EstimatedPrice}"
@@ -1032,7 +1681,7 @@
                 <af:button text="Add " id="b9" binding="#{backingBeanScope.SALESINSIDE.b9}">
                   <af:showPopupBehavior popupId="p10"/>
                 </af:button>
-                <af:button text="Delete Appointments related to Opportunity" id="b11"
+                <af:button text="Delete" id="b11"
                            binding="#{backingBeanScope.SALESINSIDE.b11}"
                            action="#{backingBeanScope.InsertBean.deleteOpportunitiesAppointmentsLink}"/>
                 <af:popup childCreation="deferred" autoCancel="disabled" id="p10"
@@ -1174,32 +1823,14 @@
                              dialogListener="#{backingBeanScope.SALESINSIDE.Savenotes}">
                     <f:facet name="buttonBar"/>
                     <af:panelFormLayout id="pfl3" binding="#{backingBeanScope.SALESINSIDE.pfl3}">
-                      <af:inputText value="#{bindings.NoteName.inputValue}" label="Name"
-                                    required="#{bindings.NoteName.hints.mandatory}"
-                                    columns="#{bindings.NoteName.hints.displayWidth}"
-                                    maximumLength="#{bindings.NoteName.hints.precision}"
-                                    shortDesc="#{bindings.NoteName.hints.tooltip}" id="it35"
-                                    binding="#{backingBeanScope.SALESINSIDE.it35}">
-                        <f:validator binding="#{bindings.NoteName.validator}"/>
-                      </af:inputText>
-                      <af:inputDate value="#{bindings.DateRecorded.inputValue}"
-                                    label="#{bindings.DateRecorded.hints.label}"
-                                    required="#{bindings.DateRecorded.hints.mandatory}"
-                                    columns="#{bindings.DateRecorded.hints.displayWidth}"
-                                    shortDesc="#{bindings.DateRecorded.hints.tooltip}" id="id30"
-                                    binding="#{backingBeanScope.SALESINSIDE.id30}">
-                        <f:validator binding="#{bindings.DateRecorded.validator}"/>
-                        <af:convertDateTime pattern="#{bindings.DateRecorded.format}"/>
-                      </af:inputDate>
-                      <af:inputText value="#{bindings.Description.inputValue}"
-                                    label="#{bindings.Description.hints.label}"
-                                    required="#{bindings.Description.hints.mandatory}"
-                                    columns="#{bindings.Description.hints.displayWidth}"
-                                    maximumLength="#{bindings.Description.hints.precision}"
-                                    shortDesc="#{bindings.Description.hints.tooltip}" id="it36"
-                                    binding="#{backingBeanScope.SALESINSIDE.it36}">
-                        <f:validator binding="#{bindings.Description.validator}"/>
-                      </af:inputText>
+                      <af:selectOneChoice value="#{bindings.NotesId.inputValue}" label="#{bindings.NotesId.label}"
+                                          required="#{bindings.NotesId.hints.mandatory}"
+                                          shortDesc="#{bindings.NotesId.hints.tooltip}" id="soc28"
+                                          binding="#{backingBeanScope.SALESINSIDE.soc28}">
+                        <f:selectItems value="#{bindings.NotesId.items}" id="si28"
+                                       binding="#{backingBeanScope.SALESINSIDE.si28}"/>
+                        <f:validator binding="#{bindings.NotesId.validator}"/>
+                      </af:selectOneChoice>
                     </af:panelFormLayout>
                   </af:dialog>
                 </af:popup>
@@ -3630,6 +4261,9 @@
             </af:showDetailItem>
           </af:panelTabbed>
         </af:showDetailItem>
+        <af:dialog id="d29" binding="#{backingBeanScope.SALESINSIDE.d29}">
+          <f:facet name="buttonBar"/>
+        </af:dialog>
       </af:panelSpringboard>
     </f:facet>
     <f:facet name="top">

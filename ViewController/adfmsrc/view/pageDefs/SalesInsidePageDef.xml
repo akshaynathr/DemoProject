@@ -112,6 +112,12 @@
     <iterator Binds="TasksCustomersU1" RangeSize="25" DataControl="AppModuleAMDataControl1"
               id="TasksCustomersU1Iterator"/>
     <iterator Binds="NotesU3" RangeSize="25" DataControl="AppModuleAMDataControl1" id="NotesU3Iterator"/>
+    <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="TasksU2Iterator1" id="ImplicitViewCriteriaQuery20"/>
+    <accessorIterator MasterBinding="CustomersU3Iterator" Binds="AddressU" RangeSize="25"
+                      DataControl="AppModuleAMDataControl1" BeanClass="model.UVO.AddressUVO" id="AddressUIterator1"/>
+    <accessorIterator MasterBinding="CustomersU3Iterator" Binds="AddressU1" RangeSize="25"
+                      DataControl="AppModuleAMDataControl1" BeanClass="model.UVO.AddressUVO" id="AddressU1Iterator1"/>
   </executables>
   <bindings>
     <tree IterBinding="MyTeamR1Iterator" id="MyTeamR1">
@@ -875,24 +881,183 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <attributeValues IterBinding="NotesU3Iterator" id="NoteName">
+    <action id="Rollback" DataControl="AppModuleAMDataControl1" RequiresUpdateModel="false"
+            Action="rollbackTransaction"/>
+    <action IterBinding="NotesOpportunitiesU1Iterator" id="CreateInsertNotes"
+            InstanceName="AppModuleAMDataControl1.NotesOpportunitiesU1" DataControl="AppModuleAMDataControl1"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
+    <list IterBinding="RevenueItems1Iterator" StaticList="false" Uses="LOV_ProductId" id="ProductId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="RevenueItems1Iterator" id="EstimatedPrice">
       <AttrNames>
-        <Item Value="NoteName"/>
+        <Item Value="EstimatedPrice"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="NotesU3Iterator" id="DateRecorded">
+    <attributeValues IterBinding="RevenueItems1Iterator" id="Quantity">
       <AttrNames>
-        <Item Value="DateRecorded"/>
+        <Item Value="Quantity"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="NotesU3Iterator" id="Description">
+    <attributeValues IterBinding="TasksU2Iterator1" id="TaskName">
+      <AttrNames>
+        <Item Value="TaskName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TasksU2Iterator1" id="DueDate">
+      <AttrNames>
+        <Item Value="DueDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TasksU2Iterator1" id="Priority">
+      <AttrNames>
+        <Item Value="Priority"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="TasksU2Iterator1" StaticList="false" Uses="LOV_AssigneeId" id="AssigneeId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <list IterBinding="TasksU2Iterator1" StaticList="false" Uses="LOV_OpportunityId" id="OpportunityId2"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="TasksU2Iterator1" id="Description">
       <AttrNames>
         <Item Value="Description"/>
       </AttrNames>
     </attributeValues>
-    <action IterBinding="NotesU3Iterator" id="CreateInsertNotes" InstanceName="AppModuleAMDataControl1.NotesU3"
-            DataControl="AppModuleAMDataControl1" RequiresUpdateModel="true" Action="createInsertRow"/>
-    <action id="Rollback" DataControl="AppModuleAMDataControl1" RequiresUpdateModel="false"
-            Action="rollbackTransaction"/>
+    <attributeValues IterBinding="TasksU2Iterator1" id="PercentageCompleted">
+      <AttrNames>
+        <Item Value="PercentageCompleted"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomersU3Iterator" id="CustomerName2">
+      <AttrNames>
+        <Item Value="CustomerName"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="CustomersU3Iterator" StaticList="false" Uses="LOV_CustomerTypeId" id="CustomerTypeId1"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <list IterBinding="CustomersU3Iterator" StaticList="false" Uses="LOV_PrimaryContactId" id="PrimaryContactId1"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="CustomersU3Iterator" id="Url1">
+      <AttrNames>
+        <Item Value="Url"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomersU3Iterator" id="ParentCompany1">
+      <AttrNames>
+        <Item Value="ParentCompany"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomersU3Iterator" id="Ceo1">
+      <AttrNames>
+        <Item Value="Ceo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomersU3Iterator" id="NoOfEmployees1">
+      <AttrNames>
+        <Item Value="NoOfEmployees"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomersU3Iterator" id="Fax1">
+      <AttrNames>
+        <Item Value="Fax"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomersU3Iterator" id="Email2">
+      <AttrNames>
+        <Item Value="Email"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomersU3Iterator" id="PrimaryAddressId">
+      <AttrNames>
+        <Item Value="PrimaryAddressId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomersU3Iterator" id="ShippingAddressId">
+      <AttrNames>
+        <Item Value="ShippingAddressId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressUIterator1" id="AddressId2">
+      <AttrNames>
+        <Item Value="AddressId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressUIterator1" id="House2">
+      <AttrNames>
+        <Item Value="House"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressUIterator1" id="Street2">
+      <AttrNames>
+        <Item Value="Street"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressUIterator1" id="Locality2">
+      <AttrNames>
+        <Item Value="Locality"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressUIterator1" id="City2">
+      <AttrNames>
+        <Item Value="City"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressUIterator1" id="Pincode2">
+      <AttrNames>
+        <Item Value="Pincode"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressUIterator1" id="State2">
+      <AttrNames>
+        <Item Value="State"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressUIterator1" id="Country2">
+      <AttrNames>
+        <Item Value="Country"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU1Iterator1" id="AddressId3">
+      <AttrNames>
+        <Item Value="AddressId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU1Iterator1" id="House3">
+      <AttrNames>
+        <Item Value="House"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU1Iterator1" id="Street3">
+      <AttrNames>
+        <Item Value="Street"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU1Iterator1" id="Locality3">
+      <AttrNames>
+        <Item Value="Locality"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU1Iterator1" id="City3">
+      <AttrNames>
+        <Item Value="City"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU1Iterator1" id="Pincode3">
+      <AttrNames>
+        <Item Value="Pincode"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU1Iterator1" id="State3">
+      <AttrNames>
+        <Item Value="State"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU1Iterator1" id="Country3">
+      <AttrNames>
+        <Item Value="Country"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="OpportunitiesU2Iterator" id="CreateInsert2Opportunity"
+            InstanceName="AppModuleAMDataControl1.OpportunitiesU2" DataControl="AppModuleAMDataControl1"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
   </bindings>
 </pageDefinition>
